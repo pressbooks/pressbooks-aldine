@@ -1,62 +1,26 @@
-## Submit a feature request or bug report
+### Prerequisites
 
-- [ ] I've read the [guidelines for Contributing to Roots Projects](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md)
-- [ ] This is a feature request
-- [ ] This is a bug report
-- [ ] This request isn't a duplicate of an [existing issue](https://github.com/roots/sage/issues)
-- [ ] I've read the [docs](https://roots.io/sage/docs) and [NPM Debugging Guidelines post](https://discourse.roots.io/t/npm-debugging-guidelines-failed-npm-install-bower-install-or-gulp-build-read-this/3060) and followed them (if applicable)
-- [ ] This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/c/sage) forums
+_Check the boxes below by changing them from `[ ]` to `[x]`._
 
-<!-- Replace any `X` with your information. -->
+* [ ] Can you reproduce the behavior you wish to address with [all plugins except Pressbooks deactivated](http://codex.wordpress.org/Multisite_Network_Administration#Plugins)?
+* [ ] Are you running the [latest version of Pressbooks](http://github.com/pressbooks/pressbooks/releases/latest/), the latest version of [Aldine](http://github.com/pressbooks/pressbooks-aldine/releases/latest/), and the [latest version of WordPress](http://codex.wordpress.org/Upgrading_WordPress)?
+* [ ] Are you experiencing the issue while using Aldine as your network's root theme?
+* [ ] Did you [perform a cursory search](https://github.com/issues?q=+is%3Aissue+repo%3Apressbooks%2Fpressbooks-aldine) to see if your bug or enhancement is already listed?
 
----
+### Description
 
-**What is the current behavior?**
+[Description of the bug or feature]
 
-X
+### Steps to Reproduce
 
+1. [First Step]
+2. [Second Step]
+3. [and so on...]
 
-**What is the expected or desired behavior?**
+**Expected behavior:** [What you expected to happen]
 
-X
+**Actual behavior:** [What actually happened]
 
----
+### System Information
 
-## Bug report
-
-<!-- (delete this section if not applicable) -->
-
-**Please provide steps to reproduce, including full log output:**
-
-X
-
-**Please describe your local environment:**
-
-WordPress version: X
-
-OS: X
-
-NPM/Node version: X
-
-**Where did the bug happen? Development or remote servers?**
-
-X
-
-
-**Is there a related [Discourse](https://discourse.roots.io/) thread or were any utilized (please link them)?**
-
-X
-
----
-
-## Feature Request
-
-<!-- (delete this section if not applicable) -->
-
-**Please provide use cases for changing the current behavior:**
-
-X
-
-**Other relevant information:**
-
-X
+_Replace this section with the contents of the Diagnostics page, available at `https://<yourdomain.tld>/<yourbook>/wp-admin/options.php?page=pressbooks_diagnostics` or via the Diagnostics link in the admin footer._
