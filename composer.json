@@ -2,7 +2,7 @@
   "name": "pressbooks/pressbooks-aldine",
   "type": "wordpress-theme",
   "license": "MIT",
-  "description": "WordPress starter theme with a modern development workflow",
+  "description": "Aldine is the new root theme for Pressbooks, based on Sage.",
   "homepage": "https://github.com/pressbooks/pressbooks-aldine/",
   "authors": [
     {
@@ -12,7 +12,10 @@
     }
   ],
   "keywords": [
-    "wordpress"
+    "publishing",
+    "catalog",
+    "pressbooks",
+    "default-theme"
   ],
   "support": {
     "issues": "https://github.com/pressbooks/pressbooks-aldine/issues",

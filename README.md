@@ -1,6 +1,6 @@
 # Aldine
 
-Aldine is the new root theme for [Pressbooks](https://github.com/pressbooks/pressbooks), based on [Sage](https://roots.io/sage/)
+Aldine is the new root theme for [Pressbooks](https://github.com/pressbooks/pressbooks), based on [Sage](https://roots.io/sage/).
 
 ## Features
 
