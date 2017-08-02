@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
-
-  @while (have_posts()) @php(the_post())
-    @include('partials.content-'.get_post_type())
-  @endwhile
-
-  {!! get_the_posts_navigation() !!}
+  <div class="block block-one">
+    @php(dynamic_sidebar('home-block-one'))
+  </div>
+  <div class="block block-two">
+    @php(dynamic_sidebar('home-block-two'))
+  </div>
+  <div class="block block-three">
+    @php(dynamic_sidebar('home-block-three'))
+  </div>
+  <div class="block block-four">
+    @php(dynamic_sidebar('home-block-four'))
+  </div>
+  <div class="block block-five">
+    @php(dynamic_sidebar('home-block-five'))
+  </div>
 @endsection

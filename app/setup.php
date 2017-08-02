@@ -11,8 +11,14 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_style(
+        'aldine/webfonts',
+        'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600',
+        false,
+        null
+    );
+    wp_enqueue_style('aldine/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('aldine/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
 /**
@@ -40,7 +46,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'pressbooks-aldine')
     ]);
 
     /**
@@ -79,12 +85,20 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
+        'name'          => __('Home Block One', 'pressbooks-aldine'),
+        'id'            => 'home-block-one'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Home Block Two', 'pressbooks-aldine'),
+        'id'            => 'home-block-two'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Home Block Three', 'pressbooks-aldine'),
+        'id'            => 'home-block-three'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Home Block Four', 'pressbooks-aldine'),
+        'id'            => 'home-block-four'
     ] + $config);
 });
 

@@ -1,2 +1,21 @@
 // TODO: .banner .nav li {}
 // TODO: .banner .nav a {}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 560px;
+}
+
+.banner h1 {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.banner h2 {
+  text-align: center;
+}
