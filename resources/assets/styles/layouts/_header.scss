@@ -1,11 +1,127 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
-
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 560px;
+  background: url('../images/banner-one.jpg');
+  background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1435px;
+    height: 560px;
+  }
+
+  .toggle-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 17px;
+    z-index: 99;
+    text-indent: -9999em;
+    width: 25px;
+    height: 20px;
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: 7px;
+      width: 25px;
+      height: 3px;
+      background: $brand-primary;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: $brand-primary;
+      }
+
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+      }
+
+      &::after {
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+    }
+
+    &.is-active .icon {
+      background: $white;
+
+      &::before,
+      &::after {
+        background: $white;
+      }
+    }
+  }
+
+  .primary-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 17px;
+
+    a {
+      font-family: Karla, sans-serif;
+      font-size: 24px;
+      color: $white;
+      letter-spacing: 0;
+      line-height: 80px;
+      text-decoration: none;
+      display: none;
+
+      &.brand {
+        display: block;
+        width: 109px;
+        height: 17px;
+        align-self: flex-start;
+        background-image: url('../images/logo.png');
+        background-size: 109px 17px;
+        text-indent: -9999em;
+      }
+    }
+
+    &.is-visible {
+      position: absolute;
+      z-index: 1;
+      background: $brand-primary;
+      justify-content: center;
+      height: 560px;
+      top: 0;
+      margin-top: 0;
+      padding: 0 52px;
+
+      a {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px $white;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &.brand {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .branding {
+    display: flex;
+    height: 364px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .banner h1 {
@@ -18,4 +134,36 @@
 
 .banner h2 {
   text-align: center;
+}
+
+@media (min-width: $medium) {
+  .banner nav {
+    width: auto;
+    display: flex;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .banner .catalog-navigation {
+    justify-content: flex-start;
+  }
+
+  .banner .meta-navigation {
+    justify-content: flex-end;
+  }
+
+  .banner h1 {
+    font-size: 72px;
+    letter-spacing: 1.8px;
+    line-height: 40px;
+    margin-bottom: 0.5em;
+  }
+
+  .banner h2 {
+    font-size: 30px;
+    letter-spacing: 0.75px;
+    line-height: 40px;
+  }
 }

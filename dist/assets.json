@@ -1,5 +1,15 @@
 {
-  "scripts/customizer.js": "scripts/customizer_d08f6b6b.js",
-  "styles/main.css": "styles/main_d08f6b6b.css",
-  "scripts/main.js": "scripts/main_d08f6b6b.js"
+  "images/banner-one.jpg": "images/banner-one_bcd1d61f.jpg",
+  "images/banner-two.jpg": "images/banner-two_a620635c.jpg",
+  "images/logo.png": "images/logo_10675684.png",
+  "images/logo@2x.png": "images/logo@2x_7d05144c.png",
+  "vendor/fontawesome-webfont.eot": "vendor/fontawesome-webfont_674f50d2.eot",
+  "vendor/fontawesome-webfont.eot?v=4.7.0": "vendor/fontawesome-webfont_674f50d2.eot",
+  "vendor/fontawesome-webfont.svg?v=4.7.0": "vendor/fontawesome-webfont_912ec66d.svg",
+  "vendor/fontawesome-webfont.ttf?v=4.7.0": "vendor/fontawesome-webfont_b06871f2.ttf",
+  "vendor/fontawesome-webfont.woff2?v=4.7.0": "vendor/fontawesome-webfont_af7ae505.woff2",
+  "vendor/fontawesome-webfont.woff?v=4.7.0": "vendor/fontawesome-webfont_fee66e71.woff",
+  "scripts/customizer.js": "scripts/customizer_1001ca05.js",
+  "styles/main.css": "styles/main_1001ca05.css",
+  "scripts/main.js": "scripts/main_1001ca05.js"
 }

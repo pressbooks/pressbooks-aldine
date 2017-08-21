@@ -3,6 +3,13 @@ $brand-primary:         #b01109;
 $brand-secondary:       #015d75;
 $dark-grey:             #444;
 $black:                 #000;
+$white:                 #fff;
 
 /** Box Model  */
 $spacer:                2rem;
+
+/** Breakpoints */
+$small: 768px;
+$medium: 960px;
+$large: 1200px;
+$extra-large: 1650px;
