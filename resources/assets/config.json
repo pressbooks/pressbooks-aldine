@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "app/themes/pressbooks-aldine",
-  "devUrl": "https://pressbooks.dev",
+  "publicPath": "/app/themes/pressbooks-aldine",
+  "devUrl": "http://pressbooks.dev",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
