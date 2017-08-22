@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @debug('controller')
-  {{ $sidebar_count }}
+  @debug('dump')
   @if(is_active_sidebar('home-block-one') && is_active_sidebar('home-block-two'))
   <div class="one-two">
   @endif
