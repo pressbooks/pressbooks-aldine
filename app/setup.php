@@ -100,6 +100,10 @@ add_action('widgets_init', function () {
         'name'          => __('Home Block Four', 'pressbooks-aldine'),
         'id'            => 'home-block-four'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Home Block Five', 'pressbooks-aldine'),
+        'id'            => 'home-block-five'
+    ] + $config);
 });
 
 /**

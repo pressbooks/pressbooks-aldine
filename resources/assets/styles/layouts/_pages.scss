@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 12.5px;
     width: 100%;
     height: 445px;
     background-color: $white;
@@ -15,6 +16,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       line-height: 36px;
+      color: $brand-primary;
       margin: 0;
 
       &::before {
@@ -30,6 +32,7 @@
     p {
       font-size: 16px;
       line-height: 32px;
+      text-align: center;
     }
 
     .inside {
@@ -41,23 +44,41 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-  }
 
-  .block.two {
-    color: $white;
-    background: $brand-secondary;
+    .block-2 {
+      background: $brand-secondary;
 
-    h3::before {
-      background-color: $white;
+      p,
+      h3 {
+        color: $white;
+      }
+
+      h3::before {
+        background-color: $white;
+      }
     }
   }
 
-  .block.one,
-  .block.two,
-  .block.three,
-  .block.four,
-  .block.five {
-    padding: 0 12.5px;
+  .main > .block-2,
+  .one-two + .block {
+    background: transparent;
+    border: solid 2px $brand-primary;
+    margin-bottom: 401px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 1840px;
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 600px;
+      z-index: -1;
+      background: url('../images/banner-two.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -94,6 +115,16 @@
     .one-two {
       align-items: center;
     }
+
+    .main > .block-2,
+    .one-two + .block {
+      border: solid 2px $brand-primary;
+      box-shadow: unset;
+
+      &::after {
+        top: 2020px;
+      }
+    }
   }
 }
 
@@ -103,34 +134,43 @@
       width: 1115px;
       height: 494px;
     }
+
+    .main > .block-2,
+    .one-two + .block {
+      &::after {
+        top: 2150px;
+      }
+    }
   }
 }
 
 @media (min-width: $extra-large) {
   .home {
+    .block {
+      width: 1115px;
+      box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+    }
+
     .one-two {
       flex-direction: row;
       justify-content: space-between;
       width: 1615px;
-    }
 
-    .block.one,
-    .block.two {
-      border-radius: 4px;
-      width: 775px;
+      .block {
+        border-radius: 4px;
+        width: 775px;
 
-      .inside {
-        width: 595px;
+        .inside {
+          width: 595px;
+        }
       }
     }
 
-    .block.three {
-      width: 100%;
-    }
-
-    .block.four {
-      width: 1115px;
-      box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+    .main > .block-2,
+    .one-two + .block {
+      &::after {
+        top: 1550px;
+      }
     }
   }
 }
