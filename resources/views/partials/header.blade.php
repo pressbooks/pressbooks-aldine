@@ -8,8 +8,10 @@
         @if(!is_user_logged_in())
           <a class="signin" href="{{ wp_login_url() }}">{{ __('Sign in', 'pressbooks-aldine') }}</a>
           <span class="sep">/</span>
+          <a class="signup" href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'pressbooks-aldine') }}</a>
+        @else
+          <a class="signin" href="{{ wp_logout_url() }}">{{ __('Sign out', 'pressbooks-aldine') }}</a>
         @endif
-        <a class="signup" href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'pressbooks-aldine') }}</a>
     </nav>
     <div class="branding">
       <h1><a href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a></h1>

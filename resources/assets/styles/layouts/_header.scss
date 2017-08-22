@@ -54,6 +54,7 @@
     }
 
     &.is-active .icon {
+      // TODO
       background: $white;
 
       &::before,
@@ -161,16 +162,17 @@
     .brand {
       align-self: center;
       margin-top: 40px;
-      width: 247px;
-      height: 38px;
-      background-size: 247px 38px;
+      width: 265px;
+      height: 40px;
+      background-image: url('../images/logo@2x.png');
+      background-size: 265px 40px;
     }
 
     .primary-navigation {
       position: absolute;
       width: 100%;
       max-width: 1440px;
-      height: 38px;
+      height: 40px;
       top: 40px;
       margin: 0;
       display: flex;
