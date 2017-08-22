@@ -18,10 +18,12 @@
       margin: 0;
 
       &::before {
+        content: "";
         display: block;
+        margin: 0 auto 1em;
         width: 46px;
         height: 5px;
-        color: $brand-primary;
+        background-color: $brand-secondary;
       }
     }
 
@@ -41,6 +43,15 @@
     flex-direction: column;
   }
 
+  .block.two {
+    color: $white;
+    background: $brand-secondary;
+
+    h3::before {
+      background-color: $white;
+    }
+  }
+
   .block.one,
   .block.two,
   .block.three,
@@ -52,6 +63,10 @@
 
 @media (min-width: $medium) {
   .home {
+    .wrap {
+      margin-top: -366px;
+    }
+
     .block {
       width: 775px;
       margin-bottom: 119px;
@@ -60,6 +75,10 @@
       h3 {
         font-size: 48px;
         line-height: 56px;
+
+        &::before {
+          width: 74px;
+        }
       }
 
       p {
@@ -103,11 +122,6 @@
       .inside {
         width: 595px;
       }
-    }
-
-    .block.two {
-      color: $white;
-      background: $brand-secondary;
     }
 
     .block.three {

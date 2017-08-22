@@ -1,6 +1,8 @@
 .banner {
-  background: url('../images/banner-one.jpg');
+  background: url('../images/banner-mobile.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom center;
 
   .container {
     display: flex;
@@ -8,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1435px;
+    max-width: 1440px;
     height: 560px;
   }
 
@@ -61,13 +63,29 @@
     }
   }
 
+  .brand {
+    display: block;
+    width: 109px;
+    height: 17px;
+    margin: 30px 0 0 17px;
+    align-self: flex-start;
+    background-image: url('../images/logo.png');
+    background-size: 109px 17px;
+    text-indent: -9999em;
+  }
+
   .primary-navigation {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    top: 0;
     width: 100%;
-    margin-top: 30px;
+    height: 560px;
+    margin: 0 0 0 -100%;
     padding: 0 17px;
+    background: transparent;
+    transition: background 0.5s;
 
     a {
       font-family: Karla, sans-serif;
@@ -77,26 +95,17 @@
       line-height: 80px;
       text-decoration: none;
       display: none;
+    }
 
-      &.brand {
-        display: block;
-        width: 109px;
-        height: 17px;
-        align-self: flex-start;
-        background-image: url('../images/logo.png');
-        background-size: 109px 17px;
-        text-indent: -9999em;
-      }
+    .sep {
+      display: none;
     }
 
     &.is-visible {
-      position: absolute;
       z-index: 1;
       background: $brand-primary;
       justify-content: center;
-      height: 560px;
-      top: 0;
-      margin-top: 0;
+      margin: 0;
       padding: 0 52px;
 
       a {
@@ -137,33 +146,79 @@
 }
 
 @media (min-width: $medium) {
-  .banner nav {
-    width: auto;
-    display: flex;
+  .banner {
+    background-image: url('../images/banner-desktop.jpg');
 
-    a {
-      font-size: 18px;
+    .container {
+      margin: 0 auto;
+      height: 880px;
     }
-  }
 
-  .banner .catalog-navigation {
-    justify-content: flex-start;
-  }
+    .toggle-menu {
+      display: none;
+    }
 
-  .banner .meta-navigation {
-    justify-content: flex-end;
-  }
+    .brand {
+      align-self: center;
+      margin-top: 40px;
+      width: 247px;
+      height: 38px;
+      background-size: 247px 38px;
+    }
 
-  .banner h1 {
-    font-size: 72px;
-    letter-spacing: 1.8px;
-    line-height: 40px;
-    margin-bottom: 0.5em;
-  }
+    .primary-navigation {
+      position: absolute;
+      width: 100%;
+      max-width: 1440px;
+      height: 38px;
+      top: 40px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
 
-  .banner h2 {
-    font-size: 30px;
-    letter-spacing: 0.75px;
-    line-height: 40px;
+      a {
+        font-size: 18px;
+        display: inline-block;
+        line-height: normal;
+        color: $black;
+
+        &:hover,
+        &:focus {
+          color: $brand-primary;
+        }
+
+        &.catalog {
+          margin-right: auto;
+        }
+
+        &.contact {
+          margin: 0 1em 0 auto;
+        }
+      }
+
+      .sep {
+        display: inline-block;
+        margin: 0 0.5em;
+      }
+    }
+
+    .branding {
+      height: 576px;
+    }
+
+    h1 {
+      font-size: 72px;
+      letter-spacing: 1.8px;
+      line-height: 40px;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: 0.75px;
+      line-height: 40px;
+    }
   }
 }

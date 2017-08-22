@@ -1,5 +1,6 @@
 {
-  "images/banner-one.jpg": "images/banner-one_bcd1d61f.jpg",
+  "images/banner-desktop.jpg": "images/banner-desktop_bcd1d61f.jpg",
+  "images/banner-mobile.jpg": "images/banner-mobile_f655d839.jpg",
   "images/banner-two.jpg": "images/banner-two_a620635c.jpg",
   "images/logo.png": "images/logo_10675684.png",
   "images/logo@2x.png": "images/logo@2x_7d05144c.png",
@@ -9,7 +10,7 @@
   "vendor/fontawesome-webfont.ttf?v=4.7.0": "vendor/fontawesome-webfont_b06871f2.ttf",
   "vendor/fontawesome-webfont.woff2?v=4.7.0": "vendor/fontawesome-webfont_af7ae505.woff2",
   "vendor/fontawesome-webfont.woff?v=4.7.0": "vendor/fontawesome-webfont_fee66e71.woff",
-  "scripts/customizer.js": "scripts/customizer_1001ca05.js",
-  "styles/main.css": "styles/main_1001ca05.css",
-  "scripts/main.js": "scripts/main_1001ca05.js"
+  "scripts/customizer.js": "scripts/customizer_66c3aaba.js",
+  "styles/main.css": "styles/main_66c3aaba.css",
+  "scripts/main.js": "scripts/main_66c3aaba.js"
 }
