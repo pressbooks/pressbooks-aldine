@@ -15,15 +15,16 @@ Aldine is the new root theme for [Pressbooks](https://github.com/pressbooks/pres
 
 Make sure all dependencies have been installed before moving on:
 
-* [WordPress](https://wordpress.org/) >= 4.8
-* [PHP](http://php.net/manual/en/install.php) >= 5.6.4
+* [PHP](http://php.net/manual/en/install.php) >= 7.0
 * [Composer](https://getcomposer.org/download/)
+* [WordPress](https://wordpress.org/) >= 4.8.1
+* [Pressbooks](https://github.com/pressbooks/pressbooks) >= 4.0
 * [Node.js](http://nodejs.org/) >= 6.9.x
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Theme installation
 
-Install Aldine using Composer from your WordPress themes directory:
+Install Aldine using Composer from your Pressbooks themes directory:
 
 ```shell
 # @ app/themes/ or wp-content/themes/
@@ -35,11 +36,13 @@ $ composer require pressbooks/pressbooks-aldine
 ```shell
 themes/pressbooks-aldine/  # → Theme root
 ├── app/                  # → Theme PHP
-│   ├── lib/Sage/         # → Blade implementation, asset manifest
+│   ├── controllers/      # → Controller files
+│   ├── widgets/          # → Custom widget classes
 │   ├── admin.php         # → Theme customizer setup
 │   ├── filters.php       # → Theme filters
 │   ├── helpers.php       # → Helper functions
 │   └── setup.php         # → Theme setup
+│   └── widgets.php       # → Widget initialization
 ├── composer.json         # → Autoloading for `app/` files
 ├── composer.lock         # → Composer lock file (never edit)
 ├── dist/                 # → Built theme assets (never edit)
@@ -53,7 +56,6 @@ themes/pressbooks-aldine/  # → Theme root
 │   │   ├── images/       # → Theme images
 │   │   ├── scripts/      # → Theme JS
 │   │   └── styles/       # → Theme stylesheets
-│   ├── controllers/      # → Controller files
 │   ├── functions.php     # → Composer autoloader, theme includes
 │   ├── index.php         # → Never manually edit
 │   ├── screenshot.png    # → Theme screenshot for WP admin
