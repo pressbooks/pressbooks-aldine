@@ -4,7 +4,7 @@ namespace Aldine;
 
 use Sober\Controller\Controller;
 
-class Aldine extends Controller
+class App extends Controller
 {
     public function siteName()
     {
