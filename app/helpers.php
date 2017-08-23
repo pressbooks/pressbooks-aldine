@@ -127,14 +127,3 @@ function locate_template($templates)
 {
     return \locate_template(filter_templates($templates));
 }
-
-/**
- * Determine whether to show the sidebar
- * @return bool
- */
-function display_sidebar()
-{
-    static $display;
-    isset($display) || $display = apply_filters('sage/display_sidebar', false);
-    return $display;
-}

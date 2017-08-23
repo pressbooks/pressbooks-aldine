@@ -1,15 +1,15 @@
 {
-  "name": "sage",
-  "version": "9.0.0-beta.4",
-  "author": "Roots <team@roots.io>",
-  "homepage": "https://roots.io/sage/",
+  "name": "@pressbooks/pressbooks-aldine",
+  "version": "1.0.0-dev",
+  "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
+  "homepage": "https://github.com/pressbooks/pressbooks-aldine/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "git://github.com/pressbooks/pressbooks-aldine.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/pressbooks/pressbooks-aldine/issues"
   },
   "licenses": [
     {
