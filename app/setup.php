@@ -87,16 +87,16 @@ add_action('widgets_init', function () {
         'id'            => 'home-block-5'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer Block 1', 'aldine'),
-        'id'            => 'footer-block-1'
+        'name'          => __('Network Footer Block 1', 'aldine'),
+        'id'            => 'network-footer-block-1'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer Block 2', 'aldine'),
-        'id'            => 'footer-block-2'
+        'name'          => __('Network Footer Block 2', 'aldine'),
+        'id'            => 'network-footer-block-2'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer Block 3', 'aldine'),
-        'id'            => 'footer-block-3'
+        'name'          => __('Network Footer Block 3', 'aldine'),
+        'id'            => 'network-footer-block-3'
     ] + $config);
 });
 
