@@ -80,6 +80,15 @@ function asset_path($asset)
 }
 
 /**
+ * @param $asset
+ * @return string
+ */
+function svg_path($asset)
+{
+    return sage('assets')->get($asset);
+}
+
+/**
  * @param string|string[] $templates Possible template files
  * @return array
  */

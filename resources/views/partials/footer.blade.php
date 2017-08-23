@@ -20,7 +20,7 @@
     </section>
     @endif
     <section class="pressbooks-footer">
-      <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks"><img src="@asset('images/pb.png')" srcset="1x @asset('images/pb.png'), 2x @asset('images/pb@2x.png')" alt="{{ __('The Pressbooks logo', 'aldine')}}" width="45" height="44" /></a>
+      <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/pb.svg'))</a>
       <div class="pressbooks-links">
         <h1><a href="https://pressbooks.com">{!! sprintf(__('Powered by %s', 'aldine'), '<span class="pressbooks">Pressbooks</span>') !!}</a></h1>
         <ul>
