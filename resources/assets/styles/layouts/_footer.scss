@@ -1,5 +1,43 @@
 .content-info {
-  .powered-by {
+  .network-footer {
+    background: $brand-secondary;
+    margin-bottom: 0;
+    padding: 60px 42.5px 40px;
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+    color: $white;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      font-weight: 600;
+      line-height: 36px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    .footer-block-1 {
+      margin: 0 -5px;
+      padding: 0 0 40px;
+    }
+
+    .footer-block-2 {
+      padding: 30px 7.5px;
+      border-top: solid 1px $white;
+    }
+
+    .footer-block-3 {
+      padding: 30px 7.5px 0;
+      border-top: solid 1px $white;
+    }
+  }
+
+  .pressbooks-footer {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -11,6 +49,7 @@
     font-size: 14px;
 
     h1,
+    li,
     a {
       color: $white;
       font-family: Karla, sans-serif;
@@ -26,6 +65,16 @@
 
       .pressbooks {
         font-weight: 600;
+      }
+    }
+
+    h1 a {
+      border-bottom: solid 1px $dark-grey;
+      transition: all 0.4s;
+
+      &:hover,
+      &:focus {
+        border-bottom: solid 1px $white;
       }
     }
 
@@ -59,7 +108,42 @@
 
 @media (min-width: $medium) {
   .content-info {
-    .powered-by {
+    .network-footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      ul {
+        text-align: left;
+      }
+
+      .footer-block-1,
+      .footer-block-2,
+      .footer-block-3 {
+        display: flex;
+        align-items: center;
+        height: 142.5px;
+        margin: 0;
+        padding: 0 69.5px;
+      }
+
+      .footer-block-1 {
+        border-right: solid 1px $white;
+      }
+
+      .footer-block-2 {
+        border-top: 0;
+        border-right: solid 1px $white;
+      }
+
+      .footer-block-3 {
+        border-top: 0;
+        // TODO
+      }
+    }
+
+    .pressbooks-footer {
       flex-direction: row;
       justify-content: space-between;
       height: 106.76px;
@@ -92,17 +176,6 @@
         }
       }
 
-      h1 a,
-      li a {
-        border-bottom: solid 1px $dark-grey;
-        transition: all 0.4s;
-
-        &:hover,
-        &:focus {
-          border-bottom: solid 1px $white;
-        }
-      }
-
       .pressbooks-icon {
         display: block;
         line-height: 1;
@@ -114,6 +187,19 @@
         a {
           font-size: 24px;
           margin: 0 0 0 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $extra-large) {
+  .content-info {
+    .network-footer {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 3em;
         }
       }
     }

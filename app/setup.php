@@ -86,6 +86,18 @@ add_action('widgets_init', function () {
         'name'          => __('Home Block 5', 'aldine'),
         'id'            => 'home-block-5'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Block 1', 'aldine'),
+        'id'            => 'footer-block-1'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Block 2', 'aldine'),
+        'id'            => 'footer-block-2'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Block 3', 'aldine'),
+        'id'            => 'footer-block-3'
+    ] + $config);
 });
 
 /**

@@ -1,15 +1,37 @@
 <footer class="content-info">
   <div class="container">
-    @php(dynamic_sidebar('sidebar-footer'))
-    <section class="powered-by">
+    <section class="network-footer">
+      @if(is_dynamic_sidebar('footer-block-1'))
+        <div class="footer-block-1">
+          @php(dynamic_sidebar('footer-block-1'))
+        </div>
+      @else
+
+      @endif
+      @if(is_dynamic_sidebar('footer-block-2'))
+        <div class="footer-block-2">
+          @php(dynamic_sidebar('footer-block-2'))
+        </div>
+      @else
+
+      @endif
+      @if(is_dynamic_sidebar('footer-block-3'))
+        <div class="footer-block-3">
+          @php(dynamic_sidebar('footer-block-3'))
+        </div>
+      @else
+
+      @endif
+    </section>
+    <section class="pressbooks-footer">
       <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks"><img src="@asset('images/pb.png')" srcset="1x @asset('images/pb.png'), 2x @asset('images/pb@2x.png')" alt="{{ __('The Pressbooks logo', 'aldine')}}" width="45" height="44" /></a>
       <div class="pressbooks-links">
         <h1><a href="https://pressbooks.com">{!! sprintf(__('Powered by %s', 'aldine'), '<span class="pressbooks">Pressbooks</span>') !!}</a></h1>
         <ul>
-          <li><a href="https://github.com/pressbooks" title="{{ __('Open Source', 'aldine') }}">{{ __('Open Source', 'aldine') }}</a></li>
-          <li><a href="https://github.com/pressbooks" title="{{ __('Open Textbooks', 'aldine') }}">{{ __('Open Textbooks', 'aldine') }}</a></li>
-          <li><a href="https://github.com/pressbooks" title="{{ __('Open Book Publishing', 'aldine') }}">{{ __('Open Book Publishing', 'aldine') }}</a></li>
-          <li><a href="https://github.com/pressbooks" title="{{ __('Learn More', 'aldine') }}">{{ __('Learn More', 'aldine') }}</a></li>
+          <li>{{ __('Open Source', 'aldine') }}</li>
+          <li>{{ __('Open Textbooks', 'aldine') }}</li>
+          <li>{{ __('Open Book Publishing', 'aldine') }}</li>
+          <li>{{ __('Learn More', 'aldine') }}</li>
         </ul>
       </div>
       <div class="social-media">
