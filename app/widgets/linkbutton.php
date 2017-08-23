@@ -29,7 +29,11 @@ class LinkButton extends \WP_Widget
     {
         echo $args['before_widget'];
         if (! empty($instance['url']) && ! empty($instance['title'])) {
-            printf('<a class="button" href="%1$s">%2$s</a>', $instance['url'], apply_filters('widget_title', $instance['title']));
+            printf(
+                '<a class="button" href="%1$s">%2$s</a>',
+                $instance['url'],
+                apply_filters('widget_title', $instance['title'])
+            );
         }
         echo $args['after_widget'];
     }
@@ -45,10 +49,20 @@ class LinkButton extends \WP_Widget
     {
         $title = ! empty($instance['title']) ? $instance['title'] : '';
         $url = ! empty($instance['url']) ? $instance['url'] : ''; ?>
-        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_attr_e('Title:', 'aldine'); ?></label>
-        <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>"></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('url')); ?>"><?php esc_attr_e('URL:', 'aldine'); ?></label>
-        <input class="widefat code" id="<?php echo esc_attr($this->get_field_id('url')); ?>" name="<?php echo esc_attr($this->get_field_name('url')); ?>" type="text" value="<?php echo esc_attr($url); ?>"></p>
+        <p><label for="<?= esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'aldine'); ?></label>
+        <input
+            class="widefat"
+            id="<?= esc_attr($this->get_field_id('title')); ?>"
+            name="<?= esc_attr($this->get_field_name('title')); ?>"
+            type="text"
+            value="<?= esc_attr($title); ?>"></p>
+        <p><label for="<?= esc_attr($this->get_field_id('url')); ?>"><?php _e('URL:', 'aldine'); ?></label>
+        <input
+            class="widefat code"
+            id="<?= esc_attr($this->get_field_id('url')); ?>"
+            name="<?= esc_attr($this->get_field_name('url')); ?>"
+            type="text"
+            value="<?= esc_attr($url); ?>"></p>
     <?php
     }
 

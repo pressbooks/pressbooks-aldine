@@ -32,7 +32,11 @@ class PageButton extends \WP_Widget
             if (empty($instance['title'])) {
                 $instance['title'] = get_the_title($instance['page_id']);
             }
-            printf('<a class="button" href="%1$s">%2$s</a>', get_permalink($instance['page_id']), apply_filters('widget_title', $instance['title']));
+            printf(
+                '<a class="button" href="%1$s">%2$s</a>',
+                get_permalink($instance['page_id']),
+                apply_filters('widget_title', $instance['title'])
+            );
         }
         echo $args['after_widget'];
     }
@@ -48,14 +52,24 @@ class PageButton extends \WP_Widget
     {
         $title = ! empty($instance['title']) ? $instance['title'] : '';
         $url = ! empty($instance['page_id']) ? $instance['page_id'] : ''; ?>
-        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_attr_e('Title:', 'aldine'); ?></label>
-        <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>"></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('page_id')); ?>"><?php esc_attr_e('Page:', 'aldine'); ?></label>
-        <select id="<?php echo esc_attr($this->get_field_id('page_id')); ?>" name="<?php echo esc_attr($this->get_field_name('page_id')); ?>">
+        <p><label for="<?= esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'aldine'); ?></label>
+        <input
+            class="widefat"
+            id="<?= esc_attr($this->get_field_id('title')); ?>"
+            name="<?= esc_attr($this->get_field_name('title')); ?>"
+            type="text"
+            value="<?= esc_attr($title); ?>"></p>
+        <p><label for="<?= esc_attr($this->get_field_id('page_id')); ?>"><?php _e('Page:', 'aldine'); ?></label>
+        <select
+            id="<?= esc_attr($this->get_field_id('page_id')); ?>"
+            name="<?= esc_attr($this->get_field_name('page_id')); ?>">
             <option value="" <?php selected($instance['page_id'], ''); ?>> -- </a>
             <?php $pages = get_pages();
             foreach ($pages as $page) { ?>
-                <option value="<?= $page->ID; ?>" <?php selected(@$instance['page_id'], $page->ID); ?>><?= $page->post_title; ?></option>
+                <option value="<?= $page->ID; ?>"
+                    <?php selected(@$instance['page_id'], $page->ID); ?>>
+                        <?= $page->post_title; ?>
+                </option>
             <?php } ?>
         </select></p>
     <?php

@@ -31,7 +31,10 @@ if (version_compare('7', phpversion(), '>=')) {
  * Ensure compatible version of WordPress is used
  */
 if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
-    $sage_error(__('You must be using WordPress 4.7.0 or greater.', 'aldine'), __('Invalid WordPress version', 'aldine'));
+    $sage_error(
+        __('You must be using WordPress 4.7.0 or greater.', 'aldine'),
+        __('Invalid WordPress version', 'aldine')
+    );
 }
 
 /**
