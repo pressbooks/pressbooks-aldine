@@ -85,24 +85,24 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Home Block One', 'pressbooks-aldine'),
-        'id'            => 'home-block-one'
+        'name'          => __('Home Block 1', 'pressbooks-aldine'),
+        'id'            => 'home-block-1'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block Two', 'pressbooks-aldine'),
-        'id'            => 'home-block-two'
+        'name'          => __('Home Block 2', 'pressbooks-aldine'),
+        'id'            => 'home-block-2'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block Three', 'pressbooks-aldine'),
-        'id'            => 'home-block-three'
+        'name'          => __('Home Block 3', 'pressbooks-aldine'),
+        'id'            => 'home-block-3'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block Four', 'pressbooks-aldine'),
-        'id'            => 'home-block-four'
+        'name'          => __('Home Block 4', 'pressbooks-aldine'),
+        'id'            => 'home-block-4'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block Five', 'pressbooks-aldine'),
-        'id'            => 'home-block-five'
+        'name'          => __('Home Block 5', 'pressbooks-aldine'),
+        'id'            => 'home-block-5'
     ] + $config);
 });
 
