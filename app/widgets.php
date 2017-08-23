@@ -3,7 +3,7 @@
 namespace Aldine;
 
 add_action('widgets_init', function () {
-    foreach([
+    foreach ([
         'WP_Widget_Pages',
         'WP_Widget_Calendar',
         'WP_Widget_Archives',
