@@ -10,7 +10,7 @@
         <main class="main">
           @yield('content')
         </main>
-        @if (App\display_sidebar())
+        @if (Aldine\display_sidebar())
           <aside class="sidebar">
             @include('partials.sidebar')
           </aside>

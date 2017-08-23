@@ -5,7 +5,7 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{  __('Sorry, no results were found.', 'pressbooks-aldine') }}
+      {{  __('Sorry, no results were found.', 'aldine') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

@@ -4,8 +4,8 @@
   @if($block_count === 0)
     <div class="block block-1">
       <div class="inside">
-        <h3>{{ __('About Pressbooks', 'pressbooks-aldine')}}</h3>
-        <p>{{ __('Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine')}}</p>
+        <h3>{{ __('About Pressbooks', 'aldine')}}</h3>
+        <p>{{ __('Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'aldine')}}</p>
       </div>
     </div>
   @elseif($block_count < 5)

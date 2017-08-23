@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 /**
  * Add <body> classes
@@ -30,7 +30,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'pressbooks-aldine') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'aldine') . '</a>';
 });
 
 /**

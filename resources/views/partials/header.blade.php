@@ -6,11 +6,11 @@
         <a class="catalog" href="{{ home_url('/catalog') }}">Catalog</a>
         <a class="contact" href="#contact">Contact</a>
         @if(!is_user_logged_in())
-          <a class="signin" href="{{ wp_login_url() }}">{{ __('Sign in', 'pressbooks-aldine') }}</a>
+          <a class="signin" href="{{ wp_login_url() }}">{{ __('Sign in', 'aldine') }}</a>
           <span class="sep">/</span>
-          <a class="signup" href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'pressbooks-aldine') }}</a>
+          <a class="signup" href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'aldine') }}</a>
         @else
-          <a class="signin" href="{{ wp_logout_url() }}">{{ __('Sign out', 'pressbooks-aldine') }}</a>
+          <a class="signin" href="{{ wp_logout_url() }}">{{ __('Sign out', 'aldine') }}</a>
         @endif
     </nav>
     <div class="branding">

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 use Roots\Sage\Container;
 

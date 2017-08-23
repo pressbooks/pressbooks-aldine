@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
@@ -46,7 +46,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'pressbooks-aldine')
+        'primary_navigation' => __('Primary Navigation', 'aldine')
     ]);
 
     /**
@@ -85,23 +85,23 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Home Block 1', 'pressbooks-aldine'),
+        'name'          => __('Home Block 1', 'aldine'),
         'id'            => 'home-block-1'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block 2', 'pressbooks-aldine'),
+        'name'          => __('Home Block 2', 'aldine'),
         'id'            => 'home-block-2'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block 3', 'pressbooks-aldine'),
+        'name'          => __('Home Block 3', 'aldine'),
         'id'            => 'home-block-3'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block 4', 'pressbooks-aldine'),
+        'name'          => __('Home Block 4', 'aldine'),
         'id'            => 'home-block-4'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block 5', 'pressbooks-aldine'),
+        'name'          => __('Home Block 5', 'aldine'),
         'id'            => 'home-block-5'
     ] + $config);
 });

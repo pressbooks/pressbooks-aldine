@@ -12,8 +12,8 @@ class PageButton extends \WP_Widget
      */
     public function __construct()
     {
-        parent::__construct('pagebutton', __('Page Button', 'pressbooks-aldine'), [
-            'description' => esc_html__('Add a styled button which links to a page.', 'pressbooks-aldine')
+        parent::__construct('pagebutton', __('Page Button', 'aldine'), [
+            'description' => esc_html__('Add a styled button which links to a page.', 'aldine')
         ]);
     }
 
@@ -48,9 +48,9 @@ class PageButton extends \WP_Widget
     {
         $title = ! empty($instance['title']) ? $instance['title'] : '';
         $url = ! empty($instance['page_id']) ? $instance['page_id'] : ''; ?>
-        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_attr_e('Title:', 'pressbooks-aldine'); ?></label>
+        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_attr_e('Title:', 'aldine'); ?></label>
         <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>"></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('page_id')); ?>"><?php esc_attr_e('Page:', 'pressbooks-aldine'); ?></label>
+        <p><label for="<?php echo esc_attr($this->get_field_id('page_id')); ?>"><?php esc_attr_e('Page:', 'aldine'); ?></label>
         <select id="<?php echo esc_attr($this->get_field_id('page_id')); ?>" name="<?php echo esc_attr($this->get_field_name('page_id')); ?>">
             <option value="" <?php selected($instance['page_id'], ''); ?>> -- </a>
             <?php $pages = get_pages();
