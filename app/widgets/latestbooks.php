@@ -28,26 +28,31 @@ class LatestBooks extends \WP_Widget
     public function widget($args, $instance)
     {
         $number = (! empty($instance['number'])) ? absint($instance['number']) : 3;
-        if (!$number)
+        if (!$number) {
             $number = 3;
+        }
         if (empty($instance['title'])) {
             $instance['title'] = __('Latest Books', 'aldine');
         }
         echo $args['before_widget'];
         echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
         $books = wp_remote_get(home_url('/wp-json/pressbooks/v2/books'));
-        $books = json_decode($books['body'], true); ?>
-        <div class="books">
-        <?php for($i = 0; $i < $number; $i++) {
+        $books = json_decode($books['body'], true);
+        echo '<div class="books">';
+        for ($i = 0; $i < $number; $i++) {
             printf(
-                '<div class="book"><a class="subject" href="">TK</a><a class="title" href="%1$s">%2$s</a><a class="read-more" href="%1$s">%3$s</a></div>',
+                '<div class="book">
+                    <a class="subject" href="">TK</a>
+                    <a class="title" href="%1$s">%2$s</a>
+                    <a class="read-more" href="%1$s">%3$s</a>
+                </div>',
                 $books[$i]['link'],
                 $books[$i]['metadata']['name'],
                 __('About this book &rarr;', 'aldine')
             );
-        } ?>
-        </div>
-        <?php echo $args['after_widget'];
+        }
+        echo '</div>';
+        echo $args['after_widget'];
     }
 
     /**
@@ -61,18 +66,18 @@ class LatestBooks extends \WP_Widget
     {
         $title = ! empty($instance['title']) ? $instance['title'] : '';
         $number = ! empty($instance['number']) ? absint($instance['number']) : 3; ?>
-        <p><label for="<?= $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?= $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
         <input
             class="widefat"
-            id="<?= $this->get_field_id( 'title' ); ?>"
-            name="<?= $this->get_field_name( 'title' ); ?>"
+            id="<?= $this->get_field_id('title'); ?>"
+            name="<?= $this->get_field_name('title'); ?>"
             type="text"
             value="<?= $title; ?>" /></p>
-        <p><label for="<?= $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of books to show:' ); ?></label>
+        <p><label for="<?= $this->get_field_id('number'); ?>"><?php _e('Number of books to show:'); ?></label>
         <input
             class="tiny-text"
-            id="<?= $this->get_field_id( 'number' ); ?>"
-            name="<?= $this->get_field_name( 'number' ); ?>"
+            id="<?= $this->get_field_id('number'); ?>"
+            name="<?= $this->get_field_name('number'); ?>"
             type="number"
             step="1"
             min="1"
