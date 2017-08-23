@@ -51,7 +51,7 @@ class PageButton extends \WP_Widget
     public function form($instance)
     {
         $title = ! empty($instance['title']) ? $instance['title'] : '';
-        $url = ! empty($instance['page_id']) ? $instance['page_id'] : ''; ?>
+        $page_id = ! empty($instance['page_id']) ? $instance['page_id'] : ''; ?>
         <p><label for="<?= esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'aldine'); ?></label>
         <input
             class="widefat"
@@ -63,11 +63,11 @@ class PageButton extends \WP_Widget
         <select
             id="<?= esc_attr($this->get_field_id('page_id')); ?>"
             name="<?= esc_attr($this->get_field_name('page_id')); ?>">
-            <option value="" <?php selected($instance['page_id'], ''); ?>> -- </a>
+            <option value="" <?php selected($page_id, ''); ?>> -- </a>
             <?php $pages = get_pages();
             foreach ($pages as $page) { ?>
                 <option value="<?= $page->ID; ?>"
-                    <?php selected(@$instance['page_id'], $page->ID); ?>>
+                    <?php selected($page_id, $page->ID); ?>>
                         <?= $page->post_title; ?>
                 </option>
             <?php } ?>

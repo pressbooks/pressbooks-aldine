@@ -23,3 +23,9 @@
     color: $brand-primary;
   }
 }
+
+@media (min-width: $medium) {
+  .button {
+    width: 275px;
+  }
+}

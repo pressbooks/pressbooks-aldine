@@ -18,6 +18,7 @@ add_action('widgets_init', function () {
     ] as $widget) {
         unregister_widget($widget);
     }
+    register_widget('Aldine\LatestBooks');
     register_widget('Aldine\LinkButton');
     register_widget('Aldine\PageButton');
 });

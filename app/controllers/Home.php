@@ -34,4 +34,9 @@ class Home extends Controller
 
         return $blocks;
     }
+
+    public function latestBooksBlock()
+    {
+        return is_active_widget(false, false, 'latestbooks');
+    }
 }

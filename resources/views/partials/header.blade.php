@@ -10,6 +10,8 @@
           <span class="sep">/</span>
           <a class="signup" href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'aldine') }}</a>
         @else
+          <a class="admin" href="{{ admin_url() }}">{{ __('Admin', 'aldine') }}</a>
+          <span class="sep">/</span>
           <a class="signin" href="{{ wp_logout_url() }}">{{ __('Sign out', 'aldine') }}</a>
         @endif
     </nav>
