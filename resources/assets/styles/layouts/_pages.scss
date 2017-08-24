@@ -1,5 +1,14 @@
 .home {
   .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12.5px;
+    width: 100%;
+    height: 445px;
+    background-color: $white;
+
     h3 {
       font-size: 30px;
       font-weight: 600;
@@ -7,13 +16,217 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       line-height: 36px;
+      color: $brand-primary;
       margin: 0;
 
       &::before {
+        content: "";
         display: block;
+        margin: 0 auto 1em;
         width: 46px;
         height: 5px;
-        color: $brand-primary;
+        background-color: $brand-secondary;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    .inside {
+      width: 100%;
+      text-align: center;
+    }
+
+    &.latest-books {
+      box-shadow: unset;
+      width: 100%;
+      height: auto;
+
+      .inside {
+        width: 100%;
+      }
+    }
+
+    .books {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .book {
+        width: 367px;
+        height: 386px;
+        margin: 113px 30px 0;
+        padding: 0 29.5px;
+        border: solid 2px $brand-secondary;
+        background-color: $brand-secondary;
+        // transition: 0.4s all;
+
+        a {
+          font-family: Karla, sans-serif;
+          color: $white;
+          text-decoration: none;
+        }
+
+        .subject {
+          display: block;
+          height: 91px;
+          margin-top: 22px;
+          font-size: 24px;
+          text-align: center;
+        }
+
+        .title {
+          display: block;
+          height: 329px - 115px;
+          font-size: 30px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .read-more {
+          display: block;
+          height: auto;
+          font-size: 18px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .one-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .block-2 {
+      background: $brand-secondary;
+
+      p,
+      h3 {
+        color: $white;
+      }
+
+      h3::before {
+        background-color: $white;
+      }
+    }
+  }
+
+  .main > .block-2,
+  .one-two + .block {
+    background: transparent;
+    border: solid 2px $brand-primary;
+    // margin-bottom: 401px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 1840px;
+      content: "";
+      display: block;
+      display: none;
+      width: 100vw;
+      height: 600px;
+      z-index: -1;
+      background: url('../images/banner-two.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .home {
+    .wrap {
+      margin-top: -366px;
+    }
+
+    .block {
+      width: 775px;
+      margin-bottom: 119px;
+      box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+
+      h3 {
+        font-size: 48px;
+        line-height: 56px;
+
+        &::before {
+          width: 74px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      .inside {
+        width: 595px;
+      }
+    }
+
+    .one-two {
+      align-items: center;
+    }
+
+    .main > .block-2,
+    .one-two + .block {
+      border: solid 2px $brand-primary;
+      box-shadow: unset;
+
+      &::after {
+        top: 2020px;
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .home {
+    .block {
+      width: 1115px;
+      height: 494px;
+    }
+
+    .main > .block-2,
+    .one-two + .block {
+      &::after {
+        top: 2150px;
+      }
+    }
+  }
+}
+
+@media (min-width: $extra-large) {
+  .home {
+    .block {
+      width: 1115px;
+      box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+    }
+
+    .one-two {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 1615px;
+
+      .block {
+        border-radius: 4px;
+        width: 775px;
+
+        .inside {
+          width: 595px;
+        }
+      }
+    }
+
+    .main > .block-2,
+    .one-two + .block {
+      &::after {
+        top: 1550px;
       }
     }
   }

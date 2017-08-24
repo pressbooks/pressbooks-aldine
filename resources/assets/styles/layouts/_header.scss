@@ -1,11 +1,137 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
-
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 560px;
+  background: url('../images/banner-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 560px;
+  }
+
+  .toggle-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 17px;
+    z-index: 99;
+    text-indent: -9999em;
+    width: 25px;
+    height: 20px;
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: 7px;
+      width: 25px;
+      height: 3px;
+      background: $brand-primary;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: $brand-primary;
+      }
+
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+      }
+
+      &::after {
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+    }
+
+    &.is-active .icon {
+      // TODO
+      background: $white;
+
+      &::before,
+      &::after {
+        background: $white;
+      }
+    }
+  }
+
+  .brand {
+    display: block;
+    width: 109px;
+    height: 17px;
+    margin: 30px 0 0 17px;
+    align-self: flex-start;
+    background-image: url('../images/logo.png');
+    background-size: 109px 17px;
+    text-indent: -9999em;
+  }
+
+  .primary-navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    width: 100%;
+    height: 560px;
+    margin: 0 0 0 -100%;
+    padding: 0 17px;
+    background: transparent;
+    transition: background 0.5s;
+
+    a {
+      font-family: Karla, sans-serif;
+      font-size: 24px;
+      color: $white;
+      letter-spacing: 0;
+      line-height: 80px;
+      text-decoration: none;
+      display: none;
+    }
+
+    .sep {
+      display: none;
+    }
+
+    &.is-visible {
+      z-index: 1;
+      background: $brand-primary;
+      justify-content: center;
+      margin: 0;
+      padding: 0 52px;
+
+      a {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px $white;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &.brand {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .branding {
+    display: flex;
+    height: 364px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .banner h1 {
@@ -18,4 +144,83 @@
 
 .banner h2 {
   text-align: center;
+}
+
+@media (min-width: $medium) {
+  .banner {
+    background-image: url('../images/banner-desktop.jpg');
+
+    .container {
+      margin: 0 auto;
+      height: 880px;
+    }
+
+    .toggle-menu {
+      display: none;
+    }
+
+    .brand {
+      align-self: center;
+      margin-top: 40px;
+      width: 265px;
+      height: 40px;
+      background-image: url('../images/logo@2x.png');
+      background-size: 265px 40px;
+    }
+
+    .primary-navigation {
+      position: absolute;
+      width: 100%;
+      max-width: 1440px;
+      height: 40px;
+      top: 40px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        font-size: 18px;
+        display: inline-block;
+        line-height: normal;
+        color: $black;
+
+        &:hover,
+        &:focus {
+          color: $brand-primary;
+        }
+
+        &.catalog {
+          margin-right: auto;
+        }
+
+        &.contact {
+          margin: 0 1em 0 auto;
+        }
+      }
+
+      .sep {
+        display: inline-block;
+        margin: 0 0.5em;
+      }
+    }
+
+    .branding {
+      height: 576px;
+    }
+
+    h1 {
+      font-size: 72px;
+      letter-spacing: 1.8px;
+      line-height: 40px;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: 0.75px;
+      line-height: 40px;
+    }
+  }
 }

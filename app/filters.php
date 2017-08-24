@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 /**
  * Add <body> classes
@@ -11,11 +11,6 @@ add_filter('body_class', function (array $classes) {
         if (!in_array(basename(get_permalink()), $classes)) {
             $classes[] = basename(get_permalink());
         }
-    }
-
-    /** Add class if sidebar is active */
-    if (display_sidebar()) {
-        $classes[] = 'sidebar-primary';
     }
 
     /** Clean up class names for custom templates */
@@ -30,7 +25,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'pressbooks-aldine') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'aldine') . '</a>';
 });
 
 /**
@@ -67,4 +62,26 @@ add_filter('comments_template', function ($comments_template) {
         $comments_template
     );
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
+});
+
+/**
+ * Remove Admin Bar callback
+ */
+add_action('admin_bar_init', function () {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+});
+
+/**
+ * Remove Emoji
+ * @see https://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+ */
+add_action('init', function () {
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    add_filter('emoji_svg_url', '__return_false');
 });

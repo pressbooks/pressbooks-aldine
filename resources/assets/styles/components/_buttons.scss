@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  width: 250px;
+  height: 60px;
+  margin-top: 2em;
+  padding: 1.25em;
+  border: 2px solid $brand-primary;
+  border-radius: 3px;
+  background: $brand-primary;
+  font-family: Karla, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $brand-primary;
+  }
+}
+
+@media (min-width: $medium) {
+  .button {
+    width: 275px;
+  }
+}
