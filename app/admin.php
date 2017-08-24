@@ -14,6 +14,10 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
+    $wp_customize->add_section('social-media', [
+        'title' => __('Social Media','aldine'),
+        'priority' => 30,
+    ]);
 });
 
 /**

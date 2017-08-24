@@ -50,7 +50,7 @@ add_action('wp_enqueue_scripts', function () {
     );
     wp_enqueue_script('aldine/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
     wp_enqueue_script('uio.js', get_theme_file_uri() . '/lib/infusion/infusion-uiOptions.js', ['jquery'], null, true);
-    wp_localize_script('aldine/main.js', 'SAGE_DIST_PATH', get_theme_file_uri('dist/'));
+    wp_localize_script('aldine/main.js', 'SAGE_DIST_PATH', get_theme_file_uri() . '/dist/');
 }, 100);
 
 /**
@@ -62,6 +62,14 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */
     add_theme_support('title-tag');
+
+    /**
+     * Register navigation menus
+     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+     */
+    register_nav_menus([
+        'network-footer-menu' => __('Network Footer Menu', 'aldine')
+    ]);
 
     /**
      * Enable post thumbnails
@@ -125,10 +133,6 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Network Footer Block 2', 'aldine'),
         'id'            => 'network-footer-block-2'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Network Footer Block 3', 'aldine'),
-        'id'            => 'network-footer-block-3'
     ] + $config);
 });
 

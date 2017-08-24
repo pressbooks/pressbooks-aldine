@@ -1,6 +1,5 @@
 <footer class="content-info">
   <div class="container">
-    @if(is_active_sidebar('network-footer-block-1') || is_active_sidebar('network-footer-block-2') || is_active_sidebar('network-footer-block-3'))
     <section class="network-footer">
       @if(is_active_sidebar('network-footer-block-1'))
         <div class="network-footer-block network-footer-block-1">
@@ -12,13 +11,10 @@
           @php(dynamic_sidebar('network-footer-block-2'))
         </div>
       @endif
-      @if(is_active_sidebar('network-footer-block-3'))
-        <div class="network-footer-block network-footer-block-3">
-          @php(dynamic_sidebar('network-footer-block-3'))
-        </div>
-      @endif
+      <div class="network-footer-block network-footer-menu">
+        @php(wp_nav_menu('network-footer-menu'))
+      </div>
     </section>
-    @endif
     <section class="pressbooks-footer">
       <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/pb.svg'))</a>
       <div class="pressbooks-links">
