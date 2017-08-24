@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 /**
  * Theme customizer
@@ -13,6 +13,10 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'render_callback' => function () {
             bloginfo('name');
         }
+    ]);
+    $wp_customize->add_section('social-media', [
+        'title' => __('Social Media','aldine'),
+        'priority' => 30,
     ]);
 });
 

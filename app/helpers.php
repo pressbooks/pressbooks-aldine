@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 use Roots\Sage\Container;
 
@@ -80,6 +80,15 @@ function asset_path($asset)
 }
 
 /**
+ * @param $asset
+ * @return string
+ */
+function svg_path($asset)
+{
+    return sage('assets')->get($asset);
+}
+
+/**
  * @param string|string[] $templates Possible template files
  * @return array
  */
@@ -126,15 +135,4 @@ function filter_templates($templates)
 function locate_template($templates)
 {
     return \locate_template(filter_templates($templates));
-}
-
-/**
- * Determine whether to show the sidebar
- * @return bool
- */
-function display_sidebar()
-{
-    static $display;
-    isset($display) || $display = apply_filters('sage/display_sidebar', false);
-    return $display;
 }
