@@ -46,6 +46,10 @@
 
     .network-footer-block-2 {
       padding: 30px 7.5px;
+
+      .widget {
+        margin-bottom: 1em;
+      }
     }
 
     .network-footer-block-3 {
@@ -53,6 +57,7 @@
     }
 
     .network-footer-block .social-media {
+      margin-top: 0;
       width: 100%;
 
       a {
