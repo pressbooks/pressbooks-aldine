@@ -24,7 +24,10 @@ class App extends Controller
     public static function networkFooter($index)
     {
         if ($index === 2) {
-            if (get_option('pb_network_facebook') || get_option('pb_network_twitter') || is_active_sidebar("network-footer-block-$index")) {
+            if (get_option('pb_network_facebook')
+                || get_option('pb_network_twitter')
+                || is_active_sidebar("network-footer-block-$index")
+            ) {
                 return "network-footer-block-$index";
             } else {
                 return 'empty';
