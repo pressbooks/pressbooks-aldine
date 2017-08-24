@@ -11,6 +11,28 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function networkFacebook()
+    {
+        return get_option('pb_network_facebook');
+    }
+
+    public function networkTwitter()
+    {
+        return get_option('pb_network_twitter');
+    }
+
+    public static function networkFooter($index)
+    {
+        if ($index === 2) {
+            if (get_option('pb_network_facebook') || get_option('pb_network_twitter') || is_active_sidebar("network-footer-block-$index")) {
+                return "network-footer-block-$index";
+            } else {
+                return 'empty';
+            }
+        }
+        return (is_active_sidebar("network-footer-block-$index")) ? "network-footer-block-$index" : 'empty';
+    }
+
     public static function title()
     {
         if (is_home()) {

@@ -1,16 +1,24 @@
 <footer class="content-info">
   <div class="container">
     <section class="network-footer">
-      @if(is_active_sidebar('network-footer-block-1'))
-        <div class="network-footer-block network-footer-block-1">
-          @php(dynamic_sidebar('network-footer-block-1'))
-        </div>
-      @endif
-      @if(is_active_sidebar('network-footer-block-2'))
-        <div class="network-footer-block network-footer-block-2">
+      <div class="network-footer-block {{ App::networkFooter(1) }}">
+        @if(App::networkFooter(1) !== 'empty')
+            @php(dynamic_sidebar('network-footer-block-1'))
+        @endif
+      </div>
+      <div class="network-footer-block {{ App::networkFooter(2) }}">
+        @if(App::networkFooter(2) !== 'empty')
           @php(dynamic_sidebar('network-footer-block-2'))
+        @endif
+        <div class="social-media">
+          @if($network_facebook)
+            <a class="facebook" href="{{ $network_facebook }}" title="{{ sprintf(__('%s on Facebook', 'aldine'), get_bloginfo('name', 'display')) }}"><i class="fa fa-facebook-official"></i></a>
+          @endif
+          @if($network_twitter)
+            <a class="twitter" href="{{ $network_twitter }}" title="{{ sprintf(__('%s on Twitter', 'aldine'), get_bloginfo('name', 'display')) }}"><i class="fa fa-twitter"></i></a>
+          @endif
         </div>
-      @endif
+      </div>
       <div class="network-footer-block network-footer-menu">
         @php(wp_nav_menu('network-footer-menu'))
       </div>
