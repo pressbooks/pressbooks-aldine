@@ -23,27 +23,27 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'transport' => 'postMessage'
     ]);
     $wp_customize->add_control('pb_network_facebook', [
-        'label' => __('Facebook URL','aldine'),
+        'label' => __('Facebook', 'aldine'),
         'section'  => 'pb_network_social',
-		'settings' => 'pb_network_facebook',
+        'settings' => 'pb_network_facebook',
     ]);
     $wp_customize->add_setting('pb_network_linkedin', [
         'type' => 'option',
         'transport' => 'postMessage'
     ]);
     $wp_customize->add_control('pb_network_linkedin', [
-        'label' => __('LinkedIn URL','aldine'),
+        'label' => __('LinkedIn', 'aldine'),
         'section'  => 'pb_network_social',
-		'settings' => 'pb_network_linkedin',
+        'settings' => 'pb_network_linkedin',
     ]);
     $wp_customize->add_setting('pb_network_twitter', [
         'type' => 'option',
         'transport' => 'postMessage'
     ]);
     $wp_customize->add_control('pb_network_twitter', [
-        'label' => __('Twitter URL','aldine'),
+        'label' => __('Twitter', 'aldine'),
         'section'  => 'pb_network_social',
-		'settings' => 'pb_network_twitter',
+        'settings' => 'pb_network_twitter',
     ]);
 });
 
