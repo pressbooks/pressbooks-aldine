@@ -10,12 +10,12 @@
     background-color: $white;
 
     h3 {
-      font-size: 30px;
+      font-size: em(30);
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
-      line-height: 36px;
+      line-height: (36/30);
       color: $brand-primary;
       margin: 0;
 
@@ -30,8 +30,8 @@
     }
 
     p {
-      font-size: 16px;
-      line-height: 32px;
+      font-size: em(16);
+      line-height: (32/16);
       text-align: center;
     }
 
@@ -74,14 +74,14 @@
           display: block;
           height: 91px;
           margin-top: 22px;
-          font-size: 24px;
+          font-size: em(24);
           text-align: center;
         }
 
         .title {
           display: block;
           height: 329px - 115px;
-          font-size: 30px;
+          font-size: em(30);
           font-weight: 500;
           text-align: center;
         }
@@ -89,7 +89,7 @@
         .read-more {
           display: block;
           height: auto;
-          font-size: 18px;
+          font-size: em(18);
           text-align: left;
         }
       }
@@ -151,8 +151,8 @@
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
 
       h3 {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: em(48);
+        line-height: (56/48);
 
         &::before {
           width: 74px;
@@ -160,8 +160,8 @@
       }
 
       p {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: em(18);
+        line-height: (32/18);
       }
 
       .inside {

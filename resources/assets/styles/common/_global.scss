@@ -5,7 +5,8 @@
 body {
   margin: 0;
   color: $dark-grey;
-  font-family: Spectral, serif;
+  font-family: $font-family-serif;
+  font-size: #{$base-font-size}px;
 }
 
 h1,
@@ -14,22 +15,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Karla, sans-serif;
+  font-family: $font-family-sans-serif;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: em(30);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 36px;
+  letter-spacing: em(2);
+  line-height: (36/30);
   margin: 0;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: em(16);
   font-weight: normal;
-  line-height: 30px;
+  line-height: (30/16);
   margin: 0;
 }
 

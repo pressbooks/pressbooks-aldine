@@ -90,10 +90,10 @@
 
     a {
       font-family: Karla, sans-serif;
-      font-size: 24px;
+      font-size: em(24);
       color: $white;
       letter-spacing: 0;
-      line-height: 80px;
+      line-height: (80/24);
       text-decoration: none;
       display: none;
     }
@@ -181,7 +181,7 @@
       align-items: center;
 
       a {
-        font-size: 18px;
+        font-size: em(18);
         display: inline-block;
         line-height: normal;
         color: $black;
@@ -211,16 +211,16 @@
     }
 
     h1 {
-      font-size: 72px;
+      font-size: em(72);
       letter-spacing: 1.8px;
-      line-height: 40px;
+      line-height: (40/72);
       margin-bottom: 0.5em;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: em(30);
       letter-spacing: 0.75px;
-      line-height: 40px;
+      line-height: (40/30);
     }
   }
 }
