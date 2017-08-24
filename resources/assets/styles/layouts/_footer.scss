@@ -19,6 +19,12 @@
     a {
       color: $white;
       text-decoration: none;
+      border-bottom: solid 1px transparent;
+
+      &:hover,
+      &:focus {
+        border-bottom: solid 1px $white;
+      }
     }
 
     .network-footer-block.empty {
@@ -51,6 +57,12 @@
 
       a {
         margin: 0 0.5em 0 0;
+        border-bottom: none;
+
+        &:hover,
+        &:focus {
+          border-bottom: none;
+        }
       }
     }
   }
@@ -74,7 +86,6 @@
     width: 100%;
     height: 125px;
     background-color: $dark-grey;
-    font-size: em(14);
 
     h1,
     li,
@@ -109,6 +120,7 @@
     ul {
       display: none;
       margin: 0;
+      font-size: em(14);
     }
 
     .pressbooks-icon {
@@ -158,7 +170,7 @@
 
     .social-media {
       a {
-        font-size: 24px;
+        font-size: em(24);
         margin: 0 0.5em 0 0;
       }
     }
@@ -171,6 +183,7 @@
 
       h1 {
         font-weight: 600;
+        margin-bottom: 11px;
       }
 
       ul {
