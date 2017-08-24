@@ -14,9 +14,36 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
-    $wp_customize->add_section('social-media', [
-        'title' => __('Social Media','aldine'),
+    $wp_customize->add_section('pb_network_social', [
+        'title' => __('Social Media', 'aldine'),
         'priority' => 30,
+    ]);
+    $wp_customize->add_setting('pb_network_facebook', [
+        'type' => 'option',
+        'transport' => 'postMessage'
+    ]);
+    $wp_customize->add_control('pb_network_facebook', [
+        'label' => __('Facebook URL','aldine'),
+        'section'  => 'pb_network_social',
+		'settings' => 'pb_network_facebook',
+    ]);
+    $wp_customize->add_setting('pb_network_linkedin', [
+        'type' => 'option',
+        'transport' => 'postMessage'
+    ]);
+    $wp_customize->add_control('pb_network_linkedin', [
+        'label' => __('LinkedIn URL','aldine'),
+        'section'  => 'pb_network_social',
+		'settings' => 'pb_network_linkedin',
+    ]);
+    $wp_customize->add_setting('pb_network_twitter', [
+        'type' => 'option',
+        'transport' => 'postMessage'
+    ]);
+    $wp_customize->add_control('pb_network_twitter', [
+        'label' => __('Twitter URL','aldine'),
+        'section'  => 'pb_network_social',
+		'settings' => 'pb_network_twitter',
     ]);
 });
 
@@ -24,5 +51,5 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
  * Customizer JS
  */
 add_action('customize_preview_init', function () {
-    wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
+    wp_enqueue_script('aldine/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
