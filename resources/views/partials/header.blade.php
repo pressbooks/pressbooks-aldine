@@ -1,8 +1,8 @@
-<header class="banner">
-  <div class="container">
-    <a class="toggle-menu" href="#primary-navigation">Toggle menu<span class="icon"></span></a>
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
-    <nav id="primary-navigation" class="primary-navigation">
+<section class="banner bg-bottom cover">
+  <div class="container flex flex-column justify-between items-center w-100 mw-100">
+    <a class="toggle-menu db dn-l absolute" href="#primary-navigation">{{ __('Toggle menu', 'aldine') }}<span class="icon db absolute"></span></a>
+    <a class="brand db self-start self-center-l" href="{{ home_url('/') }}"><span class="clip>"{{ get_bloginfo('name', 'display') }}</a></a>
+    <nav id="primary-navigation" class="primary-navigation absolute flex flex-column justify-center items-start top-0 w-100 bg-transparent bg-animate flex-row-l justify-start-l items-center-l">
         <a class="catalog" href="{{ home_url('/catalog') }}">Catalog</a>
         <a class="contact" href="#contact">Contact</a>
         @if(!is_user_logged_in())
@@ -15,9 +15,9 @@
           <a class="signin" href="{{ wp_logout_url() }}">{{ __('Sign out', 'aldine') }}</a>
         @endif
     </nav>
-    <div class="branding">
+    <header class="branding flex flex-column justify-start items-center tc">
       <h1><a href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a></h1>
-      <h2>{{ get_bloginfo('description', 'display') }}</h2>
-    </div>
+      <p>{{ get_bloginfo('description', 'display') }}</p>
+    </header>
   </div>
-</header>
+</section>

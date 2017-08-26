@@ -127,7 +127,7 @@
     "yargs": "~8.0"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "jquery": "1.12.4 - 3"
+    "jquery": "1.12.4 - 3",
+    "tachyons-sass": "~4.7"
   }
 }

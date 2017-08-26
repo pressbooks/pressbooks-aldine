@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  color: $dark-grey;
   font-family: $font-family-serif;
   font-size: #{$base-font-size}px;
 }
@@ -36,4 +35,5 @@ h2 {
 
 a {
   color: $brand-primary;
+  text-decoration: none;
 }

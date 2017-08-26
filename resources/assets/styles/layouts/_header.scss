@@ -1,32 +1,19 @@
 .banner {
-  background: url('../images/banner-mobile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  background-image: url('../images/banner-mobile.jpg');
 
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
     height: 560px;
   }
 
   .toggle-menu {
-    display: block;
-    position: absolute;
     top: 30px;
     right: 17px;
-    z-index: 99;
-    text-indent: -9999em;
     width: 25px;
     height: 20px;
+    z-index: 99;
+    text-indent: -9999em;
 
     .icon {
-      display: block;
-      position: absolute;
       top: 7px;
       width: 25px;
       height: 3px;
@@ -34,9 +21,9 @@
 
       &::before,
       &::after {
-        content: '';
         width: 25px;
         height: 3px;
+        content: '';
         background: $brand-primary;
       }
 
@@ -65,37 +52,25 @@
   }
 
   .brand {
-    display: block;
     width: 109px;
     height: 17px;
     margin: 30px 0 0 17px;
-    align-self: flex-start;
     background-image: url('../images/logo.png');
     background-size: 109px 17px;
-    text-indent: -9999em;
   }
 
   .primary-navigation {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    top: 0;
-    width: 100%;
     height: 560px;
     margin: 0 0 0 -100%;
     padding: 0 17px;
-    background: transparent;
-    transition: background 0.5s;
 
     a {
-      font-family: Karla, sans-serif;
+      display: none;
+      font-family: $font-family-sans-serif;
       font-size: em(24);
+      line-height: (80/24);
       color: $white;
       letter-spacing: 0;
-      line-height: (80/24);
-      text-decoration: none;
-      display: none;
     }
 
     .sep {
@@ -103,11 +78,10 @@
     }
 
     &.is-visible {
-      z-index: 1;
-      background: $brand-primary;
-      justify-content: center;
       margin: 0;
       padding: 0 52px;
+      z-index: 1;
+      background: $brand-primary;
 
       a {
         display: block;
@@ -117,74 +91,47 @@
         &:last-child {
           border-bottom: 0;
         }
-
-        &.brand {
-          display: none;
-        }
       }
     }
   }
 
   .branding {
-    display: flex;
     height: 364px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+
+    p {
+      font-family: $font-family-sans-serif;
+    }
   }
 }
 
-.banner h1 {
-  text-align: center;
-
-  a {
-    text-decoration: none;
-  }
-}
-
-.banner h2 {
-  text-align: center;
-}
-
-@media (min-width: $medium) {
+@media #{$breakpoint-large} {
   .banner {
     background-image: url('../images/banner-desktop.jpg');
 
     .container {
-      margin: 0 auto;
       height: 880px;
-    }
-
-    .toggle-menu {
-      display: none;
+      margin: 0 auto;
     }
 
     .brand {
-      align-self: center;
-      margin-top: 40px;
       width: 265px;
       height: 40px;
+      margin-top: 40px;
       background-image: url('../images/logo@2x.png');
       background-size: 265px 40px;
     }
 
     .primary-navigation {
-      position: absolute;
-      width: 100%;
+      top: 40px;
       max-width: 1440px;
       height: 40px;
-      top: 40px;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
+      margin-left: 0;
 
       a {
-        font-size: em(18);
         display: inline-block;
-        line-height: normal;
+        font-size: em(18);
         color: $black;
+        line-height: normal;
 
         &:hover,
         &:focus {
@@ -208,19 +155,19 @@
 
     .branding {
       height: 576px;
+
+      p {
+        font-size: em(30);
+        letter-spacing: 0.75px;
+        line-height: (40/30);
+      }
     }
 
     h1 {
-      font-size: em(72);
-      letter-spacing: 1.8px;
-      line-height: (40/72);
       margin-bottom: 0.5em;
-    }
-
-    h2 {
-      font-size: em(30);
-      letter-spacing: 0.75px;
-      line-height: (40/30);
+      font-size: em(72);
+      line-height: (40/72);
+      letter-spacing: 1.8px;
     }
   }
 }

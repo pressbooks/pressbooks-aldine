@@ -3,7 +3,7 @@
     background: $brand-secondary;
     margin-bottom: 0;
     padding: 60px 42.5px 40px;
-    font-family: Karla, sans-serif;
+    font-family: $font-family-sans-serif;
     font-size: em(16);
     color: $white;
 
@@ -52,7 +52,7 @@
       }
     }
 
-    .network-footer-block-3 {
+    .network-footer-menu {
       padding: 30px 7.5px 0;
     }
 
@@ -96,7 +96,7 @@
     li,
     a {
       color: $white;
-      font-family: Karla, sans-serif;
+      font-family: $font-family-sans-serif;
       text-decoration: none;
       text-transform: none;
       letter-spacing: normal;
