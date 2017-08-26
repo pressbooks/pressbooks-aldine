@@ -34,6 +34,24 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section'  => 'pb_network_social',
         'settings' => 'pb_network_twitter',
     ]);
+    $wp_customize->add_section('pb_network_catalog', [
+        'title' => __('Catalog', 'aldine'),
+        'priority' => 20,
+    ]);
+    $wp_customize->add_setting('pb_front_page_catalog');
+    $wp_customize->add_control('pb_front_page_catalog', [
+        'label' => __('Show Front Page Catalog', 'aldine'),
+        'section'  => 'pb_network_catalog',
+        'settings' => 'pb_front_page_catalog',
+        'type' => 'checkbox'
+    ]);
+    $wp_customize->add_setting('pb_front_pa ge_catalog_title');
+    $wp_customize->add_control('pb_front_page_catalog_title', [
+        'label' => __('Front Page Catalog Title', 'aldine'),
+        'section'  => 'pb_network_catalog',
+        'settings' => 'pb_front_page_catalog_title',
+    ]);
+
 });
 
 /**

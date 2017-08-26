@@ -123,10 +123,6 @@ add_action('widgets_init', function () {
         'id'            => 'home-block-4'
     ] + $config);
     register_sidebar([
-        'name'          => __('Home Block 5', 'aldine'),
-        'id'            => 'home-block-5'
-    ] + $config);
-    register_sidebar([
         'name'          => __('Network Footer Block 1', 'aldine'),
         'id'            => 'network-footer-block-1'
     ] + $config);

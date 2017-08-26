@@ -67,7 +67,6 @@ array_map(function ($file) use ($sage_error) {
     'filters',
     'admin',
     'widgets',
-    'widgets/latestbooks',
     'widgets/linkbutton',
     'widgets/pagebutton'
 ]);

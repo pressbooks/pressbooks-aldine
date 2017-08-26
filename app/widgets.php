@@ -14,11 +14,11 @@ add_action('widgets_init', function () {
         'WP_Widget_Categories',
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',
+        'WP_Widget_RSS',
         'WP_Widget_Tag_Cloud'
     ] as $widget) {
         unregister_widget($widget);
     }
-    register_widget('Aldine\LatestBooks');
     register_widget('Aldine\LinkButton');
     register_widget('Aldine\PageButton');
 });
