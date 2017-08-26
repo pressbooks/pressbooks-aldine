@@ -51,7 +51,6 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section'  => 'pb_network_catalog',
         'settings' => 'pb_front_page_catalog_title',
     ]);
-
 });
 
 /**
