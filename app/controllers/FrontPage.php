@@ -4,7 +4,7 @@ namespace Aldine;
 
 use Sober\Controller\Controller;
 
-class Home extends Controller
+class FrontPage extends Controller
 {
     public function blockCount()
     {
@@ -13,8 +13,7 @@ class Home extends Controller
             'home-block-1',
             'home-block-2',
             'home-block-3',
-            'home-block-4',
-            'home-block-5'
+            'home-block-4'
         ] as $block) {
             if (is_active_sidebar($block)) {
                 $c++;
@@ -23,10 +22,10 @@ class Home extends Controller
         return $c;
     }
 
-    public function homeBlocks()
+    public function blocks()
     {
         $blocks = [];
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             if (is_active_sidebar("home-block-$i")) {
                 $blocks[] = "home-block-$i";
             }
@@ -35,8 +34,32 @@ class Home extends Controller
         return $blocks;
     }
 
-    public function latestBooksBlock()
+    public function totalPages()
     {
-        return is_active_widget(false, false, 'latestbooks');
+        $books = wp_remote_get(network_home_url('/wp-json/pressbooks/v2/books?per_page=3'));
+        return $books['headers']['x-wp-totalpages'];
+    }
+
+    public function currentPage()
+    {
+        return get_query_var('page', 1);
+    }
+
+    public function previousPage()
+    {
+        return (get_query_var('page', 1) > 1) ? get_query_var('page') - 1 : 0;
+    }
+
+    public function nextPage()
+    {
+        return (get_query_var('page', 1) < FrontPage::totalPages()) ? get_query_var('page', 1) + 1 : 0;
+    }
+
+    public static function latestBooks($offset = null)
+    {
+        $path = ($offset) ? "/wp-json/pressbooks/v2/books?per_page=3&page=$offset" : '/wp-json/pressbooks/v2/books?per_page=3';
+        $books = wp_remote_get(network_home_url($path));
+        $books = json_decode($books['body'], true);
+        return $books;
     }
 }
