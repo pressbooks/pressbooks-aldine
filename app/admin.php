@@ -20,6 +20,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     ]);
     $wp_customize->add_setting('pb_network_facebook', [
         'type' => 'option',
+        'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('pb_network_facebook', [
         'label' => __('Facebook', 'aldine'),
@@ -28,6 +29,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     ]);
     $wp_customize->add_setting('pb_network_twitter', [
         'type' => 'option',
+        'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('pb_network_twitter', [
         'label' => __('Twitter', 'aldine'),
@@ -45,7 +47,9 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'settings' => 'pb_front_page_catalog',
         'type' => 'checkbox'
     ]);
-    $wp_customize->add_setting('pb_front_pa ge_catalog_title');
+    $wp_customize->add_setting('pb_front_page_catalog_title', [
+        'sanitize_callback' => 'sanitize_text_field'
+    ]);
     $wp_customize->add_control('pb_front_page_catalog_title', [
         'label' => __('Front Page Catalog Title', 'aldine'),
         'section'  => 'pb_network_catalog',

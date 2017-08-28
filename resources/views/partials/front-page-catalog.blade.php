@@ -1,6 +1,6 @@
 <div class="block latest-books">
   <div class="inside">
-    <h3>{{ get_theme_mod('pb_front_page_catalog_title') }}</h3>
+    <h3>{{ $latest_books_title }}</h3>
     <div class="books">
       @foreach( FrontPage::latestBooks( $current_page ) as $book )
         <div class="book">

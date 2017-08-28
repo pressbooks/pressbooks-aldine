@@ -55,6 +55,13 @@ class FrontPage extends Controller
         return (get_query_var('page', 1) < FrontPage::totalPages()) ? get_query_var('page', 1) + 1 : 0;
     }
 
+    public function latestBooksTitle()
+    {
+        return (empty(get_theme_mod('pb_front_page_catalog_title'))) ?
+            __('Our Latest Titles', 'aldine') :
+            get_theme_mod('pb_front_page_catalog_title');
+    }
+
     public static function latestBooks($offset = null)
     {
         $path = ($offset) ?
