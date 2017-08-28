@@ -57,7 +57,9 @@ class FrontPage extends Controller
 
     public static function latestBooks($offset = null)
     {
-        $path = ($offset) ? "/wp-json/pressbooks/v2/books?per_page=3&page=$offset" : '/wp-json/pressbooks/v2/books?per_page=3';
+        $path = ($offset) ?
+            "/wp-json/pressbooks/v2/books?per_page=3&page=$offset" :
+            '/wp-json/pressbooks/v2/books?per_page=3';
         $books = wp_remote_get(network_home_url($path));
         $books = json_decode($books['body'], true);
         return $books;
