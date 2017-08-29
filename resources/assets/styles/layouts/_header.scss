@@ -105,6 +105,10 @@
   }
 }
 
+.page .banner .branding {
+  display: none;
+}
+
 @media #{$breakpoint-large} {
   .banner {
     background-image: url('../images/banner-desktop.jpg');
