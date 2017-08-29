@@ -13,7 +13,6 @@
       @slot('button_url')
         {{ network_home_url('/about/') }}
       @endslot
-    {!! $block['content'] !!}
     @endcomponent
   @elseif($block_count < 4)
     @foreach($blocks as $block)
