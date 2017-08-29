@@ -14,10 +14,6 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
-    $wp_customize->add_section('pb_network_colors', [
-        'title' => __('Color Scheme', 'aldine'),
-        'priority' => 20,
-    ]);
     $wp_customize->add_setting('pb_network_primary_color', [
         'type' => 'option',
         'default' => '#b01109',
@@ -27,7 +23,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'pb_network_primary_color',
         [
             'label' => __('Primary Color', 'aldine'),
-            'section'  => 'pb_network_colors',
+            'section'  => 'colors',
+            'description' => __('Used for links and primary elements.', 'aldine'),
             'settings' => 'pb_network_primary_color',
         ]
     ));
@@ -40,7 +37,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'pb_network_secondary_color',
         [
             'label' => __('Secondary Color', 'aldine'),
-            'section'  => 'pb_network_colors',
+            'section'  => 'colors',
+            'description' => __('Used for secondary elements.', 'aldine'),
             'settings' => 'pb_network_secondary_color',
         ]
     ));

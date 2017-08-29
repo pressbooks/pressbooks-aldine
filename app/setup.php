@@ -204,15 +204,15 @@ add_action('wp_head', function () {
                 .button.button-primary.button-outline {
                   color: <?= $primary ?>;
                 }
-                .button.button-primary:hover,
-                .button.button-primary:focus {
+                .button.button-primary.button-outline:hover,
+                .button.button-primary.button-outline:focus {
                   background: <?= $primary ?>;
                 }
-                @media (min-width: 960px) {
-                  .home .main > .block-2,
-                  .home .one-two + .block {
-                    border-color: <?= $primary ?>;
-                  }
+                .home .blocks.blocks-2 .widget_text:nth-child(2) {
+                  border-color: <?= $primary ?>;
+                }
+                .home .blocks.blocks-4 .widget_text:nth-child(3) {
+                  border-color: <?= $primary ?>;
                 }
             <?php }
 if ($secondary) { ?>
@@ -232,17 +232,21 @@ if ($secondary) { ?>
                 .button.button-secondary.button-outline {
                   color: <?= $secondary ?>;
                 }
-                .button.button-secondary:hover,
-                .button.button-secondary:focus {
+                .button.button-secondary.button-outline:hover,
+                .button.button-secondary.button-outline:focus {
                   background: <?= $secondary ?>;
                 }
-                .home .block h3::before {
+                .home .widget h3::before,
+                .home .latest-books h3::before {
                   background-color: <?= $secondary ?>;
                 }
-                .home .one-two .block-2 {
+                .home .blocks.blocks-4 .widget_text:nth-child(2) {
                   background: <?= $secondary ?>;
                 }
-<?php } ?>
+                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:hover, .home .blocks.blocks-4 .widget_text:nth-child(2) .button:focus {
+                  color: <?= $secondary ?>;
+                }
+        <?php } ?>
         </style>
     <?php }
 });
