@@ -14,6 +14,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
+
+    // Add settings
     $wp_customize->add_setting('pb_network_primary_color', [
         'type' => 'option',
         'default' => '#b01109',
@@ -86,6 +88,9 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section'  => 'pb_front_page_catalog',
         'settings' => 'pb_front_page_catalog_title',
     ]);
+
+    // Remove settings
+    $wp_customize->remove_section('static_front_page');
 });
 
 /**
