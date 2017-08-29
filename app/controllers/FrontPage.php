@@ -9,39 +9,14 @@ class FrontPage extends Controller
     public function blockCount()
     {
         global $_wp_sidebars_widgets;
-    	if (empty($_wp_sidebars_widgets)) {
-    		$_wp_sidebars_widgets = get_option('sidebars_widgets', []);
-    	}
-    	$sidebars_widgets_count = $_wp_sidebars_widgets;
-    	if (isset($sidebars_widgets_count['front-page-block'])) {
-    		return count($sidebars_widgets_count['front-page-block']);
-    	}
-        return 1;
-    }
-
-    public function blocks()
-    {
-        $blocks = [];
-        for ($i = 1; $i < 5; $i++) {
-            $block = [];
-            $title = get_option("pb_front_page_block_${i}_title");
-            $content = get_option("pb_front_page_block_${i}_content");
-            $button_title = get_option("pb_front_page_block_${i}_button_title");
-            $button_url = get_option("pb_front_page_block_${i}_button_url");
-            if ($title) {
-                $block['title'] = $title;
-            }
-            if ($content) {
-                $block['content'] = wpautop($content);
-            }
-            if ($button_title && $button_url) {
-                $block['button_title'] = $button_title;
-                $block['button_url'] = $button_url;
-            }
-            $blocks[] = $block;
+        if (empty($_wp_sidebars_widgets)) {
+            $_wp_sidebars_widgets = get_option('sidebars_widgets', []);
         }
-
-        return $blocks;
+        $sidebars_widgets_count = $_wp_sidebars_widgets;
+        if (isset($sidebars_widgets_count['front-page-block'])) {
+            return count($sidebars_widgets_count['front-page-block']);
+        }
+        return 1;
     }
 
     public function totalPages()
