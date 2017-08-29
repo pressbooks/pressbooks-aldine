@@ -14,7 +14,7 @@ export default {
         const page = parseInt($('.books').attr('data-next-page'));
         pb.books().perPage(3).page(page).then(function(data) {
           data.forEach((book) => {
-            books.slick('slickAdd', `<div class="book w-100">
+            books.slick('slickAdd', `<div class="book w-100 bg-secondary b--secondary">
               <p class="subject tc ma0"><a href="">Fiction</a></p>
               <p class="title tc ma0"><a href="${book.link}">${book.metadata.name}</a></p>
               <p class="read-more tl ma0"><a href="${book.link}">About this book &rarr;</a></p>

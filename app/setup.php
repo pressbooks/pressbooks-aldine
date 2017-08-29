@@ -159,3 +159,67 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_action('wp_head', function () {
+    $primary = get_option('pb_network_primary_color');
+    $secondary = get_option('pb_network_secondary_color');
+    if ($primary || $secondary) { ?>
+        <style type="text/css">
+            <?php if ($primary) { ?>
+                a { color: <?= $primary ?>; }
+                .primary { color: <?= $primary ?>; }
+                .bg-primary { background-color: <?= $primary ?>; }
+                .b--primary { border-color: <?= $primary ?>; }
+                .button.button-primary {
+                  border-color: <?= $primary ?>;
+                  background: <?= $primary ?>;
+                }
+                .button.button-primary:hover,
+                .button.button-primary:focus {
+                  color: <?= $primary ?>;
+                }
+                .button.button-primary.button-outline {
+                  color: <?= $primary ?>;
+                }
+                .button.button-primary:hover,
+                .button.button-primary:focus {
+                  background: <?= $primary ?>;
+                }
+                @media (min-width: 960px) {
+                  .home .main > .block-2,
+                  .home .one-two + .block {
+                    border-color: <?= $primary ?>;
+                  }
+                }
+            <?php }
+            if ($secondary) { ?>
+                .secondary { color: <?= $secondary ?>; }
+                .bg-secondary { background-color: <?= $secondary ?>; }
+                .b--secondary {
+                  border-color: <?= $secondary ?>;
+                }
+                .button.button-secondary {
+                  border-color: <?= $secondary ?>;
+                  background: <?= $secondary ?>;
+                }
+                .button.button-secondary:hover,
+                .button.button-secondary:focus {
+                  color: <?= $secondary ?>;
+                }
+                .button.button-secondary.button-outline {
+                  color: <?= $secondary ?>;
+                }
+                .button.button-secondary:hover,
+                .button.button-secondary:focus {
+                  background: <?= $secondary ?>;
+                }
+                .home .block h3::before {
+                  background-color: <?= $secondary ?>;
+                }
+                .home .one-two .block-2 {
+                  background: <?= $secondary ?>;
+                }
+            <?php } ?>
+        </style>
+    <?php }
+});

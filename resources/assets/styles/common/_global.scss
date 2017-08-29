@@ -37,3 +37,27 @@ a {
   color: $brand-primary;
   text-decoration: none;
 }
+
+.primary {
+  color: $brand-primary;
+}
+
+.bg-primary {
+  background-color: $brand-primary;
+}
+
+.secondary {
+  color: $brand-secondary;
+}
+
+.bg-secondary {
+  background-color: $brand-secondary;
+}
+
+.b--primary {
+  border-color: $brand-primary;
+}
+
+.b--secondary {
+  border-color: $brand-secondary;
+}

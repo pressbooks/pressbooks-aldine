@@ -14,6 +14,36 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
+    $wp_customize->add_section('pb_network_colors', [
+        'title' => __('Color Scheme', 'aldine'),
+        'priority' => 20,
+    ]);
+    $wp_customize->add_setting('pb_network_primary_color', [
+        'type' => 'option',
+        'default' => '#b01109',
+    ]);
+    $wp_customize->add_control(new \WP_Customize_Color_Control(
+        $wp_customize,
+        'pb_network_primary_color',
+        [
+            'label' => __('Primary Color', 'aldine'),
+            'section'  => 'pb_network_colors',
+            'settings' => 'pb_network_primary_color',
+        ]
+	));
+    $wp_customize->add_setting('pb_network_secondary_color', [
+        'type' => 'option',
+        'default' => '#015d75',
+    ]);
+    $wp_customize->add_control(new \WP_Customize_Color_Control(
+        $wp_customize,
+        'pb_network_secondary_color',
+        [
+            'label' => __('Secondary Color', 'aldine'),
+            'section'  => 'pb_network_colors',
+            'settings' => 'pb_network_secondary_color',
+        ]
+	));
     $wp_customize->add_section('pb_network_social', [
         'title' => __('Social Media', 'aldine'),
         'priority' => 30,
@@ -108,4 +138,5 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
  */
 add_action('customize_preview_init', function () {
     wp_enqueue_script('aldine/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
+    wp_localize_script('aldine/customizer.js', 'SAGE_DIST_PATH', get_theme_file_uri() . '/dist/');
 });

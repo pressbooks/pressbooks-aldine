@@ -3,7 +3,7 @@
     <h3 class="tc ttu">{{ $latest_books_title }}</h3>
     <div class="books flex flex-column justify-center flex-row-m justify-between-m" data-total-pages="{{ $total_pages }}" data-next-page="2">
       @foreach(FrontPage::latestBooks( $current_page, 3 ) as $book)
-        <div class="book w-100">
+        <div class="book w-100 bg-secondary b--secondary">
           <p class="subject tc ma0">
             <a href="">Fiction</a>
           </p>
@@ -17,11 +17,11 @@
       @endforeach
     </div>
     <nav class="navigation flex flex-row justify-between mt2 tr" data-total="{{ $total_pages }}">
-      <a class="previous f1 @if(!$previous_page) slick-disabled @endif" data-page="{{ $previous_page }}" href="{{ network_home_url("/page/$previous_page/") }}">&larr;</a>
-      <a class="next f1" data-page="{{ $next_page }}" href="{{ network_home_url("/page/$next_page/") }}">&rarr;</a>
+      <a class="secondary previous f1 @if(!$previous_page) slick-disabled @endif" data-page="{{ $previous_page }}" href="{{ network_home_url("/page/$previous_page/") }}">&larr;</a>
+      <a class="secondary next f1" data-page="{{ $next_page }}" href="{{ network_home_url("/page/$next_page/") }}">&rarr;</a>
     </nav>
     <div class="catalog-link tc">
-      <a class="button button-outline button-wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
+      <a class="button button-primary button-outline button-wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
     </div>
   </div>
 </div>

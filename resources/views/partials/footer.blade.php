@@ -1,6 +1,6 @@
 <footer class="content-info">
   <div class="container">
-    <section class="network-footer">
+    <section class="network-footer bg-secondary">
       <div class="network-footer-block {{ App::networkFooter(1) }}">
         @if(App::networkFooter(1) !== 'empty')
             @php(dynamic_sidebar('network-footer-block-1'))
