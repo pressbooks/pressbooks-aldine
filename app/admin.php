@@ -40,7 +40,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'title' => __('Front Page Content', 'aldine'),
         'priority' => 20,
     ]);
-    for($i = 1; $i < 5; $i++) {
+    for ($i = 1; $i < 5; $i++) {
         $wp_customize->add_setting("pb_front_page_block_${i}_title", [
             'type' => 'option',
             'sanitize_callback' => 'sanitize_text_field',
