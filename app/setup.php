@@ -109,6 +109,10 @@ add_action('widgets_init', function () {
     ];
     register_sidebar([
         'name'          => __('Front Page Content', 'aldine'),
+        'description'   => __(
+            'Add content for your network&rsquo;s front page here. Currently, only text widgets are supported.',
+            'aldine'
+        ),
         'id'            => 'front-page-block',
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget'  => '</section>',
@@ -117,10 +121,22 @@ add_action('widgets_init', function () {
     ]);
     register_sidebar([
         'name'          => __('Network Footer Block 1', 'aldine'),
+        'description'   => __(
+            'Add content for your network&rsquo;s customizeable footer here.
+            Currently, only text and image widgets are supported.
+            Content in this widget area will appear in the first row (on mobile) or the first column (on desktops).',
+            'aldine'
+        ),
         'id'            => 'network-footer-block-1'
     ] + $config);
     register_sidebar([
         'name'          => __('Network Footer Block 2', 'aldine'),
+        'description'   => __(
+            'Add content for your network&rsquo;s customizeable footer here.
+            Currently, only text and image widgets are supported.
+            Content in this widget area will appear in the second row (on mobile) or the middle column (on desktop).',
+            'aldine'
+        ),
         'id'            => 'network-footer-block-2'
     ] + $config);
 });
