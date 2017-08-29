@@ -3,6 +3,7 @@
 
   .container {
     height: 560px;
+    max-width: 1440px;
   }
 
   .toggle-menu {
@@ -123,9 +124,9 @@
 
     .primary-navigation {
       top: 40px;
-      max-width: 1440px;
       height: 40px;
-      margin-left: 0;
+      max-width: 1440px;
+      margin: 0 auto;
 
       a {
         display: inline-block;

@@ -22,6 +22,44 @@
     background: $white;
     color: $brand-primary;
   }
+
+  &.button-wide {
+    width: 305px;
+  }
+
+  &.button-outline {
+    background: $white;
+    color: $brand-primary;
+
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+
+  &.button-secondary {
+    border: 2px solid $brand-secondary;
+    background: $brand-secondary;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background: $white;
+      color: $brand-secondary;
+    }
+
+    &.button-outline {
+      background: $white;
+      color: $brand-secondary;
+
+      &:hover,
+      &:focus {
+        background: $brand-secondary;
+        color: $white;
+      }
+    }
+  }
 }
 
 @media (min-width: $medium) {

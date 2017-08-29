@@ -128,6 +128,7 @@
   },
   "dependencies": {
     "jquery": "1.12.4 - 3",
+    "slick-carousel": "^1.7.1",
     "tachyons-sass": "~4.7",
     "wpapi": "^1.1.2"
   }

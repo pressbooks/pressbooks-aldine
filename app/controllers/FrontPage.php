@@ -62,12 +62,9 @@ class FrontPage extends Controller
             get_theme_mod('pb_front_page_catalog_title');
     }
 
-    public static function latestBooks($offset = null)
+    public static function latestBooks($page = 1, $per_page = 3)
     {
-        $path = ($offset) ?
-            "/wp-json/pressbooks/v2/books?per_page=3&page=$offset" :
-            '/wp-json/pressbooks/v2/books?per_page=3';
-        $books = wp_remote_get(network_home_url($path));
+        $books = wp_remote_get(network_home_url("/wp-json/pressbooks/v2/books?per_page=$per_page&page=$page"));
         $books = json_decode($books['body'], true);
         return $books;
     }
