@@ -108,20 +108,8 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Home Block 1', 'aldine'),
-        'id'            => 'home-block-1'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Home Block 2', 'aldine'),
-        'id'            => 'home-block-2'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Home Block 3', 'aldine'),
-        'id'            => 'home-block-3'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Home Block 4', 'aldine'),
-        'id'            => 'home-block-4'
+        'name'          => __('Front Page Content', 'aldine'),
+        'id'            => 'front-page-block'
     ] + $config);
     register_sidebar([
         'name'          => __('Network Footer Block 1', 'aldine'),

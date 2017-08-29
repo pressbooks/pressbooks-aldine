@@ -9,13 +9,8 @@ class FrontPage extends Controller
     public function blockCount()
     {
         $c = 0;
-        foreach ([
-            'home-block-1',
-            'home-block-2',
-            'home-block-3',
-            'home-block-4'
-        ] as $block) {
-            if (is_active_sidebar($block)) {
+        for ($i = 1; $i < 5; $i++) {
+            if (get_option("pb_front_page_block_${i}_content")) {
                 $c++;
             }
         }
@@ -25,10 +20,23 @@ class FrontPage extends Controller
     public function blocks()
     {
         $blocks = [];
-        for ($i = 0; $i < 4; $i++) {
-            if (is_active_sidebar("home-block-$i")) {
-                $blocks[] = "home-block-$i";
+        for ($i = 1; $i < 5; $i++) {
+            $block = [];
+            $title = get_option("pb_front_page_block_${i}_title");
+            $content = get_option("pb_front_page_block_${i}_content");
+            $button_title = get_option("pb_front_page_block_${i}_button_title");
+            $button_url = get_option("pb_front_page_block_${i}_button_url");
+            if ($title) {
+                $block['title'] = $title;
             }
+            if ($content) {
+                $block['content'] = wpautop($content);
+            }
+            if ($button_title && $button_url) {
+                $block['button_title'] = $button_title;
+                $block['button_url'] = $button_url;
+            }
+            $blocks[] = $block;
         }
 
         return $blocks;
@@ -57,9 +65,12 @@ class FrontPage extends Controller
 
     public function latestBooksTitle()
     {
-        return (empty(get_theme_mod('pb_front_page_catalog_title'))) ?
-            __('Our Latest Titles', 'aldine') :
-            get_theme_mod('pb_front_page_catalog_title');
+        $title = get_option('pb_front_page_catalog_title');
+        if ($title) {
+            return $title;
+        }
+
+        return __('Our Latest Titles', 'aldine');
     }
 
     public static function latestBooks($page = 1, $per_page = 3)
