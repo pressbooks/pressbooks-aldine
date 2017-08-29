@@ -243,10 +243,11 @@ if ($secondary) { ?>
                 .home .blocks.blocks-4 .widget_text:nth-child(2) {
                   background: <?= $secondary ?>;
                 }
-                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:hover, .home .blocks.blocks-4 .widget_text:nth-child(2) .button:focus {
+                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:hover,
+                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:focus {
                   color: <?= $secondary ?>;
                 }
-        <?php } ?>
+<?php } ?>
         </style>
     <?php }
 });
