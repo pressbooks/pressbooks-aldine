@@ -109,8 +109,12 @@ add_action('widgets_init', function () {
     ];
     register_sidebar([
         'name'          => __('Front Page Content', 'aldine'),
-        'id'            => 'front-page-block'
-    ] + $config);
+        'id'            => 'front-page-block',
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="tc ttu">',
+        'after_title'   => '</h3>'
+    ]);
     register_sidebar([
         'name'          => __('Network Footer Block 1', 'aldine'),
         'id'            => 'network-footer-block-1'

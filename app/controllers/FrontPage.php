@@ -8,13 +8,15 @@ class FrontPage extends Controller
 {
     public function blockCount()
     {
-        $c = 0;
-        for ($i = 1; $i < 5; $i++) {
-            if (get_option("pb_front_page_block_${i}_content")) {
-                $c++;
-            }
-        }
-        return $c;
+        global $_wp_sidebars_widgets;
+    	if (empty($_wp_sidebars_widgets)) {
+    		$_wp_sidebars_widgets = get_option('sidebars_widgets', []);
+    	}
+    	$sidebars_widgets_count = $_wp_sidebars_widgets;
+    	if (isset($sidebars_widgets_count['front-page-block'])) {
+    		return count($sidebars_widgets_count['front-page-block']);
+    	}
+        return 1;
     }
 
     public function blocks()

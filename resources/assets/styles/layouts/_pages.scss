@@ -1,7 +1,9 @@
 .home {
-  .block {
+  .widget,
+  .latest-books {
     height: 445px;
     background-color: $white;
+    text-align: center;
 
     h3 {
       font-size: em(30);
@@ -20,106 +22,99 @@
       }
     }
 
-    .widget p {
+    p {
       font-size: em(16);
       line-height: (32/16);
     }
+  }
 
-    &.latest-books {
+  .widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blocks.blocks-2 {
+    .widget_text:nth-child(2) {
+      border: solid 2px $brand-primary;
       box-shadow: unset;
-      height: auto;
-      padding-bottom: 50px;
-
-      h3 {
-        margin-top: 70px;
-      }
-
-      .inside {
-        padding: 0;
-      }
-
-      .navigation {
-        a {
-          &.slick-disabled {
-            opacity: 0;
-          }
-        }
-      }
-    }
-
-    .books {
-      .book,
-      .slick-slide {
-        width: 100vw;
-        height: 386px;
-        margin: 45px 0 0;
-        padding: 0 29.5px;
-        border: solid 2px;
-
-        a {
-          font-family: $font-family-sans-serif;
-          color: $white;
-          text-decoration: none;
-        }
-
-        .subject {
-          height: 91px;
-          margin-top: 24px;
-          font-size: em(24);
-        }
-
-        .title {
-          height: 329px - 115px;
-          font-size: em(30);
-          font-weight: 500;
-        }
-
-        .read-more {
-          font-size: em(18);
-        }
-      }
     }
   }
 
-  .one-two {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .block-2 {
+  .blocks.blocks-4 {
+    .widget_text:nth-child(2) {
+      color: $white;
       background: $brand-secondary;
-
-      p,
-      h3 {
-        color: $white;
-      }
 
       h3::before {
         background-color: $white;
       }
+
+      .button {
+        border-color: $white;
+        background: transparent;
+
+        &:hover,
+        &:focus {
+          color: $brand-secondary;
+          background: $white;
+        }
+      }
+    }
+
+    .widget_text:nth-child(3) {
+      border: solid 2px $brand-primary;
+      box-shadow: unset;
     }
   }
 
-  .main > .block-2,
-  .one-two + .block {
-    background: transparent;
-    border: solid 2px $brand-primary;
-    // margin-bottom: 401px;
+  .latest-books {
+    box-shadow: unset;
+    height: auto;
+    padding-bottom: 0 0 50px;
 
-    &::after {
-      position: absolute;
-      left: 0;
-      top: 1840px;
-      content: "";
-      display: block;
-      display: none;
+    h3 {
+      margin-top: 70px;
+    }
+
+    .book,
+    .slick-slide {
       width: 100vw;
-      height: 600px;
-      z-index: -1;
-      // background: url('../images/banner-two.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      height: 386px;
+      margin: 45px 0 0;
+      padding: 0 29.5px;
+      border: solid 2px;
+
+      a {
+        font-family: $font-family-sans-serif;
+        color: $white;
+        text-decoration: none;
+      }
+
+      .subject {
+        height: 91px;
+        margin-top: 24px;
+        font-size: em(24);
+      }
+
+      .title {
+        height: 329px - 115px;
+        font-size: em(30);
+        font-weight: 500;
+      }
+
+      .read-more {
+        font-size: em(18);
+      }
+    }
+
+    .navigation {
+      a {
+        &.slick-disabled {
+          opacity: 0;
+        }
+      }
     }
   }
 }
@@ -130,9 +125,10 @@
       margin-top: -366px;
     }
 
-    .block {
+    .widget {
       width: 775px;
       margin-bottom: 119px;
+      padding: 0 90px;
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
 
       h3 {
@@ -148,32 +144,10 @@
         font-size: em(18);
         line-height: (32/18);
       }
-
-      .inside {
-        width: 595px;
-      }
     }
 
-    .one-two {
-      align-items: center;
-    }
-
-    .main > .block-2,
-    .one-two + .block {
-      border: solid 2px $brand-primary;
-      box-shadow: unset;
-
-      &::after {
-        top: 2020px;
-      }
-    }
-
-    .block.latest-books {
+    .latest-books {
       width: 100%;
-
-      .inside {
-        width: 100%;
-      }
 
       .books {
         flex-direction: row;
@@ -195,25 +169,14 @@
 
 @media (min-width: $large) {
   .home {
-    .block {
+    .widget {
       width: 1115px;
       height: 494px;
     }
 
-    .main > .block-2,
-    .one-two + .block {
-      &::after {
-        top: 2150px;
-      }
-    }
-
-    .block.latest-books {
+    .latest-books {
       width: 1200px;
       margin-bottom: 0;
-
-      .inside {
-        width: 100%;
-      }
 
       .book,
       .slick-slide {
@@ -230,30 +193,29 @@
 
 @media (min-width: $extra-large) {
   .home {
-    .block {
+    .widget {
       width: 1115px;
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
     }
 
-    .one-two {
-      flex-direction: row;
-      justify-content: space-between;
+    .blocks.blocks-4 {
+      display: flex;
+      flex-flow: row wrap;
       width: 1615px;
 
-      .block {
-        border-radius: 4px;
-        width: 775px;
-
-        .inside {
-          width: 595px;
-        }
+      .widget_text {
+        width: 1115px;
+        margin-right: auto;
+        margin-left: auto;
       }
-    }
 
-    .main > .block-2,
-    .one-two + .block {
-      &::after {
-        top: 1550px;
+      .widget_text:nth-child(1),
+      .widget_text:nth-child(2) {
+        width: 775px;
+      }
+
+      .widget_text:nth-child(1) {
+        margin-right: 65px;
       }
     }
   }
