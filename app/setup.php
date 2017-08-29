@@ -192,7 +192,7 @@ add_action('wp_head', function () {
                   }
                 }
             <?php }
-            if ($secondary) { ?>
+if ($secondary) { ?>
                 .secondary { color: <?= $secondary ?>; }
                 .bg-secondary { background-color: <?= $secondary ?>; }
                 .b--secondary {
@@ -219,7 +219,7 @@ add_action('wp_head', function () {
                 .home .one-two .block-2 {
                   background: <?= $secondary ?>;
                 }
-            <?php } ?>
+<?php } ?>
         </style>
     <?php }
 });

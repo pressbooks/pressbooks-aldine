@@ -30,7 +30,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             'section'  => 'pb_network_colors',
             'settings' => 'pb_network_primary_color',
         ]
-	));
+    ));
     $wp_customize->add_setting('pb_network_secondary_color', [
         'type' => 'option',
         'default' => '#015d75',
@@ -43,7 +43,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             'section'  => 'pb_network_colors',
             'settings' => 'pb_network_secondary_color',
         ]
-	));
+    ));
     $wp_customize->add_section('pb_network_social', [
         'title' => __('Social Media', 'aldine'),
         'priority' => 30,
