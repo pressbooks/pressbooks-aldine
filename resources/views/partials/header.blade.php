@@ -1,4 +1,4 @@
-<section class="banner bg-bottom cover">
+<section class="banner bg-bottom cover" style="background-image: url(@php(header_image()));">
   <div class="container flex flex-column justify-between items-center w-100 mw-100">
     <a class="toggle-menu db dn-l absolute" href="#primary-navigation">{{ __('Toggle menu', 'aldine') }}<span class="icon db absolute"></span></a>
     <a class="brand db self-start self-center-l" href="{{ home_url('/') }}"><span class="clip>"{{ get_bloginfo('name', 'display') }}</a></a>

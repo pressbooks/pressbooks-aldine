@@ -73,6 +73,26 @@ add_action('after_setup_theme', function () {
     ]);
 
     /**
+     * Custom Header
+     */
+    add_theme_support('custom-header', [
+        'default-image' => asset_path('images/header.jpg'),
+        'width' => 1650,
+        'height' => 880,
+        // 'default-text-color' => '',
+        // 'header-text' => true,
+        // 'uploads' => true,
+        // 'wp-head-callback' => '',
+        // 'admin-head-callback' => '',
+        // 'admin-preview-callback' => '',
+    ]);
+
+    /**
+     * Custom Logo
+     */
+    add_theme_support('custom-logo');
+
+    /**
      * Enable post thumbnails
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
