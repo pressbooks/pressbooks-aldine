@@ -182,3 +182,8 @@ if ($header_text_color) {
 }</style>
     <?php }
 });
+
+add_action('wp_head', function () {
+    $response = contact_form_submission();
+    sage('blade')->share('contact_form_response', $response);
+});
