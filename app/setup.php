@@ -134,7 +134,7 @@ add_action('widgets_init', function () {
             'aldine'
         ),
         'id'            => 'front-page-block',
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="block %1$s %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="tc ttu">',
         'after_title'   => '</h3>'
