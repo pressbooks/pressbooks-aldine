@@ -136,3 +136,11 @@ function locate_template($templates)
 {
     return \locate_template(filter_templates($templates));
 }
+
+/**
+ * Remove hash from hex color string
+ */
+function remove_hash($color)
+{
+    return ltrim($color, '#');
+}

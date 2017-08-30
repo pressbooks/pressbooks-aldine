@@ -18,7 +18,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     // Add settings
     $wp_customize->add_setting('pb_network_primary_color', [
         'type' => 'option',
-        'default' => '#b01109',
+        'default' => 'b01109',
+        'sanitize_callback' => 'Aldine\remove_hash',
     ]);
     $wp_customize->add_control(new \WP_Customize_Color_Control(
         $wp_customize,
@@ -32,7 +33,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     ));
     $wp_customize->add_setting('pb_network_secondary_color', [
         'type' => 'option',
-        'default' => '#015d75',
+        'default' => '015d75',
+        'sanitize_callback' => 'Aldine\remove_hash',
     ]);
     $wp_customize->add_control(new \WP_Customize_Color_Control(
         $wp_customize,

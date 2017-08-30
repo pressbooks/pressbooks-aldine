@@ -206,7 +206,8 @@ add_action('wp_head', function () {
     $header_text_color = get_header_textcolor();
     if ($primary || $secondary || $header_text_color) { ?>
         <style type="text/css">
-            <?php if ($primary) { ?>
+            <?php if ($primary) {
+                $primary = '#' . $primary; ?>
                 a { color: <?= $primary ?>; }
                 .primary { color: <?= $primary ?>; }
                 .bg-primary { background-color: <?= $primary ?>; }
@@ -241,7 +242,8 @@ add_action('wp_head', function () {
                   background: <?= $primary ?>;
                 }
             <?php }
-if ($secondary) { ?>
+if ($secondary) {
+    $secondary = '#' . $secondary; ?>
                 .secondary { color: <?= $secondary ?>; }
                 .bg-secondary { background-color: <?= $secondary ?>; }
                 .b--secondary {
@@ -274,13 +276,14 @@ if ($secondary) { ?>
                   color: <?= $secondary ?>;
                 }
 <?php }
-if ($header_text_color) { ?>
+if ($header_text_color) {
+    $header_text_color = '#' . $header_text_color; ?>
                 .banner .branding p {
-                    color: #<?= $header_text_color ?>;
+                    color: <?= $header_text_color ?>;
                 }
                 @media (min-width: 1200px) {
                     .banner .primary-navigation a {
-                        color: #<?= $header_text_color ?>;
+                        color: <?= $header_text_color ?>;
                     }
                 }
 <?php } ?>
