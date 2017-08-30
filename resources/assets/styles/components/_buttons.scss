@@ -23,6 +23,12 @@
     color: $black;
   }
 
+  &.button-small {
+    width: 150px;
+    height: 40px;
+    padding: 0.5em;
+  }
+
   &.button-wide {
     width: 305px;
   }
@@ -39,41 +45,45 @@
   }
 
   &.button-primary {
-    border-color: $brand-primary;
-    background: $brand-primary;
+    border-color: var(--brand-primary, $brand-primary);
+    background: var(--brand-primary, $brand-primary);
 
     &:hover,
     &:focus {
       background: $white;
-      color: $brand-primary;
+      color: var(--brand-primary, $brand-primary);
     }
 
     &.button-outline {
-      color: $brand-primary;
+      background: $white;
+      color: var(--brand-primary, $brand-primary);
 
       &:hover,
       &:focus {
-        background: $brand-primary;
+        color: $white;
+        background: var(--brand-primary, $brand-primary);
       }
     }
   }
 
   &.button-secondary {
-    border-color: $brand-secondary;
-    background: $brand-secondary;
+    border-color: var(--brand-secondary, $brand-secondary);
+    background: var(--brand-secondary, $brand-secondary);
 
     &:hover,
     &:focus {
       background: $white;
-      color: $brand-secondary;
+      color: var(--brand-secondary, $brand-secondary);
     }
 
     &.button-outline {
-      color: $brand-secondary;
+      background: $white;
+      color: var(--brand-secondary, $brand-secondary);
 
       &:hover,
       &:focus {
-        background: $brand-secondary;
+        color: $white;
+        background: var(--brand-secondary, $brand-secondary);
       }
     }
   }

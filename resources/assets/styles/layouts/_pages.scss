@@ -18,7 +18,7 @@
         margin: 0 auto 1em;
         width: 46px;
         height: 5px;
-        background-color: $brand-secondary;
+        background-color: var(--brand-secondary, $brand-secondary);
       }
     }
 
@@ -37,7 +37,7 @@
 
   .blocks.blocks-2 {
     .widget_text:nth-child(2) {
-      border: solid 2px $brand-primary;
+      border: solid 2px var(--brand-primary, $brand-primary);
       box-shadow: unset;
     }
   }
@@ -45,7 +45,7 @@
   .blocks.blocks-4 {
     .widget_text:nth-child(2) {
       color: $white;
-      background: $brand-secondary;
+      background: var(--brand-secondary, $brand-secondary);
 
       h3::before {
         background-color: $white;
@@ -57,14 +57,14 @@
 
         &:hover,
         &:focus {
-          color: $brand-secondary;
+          color: var(--brand-secondary, $brand-secondary);
           background: $white;
         }
       }
     }
 
     .widget_text:nth-child(3) {
-      border: solid 2px $brand-primary;
+      border: solid 2px var(--brand-primary, $brand-primary);
       box-shadow: unset;
     }
   }
@@ -130,6 +130,10 @@
       margin-bottom: 119px;
       padding: 0 90px;
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+
+      &:last-child {
+        margin-bottom: 4.0625rem;
+      }
 
       h3 {
         font-size: em(48);

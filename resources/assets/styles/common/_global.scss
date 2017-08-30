@@ -32,31 +32,36 @@ h2 {
   margin: 0;
 }
 
+:root {
+  --brand-primary: $brand-primary;
+  --brand-secondary: $brand-secondary;
+}
+
 a {
-  color: $brand-primary;
+  color: var(--brand-primary, $brand-primary);
   text-decoration: none;
 }
 
 .primary {
-  color: $brand-primary;
+  color: var(--brand-primary, $brand-primary);
 }
 
 .bg-primary {
-  background-color: $brand-primary;
+  background-color: var(--brand-primary, $brand-primary);
 }
 
 .b--primary {
-  border-color: $brand-primary;
+  border-color: var(--brand-primary, $brand-primary);
 }
 
 .secondary {
-  color: $brand-secondary;
+  color: var(--brand-secondary, $brand-secondary);
 }
 
 .bg-secondary {
-  background-color: $brand-secondary;
+  background-color: var(--brand-secondary, $brand-secondary);
 }
 
 .b--secondary {
-  border-color: $brand-secondary;
+  border-color: var(--brand-secondary, $brand-secondary);
 }

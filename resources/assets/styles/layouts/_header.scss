@@ -16,14 +16,14 @@
       top: 7px;
       width: 25px;
       height: 3px;
-      background: $brand-primary;
+      background: var(--brand-primary, $brand-primary);
 
       &::before,
       &::after {
         width: 25px;
         height: 3px;
         content: '';
-        background: $brand-primary;
+        background: var(--brand-primary, $brand-primary);
       }
 
       &::before {
@@ -80,7 +80,7 @@
       margin: 0;
       padding: 0 52px;
       z-index: 1;
-      background: $brand-primary;
+      background: var(--brand-primary, $brand-primary);
 
       a {
         display: block;
@@ -136,7 +136,7 @@
 
         &:hover,
         &:focus {
-          color: $brand-primary;
+          color: var(--brand-primary, $brand-primary);
         }
 
         &.catalog {

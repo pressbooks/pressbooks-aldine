@@ -205,88 +205,19 @@ add_action('wp_head', function () {
     $secondary = get_option('pb_network_secondary_color');
     $header_text_color = get_header_textcolor();
     if ($primary || $secondary || $header_text_color) { ?>
-        <style type="text/css">
-            <?php if ($primary) {
-                $primary = '#' . $primary; ?>
-                a { color: <?= $primary ?>; }
-                .primary { color: <?= $primary ?>; }
-                .bg-primary { background-color: <?= $primary ?>; }
-                .b--primary { border-color: <?= $primary ?>; }
-                .button.button-primary {
-                  border-color: <?= $primary ?>;
-                  background: <?= $primary ?>;
-                }
-                .button.button-primary:hover,
-                .button.button-primary:focus {
-                  color: <?= $primary ?>;
-                }
-                .button.button-primary.button-outline {
-                  color: <?= $primary ?>;
-                }
-                .button.button-primary.button-outline:hover,
-                .button.button-primary.button-outline:focus {
-                  background: <?= $primary ?>;
-                }
-                .home .blocks.blocks-2 .widget_text:nth-child(2) {
-                  border-color: <?= $primary ?>;
-                }
-                .home .blocks.blocks-4 .widget_text:nth-child(3) {
-                  border-color: <?= $primary ?>;
-                }
-                .banner .toggle-menu .icon,
-                .banner .toggle-menu .icon:after,
-                .banner .toggle-menu .icon:before {
-                  background: <?= $primary ?>;
-                }
-                .banner .primary-navigation.is-visible {
-                  background: <?= $primary ?>;
-                }
-            <?php }
+<style type="text/css">:root {
+<?php if ($primary) {
+    $primary = '#' . $primary; ?>
+--brand-primary: <?= $primary ?>;
+<?php }
 if ($secondary) {
     $secondary = '#' . $secondary; ?>
-                .secondary { color: <?= $secondary ?>; }
-                .bg-secondary { background-color: <?= $secondary ?>; }
-                .b--secondary {
-                  border-color: <?= $secondary ?>;
-                }
-                .button.button-secondary {
-                  border-color: <?= $secondary ?>;
-                  background: <?= $secondary ?>;
-                }
-                .button.button-secondary:hover,
-                .button.button-secondary:focus {
-                  color: <?= $secondary ?>;
-                }
-                .button.button-secondary.button-outline {
-                  color: <?= $secondary ?>;
-                }
-                .button.button-secondary.button-outline:hover,
-                .button.button-secondary.button-outline:focus {
-                  background: <?= $secondary ?>;
-                }
-                .home .widget h3::before,
-                .home .latest-books h3::before {
-                  background-color: <?= $secondary ?>;
-                }
-                .home .blocks.blocks-4 .widget_text:nth-child(2) {
-                  background: <?= $secondary ?>;
-                }
-                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:hover,
-                .home .blocks.blocks-4 .widget_text:nth-child(2) .button:focus {
-                  color: <?= $secondary ?>;
-                }
+--brand-secondary: <?= $secondary ?>;
 <?php }
 if ($header_text_color) {
     $header_text_color = '#' . $header_text_color; ?>
-                .banner .branding p {
-                    color: <?= $header_text_color ?>;
-                }
-                @media (min-width: 1200px) {
-                    .banner .primary-navigation a {
-                        color: <?= $header_text_color ?>;
-                    }
-                }
+--brand-header-text: <?= $header_text_color; ?>;
 <?php } ?>
-        </style>
+}</style>
     <?php }
 });
