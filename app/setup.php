@@ -79,7 +79,7 @@ add_action('after_setup_theme', function () {
         'default-image' => asset_path('images/header.jpg'),
         'width' => 1650,
         'height' => 880,
-        // 'default-text-color' => '',
+        'default-text-color' => '#000',
         // 'header-text' => true,
         // 'uploads' => true,
         // 'wp-head-callback' => '',
@@ -203,7 +203,8 @@ add_action('after_setup_theme', function () {
 add_action('wp_head', function () {
     $primary = get_option('pb_network_primary_color');
     $secondary = get_option('pb_network_secondary_color');
-    if ($primary || $secondary) { ?>
+    $header_text_color = get_header_textcolor();
+    if ($primary || $secondary || $header_text_color) { ?>
         <style type="text/css">
             <?php if ($primary) { ?>
                 a { color: <?= $primary ?>; }
@@ -230,6 +231,14 @@ add_action('wp_head', function () {
                 }
                 .home .blocks.blocks-4 .widget_text:nth-child(3) {
                   border-color: <?= $primary ?>;
+                }
+                .banner .toggle-menu .icon,
+                .banner .toggle-menu .icon:after,
+                .banner .toggle-menu .icon:before {
+                  background: <?= $primary ?>;
+                }
+                .banner .primary-navigation.is-visible {
+                  background: <?= $primary ?>;
                 }
             <?php }
 if ($secondary) { ?>
@@ -263,6 +272,16 @@ if ($secondary) { ?>
                 .home .blocks.blocks-4 .widget_text:nth-child(2) .button:hover,
                 .home .blocks.blocks-4 .widget_text:nth-child(2) .button:focus {
                   color: <?= $secondary ?>;
+                }
+<?php }
+if ($header_text_color) { ?>
+                .banner .branding p {
+                    color: #<?= $header_text_color ?>;
+                }
+                @media (min-width: 1200px) {
+                    .banner .primary-navigation a {
+                        color: #<?= $header_text_color ?>;
+                    }
                 }
 <?php } ?>
         </style>
