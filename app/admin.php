@@ -100,3 +100,14 @@ add_action('customize_preview_init', function () {
     wp_enqueue_script('aldine/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
     wp_localize_script('aldine/customizer.js', 'SAGE_DIST_PATH', get_theme_file_uri() . '/dist/');
 });
+
+require get_theme_file_path() . '/../lib/huh/huh.php';
+
+/**
+ * Huh
+ */
+add_action('admin_init', function () {
+    $markdown_url = apply_filters('pb_aldine_quickstart_url', get_theme_file_uri() . '/docs/quickstart.md');
+    $huh = new \WP_Huh();
+    $huh->init($markdown_url);
+});
