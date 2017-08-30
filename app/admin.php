@@ -90,27 +90,27 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section'  => 'pb_front_page_catalog',
         'settings' => 'pb_front_page_catalog_title',
     ]);
-    $wp_customize->add_section('pb_front_page_contact_form', [
-        'title' => __('Front Page Contact Form', 'aldine'),
+    $wp_customize->add_section('pb_network_contact_form', [
+        'title' => __('Contact Form', 'aldine'),
         'priority' => 25,
     ]);
-    $wp_customize->add_setting('pb_front_page_contact_form', [
+    $wp_customize->add_setting('pb_network_contact_form', [
         'type' => 'option',
     ]);
-    $wp_customize->add_control('pb_front_page_contact_form', [
-        'label' => __('Show Front Page Contact Form', 'aldine'),
-        'section'  => 'pb_front_page_contact_form',
-        'settings' => 'pb_front_page_contact_form',
+    $wp_customize->add_control('pb_network_contact_form', [
+        'label' => __('Show Contact Form', 'aldine'),
+        'section'  => 'pb_network_contact_form',
+        'settings' => 'pb_network_contact_form',
         'type' => 'checkbox'
     ]);
-    $wp_customize->add_setting('pb_front_page_contact_form_title', [
+    $wp_customize->add_setting('pb_network_contact_form_title', [
         'type' => 'option',
         'sanitize_callback' => 'sanitize_text_field'
     ]);
-    $wp_customize->add_control('pb_front_page_contact_form_title', [
-        'label' => __('Front Page Contact Form Title', 'aldine'),
-        'section'  => 'pb_front_page_contact_form',
-        'settings' => 'pb_front_page_contact_form_title',
+    $wp_customize->add_control('pb_network_contact_form_title', [
+        'label' => __('Contact Form Title', 'aldine'),
+        'section'  => 'pb_network_contact_form',
+        'settings' => 'pb_network_contact_form_title',
     ]);
 });
 

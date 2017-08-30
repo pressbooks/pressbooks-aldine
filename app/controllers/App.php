@@ -55,4 +55,14 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function contactFormTitle()
+    {
+        $title = get_option('pb_network_contact_form_title');
+        if ($title) {
+            return $title;
+        }
+
+        return __('Contact Us', 'aldine');
+    }
 }

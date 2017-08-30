@@ -1,5 +1,8 @@
 <footer class="content-info">
   <div class="container">
+    @if(get_option('pb_network_contact_form'))
+      @include('partials.contact-form')
+    @endif
     <section class="network-footer bg-secondary">
       <div class="network-footer-block {{ App::networkFooter(1) }}">
         @if(App::networkFooter(1) !== 'empty')

@@ -3,3 +3,49 @@
 // TODO: .search-form label {}
 // TODO: .search-form .search-field {}
 // TODO: .search-form .search-submit {}
+
+::placeholder {
+  color: $black;
+}
+
+.contact {
+  margin-bottom: 120px;
+
+  form {
+    width: 22.125rem;
+  }
+
+  label {
+    margin-bottom: 1rem;
+  }
+
+  label,
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: $font-family-sans-serif;
+  }
+
+  textarea {
+    height: 7.5em; // TODO
+    resize: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    flex-grow: 1;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: solid 2px $black;
+    padding: 0 0 1em;
+
+    &:focus {
+      outline: none;
+      border-bottom: solid 2px var(--brand-primary, $brand-primary);
+    }
+  }
+}

@@ -21,8 +21,5 @@
   @if(get_option('pb_front_page_catalog'))
     @include('partials.front-page-catalog')
   @endif
-  @if(get_option('pb_front_page_contact_form'))
-    @include('partials.front-page-contact-form')
-  @endif
   </section>
 @endsection
