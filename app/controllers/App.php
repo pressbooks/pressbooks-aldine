@@ -8,6 +8,7 @@ class App extends Controller
 {
     public function siteLogo()
     {
+        $custom_logo_id = get_theme_mod('custom_logo');
         if (has_custom_logo()) {
             return wp_get_attachment_image($custom_logo_id, 'original');
         } else {
