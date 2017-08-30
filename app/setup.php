@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', function () {
         null
     );
     wp_enqueue_style('aldine/main.css', asset_path('styles/main.css'), false, null);
-    /* wp_enqueue_style(
+    wp_enqueue_style(
         'uio/normalize.css',
         get_theme_file_uri() . '/lib/infusion/src/lib/normalize/css/normalize.css',
         false,
@@ -49,7 +49,6 @@ add_action('wp_enqueue_scripts', function () {
         null
     );
     wp_enqueue_script('uio.js', get_theme_file_uri() . '/lib/infusion/infusion-uiOptions.js', ['jquery'], null, true);
-    */
     wp_enqueue_script('aldine/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
     wp_localize_script('aldine/main.js', 'SAGE_DIST_PATH', get_theme_file_uri() . '/dist/');
 }, 100);
