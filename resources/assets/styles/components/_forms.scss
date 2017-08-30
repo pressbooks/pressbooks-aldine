@@ -11,8 +11,32 @@
 .contact {
   margin-bottom: 120px;
 
+  p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: $font-family-sans-serif;
+  }
+
+  .success {
+    color: $dark-green;
+  }
+
+  .error {
+    color: $dark-red;
+  }
+
   form {
     width: 22.125rem;
+
+    .error > input[type="text"],
+    .error > input[type="email"],
+    .error > textarea {
+      border-bottom: solid 2px $dark-red;
+    }
+
+    .error > ::placeholder {
+      color: $dark-red;
+    }
   }
 
   label {
