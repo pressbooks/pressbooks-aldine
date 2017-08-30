@@ -35,10 +35,10 @@
       <div class="pressbooks-links">
         <h1><a href="https://pressbooks.com">{!! sprintf(__('Powered by %s', 'aldine'), '<span class="pressbooks">Pressbooks</span>') !!}</a></h1>
         <ul>
-          <li>{{ __('Open Source', 'aldine') }}</li>
-          <li>{{ __('Open Textbooks', 'aldine') }}</li>
-          <li>{{ __('Open Book Publishing', 'aldine') }}</li>
-          <li>{{ __('Learn More', 'aldine') }}</li>
+          <li><a href="https://pressbooks.org">{{ __('Open Source', 'aldine') }}</a></li>
+          <li><a href="https://pressbooks.com/for-academia">{{ __('Open Textbooks', 'aldine') }}</a></li>
+          <li><a href="https://pressbooks.com">{{ __('Open Book Publishing', 'aldine') }}</a></li>
+          <li><a href="https://pressbooks.com/about">{{ __('Learn More', 'aldine') }}</a></li>
         </ul>
       </div>
       <div class="social-media">

@@ -51,11 +51,16 @@
   }
 
   .brand {
-    width: 109px;
-    height: 17px;
+    width: 6.5625rem;
+    height: auto;
     margin: 30px 0 0 17px;
-    background-image: url('../images/logo.png'); // TODO
-    background-size: 109px 17px;
+
+    svg,
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .primary-navigation {
@@ -115,11 +120,9 @@
     }
 
     .brand {
-      width: 265px;
-      height: 40px;
+      width: 16.5625rem;
+      height: auto;
       margin-top: 40px;
-      background-image: url('../images/logo@2x.png'); // TODO
-      background-size: 265px 40px;
     }
 
     .primary-navigation {
@@ -139,11 +142,11 @@
           color: var(--brand-primary, $brand-primary);
         }
 
-        &.catalog {
+        &:nth-child(1) {
           margin-right: auto;
         }
 
-        &.contact {
+        &:nth-child(2) {
           margin: 0 1em 0 auto;
         }
       }

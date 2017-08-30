@@ -6,6 +6,15 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+    public function siteLogo()
+    {
+        if (has_custom_logo()) {
+            return wp_get_attachment_image($custom_logo_id, 'original');
+        } else {
+            return file_get_contents(get_theme_file_path() . '/dist/' . svg_path('images/logo.svg'));
+        }
+    }
+
     public function siteName()
     {
         return get_bloginfo('name');

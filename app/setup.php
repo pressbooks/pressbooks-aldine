@@ -51,7 +51,12 @@ add_action('after_setup_theme', function () {
      * Enable custom logos
      * @link https://developer.wordpress.org/themes/functionality/custom-logo/
      */
-    add_theme_support('custom-logo');
+    add_theme_support('custom-logo', [
+        'height' => 40,
+        'width' => 265,
+        'flex-width' => true,
+        'flex-height' => true,
+    ]);
 
     /**
      * Enable post thumbnails
