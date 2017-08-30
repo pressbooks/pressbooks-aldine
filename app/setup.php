@@ -11,12 +11,8 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style(
-        'aldine/webfonts',
-        'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600',
-        false,
-        null
-    );
+    $webfonts = 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600';
+    wp_enqueue_style('aldine/webfonts', $webfonts, false, null);
     wp_enqueue_style('aldine/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_style(
         'uio/normalize.css',
@@ -72,22 +68,19 @@ add_action('after_setup_theme', function () {
     ]);
 
     /**
-     * Custom Header
+     * Enable custom headers
+     * @link https://developer.wordpress.org/themes/functionality/custom-headers/
      */
     add_theme_support('custom-header', [
         'default-image' => asset_path('images/header.jpg'),
         'width' => 1650,
         'height' => 880,
         'default-text-color' => '#000',
-        // 'header-text' => true,
-        // 'uploads' => true,
-        // 'wp-head-callback' => '',
-        // 'admin-head-callback' => '',
-        // 'admin-preview-callback' => '',
     ]);
 
     /**
-     * Custom Logo
+     * Enable custom logos
+     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
      */
     add_theme_support('custom-logo');
 
