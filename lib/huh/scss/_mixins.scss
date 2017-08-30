@@ -1,4 +1,0 @@
-// huh mixins
-@mixin calc( $property, $expression ) {
-	#{$property}: calc( #{$expression} );
-}
