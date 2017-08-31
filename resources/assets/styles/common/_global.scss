@@ -32,6 +32,14 @@ h2 {
   margin: 0;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
 :root {
   --brand-primary: $brand-primary;
   --brand-secondary: $brand-secondary;

@@ -3,11 +3,11 @@ const WPAPI = require( 'wpapi' );
 export default {
   init() {
     // JavaScript to be fired on the home page
-    let books = $('.books');
+    // let books = $('.books');
     let pb = new WPAPI({ endpoint: 'http://pressbooks.dev/wp-json' });
     pb.books = pb.registerRoute( 'pressbooks/v2', '/books/' );
 
-    function loadNextPage() {
+    /* function loadNextPage() {
       let nextpage = books.attr('data-next-page');
       if (typeof nextpage !== typeof undefined && nextpage !== false) {
         const total = parseInt($('.books').attr('data-total-pages'));
@@ -29,9 +29,9 @@ export default {
           console.error(err); //  eslint-disable-line
         });
       }
-    }
+    } */
 
-    books.on('init', () => {
+    /* books.on('init', () => {
       loadNextPage();
     })
 
@@ -58,7 +58,7 @@ export default {
       if((parseInt($('.slick-active:last').attr('data-slick-index')) + 1) === currentSlide.slideCount) {
         loadNextPage(true);
       }
-    })
+    }); */
   },
   finalize() {
   },

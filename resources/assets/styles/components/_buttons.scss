@@ -1,21 +1,23 @@
 .button {
   display: inline-block;
-  width: 250px;
-  height: 60px;
+  width: 15.625rem;
+  height: 3.75rem;
   margin-top: 2em;
-  padding: 1em;
+  padding: 1.2rem;
   border: 2px solid $black;
   border-radius: 3px;
   background: $black;
   font-family: $font-family-sans-serif;
-  font-size: em(16);
+  font-size: 1rem;
   font-weight: 600;
   color: $white;
+  line-height: normal;
   letter-spacing: 2px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.5s;
+  vertical-align: middle;
 
   &:hover,
   &:focus {
@@ -24,13 +26,13 @@
   }
 
   &.button-small {
-    width: 150px;
-    height: 40px;
+    width: (150/16) * 1rem;
+    height: (40/16) * 1rem;
     padding: 0.5em;
   }
 
   &.button-wide {
-    width: 305px;
+    width: 19.0625rem;
   }
 
   &.button-outline {

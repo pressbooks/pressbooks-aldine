@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="blocks blocks-{{ $block_count }}">
+  <section class="blocks blocks-{{ $block_count }} w-100">
   @if(is_active_sidebar('front-page-block'))
     @php(dynamic_sidebar('front-page-block'))
   @else
