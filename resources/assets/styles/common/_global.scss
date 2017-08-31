@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: $font-family-serif;
-  font-size: #{$base-font-size}px;
+  font-size: rem(18);
 }
 
 h1,
@@ -18,15 +18,15 @@ h6 {
 }
 
 h1 {
-  font-size: em(30);
+  font-size: rem(30);
   font-weight: 600;
-  letter-spacing: em(2);
+  letter-spacing: rem(2);
   line-height: (36/30);
   margin: 0;
 }
 
 h2 {
-  font-size: em(16);
+  font-size: rem(16);
   font-weight: normal;
   line-height: (30/16);
   margin: 0;

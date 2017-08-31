@@ -71,7 +71,7 @@
     a {
       display: none;
       font-family: $font-family-sans-serif;
-      font-size: em(24);
+      font-size: rem(24);
       line-height: (80/24);
       color: $white;
       letter-spacing: 0;
@@ -133,7 +133,7 @@
 
       a {
         display: inline-block;
-        font-size: em(18);
+        font-size: rem(18);
         color: $black;
         line-height: normal;
 
@@ -161,17 +161,17 @@
       height: 576px;
 
       p {
-        font-size: em(30);
+        font-size: rem(30);
         letter-spacing: 0.75px;
         line-height: (40/30);
       }
     }
 
     h1 {
-      margin-bottom: 0.5em;
-      font-size: em(72);
+      margin-bottom: rem(32);
+      font-size: rem(72);
       line-height: (40/72);
-      letter-spacing: 1.8px;
+      letter-spacing: rem(1.8);
     }
   }
 }

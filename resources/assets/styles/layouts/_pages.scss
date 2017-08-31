@@ -12,7 +12,7 @@
     text-align: center;
 
     p {
-      font-size: em(16);
+      font-size: rem(18);
       line-height: (32/16);
     }
   }
@@ -64,7 +64,7 @@
   .block,
   .latest-books {
     h3 {
-      font-size: em(30);
+      font-size: rem(30);
       font-weight: 600;
       color: var(--brand-primary, $brand-primary);
       letter-spacing: 2px;
@@ -96,6 +96,7 @@
       margin-left: auto;
       margin-right: auto;
       padding: 0 0.46875rem;
+      position: relative;
     }
 
     .books {
@@ -120,18 +121,18 @@
 
       .subject {
         height: 4.625rem;
-        font-size: em(24);
+        font-size: rem(24);
       }
 
       .title {
         height: 13rem;
-        font-size: em(30);
+        font-size: rem(30);
         font-weight: 500;
         line-height: (40/30);
       }
 
       .read-more {
-        font-size: em(18);
+        font-size: rem(18);
       }
     }
 
@@ -166,7 +167,7 @@
       }
 
       h3 {
-        font-size: em(48);
+        font-size: rem(48);
         line-height: (56/48);
 
         &::before {
@@ -175,7 +176,7 @@
       }
 
       p {
-        font-size: em(18);
+        font-size: rem(18);
         line-height: (32/18);
       }
     }
@@ -206,7 +207,8 @@
 
       .next,
       .previous {
-        flex: 0 0 2.4375rem;
+        position: absolute;
+        top: rem(165.5);
 
         svg {
           width: 2.4375rem;
@@ -215,13 +217,13 @@
       }
 
       .next {
-        margin-left: 2.625rem;
         margin-right: 0.9375rem;
+        right: 0;
       }
 
       .previous {
         margin-left: 0.9375rem;
-        margin-right: 2.625rem;
+        left: 0;
       }
 
       .books {

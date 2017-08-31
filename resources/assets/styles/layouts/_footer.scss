@@ -3,7 +3,7 @@
     margin-bottom: 0;
     padding: 60px 42.5px 40px;
     font-family: $font-family-sans-serif;
-    font-size: em(16);
+    font-size: rem(16);
     color: $white;
 
     ul {
@@ -75,7 +75,7 @@
     margin-top: 1em;
 
     a {
-      font-size: em(32);
+      font-size: rem(32);
       margin: 0 0.25em;
       transition: all 0.4s;
     }
@@ -102,7 +102,7 @@
     }
 
     h1 {
-      font-size: em(16);
+      font-size: rem(16);
       font-weight: normal;
       margin-bottom: 0;
 
@@ -124,7 +124,7 @@
     ul {
       display: none;
       margin: 0;
-      font-size: em(14);
+      font-size: rem(14);
     }
 
     .pressbooks-icon {
@@ -174,7 +174,7 @@
 
     .social-media {
       a {
-        font-size: em(24);
+        font-size: rem(24);
         margin: 0 0.5em 0 0;
       }
     }
