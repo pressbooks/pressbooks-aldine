@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: $font-family-serif;
   font-size: rem(18);
+  background: #fff;
 }
 
 h1,
@@ -41,12 +42,22 @@ h2 {
 }
 
 :root {
-  --brand-primary: $brand-primary;
-  --brand-secondary: $brand-secondary;
+  --primary: $brand-primary;
+  --accent: $brand-accent;
+  --link: $brand-primary;
+  --header-text: $black;
+  --header-link: $brand-primary;
+  --fg: $white;
+  --bg: $brand-accent;
+  --block-border: $brand-primary;
+  --btn-text: $white;
+  --btn-bg: $brand-primary;
+  --btn-text-alt: $white;
+  --btn-bg-alt: $brand-accent;
 }
 
 a {
-  color: var(--brand-primary, $brand-primary);
+  color: var(--link, $brand-primary);
   text-decoration: none;
 }
 
@@ -62,14 +73,14 @@ a {
   border-color: var(--brand-primary, $brand-primary);
 }
 
-.secondary {
-  color: var(--brand-secondary, $brand-secondary);
+.accent {
+  color: var(--brand-secondary, $brand-accent);
 }
 
-.bg-secondary {
-  background-color: var(--brand-secondary, $brand-secondary);
+.bg-accent {
+  background-color: var(--brand-secondary, $brand-accent);
 }
 
-.b--secondary {
-  border-color: var(--brand-secondary, $brand-secondary);
+.b--accent {
+  border-color: var(--brand-secondary, $brand-accent);
 }

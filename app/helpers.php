@@ -138,14 +138,6 @@ function locate_template($templates)
 }
 
 /**
- * Remove hash from hex color string
- */
-function remove_hash($color)
-{
-    return ltrim($color, '#');
-}
-
-/**
  *
  * Catch a contact form submission.
  *

@@ -16,36 +16,95 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     ]);
 
     // Add settings
-    $wp_customize->add_setting('pb_network_primary_color', [
-        'type' => 'option',
-        'default' => 'b01109',
-        'sanitize_callback' => 'Aldine\remove_hash',
-    ]);
-    $wp_customize->add_control(new \WP_Customize_Color_Control(
-        $wp_customize,
-        'pb_network_primary_color',
+    foreach ([
         [
+            'slug' => 'primary',
+            'hex' => '#b01109',
             'label' => __('Primary Color', 'aldine'),
-            'section'  => 'colors',
-            'description' => __('Used for links and primary elements.', 'aldine'),
-            'settings' => 'pb_network_primary_color',
-        ]
-    ));
-    $wp_customize->add_setting('pb_network_secondary_color', [
-        'type' => 'option',
-        'default' => '015d75',
-        'sanitize_callback' => 'Aldine\remove_hash',
-    ]);
-    $wp_customize->add_control(new \WP_Customize_Color_Control(
-        $wp_customize,
-        'pb_network_secondary_color',
+            'description' => __('Used for primary elements.', 'aldine'),
+        ],
         [
-            'label' => __('Secondary Color', 'aldine'),
-            'section'  => 'colors',
-            'description' => __('Used for secondary elements.', 'aldine'),
-            'settings' => 'pb_network_secondary_color',
-        ]
-    ));
+            'slug' => 'accent',
+            'hex' => '#015d75',
+            'label' => __('Accent Color', 'aldine'),
+            'description' => __('Used for accents.', 'aldine'),
+        ],
+        [
+            'slug' => 'link',
+            'hex' => '#b01109',
+            'label' => __('Link Color', 'aldine'),
+            'description' => __('Used for links.', 'aldine'),
+        ],
+        [
+            'slug' => 'header_link',
+            'hex' => '#b01109',
+            'label' => __('Header Link Color', 'aldine'),
+            'description' => __('Used for links in the header.', 'aldine'),
+        ],
+        [
+            'slug' => 'block_border',
+            'hex' => '#b01109',
+            'label' => __('Block Border Color', 'aldine'),
+            'description' => __('Used for home button block border.', 'aldine'),
+        ],
+        [
+            'slug' => 'fg',
+            'hex' => '#ffffff',
+            'label' => __('Foreground Color', 'aldine'),
+            'description' => __('Used for the foreground text of colored blocks.', 'aldine'),
+        ],
+        [
+            'slug' => 'bg',
+            'hex' => '#015d75',
+            'label' => __('Background Color', 'aldine'),
+            'description' => __('Used for the background of colored blocks.', 'aldine'),
+        ],
+        [
+            'slug' => 'btn_text',
+            'hex' => '#ffffff',
+            'label' => __('Button Text Color', 'aldine'),
+            'description' => __('Used for the foreground text of buttons.', 'aldine'),
+        ],
+        [
+            'slug' => 'btn_active_text',
+            'hex' => '#b01109',
+            'label' => __('Button Active Text Color', 'aldine'),
+            'description' => __('Used for the foreground text of active buttons.', 'aldine'),
+        ],
+        [
+            'slug' => 'btn_bg',
+            'hex' => '#b01109',
+            'label' => __('Button Background Color', 'aldine'),
+            'description' => __('Used for the background of buttons.', 'aldine'),
+        ],
+        [
+            'slug' => 'btn_inverse_text',
+            'hex' => '#b01109',
+            'label' => __('Inverse Button Text Color', 'aldine'),
+            'description' => __('Used for the foreground text of buttons.', 'aldine'),
+        ],
+        [
+            'slug' => 'btn_inverse_active_text',
+            'hex' => '#ffffff',
+            'label' => __('Inverse Button Active Text Color', 'aldine'),
+            'description' => __('Used for the background of buttons.', 'aldine'),
+        ],
+    ] as $color) {
+        $wp_customize->add_setting("pb_network_color_{$color['slug']}", [
+            'type' => 'option',
+            'default' => $color['hex'],
+        ]);
+        $wp_customize->add_control(new \WP_Customize_Color_Control(
+            $wp_customize,
+            "pb_network_color_{$color['slug']}",
+            [
+                'label' => $color['label'],
+                'section'  => 'colors',
+                'description' => $color['description'],
+                'settings' => "pb_network_color_{$color['slug']}",
+            ]
+        ));
+    }
     $wp_customize->add_section('pb_network_social', [
         'title' => __('Social Media', 'aldine'),
         'priority' => 30,

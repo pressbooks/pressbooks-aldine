@@ -167,22 +167,59 @@ add_action('after_setup_theme', function () {
 });
 
 add_action('wp_head', function () {
-    $primary = get_option('pb_network_primary_color');
-    $secondary = get_option('pb_network_secondary_color');
-    $header_text_color = get_header_textcolor();
-    if ($primary || $secondary || $header_text_color) { ?>
+    $primary = get_option('pb_network_color_primary');
+    $accent = get_option('pb_network_color_accent');
+    $link = get_option('pb_network_color_link');
+    $header_link = get_option('pb_network_color_header_link');
+    $fg = get_option('pb_network_color_fg');
+    $bg = get_option('pb_network_color_bg');
+    $btn_text = get_option('pb_network_color_btn_text');
+    $btn_active_text = get_option('pb_network_color_btn_active_text');
+    $btn_bg = get_option('pb_network_color_btn_bg');
+    $btn_inverse_text = get_option('pb_network_color_btn_inverse_text');
+    $btn_inverse_active_text = get_option('pb_network_color_btn_inverse_active_text');
+    $block_border = get_option('pb_network_color_block_border');
+    $header_text = get_header_textcolor();
+    if ($primary || $accent || $header_text) { ?>
 <style type="text/css">:root {
-<?php if ($primary) {
-    $primary = '#' . $primary; ?>
---brand-primary: <?= $primary ?>;
+<?php if ($primary) { ?>
+--primary: <?= $primary ?>;
 <?php }
-if ($secondary) {
-    $secondary = '#' . $secondary; ?>
---brand-secondary: <?= $secondary ?>;
+if ($accent) { ?>
+--accent: <?= $accent ?>;
 <?php }
-if ($header_text_color) {
-    $header_text_color = '#' . $header_text_color; ?>
---brand-header-text: <?= $header_text_color; ?>;
+if ($link) { ?>
+--link: <?= $link ?>;
+<?php }
+if ($header_text) { ?>
+--header-text: <?= $header_text ?>;
+<?php }
+if ($fg) { ?>
+--fg: <?= $fg ?>;
+<?php }
+if ($bg) { ?>
+--bg: <?= $bg ?>;
+<?php }
+if ($btn_text) { ?>
+--btn-text: <?= $btn_text ?>;
+<?php }
+if ($btn_active_text) { ?>
+--btn-active-text: <?= $btn_active_text ?>;
+<?php }
+if ($btn_bg) { ?>
+--btn-bg: <?= $btn_bg ?>;
+<?php }
+if ($btn_inverse_text) { ?>
+--btn-inverse-text: <?= $btn_inverse_text ?>;
+<?php }
+if ($btn_inverse_active_text) { ?>
+--btn-inverse-active-text: <?= $btn_inverse_active_text ?>;
+<?php }
+if ($header_link) { ?>
+--header-link: <?= $header_link ?>;
+<?php }
+if ($block_border) { ?>
+--block-border: <?= $block_border ?>;
 <?php } ?>
 }</style>
     <?php }

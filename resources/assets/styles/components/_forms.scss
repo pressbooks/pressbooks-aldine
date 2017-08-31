@@ -69,7 +69,7 @@
 
     &:focus {
       outline: none;
-      border-bottom: solid 2px var(--brand-primary, $brand-primary);
+      border-bottom: solid 2px var(--accent, $brand-accent);
     }
   }
 }

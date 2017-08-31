@@ -22,32 +22,33 @@
     .widget_text:nth-child(2) {
       margin-right: 0.5rem;
       margin-left: 0.5rem;
-      border: solid 2px var(--brand-primary, $brand-primary);
+      border: solid 2px var(--primary, $brand-primary);
       box-shadow: unset;
     }
   }
 
   .blocks.blocks-4 {
     .widget_text:nth-child(2) {
-      color: $white;
-      background: var(--brand-secondary, $brand-secondary);
+      color: var(--fg, $white);
+      background: var(--bg, $brand-accent);
 
       h3 {
-        color: $white;
+        color: var(--fg, $white);
 
         &::before {
-          background-color: $white;
+          background: var(--fg, $white);
         }
       }
 
       .button {
-        border-color: $white;
+        color: var(--fg, $white);
+        border-color: var(--fg, $white);
         background: transparent;
 
         &:hover,
         &:focus {
-          color: var(--brand-secondary, $brand-secondary);
-          background: $white;
+          color: var(--bg, $brand-accent);
+          background: var(--fg, $white);
         }
       }
     }
@@ -56,7 +57,7 @@
       margin-top: 2rem;
       margin-right: 0.5rem;
       margin-left: 0.5rem;
-      border: solid 2px var(--brand-primary, $brand-primary);
+      border: solid 2px var(--block-border, $brand-primary);
       box-shadow: unset;
     }
   }
@@ -93,7 +94,7 @@
     h3 {
       font-size: rem(30);
       font-weight: 600;
-      color: var(--brand-primary, $brand-primary);
+      color: var(--primary, $brand-primary);
       letter-spacing: 2px;
       line-height: (36/30);
       margin: 0;
@@ -104,7 +105,7 @@
         margin: 0 auto 1em;
         width: 46px;
         height: 5px;
-        background-color: var(--brand-secondary, $brand-secondary);
+        background: var(--accent, $brand-accent);
       }
     }
   }
@@ -137,8 +138,8 @@
       height: 24.125rem;
       margin: 0 0 2rem;
       padding: 1.5rem 1.85rem 2.1875rem;
-      border-style: solid;
-      border-width: 2px;
+      border: solid 2px var(--bg, $brand-accent);
+      background: var(--bg, $brand-accent);
 
       a {
         font-family: $font-family-sans-serif;
@@ -170,7 +171,7 @@
 
       svg {
         path {
-          fill: var(--brand-secondary, $brand-secondary);
+          fill: var(--primary, $brand-primary);
         }
       }
     }

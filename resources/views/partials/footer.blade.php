@@ -3,7 +3,7 @@
     @if(get_option('pb_network_contact_form'))
       @include('partials.contact-form')
     @endif
-    <section class="network-footer bg-secondary">
+    <section class="network-footer">
       <div class="network-footer-block {{ App::networkFooter(1) }}">
         @if(App::networkFooter(1) !== 'empty')
             @php(dynamic_sidebar('network-footer-block-1'))

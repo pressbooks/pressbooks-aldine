@@ -4,7 +4,8 @@
     padding: 60px 42.5px 40px;
     font-family: $font-family-sans-serif;
     font-size: rem(16);
-    color: $white;
+    color: var(--fg, $white);
+    background: var(--bg, $brand-accent);
 
     ul {
       margin: 0;
@@ -16,13 +17,13 @@
     }
 
     a {
-      color: $white;
+      color: var(--fg, $white);
       text-decoration: none;
       border-bottom: solid 1px transparent;
 
       &:hover,
       &:focus {
-        border-bottom: solid 1px $white;
+        border-bottom: solid 1px var(--fg, $white);
       }
     }
 
@@ -35,7 +36,7 @@
     }
 
     .network-footer-block {
-      border-top: solid 1px $white;
+      border-top: solid 1px var(--fg, $white);
     }
 
     .network-footer-block-1 {
