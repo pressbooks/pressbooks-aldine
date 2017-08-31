@@ -5,7 +5,7 @@
     align-items: center;
     padding: 0 0.78125rem;
     display: flex;
-    height: 445px;
+    height: rem(445);
     background-color: $white;
     margin-left: auto;
     margin-right: auto;
@@ -64,13 +64,27 @@
   .blocks.blocks-2 .widget_text:nth-child(2),
   .blocks.blocks-3 .widget_text:nth-child(2),
   .blocks.blocks-4 .widget_text:nth-child(3) {
+    background: transparent;
+    margin-bottom: rem(400);
+
     &::after {
+      z-index: -1;
       content: "";
       display: block;
       width: 100vw;
       height: rem(444);
-      background: green;
+      background-image: url('../images/banner.jpg');
+      background-position: center;
+      background-size: cover;
       position: absolute;
+      top: rem(1410);
+      left: 0;
+    }
+  }
+
+  .blocks.blocks-4 .widget_text:nth-child(3) {
+    &::after {
+      top: rem(1880);
     }
   }
 
@@ -166,12 +180,13 @@
 @media (min-width: $medium) {
   .home {
     .wrap {
-      margin-top: -366px;
+      margin-top: rem(-366);
     }
 
     .block {
-      width: 775px;
-      margin-bottom: 119px;
+      width: rem(775);
+      height: rem(494);
+      margin-bottom: rem(119);
       padding: 0 90px;
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
 
@@ -199,6 +214,23 @@
     .blocks.blocks-4 .widget_text:nth-child(3) {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .blocks.blocks-2 .widget_text:nth-child(2),
+    .blocks.blocks-3 .widget_text:nth-child(2),
+    .blocks.blocks-4 .widget_text:nth-child(3) {
+      margin-bottom: rem(119);
+
+      &::after {
+        height: rem(600);
+        top: rem(1547);
+      }
+    }
+
+    .blocks.blocks-4 .widget_text:nth-child(3) {
+      &::after {
+        top: rem(2177);
+      }
     }
 
     .latest-books {
@@ -257,8 +289,7 @@
 @media (min-width: $large) {
   .home {
     .block {
-      width: 1115px;
-      height: 494px;
+      width: rem(1115);
     }
 
     .latest-books {
@@ -309,6 +340,12 @@
 
       .widget_text:nth-child(1) {
         margin-right: 65px;
+      }
+    }
+
+    .blocks.blocks-4 .widget_text:nth-child(3) {
+      &::after {
+        top: rem(1596);
       }
     }
   }
