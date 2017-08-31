@@ -61,6 +61,19 @@
     }
   }
 
+  .blocks.blocks-2 .widget_text:nth-child(2),
+  .blocks.blocks-3 .widget_text:nth-child(2),
+  .blocks.blocks-4 .widget_text:nth-child(3) {
+    &::after {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: rem(444);
+      background: green;
+      position: absolute;
+    }
+  }
+
   .block,
   .latest-books {
     h3 {
