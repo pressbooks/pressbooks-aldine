@@ -42,8 +42,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('custom-header', [
         'default-image' => asset_path('images/header.jpg'),
-        'width' => 1650,
-        'height' => 880,
+        'width' => 1920,
+        'height' => 884,
         'default-text-color' => '#000',
     ]);
 
