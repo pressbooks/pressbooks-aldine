@@ -78,7 +78,7 @@ class App extends Controller
 
     public static function books($page = 1, $per_page = 10)
     {
-        $request = new \WP_REST_Request( 'GET', '/pressbooks/v2/books' );
+        $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
         $request->set_query_params([
             'page' => $page,
             'per_page' => $per_page,
