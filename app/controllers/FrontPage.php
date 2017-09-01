@@ -49,11 +49,4 @@ class FrontPage extends Controller
 
         return __('Our Latest Titles', 'aldine');
     }
-
-    public static function latestBooks($page = 1, $per_page = 3)
-    {
-        $books = wp_remote_get(network_home_url("/wp-json/pressbooks/v2/books?per_page=$per_page&page=$page"));
-        $books = json_decode($books['body'], true);
-        return $books;
-    }
 }
