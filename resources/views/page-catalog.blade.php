@@ -40,11 +40,22 @@
       </div>
     </div>
     <div class="books">
-      @foreach(App::books(1, 9) as $book)
+      @foreach(App::books($current_page, 9) as $book)
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>
     <nav class="catalog-navigation">
+      @if(App::previousPage($current_page))<a class="previous" data-page="{{ App::previousPage($current_page) }}" href="{{ network_home_url('/catalog/page/' . App::previousPage($current_page) . '/') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
+      <div class="pages">
+      @for($i = 1; $i <= App::totalPages(9); $i++)
+        @if($i === $current_page)
+          <span class="current">{{ $i }}</span>
+        @else
+          <a href="{{ network_home_url("/catalog/page/$i/") }}">{{ $i }}</a>
+        @endif
+      @endfor
+      </div>
+      @if(App::nextPage($current_page, 9))<a class="next" data-page="{{ App::nextPage($current_page, 9) }}" href="{{ network_home_url('/catalog/page/' . App::nextPage($current_page, 9) . '/') }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
     </nav>
   </section>
 @endsection

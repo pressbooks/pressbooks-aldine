@@ -112,7 +112,7 @@
 
   .latest-books {
     height: auto;
-    padding: 0 0 50px;
+    padding: 0 0 rem(154);
 
     h3 {
       margin-top: 4.375rem;
@@ -131,6 +131,7 @@
     .books {
       padding: 0;
       width: 100%;
+      margin-bottom: rem(34);
     }
 
     .book {
@@ -162,6 +163,10 @@
 
       .read-more {
         font-size: rem(18);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
@@ -278,6 +283,7 @@
         min-width: 50rem;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 2rem;
       }
 
       .book {
