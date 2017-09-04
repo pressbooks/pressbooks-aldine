@@ -1,0 +1,364 @@
+.catalog {
+  .page-header {
+    margin-top: rem(-68);
+    padding-bottom: 2rem;
+  }
+
+  .network-catalog {
+    width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .filters,
+  .search,
+  .sort {
+    width: 100%;
+    border-top: solid 2px var(--accent, $brand-accent);
+    background: $white;
+
+    a {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: rem(16) rem(19);
+      font-size: rem(16);
+      font-weight: 600;
+      font-family: $font-family-sans-serif;
+      letter-spacing: rem(0.67);
+      color: $black;
+
+      &:hover,
+      &:focus {
+        background: #fafdff;
+        color: var(--link, $brand-primary);
+      }
+    }
+
+    .has-active-child > a {
+      background: var(--link, $brand-primary);
+      color: $white;
+
+      .arrow {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: rem(16);
+        font-family: $font-family-sans-serif;
+        letter-spacing: rem(0.67);
+
+        a {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: normal;
+          cursor: pointer;
+
+          .close {
+            display: inline-block;
+            float: right;
+            margin-top: rem(-2);
+            font-size: rem(20);
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
+        }
+
+        a.is-active {
+          font-weight: 600;
+          color: var(--link, $brand-primary);
+
+          .close {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    path {
+      fill: var(--link, $brand-primary);
+    }
+  }
+
+  .is-active > a .arrow {
+    transform: rotate(180deg);
+  }
+
+  .filters {
+    .filter-groups {
+      display: none;
+      border-top: solid 2px var(--accent, $brand-accent);
+
+      h3 {
+        margin: 0;
+        border-top: solid 1px $light-gray;
+      }
+
+      h3:first-of-type {
+        border-top: none;
+      }
+    }
+
+    .filter-list {
+      display: none;
+    }
+
+    &.is-active {
+      .filter-groups {
+        display: block;
+      }
+    }
+
+    .is-active ul {
+      display: block;
+    }
+  }
+
+  .search {
+    display: none;
+  }
+
+  .sort {
+    border-bottom: solid 2px var(--accent, $brand-accent);
+
+    .sorts {
+      display: none;
+      border-top: solid 2px var(--accent, $brand-accent);
+    }
+
+    &.is-active {
+      .sorts {
+        display: block;
+      }
+    }
+  }
+
+  .books {
+    align-self: flex-start;
+    width: percent(358, 360);
+    margin: rem(32) 0 0 percent(10.5, 360);
+    padding: 0;
+  }
+
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: percent(165, 358);
+    margin: 0 percent(9, 358) rem(8) 0;
+    height: rem(230);
+    float: left;
+    padding: 1.5rem rem(8) rem(26);
+    border: solid 2px var(--bg, $brand-accent);
+    background: var(--bg, $brand-accent);
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      font-family: $font-family-sans-serif;
+      color: $white;
+      text-decoration: none;
+    }
+
+    .subject {
+      height: rem(44);
+      font-size: rem(14);
+    }
+
+    .title {
+      height: rem(118);
+      font-size: rem(16);
+      font-weight: 600;
+      line-height: (20/16);
+    }
+
+    .read-more {
+      font-size: rem(14);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    .controls {
+      width: percent(706, 768);
+      height: rem(52);
+      margin: rem(60) percent(29, 768) rem(20) percent(33, 768);
+
+      .filters,
+      .search,
+      .sort {
+        position: relative;
+        border-top: 0;
+        border-bottom: solid 2px var(--accent, $brand-accent);
+        z-index: 99;
+      }
+
+      .filters {
+        float: left;
+        width: rem(360);
+
+        .filter-groups {
+          border-right: solid 1px #ececec;
+          border-left: solid 1px #ececec;
+        }
+      }
+
+      .sort {
+        float: right;
+        width: rem(160);
+
+        .sorts {
+          border-right: solid 1px #ececec;
+          border-bottom: solid 1px #ececec;
+          border-left: solid 1px #ececec;
+        }
+      }
+    }
+
+    .books {
+      align-self: flex-start;
+      width: percent(735, 768);
+      margin-bottom: rem(15);
+      margin-left: percent(24, 768);
+    }
+
+    .book {
+      width: percent(230, 735);
+      height: rem(260);
+      margin: 0 percent(15, 735) 2rem 0;
+      padding: 0 rem(14) rem(21.35);
+
+      .subject {
+        height: rem(45.85);
+        font-size: rem(18);
+      }
+
+      .title {
+        height: rem(147.65);
+        font-size: rem(22);
+        font-weight: 600;
+        line-height: (40/30);
+      }
+
+      .read-more {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  // TODO
+}
+
+@media (min-width: $large) {
+  // TODO
+}
+
+@media (min-width: $extra-large) {
+  .catalog {
+    .main {
+      width: rem(1535);
+      margin: 0 auto;
+    }
+
+    .network-catalog {
+      margin-top: rem(205);
+    }
+
+    .controls {
+      width: 100%;
+      margin: 0 0 rem(64);
+
+      .filters {
+        width: rem(286);
+
+        .filter-groups {
+          border-right: 0;
+          border-top: 0;
+          border-left: 0;
+
+          .subjects,
+          .licenses {
+            border-bottom: solid 1px #ececec;
+          }
+        }
+
+        &.is-active {
+          border-bottom: 0;
+
+          .filter-groups {
+            border-top: solid 2px var(--accent, $brand-accent);
+          }
+        }
+
+        ul li {
+          a {
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 2;
+          }
+
+          &:last-child a {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+
+      .sort {
+        .sorts {
+          border-top: solid 2px var(--accent, $brand-accent);
+          border-right: 0;
+          border-left: 0;
+        }
+      }
+    }
+
+    .books {
+      width: percent(1221.5, 1535);
+      margin: 0 0 0 percent(316, 1535);
+    }
+
+    .book {
+      width: percent(367, 1221.5);
+      height: rem(386);
+      margin: 0 0 2rem percent(39.5, 1221.5);
+      padding: 1.5rem 1.85rem 2.1875rem;
+
+      .subject {
+        height: 4.625rem;
+        font-size: rem(24);
+      }
+
+      .title {
+        height: 13rem;
+        font-size: rem(30);
+        font-weight: 500;
+        line-height: (40/30);
+      }
+
+      .read-more {
+        font-size: rem(18);
+      }
+    }
+  }
+}

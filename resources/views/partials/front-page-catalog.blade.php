@@ -2,11 +2,11 @@
   <h3 class="tc ttu">{{ $latest_books_title }}</h3>
   <div class="track flex flex-row flex-wrap justify-center items-center">
     <div class="books flex flex-column justify-center items-center order-0 order-1-l flex-row-l justify-between-l" data-total-pages="{{ $total_pages }}" data-next-page="2">
-      @foreach(FrontPage::latestBooks( $current_page, 3 ) as $book)
+      @foreach(App::books($current_page, 3) as $book)
         <div class="book flex flex-column justify-end w-100">
           @if(isset($book['metadata']['keywords']))
           <p class="subject tc ma0">
-            <a href="#">{{ $book['metadata']['keywords'] }}</a>
+            <a href="{{ network_home_url('/catalog/#') . $book['metadata']['keywords'] }}">{{ $book['metadata']['keywords'] }}</a>
           </p>
           @endif
           <p class="title tl ma0">

@@ -51,9 +51,10 @@ h2 {
   --bg: $brand-accent;
   --block-border: $brand-primary;
   --btn-text: $white;
+  --btn-active-text: $brand-primary;
   --btn-bg: $brand-primary;
-  --btn-text-alt: $white;
-  --btn-bg-alt: $brand-accent;
+  --btn-inverse-text: $brand-primary;
+  --btn-inverse-active-text: $white;
 }
 
 a {

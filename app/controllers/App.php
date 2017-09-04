@@ -75,4 +75,15 @@ class App extends Controller
 
         return __('Contact Us', 'aldine');
     }
+
+    public static function books($page = 1, $per_page = 10)
+    {
+        $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
+        $request->set_query_params([
+            'page' => $page,
+            'per_page' => $per_page,
+        ]);
+        $response = rest_do_request($request);
+        return rest_get_server()->response_to_data($response, true);
+    }
 }
