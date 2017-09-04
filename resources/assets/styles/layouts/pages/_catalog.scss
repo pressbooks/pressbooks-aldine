@@ -1,11 +1,31 @@
 .catalog {
+  .banner .container {
+    height: rem(381);
+  }
+
+  .banner .primary-navigation {
+    height: rem(381);
+  }
+
   .page-header {
-    margin-top: rem(-68);
-    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: rem(381);
+    margin-top: rem(-381);
+
+    h1 {
+      color: var(--primary, $brand-primary);
+      margin-bottom: 2rem;
+      font-size: rem(36);
+      line-height: 0.55556;
+      letter-spacing: 0.1125rem;
+    }
   }
 
   .network-catalog {
     width: 100%;
+    padding-bottom: rem(152);
   }
 
   .controls {
@@ -267,11 +287,40 @@
 }
 
 @media (min-width: $medium) {
-  // TODO
+  .catalog {
+    .page-header {
+      h1 {
+        font-size: rem(72);
+      }
+    }
+  }
 }
 
-@media (min-width: $large) {
-  // TODO
+@media #{$breakpoint-large} {
+  .catalog {
+    .banner {
+      .container {
+        height: rem(450);
+      }
+
+      .primary-navigation {
+        height: 40px;
+      }
+
+      .brand {
+        text-align: center;
+
+        img {
+          max-height: rem(60);
+        }
+      }
+    }
+
+    .page-header {
+      height: rem(360);
+      margin-top: rem(-360);
+    }
+  }
 }
 
 @media (min-width: $extra-large) {
