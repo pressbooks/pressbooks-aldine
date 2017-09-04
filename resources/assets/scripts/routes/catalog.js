@@ -32,28 +32,50 @@ export default {
       $(`.filter-groups ${id}`).toggleClass('is-active');
     })
     $('.subjects .filter-list a').click((e) => {
-      let subjectValue = $(e.currentTarget).attr('data-filter');
+      if ($(e.currentTarget).hasClass('is-active')) {
+        $('.subjects .filter-list a').removeClass('is-active');
+        $('.subjects').removeClass('has-active-child');
+      } else {
+        $('.subjects .filter-list a').removeClass('is-active');
+        $(e.currentTarget).addClass('is-active');
+        $(e.currentTarget).parent().parent().parent('.subjects').addClass('has-active-child');
+      }
+      let subjectValue = $('.subjects .filter-list a.is-active').attr('data-filter');
       let licenseValue = $('.licenses .filter-list a.is-active').attr('data-filter');
       if(typeof licenseValue === "undefined") {
         licenseValue = '';
       } else {
         licenseValue = `[data-license="${licenseValue}"]`;
       }
-      $('.subjects .filter-list a').removeClass('is-active');
-      $(e.currentTarget).addClass('is-active');
-      $grid.isotope({ filter: `[data-subject="${subjectValue}"]${licenseValue}` });
-    });
-    $('.licenses .filter-list a').click((e) => {
-      let licenseValue = $(e.currentTarget).attr('data-filter');
-      let subjectValue = $('.subjects .filter-list a.is-active').attr('data-filter');
       if(typeof subjectValue === "undefined") {
         subjectValue = '';
       } else {
         subjectValue = `[data-subject="${subjectValue}"]`;
       }
-      $('.licenses .filter-list a').removeClass('is-active');
-      $(e.currentTarget).addClass('is-active');
-      $grid.isotope({ filter: `[data-license="${licenseValue}"]${subjectValue}` });
+      $grid.isotope({ filter: `${subjectValue}${licenseValue}` });
+    });
+    $('.licenses .filter-list a').click((e) => {
+      if ($(e.currentTarget).hasClass('is-active')) {
+        $('.licenses .filter-list a').removeClass('is-active');
+        $('.licenses').removeClass('has-active-child');
+      } else {
+        $('.licenses .filter-list a').removeClass('is-active');
+        $(e.currentTarget).addClass('is-active');
+        $('.licenses').addClass('has-active-child');
+      }
+      let subjectValue = $('.subjects .filter-list a.is-active').attr('data-filter');
+      let licenseValue = $('.licenses .filter-list a.is-active').attr('data-filter');
+      if(typeof licenseValue === "undefined") {
+        licenseValue = '';
+      } else {
+        licenseValue = `[data-license="${licenseValue}"]`;
+      }
+      if(typeof subjectValue === "undefined") {
+        subjectValue = '';
+      } else {
+        subjectValue = `[data-subject="${subjectValue}"]`;
+      }
+      $grid.isotope({ filter: `${subjectValue}${licenseValue}` });
     });
     $('.sort > a').click((e) => {
       e.preventDefault();

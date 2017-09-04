@@ -17,6 +17,7 @@
   .sort {
     width: 100%;
     border-top: solid 2px var(--accent, $brand-accent);
+    background: $white;
 
     a {
       display: flex;
@@ -30,12 +31,22 @@
       font-family: $font-family-sans-serif;
       letter-spacing: rem(0.67);
       color: $black;
-      transition: color 0.2s;
 
       &:hover,
       &:focus {
         background: #fafdff;
         color: var(--link, $brand-primary);
+      }
+    }
+
+    .has-active-child > a {
+      background: var(--link, $brand-primary);
+      color: $white;
+
+      .arrow {
+        path {
+          fill: $white;
+        }
       }
     }
 
@@ -50,13 +61,30 @@
         letter-spacing: rem(0.67);
 
         a {
-          display: block;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
           font-weight: normal;
+          cursor: pointer;
+
+          .close {
+            display: inline-block;
+            float: right;
+            margin-top: rem(-2);
+            font-size: rem(20);
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
         }
 
         a.is-active {
           font-weight: 600;
           color: var(--link, $brand-primary);
+
+          .close {
+            opacity: 1;
+          }
         }
       }
     }
@@ -111,6 +139,7 @@
 
     .sorts {
       display: none;
+      border-top: solid 2px var(--accent, $brand-accent);
     }
 
     &.is-active {
@@ -169,6 +198,42 @@
 
 @media (min-width: 768px) {
   .catalog {
+    .controls {
+      width: percent(706, 768);
+      height: rem(52);
+      margin: rem(60) percent(29, 768) rem(20) percent(33, 768);
+
+      .filters,
+      .search,
+      .sort {
+        position: relative;
+        border-top: 0;
+        border-bottom: solid 2px var(--accent, $brand-accent);
+        z-index: 99;
+      }
+
+      .filters {
+        float: left;
+        width: rem(360);
+
+        .filter-groups {
+          border-right: solid 1px #ececec;
+          border-left: solid 1px #ececec;
+        }
+      }
+
+      .sort {
+        float: right;
+        width: rem(160);
+
+        .sorts {
+          border-right: solid 1px #ececec;
+          border-bottom: solid 1px #ececec;
+          border-left: solid 1px #ececec;
+        }
+      }
+    }
+
     .books {
       align-self: flex-start;
       width: percent(735, 768);
@@ -217,19 +282,60 @@
     }
 
     .network-catalog {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
       margin-top: rem(205);
     }
 
     .controls {
-      width: percent(314, 1535);
+      width: 100%;
+      margin: 0 0 rem(64);
+
+      .filters {
+        width: rem(286);
+
+        .filter-groups {
+          border-right: 0;
+          border-top: 0;
+          border-left: 0;
+
+          .subjects,
+          .licenses {
+            border-bottom: solid 1px #ececec;
+          }
+        }
+
+        &.is-active {
+          border-bottom: 0;
+
+          .filter-groups {
+            border-top: solid 2px var(--accent, $brand-accent);
+          }
+        }
+
+        ul li {
+          a {
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 2;
+          }
+
+          &:last-child a {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+
+      .sort {
+        .sorts {
+          border-top: solid 2px var(--accent, $brand-accent);
+          border-right: 0;
+          border-left: 0;
+        }
+      }
     }
 
     .books {
       width: percent(1221.5, 1535);
-      margin: 0 0 0 percent(2, 1535);
+      margin: 0 0 0 percent(316, 1535);
     }
 
     .book {

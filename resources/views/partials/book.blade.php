@@ -5,7 +5,7 @@
 >
   @if(isset($book['metadata']['keywords']))
   <p class="subject">
-    <a href="{{ network_home_url('/catalog/keyword/') . $book['metadata']['keywords'] . '/' }}">{{ $book['metadata']['keywords'] }}</a>
+    <a href="{{ network_home_url('/catalog/#') . $book['metadata']['keywords'] }}">{{ $book['metadata']['keywords'] }}</a>
   </p>
   @endif
   <p class="title">

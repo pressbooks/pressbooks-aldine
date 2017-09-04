@@ -6,6 +6,15 @@ use Sober\Controller\Controller;
 
 class PageCatalog extends Controller
 {
+    public function licenses()
+    {
+        $licenses = (new \Pressbooks\Licensing())->getSupportedTypes();
+        foreach ($licenses as $key => $value) {
+            $licenses[$key] = preg_replace("/\([^)]+\)/", '', $value['desc']);
+        }
+        return $licenses;
+    }
+
     public function subjectGroups()
     {
         return [
@@ -21,7 +30,7 @@ class PageCatalog extends Controller
               ],
             ],
             'engineering-technology' => [
-              'title' => __('Engineering and Technology', 'aldine'),
+              'title' => __('Engineering &amp; Technology', 'aldine'),
               'subjects' => [
                 'architecture' => 'Architecture',
                 'bioengineering' => 'Bioengineering',
@@ -43,7 +52,7 @@ class PageCatalog extends Controller
               ],
             ],
             'humanities-arts' => [
-              'title' => __('Humanities and Arts', 'aldine'),
+              'title' => __('Humanities &amp; Arts', 'aldine'),
               'subjects' => [
                 'archaeology' => 'Archaeology',
                 'art' => 'Art',
