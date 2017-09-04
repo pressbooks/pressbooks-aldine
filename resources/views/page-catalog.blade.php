@@ -33,14 +33,14 @@
       <div class="sort">
         <a href="#sort">{{ __('Sort by', 'aldine') }} <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
         <ul id="sort" class="sorts">
-          <li><a class="is-active" href="#title">{{ __('Title', 'aldine') }}</a></li>
-          <li><a href="#subject">{{ __('Subject', 'aldine') }}</a></li>
-          <li><a href="#latest">{{ __('Latest', 'aldine') }}</a></li>
+          <li><a data-sort="title" href="{{ network_home_url("/catalog/page/$current_page/?orderby=title") }}">{{ __('Title', 'aldine') }}</a></li>
+          <li><a data-sort="subject" href="{{ network_home_url("/catalog/page/$current_page/?orderby=subject") }}">{{ __('Subject', 'aldine') }}</a></li>
+          <li><a data-sort="latest" href="{{ network_home_url("/catalog/page/$current_page/?orderby=latest") }}">{{ __('Latest', 'aldine') }}</a></li>
         </ul>
       </div>
     </div>
     <div class="books">
-      @foreach(App::books($current_page, 9) as $book)
+      @foreach(App::books($current_page, 9, $current_order_by) as $book)
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>

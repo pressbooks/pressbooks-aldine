@@ -424,7 +424,7 @@
           display: block;
           margin-top: rem(60);
 
-          a {
+          > a {
             background: var(--link, $brand-primary);
             color: $white;
 
@@ -484,6 +484,30 @@
       .read-more {
         font-size: rem(18);
       }
+    }
+  }
+}
+
+.catalog.no-js {
+  .filters {
+    .arrow {
+      display: none;
+    }
+
+    .filter-groups,
+    .licenses,
+    .filter-list {
+      display: block;
+    }
+  }
+
+  .sort {
+    .arrow {
+      display: none;
+    }
+
+    .sorts {
+      display: block;
     }
   }
 }

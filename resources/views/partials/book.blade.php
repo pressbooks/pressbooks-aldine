@@ -1,5 +1,5 @@
 <div class="book"
-  data-date-published="{{ @$book['metadata']['datePublished'] }}"
+  data-date-published="{{ str_replace('-', '', @$book['metadata']['datePublished']) }}"
   data-license="{{ (new \Pressbooks\Licensing())->getLicenseFromUrl($book['metadata']['license']) }}"
   data-subject="{{ sanitize_title(@$book['metadata']['keywords']) }}"
 >

@@ -85,6 +85,21 @@ class App extends Controller
         }
     }
 
+    public function currentSubject()
+    {
+        return (get_query_var('pb_subject')) ? get_query_var('pb_subject') : '';
+    }
+
+    public function currentLicense()
+    {
+        return (get_query_var('pb_license')) ? get_query_var('pb_license') : '';
+    }
+
+    public function currentOrderBy()
+    {
+        return (get_query_var('orderby')) ? get_query_var('orderby') : 'title';
+    }
+
     public static function previousPage($page)
     {
         return ($page > 1) ? $page - 1 : 0;
@@ -105,7 +120,7 @@ class App extends Controller
         return $response->headers['X-WP-TotalPages'];
     }
 
-    public static function books($page = 1, $per_page = 10)
+    public static function books($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
     {
         $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
         $request->set_query_params([
@@ -113,6 +128,20 @@ class App extends Controller
             'per_page' => $per_page,
         ]);
         $response = rest_do_request($request);
-        return rest_get_server()->response_to_data($response, true);
+        $data = rest_get_server()->response_to_data($response, true);
+        $books = [];
+        foreach ($data as $key => $book) {
+            $book['title'] = $book['metadata']['name'];
+            $book['date-published'] = (isset($book['metadata']['datePublished'])) ?
+                $book['metadata']['datePublished'] :
+                '';
+            $book['subject'] = (isset($book['metadata']['keywords'])) ? $book['metadata']['keywords'] : '';
+            $books[] = $book;
+        }
+        if ($orderby === 'latest') {
+            return wp_list_sort($books, $orderby, 'desc');
+        } else {
+            return wp_list_sort($books, $orderby);
+        }
     }
 }

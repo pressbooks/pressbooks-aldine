@@ -13,7 +13,11 @@ export default {
         subject: '[data-subject]',
         latest: '[data-date-published]',
       },
-      sortBy: 'title',
+      sortAscending: {
+        title: true,
+        subject: true,
+        latest: false,
+      },
     });
     $('.filters > a').click((e) => {
       e.preventDefault();
@@ -32,6 +36,7 @@ export default {
       $(id).toggleClass('is-active');
     })
     $('.subjects .filter-list a').click((e) => {
+      e.preventDefault();
       if ($(e.currentTarget).hasClass('is-active')) {
         $('.subjects .filter-list a').removeClass('is-active');
         $('.subjects').removeClass('has-active-child');
@@ -56,6 +61,7 @@ export default {
       $grid.isotope({ filter: `${subjectValue}${licenseValue}` });
     });
     $('.licenses .filter-list a').click((e) => {
+      e.preventDefault();
       if ($(e.currentTarget).hasClass('is-active')) {
         $('.licenses .filter-list a').removeClass('is-active');
         $('.licenses').removeClass('has-active-child');
@@ -83,7 +89,8 @@ export default {
       $('.sort').toggleClass('is-active');
     })
     $('.sorts a').click((e) => {
-      let sortBy = $(e.currentTarget).attr('href').substr(1);
+      e.preventDefault();
+      let sortBy = $(e.currentTarget).attr('data-sort');
       $('.sorts a').removeClass('is-active');
       $(e.currentTarget).addClass('is-active');
       $grid.isotope({sortBy: sortBy});
