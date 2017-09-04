@@ -26,10 +26,10 @@ export default {
       $(`.filter-groups .subjects:not(${id})`).removeClass('is-active');
       $(`.filter-groups ${id}`).toggleClass('is-active');
     })
-    $('.filter-groups .licenses > a').click((e) => {
+    $('.licenses > a').click((e) => {
       e.preventDefault();
       let id = $(e.currentTarget).attr('href');
-      $(`.filter-groups ${id}`).toggleClass('is-active');
+      $(id).toggleClass('is-active');
     })
     $('.subjects .filter-list a').click((e) => {
       if ($(e.currentTarget).hasClass('is-active')) {
@@ -38,6 +38,7 @@ export default {
       } else {
         $('.subjects .filter-list a').removeClass('is-active');
         $(e.currentTarget).addClass('is-active');
+        $('.subjects').removeClass('has-active-child');
         $(e.currentTarget).parent().parent().parent('.subjects').addClass('has-active-child');
       }
       let subjectValue = $('.subjects .filter-list a.is-active').attr('data-filter');

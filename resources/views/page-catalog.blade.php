@@ -20,14 +20,14 @@
             </ul>
           </div>
           @endforeach
-          <div class="licenses" id="licenses">
-            <a href="#licenses">{{ __('Licenses', 'aldine' ) }}<svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
-            <ul class="filter-list">
-              @foreach($licenses as $key => $value)
-          		  <li><a data-filter="{{ $key }}">{{ $value }}<span class="close">&times;</span></a></li>
-              @endforeach
-            </ul>
-          </div>
+        </div>
+        <div class="licenses" id="licenses">
+          <a href="#licenses">{{ __('Licenses', 'aldine' ) }}<svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
+          <ul class="filter-list">
+            @foreach($licenses as $key => $value)
+              <li><a data-filter="{{ $key }}">{{ $value }}<span class="close">&times;</span></a></li>
+            @endforeach
+          </ul>
         </div>
       </div>
       <div class="sort">
@@ -44,6 +44,7 @@
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>
+    @if(App::totalPages(9) > 1)
     <nav class="catalog-navigation">
       @if(App::previousPage($current_page))<a class="previous" data-page="{{ App::previousPage($current_page) }}" href="{{ network_home_url('/catalog/page/' . App::previousPage($current_page) . '/') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
       <div class="pages">
@@ -57,5 +58,6 @@
       </div>
       @if(App::nextPage($current_page, 9))<a class="next" data-page="{{ App::nextPage($current_page, 9) }}" href="{{ network_home_url('/catalog/page/' . App::nextPage($current_page, 9) . '/') }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
     </nav>
+    @endif
   </section>
 @endsection
