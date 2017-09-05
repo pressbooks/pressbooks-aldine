@@ -40,15 +40,15 @@
       </div>
     </div>
     <div class="books">
-      @foreach(App::books($current_page, 9, $current_order_by) as $book)
+      @foreach($books as $book)
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>
-    @if(App::totalPages(9) > 1)
+    @if($total_pages > 1)
     <nav class="catalog-navigation">
       @if(App::previousPage($current_page))<a class="previous" data-page="{{ App::previousPage($current_page) }}" href="{{ network_home_url('/catalog/page/' . App::previousPage($current_page) . '/') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
       <div class="pages">
-      @for($i = 1; $i <= App::totalPages(9); $i++)
+      @for($i = 1; $i <= $total_pages; $i++)
         @if($i === $current_page)
           <span class="current">{{ $i }}</span>
         @else

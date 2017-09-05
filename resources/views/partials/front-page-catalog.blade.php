@@ -1,10 +1,8 @@
 <div id="latest-titles" class="latest-books w-100">
-  Page {{ $current_page }}
-  Total: {{ App::totalPages(3) }}
   <h3 class="tc ttu">{{ $latest_books_title }}</h3>
   <div class="track flex flex-row flex-wrap justify-center items-center">
-    <div class="books flex flex-column justify-center items-center order-0 order-1-l flex-row-l justify-between-l" data-total-pages="{{ App::totalPages(3) }}" data-next-page="2">
-      @foreach(App::books($current_page, 3) as $book)
+    <div class="books flex flex-column justify-center items-center order-0 order-1-l flex-row-l justify-between-l" data-total-pages="{{ $total_pages }}" data-next-page="2">
+      @foreach($books as $book)
         <div class="book flex flex-column justify-end w-100">
           @if(isset($book['metadata']['keywords']))
           <p class="subject tc ma0">

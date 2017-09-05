@@ -87,12 +87,12 @@ class App extends Controller
 
     public function currentSubject()
     {
-        return (get_query_var('pb_subject')) ? get_query_var('pb_subject') : '';
+        return (get_query_var('subject')) ? get_query_var('subject') : '';
     }
 
     public function currentLicense()
     {
-        return (get_query_var('pb_license')) ? get_query_var('pb_license') : '';
+        return (get_query_var('license')) ? get_query_var('license') : '';
     }
 
     public function currentOrderBy()
