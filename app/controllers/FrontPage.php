@@ -29,9 +29,9 @@ class FrontPage extends Controller
         return __('Our Latest Titles', 'aldine');
     }
 
-    public function books()
+    public function catalogData()
     {
         $page = (get_query_var('page')) ? get_query_var('page') : 1;
-        return App::books($page, 3);
+        return App::catalogData($page, 3);
     }
 }

@@ -100,12 +100,12 @@ class PageCatalog extends Controller
         ];
     }
 
-    public function books()
+    public function catalogData()
     {
         $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $orderby = (get_query_var('orderby')) ? get_query_var('orderby') : 'title';
         $subject = (get_query_var('subject')) ? get_query_var('subject') : '';
         $license = (get_query_var('license')) ? get_query_var('license') : '';
-        return App::books($page, 9, $orderby, $license, $subject);
+        return App::catalogData($page, 9, $orderby, $license, $subject);
     }
 }

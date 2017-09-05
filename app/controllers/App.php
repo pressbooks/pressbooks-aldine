@@ -122,7 +122,7 @@ class App extends Controller
         return $page + 1;
     }
 
-    public static function books($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
+    public static function catalogData($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
     {
         $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
         $request->set_query_params([

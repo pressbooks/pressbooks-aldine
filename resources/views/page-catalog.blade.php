@@ -40,15 +40,15 @@
       </div>
     </div>
     <div class="books">
-      @foreach($books['books'] as $book)
+      @foreach($catalog_data['books'] as $book)
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>
-    @if($books['pages'] > 1)
+    @if($catalog_data['pages'] > 1)
     <nav class="catalog-navigation">
       @if($previous_page)<a class="previous" data-page="{{ $previous_page }}" href="{{ network_home_url("/catalog/page/$previous_page/") }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
       <div class="pages">
-      @for($i = 1; $i <= $books['pages']; $i++)
+      @for($i = 1; $i <= $catalog_data['pages']; $i++)
         @if($i === $current_page)
           <span class="current">{{ $i }}</span>
         @else
@@ -56,7 +56,7 @@
         @endif
       @endfor
       </div>
-      @if($next_page <= $books['pages'])<a class="next" data-page="{{ $next_page }}" href="{{ network_home_url("/catalog/page/$next_page/") }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
+      @if($next_page <= $catalog_data['pages'])<a class="next" data-page="{{ $next_page }}" href="{{ network_home_url("/catalog/page/$next_page/") }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
     </nav>
     @endif
   </section>
