@@ -100,24 +100,26 @@ class App extends Controller
         return (get_query_var('orderby')) ? get_query_var('orderby') : 'title';
     }
 
-    public static function previousPage($page)
+    public function previousPage()
     {
+        if (is_front_page()) {
+            $page = (get_query_var('page')) ? get_query_var('page') : 1;
+        } else {
+            $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        }
+
         return ($page > 1) ? $page - 1 : 0;
     }
 
-    public static function nextPage($page, $per_page = 10)
+    public function nextPage()
     {
-        return ($page < App::totalPages($per_page)) ? $page + 1 : 0;
-    }
+        if (is_front_page()) {
+            $page = (get_query_var('page')) ? get_query_var('page') : 1;
+        } else {
+            $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        }
 
-    public static function totalPages($per_page = 10)
-    {
-        $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
-        $request->set_query_params([
-            'per_page' => $per_page,
-        ]);
-        $response = rest_do_request($request);
-        return $response->headers['X-WP-TotalPages'];
+        return $page + 1;
     }
 
     public static function books($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
@@ -128,6 +130,7 @@ class App extends Controller
             'per_page' => $per_page,
         ]);
         $response = rest_do_request($request);
+        $pages = $response->headers['X-WP-TotalPages'];
         $data = rest_get_server()->response_to_data($response, true);
         $books = [];
         foreach ($data as $key => $book) {
@@ -139,9 +142,10 @@ class App extends Controller
             $books[] = $book;
         }
         if ($orderby === 'latest') {
-            return wp_list_sort($books, $orderby, 'desc');
+            $books = wp_list_sort($books, $orderby, 'desc');
         } else {
-            return wp_list_sort($books, $orderby);
+            $books = wp_list_sort($books, $orderby);
         }
+        return ['pages' => $pages, 'books' => $books];
     }
 }

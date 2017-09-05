@@ -33,22 +33,22 @@
       <div class="sort">
         <a href="#sort">{{ __('Sort by', 'aldine') }} <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
         <ul id="sort" class="sorts">
-          <li><a data-sort="title" href="{{ network_home_url("/catalog/page/$current_page/?orderby=title") }}">{{ __('Title', 'aldine') }}</a></li>
-          <li><a data-sort="subject" href="{{ network_home_url("/catalog/page/$current_page/?orderby=subject") }}">{{ __('Subject', 'aldine') }}</a></li>
-          <li><a data-sort="latest" href="{{ network_home_url("/catalog/page/$current_page/?orderby=latest") }}">{{ __('Latest', 'aldine') }}</a></li>
+          <li><a data-sort="title" href="{{ "/catalog/page/$current_page/?orderby=title" }}">{{ __('Title', 'aldine') }}</a></li>
+          <li><a data-sort="subject" href="{{ "/catalog/page/$current_page/?orderby=subject" }}">{{ __('Subject', 'aldine') }}</a></li>
+          <li><a data-sort="latest" href="{{ "/catalog/page/$current_page/?orderby=latest" }}">{{ __('Latest', 'aldine') }}</a></li>
         </ul>
       </div>
     </div>
     <div class="books">
-      @foreach($books as $book)
+      @foreach($books['books'] as $book)
         @include('partials.book', ['book' => $book])
       @endforeach
     </div>
-    @if($total_pages > 1)
+    @if($books['pages'] > 1)
     <nav class="catalog-navigation">
-      @if(App::previousPage($current_page))<a class="previous" data-page="{{ App::previousPage($current_page) }}" href="{{ network_home_url('/catalog/page/' . App::previousPage($current_page) . '/') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
+      @if($previous_page)<a class="previous" data-page="{{ $previous_page }}" href="{{ network_home_url("/catalog/page/$previous_page/") }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg')) {{ __('Previous', 'aldine') }}</a>@endif
       <div class="pages">
-      @for($i = 1; $i <= $total_pages; $i++)
+      @for($i = 1; $i <= $books['pages']; $i++)
         @if($i === $current_page)
           <span class="current">{{ $i }}</span>
         @else
@@ -56,7 +56,7 @@
         @endif
       @endfor
       </div>
-      @if(App::nextPage($current_page, 9))<a class="next" data-page="{{ App::nextPage($current_page, 9) }}" href="{{ network_home_url('/catalog/page/' . App::nextPage($current_page, 9) . '/') }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
+      @if($next_page <= $books['pages'])<a class="next" data-page="{{ $next_page }}" href="{{ network_home_url("/catalog/page/$next_page/") }}">{{ __('Next', 'aldine') }} @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
     </nav>
     @endif
   </section>

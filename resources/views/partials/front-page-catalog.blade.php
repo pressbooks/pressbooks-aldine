@@ -1,8 +1,8 @@
 <div id="latest-titles" class="latest-books w-100">
   <h3 class="tc ttu">{{ $latest_books_title }}</h3>
   <div class="track flex flex-row flex-wrap justify-center items-center">
-    <div class="books flex flex-column justify-center items-center order-0 order-1-l flex-row-l justify-between-l" data-total-pages="{{ $total_pages }}" data-next-page="2">
-      @foreach($books as $book)
+    <div class="books flex flex-column justify-center items-center order-0 order-1-l flex-row-l justify-between-l" data-total-pages="{{ $books['pages'] }}" data-next-page="2">
+      @foreach($books['books'] as $book)
         <div class="book flex flex-column justify-end w-100">
           @if(isset($book['metadata']['keywords']))
           <p class="subject tc ma0">
@@ -18,8 +18,8 @@
         </div>
       @endforeach
     </div>
-    @if(App::previousPage($current_page))<a class="previous db mr-auto f1 order-1 order-0-l" data-page="{{ App::previousPage($current_page) }}" href="{{ network_home_url('/page/' . App::previousPage($current_page) . '/#latest-titles') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg'))</a>@endif
-    @if(App::nextPage($current_page, 3))<a class="next ml-auto order-2 db f1" data-page="{{ App::nextPage($current_page, 3) }}" href="{{ network_home_url('/page/' . App::nextPage($current_page, 3) . '/#latest-titles') }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
+    @if($previous_page)<a class="previous db mr-auto f1 order-1 order-0-l" data-page="{{ $previous_page }}" href="{{ network_home_url("/page/$previous_page/#latest-titles") }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg'))</a>@endif
+      @if($next_page <= $books['pages'])<a class="next ml-auto order-2 db f1" data-page="{{ $next_page }}" href="{{ network_home_url("/page/$next_page/#latest-titles") }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
   </div>
   <div class="catalog-link tc">
     <a class="button button-inverse button-wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>

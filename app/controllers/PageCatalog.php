@@ -100,11 +100,6 @@ class PageCatalog extends Controller
         ];
     }
 
-    public function totalPages()
-    {
-        return App::totalPages(9);
-    }
-
     public function books()
     {
         $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
