@@ -3,13 +3,13 @@
   width: rem(250);
   height: rem(60);
   padding: rem(19);
-  border: 2px solid var(--btn-bg, $brand-primary);
+  border: 2px solid var(--primary, $brand-primary);
   border-radius: 3px;
-  background: var(--btn-bg, $brand-primary);
+  background: var(--primary, $brand-primary);
   font-family: $font-family-sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--btn-text, $white);
+  color: var(--primary-fg, $white);
   line-height: normal;
   letter-spacing: rem(2);
   text-align: center;
@@ -21,7 +21,7 @@
   &:hover,
   &:focus {
     background: $white;
-    color: var(--btn-active-text, $brand-primary);
+    color: var(--primary, $brand-primary);
   }
 
   &.button-small {
@@ -36,12 +36,12 @@
 
   &.button-inverse {
     background: $white;
-    color: var(--btn-inverse-text, $brand-primary);
+    color: var(--primary, $brand-primary);
 
     &:hover,
     &:focus {
-      color: var(--btn-inverse-active-text, $white);
-      background: var(--btn-bg, $brand-primary);
+      color: var(--primary-fg, $white);
+      background: var(--primary, $brand-primary);
     }
   }
 }

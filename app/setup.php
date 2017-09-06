@@ -169,18 +169,10 @@ add_action('after_setup_theme', function () {
 add_action('wp_head', function () {
     $primary = get_option('pb_network_color_primary');
     $accent = get_option('pb_network_color_accent');
-    $link = get_option('pb_network_color_link');
-    $header_link = get_option('pb_network_color_header_link');
-    $fg = get_option('pb_network_color_fg');
-    $bg = get_option('pb_network_color_bg');
-    $btn_text = get_option('pb_network_color_btn_text');
-    $btn_active_text = get_option('pb_network_color_btn_active_text');
-    $btn_bg = get_option('pb_network_color_btn_bg');
-    $btn_inverse_text = get_option('pb_network_color_btn_inverse_text');
-    $btn_inverse_active_text = get_option('pb_network_color_btn_inverse_active_text');
-    $block_border = get_option('pb_network_color_block_border');
+    $primary_fg = get_option('pb_network_color_primary_fg');
+    $accent_fg = get_option('pb_network_color_accent_fg');
     $header_text = get_header_textcolor();
-    if ($primary || $accent || $header_text) { ?>
+    if ($primary || $accent || $primary_fg || $accent_fg || $header_text) { ?>
 <style type="text/css">:root {
 <?php if ($primary) { ?>
 --primary: <?= $primary ?>;
@@ -188,38 +180,14 @@ add_action('wp_head', function () {
 if ($accent) { ?>
 --accent: <?= $accent ?>;
 <?php }
-if ($link) { ?>
---link: <?= $link ?>;
+if ($primary_fg) { ?>
+--primary-fg: <?= $primary_fg ?>;
+<?php }
+if ($accent_fg) { ?>
+--accent-fg: <?= $accent_fg ?>;
 <?php }
 if ($header_text) { ?>
 --header-text: <?= $header_text ?>;
-<?php }
-if ($fg) { ?>
---fg: <?= $fg ?>;
-<?php }
-if ($bg) { ?>
---bg: <?= $bg ?>;
-<?php }
-if ($btn_text) { ?>
---btn-text: <?= $btn_text ?>;
-<?php }
-if ($btn_active_text) { ?>
---btn-active-text: <?= $btn_active_text ?>;
-<?php }
-if ($btn_bg) { ?>
---btn-bg: <?= $btn_bg ?>;
-<?php }
-if ($btn_inverse_text) { ?>
---btn-inverse-text: <?= $btn_inverse_text ?>;
-<?php }
-if ($btn_inverse_active_text) { ?>
---btn-inverse-active-text: <?= $btn_inverse_active_text ?>;
-<?php }
-if ($header_link) { ?>
---header-link: <?= $header_link ?>;
-<?php }
-if ($block_border) { ?>
---block-border: <?= $block_border ?>;
 <?php } ?>
 }</style>
     <?php }
