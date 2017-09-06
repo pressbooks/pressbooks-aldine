@@ -55,12 +55,12 @@
       &:hover,
       &:focus {
         background: #fafdff;
-        color: var(--link, $brand-primary);
+        color: var(--primary, $brand-primary);
       }
     }
 
     .has-active-child > a {
-      color: var(--link, $brand-primary);
+      color: var(--primary, $brand-primary);
     }
 
     ul {
@@ -93,7 +93,7 @@
 
         a.is-active {
           font-weight: 600;
-          color: var(--link, $brand-primary);
+          color: var(--primary, $brand-primary);
 
           .close {
             opacity: 1;
@@ -105,7 +105,7 @@
 
   .arrow {
     path {
-      fill: var(--link, $brand-primary);
+      fill: var(--primary, $brand-primary);
     }
   }
 
@@ -183,8 +183,8 @@
     height: rem(230);
     float: left;
     padding: 1.5rem rem(8) rem(26);
-    border: solid 2px var(--bg, $brand-accent);
-    background: var(--bg, $brand-accent);
+    border: solid 2px var(--accent, $brand-accent);
+    background: var(--accent, $brand-accent);
 
     p {
       margin: 0;
@@ -192,7 +192,7 @@
 
     a {
       font-family: $font-family-sans-serif;
-      color: $white;
+      color: var(--accent-fg, $white);
       text-decoration: none;
     }
 
@@ -217,6 +217,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
     margin-top: rem(83);
     align-items: baseline;
     font-family: $font-family-sans-serif;
@@ -226,7 +227,7 @@
 
       &:hover,
       &:focus {
-        color: var(--link, $brand-primary);
+        color: var(--primary, $brand-primary);
       }
     }
 
@@ -234,7 +235,7 @@
     .next {
       display: block;
       margin: 0 rem(26);
-      font-family: Karla-Regular;
+      font-family: $font-family-sans-serif;
       font-size: rem(16);
 
       svg {
@@ -243,7 +244,7 @@
         margin: 0 rem(6);
 
         path {
-          fill: var(--link, $brand-primary);
+          fill: var(--primary, $brand-primary);
         }
       }
     }
@@ -425,12 +426,12 @@
           margin-top: rem(60);
 
           > a {
-            background: var(--link, $brand-primary);
-            color: $white;
+            background: var(--primary, $brand-primary);
+            color: var(--primary-fg, $white);
 
             .arrow {
               path {
-                fill: $white;
+                fill: var(--primary-fg, $white);
               }
             }
           }

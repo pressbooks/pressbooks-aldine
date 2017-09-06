@@ -48,21 +48,13 @@ h2 {
 :root {
   --primary: $brand-primary;
   --accent: $brand-accent;
-  --link: $brand-primary;
+  --primary-fg: $white;
+  --secondary-fg: $white;
   --header-text: $black;
-  --header-link: $brand-primary;
-  --fg: $white;
-  --bg: $brand-accent;
-  --block-border: $brand-primary;
-  --btn-text: $white;
-  --btn-active-text: $brand-primary;
-  --btn-bg: $brand-primary;
-  --btn-inverse-text: $brand-primary;
-  --btn-inverse-active-text: $white;
 }
 
 a {
-  color: var(--link, $brand-primary);
+  color: var(--primary, $brand-primary);
   text-decoration: none;
 }
 

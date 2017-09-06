@@ -16,14 +16,14 @@
       top: 7px;
       width: 25px;
       height: 3px;
-      background: var(--link, $brand-primary);
+      background: var(--primary, $brand-primary);
 
       &::before,
       &::after {
         width: 25px;
         height: 3px;
         content: '';
-        background: var(--link, $brand-primary);
+        background: var(--primary, $brand-primary);
       }
 
       &::before {
@@ -41,11 +41,11 @@
 
     &.is-active .icon {
       // TODO
-      background: var(--fg, $white);
+      background: var(--primary-fg, $white);
 
       &::before,
       &::after {
-        background: var(--fg, $white);
+        background: var(--primary-fg, $white);
       }
     }
   }
@@ -73,7 +73,7 @@
       font-family: $font-family-sans-serif;
       font-size: rem(24);
       line-height: (80/24);
-      color: var(--fg, $white);
+      color: var(--primary-fg, $white);
       letter-spacing: 0;
     }
 
@@ -85,12 +85,12 @@
       margin: 0;
       padding: 0 52px;
       z-index: 1;
-      background: var(--bg, $brand-primary);
+      background: var(--primary, $brand-primary);
 
       a {
         display: block;
         width: 100%;
-        border-bottom: solid 1px var(--fg, $white);
+        border-bottom: solid 1px var(--primary-fg, $white);
 
         &:last-child {
           border-bottom: 0;
@@ -139,7 +139,7 @@
 
         &:hover,
         &:focus {
-          color: var(--header-link, $brand-primary);
+          color: var(--primary, $brand-primary);
         }
 
         &:nth-child(1) {
