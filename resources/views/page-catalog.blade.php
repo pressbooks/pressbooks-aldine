@@ -1,3 +1,7 @@
+{{--
+  Template Name: Catalog
+--}}
+
 @extends('layouts.app')
 
 @section('content')

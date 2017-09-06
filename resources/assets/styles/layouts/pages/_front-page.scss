@@ -115,11 +115,17 @@
     padding: 0 0 rem(154);
 
     h3 {
+      text-align: center;
+      text-transform: uppercase;
       margin-top: 4.375rem;
       margin-bottom: 2.8125rem;
     }
 
     .track {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
       max-width: 22.9375rem;
       margin-left: auto;
       margin-right: auto;
@@ -129,12 +135,20 @@
     }
 
     .books {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      order: 0;
       padding: 0;
       width: 100%;
       margin-bottom: rem(34);
     }
 
     .book {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       width: 100%;
       max-width: 22.9375rem;
       height: 24.125rem;
@@ -144,25 +158,33 @@
       background: var(--accent, $brand-accent);
 
       a {
+        margin: 0;
         font-family: $font-family-sans-serif;
         color: var(--accent-fg, $white);
         text-decoration: none;
+        text-align: center;
       }
 
       .subject {
         height: 4.625rem;
+        margin: 0;
         font-size: rem(24);
+        text-align: center;
       }
 
       .title {
         height: 13rem;
+        margin: 0;
         font-size: rem(30);
         font-weight: 500;
         line-height: (40/30);
+        text-align: left;
       }
 
       .read-more {
+        margin: 0;
         font-size: rem(18);
+        text-align: left;
       }
 
       &:last-child {
@@ -172,6 +194,7 @@
 
     .previous,
     .next {
+      display: block;
       width: auto;
       height: auto;
 
@@ -180,6 +203,20 @@
           fill: var(--primary, $brand-primary);
         }
       }
+    }
+
+    .previous {
+      order: 1;
+      margin-right: auto;
+    }
+
+    .next {
+      order: 2;
+      margin-left: auto;
+    }
+
+    .catalog-link {
+      text-align: center;
     }
   }
 }
@@ -250,7 +287,8 @@
       }
 
       .track {
-        flex-wrap: nowrap;
+        display: flex;
+        flex-flow: row nowrap;
         width: 100%;
         max-width: 100%;
         margin: 0;
@@ -274,6 +312,7 @@
       }
 
       .previous {
+        order: 0;
         margin-left: 0.9375rem;
         left: 0;
       }
@@ -282,6 +321,7 @@
         width: auto;
         min-width: 50rem;
         flex-direction: row;
+        order: 1;
         justify-content: space-between;
         margin-bottom: 2rem;
       }
@@ -289,6 +329,10 @@
       .book {
         width: 30%;
         max-width: 19.54rem;
+
+        &:last-child {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
