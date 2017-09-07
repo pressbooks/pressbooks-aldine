@@ -196,19 +196,19 @@
       text-decoration: none;
     }
 
-    .subject {
+    &__subject {
       height: rem(44);
       font-size: rem(14);
     }
 
-    .title {
+    &__title {
       height: rem(118);
       font-size: rem(16);
       font-weight: 600;
       line-height: (20/16);
     }
 
-    .read-more {
+    &__read-more {
       font-size: rem(14);
     }
   }
@@ -320,19 +320,19 @@
       margin: 0 percent(15, 735) 2rem 0;
       padding: 0 rem(14) rem(21.35);
 
-      .subject {
+      &__subject {
         height: rem(45.85);
         font-size: rem(18);
       }
 
-      .title {
+      &__title {
         height: rem(147.65);
         font-size: rem(22);
         font-weight: 600;
         line-height: (40/30);
       }
 
-      .read-more {
+      &__read-more {
         font-size: rem(16);
       }
     }
@@ -470,19 +470,19 @@
       margin: 0 0 2rem percent(39.5, 1221.5);
       padding: 1.5rem 1.85rem 2.1875rem;
 
-      .subject {
+      &__subject {
         height: 4.625rem;
         font-size: rem(24);
       }
 
-      .title {
+      &__title {
         height: 13rem;
         font-size: rem(30);
         font-weight: 500;
         line-height: (40/30);
       }
 
-      .read-more {
+      &__read-more {
         font-size: rem(18);
       }
     }

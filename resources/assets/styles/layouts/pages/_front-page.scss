@@ -165,14 +165,14 @@
         text-align: center;
       }
 
-      .subject {
+      &__subject {
         height: 4.625rem;
         margin: 0;
         font-size: rem(24);
         text-align: center;
       }
 
-      .title {
+      &__title {
         height: 13rem;
         margin: 0;
         font-size: rem(30);
@@ -181,7 +181,7 @@
         text-align: left;
       }
 
-      .read-more {
+      &__read-more {
         margin: 0;
         font-size: rem(18);
         text-align: left;

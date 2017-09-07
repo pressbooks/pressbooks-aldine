@@ -4,14 +4,14 @@
   data-subject="{{ sanitize_title(@$book['metadata']['keywords']) }}"
 >
   @if(isset($book['metadata']['keywords']))
-  <p class="subject">
+  <p class="book__subject">
     <a href="{{ network_home_url('/catalog/#') . $book['metadata']['keywords'] }}">{{ $book['metadata']['keywords'] }}</a>
   </p>
   @endif
-  <p class="title">
+  <p class="book__title">
     <a href="{{ $book['link'] }}">{{ $book['metadata']['name'] }}</a>
   </p>
-  <p class="read-more">
+  <p class="book__read-more">
     <a href="{{ $book['link'] }}">{{ __('About this book &rarr;', 'aldine') }}</a>
   </p>
 </div>
