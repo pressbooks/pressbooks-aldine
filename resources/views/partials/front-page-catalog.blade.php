@@ -10,6 +10,6 @@
       @if($next_page <= $catalog_data['pages'])<a class="next" data-page="{{ $next_page }}" href="{{ network_home_url("/page/$next_page/#latest-titles") }}">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))</a>@endif
   </div>
   <div class="catalog-link">
-    <a class="button button-inverse button-wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
+    <a class="button button--outline button--wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
   </div>
 </div>

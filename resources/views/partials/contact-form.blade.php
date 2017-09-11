@@ -17,6 +17,6 @@
     <p class="flex flex-row items-center @if(@$contact_form_response['field'] === 'message'){{ 'error' }}@endif">
       <label class="clip" for="message">{{ __('Your message here', 'aldine' ) }}</label>
       <textarea class="input-reset" type="text" placeholder="{{ __('Your message here', 'aldine' ) }}" name="message">@if($contact_form_response['status'] === 'error'){{ @esc_textarea($_POST['message']) }}@endif</textarea></p>
-    <p class="tc"><input class="button-reset button button-small button-inverse input-reset pointer" type="submit" value="{{ __('Send', 'aldine' ) }}" /></p>
+    <p class="tc"><input class="button-reset button button--small button--outline input-reset pointer" type="submit" value="{{ __('Send', 'aldine' ) }}" /></p>
   </form>
 </section>

@@ -24,17 +24,17 @@
     color: var(--primary, $brand-primary);
   }
 
-  &.button-small {
+  &.button--small {
     width: rem(150);
     height: rem(40);
     padding: rem(6.5);
   }
 
-  &.button-wide {
+  &.button--wide {
     width: 19.0625rem;
   }
 
-  &.button-inverse {
+  &.button--outline {
     background: $white;
     color: var(--primary, $brand-primary);
 
