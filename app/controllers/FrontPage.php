@@ -8,64 +8,30 @@ class FrontPage extends Controller
 {
     public function blockCount()
     {
-        $c = 0;
-        foreach ([
-            'home-block-1',
-            'home-block-2',
-            'home-block-3',
-            'home-block-4'
-        ] as $block) {
-            if (is_active_sidebar($block)) {
-                $c++;
-            }
+        global $_wp_sidebars_widgets;
+        if (empty($_wp_sidebars_widgets)) {
+            $_wp_sidebars_widgets = get_option('sidebars_widgets', []);
         }
-        return $c;
-    }
-
-    public function blocks()
-    {
-        $blocks = [];
-        for ($i = 0; $i < 4; $i++) {
-            if (is_active_sidebar("home-block-$i")) {
-                $blocks[] = "home-block-$i";
-            }
+        $sidebars_widgets_count = $_wp_sidebars_widgets;
+        if (isset($sidebars_widgets_count['front-page-block'])) {
+            return count($sidebars_widgets_count['front-page-block']);
         }
-
-        return $blocks;
-    }
-
-    public function totalPages()
-    {
-        $books = wp_remote_get(network_home_url('/wp-json/pressbooks/v2/books?per_page=3'));
-        return $books['headers']['x-wp-totalpages'];
-    }
-
-    public function currentPage()
-    {
-        return get_query_var('page', 1);
-    }
-
-    public function previousPage()
-    {
-        return (get_query_var('page', 1) > 1) ? get_query_var('page') - 1 : 0;
-    }
-
-    public function nextPage()
-    {
-        return (get_query_var('page', 1) < FrontPage::totalPages()) ? get_query_var('page', 1) + 1 : 0;
+        return 1;
     }
 
     public function latestBooksTitle()
     {
-        return (empty(get_theme_mod('pb_front_page_catalog_title'))) ?
-            __('Our Latest Titles', 'aldine') :
-            get_theme_mod('pb_front_page_catalog_title');
+        $title = get_option('pb_front_page_catalog_title');
+        if ($title) {
+            return $title;
+        }
+
+        return __('Our Latest Titles', 'aldine');
     }
 
-    public static function latestBooks($page = 1, $per_page = 3)
+    public function catalogData()
     {
-        $books = wp_remote_get(network_home_url("/wp-json/pressbooks/v2/books?per_page=$per_page&page=$page"));
-        $books = json_decode($books['body'], true);
-        return $books;
+        $page = (get_query_var('page')) ? get_query_var('page') : 1;
+        return App::catalogData($page, 3);
     }
 }

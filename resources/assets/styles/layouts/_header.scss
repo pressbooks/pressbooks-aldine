@@ -1,6 +1,4 @@
 .banner {
-  background-image: url('../images/banner-mobile.jpg');
-
   .container {
     height: 560px;
     max-width: 1440px;
@@ -18,14 +16,14 @@
       top: 7px;
       width: 25px;
       height: 3px;
-      background: $brand-primary;
+      background: var(--primary, $brand-primary);
 
       &::before,
       &::after {
         width: 25px;
         height: 3px;
         content: '';
-        background: $brand-primary;
+        background: var(--primary, $brand-primary);
       }
 
       &::before {
@@ -43,21 +41,26 @@
 
     &.is-active .icon {
       // TODO
-      background: $white;
+      background: var(--primary-fg, $white);
 
       &::before,
       &::after {
-        background: $white;
+        background: var(--primary-fg, $white);
       }
     }
   }
 
   .brand {
-    width: 109px;
-    height: 17px;
+    width: 6.5625rem;
+    height: auto;
     margin: 30px 0 0 17px;
-    background-image: url('../images/logo.png');
-    background-size: 109px 17px;
+
+    svg,
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .primary-navigation {
@@ -68,9 +71,9 @@
     a {
       display: none;
       font-family: $font-family-sans-serif;
-      font-size: em(24);
+      font-size: rem(24);
       line-height: (80/24);
-      color: $white;
+      color: var(--primary-fg, $white);
       letter-spacing: 0;
     }
 
@@ -82,12 +85,12 @@
       margin: 0;
       padding: 0 52px;
       z-index: 1;
-      background: $brand-primary;
+      background: var(--primary, $brand-primary);
 
       a {
         display: block;
         width: 100%;
-        border-bottom: solid 1px $white;
+        border-bottom: solid 1px var(--primary-fg, $white);
 
         &:last-child {
           border-bottom: 0;
@@ -105,21 +108,21 @@
   }
 }
 
+.page:not(.home) .banner .branding {
+  display: none;
+}
+
 @media #{$breakpoint-large} {
   .banner {
-    background-image: url('../images/banner-desktop.jpg');
-
     .container {
       height: 880px;
       margin: 0 auto;
     }
 
     .brand {
-      width: 265px;
-      height: 40px;
+      width: 16.5625rem;
+      height: auto;
       margin-top: 40px;
-      background-image: url('../images/logo@2x.png');
-      background-size: 265px 40px;
     }
 
     .primary-navigation {
@@ -130,20 +133,20 @@
 
       a {
         display: inline-block;
-        font-size: em(18);
-        color: $black;
+        font-size: rem(18);
+        color: var(--header-text, $black);
         line-height: normal;
 
         &:hover,
         &:focus {
-          color: $brand-primary;
+          color: var(--primary, $brand-primary);
         }
 
-        &.catalog {
+        &:nth-child(1) {
           margin-right: auto;
         }
 
-        &.contact {
+        &:nth-child(2) {
           margin: 0 1em 0 auto;
         }
       }
@@ -158,17 +161,17 @@
       height: 576px;
 
       p {
-        font-size: em(30);
+        font-size: rem(30);
         letter-spacing: 0.75px;
         line-height: (40/30);
       }
     }
 
     h1 {
-      margin-bottom: 0.5em;
-      font-size: em(72);
+      margin-bottom: rem(32);
+      font-size: rem(72);
       line-height: (40/72);
-      letter-spacing: 1.8px;
+      letter-spacing: rem(1.8);
     }
   }
 }
