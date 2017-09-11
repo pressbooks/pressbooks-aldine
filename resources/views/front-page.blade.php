@@ -39,7 +39,7 @@
         @endif
       </div>
       <div class="catalog-link">
-        <a class="button button-inverse button-wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
+        <a class="button button--outline button--wide" href="{{ network_home_url('/catalog/') }}">{{ __('View Complete Catalog', 'aldine') }}</a>
       </div>
     </div>
   @endif
