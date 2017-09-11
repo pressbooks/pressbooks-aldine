@@ -91,6 +91,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
+    "cross-env": "*",
     "eslint": "~4.2",
     "eslint-loader": "~1.9",
     "eslint-plugin-import": "~2.7",

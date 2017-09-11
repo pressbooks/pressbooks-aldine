@@ -31,7 +31,7 @@
       </div>
     </section>
     <section class="pressbooks-footer">
-      <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks">@php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/pb.svg'))</a>
+      <a class="pressbooks-icon" href="https://pressbooks.com" title="Pressbooks">@php(include get_theme_file_path() . '/dist/' . Aldine\asset_dir('images/pb.svg'))</a>
       <div class="pressbooks-links">
         <h1><a href="https://pressbooks.com">{!! sprintf(__('Powered by %s', 'aldine'), '<span class="pressbooks">Pressbooks</span>') !!}</a></h1>
         <ul>

@@ -61,3 +61,13 @@ if (!mix.inProduction()) {
 if (mix.inProduction()) {
   mix.version();
 }
+
+// Add Isotope support.
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      'masonry': 'masonry-layout',
+      'isotope': 'isotope-layout',
+    },
+  },
+});
