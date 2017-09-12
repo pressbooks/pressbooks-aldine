@@ -106,7 +106,7 @@
     "isotope-layout": "^3.0.4",
     "jquery": "1.12.4 - 3",
     "jquery-bridget": "^2.0.1",
-    "tachyons-sass": "~4.7",
+    "tachyons-sass": "~4.8",
     "wpapi": "^1.1.2"
   }
 }
