@@ -76,16 +76,16 @@ function template_path($file, $data = [])
  */
 function asset_path($asset)
 {
-    return sage('assets')->getUri($asset);
+    return fix_path(sage('assets')->getUri('/' . $asset));
 }
 
 /**
  * @param $asset
  * @return string
  */
-function svg_path($asset)
+function asset_dir($asset)
 {
-    return sage('assets')->get($asset);
+    return fix_path(sage('assets')->get('/' . $asset));
 }
 
 /**
@@ -194,4 +194,9 @@ function contact_form_submission()
         return $output;
     }
     return false;
+}
+
+function fix_path($path)
+{
+    return str_replace('/dist//', '/dist/', $path);
 }

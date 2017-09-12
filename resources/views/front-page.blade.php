@@ -29,12 +29,12 @@
         </div>
         @if($previous_page)
           <a class="previous" data-page="{{ $previous_page }}" href="{{ network_home_url("/page/$previous_page/#latest-titles") }}">
-            @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/left-arrow.svg'))
+            @php(include get_theme_file_path() . '/dist/' . Aldine\asset_dir('images/left-arrow.svg'))
           </a>
         @endif
         @if($next_page <= $catalog_data['pages'])
           <a class="next" data-page="{{ $next_page }}" href="{{ network_home_url("/page/$next_page/#latest-titles") }}">
-            @php(include get_theme_file_path() . '/dist/' . Aldine\svg_path('images/right-arrow.svg'))
+            @php(include get_theme_file_path() . '/dist/' . Aldine\asset_dir('images/right-arrow.svg'))
           </a>
         @endif
       </div>
