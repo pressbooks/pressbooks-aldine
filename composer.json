@@ -32,7 +32,8 @@
     "illuminate/support": "~5.4",
     "roots/sage-lib": "~9.0.0-beta.4",
     "soberwp/controller": "~9.0.0-beta.4",
-    "soberwp/intervention": "1.2.0-p"
+    "soberwp/intervention": "1.2.0-p",
+    "erusev/parsedown-extra": "^0.7.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0"
