@@ -31,18 +31,23 @@ h1 {
 }
 
 h2 {
-  font-size: rem(16);
-  font-weight: normal;
-  line-height: (30/16);
+  font-size: rem(30);
+  font-weight: 600;
+  color: var(--primary, $brand-primary);
+  letter-spacing: 2px;
+  line-height: (36/30);
+  text-transform: uppercase;
+  text-align: center;
   margin: 0;
-}
 
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 auto 1em;
+    width: 46px;
+    height: 5px;
+    background: var(--accent, $brand-accent);
+  }
 }
 
 :root {
@@ -80,4 +85,15 @@ a {
 
 .b--accent {
   border-color: var(--brand-secondary, $brand-accent);
+}
+
+@media (min-width: $medium) {
+  h2 {
+    font-size: rem(48);
+    line-height: (56/48);
+
+    &::before {
+      width: 74px;
+    }
+  }
 }

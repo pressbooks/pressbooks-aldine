@@ -1,98 +1,97 @@
-/** Search form */
-// TODO: .search-form {}
-// TODO: .search-form label {}
-// TODO: .search-form .search-field {}
-// TODO: .search-form .search-submit {}
+.form {
+  width: rem(354);
 
-::placeholder {
-  color: $black;
-}
-
-.contact {
-  background: #f6f6f6;
-  padding: rem(65) 0 rem(120);
-
-  h3 {
-    color: var(--primary, $brand-primary);
-
-    &::before {
-      content: '';
-      display: block;
-      margin: 0 auto 1rem;
-      width: rem(46);
-      height: rem(5);
-      background: var(--accent, $brand-accent);
-    }
+  ::placeholder {
+    color: $black;
   }
 
-  p {
+  &__notice {
+    margin-bottom: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
     font-family: $font-family-sans-serif;
 
-    &:last-child {
-      margin-top: rem(47);
+    &--error {
+      color: $dark-red;
+    }
+
+    &--success {
+      color: $dark-green;
     }
   }
 
-  .success {
-    color: $dark-green;
-  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-  .error {
-    color: $dark-red;
-  }
-
-  form {
-    width: 22.125rem;
-
-    .error > input[type="text"],
-    .error > input[type="email"],
-    .error > textarea {
+    &--error > input[type="text"],
+    &--error > input[type="email"],
+    &--error > textarea {
       border-bottom: solid 2px $dark-red;
     }
 
-    .error > ::placeholder {
+    &--error > ::placeholder {
       color: $dark-red;
     }
-  }
 
-  label {
-    margin-bottom: 1rem;
-  }
-
-  label,
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 0.875rem;
-    font-weight: 600;
-    font-family: $font-family-sans-serif;
-    background: transparent;
-  }
-
-  .button {
-    background: transparent;
-  }
-
-  textarea {
-    height: 7.5em; // TODO
-    resize: none;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    flex-grow: 1;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: solid 2px $black;
-    padding: 0 0 1em;
-
-    &:focus {
-      outline: none;
-      border-bottom: solid 2px var(--accent, $brand-accent);
+    &:last-child {
+      margin-top: rem(48);
     }
+  }
+}
+
+label {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  flex-grow: 1;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: solid 2px $black;
+  padding: 0 0 1em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: $font-family-sans-serif;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus {
+    outline: none;
+    border-bottom: solid 2px var(--accent, $brand-accent);
+  }
+}
+
+textarea {
+  height: 7.5em;
+  resize: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+// Contact form
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: rem(65) 0 rem(120);
+  background: #f6f6f6;
+
+  h2 {
+    font-size: rem(24);
+    margin-bottom: rem(40);
   }
 }
