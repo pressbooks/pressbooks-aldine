@@ -2,29 +2,19 @@
 
 namespace Aldine;
 
-add_action('after_switch_theme', function () {
+add_action('admin_init', function () {
+    $extra = new \ParsedownExtra();
+    $about = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/about.md'));
+    $help = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/help.md'));
+
     $default_pages = [
         'about' => [
             'post_title' => __('About', 'aldine'),
-            // @codingStandardsIgnoreStart
-            'post_content' => apply_filters('pb_root_about_page_content', __('Pressbooks is simple book production software. You can use Pressbooks to publish textbooks, scholarly monographs, syllabi, fiction and non-fiction books, white papers, and more in multiple formats including:
-
-<ul><li>MOBI (for Kindle ebooks)</li>
-<li>EPUB (for all other ebookstores)</li>
-<li>designed PDF (for print-on-demand and digital distribution)</li></ul>
-
-Pressbooks is used by educational institutions around the world as well as authors and publishers.
-
-For more information about Pressbooks, see <a href="https://pressbooks.com/about">here</a>.', 'aldine'))
-            // @codingstandardsIgnoreEnd
+            'post_content' => apply_filters('pb_root_about_page_content', $about)
         ],
         'help' => [
             'post_title' => __('Help', 'aldine'),
-            // @codingStandardsIgnoreStart
-            'post_content' => apply_filters('pb_root_help_page_content', __('The easiest way to get started with Pressbooks is to follow our <a href="https://pressbooks.com/how-to-make-a-book-with-pressbooks">4 Step Guide to Making a Book on Pressbooks</a>. Or, you can review our <a href="https://guide.pressbooks.com/">Guide to Using Pressbooks</a>.
-
-If you require further assistance, please contact your network manager.', 'aldine'))
-            // @codingstandardsIgnoreEnd
+            'post_content' => apply_filters('pb_root_help_page_content', $help)
         ],
         'catalog' => [
             'post_title' => __('Catalog', 'aldine'),
@@ -36,7 +26,7 @@ If you require further assistance, please contact your network manager.', 'aldin
         ],
     ];
 
-    if (! get_site_option('pb_aldine_activated')) {
+    if (! get_option('pb_aldine_activated')) {
         // Add our pages
         $pages = [];
 
@@ -64,7 +54,7 @@ If you require further assistance, please contact your network manager.', 'aldin
             return;
         }
 
-        // Add "pb_aldine_activated" site option to enable check above
-        add_site_option('pb_aldine_activated', true);
+        // Add "pb_aldine_activated" option to enable check above
+        add_option('pb_aldine_activated', 1);
     }
 });
