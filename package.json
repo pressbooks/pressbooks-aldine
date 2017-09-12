@@ -13,8 +13,8 @@
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
+      "type": "GPL-3.0",
+      "url": "https://opensource.org/licenses/GPL-3.0"
     }
   ],
   "browserslist": [

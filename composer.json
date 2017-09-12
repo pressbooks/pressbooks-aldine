@@ -1,7 +1,7 @@
 {
   "name": "pressbooks/pressbooks-aldine",
   "type": "wordpress-theme",
-  "license": "MIT",
+  "license": "GPL-3",
   "description": "Aldine is the new root theme for Pressbooks, based on Sage.",
   "homepage": "https://github.com/pressbooks/pressbooks-aldine/",
   "authors": [
@@ -9,6 +9,21 @@
       "name": "Pressbooks (Book Oven Inc.)",
       "email": "code@pressbooks.com",
       "homepage": "https://pressbooks.org"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "QWp6t",
+      "email": "hi@qwp6t.me",
+      "homepage": "https://github.com/qwp6t"
     }
   ],
   "keywords": [
