@@ -1,3 +1,7 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +9,8 @@
 body {
   margin: 0;
   font-family: $font-family-serif;
-  font-size: #{$base-font-size}px;
+  font-size: rem(18);
+  background: #fff;
 }
 
 h1,
@@ -18,27 +23,38 @@ h6 {
 }
 
 h1 {
-  font-size: em(30);
+  font-size: rem(30);
   font-weight: 600;
-  letter-spacing: em(2);
+  letter-spacing: rem(2);
   line-height: (36/30);
   margin: 0;
 }
 
 h2 {
-  font-size: em(16);
+  font-size: rem(16);
   font-weight: normal;
   line-height: (30/16);
   margin: 0;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
 :root {
-  --brand-primary: $brand-primary;
-  --brand-secondary: $brand-secondary;
+  --primary: $brand-primary;
+  --accent: $brand-accent;
+  --primary-fg: $white;
+  --accent-fg: $white;
+  --header-text: $black;
 }
 
 a {
-  color: var(--brand-primary, $brand-primary);
+  color: var(--primary, $brand-primary);
   text-decoration: none;
 }
 
@@ -54,14 +70,14 @@ a {
   border-color: var(--brand-primary, $brand-primary);
 }
 
-.secondary {
-  color: var(--brand-secondary, $brand-secondary);
+.accent {
+  color: var(--brand-secondary, $brand-accent);
 }
 
-.bg-secondary {
-  background-color: var(--brand-secondary, $brand-secondary);
+.bg-accent {
+  background-color: var(--brand-secondary, $brand-accent);
 }
 
-.b--secondary {
-  border-color: var(--brand-secondary, $brand-secondary);
+.b--accent {
+  border-color: var(--brand-secondary, $brand-accent);
 }

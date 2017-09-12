@@ -19,27 +19,6 @@ class FrontPage extends Controller
         return 1;
     }
 
-    public function totalPages()
-    {
-        $books = wp_remote_get(network_home_url('/wp-json/pressbooks/v2/books?per_page=3'));
-        return $books['headers']['x-wp-totalpages'];
-    }
-
-    public function currentPage()
-    {
-        return get_query_var('page', 1);
-    }
-
-    public function previousPage()
-    {
-        return (get_query_var('page', 1) > 1) ? get_query_var('page') - 1 : 0;
-    }
-
-    public function nextPage()
-    {
-        return (get_query_var('page', 1) < FrontPage::totalPages()) ? get_query_var('page', 1) + 1 : 0;
-    }
-
     public function latestBooksTitle()
     {
         $title = get_option('pb_front_page_catalog_title');
@@ -50,10 +29,9 @@ class FrontPage extends Controller
         return __('Our Latest Titles', 'aldine');
     }
 
-    public static function latestBooks($page = 1, $per_page = 3)
+    public function catalogData()
     {
-        $books = wp_remote_get(network_home_url("/wp-json/pressbooks/v2/books?per_page=$per_page&page=$page"));
-        $books = json_decode($books['body'], true);
-        return $books;
+        $page = (get_query_var('page')) ? get_query_var('page') : 1;
+        return App::catalogData($page, 3);
     }
 }

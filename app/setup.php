@@ -73,8 +73,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('custom-header', [
         'default-image' => asset_path('images/header.jpg'),
-        'width' => 1650,
-        'height' => 880,
+        'width' => 1920,
+        'height' => 884,
         'default-text-color' => '#000',
     ]);
 
@@ -82,7 +82,12 @@ add_action('after_setup_theme', function () {
      * Enable custom logos
      * @link https://developer.wordpress.org/themes/functionality/custom-logo/
      */
-    add_theme_support('custom-logo');
+    add_theme_support('custom-logo', [
+        'height' => 40,
+        'width' => 265,
+        'flex-width' => true,
+        'flex-height' => true,
+    ]);
 
     /**
      * Enable post thumbnails
@@ -193,23 +198,33 @@ add_action('after_setup_theme', function () {
 });
 
 add_action('wp_head', function () {
-    $primary = get_option('pb_network_primary_color');
-    $secondary = get_option('pb_network_secondary_color');
-    $header_text_color = get_header_textcolor();
-    if ($primary || $secondary || $header_text_color) { ?>
+    $primary = get_option('pb_network_color_primary');
+    $accent = get_option('pb_network_color_accent');
+    $primary_fg = get_option('pb_network_color_primary_fg');
+    $accent_fg = get_option('pb_network_color_accent_fg');
+    $header_text = get_header_textcolor();
+    if ($primary || $accent || $primary_fg || $accent_fg || $header_text) { ?>
 <style type="text/css">:root {
-<?php if ($primary) {
-    $primary = '#' . $primary; ?>
---brand-primary: <?= $primary ?>;
+<?php if ($primary) { ?>
+--primary: <?= $primary ?>;
 <?php }
-if ($secondary) {
-    $secondary = '#' . $secondary; ?>
---brand-secondary: <?= $secondary ?>;
+if ($accent) { ?>
+--accent: <?= $accent ?>;
 <?php }
-if ($header_text_color) {
-    $header_text_color = '#' . $header_text_color; ?>
---brand-header-text: <?= $header_text_color; ?>;
+if ($primary_fg) { ?>
+--primary-fg: <?= $primary_fg ?>;
+<?php }
+if ($accent_fg) { ?>
+--accent-fg: <?= $accent_fg ?>;
+<?php }
+if ($header_text) { ?>
+--header-text: <?= $header_text ?>;
 <?php } ?>
 }</style>
     <?php }
+});
+
+add_action('wp_head', function () {
+    $response = contact_form_submission();
+    sage('blade')->share('contact_form_response', $response);
 });

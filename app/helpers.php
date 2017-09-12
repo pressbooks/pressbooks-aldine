@@ -76,16 +76,16 @@ function template_path($file, $data = [])
  */
 function asset_path($asset)
 {
-    return sage('assets')->getUri($asset);
+    return fix_path(sage('assets')->getUri('/' . $asset));
 }
 
 /**
  * @param $asset
  * @return string
  */
-function svg_path($asset)
+function asset_dir($asset)
 {
-    return sage('assets')->get($asset);
+    return fix_path(sage('assets')->get('/' . $asset));
 }
 
 /**
@@ -138,9 +138,65 @@ function locate_template($templates)
 }
 
 /**
- * Remove hash from hex color string
+ *
+ * Catch a contact form submission.
+ *
+ * @return false | array
  */
-function remove_hash($color)
+function contact_form_submission()
 {
-    return ltrim($color, '#');
+    if (isset($_POST['submitted'])) {
+        $output = [];
+        $name = (isset($_POST['visitor_name'])) ? $_POST['visitor_name'] : false;
+        $email = (isset($_POST['visitor_email'])) ? $_POST['visitor_email'] : false;
+        $institution = (isset($_POST['visitor_institution'])) ? $_POST['visitor_institution'] : false;
+        $message = (isset($_POST['message'])) ? $_POST['message'] : false;
+        if (!$name) {
+            $output['message'] = __('Name is required.', 'aldine');
+            $output['status'] = 'error';
+            $output['field'] = 'visitor_name';
+        } elseif (!$email) {
+            $output['message'] = __('Email is required.', 'aldine');
+            $output['status'] = 'error';
+            $output['field'] = 'visitor_email';
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $output['message'] = __('Email is invalid.', 'aldine');
+            $output['status'] = 'error';
+            $output['field'] = 'visitor_email';
+        } elseif (!$institution) {
+            $output['message'] = __('Institution is required.', 'aldine');
+            $output['status'] = 'error';
+            $output['field'] = 'visitor_institution';
+        } elseif (!$message) {
+            $output['message'] = __('Message is required.', 'aldine');
+            $output['status'] = 'error';
+            $output['field'] = 'message';
+        } else {
+            $sent = wp_mail(
+                get_option('admin_email'),
+                sprintf(__('Contact Form Submission from %s', 'aldine'), $name),
+                sprintf(
+                    "From: %1\$s <%2\$s>\n%3\$s",
+                    $name,
+                    $email,
+                    strip_tags($message)
+                ),
+                "From: ${email}\r\nReply-To: ${email}\r\n"
+            );
+            if ($sent) {
+                $output['message'] = __('Your message was sent!', 'aldine');
+                $output['status'] = 'success';
+            } else {
+                $output['message'] = __('Your message could not be sent.', 'aldine');
+                $output['status'] = 'error';
+            }
+        }
+        return $output;
+    }
+    return false;
+}
+
+function fix_path($path)
+{
+    return str_replace('/dist//', '/dist/', $path);
 }
