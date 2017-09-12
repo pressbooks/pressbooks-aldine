@@ -2,7 +2,7 @@
 
 namespace Aldine;
 
-add_action('after_switch_theme', function () {
+add_action('admin_init', function () {
     $default_pages = [
         'about' => [
             'post_title' => __('About', 'aldine'),
@@ -36,7 +36,7 @@ If you require further assistance, please contact your network manager.', 'aldin
         ],
     ];
 
-    if (! get_site_option('pb_aldine_activated')) {
+    if (! get_option('pb_aldine_activated')) {
         // Add our pages
         $pages = [];
 
@@ -64,7 +64,7 @@ If you require further assistance, please contact your network manager.', 'aldin
             return;
         }
 
-        // Add "pb_aldine_activated" site option to enable check above
-        add_site_option('pb_aldine_activated', true);
+        // Add "pb_aldine_activated" option to enable check above
+        add_option('pb_aldine_activated', 1);
     }
 });
