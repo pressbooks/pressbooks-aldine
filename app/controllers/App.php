@@ -12,7 +12,7 @@ class App extends Controller
         if (has_custom_logo()) {
             return wp_get_attachment_image($custom_logo_id, 'original');
         } else {
-            return file_get_contents(get_theme_file_path() . '/dist/' . svg_path('images/logo.svg'));
+            return file_get_contents(get_theme_file_path() . '/dist/' . asset_dir('images/logo.svg'));
         }
     }
 
