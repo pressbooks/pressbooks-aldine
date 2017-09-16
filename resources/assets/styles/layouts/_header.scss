@@ -13,7 +13,7 @@
     max-width: 1440px;
   }
 
-  .toggle-menu {
+  .toggle {
     display: block;
     position: absolute;
     top: 30px;
@@ -23,7 +23,7 @@
     z-index: 99;
     text-indent: -9999em;
 
-    .icon {
+    &__icon {
       display: block;
       position: absolute;
       top: 7px;
@@ -52,18 +52,19 @@
       }
     }
 
-    &.is-active .icon {
-      // TODO
-      background: var(--primary-fg, $white);
-
-      &::before,
-      &::after {
+    &--active {
+      .toggle__icon {
         background: var(--primary-fg, $white);
+
+        &::before,
+        &::after {
+          background: var(--primary-fg, $white);
+        }
       }
     }
   }
 
-  .brand {
+  &__brand {
     display: block;
     align-self: flex-start;
     width: 6.5625rem;
@@ -78,7 +79,7 @@
     }
   }
 
-  .primary-navigation {
+  &__navigation {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -104,7 +105,7 @@
       display: none;
     }
 
-    &.is-visible {
+    &--visible {
       margin: 0;
       padding: 0 52px;
       z-index: 1;
@@ -122,7 +123,7 @@
     }
   }
 
-  .branding {
+  &__branding {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -147,18 +148,18 @@
       margin: 0 auto;
     }
 
-    .toggle-menu {
+    .toggle {
       display: none;
     }
 
-    .brand {
+    &__brand {
       align-self: center;
       width: 16.5625rem;
       height: auto;
       margin-top: 40px;
     }
 
-    .primary-navigation {
+    &__navigation {
       top: 40px;
       height: 40px;
       max-width: 1440px;
@@ -193,7 +194,7 @@
       }
     }
 
-    .branding {
+    &__branding {
       height: 576px;
 
       p {

@@ -1,4 +1,4 @@
-.content-info {
+.footer {
   .network-footer {
     margin-bottom: 0;
     padding: 60px 42.5px 40px;
@@ -27,7 +27,7 @@
       }
     }
 
-    .network-footer-block.empty {
+    &__block {
       display: none;
     }
 
@@ -39,7 +39,7 @@
       border-top: solid 1px var(--accent-fg, $white);
     }
 
-    .network-footer-block-1 {
+    .network-footer__block-1 {
       margin: 0 -5px;
       padding: 0 0 40px;
     }

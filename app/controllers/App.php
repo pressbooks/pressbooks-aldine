@@ -38,9 +38,9 @@ class App extends Controller
                 || get_option('pb_network_twitter')
                 || is_active_sidebar("network-footer-block-$index")
             ) {
-                return "network-footer-block-$index";
+                return "network-footer__block--$index";
             } else {
-                return 'empty';
+                return 'network-footer__block--empty';
             }
         }
         return (is_active_sidebar("network-footer-block-$index")) ? "network-footer-block-$index" : 'empty';

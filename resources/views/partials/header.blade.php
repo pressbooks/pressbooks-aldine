@@ -4,9 +4,9 @@
   @asset('images/catalog-header.jpg')
 @endif);">
   <div class="container">
-    <a class="toggle-menu" href="#primary-navigation">{{ __('Toggle menu', 'aldine') }}<span class="icon"></span></a>
-    <a class="brand" href="{{ home_url('/') }}"><span class="clip">{{ get_bloginfo('name', 'display') }}</span>{!! $site_logo !!}</a>
-    <nav id="primary-navigation" class="primary-navigation">
+    <a class="toggle" href="#navigation">{{ __('Toggle menu', 'aldine') }}<span class="toggle__icon"></span></a>
+    <a class="banner__brand" href="{{ home_url('/') }}"><span class="clip">{{ get_bloginfo('name', 'display') }}</span>{!! $site_logo !!}</a>
+    <nav class="banner__navigation" id="navigation">
         <a href="{{ home_url('/catalog') }}">Catalog</a>
         <a href="#contact">Contact</a>
         @if(!is_user_logged_in())
@@ -19,7 +19,7 @@
           <a href="{{ wp_logout_url() }}">{{ __('Sign out', 'aldine') }}</a>
         @endif
     </nav>
-    <header class="branding">
+    <header class="banner__branding">
       <h1><a href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a></h1>
       <p>{{ get_bloginfo('description', 'display') }}</p>
     </header>

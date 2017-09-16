@@ -1,15 +1,15 @@
-<footer class="content-info">
+<footer class="footer">
   <div class="container">
     @if(get_option('pb_network_contact_form'))
       @include('partials.contact-form')
     @endif
     <section class="network-footer">
-      <div class="network-footer-block {{ App::networkFooter(1) }}">
+      <div class="network-footer__block {{ App::networkFooter(1) }}">
         @if(App::networkFooter(1) !== 'empty')
             @php(dynamic_sidebar('network-footer-block-1'))
         @endif
       </div>
-      <div class="network-footer-block {{ App::networkFooter(2) }}">
+      <div class="network-footer__block {{ App::networkFooter(2) }}">
         @if(App::networkFooter(2) !== 'empty')
           @php(dynamic_sidebar('network-footer-block-2'))
         @endif
@@ -26,7 +26,7 @@
           @endif
         </div>
       </div>
-      <div class="network-footer-block network-footer-menu">
+      <div class="network-footer__block network-footer__menu">
         @php(wp_nav_menu('network-footer-menu'))
       </div>
     </section>
