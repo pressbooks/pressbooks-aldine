@@ -166,6 +166,14 @@ add_action('after_setup_theme', function () {
     });
 });
 
+/**
+ * TODO: Remove temporary workaround to start soberwp/controller
+ *
+ * @see https://github.com/soberwp/controller/issues/48
+ */
+add_action('init', 'Sober\Controller\loader');
+add_action('init', 'Sober\Controller\debugger');
+
 add_action('wp_head', function () {
     $primary = get_option('pb_network_color_primary');
     $accent = get_option('pb_network_color_accent');
