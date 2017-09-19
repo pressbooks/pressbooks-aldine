@@ -43,7 +43,9 @@ class App extends Controller
                 return 'network-footer__block--empty';
             }
         }
-        return (is_active_sidebar("network-footer-block-$index")) ? "network-footer__block--$index" : 'network-footer__block--empty';
+        return (is_active_sidebar("network-footer-block-$index")) ?
+            "network-footer__block--$index" :
+            'network-footer__block--empty';
     }
 
     public static function title()
