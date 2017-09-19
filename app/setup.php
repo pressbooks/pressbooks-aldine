@@ -90,8 +90,8 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="tc ttu">',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ];
     register_sidebar([
         'name'          => __('Front Page Content', 'aldine'),
@@ -102,8 +102,8 @@ add_action('widgets_init', function () {
         'id'            => 'front-page-block',
         'before_widget' => '<section class="block %1$s %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="tc ttu">',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ]);
     register_sidebar([
         'name'          => __('Network Footer Block 1', 'aldine'),
