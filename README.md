@@ -20,18 +20,13 @@ Make sure all dependencies have been installed before moving on:
 * [PHP](http://php.net/manual/en/install.php) >= 7.0
 * [Composer](https://getcomposer.org/download/)
 * [WordPress](https://wordpress.org/) >= 4.8.1
-* [Pressbooks](https://github.com/pressbooks/pressbooks) >= 4.0
+* [Pressbooks](https://github.com/pressbooks/pressbooks) >= 4.3
 * [Node.js](http://nodejs.org/) >= 6.9.x
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Theme installation
 
-Install Aldine using Composer from your Pressbooks themes directory:
-
-```shell
-# @ app/themes/ or wp-content/themes/
-$ composer require pressbooks/pressbooks-aldine
-```
+Download the [latest zipped release](https://github.com/pressbooks/pressbooks-aldine/releases/latest) to your Pressbooks themes directory (`wp-content/themes` or `app/themes`) and unzip the theme folder.
 
 ## Theme structure
 
