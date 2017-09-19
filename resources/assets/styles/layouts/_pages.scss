@@ -25,11 +25,7 @@
     }
   }
 
-  .wrap {
-    padding: 0 rem(8);
-  }
-
-  .content {
+  .page-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -51,16 +47,12 @@
 
 @media (min-width: $medium) {
   .page {
-    .wrap {
-      margin-top: rem(-366);
-    }
-
     .page-header h1 {
       font-size: rem(48);
       line-height: (56/48);
     }
 
-    .content {
+    .page-content {
       width: rem(775);
       min-height: rem(494);
       margin: rem(-600) auto rem(119);
@@ -80,7 +72,7 @@
 
 @media (min-width: $large) {
   .page {
-    .content {
+    .page-content {
       width: rem(1115);
     }
   }

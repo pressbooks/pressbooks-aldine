@@ -63,9 +63,9 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.1"
 
-"aetna@github:pressbooks/aetna#825dc3e":
+"aetna@github:pressbooks/aetna#3a0a323":
   version "0.1.0"
-  resolved "https://codeload.github.com/pressbooks/aetna/tar.gz/825dc3e585b98b72c7d47d883afa56f2a4d4b810"
+  resolved "https://codeload.github.com/pressbooks/aetna/tar.gz/3a0a32315b48877bf7ef30c384fad9d3b92f875f"
   dependencies:
     tachyons-sass "~4.8"
 
