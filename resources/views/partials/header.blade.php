@@ -1,10 +1,27 @@
-<header class="banner">
+<section class="banner" style="background-image: url(@if(is_front_page())
+  @php(header_image())
+@else
+  @asset('images/catalog-header.jpg')
+@endif);">
   <div class="container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
-    <nav class="nav-primary">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-      @endif
+    <a class="toggle" href="#navigation">{{ __('Toggle menu', 'aldine') }}<span class="toggle__icon"></span></a>
+    <a class="banner__brand" href="{{ home_url('/') }}"><span class="clip">{{ get_bloginfo('name', 'display') }}</span>{!! $site_logo !!}</a>
+    <nav class="banner__navigation" id="navigation">
+        <a href="{{ home_url('/catalog') }}">Catalog</a>
+        <a href="#contact">Contact</a>
+        @if(!is_user_logged_in())
+          <a href="{{ wp_login_url() }}">{{ __('Sign in', 'aldine') }}</a>
+          <span class="sep">/</span>
+          <a href="{{ network_home_url('/wp-signup.php') }}">{{ __('Sign up', 'aldine') }}</a>
+        @else
+          <a href="{{ admin_url() }}">{{ __('Admin', 'aldine') }}</a>
+          <span class="sep">/</span>
+          <a href="{{ wp_logout_url() }}">{{ __('Sign out', 'aldine') }}</a>
+        @endif
     </nav>
+    <header class="banner__branding">
+      <h1><a href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a></h1>
+      <p>{{ get_bloginfo('description', 'display') }}</p>
+    </header>
   </div>
-</header>
+</section>

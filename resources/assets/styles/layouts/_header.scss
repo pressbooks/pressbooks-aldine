@@ -1,2 +1,214 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
+.banner {
+  background-position: bottom;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 560px;
+    width: 100%;
+    max-width: 100%;
+    max-width: 1440px;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 17px;
+    width: 25px;
+    height: 20px;
+    z-index: 99;
+    text-indent: -9999em;
+
+    &__icon {
+      display: block;
+      position: absolute;
+      top: 7px;
+      width: 25px;
+      height: 3px;
+      background: var(--primary, $brand-primary);
+
+      &::before,
+      &::after {
+        width: 25px;
+        height: 3px;
+        content: '';
+        background: var(--primary, $brand-primary);
+      }
+
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+      }
+
+      &::after {
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+    }
+
+    &--active {
+      .toggle__icon {
+        background: var(--primary-fg, $white);
+
+        &::before,
+        &::after {
+          background: var(--primary-fg, $white);
+        }
+      }
+    }
+  }
+
+  &__brand {
+    display: block;
+    align-self: flex-start;
+    width: 6.5625rem;
+    height: auto;
+    margin: 30px 0 0 17px;
+
+    svg,
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    width: 100%;
+    height: 560px;
+    margin: 0 0 0 -100%;
+    padding: 0 17px;
+    background: transparent;
+
+    a {
+      display: none;
+      font-family: $font-family-sans-serif;
+      font-size: rem(24);
+      line-height: (80/24);
+      color: var(--primary-fg, $white);
+      letter-spacing: 0;
+    }
+
+    .sep {
+      display: none;
+    }
+
+    &--visible {
+      margin: 0;
+      padding: 0 52px;
+      z-index: 1;
+      background: var(--primary, $brand-primary);
+
+      a {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px var(--primary-fg, $white);
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 364px;
+    text-align: center;
+
+    p {
+      font-family: $font-family-sans-serif;
+    }
+  }
+}
+
+.page:not(.home) .banner__branding {
+  display: none;
+}
+
+@media #{$breakpoint-large} {
+  .banner {
+    .container {
+      height: 880px;
+      margin: 0 auto;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    &__brand {
+      align-self: center;
+      width: 16.5625rem;
+      height: auto;
+      margin-top: 40px;
+    }
+
+    &__navigation {
+      top: 40px;
+      height: 40px;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        font-size: rem(18);
+        color: var(--header-text, $black);
+        line-height: normal;
+
+        &:hover,
+        &:focus {
+          color: var(--primary, $brand-primary);
+        }
+
+        &:nth-child(1) {
+          margin-right: auto;
+        }
+
+        &:nth-child(2) {
+          margin: 0 1em 0 auto;
+        }
+      }
+
+      .sep {
+        display: inline-block;
+        margin: 0 0.5em;
+      }
+    }
+
+    &__branding {
+      height: 576px;
+
+      p {
+        font-size: rem(30);
+        letter-spacing: 0.75px;
+        line-height: (40/30);
+      }
+    }
+
+    h1 {
+      margin-bottom: rem(32);
+      font-size: rem(72);
+      line-height: (40/72);
+      letter-spacing: rem(1.8);
+    }
+  }
+}

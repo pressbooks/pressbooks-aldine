@@ -6,6 +6,7 @@ const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const config = require('./config');
 
@@ -119,6 +120,10 @@ let webpackConfig = {
       'node_modules',
       'bower_components',
     ],
+    alias: {
+      'masonry': 'masonry-layout',
+      'isotope': 'isotope-layout',
+    },
     enforceExtension: false,
   },
   resolveLoader: {
@@ -151,8 +156,7 @@ let webpackConfig = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Tether: 'tether',
-      'window.Tether': 'tether',
+      Popper: 'popper.js/dist/umd/popper.js',
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
@@ -176,6 +180,7 @@ let webpackConfig = {
       failOnError: !config.enabled.watcher,
       syntax: 'scss',
     }),
+    new FriendlyErrorsWebpackPlugin(),
   ],
 };
 

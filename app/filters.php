@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Aldine;
 
 /**
  * Add <body> classes
@@ -11,11 +11,6 @@ add_filter('body_class', function (array $classes) {
         if (!in_array(basename(get_permalink()), $classes)) {
             $classes[] = basename(get_permalink());
         }
-    }
-
-    /** Add class if sidebar is active */
-    if (display_sidebar()) {
-        $classes[] = 'sidebar-primary';
     }
 
     /** Clean up class names for custom templates */
@@ -30,7 +25,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'aldine') . '</a>';
 });
 
 /**
@@ -67,4 +62,11 @@ add_filter('comments_template', function ($comments_template) {
         $comments_template
     );
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
+});
+
+/**
+ * Remove Admin Bar callback
+ */
+add_action('admin_bar_init', function () {
+    remove_action('wp_head', '_admin_bar_bump_cb');
 });
