@@ -2,11 +2,13 @@
 Theme Name:         Aldine
 Theme URI:          https://pressbooks.org/themes/aldine
 Description:        Aldine is the root theme for Pressbooks networks.
-Version:            1.0.0-dev
+Version:            1.0.0-alpha1
 Author:             Pressbooks (Book Oven Inc.)
 Author URI:         https://pressbooks.org
 Text Domain:        aldine
+GitHub Theme URI:   pressbooks/pressbooks-aldine
+Release Asset:      true
 
-License:            MIT License
-License URI:        http://opensource.org/licenses/MIT
+License:            GPL-3.0
+License URI:        http://opensource.org/licenses/GPL-3.0
 */

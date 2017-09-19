@@ -4,35 +4,54 @@ dist: trusty
 branches:
   only:
   - dev
-  - "/\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
+  - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
-  - 7.1
-  - 7.0
-  - nightly
+- 7.1
+- 7.0
+- nightly
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="7"
+- TRAVIS_NODE_VERSION="6"
+- TRAVIS_NODE_VERSION="7"
 matrix:
   fast_finish: true
   allow_failures:
-    - php: nightly
+  - php: nightly
 cache:
   apt: true
   directories:
-    - $HOME/.composer/cache
-    - $HOME/.yarn-cache
-    - vendor
+  - "$HOME/.composer/cache"
+  - "$HOME/.yarn-cache"
+  - vendor
 before_install:
-  - composer self-update
-  - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
-  - export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh | bash
+- composer self-update
+- source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
+- export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh
+  | bash
 install:
-  - node -v && yarn -V
-  - travis_retry yarn
-  - composer install -o --prefer-dist --no-interaction
+- node -v && yarn -V
+- travis_retry yarn
+- composer install -o --prefer-dist --no-interaction
 script:
-  - yarn run test
-  - yarn run build
-  - yarn run rmdist
-  - yarn run "build:production"
-  - composer test
+- yarn run test
+- yarn run build
+- yarn run rmdist
+- yarn run "build:production"
+- composer test
+before_deploy:
+- export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
+- composer install --no-dev --optimize-autoloader
+- cd ../
+- zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
+  -x *.git* *resources/assets/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
+  *.github* *.gitignore* *.travis.yml* *package-lock.json* *phpcs.xml* *webpack.mix.js*
+  *yarn.lock*
+- cd $TRAVIS_BUILD_DIR
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: H1gOixA2icGJrrJQBqU8ta9/pws8V3RM3JJF3G8CXtQ7mWOlC20Ntev1nB+fQS4mdiIWJ92eum4KKXBr80Od4m/hGIO2JSbpzN2v7bTlAx9eWB6wyShrfq+/IMw1vuqo9SyZM5+TJMbWAIu21pXFt6r7gPzX676iV9l2QQ2EJVV3s8VxYlfOGk/w+tVSp8t6Iq6FHVbks3QQ8bQriHwIC6LvvtRalarwTXI0vUfNNRrNpMATkxdddbleKnEfXpIuwvtblTWTuGp8ZIiC2QUKKraU4cbYWoAK/sJ+6gK3wIaXFbhhv85B/CW5xbbB916Bz5EKeZXm2QTRdKHFD13xQH3m9iqIZdK1w1SmwkyuhcwLvqF5fl087RWBz8w9pLp5dHI7HmoXVDHQrtNkyWN4uSXQpPweZmCf2D0qgRR3dRaPRdOG0PK+SXoRU1hr4dsTQ/tpbCYzJRXejnrOqOd/YvkuMZzzpE17YaogkGz5U55//cdwIr47wxWPspB0xCtDidrvualY2o+hdjeXN7Pv/pGXos+TYpHmjjEsp5dOmIAx+djTk5dn0LK/oJzHR1kfFGDWFTp0xNTywCG/x2224BO3vTyBKELR4NPeGX2goUO2VK6inntUXDf5OsfBeVsf0B0NhFR76VtkriXBpo/K4ppmXVNxKmK0etqS88V+HX4=
+  file: "pressbooks-aldine-$TRAVIS_TAG.zip"
+  on:
+    tags: true
+    repo: pressbooks/pressbooks-aldine
