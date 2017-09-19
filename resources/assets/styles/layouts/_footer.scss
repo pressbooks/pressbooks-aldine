@@ -1,247 +1,127 @@
-.footer {
-  .network-footer {
-    margin-bottom: 0;
-    padding: 60px 42.5px 40px;
-    font-family: $font-family-sans-serif;
-    font-size: rem(16);
+.network-footer {
+  margin-bottom: 0;
+  padding: 60px 42.5px 40px;
+  font-family: $font-family-sans-serif;
+  font-size: rem(16);
+  color: var(--accent-fg, $white);
+  background-color: var(--accent, $brand-accent);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    line-height: (36/16);
+  }
+
+  a {
     color: var(--accent-fg, $white);
-    background: var(--accent, $brand-accent);
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
 
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-align: center;
-      font-weight: 600;
-      line-height: (36/16);
+    &:hover,
+    &:focus {
+      border-bottom: solid 1px var(--accent-fg, $white);
     }
+  }
 
-    a {
-      color: var(--accent-fg, $white);
-      text-decoration: none;
-      border-bottom: solid 1px transparent;
+  &__block {
+    border-top: solid 1px var(--accent-fg, $white);
 
-      &:hover,
-      &:focus {
-        border-bottom: solid 1px var(--accent-fg, $white);
-      }
-    }
-
-    &__block {
-      display: none;
-    }
-
-    .network-footer-block:first-of-type {
+    &:first-of-type {
       border-top: 0;
     }
+  }
 
-    .network-footer-block {
-      border-top: solid 1px var(--accent-fg, $white);
-    }
+  &__block--1 {
+    margin: 0 -5px;
+    padding: 0 0 40px;
+  }
 
-    .network-footer__block-1 {
-      margin: 0 -5px;
-      padding: 0 0 40px;
-    }
+  &__block--2 {
+    padding: 30px 7.5px;
 
-    .network-footer-block-2 {
-      padding: 30px 7.5px;
-
-      .widget {
-        margin-bottom: 1em;
-      }
-    }
-
-    .network-footer-menu {
-      padding: 30px 7.5px 0;
-    }
-
-    .network-footer-block .social-media {
-      margin-top: 0;
-      width: 100%;
-
-      a {
-        margin: 0 0.5em 0 0;
-        border-bottom: none;
-
-        &:hover,
-        &:focus {
-          border-bottom: none;
-        }
-      }
+    .widget {
+      margin-bottom: 1em;
     }
   }
 
-  .social-media {
-    margin-top: 1em;
-
-    a {
-      font-size: rem(32);
-      margin: 0 0.25em;
-      transition: all 0.4s;
-    }
+  &__menu {
+    padding: 30px 7.5px 0;
   }
 
-  .pressbooks-footer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  &__block .social-media {
+    margin-top: 0;
     width: 100%;
-    height: 125px;
-    background-color: $dark-grey;
 
-    h1,
-    li,
     a {
-      color: $white;
-      font-family: $font-family-sans-serif;
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: normal;
-    }
-
-    h1 {
-      font-size: rem(16);
-      font-weight: normal;
-      margin-bottom: 0;
-
-      .pressbooks {
-        font-weight: 600;
-      }
-    }
-
-    h1 a {
-      border-bottom: solid 1px $dark-grey;
-      transition: all 0.4s;
+      margin: 0 0.5em 0 0;
+      border-bottom: none;
 
       &:hover,
       &:focus {
-        border-bottom: solid 1px $white;
+        border-bottom: none;
       }
-    }
-
-    ul {
-      display: none;
-      margin: 0;
-      font-size: rem(14);
-    }
-
-    .pressbooks-icon {
-      display: none;
-    }
-
-    .pressbooks-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
   }
 }
 
+.social-media {
+  margin-top: 1em;
+
+  a {
+    font-size: rem(32);
+    margin: 0 0.25em;
+    transition: all 0.4s;
+  }
+}
+
 @media (min-width: $medium) {
-  .content-info {
-    .network-footer {
+  .network-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      text-align: left;
+    }
+
+    &__block {
       display: flex;
-      flex-direction: row;
       align-items: center;
+      height: 142.5px;
+      margin: 0;
+      padding: 0 69.5px;
+      border-top: 0;
+      border-right: solid 1px var(--accent-fg, $white);
+    }
+
+    &__block--2 {
+      flex-direction: column;
       justify-content: center;
-
-      ul {
-        text-align: left;
-      }
-
-      .network-footer-block {
-        display: flex;
-        align-items: center;
-        height: 142.5px;
-        margin: 0;
-        padding: 0 69.5px;
-        border-top: 0;
-        border-right: solid 1px $white;
-      }
-
-      .network-footer-block-2 {
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .network-footer-block:last-of-type {
-        border-right: 0;
-      }
     }
 
-    .social-media {
-      a {
-        font-size: rem(24);
-        margin: 0 0.5em 0 0;
-      }
+    &__block:last-of-type {
+      border-right: 0;
     }
+  }
 
-    .pressbooks-footer {
-      flex-direction: row;
-      justify-content: space-between;
-      height: 106.76px;
-      padding: 0 38px;
-
-      h1 {
-        font-weight: 600;
-        margin-bottom: 11px;
-      }
-
-      ul {
-        display: block;
-        list-style: none;
-
-        li {
-          display: inline-block;
-
-          &::after {
-            content: "|";
-            color: $white;
-            display: inline-block;
-            margin: 0 0.5em;
-          }
-
-          &:last-child {
-            &::after {
-              content: "";
-              display: none;
-            }
-          }
-        }
-      }
-
-      .pressbooks-icon {
-        display: block;
-        line-height: 1;
-
-        svg path {
-          fill: $white;
-        }
-      }
-
-      .social-media {
-        margin-top: 0;
-
-        a {
-          margin: 0 0 0 0.5em;
-        }
-      }
+  .social-media {
+    a {
+      font-size: rem(24);
+      margin: 0 0.5em 0 0;
     }
   }
 }
 
 @media (min-width: $extra-large) {
-  .content-info {
-    .network-footer {
-      ul {
-        li {
-          display: inline-block;
-          margin-right: 3em;
-        }
+  .network-footer {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 3em;
       }
     }
   }

@@ -340,7 +340,7 @@
 @media (min-width: $extra-large) {
   .home {
     .block {
-      width: 1115px;
+      width: rem(1115);
       box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
     }
 
