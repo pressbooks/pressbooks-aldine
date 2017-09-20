@@ -4,15 +4,11 @@
       @include('partials.contact-form')
     @endif
     <section class="network-footer">
-      <div class="network-footer__block {{ App::networkFooter(1) }}">
-        @if(App::networkFooter(1) !== 'empty')
-            @php(dynamic_sidebar('network-footer-block-1'))
-        @endif
+      <div class="network-footer__block network-footer__block--{{ App::networkFooter(1) }}">
+        @php(dynamic_sidebar('network-footer-block-1'))
       </div>
-      <div class="network-footer__block {{ App::networkFooter(2) }}">
-        @if(App::networkFooter(2) !== 'empty')
-          @php(dynamic_sidebar('network-footer-block-2'))
-        @endif
+      <div class="network-footer__block network-footer__block--{{ App::networkFooter(2) }}">
+        @php(dynamic_sidebar('network-footer-block-2'))
         <div class="social-media">
           @if($network_facebook)
             <a class="link near-black hover-silver dib h2 w2 mr3" href="{{ $network_facebook }}" title="{{ sprintf(__('%s on Facebook', 'aldine'), get_bloginfo('name', 'display')) }}">

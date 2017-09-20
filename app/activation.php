@@ -3,30 +3,30 @@
 namespace Aldine;
 
 add_action('admin_init', function () {
-    $extra = new \ParsedownExtra();
-    $about = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/about.md'));
-    $help = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/help.md'));
-
-    $default_pages = [
-        'about' => [
-            'post_title' => __('About', 'aldine'),
-            'post_content' => apply_filters('pb_root_about_page_content', $about)
-        ],
-        'help' => [
-            'post_title' => __('Help', 'aldine'),
-            'post_content' => apply_filters('pb_root_help_page_content', $help)
-        ],
-        'catalog' => [
-            'post_title' => __('Catalog', 'aldine'),
-            'post_content' => ''
-        ],
-        'home' => [
-            'post_title' => __('Home', 'aldine'),
-            'post_content' => ''
-        ],
-    ];
-
     if (! get_option('pb_aldine_activated')) {
+        $extra = new \ParsedownExtra();
+        $about = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/about.md'));
+        $help = $extra->text(file_get_contents(get_stylesheet_directory() . '/docs/help.md'));
+
+        $default_pages = [
+            'about' => [
+                'post_title' => __('About', 'aldine'),
+                'post_content' => apply_filters('pb_root_about_page_content', $about)
+            ],
+            'help' => [
+                'post_title' => __('Help', 'aldine'),
+                'post_content' => apply_filters('pb_root_help_page_content', $help)
+            ],
+            'catalog' => [
+                'post_title' => __('Catalog', 'aldine'),
+                'post_content' => ''
+            ],
+            'home' => [
+                'post_title' => __('Home', 'aldine'),
+                'post_content' => ''
+            ],
+        ];
+
         // Add our pages
         $pages = [];
 

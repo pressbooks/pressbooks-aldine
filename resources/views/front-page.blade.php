@@ -5,7 +5,7 @@
   @if(is_active_sidebar('front-page-block'))
     @php(dynamic_sidebar('front-page-block'))
   @else
-    @component('page-block')
+    @component('partials.page-block')
       @slot('title')
         {{ __('About Pressbooks', 'aldine') }}
       @endslot
