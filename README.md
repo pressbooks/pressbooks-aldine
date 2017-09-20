@@ -1,6 +1,6 @@
 # Aldine
 
-[![Build Status](https://travis-ci.org/pressbooks/pressbooks-aldine.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-aldine) [![GitHub Release](https://img.shields.io/github/release/pressbooks/pressbooks-aldine/all.svg)]()
+[![Build Status](https://travis-ci.org/pressbooks/pressbooks-aldine.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-aldine) [![GitHub Release](https://img.shields.io/github/release/pressbooks/pressbooks-aldine/all.svg)](https://github.com/pressbooks/pressbooks-aldine/releases/latest)
 
 Aldine is the new root theme for [Pressbooks](https://github.com/pressbooks/pressbooks), based on [Sage](https://roots.io/sage/).
 
