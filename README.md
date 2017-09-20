@@ -66,9 +66,6 @@ themes/pressbooks-aldine/  # → Theme root
 ## Theme development
 
 * Run `yarn` from the theme directory to install dependencies
-* Update `resources/assets/config.json` settings:
-  * `devUrl` should reflect your local development hostname
-  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/pressbooks-aldine` for non-[Bedrock](https://roots.io/bedrock/) installs)
 
 ### Build commands
 
