@@ -98,6 +98,10 @@
       border-right: solid 1px var(--accent-fg, $white);
     }
 
+    &__block--empty {
+      display: none;
+    }
+
     &__block--2 {
       flex-direction: column;
       justify-content: center;
