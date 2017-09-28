@@ -43,6 +43,8 @@ themes/pressbooks-aldine/  # → Theme root
 ├── composer.json         # → Autoloading for `app/` files
 ├── composer.lock         # → Composer lock file (never edit)
 ├── dist/                 # → Built theme assets (never edit)
+├── functions.php         # → Composer autoloader, theme includes
+├── index.php             # → Never manually edit
 ├── node_modules/         # → Node.js packages (never edit)
 ├── package.json          # → Node.js dependencies and scripts
 ├── resources/            # → Theme assets and templates
@@ -53,13 +55,11 @@ themes/pressbooks-aldine/  # → Theme root
 │   │   ├── images/       # → Theme images
 │   │   ├── scripts/      # → Theme JS
 │   │   └── styles/       # → Theme stylesheets
-│   ├── functions.php     # → Composer autoloader, theme includes
-│   ├── index.php         # → Never manually edit
-│   ├── screenshot.png    # → Theme screenshot for WP admin
-│   ├── style.css         # → Theme meta information
 │   └── views/            # → Theme templates
 │       ├── layouts/      # → Base templates
 │       └── partials/     # → Partial templates
+├── screenshot.png        # → Theme screenshot for WP admin
+├── style.css             # → Theme meta information
 └── vendor/               # → Composer packages (never edit)
 ```
 

@@ -41,7 +41,7 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
  * Ensure dependencies are loaded
  */
 if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+    if (!file_exists($composer = __DIR__.'/vendor/autoload.php')) {
         $sage_error(
             __('You must run <code>composer install</code> from the Sage directory.', 'aldine'),
             __('Autoloader not found.', 'aldine')
@@ -57,7 +57,7 @@ if (!class_exists('Roots\\Sage\\Container')) {
  * Add or remove files to the array as needed. Supports child theme overrides.
  */
 array_map(function ($file) use ($sage_error) {
-    $file = "../app/{$file}.php";
+    $file = "/app/{$file}.php";
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'aldine'), $file), 'File not found');
     }
@@ -87,16 +87,11 @@ array_map(function ($file) use ($sage_error) {
  * ├── STYLESHEETPATH         -> /srv/www/example.com/current/web/app/themes/sage/resources/views
  * └── TEMPLATEPATH           -> /srv/www/example.com/current/web/app/themes/sage/resources
  */
-array_map(
-    'add_filter',
-    ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
-    array_fill(0, 4, 'dirname')
-);
 Container::getInstance()
     ->bindIf('config', function () {
         return new Config([
-            'assets' => require dirname(__DIR__).'/config/assets.php',
-            'theme' => require dirname(__DIR__).'/config/theme.php',
-            'view' => require dirname(__DIR__).'/config/view.php',
+            'assets' => require __DIR__.'/config/assets.php',
+            'theme' => require __DIR__.'/config/theme.php',
+            'view' => require __DIR__.'/config/view.php',
         ]);
     }, true);
