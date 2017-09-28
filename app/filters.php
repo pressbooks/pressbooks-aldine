@@ -67,7 +67,7 @@ add_filter('comments_template', function ($comments_template) {
 /**
  * Fix Controller path
  */
-add_filter('sober/controller/path', function() {
+add_filter('sober/controller/path', function () {
     return get_template_directory() . '/app/controllers';
 });
 
