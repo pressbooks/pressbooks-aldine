@@ -149,7 +149,7 @@ add_action('after_setup_theme', function () {
     /**
      * Add Blade to Sage container
      */
-    sage()->singleton('sage.blade', function (Container $app) {
+    sage()->singleton('sage.blade', function (\Illuminate\Container\Container $app) {
         $cachePath = config('view.compiled');
         if (!file_exists($cachePath)) {
             wp_mkdir_p($cachePath);
