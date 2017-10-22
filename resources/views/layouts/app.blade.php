@@ -2,7 +2,7 @@
 <html @php(language_attributes())>
   @include('partials.head')
   <body @php(body_class('no-js'))>
-    {{-- @include('partials.uio') --}}
+    @include('partials.uio')
     @php(do_action('get_header'))
     @include('partials.header')
     <div class="wrap container" role="document">
@@ -15,6 +15,6 @@
     @php(do_action('get_footer'))
     @include('partials.footer')
     @php(wp_footer())
-    {{-- @include('partials.uio-script') --}}
+    @include('partials.uio-script')
   </body>
 </html>
