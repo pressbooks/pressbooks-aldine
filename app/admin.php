@@ -79,28 +79,32 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'section'  => 'pb_network_social',
         'settings' => 'pb_network_twitter',
     ]);
-    $wp_customize->add_section('pb_front_page_catalog', [
-        'title' => __('Front Page Catalog', 'aldine'),
-        'priority' => 25,
-    ]);
-    $wp_customize->add_setting('pb_front_page_catalog', [
-        'type' => 'option',
-    ]);
-    $wp_customize->add_control('pb_front_page_catalog', [
-        'label' => __('Show Front Page Catalog', 'aldine'),
-        'section'  => 'pb_front_page_catalog',
-        'settings' => 'pb_front_page_catalog',
-        'type' => 'checkbox'
-    ]);
-    $wp_customize->add_setting('pb_front_page_catalog_title', [
-        'type' => 'option',
-        'sanitize_callback' => 'sanitize_text_field'
-    ]);
-    $wp_customize->add_control('pb_front_page_catalog_title', [
-        'label' => __('Front Page Catalog Title', 'aldine'),
-        'section'  => 'pb_front_page_catalog',
-        'settings' => 'pb_front_page_catalog_title',
-    ]);
+
+    if (function_exists('pb_meets_minimum_requirements') && pb_meets_minimum_requirements()) {
+        $wp_customize->add_section('pb_front_page_catalog', [
+            'title' => __('Front Page Catalog', 'aldine'),
+            'priority' => 25,
+        ]);
+        $wp_customize->add_setting('pb_front_page_catalog', [
+            'type' => 'option',
+        ]);
+        $wp_customize->add_control('pb_front_page_catalog', [
+            'label' => __('Show Front Page Catalog', 'aldine'),
+            'section'  => 'pb_front_page_catalog',
+            'settings' => 'pb_front_page_catalog',
+            'type' => 'checkbox'
+        ]);
+        $wp_customize->add_setting('pb_front_page_catalog_title', [
+            'type' => 'option',
+            'sanitize_callback' => 'sanitize_text_field'
+        ]);
+        $wp_customize->add_control('pb_front_page_catalog_title', [
+            'label' => __('Front Page Catalog Title', 'aldine'),
+            'section'  => 'pb_front_page_catalog',
+            'settings' => 'pb_front_page_catalog_title',
+        ]);
+    }
+
     $wp_customize->add_section('pb_network_contact_form', [
         'title' => __('Contact Form', 'aldine'),
         'priority' => 25,

@@ -8,11 +8,15 @@ class PageCatalog extends Controller
 {
     public function licenses()
     {
-        $licenses = (new \Pressbooks\Licensing())->getSupportedTypes();
-        foreach ($licenses as $key => $value) {
-            $licenses[$key] = preg_replace("/\([^)]+\)/", '', $value['desc']);
+        if (function_exists('pb_meets_minimum_requirements') && pb_meets_minimum_requirements()) {
+            $licenses = (new \Pressbooks\Licensing())->getSupportedTypes();
+            foreach ($licenses as $key => $value) {
+                $licenses[$key] = preg_replace("/\([^)]+\)/", '', $value['desc']);
+            }
+            return $licenses;
+        } else {
+            return [];
         }
-        return $licenses;
     }
 
     public function subjectGroups()
