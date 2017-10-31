@@ -126,28 +126,32 @@ class App extends Controller
 
     public static function catalogData($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
     {
-        $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
-        $request->set_query_params([
-            'page' => $page,
-            'per_page' => $per_page,
-        ]);
-        $response = rest_do_request($request);
-        $pages = $response->headers['X-WP-TotalPages'];
-        $data = rest_get_server()->response_to_data($response, true);
-        $books = [];
-        foreach ($data as $key => $book) {
-            $book['title'] = $book['metadata']['name'];
-            $book['date-published'] = (isset($book['metadata']['datePublished'])) ?
-                $book['metadata']['datePublished'] :
-                '';
-            $book['subject'] = (isset($book['metadata']['keywords'])) ? $book['metadata']['keywords'] : '';
-            $books[] = $book;
-        }
-        if ($orderby === 'latest') {
-            $books = wp_list_sort($books, $orderby, 'desc');
+        if (function_exists('pb_meets_minimum_requirements') && pb_meets_minimum_requirements()) {
+            $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
+            $request->set_query_params([
+                'page' => $page,
+                'per_page' => $per_page,
+            ]);
+            $response = rest_do_request($request);
+            $pages = $response->headers['X-WP-TotalPages'];
+            $data = rest_get_server()->response_to_data($response, true);
+            $books = [];
+            foreach ($data as $key => $book) {
+                $book['title'] = $book['metadata']['name'];
+                $book['date-published'] = (isset($book['metadata']['datePublished'])) ?
+                    $book['metadata']['datePublished'] :
+                    '';
+                $book['subject'] = (isset($book['metadata']['keywords'])) ? $book['metadata']['keywords'] : '';
+                $books[] = $book;
+            }
+            if ($orderby === 'latest') {
+                $books = wp_list_sort($books, $orderby, 'desc');
+            } else {
+                $books = wp_list_sort($books, $orderby);
+            }
+            return ['pages' => $pages, 'books' => $books];
         } else {
-            $books = wp_list_sort($books, $orderby);
+            return ['pages' => 0, 'books' => []];
         }
-        return ['pages' => $pages, 'books' => $books];
     }
 }

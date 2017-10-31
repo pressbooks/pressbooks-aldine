@@ -178,17 +178,17 @@
         &:focus {
           color: var(--primary, $brand-primary);
         }
-
-        &:nth-child(1) {
-          margin-right: auto;
-        }
-
-        &:nth-child(2) {
-          margin: 0 1em 0 auto;
-        }
       }
 
-      .sep {
+      &--catalog {
+        margin-right: auto;
+      }
+
+      &--contact {
+        margin: 0 1em 0 auto;
+      }
+
+      &--sep {
         display: inline-block;
         margin: 0 0.5em;
       }
