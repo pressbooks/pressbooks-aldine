@@ -1,11 +1,11 @@
 <div class="book"
   data-date-published="{{ str_replace('-', '', @$book['metadata']['datePublished']) }}"
   data-license="{{ (new \Pressbooks\Licensing())->getLicenseFromUrl($book['metadata']['license']['url']) }}"
-  data-subject="{{ sanitize_title(@$book['metadata']['keywords']) }}"
+  data-subject="{{ substr(@$book['subject'], 0, 2) }}"
 >
   @if(isset($book['metadata']['keywords']))
   <p class="book__subject">
-    <a href="{{ network_home_url('/catalog/#') . $book['metadata']['keywords'] }}">{{ $book['metadata']['keywords'] }}</a>
+    <a href="{{ network_home_url('/catalog/#') . substr($book['subject'], 0, 2) }}">{{ \Pressbooks\Metadata\get_subject_from_thema($book['subject']) }}</a>
   </p>
   @endif
   <p class="book__title">
