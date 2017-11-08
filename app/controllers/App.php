@@ -141,7 +141,9 @@ class App extends Controller
                 $book['date-published'] = (isset($book['metadata']['datePublished'])) ?
                     $book['metadata']['datePublished'] :
                     '';
-                $book['subject'] = (isset($book['metadata']['about'][0])) ? $book['metadata']['about'][0]['identifier'] : '';
+                $book['subject'] = (isset($book['metadata']['about'][0]))
+                    ? $book['metadata']['about'][0]['identifier']
+                    : '';
                 $books[] = $book;
             }
             if ($orderby === 'latest') {
