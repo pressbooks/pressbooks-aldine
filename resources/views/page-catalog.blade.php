@@ -16,10 +16,12 @@
         <div id="filter" class="filter-groups">
           @foreach($subject_groups as $key => $val)
           <div class="{{ $key }} subjects" id="{{ $key }}">
-            <a href="#{{ $key }}">{{ $val['title'] }} <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
+            <a href="#{{ $key }}">{{ $val['label'] }} <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
             <ul class="filter-list">
-              @foreach($val['subjects'] as $k => $v)
-              <li><a data-filter="{{ $k }}">{{ $v }}<span class="close">&times;</span></a></li>
+              @foreach($val['children'] as $k => $v)
+              @if(strlen($k) === 2)
+                <li><a data-filter="{{ $k }}">{{ $v }}<span class="close">&times;</span></a></li>
+              @endif
               @endforeach
             </ul>
           </div>
