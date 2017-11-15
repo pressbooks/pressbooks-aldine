@@ -1,6 +1,11 @@
 language: php
 sudo: false
-dist: trusty
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+  slack:
+    secure: EN5LZc4Ba3w48Nb9Xdh6WITgUf0qphkb3ZEDxTrBSfaSZuHAOqhQ2dDdfT8ds1vBkGTE80JVGXa2YDNDIyqK8JY1mR3V3MzeZMWLwfspPQj0/t8g/GFzc99M87dIEPZofCvj/CoRVGNG3rghe8TftAcf233rKvTSWtbADOvmfq6v/cedeh4/W1DgkrA5dcmTwpqyoOLzWbSXEMpwUxHfX88UHxNO2+IS9nvVXNf2CJ8C2dltEbRwFfKB20b/jIXvjgrmR9T2Al9M5qWXjpewssEU4hcEP8gPETx1l0VbIqq182ar9I2OKjmIYLuaVvgSp56TnPs+DBPnUOVDQZ3ykdXH8mzzPT9IhChZJEYMz+D0l9Jb6saWhqxzDMJ30fXt67HYgCO6kWfCZOpefwukoOZC7bZtnL98s0qTYHL5nt+h7+522XDAm8B5a0sKzvnV7IF30YlPdt/eHkEQF14954x4yGZO2Q3M0kR6I/roaJ4HQh1P2h0yswyRucIHFgGd4f1QQ64VOpUyJ4rNybVfcAn/zPuXjcjucxmNbyrf7vk8kCgCfF11ejO0aSYzjVjO+jE5Edkur9kmRbwMcc+HOb79eZhPT9ISMo8Bz/QhbbvCOlSDgagGrP3h+Zy17JIYmHJJJojdANjMtu9tf7sUrfTza6+r46Thnuwpxf+kdbM=
 branches:
   only:
   - dev
@@ -51,7 +56,7 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: H1gOixA2icGJrrJQBqU8ta9/pws8V3RM3JJF3G8CXtQ7mWOlC20Ntev1nB+fQS4mdiIWJ92eum4KKXBr80Od4m/hGIO2JSbpzN2v7bTlAx9eWB6wyShrfq+/IMw1vuqo9SyZM5+TJMbWAIu21pXFt6r7gPzX676iV9l2QQ2EJVV3s8VxYlfOGk/w+tVSp8t6Iq6FHVbks3QQ8bQriHwIC6LvvtRalarwTXI0vUfNNRrNpMATkxdddbleKnEfXpIuwvtblTWTuGp8ZIiC2QUKKraU4cbYWoAK/sJ+6gK3wIaXFbhhv85B/CW5xbbB916Bz5EKeZXm2QTRdKHFD13xQH3m9iqIZdK1w1SmwkyuhcwLvqF5fl087RWBz8w9pLp5dHI7HmoXVDHQrtNkyWN4uSXQpPweZmCf2D0qgRR3dRaPRdOG0PK+SXoRU1hr4dsTQ/tpbCYzJRXejnrOqOd/YvkuMZzzpE17YaogkGz5U55//cdwIr47wxWPspB0xCtDidrvualY2o+hdjeXN7Pv/pGXos+TYpHmjjEsp5dOmIAx+djTk5dn0LK/oJzHR1kfFGDWFTp0xNTywCG/x2224BO3vTyBKELR4NPeGX2goUO2VK6inntUXDf5OsfBeVsf0B0NhFR76VtkriXBpo/K4ppmXVNxKmK0etqS88V+HX4=
-  file: "pressbooks-aldine-$TRAVIS_TAG.zip"
+  file: pressbooks-aldine-$TRAVIS_TAG.zip
   on:
     tags: true
     repo: pressbooks/pressbooks-aldine
