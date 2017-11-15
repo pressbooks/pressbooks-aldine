@@ -136,3 +136,18 @@ add_action('customize_preview_init', function () {
     wp_enqueue_script('aldine/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
     wp_localize_script('aldine/customizer.js', 'SAGE_DIST_PATH', get_theme_file_uri() . '/dist/');
 });
+
+add_action('customize_controls_enqueue_scripts', function () {
+    $handle = 'wcag-validate-customizer-color-contrast';
+    $src = get_theme_file_uri() . '/lib/customizer-validate-wcag-color-contrast/customizer-validate-wcag-color-contrast.js';
+    $deps = [ 'customize-controls' ];
+    wp_enqueue_script($handle, $src, $deps);
+
+    $exports = [
+        'validate_color_contrast' => [
+            'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
+            'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
+        ],
+    ];
+    wp_scripts()->add_data($handle, 'data', sprintf('var _validateWCAGColorContrastExports = %s;', wp_json_encode($exports)));
+});
