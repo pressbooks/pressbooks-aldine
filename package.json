@@ -23,53 +23,17 @@
     "opera 12"
   ],
   "eslintConfig": {
-    "root": true,
-    "extends": "eslint:recommended",
+    "extends": "humanmade",
     "globals": {
+      "jQuery": true,
       "wp": true
     },
-    "env": {
-      "node": true,
-      "es6": true,
-      "amd": true,
-      "browser": true,
-      "jquery": true
-    },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "globalReturn": true,
-        "generators": false,
-        "objectLiteralDuplicateProperties": false,
-        "experimentalObjectRestSpread": true
-      },
-      "ecmaVersion": 2017,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "import"
-    ],
-    "settings": {
-      "import/core-modules": [],
-      "import/ignore": [
-        "node_modules",
-        "\\.(coffee|scss|css|less|hbs|svg|json)$"
-      ]
-    },
     "rules": {
-      "comma-dangle": [
-        "error",
-        {
-          "arrays": "always-multiline",
-          "objects": "always-multiline",
-          "imports": "always-multiline",
-          "exports": "always-multiline",
-          "functions": "ignore"
-        }
-      ]
+      "jsx-a11y/href-no-hash": 0
     }
   },
   "stylelint": {
-    "extends": "stylelint-config-standard",
+    "extends": "stylelint-config-recommended-scss",
     "rules": {
       "no-empty-source": null
     }
@@ -81,15 +45,15 @@
     "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint \"resources/assets/scripts\"",
-    "lint:styles": "stylelint \"resources/assets/styles/**/*.scss\"",
+    "lint:scripts": "node_modules/eslint/bin/eslint.js \"resources/assets/scripts/*.js\"",
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"resources/assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "engines": {
     "node": ">= 6.9.4"
   },
   "devDependencies": {
-    "pressbooks-build-tools": "^0.3.0"
+    "pressbooks-build-tools": "^0.5.0"
   },
   "dependencies": {
     "aetna": "github:pressbooks/aetna#3a0a323",

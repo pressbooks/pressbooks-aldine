@@ -1,3 +1,13 @@
+.social-media {
+  margin-top: 1em;
+
+  a {
+    font-size: rem(32);
+    margin: 0 0.25em;
+    transition: all 0.4s;
+  }
+}
+
 .network-footer {
   margin-bottom: 0;
   padding: 60px 42.5px 40px;
@@ -64,16 +74,6 @@
         border-bottom: none;
       }
     }
-  }
-}
-
-.social-media {
-  margin-top: 1em;
-
-  a {
-    font-size: rem(32);
-    margin: 0 0.25em;
-    transition: all 0.4s;
   }
 }
 

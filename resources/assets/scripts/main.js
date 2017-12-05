@@ -8,14 +8,14 @@ import home from './routes/home';
 import catalog from './routes/catalog';
 
 /** Populate Router instance with DOM routes */
-const routes = new Router({
-  // All pages
-  common,
-  // Home page
-  home,
-  // Catalog page
-  catalog,
-});
+const routes = new Router( {
+	// All pages
+	common,
+	// Home page
+	home,
+	// Catalog page
+	catalog,
+} );
 
 // Load Events
-jQuery(document).ready(() => routes.loadEvents());
+jQuery( document ).ready( () => routes.loadEvents() );

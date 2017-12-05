@@ -1,3 +1,39 @@
+label {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  height: 7.5em;
+  resize: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  flex-grow: 1;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: solid 2px $black;
+  padding: 0 0 1em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: $font-family-sans-serif;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus {
+    outline: none;
+    border-bottom: solid 2px var(--accent, $brand-accent);
+  }
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .form {
   width: rem(354);
 
@@ -41,42 +77,6 @@
       margin-top: rem(48);
     }
   }
-}
-
-label {
-  margin-bottom: 1rem;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  flex-grow: 1;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-bottom: solid 2px $black;
-  padding: 0 0 1em;
-  font-size: 0.875rem;
-  font-weight: 600;
-  font-family: $font-family-sans-serif;
-  background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  &:focus {
-    outline: none;
-    border-bottom: solid 2px var(--accent, $brand-accent);
-  }
-}
-
-textarea {
-  height: 7.5em;
-  resize: none;
-}
-
-input[type="submit"] {
-  cursor: pointer;
 }
 
 // Contact form
