@@ -89,18 +89,7 @@
     "node": ">= 6.9.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "cross-env": "*",
-    "eslint": "~4.2",
-    "eslint-loader": "~1.9",
-    "eslint-plugin-import": "~2.7",
-    "extract-text-webpack-plugin": "~3.0",
-    "laravel-mix": "~1.6",
-    "rimraf": "~2.6",
-    "stylelint": "~8.3",
-    "stylelint-config-standard": "~18.0",
-    "stylelint-webpack-plugin": "^0.9.0"
+    "pressbooks-build-tools": "^0.3.0"
   },
   "dependencies": {
     "aetna": "github:pressbooks/aetna#3a0a323",
