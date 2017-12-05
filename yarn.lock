@@ -113,11 +113,9 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.1"
 
-"aetna@github:pressbooks/aetna#3a0a323":
+aetna@^0.1.0:
   version "0.1.0"
-  resolved "https://codeload.github.com/pressbooks/aetna/tar.gz/3a0a32315b48877bf7ef30c384fad9d3b92f875f"
-  dependencies:
-    tachyons-sass "~4.8"
+  resolved "https://registry.yarnpkg.com/aetna/-/aetna-0.1.0.tgz#571bb3985f624581c550e875a598b410feeb33d2"
 
 after@0.8.1:
   version "0.8.1"
@@ -7582,16 +7580,6 @@ table@^4.0.1:
     lodash "^4.0.0"
     slice-ansi "0.0.4"
     string-width "^2.0.0"
-
-tachyons-sass@~4.8:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/tachyons-sass/-/tachyons-sass-4.8.1.tgz#5e7b85eb8a1e3cccf45acdff09e97f4ad1844d59"
-  dependencies:
-    tachyons "^4.8.1"
-
-tachyons@^4.8.1:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.8.1.tgz#9a3183feecb3240c4dcefee7feecc8259acd7381"
 
 tapable@^0.2.7:
   version "0.2.8"
