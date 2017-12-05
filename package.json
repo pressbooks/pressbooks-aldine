@@ -99,7 +99,7 @@
     "laravel-mix": "~1.4",
     "rimraf": "~2.6",
     "stylelint": "~7.12",
-    "stylelint-config-standard": "~16.0",
+    "stylelint-config-standard": "~18.0",
     "stylelint-webpack-plugin": "^0.8.0"
   },
   "dependencies": {
