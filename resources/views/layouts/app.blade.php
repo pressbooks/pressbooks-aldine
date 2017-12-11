@@ -2,6 +2,7 @@
 <html @php(language_attributes())>
   @include('partials.head')
   <body @php(body_class('no-js'))>
+    @include('partials.svg')
     {{-- @include('partials.uio') --}}
     @php(do_action('get_header'))
     @include('partials.header')
