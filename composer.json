@@ -30,7 +30,9 @@
 	},
 	"scripts": {
 		"test": ["@standards"],
-		"standards": ["vendor/bin/phpcs --standard=phpcs.ruleset.xml *.php"],
+		"standards": [
+			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
+		],
 		"localize": [
 			"wp-pot -o=languages/pressbooks-aldine.pot -d=pressbooks-aldine -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
 		],
