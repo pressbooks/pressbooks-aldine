@@ -16,20 +16,7 @@ class App extends Controller
         }
     }
 
-    public function siteName()
-    {
-        return get_bloginfo('name');
-    }
 
-    public function networkFacebook()
-    {
-        return get_option('pb_network_facebook');
-    }
-
-    public function networkTwitter()
-    {
-        return get_option('pb_network_twitter');
-    }
 
     public static function networkFooter($index)
     {
@@ -68,15 +55,7 @@ class App extends Controller
         return get_the_title();
     }
 
-    public function contactFormTitle()
-    {
-        $title = get_option('pb_network_contact_form_title');
-        if ($title) {
-            return $title;
-        }
 
-        return __('Contact Us', 'aldine');
-    }
 
     public function currentPage()
     {
@@ -122,38 +101,5 @@ class App extends Controller
         }
 
         return $page + 1;
-    }
-
-    public static function catalogData($page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '')
-    {
-        if (function_exists('pb_meets_minimum_requirements') && pb_meets_minimum_requirements()) {
-            $request = new \WP_REST_Request('GET', '/pressbooks/v2/books');
-            $request->set_query_params([
-                'page' => $page,
-                'per_page' => $per_page,
-            ]);
-            $response = rest_do_request($request);
-            $pages = $response->headers['X-WP-TotalPages'];
-            $data = rest_get_server()->response_to_data($response, true);
-            $books = [];
-            foreach ($data as $key => $book) {
-                $book['title'] = $book['metadata']['name'];
-                $book['date-published'] = (isset($book['metadata']['datePublished'])) ?
-                    $book['metadata']['datePublished'] :
-                    '';
-                $book['subject'] = (isset($book['metadata']['about'][0]))
-                    ? $book['metadata']['about'][0]['identifier']
-                    : '';
-                $books[] = $book;
-            }
-            if ($orderby === 'latest') {
-                $books = wp_list_sort($books, $orderby, 'desc');
-            } else {
-                $books = wp_list_sort($books, $orderby);
-            }
-            return ['pages' => $pages, 'books' => $books];
-        } else {
-            return ['pages' => 0, 'books' => []];
-        }
     }
 }

@@ -39,11 +39,9 @@ require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'admin_init', '\\Aldine\\Activation\\create_default_content' );
 add_action( 'admin_bar_init', '\\Aldine\\Actions\\remove_admin_bar_callback' );
-add_action( 'customize_register', '\\Aldine\\Customizer\\customize_register' );
-add_action( 'customize_preview_init', '\\Aldine\\Customizer\\customize_preview_js' );
 add_action( 'wp_head', '\\Aldine\\Actions\\output_custom_colors' );
 add_filter( 'body_class', '\\Aldine\\Filters\\body_classes' );
-
+add_filter( 'excerpt_more', '\\Aldine\\Filters\\excerpt_more' );
 
 if ( ! function_exists( 'pressbooks_aldine_setup' ) ) :
 	/**
@@ -193,6 +191,8 @@ function pressbooks_aldine_scripts() {
 	wp_enqueue_style( 'aldine/style', $assets->getPath( 'styles/aldine.css' ), false, null );
 	wp_enqueue_style( 'aldine/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600', false, null );
 	wp_enqueue_script( 'aldine/script', $assets->getPath( 'scripts/aldine.js' ), [ 'jquery' ], null, true );
-	wp_register_script( 'aldine/customizer', $assets->getPath( 'scripts/customizer.js' ), [ 'customize-preview' ], false, null );
 }
 add_action( 'wp_enqueue_scripts', 'pressbooks_aldine_scripts' );
+
+add_action( 'customize_register', '\\Aldine\\Customizer\\customize_register' );
+add_action( 'customize_preview_init', '\\Aldine\\Customizer\\customize_preview_js' );
