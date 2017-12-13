@@ -7,7 +7,7 @@ $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', 
 	data-license="<?php echo ( new \Pressbooks\Licensing() )->getLicenseFromUrl( $book['metadata']['license']['url'] ); ?>"
 	data-subject="<?php echo $subject ?>"
 >
-<?php if ( isset( $book['subject'] ) ) { ?>
+<?php if ( ! empty( $subject ) ) { ?>
   <p class="book__subject">
 	<a href="<?php echo network_home_url( "/catalog/#$subject" ) ?>"><?php echo \Pressbooks\Metadata\get_subject_from_thema( $book['subject'] ); ?></a>
   </p>

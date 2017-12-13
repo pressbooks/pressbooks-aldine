@@ -141,8 +141,8 @@ add_action( 'after_setup_theme', 'pressbooks_aldine_content_width', 0 );
  */
 function pressbooks_aldine_widgets_init() {
 	$config = [
-		'before_widget' => '<section class="widget %1$s %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div class="widget %1$s %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	];
@@ -153,8 +153,8 @@ function pressbooks_aldine_widgets_init() {
 			'aldine'
 		),
 		'id'            => 'front-page-block',
-		'before_widget' => '<section class="block %1$s %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div class="block %1$s %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	] );

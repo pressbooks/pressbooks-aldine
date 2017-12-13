@@ -20,7 +20,7 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 
 	</div><!-- #content -->
 
-	<footer class="footer<?php echo is_front_page() ? ' footer--home' : ' footer--inside' ?>">
+	<footer class="footer<?php echo is_front_page() ? ' footer--home' : ' footer--inside' ?>" role="contentinfo">
 	<div class="footer__inner">
 		<?php if ( $pb_network_contact_form ) :
 			include( locate_template( 'partials/contact-form.php' ) );
@@ -50,6 +50,7 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 		</section>
 		<section class="footer__pressbooks">
 		  <a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
+				<?php // TODO ?>
 				<svg class="icon--svg">
 					<use xlink:href="#icon-pressbooks" />
 				</svg>
