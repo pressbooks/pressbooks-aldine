@@ -12,7 +12,7 @@ let mix = require( 'laravel-mix' );
  */
 
 const inc = 'inc';
-const views = 'views';
+const partials = 'partials';
 const assets = 'assets';
 const dist = 'dist';
 
@@ -27,7 +27,7 @@ mix.browserSync( {
 	files: [
 		'*.php',
 		`${inc}/**/*.php`,
-		`${views}/**/*.php`,
+		`${partials}/**/*.php`,
 		`${dist}/**/*.css`,
 		`${dist}/**/*.js`,
 	],

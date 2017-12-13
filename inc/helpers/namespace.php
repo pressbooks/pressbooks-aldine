@@ -8,6 +8,19 @@
 namespace Aldine\Helpers;
 
 /**
+ * Get block count.
+ *
+ * @return int
+ */
+function get_block_count() {
+	global $_wp_sidebars_widgets;
+	if ( ! empty( $_wp_sidebars_widgets['front-page-block'] ) ) {
+		return count( $_wp_sidebars_widgets['front-page-block'] );
+	}
+	return 1;
+}
+
+/**
  * Get catalog data.
  *
  * @param int $page
@@ -48,6 +61,21 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	}
 }
 
+/**
+ * Get licenses for catalog display.
+ *
+ * @return array
+ */
+function get_catalog_licenses() {
+	if ( class_exists( '\\Pressbooks\\Licensing' ) ) {
+		$licenses = ( new \Pressbooks\Licensing() )->getSupportedTypes();
+		foreach ( $licenses as $key => $value ) {
+			$licenses[ $key ] = preg_replace( '/\([^)]+\)/', '', $value['desc'] );
+		}
+		return $licenses;
+	}
+	return [];
+}
 
 /**
  *

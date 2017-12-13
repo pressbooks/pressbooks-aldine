@@ -11,9 +11,10 @@
 
 <?php
 
+use function Aldine\Helpers\get_block_count;
 use function Aldine\Helpers\get_catalog_data;
 
-$block_count = 1;
+$block_count = get_block_count();
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
 $latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'aldine' ) );
 $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
