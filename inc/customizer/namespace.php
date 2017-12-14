@@ -34,26 +34,26 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		[
 			'slug' => 'primary',
 			'hex' => '#b01109',
-			'label' => __( 'Primary Color', 'aldine' ),
-			'description' => __( 'Primary color, used for links and other primary elements.', 'aldine' ),
+			'label' => __( 'Primary Color', 'pressbooks-aldine' ),
+			'description' => __( 'Primary color, used for links and other primary elements.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent',
 			'hex' => '#015d75',
-			'label' => __( 'Accent Color', 'aldine' ),
-			'description' => __( 'Accent color, used for flourishes and secondary elements.', 'aldine' ),
+			'label' => __( 'Accent Color', 'pressbooks-aldine' ),
+			'description' => __( 'Accent color, used for flourishes and secondary elements.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary_fg',
 			'hex' => '#ffffff',
-			'label' => __( 'Primary Foreground Color', 'aldine' ),
-			'description' => __( 'Used for text on a primary background.', 'aldine' ),
+			'label' => __( 'Primary Foreground Color', 'pressbooks-aldine' ),
+			'description' => __( 'Used for text on a primary background.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent_fg',
 			'hex' => '#ffffff',
-			'label' => __( 'Accent Foreground Color', 'aldine' ),
-			'description' => __( 'Used for text on an accent color background.', 'aldine' ),
+			'label' => __( 'Accent Foreground Color', 'pressbooks-aldine' ),
+			'description' => __( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
 		],
 	] as $color ) {
 		$wp_customize->add_setting("pb_network_color_{$color['slug']}", [
@@ -72,7 +72,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		));
 	}
 	$wp_customize->add_section('pb_network_social', [
-		'title' => __( 'Social Media', 'aldine' ),
+		'title' => __( 'Social Media', 'pressbooks-aldine' ),
 		'priority' => 30,
 	]);
 	$wp_customize->add_setting('pb_network_facebook', [
@@ -80,7 +80,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw',
 	]);
 	$wp_customize->add_control('pb_network_facebook', [
-		'label' => __( 'Facebook', 'aldine' ),
+		'label' => __( 'Facebook', 'pressbooks-aldine' ),
 		'section'  => 'pb_network_social',
 		'settings' => 'pb_network_facebook',
 	]);
@@ -89,21 +89,21 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw',
 	]);
 	$wp_customize->add_control('pb_network_twitter', [
-		'label' => __( 'Twitter', 'aldine' ),
+		'label' => __( 'Twitter', 'pressbooks-aldine' ),
 		'section'  => 'pb_network_social',
 		'settings' => 'pb_network_twitter',
 	]);
 
 	if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) {
 		$wp_customize->add_section('pb_front_page_catalog', [
-			'title' => __( 'Front Page Catalog', 'aldine' ),
+			'title' => __( 'Front Page Catalog', 'pressbooks-aldine' ),
 			'priority' => 25,
 		]);
 		$wp_customize->add_setting('pb_front_page_catalog', [
 			'type' => 'option',
 		]);
 		$wp_customize->add_control('pb_front_page_catalog', [
-			'label' => __( 'Show Front Page Catalog', 'aldine' ),
+			'label' => __( 'Show Front Page Catalog', 'pressbooks-aldine' ),
 			'section'  => 'pb_front_page_catalog',
 			'settings' => 'pb_front_page_catalog',
 			'type' => 'checkbox',
@@ -113,21 +113,21 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'sanitize_callback' => 'sanitize_text_field',
 		]);
 		$wp_customize->add_control('pb_front_page_catalog_title', [
-			'label' => __( 'Front Page Catalog Title', 'aldine' ),
+			'label' => __( 'Front Page Catalog Title', 'pressbooks-aldine' ),
 			'section'  => 'pb_front_page_catalog',
 			'settings' => 'pb_front_page_catalog_title',
 		]);
 	}
 
 	$wp_customize->add_section('pb_network_contact_form', [
-		'title' => __( 'Contact Form', 'aldine' ),
+		'title' => __( 'Contact Form', 'pressbooks-aldine' ),
 		'priority' => 25,
 	]);
 	$wp_customize->add_setting('pb_network_contact_form', [
 		'type' => 'option',
 	]);
 	$wp_customize->add_control('pb_network_contact_form', [
-		'label' => __( 'Show Contact Form', 'aldine' ),
+		'label' => __( 'Show Contact Form', 'pressbooks-aldine' ),
 		'section'  => 'pb_network_contact_form',
 		'settings' => 'pb_network_contact_form',
 		'type' => 'checkbox',
@@ -137,7 +137,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'sanitize_callback' => 'sanitize_text_field',
 	]);
 	$wp_customize->add_control('pb_network_contact_form_title', [
-		'label' => __( 'Contact Form Title', 'aldine' ),
+		'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
 		'section'  => 'pb_network_contact_form',
 		'settings' => 'pb_network_contact_form_title',
 	]);

@@ -16,19 +16,19 @@ function create_default_content() {
 
 		$default_pages = [
 			'about' => [
-				'post_title' => __( 'About', 'aldine' ),
+				'post_title' => __( 'About', 'pressbooks-aldine' ),
 				'post_content' => apply_filters( 'pb_root_about_page_content', $about ),
 			],
 			'help' => [
-				'post_title' => __( 'Help', 'aldine' ),
+				'post_title' => __( 'Help', 'pressbooks-aldine' ),
 				'post_content' => apply_filters( 'pb_root_help_page_content', $help ),
 			],
 			'catalog' => [
-				'post_title' => __( 'Catalog', 'aldine' ),
+				'post_title' => __( 'Catalog', 'pressbooks-aldine' ),
 				'post_content' => '',
 			],
 			'home' => [
-				'post_title' => __( 'Home', 'aldine' ),
+				'post_title' => __( 'Home', 'pressbooks-aldine' ),
 				'post_content' => '',
 			],
 		];

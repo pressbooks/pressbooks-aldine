@@ -30,10 +30,10 @@ $subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects
 <section class="network-catalog">
 <div class="controls">
   <div class="search">
-	<h2><a href="#search"><?php _e( 'Search by titles or keyword', 'aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a></h2>
+	<h2><a href="#search"><?php _e( 'Search by titles or keyword', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a></h2>
   </div>
   <div class="filters">
-	<a href="#filter"><?php _e( 'Filter by', 'aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
+	<a href="#filter"><?php _e( 'Filter by', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
 	<div id="filter" class="filter-groups">
 		<?php foreach ( $subject_groups as $key => $val ) : ?>
 		<div class="<?php echo $key; ?> subjects" id="<?php echo $key; ?>">
@@ -49,7 +49,7 @@ $subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects
 		<?php endforeach; ?>
 	</div>
 	<div class="licenses" id="licenses">
-	  <a href="#licenses"><?php _e( 'Licenses', 'aldine' ); ?><svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
+	  <a href="#licenses"><?php _e( 'Licenses', 'pressbooks-aldine' ); ?><svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
 	  <ul class="filter-list">
 		<?php foreach ( $licenses as $key => $value ) : ?>
 		  <li><a data-filter="<?php echo $key; ?>"><?php echo $value; ?><span class="close">&times;</span></a></li>
@@ -58,11 +58,11 @@ $subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects
 	</div>
   </div>
   <div class="sort">
-	<a href="#sort"><?php _e( 'Sort by', 'aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
+	<a href="#sort"><?php _e( 'Sort by', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
 	<ul id="sort" class="sorts">
-	  <li><a data-sort="title" href="<?php echo "/catalog/page/$current_page/?orderby=title"; ?>"><?php _e( 'Title', 'aldine' ); ?></a></li>
-	  <li><a data-sort="subject" href="<?php echo "/catalog/page/$current_page/?orderby=subject"; ?>"><?php _e( 'Subject', 'aldine' ); ?></a></li>
-	  <li><a data-sort="latest" href="<?php echo "/catalog/page/$current_page/?orderby=latest"; ?>"><?php _e( 'Latest', 'aldine' ); ?></a></li>
+	  <li><a data-sort="title" href="<?php echo "/catalog/page/$current_page/?orderby=title"; ?>"><?php _e( 'Title', 'pressbooks-aldine' ); ?></a></li>
+	  <li><a data-sort="subject" href="<?php echo "/catalog/page/$current_page/?orderby=subject"; ?>"><?php _e( 'Subject', 'pressbooks-aldine' ); ?></a></li>
+	  <li><a data-sort="latest" href="<?php echo "/catalog/page/$current_page/?orderby=latest"; ?>"><?php _e( 'Latest', 'pressbooks-aldine' ); ?></a></li>
 	</ul>
   </div>
 </div>
@@ -73,7 +73,7 @@ $subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects
 </div>
 <?php if ( $catalog_data['pages'] > 1 ) : ?>
 <nav class="catalog-navigation">
-<?php if ( $previous_page ) : ?><a class="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/catalog/page/$previous_page/" ); ?>"><?php _e( 'Previous', 'aldine' ); ?></a><?php endif; ?>
+<?php if ( $previous_page ) : ?><a class="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/catalog/page/$previous_page/" ); ?>"><?php _e( 'Previous', 'pressbooks-aldine' ); ?></a><?php endif; ?>
   <div class="pages">
 	<?php for ( $i = 1; $i <= $catalog_data['pages']; $i++ ) :
 		if ( $i === $current_page ) : ?>
@@ -83,7 +83,7 @@ $subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects
 		<?php endif; ?>
 	<?php endfor; ?>
   </div>
-<?php if ( $next_page <= $catalog_data['pages'] ) : ?><a class="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/catalog/page/$next_page/" ); ?>"><?php _e( 'Next', 'aldine' ); ?></a><?php endif; ?>
+<?php if ( $next_page <= $catalog_data['pages'] ) : ?><a class="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/catalog/page/$next_page/" ); ?>"><?php _e( 'Next', 'pressbooks-aldine' ); ?></a><?php endif; ?>
 </nav>
 <?php endif; ?>
 </section>

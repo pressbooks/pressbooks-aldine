@@ -35,5 +35,5 @@ function body_classes( array $classes ) {
  * Customize excerpt.
  */
 function excerpt_more() {
-	return ' &hellip; <a href="' . get_permalink() . '">' . __( 'Continued', 'aldine' ) . '</a>';
+	return ' &hellip; <a href="' . get_permalink() . '">' . __( 'Continued', 'pressbooks-aldine' ) . '</a>';
 }

@@ -34,7 +34,7 @@
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
 		],
 		"localize": [
-			"wp-pot -o=languages/pressbooks-aldine.pot -d=pressbooks-aldine -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
+			"wp-pot -o=languages/pressbooks-aldine.pot -d=pressbooks-aldine -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '**/*.php'"
 		],
 		"readme": ["vendor/bin/wp2md -i readme.txt -o README.md"]
 	}

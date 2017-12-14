@@ -1,0 +1,358 @@
+# Copyright (C) 2017 pressbooks-aldine
+# This file is distributed under the same license as the pressbooks-aldine package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pressbooks-aldine\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Pressbooks (Book Oven Inc.) <code@pressbooks.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:21
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: ../404.php:30
+msgid "Most Used Categories"
+msgstr ""
+
+#: ../404.php:47
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../comments.php:34
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: ../comments.php:40
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: ../footer.php:36
+msgid "%s on Facebook"
+msgstr ""
+
+#: ../footer.php:41
+msgid "%s on Twitter"
+msgstr ""
+
+#: ../functions.php:18
+msgid "Dependencies Missing"
+msgstr ""
+
+#: ../functions.php:19
+msgid "You must run <code>composer install</code> from the Aldine directory."
+msgstr ""
+
+#: ../functions.php:81
+msgid "Network Footer Menu"
+msgstr ""
+
+#: ../functions.php:150
+msgid "Front Page Content"
+msgstr ""
+
+#: ../functions.php:162
+msgid "Network Footer Block 1"
+msgstr ""
+
+#: ../functions.php:172
+msgid "Network Footer Block 2"
+msgstr ""
+
+#: ../header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: ../header.php:29
+msgid "Toggle menu"
+msgstr ""
+
+#: ../header.php:39
+msgid "Sign in"
+msgstr ""
+
+#: ../header.php:41
+msgid "Sign up"
+msgstr ""
+
+#: ../header.php:43
+msgid "Admin"
+msgstr ""
+
+#: ../header.php:45
+msgid "Sign out"
+msgstr ""
+
+#: ../inc/intervention.php:12
+msgid "Hello,"
+msgstr ""
+
+#: ../inc/activation/namespace.php:19
+msgid "About"
+msgstr ""
+
+#: ../inc/activation/namespace.php:23
+msgid "Help"
+msgstr ""
+
+#: ../inc/activation/namespace.php:27, ../page-catalog.php:4
+msgid "Catalog"
+msgstr ""
+
+#: ../inc/activation/namespace.php:31
+msgid "Home"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:37
+msgid "Primary Color"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:38
+msgid "Primary color, used for links and other primary elements."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:43
+msgid "Accent Color"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:44
+msgid "Accent color, used for flourishes and secondary elements."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:49
+msgid "Primary Foreground Color"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:50
+msgid "Used for text on a primary background."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:55
+msgid "Accent Foreground Color"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:56
+msgid "Used for text on an accent color background."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:75
+msgid "Social Media"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:83
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:92
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:99
+msgid "Front Page Catalog"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:106
+msgid "Show Front Page Catalog"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:116
+msgid "Front Page Catalog Title"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:123
+msgid "Contact Form"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:130
+msgid "Show Contact Form"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:140
+msgid "Contact Form Title"
+msgstr ""
+
+#: ../inc/filters/namespace.php:38
+msgid "Continued"
+msgstr ""
+
+#: ../inc/helpers/namespace.php:103
+msgid "Name is required."
+msgstr ""
+
+#: ../inc/helpers/namespace.php:107
+msgid "Email is required."
+msgstr ""
+
+#: ../inc/helpers/namespace.php:111
+msgid "Email is invalid."
+msgstr ""
+
+#: ../inc/helpers/namespace.php:115
+msgid "Institution is required."
+msgstr ""
+
+#: ../inc/helpers/namespace.php:119
+msgid "Message is required."
+msgstr ""
+
+#: ../inc/helpers/namespace.php:125
+msgid "Contact Form Submission from %s"
+msgstr ""
+
+#: ../inc/helpers/namespace.php:136
+msgid "Your message was sent!"
+msgstr ""
+
+#: ../inc/helpers/namespace.php:139
+msgid "Your message could not be sent."
+msgstr ""
+
+#: ../partials/book.php:19
+msgid "About this book &rarr;"
+msgstr ""
+
+#: ../partials/contact-form.php:11
+msgid "Contact Us"
+msgstr ""
+
+#: ../partials/contact-form.php:25
+msgid "Your name (required)"
+msgstr ""
+
+#: ../partials/contact-form.php:25
+msgid "Your name*"
+msgstr ""
+
+#: ../partials/contact-form.php:29
+msgid "Your email address (required)"
+msgstr ""
+
+#: ../partials/contact-form.php:29
+msgid "Your email*"
+msgstr ""
+
+#: ../partials/contact-form.php:33
+msgid "Your institution (required)"
+msgstr ""
+
+#: ../partials/contact-form.php:33
+msgid "Your institution*"
+msgstr ""
+
+#: ../partials/contact-form.php:37
+msgid "Your message (required)"
+msgstr ""
+
+#: ../partials/contact-form.php:37
+msgid "Your message here*"
+msgstr ""
+
+#: ../partials/contact-form.php:40
+msgid "Send"
+msgstr ""
+
+#: ../partials/content-front-page.php:19
+msgid "Our Latest Titles"
+msgstr ""
+
+#: ../partials/content-front-page.php:33
+msgid "About Pressbooks"
+msgstr ""
+
+#: ../partials/content-front-page.php:34
+msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
+msgstr ""
+
+#: ../partials/content-front-page.php:35
+msgid "Learn More"
+msgstr ""
+
+#: ../partials/content-front-page.php:56
+msgid "View Complete Catalog"
+msgstr ""
+
+#: ../partials/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: ../partials/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../partials/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: ../partials/content-none.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: ../partials/content-page-catalog.php:33
+msgid "Search by titles or keyword"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:36
+msgid "Filter by"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:52
+msgid "Licenses"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:61
+msgid "Sort by"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:63
+msgid "Title"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:64
+msgid "Subject"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:65
+msgid "Latest"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:76
+msgid "Previous"
+msgstr ""
+
+#: ../partials/content-page-catalog.php:86
+msgid "Next"
+msgstr ""
+
+#: ../partials/content-page.php:22, ../partials/content.php:45
+msgid "Pages:"
+msgstr ""
+
+#: ../partials/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: ../partials/content.php:34
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../search.php:21
+msgid "Search Results for: %s"
+msgstr ""

@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
-		<a class="toggle" href="#navigation"><?php _e( 'Toggle menu', 'aldine' ); ?><span class="toggle__icon"></span></a>
+		<a class="toggle" href="#navigation"><?php _e( 'Toggle menu', 'pressbooks-aldine' ); ?><span class="toggle__icon"></span></a>
 		<a class="banner__brand" href="<?php echo home_url( '/' ); ?>"><span class="clip"><?php echo get_bloginfo( 'name', 'display' ); ?></span></a>
 		<nav class="banner__navigation" id="navigation">
 			<?php if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) : ?>
@@ -36,13 +36,13 @@
 				<a class="banner__navigation--contact" href="#contact">Contact</a>
 			<?php endif; ?>
 			<?php if ( ! is_user_logged_in() ) : ?>
-				<a class="banner__navigation--signin" href="<?php echo wp_login_url(); ?>"><?php _e( 'Sign in', 'aldine' ); ?></a>
+				<a class="banner__navigation--signin" href="<?php echo wp_login_url(); ?>"><?php _e( 'Sign in', 'pressbooks-aldine' ); ?></a>
 				<span class="banner__navigation--sep">/</span>
-				<a class="banner__navigation--signup" href="<?php echo network_home_url( '/wp-signup.php' ); ?>"><?php _e( 'Sign up', 'aldine' ); ?></a>
+				<a class="banner__navigation--signup" href="<?php echo network_home_url( '/wp-signup.php' ); ?>"><?php _e( 'Sign up', 'pressbooks-aldine' ); ?></a>
 			<?php else : ?>
-				<a class="banner__navigation--admin" href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'aldine' ); ?></a>
+				<a class="banner__navigation--admin" href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'pressbooks-aldine' ); ?></a>
 				<span class="banner__navigation--sep">/</span>
-				<a class="banner__navigation--signout" href="<?php echo wp_logout_url(); ?>"><?php _e( 'Sign out', 'aldine' ); ?></a>
+				<a class="banner__navigation--signout" href="<?php echo wp_logout_url(); ?>"><?php _e( 'Sign out', 'pressbooks-aldine' ); ?></a>
 			<?php endif; ?>
 		</nav>
 		<header class="banner__branding">

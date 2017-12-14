@@ -15,8 +15,8 @@ if ( ! class_exists( 'PressbooksMix\\Assets' ) ) {
 	if ( ! file_exists( $composer ) ) {
 		wp_die( sprintf(
 			'<h1>%1$s</h1><p>%2$s</p>',
-			__( 'Dependencies Missing', 'aldine' ),
-			__( 'You must run <code>composer install</code> from the Aldine directory.', 'aldine' )
+			__( 'Dependencies Missing', 'pressbooks-aldine' ),
+			__( 'You must run <code>composer install</code> from the Aldine directory.', 'pressbooks-aldine' )
 		) );
 	}
 	require_once $composer;
@@ -78,7 +78,7 @@ if ( ! function_exists( 'pressbooks_aldine_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( [
-			'network-footer-menu' => __( 'Network Footer Menu', 'aldine' ),
+			'network-footer-menu' => __( 'Network Footer Menu', 'pressbooks-aldine' ),
 		] );
 
 		/*
@@ -147,7 +147,7 @@ function pressbooks_aldine_widgets_init() {
 		'after_title'   => '</h2>',
 	];
 	register_sidebar( [
-		'name'          => __( 'Front Page Content', 'aldine' ),
+		'name'          => __( 'Front Page Content', 'pressbooks-aldine' ),
 		'description'   => __(
 			'Add content for your network&rsquo;s front page here. Currently, only text widgets are supported.',
 			'aldine'
@@ -159,7 +159,7 @@ function pressbooks_aldine_widgets_init() {
 		'after_title'   => '</h2>',
 	] );
 	register_sidebar( [
-		'name'          => __( 'Network Footer Block 1', 'aldine' ),
+		'name'          => __( 'Network Footer Block 1', 'pressbooks-aldine' ),
 		'description'   => __(
 			'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
@@ -169,7 +169,7 @@ function pressbooks_aldine_widgets_init() {
 		'id'            => 'network-footer-block-1',
 	] + $config );
 	register_sidebar( [
-		'name'          => __( 'Network Footer Block 2', 'aldine' ),
+		'name'          => __( 'Network Footer Block 2', 'pressbooks-aldine' ),
 		'description'   => __(
 			'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.

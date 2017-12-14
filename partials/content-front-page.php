@@ -16,7 +16,7 @@ use function Aldine\Helpers\get_catalog_data;
 
 $block_count = get_block_count();
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
-$latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'aldine' ) );
+$latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) );
 $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 $catalog_data = get_catalog_data( $page, 3 );
 $previous_page = ( $page > 1 ) ? $page - 1 : 0;
@@ -30,9 +30,9 @@ $next_page = $page + 1;
 else : ?>
 	<div class="block flex flex-column items-center justify-center p-0 w-100">
 	<div class="inside tc">
-		<h3 class="tc ttu"><?php _e( 'About Pressbooks', 'aldine' ) ?></h3>
-		<p><?php _e( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'aldine' ); ?></p>
-		<a class="button" href="<?php echo network_home_url( '/about/' ); ?>"><?php _e( 'Learn More', 'aldine' ) ?></a>
+		<h3 class="tc ttu"><?php _e( 'About Pressbooks', 'pressbooks-aldine' ) ?></h3>
+		<p><?php _e( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine' ); ?></p>
+		<a class="button" href="<?php echo network_home_url( '/about/' ); ?>"><?php _e( 'Learn More', 'pressbooks-aldine' ) ?></a>
 	</div>
 	</div>
 <?php endif; ?>
@@ -53,7 +53,7 @@ else : ?>
 			<?php endif; ?>
 		</div>
 		<div class="catalog-link">
-			<a class="button button--outline button--wide" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'aldine' ); ?></a>
+			<a class="button button--outline button--wide" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
 		</div>
 	</div>
 <?php endif; ?>
