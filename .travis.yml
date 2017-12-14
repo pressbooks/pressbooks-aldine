@@ -16,7 +16,7 @@ php:
 - nightly
 env:
 - TRAVIS_NODE_VERSION="6"
-- TRAVIS_NODE_VERSION="7"
+- TRAVIS_NODE_VERSION="8"
 matrix:
   allow_failures:
   - php: nightly
