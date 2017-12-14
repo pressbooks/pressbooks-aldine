@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+let mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -11,63 +11,62 @@ let mix = require('laravel-mix');
  |
  */
 
-const app = 'app';
-const resources = 'resources';
-const assets = `${resources}/assets`;
+const inc = 'inc';
+const partials = 'partials';
+const assets = 'assets';
 const dist = 'dist';
 
-mix.setPublicPath(dist);
-mix.setResourceRoot('../');
+mix.setPublicPath( dist );
+mix.setResourceRoot( '../' );
 
 // BrowserSync
-mix.browserSync({
-  host: 'localhost',
-  proxy: 'http://pressbooks.dev',
-  port: 3000,
-  files: [
-    `${app}/**/*.php`,
-    `${resources}/**/*.php`,
-    `${dist}/**/*.css`,
-    `${dist}/**/*.js`,
-  ],
-});
+mix.browserSync( {
+	host:  'localhost',
+	proxy: 'https://pressbooks.test',
+	port:  3000,
+	files: [
+		'*.php',
+		`${inc}/**/*.php`,
+		`${partials}/**/*.php`,
+		`${dist}/**/*.css`,
+		`${dist}/**/*.js`,
+	],
+} );
 
 // Sass
-mix.sass(`${assets}/styles/main.scss`, `${dist}/styles/main.css`);
+mix.sass( `${assets}/styles/aldine.scss`, `${dist}/styles/aldine.css` );
 
 // Javascript
-mix.autoload({
-   jquery: ['$', 'window.jQuery', 'jQuery'],
-});
+mix.autoload( { jquery: [ '$', 'window.jQuery', 'jQuery' ] } );
 
-mix.js(`${assets}/scripts/main.js`, `${dist}/scripts`)
-   .js(`${assets}/scripts/customizer.js`, `${dist}/scripts`);
+mix
+	.js( `${assets}/scripts/aldine.js`, `${dist}/scripts` )
+	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` );
 
 // Assets
-mix.copy(`${assets}/fonts`, `${dist}/fonts`, false)
-  .copy(`${assets}/images`, `${dist}/images`, false);
+mix
+	.copy( `${assets}/fonts`, `${dist}/fonts`, false )
+	.copy( `${assets}/images`, `${dist}/images`, false );
 
 // Options
-mix.options({
-  processCssUrls: false,
-});
+mix.options( { processCssUrls: false } );
 
 // Source maps when not in production.
-if (!mix.inProduction()) {
-  mix.sourceMaps();
+if ( ! mix.inProduction() ) {
+	mix.sourceMaps();
 }
 
 // Hash and version files in production.
-if (mix.inProduction()) {
-  mix.version();
+if ( mix.inProduction() ) {
+	mix.version();
 }
 
 // Add Isotope support.
-mix.webpackConfig({
-  resolve: {
-    alias: {
-      'masonry': 'masonry-layout',
-      'isotope': 'isotope-layout',
-    },
-  },
-});
+mix.webpackConfig( {
+	resolve: {
+		alias: {
+			masonry: 'masonry-layout',
+			isotope: 'isotope-layout',
+		},
+	},
+} );
