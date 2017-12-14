@@ -25,32 +25,31 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="container">
+		<a class="toggle" href="#navigation"><?php _e( 'Toggle menu', 'aldine' ); ?><span class="toggle__icon"></span></a>
+		<a class="banner__brand" href="<?php echo home_url( '/' ); ?>"><span class="clip"><?php echo get_bloginfo( 'name', 'display' ); ?></span></a>
+		<nav class="banner__navigation" id="navigation">
+			<?php if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) : ?>
+				<a class="banner__navigation--catalog" href="<?php echo home_url( '/catalog' ); ?>">Catalog</a>
+			<?php endif; ?>
+			<?php if ( get_option( 'pb_network_contact_form' ) ) : ?>
+				<a class="banner__navigation--contact" href="#contact">Contact</a>
+			<?php endif; ?>
+			<?php if ( ! is_user_logged_in() ) : ?>
+				<a class="banner__navigation--signin" href="<?php echo wp_login_url(); ?>"><?php _e( 'Sign in', 'aldine' ); ?></a>
+				<span class="banner__navigation--sep">/</span>
+				<a class="banner__navigation--signup" href="<?php echo network_home_url( '/wp-signup.php' ); ?>"><?php _e( 'Sign up', 'aldine' ); ?></a>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pressbooks-aldine' ); ?></button>
-			<?php
-				wp_nav_menu( [
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				] );
-			?>
-		</nav><!-- #site-navigation -->
+				<a class="banner__navigation--admin" href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'aldine' ); ?></a>
+				<span class="banner__navigation--sep">/</span>
+				<a class="banner__navigation--signout" href="<?php echo wp_logout_url(); ?>"><?php _e( 'Sign out', 'aldine' ); ?></a>
+			<?php endif; ?>
+		</nav>
+		<header class="banner__branding">
+			<h1><a href="{{ home_url('/' ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a></h1>
+			<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+		</header>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
