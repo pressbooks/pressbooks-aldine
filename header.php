@@ -58,7 +58,7 @@
 						<?php switch_to_blog( 1 ); echo get_bloginfo( 'name', 'display' ); restore_current_blog(); ?>
 					</span> */ ?>
 				</a>
-				<h1><a href="<?php echo home_url('/' ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a></h1>
+				<h1><a href="<?php echo home_url( '/' ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a></h1>
 				<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 			</div>
 			<div class="header__end-container">
