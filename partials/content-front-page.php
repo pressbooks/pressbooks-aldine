@@ -24,7 +24,7 @@ $next_page = $page + 1;
 
 ?>
 
-<section class="blocks blocks-<?php echo $block_count; ?> w-100">
+<div class="blocks blocks-<?php echo $block_count; ?> w-100">
 <?php if ( is_active_sidebar( 'front-page-block' ) ) :
 	dynamic_sidebar( 'front-page-block' );
 else : ?>
@@ -57,4 +57,4 @@ else : ?>
 		</div>
 	</div>
 <?php endif; ?>
-</section>
+		</div>
