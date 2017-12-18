@@ -196,3 +196,4 @@ add_action( 'wp_enqueue_scripts', 'pressbooks_aldine_scripts' );
 
 add_action( 'customize_register', '\\Aldine\\Customizer\\customize_register' );
 add_action( 'customize_preview_init', '\\Aldine\\Customizer\\customize_preview_js' );
+

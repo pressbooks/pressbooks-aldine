@@ -4,10 +4,10 @@ export default {
 		$( 'body' )
 			.removeClass( 'no-js' )
 			.addClass( 'js' );
-		$( '.toggle' ).click( event => {
+		$( '.js-header-menu-toggle' ).click( event => {
 			event.preventDefault();
-			$( event.currentTarget ).toggleClass( 'toggle--active' );
-			$( '.banner__navigation' ).toggleClass( 'banner__navigation--visible' );
+			$( event.currentTarget ).toggleClass( '--active' );
+			$( '.js-header-nav' ).toggleClass( '--visible' );
 		} );
 	},
 	finalize() {
