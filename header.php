@@ -58,12 +58,12 @@
 						<?php switch_to_blog( 1 ); echo get_bloginfo( 'name', 'display' ); restore_current_blog(); ?>
 					</span> */ ?>
 				</a>
-				<h1><a href="{{ home_url('/' ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a></h1>
+				<h1><a href="<?php echo home_url('/' ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a></h1>
 				<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 			</div>
 			<div class="header__end-container">
 				<nav class="header__nav js-header-nav" id="navigation">
-					<?php if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) : ?>
+					<?php if ( defined( 'PB_PLUGIN_VERSION' ) ) : ?>
 						<a href="<?php echo home_url( '/catalog' ); ?>">Catalog</a>
 					<?php endif; ?>
 					<?php if ( get_option( 'pb_network_contact_form' ) ) : ?>

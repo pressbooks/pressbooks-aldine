@@ -22,7 +22,7 @@ $catalog_data = get_catalog_data( $current_page, 9, $orderby, $license, $subject
 $previous_page = ( $current_page > 1 ) ? $current_page - 1 : 0;
 $next_page = $current_page + 1;
 $licenses = get_catalog_licenses();
-$subject_groups = ( function_exists( '\\Pressbooks\\Metadata\\get_thema_subjects' ) ) ? \Pressbooks\Metadata\get_thema_subjects() : [];
+$subject_groups = ( defined( 'PB_PLUGIN_VERSION' ) ) ? \Pressbooks\Metadata\get_thema_subjects() : [];
 
 ?>
 

@@ -94,7 +94,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'settings' => 'pb_network_twitter',
 	]);
 
-	if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) {
+	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 		$wp_customize->add_section('pb_front_page_catalog', [
 			'title' => __( 'Front Page Catalog', 'pressbooks-aldine' ),
 			'priority' => 25,

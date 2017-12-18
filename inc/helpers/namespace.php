@@ -30,7 +30,7 @@ function get_block_count() {
  * @param string $subject
  */
 function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
-	if ( function_exists( 'pb_meets_minimum_requirements' ) && pb_meets_minimum_requirements() ) {
+	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 			$request = new \WP_REST_Request( 'GET', '/pressbooks/v2/books' );
 			$request->set_query_params([
 				'page' => $page,
@@ -67,7 +67,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
  * @return array
  */
 function get_catalog_licenses() {
-	if ( class_exists( '\\Pressbooks\\Licensing' ) ) {
+	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 		$licenses = ( new \Pressbooks\Licensing() )->getSupportedTypes();
 		foreach ( $licenses as $key => $value ) {
 			$licenses[ $key ] = preg_replace( '/\([^)]+\)/', '', $value['desc'] );
