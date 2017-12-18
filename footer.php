@@ -73,7 +73,7 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 	</div><!-- .container -->
 </footer><!-- .footer -->
 
-<?php get_template_part( 'content', 'accessibility-toolbar' ); ?>
+<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 
 <?php wp_footer(); ?>
 
