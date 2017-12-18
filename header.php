@@ -71,7 +71,7 @@
 					<?php endif; ?>
 					<?php if ( ! is_user_logged_in() ) : ?>
 						<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-aldine' ) ?></a>
-						<?php if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ] ) ) : ?>
+						<?php if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) : ?>
 							<a href="<?php echo network_home_url( '/wp-signup.php' ); ?>"><?php _e( 'Sign up', 'pressbooks-aldine' ); ?></a>
 						<?php endif; ?>
 					<?php else : ?>
