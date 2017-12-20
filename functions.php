@@ -36,13 +36,16 @@ foreach ( $includes as $include ) {
 }
 require get_template_directory() . '/inc/intervention.php';
 
-add_action( 'admin_init', '\\Aldine\\Activation\\create_default_content' );
+add_action( 'after_switch_theme', '\\Aldine\\Activation\\create_default_content', 10 );
+add_action( 'after_switch_theme', '\\Aldine\\Activation\\create_menus', 11 );
+add_action( 'after_switch_theme', '\\Aldine\\Activation\\assign_menus', 12 );
 add_action( 'admin_bar_init', '\\Aldine\\Actions\\remove_admin_bar_callback' );
 add_action( 'after_setup_theme', '\\Aldine\\Actions\\setup' );
 add_action( 'after_setup_theme', '\\Aldine\\Actions\\content_width', 0 );
 add_action( 'wp_head', '\\Aldine\\Actions\\output_custom_colors' );
 add_filter( 'body_class', '\\Aldine\\Filters\\body_classes' );
 add_filter( 'excerpt_more', '\\Aldine\\Filters\\excerpt_more' );
+add_filter( 'wp_nav_menu_items', '\\Aldine\\Filters\\adjust_menu', 10, 2 );
 add_action( 'widgets_init', '\\Aldine\\Actions\\widgets_init' );
 add_action( 'wp_enqueue_scripts', '\\Aldine\\Actions\\enqueue_assets' );
 add_action( 'customize_register', '\\Aldine\\Customizer\\customize_register' );

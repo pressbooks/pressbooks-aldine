@@ -33,7 +33,65 @@ function body_classes( array $classes ) {
 
 /**
  * Customize excerpt.
+ *
+ * @return string
  */
 function excerpt_more() {
 	return ' &hellip; <a href="' . get_permalink() . '">' . __( 'Continued', 'pressbooks-aldine' ) . '</a>';
+}
+
+/**
+ * Add things to the menu.
+ *
+ * @param string $items
+ * @param object $args
+ * @return string
+ */
+
+function adjust_menu( $items, $args ) {
+	if ( $args->theme_location === 'primary-menu' ) {
+		if ( ! is_front_page() ) {
+			$items = sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				'/',
+				__( 'Home', 'pressbooks-aldine' )
+			) . $items;
+		}
+		if ( get_option( 'pb_network_contact_form' ) ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				'#contact',
+				__( 'Contact', 'pressbooks-aldine' )
+			);
+		}
+		if ( ! is_user_logged_in() ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				wp_login_url( get_permalink() ),
+				__( 'Sign in', 'pressbooks-aldine' )
+			);
+			if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) {
+				$items .= sprintf(
+					'<li><a href="%1$s">%2$s</a></li>',
+					network_home_url( '/wp-signup.php' ),
+					__( 'Sign up', 'pressbooks-aldine' )
+				);
+			}
+		} else {
+			if ( is_super_admin() || is_user_member_of_blog() ) {
+				$items .= sprintf(
+					'<li><a href="%1$s">%2$s</a></li>',
+					admin_url(),
+					__( 'Admin', 'pressbooks-aldine' )
+				);
+			}
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				wp_logout_url( get_permalink() ),
+				__( 'Sign out', 'pressbooks-aldine' )
+			);
+		}
+	}
+
+	return $items;
 }

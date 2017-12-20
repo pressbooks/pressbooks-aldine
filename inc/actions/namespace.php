@@ -40,9 +40,10 @@ function setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( [
-		'network-footer-menu' => __( 'Network Footer Menu', 'pressbooks-aldine' ),
+		'primary-menu' => __( 'Primary Menu', 'pressbooks-aldine' ),
+		'network-footer-menu' => __( 'Footer Menu', 'pressbooks-aldine' ),
 	] );
 
 	/*

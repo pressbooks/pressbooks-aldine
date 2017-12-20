@@ -64,3 +64,107 @@ function create_default_content() {
 		add_option( 'pb_aldine_activated', 1 );
 	}
 }
+
+/**
+ * Create default primary and footer menus.
+ */
+function create_menus() {
+	$menu_name = __( 'Primary Menu', 'pressbooks-aldine' );
+
+	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
+		$menu_id = wp_create_nav_menu( $menu_name );
+
+		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
+			wp_update_nav_menu_item(
+				$menu_id,
+				0,
+				[
+					'menu-item-title' => __( 'Catalog', 'pressbooks-aldine' ),
+					'menu-item-type' => 'post_type',
+					'menu-item-object' => 'page',
+					'menu-item-object-id' => $catalog->ID,
+					'menu-item-status' => 'publish',
+				]
+			);
+		}
+	}
+
+	$menu_name = __( 'Footer Menu', 'pressbooks-aldine' );
+
+	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
+		$menu_id = wp_create_nav_menu( $menu_name );
+
+		$about = get_page_by_title( __( 'About', 'pressbooks-aldine' ) );
+		if ( $about ) {
+			wp_update_nav_menu_item(
+				$menu_id,
+				0,
+				[
+					'menu-item-title' => __( 'About', 'pressbooks-aldine' ),
+					'menu-item-type' => 'post_type',
+					'menu-item-object' => 'page',
+					'menu-item-object-id' => $about->ID,
+					'menu-item-status' => 'publish',
+				]
+			);
+		}
+
+		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
+			wp_update_nav_menu_item(
+				$menu_id,
+				0,
+				[
+					'menu-item-title' => __( 'Catalog', 'pressbooks-aldine' ),
+					'menu-item-type' => 'post_type',
+					'menu-item-object' => 'page',
+					'menu-item-object-id' => $catalog->ID,
+					'menu-item-status' => 'publish',
+				]
+			);
+		}
+
+		$help = get_page_by_title( __( 'Help', 'pressbooks-aldine' ) );
+		if ( $help ) {
+			wp_update_nav_menu_item(
+				$menu_id,
+				0,
+				[
+					'menu-item-title' => __( 'Help', 'pressbooks-aldine' ),
+					'menu-item-type' => 'post_type',
+					'menu-item-object' => 'page',
+					'menu-item-object-id' => $help->ID,
+					'menu-item-status' => 'publish',
+				]
+			);
+		}
+	}
+}
+
+/**
+ * Check for presence of menus; if they exist, assign them to their locations.
+ */
+function assign_menus() {
+	$locations = get_theme_mod( 'nav_menu_locations' );
+
+	if ( ! empty( $locations ) ) {
+		foreach ( $locations as $id => $value ) {
+			switch ( $id ) {
+				case 'primary-menu':
+					$menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' );
+				break;
+
+				case 'network-footer-menu':
+					$menu = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
+				break;
+			}
+
+			if ( $menu ) {
+				$locations[ $id ] = $menu->term_id;
+			}
+		}
+
+		set_theme_mod( 'nav_menu_locations', $locations );
+	}
+}

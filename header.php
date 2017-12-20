@@ -72,24 +72,7 @@
 			</div>
 			<div class="header__end-container">
 				<nav class="header__nav js-header-nav" id="navigation">
-					<?php if ( defined( 'PB_PLUGIN_VERSION' ) ) : ?>
-						<a href="<?php echo home_url( '/catalog' ); ?>">Catalog</a>
-					<?php endif; ?>
-					<?php if ( get_option( 'pb_network_contact_form' ) ) : ?>
-						<a class="banner__navigation--contact" href="#contact">Contact</a>
-					<?php endif; ?>
-					<?php if ( ! is_user_logged_in() ) : ?>
-						<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-aldine' ) ?></a>
-						<?php if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) : ?>
-							<a href="<?php echo network_home_url( '/wp-signup.php' ); ?>"><?php _e( 'Sign up', 'pressbooks-aldine' ); ?></a>
-						<?php endif; ?>
-					<?php else : ?>
-						<?php if ( is_super_admin() || is_user_member_of_blog() ) : ?>
-						<a href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'pressbooks-aldine' ); ?></a>
-						<span class="sep">/</span>
-						<?php endif; ?>
-						<a href="<?php echo wp_logout_url( get_permalink() ); ?>"><?php _e( 'Sign out', 'pressbooks-aldine' ); ?></a>
-					<?php endif; ?>
+					<?php wp_nav_menu( [ 'theme_location' => 'primary-menu' ] ); ?>
 				</nav>
 				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 			</div>

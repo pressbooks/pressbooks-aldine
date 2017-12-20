@@ -45,7 +45,7 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 			</div>
 		</div>
 		<div class="network-footer__block network-footer__menu">
-			<?php wp_nav_menu( 'network-footer-menu' ); ?>
+		<?php wp_nav_menu( [ 'theme_location' => 'network-footer-menu' ] ); ?>
 		</div>
 		</section>
 		<section class="footer__pressbooks">
