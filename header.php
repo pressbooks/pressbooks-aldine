@@ -36,47 +36,43 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
 
-	<header id="masthead" class="header header--root" role="banner">
+	<header id="masthead" class="header header--root" role="banner" style="background-image: url(<?php
+	if ( is_front_page() ) {
+		echo( get_header_image() );
+	} else {
+		echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+	} ?>);">
 		<div class="header__inner">
-			<div class="header__start-container">
-				<?php if ( ! is_front_page() ) {?>
-					<a class="header__home" href="<?php echo home_url( '/' ); ?>">Home</a>
-				<?php } ?>
-				<div class="header__search js-search">
-					<a class="icon icon-search js-toggle-search"></a>
-					<div class="header__search__form">
-						<?php get_search_form(); ?>
-					</div>
-				</div>
-			</div>
 			<div class="header__brand">
-				<h1>
-					<a class="header__logo" href="<?php echo network_home_url(); ?>">
-						<?php if ( has_custom_logo() ) { ?>
-							<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-							printf(
-								'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
-								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
-							); ?>
-						<?php } else { ?>
-						<svg class="logo--svg">
-							<use xlink:href="#logo-pressbooks" />
-						</svg><?php }
-						echo get_bloginfo( 'name', 'display' ); ?>
-					</a>
-				</h1>
-				<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
-
+				<a class="header__logo" href="<?php echo network_home_url(); ?>">
+					<?php if ( has_custom_logo() ) { ?>
+						<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+						printf(
+							'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
+							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+							sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+						); ?>
+					<?php } else { ?>
+					<svg class="logo--svg">
+						<use xlink:href="#logo-pressbooks" />
+					</svg>
+					<?php } ?>
+				</a>
 			</div>
-			<div class="header__end-container">
-				<nav class="header__nav js-header-nav" id="navigation">
-					<?php wp_nav_menu( [ 'theme_location' => 'primary-menu' ] ); ?>
-				</nav>
+			<div class="header__nav">
+				<?php wp_nav_menu( [
+					'theme_location' => 'primary-menu',
+					'container' => 'nav',
+					'container_class' => 'js-header-nav',
+					'container_id' => 'navigation',
+					'menu_class' => 'menu--primary',
+				] ); ?>
 				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 			</div>
 		</div>
+		<h1><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
+		<p class="description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

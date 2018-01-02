@@ -91,6 +91,10 @@ function adjust_menu( $items, $args ) {
 				__( 'Sign out', 'pressbooks-aldine' )
 			);
 		}
+		/* @codingStandardsIgnoreStart $items .= sprintf(
+			'<li class="header__search js-search"><a class="icon icon-search js-toggle-search"></a><div class="header__search__form">%s</div></li>',
+			get_search_form( false )
+		); @codingStandardsIgnoreEnd */
 	}
 
 	return $items;
