@@ -61,6 +61,7 @@
 				</a>
 			</div>
 			<div class="header__nav">
+				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 				<?php wp_nav_menu( [
 					'theme_location' => 'primary-menu',
 					'container' => 'nav',
@@ -68,7 +69,6 @@
 					'container_id' => 'navigation',
 					'menu_class' => 'menu--primary',
 				] ); ?>
-				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 			</div>
 		</div>
 		<h1><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
