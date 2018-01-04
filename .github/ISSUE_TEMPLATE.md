@@ -1,6 +1,6 @@
 ### Prerequisites
 
-_Check the boxes below by changing them from `[ ]` to `[x]`._
+<!-- Check the boxes below by changing them from [ ] to [x]. -->
 
 * [ ] Can you reproduce the behavior you wish to address with [all plugins except Pressbooks deactivated](http://codex.wordpress.org/Multisite_Network_Administration#Plugins)?
 * [ ] Are you running the [latest version of Pressbooks](http://github.com/pressbooks/pressbooks/releases/latest/), the latest version of [Aldine](http://github.com/pressbooks/pressbooks-aldine/releases/latest/), and the [latest version of WordPress](http://codex.wordpress.org/Upgrading_WordPress)?
@@ -9,18 +9,18 @@ _Check the boxes below by changing them from `[ ]` to `[x]`._
 
 ### Description
 
-[Description of the bug or feature]
+<!-- Description of the bug or feature -->
 
 ### Steps to Reproduce
 
-1. [First Step]
-2. [Second Step]
-3. [and so on...]
+1. <!-- First Step -->
+2. <!-- Second Step -->
+3. <!-- and so on... -->
 
-**Expected behavior:** [What you expected to happen]
+**Expected behavior:** <!-- What you expected to happen -->
 
-**Actual behavior:** [What actually happened]
+**Actual behavior:** <!-- What actually happened -->
 
 ### System Information
 
-_Replace this section with the contents of the Diagnostics page, available at `https://<yourdomain.tld>/<yourbook>/wp-admin/options.php?page=pressbooks_diagnostics` or via the Diagnostics link in the admin footer._
+<!-- Replace this section with the contents of the Diagnostics page, available at `https://<yourdomain.tld>/<yourbook>/wp-admin/options.php?page=pressbooks_diagnostics` or via the Diagnostics link in the admin footer. -->
