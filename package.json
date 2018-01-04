@@ -55,7 +55,6 @@
 	"dependencies": {
 		"aetna": "^0.2.0",
 		"isotope-layout": "^3.0.4",
-		"jquery": "1.12.4 - 3",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",
 		"wpapi": "^1.1.2"

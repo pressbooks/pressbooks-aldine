@@ -145,8 +145,8 @@ function enqueue_assets() {
 		'aldine/script',
 		'PB_A11y',
 		[
-			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
-			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
+			'increase_label' => __( 'Increase Font Size', 'pressbooks-aldine' ),
+			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-aldine' ),
 		]
 	);
 }

@@ -35,44 +35,44 @@
 </svg>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
-
-	<header id="masthead" class="header header--root" role="banner" style="background-image: url(<?php
+	<header class="header" role="banner" style="background-image: url(<?php
 	if ( is_front_page() ) {
 		echo( get_header_image() );
 	} else {
 		echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
 	} ?>);">
-		<div class="header__inner">
+		<div class="header__inside">
 			<div class="header__brand">
-				<a class="header__logo" href="<?php echo network_home_url(); ?>">
+				<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
 					<?php if ( has_custom_logo() ) { ?>
 						<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 						printf(
-							'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
+							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
 							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 							sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 						); ?>
 					<?php } else { ?>
-					<svg class="logo--svg">
+					<svg class="header__logo--svg">
 						<use xlink:href="#logo-pressbooks" />
 					</svg>
 					<?php } ?>
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<?php wp_nav_menu( [
 					'theme_location' => 'primary-menu',
 					'container' => 'nav',
 					'container_class' => 'js-header-nav',
 					'container_id' => 'navigation',
-					'menu_class' => 'menu--primary',
+					'menu_id' => 'nav-primary-menu',
+					'menu_class' => 'nav--primary',
 				] ); ?>
 			</div>
 		</div>
-		<h1><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
-		<p class="description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
-	</header><!-- #masthead -->
+		<h1 class="header__title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
+		<p class="header__description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+	</header> <!-- .header -->
 
 	<div id="content" class="site-content">

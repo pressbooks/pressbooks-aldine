@@ -25,8 +25,8 @@ function body_classes( array $classes ) {
 
 	/** Clean up class names for custom templates */
 	$classes = array_map( function ( $class ) {
-		return preg_replace( [ '/-php$/', '/^page-template-/' ], '', $class );
-	}, $classes);
+		return preg_replace( [ '/-php$/', '/^page-template-views/' ], '', $class );
+	}, $classes );
 
 	return array_filter( $classes );
 }
@@ -68,13 +68,13 @@ function adjust_menu( $items, $args ) {
 			$items .= sprintf(
 				'<li><a href="%1$s">%2$s</a></li>',
 				wp_login_url( get_permalink() ),
-				__( 'Sign in', 'pressbooks-aldine' )
+				__( 'Sign In', 'pressbooks-aldine' )
 			);
 			if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) {
 				$items .= sprintf(
 					'<li><a href="%1$s">%2$s</a></li>',
 					network_home_url( '/wp-signup.php' ),
-					__( 'Sign up', 'pressbooks-aldine' )
+					__( 'Sign Up', 'pressbooks-aldine' )
 				);
 			}
 		} else {
@@ -88,11 +88,11 @@ function adjust_menu( $items, $args ) {
 			$items .= sprintf(
 				'<li><a href="%1$s">%2$s</a></li>',
 				wp_logout_url( get_permalink() ),
-				__( 'Sign out', 'pressbooks-aldine' )
+				__( 'Sign Out', 'pressbooks-aldine' )
 			);
 		}
 		/* @codingStandardsIgnoreStart $items .= sprintf(
-			'<li class="header__search js-search"><a class="icon icon-search js-toggle-search"></a><div class="header__search__form">%s</div></li>',
+			'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
 			get_search_form( false )
 		); @codingStandardsIgnoreEnd */
 	}
