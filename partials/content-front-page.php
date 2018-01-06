@@ -28,12 +28,12 @@ $next_page = $page + 1;
 <?php if ( is_active_sidebar( 'front-page-block' ) ) :
 	dynamic_sidebar( 'front-page-block' );
 else : ?>
-	<div class="block flex flex-column items-center justify-center p-0 w-100">
-	<div class="inside tc">
-		<h3 class="tc ttu"><?php _e( 'About Pressbooks', 'pressbooks-aldine' ) ?></h3>
-		<p><?php _e( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine' ); ?></p>
-		<a class="button" href="<?php echo network_home_url( '/about/' ); ?>"><?php _e( 'Learn More', 'pressbooks-aldine' ) ?></a>
-	</div>
+	<div class="block">
+		<div class="inside tc">
+			<h3 class="tc ttu"><?php _e( 'About Pressbooks', 'pressbooks-aldine' ) ?></h3>
+			<p><?php _e( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine' ); ?></p>
+			<a class="button" href="<?php echo network_home_url( '/about/' ); ?>"><?php _e( 'Learn More', 'pressbooks-aldine' ) ?></a>
+		</div>
 	</div>
 <?php endif; ?>
 <?php if ( get_option( 'pb_front_page_catalog' ) ) : ?>

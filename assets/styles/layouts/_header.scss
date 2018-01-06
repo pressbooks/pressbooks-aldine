@@ -34,9 +34,17 @@
 }
 
 .page .header {
-  // TODO
+  height: 560px;
+
+  @media #{$breakpoint-large} {
+    height: 880px;
+  }
 }
 
 .page.catalog .header {
-  // TODO
+  height: 381px;
+
+  @media #{$breakpoint-large} {
+    height: 450px;
+  }
 }

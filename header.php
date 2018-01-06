@@ -71,8 +71,10 @@
 				] ); ?>
 			</div>
 		</div>
-		<h1 class="header__title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
-		<p class="header__description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+		<?php if ( is_front_page() ) { ?>
+			<h1 class="header__title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
+			<p class="header__description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+		<?php } ?>
 	</header> <!-- .header -->
 
 	<div id="content" class="site-content">
