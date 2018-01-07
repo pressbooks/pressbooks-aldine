@@ -20,11 +20,12 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 
 	</div><!-- #content -->
 
+	<?php if ( $pb_network_contact_form ) :
+		include( locate_template( 'partials/contact-form.php' ) );
+	endif; ?>
+
 	<footer class="footer<?php echo is_front_page() ? ' footer--home' : ' footer--inside' ?>" role="contentinfo">
 	<div class="footer__inner">
-		<?php if ( $pb_network_contact_form ) :
-			include( locate_template( 'partials/contact-form.php' ) );
-		endif; ?>
 		<div class="footer__network">
 			<div class="footer__network__block">
 				<?php dynamic_sidebar( 'network-footer-block-1' ); ?>

@@ -41,6 +41,16 @@ function excerpt_more() {
 }
 
 /**
+ * Add style select dropdown to TinyMCE.
+ *
+ * @param array $buttons
+ */
+function add_style_select( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+/**
  * Add things to the menu.
  *
  * @param string $items

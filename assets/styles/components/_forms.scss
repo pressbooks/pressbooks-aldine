@@ -15,7 +15,7 @@ textarea {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom: solid 2px $black;
+  border-bottom: solid 2px var(--black, #000);
   padding: 0 0 1em;
   font-size: 0.875rem;
   font-weight: 600;
@@ -26,7 +26,7 @@ textarea {
 
   &:focus {
     outline: none;
-    border-bottom: solid 2px var(--accent, $brand-accent);
+    border-bottom: solid 2px var(--accent);
   }
 }
 
@@ -38,7 +38,7 @@ input[type="submit"] {
   width: rem(354);
 
   ::placeholder {
-    color: $black;
+    color: #000;
   }
 
   &__notice {
@@ -48,11 +48,11 @@ input[type="submit"] {
     font-family: $font-family-sans-serif;
 
     &--error {
-      color: $dark-red;
+      color: #c00;
     }
 
     &--success {
-      color: $dark-green;
+      color: #070;
     }
   }
 
@@ -62,15 +62,36 @@ input[type="submit"] {
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
 
-    &--error > input[type="text"],
-    &--error > input[type="email"],
-    &--error > textarea {
-      border-bottom: solid 2px $dark-red;
+    label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.2s;
     }
 
-    &--error > ::placeholder {
-      color: $dark-red;
+    input,
+    textarea {
+      z-index: 1;
+
+      &:focus,
+      &:valid,
+      &.error {
+        + label {
+          top: 100%;
+          margin-top: -1.25rem;
+          font-size: 0.75rem;
+        }
+      }
+      &.error {
+        border-bottom: solid 2px #c00;
+
+        + label {
+          color: #c00;
+        }
+      }
     }
 
     &:last-child {
