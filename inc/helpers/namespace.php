@@ -131,3 +131,16 @@ function handle_contact_form_submission() {
 	}
 	return;
 }
+
+function has_blocks( $post_id ) {
+	$post_content = get_post_field( 'post_content', $post_id );
+	if ( ! empty( $post_content ) ) {
+		if ( strpos( $post_content, 'block--standard' ) || strpos( $post_content, 'block--alternate' ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	return false;
+}
