@@ -43,11 +43,45 @@ function excerpt_more() {
 /**
  * Add style select dropdown to TinyMCE.
  *
- * @param array $buttons
+ * @param array $buttons The default button array.
+ * @return array The modified array.
  */
 function add_style_select( $buttons ) {
-    array_unshift( $buttons, 'styleselect' );
-    return $buttons;
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+
+/**
+ * Add custom block formats to TinyMCE.
+ *
+ * @param array $init_array The default array.
+ * @return array The modified array.
+ **/
+
+function add_blocks( $init_array ) {
+	$style_formats = [
+		[
+			'title' => __( 'Standard Block', 'pressbooks-aldine' ),
+			'block' => 'div',
+			'classes' => [ 'block', 'block--standard' ],
+			'wrapper' => true,
+		],
+		[
+			'title' => __( 'Alternate Block', 'pressbooks-aldine' ),
+			'block' => 'div',
+			'classes' => [ 'block', 'block--alternate' ],
+			'wrapper' => true,
+		],
+		[
+			'title' => __( 'Link Button', 'pressbooks-aldine' ),
+			'selector' => 'a',
+			'classes' => 'button',
+		],
+	];
+
+	$init_array['style_formats'] = json_encode( $style_formats );
+
+	return $init_array;
 }
 
 /**

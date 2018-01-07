@@ -35,6 +35,7 @@ mix.browserSync( {
 
 // Sass
 mix.sass( `${assets}/styles/aldine.scss`, `${dist}/styles/aldine.css` );
+mix.sass( `${assets}/styles/editor.scss`, `${dist}/styles/editor.css` );
 
 // Javascript
 mix.autoload( { jquery: [ '$', 'window.jQuery', 'jQuery' ] } );

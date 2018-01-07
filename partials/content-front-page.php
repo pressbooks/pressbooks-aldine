@@ -11,10 +11,8 @@
 
 <?php
 
-use function Aldine\Helpers\get_block_count;
 use function Aldine\Helpers\get_catalog_data;
 
-$block_count = get_block_count();
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
 $latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) );
 $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
@@ -24,18 +22,15 @@ $next_page = $page + 1;
 
 ?>
 
-<div class="blocks blocks-<?php echo $block_count; ?> w-100">
-<?php if ( is_active_sidebar( 'front-page-block' ) ) :
-	dynamic_sidebar( 'front-page-block' );
-else : ?>
-	<div class="block">
-		<div class="inside tc">
-			<h3 class="tc ttu"><?php _e( 'About Pressbooks', 'pressbooks-aldine' ) ?></h3>
-			<p><?php _e( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine' ); ?></p>
-			<a class="button" href="<?php echo network_home_url( '/about/' ); ?>"><?php _e( 'Learn More', 'pressbooks-aldine' ) ?></a>
-		</div>
-	</div>
-<?php endif; ?>
+<div class="blarg">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="entry-content">
+			<?php
+				the_content();
+			?>
+		</div><!-- .entry-content -->
+	</article><!-- #post-<?php the_ID(); ?> -->
+
 <?php if ( get_option( 'pb_front_page_catalog' ) ) : ?>
 	<div id="latest-titles" class="latest-books">
 		<h3><?php echo $latest_books_title; ?></h3>
@@ -57,4 +52,4 @@ else : ?>
 		</div>
 	</div>
 <?php endif; ?>
-		</div>
+</div>

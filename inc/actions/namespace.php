@@ -98,18 +98,6 @@ function widgets_init() {
 		'after_title'   => '</h2>',
 	];
 	register_sidebar( [
-		'name'          => __( 'Front Page Content', 'pressbooks-aldine' ),
-		'description'   => __(
-			'Add content for your network&rsquo;s front page here. Currently, only text widgets are supported.',
-			'aldine'
-		),
-		'id'            => 'front-page-block',
-		'before_widget' => '<div class="block %1$s %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	] );
-	register_sidebar( [
 		'name'          => __( 'Network Footer Block 1', 'pressbooks-aldine' ),
 		'description'   => __(
 			'Add content for your network&rsquo;s customizeable footer here.
@@ -149,6 +137,15 @@ function enqueue_assets() {
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-aldine' ),
 		]
 	);
+}
+
+/**
+ * Add editor styles.
+ */
+function add_editor_styles() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
 }
 
 /**

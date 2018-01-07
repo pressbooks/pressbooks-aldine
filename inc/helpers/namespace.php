@@ -8,19 +8,6 @@
 namespace Aldine\Helpers;
 
 /**
- * Get block count.
- *
- * @return int
- */
-function get_block_count() {
-	global $_wp_sidebars_widgets;
-	if ( ! empty( $_wp_sidebars_widgets['front-page-block'] ) ) {
-		return count( $_wp_sidebars_widgets['front-page-block'] );
-	}
-	return 1;
-}
-
-/**
  * Get catalog data.
  *
  * @param int $page
