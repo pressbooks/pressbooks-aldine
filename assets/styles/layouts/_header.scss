@@ -31,7 +31,8 @@
   height: 540px;
 
   @media #{$breakpoint-large} {
-    // TODO
+    height: 300px;
+    margin: 120px 0;
   }
 
   .entry-title {
