@@ -65,6 +65,75 @@ function get_catalog_licenses() {
 }
 
 /**
+ * Return the default (non-page) menu items.
+ *
+ * @param string $items
+ * @return string $items
+ */
+function get_default_menu( $items = '' ) {
+	if ( ! is_front_page() ) {
+		$items = sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			'/',
+			__( 'Home', 'pressbooks-aldine' )
+		) . $items;
+	}
+	if ( get_option( 'pb_network_contact_form' ) ) {
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			'#contact',
+			__( 'Contact', 'pressbooks-aldine' )
+		);
+	}
+	if ( ! is_user_logged_in() ) {
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			wp_login_url( get_permalink() ),
+			__( 'Sign In', 'pressbooks-aldine' )
+		);
+		if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				network_home_url( '/wp-signup.php' ),
+				__( 'Sign Up', 'pressbooks-aldine' )
+			);
+		}
+	} else {
+		if ( is_super_admin() || is_user_member_of_blog() ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				admin_url(),
+				__( 'Admin', 'pressbooks-aldine' )
+			);
+		}
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			wp_logout_url( get_permalink() ),
+			__( 'Sign Out', 'pressbooks-aldine' )
+		);
+	}
+	/* @codingStandardsIgnoreStart $items .= sprintf(
+		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
+		get_search_form( false )
+	); @codingStandardsIgnoreEnd */
+
+	return $items;
+}
+
+/**
+ * Echo the default menu.
+ *
+ * @param string $items
+ * @return null
+ */
+function default_menu( $args = [], $items = '' ) {
+	printf(
+		"<{$args['container']} id='{$args['container_id']}' class='{$args['container_class']}'><ul id='{$args['menu_id']}' class='{$args['menu_class']}'>%s</ul></{$args['container']}>",
+		get_default_menu( $items )
+	);
+}
+
+/**
  *
  * Handler for contact form submissions.
  *

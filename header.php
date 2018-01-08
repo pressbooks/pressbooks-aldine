@@ -68,6 +68,7 @@
 				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<?php wp_nav_menu( [
 					'theme_location' => 'primary-menu',
+					'fallback_cb' => '\Aldine\Helpers\default_menu',
 					'container' => 'nav',
 					'container_class' => 'js-header-nav',
 					'container_id' => 'navigation',
