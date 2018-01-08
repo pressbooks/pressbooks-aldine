@@ -23,35 +23,54 @@ $next_page = $page + 1;
 
 ?>
 
-<div class="blarg">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php $classes = ( has_blocks( get_the_ID() ) ) ? 'entry-content blocks' : 'entry-content'; ?>
-		<div class="<?php echo $classes; ?>">
-			<?php
-				the_content();
-			?>
-		</div><!-- .entry-content -->
-	</article><!-- #post-<?php the_ID(); ?> -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
+		<p class="entry-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+	</header><!-- .entry-header -->
+
+	<?php $classes = ( has_blocks( get_the_ID() ) ) ? 'entry-content blocks' : 'entry-content'; ?>
+	<div class="<?php echo $classes; ?>">
+		<?php
+			the_content();
+		?>
+	</div><!-- .entry-content -->
+</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php if ( get_option( 'pb_front_page_catalog' ) ) : ?>
-	<div id="latest-titles" class="latest-books">
-		<h3><?php echo $latest_books_title; ?></h3>
-		<div class="track">
-			<div class="books" data-total-pages="{{ $catalog_data["pages"] }}" <?php if ( $next_page <= $catalog_data['pages'] ) : ?>data-next-page="{{ $next_page }}"<?php endif; ?>>
-			<?php foreach ( $catalog_data['books'] as $book ) :
-				include( locate_template( 'partials/book.php' ) );
-			endforeach; ?>
-			</div>
-			<?php if ( $previous_page ) : ?>
-				<a class="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/page/$previous_page/#latest-titles" ); ?>"></a>
-			<?php endif; ?>
-			<?php if ( $next_page <= $catalog_data['pages'] ) : ?>
-				<a class="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/page/$next_page/#latest-titles" ); ?>"></a>
-			<?php endif; ?>
+<div id="latest-titles" class="latest-books">
+	<h2><?php echo $latest_books_title; ?></h2>
+	<div class="track">
+		<div class="books" data-total-pages="<?php echo $catalog_data['pages']; ?>" <?php if ( $next_page <= $catalog_data['pages'] ) : ?>data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
+		<?php foreach ( $catalog_data['books'] as $book ) :
+			include( locate_template( 'partials/book.php' ) );
+		endforeach; ?>
 		</div>
-		<div class="catalog-link">
-			<a class="button button--outline button--wide" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
+		<?php if ( $previous_page || $next_page ) { ?>
+		<div class="booknav">
+		<?php } ?>
+		<?php if ( $previous_page ) : ?>
+			<a class="previous" rel="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/page/$previous_page/#latest-titles" ); ?>">
+				<span class="screen-reader-text"><?php _e( 'Previous Page', 'pressbooks' ); ?></span>
+				<svg>
+					<use xlink:href="#arrow-left" />
+				</svg>
+			</a>
+		<?php endif; ?>
+		<?php if ( $next_page <= $catalog_data['pages'] ) : ?>
+			<a class="next" rel="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/page/$next_page/#latest-titles" ); ?>">
+				<span class="screen-reader-text"><?php _e( 'Next Page', 'pressbooks' ); ?></span>
+				<svg>
+					<use xlink:href="#arrow-right" />
+				</svg>
+			</a>
+		<?php endif; ?>
+		<?php if ( $previous_page || $next_page ) { ?>
 		</div>
+		<?php } ?>
 	</div>
-<?php endif; ?>
+	<div class="catalog-link">
+		<a class="button button--outline button--wide" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
+	</div>
 </div>
+<?php endif; ?>

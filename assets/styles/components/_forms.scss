@@ -1,3 +1,5 @@
+
+
 label {
   margin-bottom: 1rem;
   font-family: $font-family-sans-serif;
@@ -45,8 +47,10 @@ input[type="submit"] {
   &__notice {
     margin-bottom: 2rem;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+    text-align: center;
 
     &--error {
       color: #c00;
@@ -71,18 +75,18 @@ input[type="submit"] {
       left: 0;
       top: 0;
       transition: 0.2s;
+      background: #f6f6f6;
+      line-height: 1;
     }
 
     input,
     textarea {
-      z-index: 1;
-
       &:focus,
       &:valid,
       &.error {
         + label {
           top: 100%;
-          margin-top: -1.25rem;
+          margin-top: -1.125rem;
           font-size: 0.75rem;
         }
       }
@@ -113,7 +117,6 @@ input[type="submit"] {
   background: #f6f6f6;
 
   h2 {
-    font-size: rem(24);
     margin-bottom: rem(40);
   }
 }

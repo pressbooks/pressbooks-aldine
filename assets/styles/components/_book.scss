@@ -1,0 +1,59 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 22.9375rem;
+  height: 24.125rem;
+  margin: 0 0 2rem;
+  padding: 1.5rem 1.85rem 2.1875rem;
+  border: solid 2px var(--accent, $brand-accent);
+  background: var(--accent, $brand-accent);
+
+  a {
+    margin: 0;
+    font-family: $font-family-sans-serif;
+    color: var(--accent-fg, #fff);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &__subject {
+    height: 4.625rem;
+    margin: 0;
+    font-size: rem(24);
+    text-align: center;
+  }
+
+  &__title {
+    height: 13rem;
+    margin: 0;
+    font-size: rem(30);
+    font-weight: 500;
+    line-height: (40/30);
+    text-align: left;
+  }
+
+  &__read-more {
+    margin: 0;
+    font-size: rem(18);
+    text-align: left;
+
+    a {
+      svg {
+        width: rem(18);
+        height: rem(18);
+        margin-left: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @media #{$breakpoint-large} {
+      margin-bottom: 2rem;
+    }
+  }
+}
