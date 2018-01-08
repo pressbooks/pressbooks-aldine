@@ -73,6 +73,18 @@ function add_blocks( $init_array ) {
 			'wrapper' => true,
 		],
 		[
+			'title' => __( 'Bordered Block', 'pressbooks-aldine' ),
+			'block' => 'div',
+			'classes' => [ 'block', 'block--bordered' ],
+			'wrapper' => true,
+		],
+		[
+			'title' => __( 'Borderless Block', 'pressbooks-aldine' ),
+			'block' => 'div',
+			'classes' => [ 'block', 'block--borderless' ],
+			'wrapper' => true,
+		],
+		[
 			'title' => __( 'Link Button', 'pressbooks-aldine' ),
 			'selector' => 'a',
 			'classes' => 'button',
