@@ -6,13 +6,8 @@
 
 namespace Aldine\Activation;
 
-use ParsedownExtra;
-
 function create_default_content() {
 	if ( ! get_option( 'pb_aldine_activated' ) ) {
-		$extra = new ParsedownExtra();
-		$home = $extra->text( file_get_contents( get_stylesheet_directory() . '/docs/home.md' ) );
-		$help = $extra->text( file_get_contents( get_stylesheet_directory() . '/docs/help.md' ) );
 
 		$default_pages = [
 			'about' => [
