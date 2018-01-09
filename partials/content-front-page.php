@@ -52,7 +52,7 @@ $next_page = $page + 1;
 		<?php if ( $previous_page ) : ?>
 			<a class="previous" rel="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/page/$previous_page/#latest-titles" ); ?>">
 				<span class="screen-reader-text"><?php _e( 'Previous Page', 'pressbooks' ); ?></span>
-				<svg>
+				<svg aria-hidden="true">
 					<use xlink:href="#arrow-left" />
 				</svg>
 			</a>
@@ -60,7 +60,7 @@ $next_page = $page + 1;
 		<?php if ( $next_page <= $catalog_data['pages'] ) : ?>
 			<a class="next" rel="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/page/$next_page/#latest-titles" ); ?>">
 				<span class="screen-reader-text"><?php _e( 'Next Page', 'pressbooks' ); ?></span>
-				<svg>
+				<svg aria-hidden="true">
 					<use xlink:href="#arrow-right" />
 				</svg>
 			</a>

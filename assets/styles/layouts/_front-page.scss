@@ -17,8 +17,10 @@
 
   .booknav {
     width: 100%;
+    padding: 0 1rem;
     @media #{$breakpoint-large} {
       max-width: 22.9375rem;
+      padding: 0;
     }
     margin: 1rem auto 2rem;
     display: flex;
