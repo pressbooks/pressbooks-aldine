@@ -1,6 +1,8 @@
 {
-    "/scripts/aldine.js": "/scripts/aldine.js?id=c8641d03dfb38dc75e0d",
-    "/styles/aldine.css": "/styles/aldine.css?id=f76caf89bff3fa5dbd29",
-    "/styles/editor.css": "/styles/editor.css?id=6e790d6de9d8bda7eabf",
-    "/scripts/customizer.js": "/scripts/customizer.js?id=f1f1f4225cba4c1b35f2"
+    "/scripts/aldine.js": "/scripts/aldine.js?id=efcb42c04ca82ffdf060",
+    "/styles/aldine.css": "/styles/aldine.css?id=3a484b180e7757a8b6c7",
+    "/styles/editor.css": "/styles/editor.css?id=16680c95cc79caed750f",
+    "/styles/blocks/hero-unit/editor.css": "/styles/blocks/hero-unit/editor.css?id=d41d8cd98f00b204e980",
+    "/scripts/customizer.js": "/scripts/customizer.js?id=f1f1f4225cba4c1b35f2",
+    "/scripts/blocks/hero-unit/block.js": "/scripts/blocks/hero-unit/block.js?id=bb2a9d7ae4e646a7919d"
 }

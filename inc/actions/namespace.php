@@ -202,3 +202,20 @@ function output_custom_colors() {
 function remove_admin_bar_callback() {
 	remove_action( 'wp_head', '_admin_bar_bump_cb' );
 }
+
+/**
+ * Enqueue block editor assets.
+ */
+function enqueue_block_editor_assets() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	wp_enqueue_script( 'aldine/hero-unit-block', $assets->getPath( 'scripts/blocks/hero-unit/block.js' ), [
+		'wp-blocks',
+		'wp-i18n',
+		'wp-element',
+	], null );
+	wp_enqueue_style( 'aldine/hero-unit-block', $assets->getPath( 'scripts/blocks/hero-unit/block.css' ), [
+		'wp-blocks',
+	], null );
+}

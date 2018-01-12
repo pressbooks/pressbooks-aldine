@@ -36,13 +36,21 @@ mix.browserSync( {
 // Sass
 mix.sass( `${assets}/styles/aldine.scss`, `${dist}/styles/aldine.css` );
 mix.sass( `${assets}/styles/editor.scss`, `${dist}/styles/editor.css` );
+mix.sass(
+	`${assets}/styles/blocks/hero-unit/editor.scss`,
+	`${dist}/styles/blocks/hero-unit/editor.css`
+);
 
 // Javascript
 mix.autoload( { jquery: [ '$', 'window.jQuery', 'jQuery' ] } );
 
 mix
 	.js( `${assets}/scripts/aldine.js`, `${dist}/scripts` )
-	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` );
+	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
+	.js(
+		`${assets}/scripts/blocks/hero-unit/block.js`,
+		`${dist}/scripts/blocks/hero-unit`
+	);
 
 // Assets
 mix
