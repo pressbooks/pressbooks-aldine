@@ -7,6 +7,8 @@
 
 namespace Aldine\Filters;
 
+use function Aldine\Helpers\has_sections;
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -21,6 +23,11 @@ function body_classes( array $classes ) {
 		if ( ! in_array( basename( get_permalink() ), $classes, true ) ) {
 			$classes[] = basename( get_permalink() );
 		}
+	}
+
+	/** Add .has-sections if page content has sections */
+	if ( is_single() || is_page() && has_sections( get_the_ID() ) ) {
+		$classes[] = 'has-sections';
 	}
 
 	/** Clean up class names for custom templates */
@@ -61,27 +68,27 @@ function add_style_select( $buttons ) {
 function add_blocks( $init_array ) {
 	$style_formats = [
 		[
-			'title' => __( 'Standard Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--standard' ],
+			'classes' => [ 'page-section' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Alternate Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Accent)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--alternate' ],
+			'classes' => [ 'page-section', 'page-section--accent' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Bordered Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Bordered)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--bordered' ],
+			'classes' => [ 'page-section', 'page-section--bordered' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Borderless Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Borderless)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--borderless' ],
+			'classes' => [ 'page-section', 'page-section--borderless' ],
 			'wrapper' => true,
 		],
 		[

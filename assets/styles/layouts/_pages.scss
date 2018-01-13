@@ -1,13 +1,13 @@
-.page:not(.home) article {
-  .entry-header h1 {
-    @extend .h2;
-  }
+// .page:not(.home) article {
+//   .entry-header h1 {
+//     @extend .h2;
+//   }
 
-  @extend .block;
-  text-align: left;
-  width: 100%;
-  max-width: rem(800);
-  margin-top: calc(-80%);
-  margin-left: auto;
-  margin-right: auto;
-}
+//   @extend .page-section;
+//   text-align: left;
+//   width: 100%;
+//   max-width: rem(800);
+//   margin-top: calc(-80%);
+//   margin-left: auto;
+//   margin-right: auto;
+// }

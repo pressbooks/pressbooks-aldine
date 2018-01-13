@@ -11,7 +11,6 @@
 
 <?php
 
-use function Aldine\Helpers\has_blocks;
 use function Aldine\Helpers\get_catalog_data;
 
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
@@ -29,8 +28,7 @@ $next_page = $page + 1;
 		<p class="entry-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 	</header><!-- .entry-header -->
 
-	<?php $classes = ( has_blocks( get_the_ID() ) ) ? 'entry-content blocks' : 'entry-content'; ?>
-	<div class="<?php echo $classes; ?>">
+	<div class="entry-content">
 		<?php
 			the_content();
 		?>

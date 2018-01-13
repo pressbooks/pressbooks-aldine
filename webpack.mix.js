@@ -23,7 +23,7 @@ mix.setResourceRoot('../');
 mix.browserSync({
 	host: 'localhost',
 	proxy: 'https://pressbooks.test',
-	port: 3000,
+	port: 3100,
 	files: [
 		'*.php',
 		`${inc}/**/*.php`,
