@@ -38,39 +38,18 @@ $next_page = $page + 1;
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <?php if ( get_option( 'pb_front_page_catalog' ) ) : ?>
-<div id="latest-titles" class="latest-books">
-	<h2><?php echo $latest_books_title; ?></h2>
-	<div class="track">
-		<div class="books" data-total-pages="<?php echo $catalog_data['pages']; ?>" <?php if ( $next_page <= $catalog_data['pages'] ) : ?>data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
+<div id="latest-books" class="latest-books">
+	<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
+	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>" <?php if ( $next_page <= $catalog_data['pages'] ) : ?>data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
+		<ul class="books">
 		<?php foreach ( $catalog_data['books'] as $book ) :
 			include( locate_template( 'partials/book.php' ) );
 		endforeach; ?>
-		</div>
-		<?php if ( $previous_page || $next_page ) { ?>
-		<div class="booknav">
-		<?php } ?>
-		<?php if ( $previous_page ) : ?>
-			<a class="previous" rel="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/page/$previous_page/#latest-titles" ); ?>">
-				<span class="screen-reader-text"><?php _e( 'Previous Page', 'pressbooks' ); ?></span>
-				<svg aria-hidden="true">
-					<use xlink:href="#arrow-left" />
-				</svg>
-			</a>
-		<?php endif; ?>
-		<?php if ( $next_page <= $catalog_data['pages'] ) : ?>
-			<a class="next" rel="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/page/$next_page/#latest-titles" ); ?>">
-				<span class="screen-reader-text"><?php _e( 'Next Page', 'pressbooks' ); ?></span>
-				<svg aria-hidden="true">
-					<use xlink:href="#arrow-right" />
-				</svg>
-			</a>
-		<?php endif; ?>
-		<?php if ( $previous_page || $next_page ) { ?>
-		</div>
-		<?php } ?>
+		</ul>
+		<?php if ( $previous_page || $next_page ) { include( locate_template( 'partials/paged-navigation.php' ) ); } ?>
 	</div>
-	<div class="catalog-link">
-		<a class="button button--outline button--wide" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
-	</div>
+	<p class="catalog-link">
+		<a class="call-to-action" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
+	</p>
 </div>
 <?php endif; ?>

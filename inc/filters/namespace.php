@@ -85,9 +85,9 @@ function add_blocks( $init_array ) {
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Link Button', 'pressbooks-aldine' ),
-			'selector' => 'a',
-			'classes' => 'button',
+			'title' => __( 'Call to Action', 'pressbooks-aldine' ),
+			'inline' => 'a',
+			'classes' => [ 'call-to-action' ],
 		],
 	];
 

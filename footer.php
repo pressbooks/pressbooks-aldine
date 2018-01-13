@@ -37,12 +37,18 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 					<?php dynamic_sidebar( 'network-footer-block-2' ); ?>
 					<div class="social-media">
 						<?php if ( ! empty( $network_facebook ) ) { ?>
-							<a class="icon icon-facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+								<svg class="icon--svg">
+									<use xlink:href="#facebook" />
+								</svg>
 								<span class="screen-reader-text"><?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 						<?php if ( ! empty( $network_twitter ) ) { ?>
-							<a class="icon icon-twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+								<svg class="icon--svg">
+									<use xlink:href="#twitter" />
+								</svg>
 								<span class="screen-reader-text"><?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
@@ -70,8 +76,17 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 				</ul>
 		  </div>
 		  <div class="footer__pressbooks__social">
-				<a class="icon icon-facebook" href="https://facebook.com/pressbooks2" title="<?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?>"><span class="screen-reader-text"><?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?></span></a>
-				<a class="icon icon-twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>"><span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
+				<a class="facebook" href="https://facebook.com/pressbooks2" title="<?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use xlink:href="#facebook" />
+					</svg>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?></span>
+				</a>
+				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use xlink:href="#twitter" />
+					</svg>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
 			</div>
 
 		</section>

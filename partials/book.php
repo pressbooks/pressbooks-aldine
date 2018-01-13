@@ -2,7 +2,7 @@
 $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', $book['metadata']['datePublished'] ) : '';
 ?>
 
-<div class="book"
+<li class="book"
 <?php if ( $date ) { ?>data-date-published="<?php echo $date; ?>"<?php } ?>
 	data-license="<?php echo ( new \Pressbooks\Licensing() )->getLicenseFromUrl( $book['metadata']['license']['url'] ); ?>"
 	<?php if ( ! empty( $subject ) ) { ?> data-subject="<?php echo $subject ?>"<?php } ?>
@@ -18,4 +18,4 @@ $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', 
   <p class="book__read-more">
 		<a href="<?php echo $book['link']; ?>"><?php _e( 'About this book', 'pressbooks-aldine' ); ?> <svg aria-hidden="true"><use xlink:href="#arrow-right" /></svg></a>
   </p>
-</div>
+</li>
