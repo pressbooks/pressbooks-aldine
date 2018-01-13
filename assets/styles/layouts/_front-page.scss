@@ -6,6 +6,17 @@
   }
 }
 
+.home .entry-content:not(.blocks) {
+  @extend .block;
+  width: 100%;
+  max-width: rem(800);
+  margin: 0 auto;
+
+  @media #{$breakpoint-large} {
+    margin-bottom: 4rem;
+  }
+}
+
 .latest-books {
   padding: 0 0 9.625rem;
 

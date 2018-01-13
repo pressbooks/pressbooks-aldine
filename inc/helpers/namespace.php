@@ -71,13 +71,12 @@ function get_catalog_licenses() {
  * @return string $items
  */
 function get_default_menu( $items = '' ) {
-	if ( ! is_front_page() ) {
-		$items = sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
-			'/',
-			__( 'Home', 'pressbooks-aldine' )
-		) . $items;
-	}
+	$link = ( is_front_page() ) ? network_home_url( '#main' ) : network_home_url( '/' );
+	$items = sprintf(
+		'<li><a href="%1$s">%2$s</a></li>',
+		$link,
+		__( 'Home', 'pressbooks-aldine' )
+	) . $items;
 	if ( get_option( 'pb_network_contact_form' ) ) {
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
