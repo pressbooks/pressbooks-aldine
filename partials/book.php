@@ -12,7 +12,7 @@ $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', 
 		<a href="<?php echo $book['link']; ?>"><?php echo maybe_truncate_string( $book['metadata']['name'] ); ?></a>
 	</p>
 	<?php /* <?php if (isset( $book['metadata']['author'] ) ) { ?>
-  <p class="book__author">
+	<p class="book__author">
 		<?php _e( 'By', 'pressbooks-aldine' ); ?> <?php foreach ( $book['metadata']['author'] as $author ) {
 			echo $author['name'];
 		} ?>

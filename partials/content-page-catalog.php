@@ -42,7 +42,7 @@ $available_subjects = get_available_subjects( $catalog_data );
 				if ( array_key_exists( $key, $available_subjects ) ) : ?>
 				<h3><span class="label"><?php echo $val['label']; ?></span></h3>
 				<?php foreach ( $val['children'] as $k => $v ) :
-					if ( in_array( $k, $available_subjects[$key] ) ) : ?>
+					if ( in_array( $k, $available_subjects[ $key ], true ) ) : ?>
 						<input type="radio" name="subject" id="<?php echo $k; ?>" value="<?php echo $k; ?>" <?php checked( $subject, $k ); ?>>
 						<label for="<?php echo $k; ?>"><span class="label"><?php echo $v; ?></span> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
 					<?php endif; ?>

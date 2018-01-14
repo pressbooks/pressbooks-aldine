@@ -1,3 +1,5 @@
+// stylelint-disable no-descending-specificity
+
 fieldset {
   border-top: solid 2px var(--accent);
   font-family: $font-family-sans-serif;
@@ -211,7 +213,7 @@ fieldset {
     border-bottom: solid 2px var(--accent);
   }
 
-  fieldset div:not(hidden) {
+  fieldset div:not([hidden]) {
     position: absolute;
     width: 100%;
     background: var(--body-bg);
@@ -276,7 +278,7 @@ fieldset {
     margin-bottom: 0;
   }
 
-  fieldset div:not(hidden) {
+  fieldset div:not([hidden]) {
     position: relative;
     border: 0;
   }

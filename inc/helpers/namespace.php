@@ -7,7 +7,7 @@
 
 namespace Aldine\Helpers;
 
-use \Pressbooks\Licensing;
+use Pressbooks\Licensing;
 
 /**
  * Get catalog data.
