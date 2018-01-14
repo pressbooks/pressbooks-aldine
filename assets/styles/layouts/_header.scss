@@ -55,7 +55,7 @@
   }
 }
 
-.page .header {
+.page:not(.home) .header {
   height: 240px;
 
   @media #{$breakpoint-large} {

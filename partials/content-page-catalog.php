@@ -66,11 +66,11 @@ $subject_groups = ( defined( 'PB_PLUGIN_VERSION' ) ) ? \Pressbooks\Metadata\get_
 	</ul>
   </div>
 </div>
-<div class="books">
+<ul class="books">
 	<?php foreach ( $catalog_data['books'] as $book ) :
 		include( locate_template( 'partials/book.php' ) );
 	endforeach; ?>
-</div>
+</ul>
 <?php if ( $catalog_data['pages'] > 1 ) : ?>
 <nav class="catalog-navigation">
 <?php if ( $previous_page ) : ?><a class="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/catalog/page/$previous_page/" ); ?>"><?php _e( 'Previous', 'pressbooks-aldine' ); ?></a><?php endif; ?>
