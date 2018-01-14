@@ -35,6 +35,9 @@
 		<symbol id="twitter" fill="currentColor" viewbox="0 0 512 512"><path d="M161 433c193 0 299-161 299-300v-14c20-15 38-34 52-55-19 9-40 14-60 17 22-13 38-34 46-59-21 13-43 21-67 26-32-35-84-44-126-21s-64 71-53 117c-84-4-163-44-216-110C8 82 22 144 68 175c-17 0-33-5-48-13v1c0 50 36 94 85 104-16 4-32 5-48 2 14 43 54 72 98 73-37 30-83 46-130 45-8 0-17 0-25-1 48 31 104 47 161 47"/></symbol>
 		<symbol id="arrow-right" fill="currentColor" viewBox="0 0 512 512"><path d="M291 32c0 6 3 12 7 17l133 135H23c-13 0-23 11-23 24s10 24 23 24h408L298 367c-4 4-7 10-7 16s3 12 7 17c10 9 24 9 33 0l173-176c9-9 9-23 0-33L331 15c-9-10-23-10-33 0-4 4-7 10-7 17"/></symbol>
 		<symbol id="arrow-left" fill="currentColor" viewBox="0 0 512 512"><path d="M220 45c0 6-3 12-7 17L79 200h410c12 0 23 11 23 25 0 13-11 24-23 24H79l134 138c4 5 7 11 7 17 0 7-3 13-7 18-10 9-24 9-33 0L7 242c-9-10-9-25 0-34L180 26c9-9 23-9 33 0 4 5 7 11 7 19"/></symbol>
+		<symbol id="checkmark" viewBox="0 0 20 16">
+			<polyline stroke="currentColor" stroke-width="3" transform="translate(10.063477, 4.717773) rotate(-45.000000) translate(-10.063477, -4.717773) " points="2.06347656 0.717773438 2.06347656 8.71777344 18.0634766 8.71777344"></polyline>
+		</symbol>
 	</defs>
 </svg>
 <div id="page" class="site">

@@ -39,6 +39,19 @@ function body_classes( array $classes ) {
 }
 
 /**
+ * Add custom query vars for catalog.
+ *
+ * @param array $vars The array of available query variables.
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/query_vars
+ */
+function register_query_vars( $vars ) {
+	$vars[] = 'license';
+	$vars[] = 'subject';
+	return $vars;
+}
+
+/**
  * Customize excerpt.
  *
  * @return string

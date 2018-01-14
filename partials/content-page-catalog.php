@@ -28,44 +28,48 @@ $subject_groups = ( defined( 'PB_PLUGIN_VERSION' ) ) ? \Pressbooks\Metadata\get_
 
 <?php get_template_part( 'partials/page', 'header' ); ?>
 <section class="network-catalog">
-<div class="controls">
-  <div class="search">
-	<h2><a href="#search"><?php _e( 'Search by titles or keyword', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a></h2>
-  </div>
-  <div class="filters">
-	<a href="#filter"><?php _e( 'Filter by', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
-	<div id="filter" class="filter-groups">
-		<?php foreach ( $subject_groups as $key => $val ) : ?>
-		<div class="<?php echo $key; ?> subjects" id="<?php echo $key; ?>">
-			<a href="#<?php echo $key; ?>"><?php echo $val['label']; ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
-			<ul class="filter-list">
+	<form role="form" class="filter-sort" method="get">
+		<input type="hidden" name="paged" value="<?php echo $current_page; ?>" />
+		<fieldset class="license-filters">
+			<h2><?php _e( 'Filter by License', 'pressbooks-aldine' ); ?></h2>
+			<input type="radio" name="license" id="all-licenses" value="" <?php checked( $license, '' ); ?>>
+			<label for="all-licenses"><?php _e( 'All Licenses', 'pressbooks-aldine' ); ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+			<?php foreach ( $licenses as $key => $value ) : ?>
+				<input type="radio" name="license" id="<?php echo $key; ?>" value="<?php echo $key; ?>" <?php checked( $license, $key ); ?>>
+				<label for="<?php echo $key; ?>"><?php echo $value; ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+			<?php endforeach; ?>
+		</fieldset>
+		<fieldset class="subject-filters">
+			<h2><?php _e( 'Filter by Subject', 'pressbooks-aldine' ); ?></h2>
+			<input type="radio" name="subject" id="all-subjects" value="" <?php checked( $subject, '' ); ?>>
+			<label for="all-subjects"><?php _e( 'All Subjects', 'pressbooks-aldine' ); ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+			<div class="subject-groups">
+			<?php foreach ( $subject_groups as $key => $val ) : ?>
+				<h3><?php echo $val['label']; ?></h3>
 				<?php foreach ( $val['children'] as $k => $v ) :
 					if ( strlen( $k ) === 2 ) : ?>
-				<li><a data-filter="{{ $k }}"><?php echo $v; ?><span class="close">&times;</span></a></li>
+						<input type="radio" name="subject" id="<?php echo $k; ?>" value="<?php echo $k; ?>" <?php checked( $subject, $k ); ?>>
+						<label for="<?php echo $k; ?>"><?php echo $v; ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
 					<?php endif; ?>
 				<?php endforeach; ?>
-			</ul>
-		</div>
-		<?php endforeach; ?>
-	</div>
-	<div class="licenses" id="licenses">
-	  <a href="#licenses"><?php _e( 'Licenses', 'pressbooks-aldine' ); ?><svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
-	  <ul class="filter-list">
-		<?php foreach ( $licenses as $key => $value ) : ?>
-		  <li><a data-filter="<?php echo $key; ?>"><?php echo $value; ?><span class="close">&times;</span></a></li>
-		<?php endforeach; ?>
-	  </ul>
-	</div>
-  </div>
-  <div class="sort">
-	<a href="#sort"><?php _e( 'Sort by', 'pressbooks-aldine' ); ?> <svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="#b01109" fill-rule="evenodd"/></svg></a>
-	<ul id="sort" class="sorts">
-	  <li><a data-sort="title" href="<?php echo "/catalog/page/$current_page/?orderby=title"; ?>"><?php _e( 'Title', 'pressbooks-aldine' ); ?></a></li>
-	  <li><a data-sort="subject" href="<?php echo "/catalog/page/$current_page/?orderby=subject"; ?>"><?php _e( 'Subject', 'pressbooks-aldine' ); ?></a></li>
-	  <li><a data-sort="latest" href="<?php echo "/catalog/page/$current_page/?orderby=latest"; ?>"><?php _e( 'Latest', 'pressbooks-aldine' ); ?></a></li>
-	</ul>
-  </div>
-</div>
+			<?php endforeach; ?>
+			</div>
+		</fieldset>
+		<fieldset class="sorts">
+			<h2><?php _e( 'Sort by', 'pressbooks-aldine' ); ?></h2>
+			<?php
+			$sorts = [
+				'title' => __( 'Title', 'pressbooks-aldine' ),
+				'subject' => __( 'Subject', 'pressbooks-aldine' ),
+				'latest' => __( 'Latest', 'pressbooks-aldine' ),
+			];
+			foreach ( $sorts as $key => $value ) { ?>
+				<input type="radio" name="orderby" id="<?php echo $key ?>" value="<?php echo $key ?>" <?php checked( $orderby, $key ); ?>>
+				<label for="<?php echo $key ?>"><?php echo $value; ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+			<?php } ?>
+		</fieldset>
+		<button type="submit"><?php _e( 'Submit', 'pressbooks-aldine' ); ?></button>
+	</form>
 <ul class="books">
 	<?php foreach ( $catalog_data['books'] as $book ) :
 		include( locate_template( 'partials/book.php' ) );
