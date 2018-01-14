@@ -46,7 +46,7 @@ before_deploy:
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
-  -x *.git* *resources/assets/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
+  -x *.git* *assets/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
   *.github* *.gitignore* *.travis.yml* *package-lock.json* *phpcs.xml* *webpack.mix.js*
   *yarn.lock*
 - cd $TRAVIS_BUILD_DIR
