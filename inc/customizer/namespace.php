@@ -169,17 +169,18 @@ function customize_preview_js() {
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
 	wp_enqueue_script( 'aldine/customizer', $assets->getPath( 'scripts/customizer.js' ), [ 'customize-preview' ], false, null );
-	wp_enqueue_script( 'wcag-validate-customizer-color-contrast', get_template_directory_uri() . '/lib/customizer-validate-wcag-color-contrast/customizer-validate-wcag-color-contrast.js', [ 'customize-controls' ] );
+	// TODO @codingStandardsIgnoreStart
+	// wp_enqueue_script( 'wcag-validate-customizer-color-contrast', get_template_directory_uri() . '/lib/customizer-validate-wcag-color-contrast/customizer-validate-wcag-color-contrast.js', [ 'customize-controls' ] );
 
-	$exports = [
-		'validate_color_contrast' => [
-			'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
-			'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
-		],
-	];
-	wp_scripts()->add_data(
-		'wcag-validate-customizer-color-contrast',
-		'data',
-		sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
-	);
+	// $exports = [
+	// 	'validate_color_contrast' => [
+	// 		'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
+	// 		'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
+	// 	],
+	// ];
+	// wp_scripts()->add_data(
+	// 	'wcag-validate-customizer-color-contrast',
+	// 	'data',
+	// 	sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
+	// ); // @codingStandardsIgnoreEnd
 }

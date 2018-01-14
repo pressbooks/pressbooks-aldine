@@ -1,12 +1,13 @@
 .book {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
   max-width: 22.9375rem;
   height: 24.125rem;
   margin: 0 0 2rem;
-  padding: 1.5rem 1.85rem 2.1875rem;
+  padding: 1.5rem 1rem 2rem;
+  @media #{$breakpoint-not-small} { padding: 1.5rem 1.85rem 2.1875rem; }
   border: solid 2px var(--accent, $brand-accent);
   background: var(--accent, $brand-accent);
 
@@ -18,32 +19,37 @@
     text-align: center;
   }
 
-  &__subject {
-    height: 4.625rem;
+  &__title {
     margin: 0;
-    font-size: rem(24);
-    text-align: center;
+    font-size: 1.25rem;
+    @media #{$breakpoint-not-small} { font-size: 1.75rem; }
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
   }
 
-  &__title {
-    height: 13rem;
+  &__subject {
     margin: 0;
-    font-size: rem(30);
-    font-weight: 500;
-    line-height: (40/30);
+    font-size: 0.8rem;
+    @media #{$breakpoint-not-small} { font-size: 1.25rem; }
     text-align: left;
   }
 
   &__read-more {
     margin: 0;
-    font-size: rem(18);
+    font-size: 1rem;
+    @media #{$breakpoint-not-small} { font-size: 1.125rem; }
     text-align: left;
 
     a {
       svg {
-        width: rem(18);
-        height: rem(18);
-        margin-left: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        @media #{$breakpoint-not-small} {
+          width: 1.125rem;
+          height: 1.125rem;
+          margin-left: 0.5rem;
+        }
         vertical-align: middle;
       }
     }

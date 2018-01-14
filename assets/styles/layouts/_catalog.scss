@@ -32,26 +32,26 @@ fieldset {
 
       &:hover,
       &:focus {
-        color: var(--brand);
+        color: var(--primary);
         background: var(--bg-body);
       }
 
       &:active {
         box-shadow: none;
       }
+    }
+  }
 
-      &[aria-expanded="true"] {
-        color: var(--brand);
+  [aria-expanded="true"] {
+    color: var(--primary);
 
-        svg {
-          transform: rotate(180deg);
-        }
-      }
+    svg {
+      transform: rotate(180deg);
     }
   }
 
   h2 {
-    button[aria-expanded="true"] {
+    [aria-expanded="true"] {
       border-bottom: solid 2px var(--accent);
       background: #fafdff;
     }
@@ -65,6 +65,11 @@ fieldset {
     border: 0 !important;
     overflow: hidden !important;
     clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .label {
+    display: inline-block;
+    width: calc(100% - 2rem);
   }
 
   [type="radio"] + label {
@@ -86,7 +91,7 @@ fieldset {
   }
 
   [type="radio"]:checked + label {
-    color: var(--brand);
+    color: var(--primary);
     font-weight: bold;
 
     svg {
@@ -102,5 +107,194 @@ fieldset {
   &:last-of-type {
     border-bottom: solid 2px var(--accent);
     margin-bottom: 1rem;
+  }
+}
+
+.js .filter-sort [type="submit"] {
+  display: none;
+}
+
+.clear-filters {
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+}
+
+.catalog {
+  .books {
+    width: calc(100% - 1rem);
+    padding: 0;
+    margin: 2rem 0 1rem 1rem;
+  }
+  .book {
+    height: 14.375rem;
+    width: calc(50% - 1rem);
+    margin: 0 1rem 1rem 0;
+  }
+}
+
+.catalog-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: rem(40);
+  margin-bottom: 2rem;
+  align-items: baseline;
+  font-family: $font-family-sans-serif;
+
+  a {
+    color: #000;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+    }
+  }
+
+  .previous,
+  .next {
+    display: block;
+    margin: 0 rem(26);
+    font-family: $font-family-sans-serif;
+    font-size: rem(16);
+
+    svg {
+      width: 1.2rem;
+      height: 1rem;
+      margin: 0.25rem rem(6) 0;
+
+      path {
+        fill: var(--primary);
+      }
+    }
+  }
+
+  .pages {
+    display: inline-block;
+    border-bottom: solid 2px #ececec;
+
+    a,
+    span {
+      display: inline-block;
+      width: rem(41);
+      padding: rem(8) 0;
+      font-size: rem(24);
+      text-align: center;
+    }
+
+    .current {
+      border-bottom: solid rem(6) var(--primary);
+    }
+  }
+}
+
+@media #{$breakpoint-tablet-and-up} {
+  .filter-sort {
+    width: calc(100% - 1rem);
+    height: 7rem;
+    margin: 2rem 0 1rem 1rem;
+  }
+
+  fieldset {
+    width: calc(100% / 3 - 1rem);
+    margin: 0 1rem 1rem 0;
+    float: left;
+    border-top: 0;
+    position: relative;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  fieldset h2 button {
+    border-bottom: solid 2px var(--accent);
+  }
+
+  fieldset div:not(hidden) {
+    position: absolute;
+    width: 100%;
+    background: var(--body-bg);
+    z-index: 99;
+    border-right: rem(1) solid #ececec;
+    border-left: rem(1) solid #ececec;
+    border-bottom: rem(1) solid #ececec;
+
+    .subject-groups {
+      width: calc(100% + 0.125rem);
+      margin-left: -0.06125rem;
+
+      div {
+        position: relative;
+        width: calc(100% + 0.125rem);
+        margin-left: -0.06125rem;
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .clear-filters {
+    width: calc(100% / 3 - 1rem);
+    margin-left: 0;
+  }
+
+  .catalog .book {
+    height: 16.25rem;
+    width: calc(100% / 3 - 1rem);
+    margin: 0 1rem 1rem 0;
+  }
+}
+
+@media #{$breakpoint-large} {
+  .catalog #content {
+    width: 100%;
+    max-width: rem(1440);
+    background: transparent;
+  }
+
+  .catalog .book {
+    max-width: calc(100% / 3 - 1rem);
+  }
+}
+
+@media #{$breakpoint-extra-large} {
+  .catalog #content {
+    width: 100%;
+    max-width: rem(1650);
+  }
+
+  .filter-sort {
+    width: calc(25% - 1rem);
+    height: auto;
+    float: left;
+    margin-left: 0;
+  }
+
+  fieldset {
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  fieldset div:not(hidden) {
+    position: relative;
+    border: 0;
+  }
+
+  .clear-filters {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .catalog .books {
+    width: 75%;
+    float: right;
+    margin-left: 0;
+  }
+
+  .catalog-navigation {
+    width: 75%;
+    float: right;
+    padding-right: 1rem;
   }
 }

@@ -7,6 +7,8 @@
 
 namespace Aldine\Helpers;
 
+use \Pressbooks\Licensing;
+
 /**
  * Get catalog data.
  *
@@ -62,6 +64,43 @@ function get_catalog_licenses() {
 		return $licenses;
 	}
 	return [];
+}
+
+/**
+ * Get licenses currently in use.
+ *
+ * @param array $catalog_data
+ * @return array
+ */
+function get_available_licenses( $catalog_data ) {
+	$licenses = [];
+	$licensing = new \Pressbooks\Licensing();
+
+	foreach ( $catalog_data['books'] as $book ) {
+		$license = $licensing->getLicenseFromUrl( $book['metadata']['license']['url'] );
+		if ( ! in_array( $license, $licenses, true ) ) {
+			$licenses[] = $license;
+		}
+	}
+
+	return $licenses;
+}
+
+/**
+ * Get subjects currently in use.
+ *
+ * @param array $catalog_data
+ * @return array
+ */
+function get_available_subjects( $catalog_data ) {
+	$subjects = [];
+	foreach ( $catalog_data['books'] as $book ) {
+		if ( ! empty( $book['subject'] ) ) {
+			$subjects[ substr( $book['subject'], 0, 1 ) ][] = substr( $book['subject'], 0, 2 );
+		}
+	}
+
+	return $subjects;
 }
 
 /**
@@ -200,6 +239,12 @@ function handle_contact_form_submission() {
 	return;
 }
 
+/**
+ * Does a page have page sections?
+ *
+ * @param int $post_id The page.
+ * @return bool
+ */
 function has_sections( $post_id ) {
 	$post_content = get_post_field( 'post_content', $post_id );
 	if ( ! empty( $post_content ) ) {
@@ -211,4 +256,19 @@ function has_sections( $post_id ) {
 	}
 
 	return false;
+}
+
+/**
+ * Maybe truncate a string to a sensible length.
+ *
+ * @param string $string The string.
+ * @param int $length Max length in characters.
+ *
+ * @return string
+ */
+function maybe_truncate_string( $string, $length = 40 ) {
+	if ( strlen( $string ) > $length ) {
+		return substr( $string, 0, strpos( wordwrap( $string, $length ), "\n" ) ) . '&hellip;';
+	}
+	return $string;
 }
