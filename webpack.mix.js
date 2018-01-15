@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+let mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -16,14 +16,14 @@ const partials = 'partials';
 const assets = 'assets';
 const dist = 'dist';
 
-mix.setPublicPath(dist);
-mix.setResourceRoot('../');
+mix.setPublicPath( dist );
+mix.setResourceRoot( '../' );
 
 // BrowserSync
-mix.browserSync({
-	host: 'localhost',
+mix.browserSync( {
+	host:  'localhost',
 	proxy: 'https://pressbooks.test',
-	port: 3100,
+	port:  3100,
 	files: [
 		'*.php',
 		`${inc}/**/*.php`,
@@ -31,14 +31,14 @@ mix.browserSync({
 		`${dist}/**/*.css`,
 		`${dist}/**/*.js`,
 	],
-});
+} );
 
 // Sass
 mix.sass( `${assets}/styles/aldine.scss`, `${dist}/styles/aldine.css` );
 mix.sass( `${assets}/styles/editor.scss`, `${dist}/styles/editor.css` );
 mix.sass(
-	`${assets}/styles/blocks/hero-unit/editor.scss`,
-	`${dist}/styles/blocks/hero-unit/editor.css`
+	`${assets}/styles/blocks/page-section/editor.scss`,
+	`${dist}/styles/blocks/page-section/editor.css`
 );
 
 // Javascript
@@ -48,34 +48,34 @@ mix
 	.js( `${assets}/scripts/aldine.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
 	.js(
-		`${assets}/scripts/blocks/hero-unit/block.js`,
-		`${dist}/scripts/blocks/hero-unit`
+		`${assets}/scripts/blocks/page-section/block.js`,
+		`${dist}/scripts/blocks/page-section`
 	);
 
 // Assets
 mix
-	.copy(`${assets}/fonts`, `${dist}/fonts`, false)
-	.copy(`${assets}/images`, `${dist}/images`, false);
+	.copy( `${assets}/fonts`, `${dist}/fonts`, false )
+	.copy( `${assets}/images`, `${dist}/images`, false );
 
 // Options
-mix.options({ processCssUrls: false });
+mix.options( { processCssUrls: false } );
 
 // Source maps when not in production.
-if (!mix.inProduction()) {
+if ( ! mix.inProduction() ) {
 	mix.sourceMaps();
 }
 
 // Hash and version files in production.
-if (mix.inProduction()) {
+if ( mix.inProduction() ) {
 	mix.version();
 }
 
 // Add Isotope support.
-mix.webpackConfig({
+mix.webpackConfig( {
 	resolve: {
 		alias: {
 			masonry: 'masonry-layout',
 			isotope: 'isotope-layout',
 		},
 	},
-});
+} );

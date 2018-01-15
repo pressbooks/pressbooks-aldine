@@ -2,8 +2,8 @@
 ( function ( blocks, i18n, element, _ ) {
 	let el = element.createElement;
 
-	wp.blocks.registerBlockType( 'aldine/hero-unit', {
-		title: i18n.__( 'Hero Unit', 'pressbooks-aldine' ),
+	wp.blocks.registerBlockType( 'aldine/page-section', {
+		title: i18n.__( 'Page Section', 'pressbooks-aldine' ),
 
 		icon: 'flag',
 
@@ -33,7 +33,7 @@
 				{ className: props.className },
 				el( blocks.Editable, {
 					tagName:     'h2',
-					className:   'hero__title',
+					className:   'page-section__title',
 					inline:      false,
 					placeholder: i18n.__(
 						'About Pressbooks',
@@ -52,7 +52,7 @@
 				} ),
 				el( blocks.Editable, {
 					tagName:     'p',
-					className:   'hero__content',
+					className:   'page-section__content',
 					inline:      false,
 					placeholder: i18n.__(
 						'Kogi ennui ugh plaid, hella neutra kitsch cloud bread next level twee taiyaki. Live-edge paleo fixie whatever farm-to-table snackwave, meditation fam man braid next level viral. Four loko waistcoat mustache cloud bread activated charcoal food truck pabst roof party ugh kitsch raw denim edison bulb man braid 8-bit try-hard. Activated charcoal put a bird on it tilde meggings farm-to-table coloring book. Before they sold out four dollar toast stumptown actually.',
@@ -71,7 +71,7 @@
 				} ),
 				el(
 					'p',
-					{ classname: 'hero__cta' },
+					{ classname: 'page-section__cta' },
 					el( blocks.Editable, {
 						tagName:     'a',
 						className:   'call-to-action',
@@ -99,17 +99,17 @@
 				{ className: props.className },
 				el(
 					'h2',
-					{ className: 'hero__title' },
+					{ className: 'page-section__title' },
 					attributes.title
 				),
 				el(
 					'p',
-					{ className: 'hero__content' },
+					{ className: 'page-section__content' },
 					attributes.content
 				),
 				el(
 					'p',
-					{ classname: 'hero__cta' },
+					{ classname: 'page-section__cta' },
 					el( 'a', { classname: 'call-to-action' }, attributes.cta )
 				)
 			);
