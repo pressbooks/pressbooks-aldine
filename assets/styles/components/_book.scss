@@ -8,13 +8,13 @@
   margin: 0 0 2rem;
   padding: 1.5rem 1rem 2rem;
   @media #{$breakpoint-not-small} { padding: 1.5rem 1.85rem 2.1875rem; }
-  border: solid 2px var(--accent, $brand-accent);
-  background: var(--accent, $brand-accent);
+  border: solid 2px var(--accent);
+  background: var(--accent);
 
   a {
     margin: 0;
     font-family: $font-family-sans-serif;
-    color: var(--accent-fg, #fff);
+    color: var(--accent-fg);
     text-decoration: none;
     text-align: center;
   }
