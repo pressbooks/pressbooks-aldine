@@ -7,6 +7,8 @@
 
 namespace Aldine\Filters;
 
+use function Aldine\Helpers\has_sections;
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -23,12 +25,30 @@ function body_classes( array $classes ) {
 		}
 	}
 
+	/** Add .has-sections if page content has sections */
+	if ( is_single() || is_page() && has_sections( get_the_ID() ) ) {
+		$classes[] = 'has-sections';
+	}
+
 	/** Clean up class names for custom templates */
 	$classes = array_map( function ( $class ) {
 		return preg_replace( [ '/-php$/', '/^page-template-views/' ], '', $class );
 	}, $classes );
 
 	return array_filter( $classes );
+}
+
+/**
+ * Add custom query vars for catalog.
+ *
+ * @param array $vars The array of available query variables.
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/query_vars
+ */
+function register_query_vars( $vars ) {
+	$vars[] = 'license';
+	$vars[] = 'subject';
+	return $vars;
 }
 
 /**
@@ -61,33 +81,33 @@ function add_style_select( $buttons ) {
 function add_blocks( $init_array ) {
 	$style_formats = [
 		[
-			'title' => __( 'Standard Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--standard' ],
+			'classes' => [ 'page-section' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Alternate Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Accent)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--alternate' ],
+			'classes' => [ 'page-section', 'page-section--accent' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Bordered Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Bordered)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--bordered' ],
+			'classes' => [ 'page-section', 'page-section--bordered' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Borderless Block', 'pressbooks-aldine' ),
+			'title' => __( 'Page Section (Borderless)', 'pressbooks-aldine' ),
 			'block' => 'div',
-			'classes' => [ 'block', 'block--borderless' ],
+			'classes' => [ 'page-section', 'page-section--borderless' ],
 			'wrapper' => true,
 		],
 		[
-			'title' => __( 'Link Button', 'pressbooks-aldine' ),
-			'selector' => 'a',
-			'classes' => 'button',
+			'title' => __( 'Call to Action', 'pressbooks-aldine' ),
+			'inline' => 'a',
+			'classes' => [ 'call-to-action' ],
 		],
 	];
 

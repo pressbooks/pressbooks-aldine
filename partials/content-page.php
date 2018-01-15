@@ -9,19 +9,12 @@
 
 ?>
 
-<?php
-
-use function Aldine\Helpers\has_blocks;
-
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php $classes = ( has_blocks( get_the_ID() ) ) ? 'entry-content blocks' : 'entry-content'; ?>
-	<div class="<?php echo $classes; ?>">
+	<div class="entry-content">
 		<?php
 			the_content();
 

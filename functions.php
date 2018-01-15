@@ -48,6 +48,7 @@ add_filter( 'mce_buttons', '\\Aldine\\Filters\\add_style_select' );
 add_filter( 'tiny_mce_before_init', '\\Aldine\\Filters\\add_blocks' );
 add_filter( 'body_class', '\\Aldine\\Filters\\body_classes' );
 add_filter( 'excerpt_more', '\\Aldine\\Filters\\excerpt_more' );
+add_filter( 'query_vars', '\\Aldine\\Filters\\register_query_vars' );
 add_filter( 'wp_nav_menu_items', '\\Aldine\\Filters\\adjust_menu', 10, 2 );
 add_action( 'widgets_init', '\\Aldine\\Actions\\widgets_init' );
 add_action( 'wp_enqueue_scripts', '\\Aldine\\Actions\\enqueue_assets' );

@@ -7,22 +7,34 @@
 }
 
 .latest-books {
-  padding: 0 0 9.625rem;
+  margin: 4rem 0 8rem;
+
+  .slider {
+    width: 100%;
+    max-width: 22.9375rem;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .books {
+    position: relative;
     display: flex;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
+    z-index: 99;
   }
 
   .booknav {
+    position: absolute;
+    margin-top: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 0 1rem;
-    @media #{$breakpoint-large} {
-      max-width: 22.9375rem;
-      padding: 0;
-    }
-    margin: 1rem auto 2rem;
+    max-width: 28.0625rem;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,18 +42,38 @@
 
   .previous,
   .next {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: rem(25);
+    height: 100%;
+    margin-top: 0;
 
     svg {
       width: rem(25);
       height: rem(25);
+      margin-top: 0;
+
       path {
         fill: var(--primary, $brand);
       }
     }
   }
 
+  .previous {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
   @media #{$breakpoint-large} {
+    .slider {
+      width: calc(100vw - 5.125rem);
+      max-width: 75rem;
+    }
     .books {
       flex-direction: row;
       justify-content: center;
@@ -51,16 +83,21 @@
         margin-left: 1rem;
       }
     }
-  }
 
-  .previous {
-    order: 1;
-    margin-right: auto;
-  }
+    .booknav {
+      width: calc(100% + 4rem);
+      max-width: 100vw;
+      left: -2rem;
+    }
 
-  .next {
-    order: 2;
-    margin-left: auto;
+    .previous,
+    .next {
+      width: rem(32);
+      svg {
+        width: rem(32);
+        height: rem(32);
+      }
+    }
   }
 
   .catalog-link {

@@ -55,18 +55,35 @@
   }
 }
 
-.page .header {
-  height: 560px;
+.page:not(.home) .header {
+  height: 240px;
 
   @media #{$breakpoint-large} {
     height: 880px;
   }
 }
 
-.page.catalog .header {
-  height: 381px;
+.page.catalog {
+  .header {
+    height: 381px;
+  }
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: rem(380);
+    margin-top: rem(-380);
+  }
 
   @media #{$breakpoint-large} {
-    height: 450px;
+    .header {
+      height: 450px;
+    }
+
+    .page-header {
+      height: 381px;
+      margin-top: -381px;
+    }
   }
 }

@@ -7,6 +7,8 @@
 
 namespace Aldine\Helpers;
 
+use Pressbooks\Licensing;
+
 /**
  * Get catalog data.
  *
@@ -65,19 +67,55 @@ function get_catalog_licenses() {
 }
 
 /**
+ * Get licenses currently in use.
+ *
+ * @param array $catalog_data
+ * @return array
+ */
+function get_available_licenses( $catalog_data ) {
+	$licenses = [];
+	$licensing = new \Pressbooks\Licensing();
+
+	foreach ( $catalog_data['books'] as $book ) {
+		$license = $licensing->getLicenseFromUrl( $book['metadata']['license']['url'] );
+		if ( ! in_array( $license, $licenses, true ) ) {
+			$licenses[] = $license;
+		}
+	}
+
+	return $licenses;
+}
+
+/**
+ * Get subjects currently in use.
+ *
+ * @param array $catalog_data
+ * @return array
+ */
+function get_available_subjects( $catalog_data ) {
+	$subjects = [];
+	foreach ( $catalog_data['books'] as $book ) {
+		if ( ! empty( $book['subject'] ) ) {
+			$subjects[ substr( $book['subject'], 0, 1 ) ][] = substr( $book['subject'], 0, 2 );
+		}
+	}
+
+	return $subjects;
+}
+
+/**
  * Return the default (non-page) menu items.
  *
  * @param string $items
  * @return string $items
  */
 function get_default_menu( $items = '' ) {
-	if ( ! is_front_page() ) {
-		$items = sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
-			'/',
-			__( 'Home', 'pressbooks-aldine' )
-		) . $items;
-	}
+	$link = ( is_front_page() ) ? network_home_url( '#main' ) : network_home_url( '/' );
+	$items = sprintf(
+		'<li><a href="%1$s">%2$s</a></li>',
+		$link,
+		__( 'Home', 'pressbooks-aldine' )
+	) . $items;
 	if ( get_option( 'pb_network_contact_form' ) ) {
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
@@ -201,10 +239,16 @@ function handle_contact_form_submission() {
 	return;
 }
 
-function has_blocks( $post_id ) {
+/**
+ * Does a page have page sections?
+ *
+ * @param int $post_id The page.
+ * @return bool
+ */
+function has_sections( $post_id ) {
 	$post_content = get_post_field( 'post_content', $post_id );
 	if ( ! empty( $post_content ) ) {
-		if ( strpos( $post_content, 'block--standard' ) || strpos( $post_content, 'block--alternate' ) ) {
+		if ( strpos( $post_content, 'page-section' ) ) {
 			return true;
 		} else {
 			return false;
@@ -212,4 +256,19 @@ function has_blocks( $post_id ) {
 	}
 
 	return false;
+}
+
+/**
+ * Maybe truncate a string to a sensible length.
+ *
+ * @param string $string The string.
+ * @param int $length Max length in characters.
+ *
+ * @return string
+ */
+function maybe_truncate_string( $string, $length = 40 ) {
+	if ( strlen( $string ) > $length ) {
+		return substr( $string, 0, strpos( wordwrap( $string, $length ), "\n" ) ) . '&hellip;';
+	}
+	return $string;
 }

@@ -6,7 +6,7 @@
 
 **Requires at least:** 4.9.1  
 **Tested up to:** 4.9.1  
-**Stable tag:** 1.0.0-alpha6  
+**Stable tag:** 1.0.0-beta.1  
 **License:** GNU General Public License v2 or later  
 **License URI:** LICENSE  
 
@@ -32,6 +32,9 @@ TK.
 
 ## Changelog 
 
+### 1.0.0-beta.1
+
+* Many changes; rebuilt on \_s.
 
 ### 1.0.0-alpha6 
 * **[FEATURE]** Add Per Soderlind's WCAG validator to customizer.
