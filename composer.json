@@ -1,7 +1,7 @@
 {
 	"name": "pressbooks/pressbooks-aldine",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0+",
+	"license": "GPL-2.0-or-later",
 	"description": "Aldine is the root theme for Pressbooks.",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"authors": [
