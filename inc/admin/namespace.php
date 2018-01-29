@@ -7,6 +7,8 @@ namespace Aldine\Admin;
 
 use PressbooksMix\Assets;
 
+const BLOG_OPTION = 'pressbooks_aldine_in_catalog';
+
 /**
  * @param string $hook
  */
@@ -41,9 +43,9 @@ function update_catalog() {
 	$in_catalog = $_POST['in_catalog'];
 
 	if ( $in_catalog == 'true' ) {
-		update_blog_option( $blog_id, 'in_catalog', 1 );
+		update_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION, 1 );
 	} else {
-		delete_blog_option( $blog_id, 'in_catalog' );
+		delete_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION );
 	}
 }
 
@@ -64,7 +66,7 @@ function catalog_columns( $columns ) {
 function catalog_column( $column, $blog_id ) {
 
 	if ( 'in_catalog' == $column && ! is_main_site( $blog_id ) ) { ?>
-		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" <?php checked( get_blog_option( $blog_id, 'in_catalog' ), 1 ); ?> <?php
+		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
 		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) { ?>disabled="disabled" title="<?php _e( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
 	<?php }
 
