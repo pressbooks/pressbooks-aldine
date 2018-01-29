@@ -22,35 +22,62 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		return [ 'pages' => 0, 'books' => [] ]; // Bail
 	}
 
-	$request = new \WP_REST_Request( 'GET', '/pressbooks/v2/books' );
-	$request->set_query_params(
-		[
-			'page' => $page,
-			'per_page' => $per_page,
-		]
+	/**
+	 * Filter the WP_Site_Query args for the catalog display.
+	 *
+	 * @since 5.0.0
+	 */
+	$args = apply_filters(
+		'pb_aldine_catalog_query_args',
+		/** @deprecated */
+		apply_filters( 'pb_publisher_catalog_query_args', [ 'public' => '1' ] )
 	);
-	$response = rest_do_request( $request );
-	$pages = $response->headers['X-WP-TotalPages'];
-	$data = rest_get_server()->response_to_data( $response, true );
-	$books = [];
-	foreach ( $data as $key => $book ) {
-		if ( ! get_blog_option( $book['id'], \Aldine\Admin\BLOG_OPTION ) ) {
-			continue; // Skip
+
+	/** @var \WP_Site $site */
+
+	$sites = new \WP_Site_Query( $args );
+	$sites_in_catalog = [];
+	foreach ( $sites->sites as $site ) {
+		// TODO: Each call to get_blog_option() is a call to switch_to_blog(). Not good. Use [ https://core.trac.wordpress.org/ticket/37923 ] when available.
+		if ( get_blog_option( $site->blog_id, \Aldine\Admin\BLOG_OPTION ) ) {
+			$sites_in_catalog[] = $site;
 		}
-		$book['title'] = $book['metadata']['name'];
-		$book['date-published'] = $book['metadata']['datePublished'] ?? '';
-		$book['subject'] = $book['metadata']['about'][0]['identifier'] ?? '';
-		$books[] = $book;
 	}
 
 	if ( $orderby === 'latest' ) {
-		$books = wp_list_sort( $books, $orderby, 'desc' );
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, $orderby, 'desc' );
 	} else {
-		$books = wp_list_sort( $books, $orderby );
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, $orderby );
 	}
 
-	return [ 'pages' => $pages, 'books' => $books ];
+	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
+	$offset = ( $page - 1 ) * $per_page;
+	$books = [];
+	foreach ( $sites_in_catalog as $i => $site ) {
+		if ( $i < $offset ) {
+			continue;
+		}
+
+		switch_to_blog( $site->blog_id );
+		$schema = \Pressbooks\Metadata\book_information_to_schema(
+			\Pressbooks\Book::getBookInformation()
+		);
+		$book['title'] = $schema['name'];
+		$book['date-published'] = $schema['datePublished'] ?? '';
+		$book['subject'] = $schema['about'][0]['identifier'] ?? '';
+		$book['link'] = get_blogaddress_by_id( $site->blog_id );
+		$book['metadata'] = $schema;
+		$books[] = $book;
+		restore_current_blog();
+
+		if ( count( $books ) >= $per_page ) {
+			break;
+		}
+	}
+
+	return [ 'pages' => $total_pages, 'books' => $books ];
 }
+
 
 /**
  * Get licenses for catalog display.

@@ -15,10 +15,12 @@ use function Aldine\Helpers\get_catalog_data;
 
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
 $latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) );
-$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-$catalog_data = get_catalog_data( $page, 3 );
-$previous_page = ( $page > 1 ) ? $page - 1 : 0;
-$next_page = $page + 1;
+if ( get_option( 'pb_front_page_catalog' ) ) {
+	$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+	$catalog_data = get_catalog_data( $page, 3 );
+	$previous_page = ( $page > 1 ) ? $page - 1 : 0;
+	$next_page = $page + 1;
+}
 
 ?>
 
