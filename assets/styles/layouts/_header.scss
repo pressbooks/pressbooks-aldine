@@ -12,6 +12,10 @@
 
   @media #{$breakpoint-large} {
     height: 880px;
+    .header__inside {
+      position: relative;
+      z-index: 99;
+    }
   }
 }
 
