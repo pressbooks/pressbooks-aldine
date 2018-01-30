@@ -7,7 +7,10 @@ namespace Aldine\Admin;
 
 use PressbooksMix\Assets;
 
-const BLOG_OPTION = 'pressbooks_aldine_in_catalog';
+/**
+ * Uses old option to provide a simpler upgrade path from pressbooks-publisher theme
+ */
+const BLOG_OPTION = 'pressbooks_publisher_in_catalog';
 
 /**
  * @param string $hook
@@ -66,7 +69,7 @@ function catalog_columns( $columns ) {
 function catalog_column( $column, $blog_id ) {
 
 	if ( 'in_catalog' == $column && ! is_main_site( $blog_id ) ) { ?>
-		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
+		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-labelledby="in_catalog" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
 		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) { ?>disabled="disabled" title="<?php _e( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
 	<?php }
 
