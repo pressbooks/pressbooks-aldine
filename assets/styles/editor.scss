@@ -1,7 +1,8 @@
 @import '~aetna/assets/styles/common/_variables.scss';
 @import '~aetna/assets/styles/common/_global.scss';
 
-#tinymce.wp-editor {
+body#tinymce {
+  margin: 12px !important;
   @import '~aetna/assets/styles/components/_buttons.scss';
   @import '~aetna/assets/styles/layouts/_page-sections.scss';
 }

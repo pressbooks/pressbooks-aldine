@@ -16,7 +16,7 @@ textarea {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom: solid 2px var(--black, #000);
+  border-bottom: solid 2px var(--black);
   border-radius: 0;
   padding: 0 0 1.5em;
   font-size: 1rem;
@@ -40,7 +40,7 @@ input[type="submit"] {
   width: rem(354);
 
   ::placeholder {
-    color: #000;
+    color: var(--black);
   }
 
   &__notice {
@@ -52,11 +52,11 @@ input[type="submit"] {
     text-align: center;
 
     &--error {
-      color: #c00;
+      color: var(--error, #c00);
     }
 
     &--success {
-      color: #070;
+      color: var(--success, #070);
     }
   }
 
