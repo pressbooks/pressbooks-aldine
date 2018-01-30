@@ -1,7 +1,4 @@
-/**
- * catalog-admin.js
- */
-
+/* global ajaxurl, PB_Aldine_Admin */
 ( function ( $ ) {
 	$( document ).ready( function () {
 		$( '.wrap' ).on( 'click', '.notice-dismiss', function () {
