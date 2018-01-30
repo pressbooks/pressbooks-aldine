@@ -45,7 +45,7 @@ function update_catalog() {
 	$blog_id = absint( $_POST['book_id'] );
 	$in_catalog = $_POST['in_catalog'];
 
-	if ( $in_catalog == 'true' ) {
+	if ( $in_catalog === 'true' ) {
 		update_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION, 1 );
 	} else {
 		delete_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION );
@@ -68,9 +68,9 @@ function catalog_columns( $columns ) {
  */
 function catalog_column( $column, $blog_id ) {
 
-	if ( 'in_catalog' == $column && ! is_main_site( $blog_id ) ) { ?>
-		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-labelledby="in_catalog" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
-		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) { ?>disabled="disabled" title="<?php _e( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
+	if ( 'in_catalog' === $column && ! is_main_site( $blog_id ) ) { ?>
+		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-label="<?php echo esc_attr_x( 'Show in Catalog', 'pressbooks-aldine' ); ?>" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
+		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) { ?>disabled="disabled" title="<?php echo esc_attr_x( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
 	<?php }
 
 }

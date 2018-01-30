@@ -7,6 +7,9 @@
 
 namespace Aldine\Helpers;
 
+use Pressbooks\Book;
+use function \Pressbooks\Metadata\book_information_to_schema;
+
 /**
  * @param int $page
  * @param int $per_page
@@ -30,24 +33,32 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	$args = apply_filters(
 		'pb_aldine_catalog_query_args',
 		/** @deprecated */
-		apply_filters( 'pb_publisher_catalog_query_args', [ 'public' => '1' ] )
+		apply_filters(
+			'pb_publisher_catalog_query_args',
+			[
+				'public' => '1',
+				'network_id' => get_network()->site_id,
+			]
+		)
 	);
 
 	/** @var \WP_Site $site */
 
-	$sites = new \WP_Site_Query( $args );
 	$sites_in_catalog = [];
+	$sites = new \WP_Site_Query( $args );
 	foreach ( $sites->sites as $site ) {
-		// TODO: Each call to get_blog_option() is a call to switch_to_blog(). Not good. Use [ https://core.trac.wordpress.org/ticket/37923 ] when available.
-		if ( get_blog_option( $site->blog_id, \Aldine\Admin\BLOG_OPTION ) ) {
+		// TODO: Using switch_to_blog() is a performance problem. Use [ https://core.trac.wordpress.org/ticket/37923 ] when available.
+		switch_to_blog( $site->blog_id );
+		if ( get_option( \Aldine\Admin\BLOG_OPTION ) ) {
+			$site->pb_title = get_bloginfo( 'name' ); // Cool hack! :face_with_rolling_eyes:
 			$sites_in_catalog[] = $site;
 		}
+		restore_current_blog();
 	}
-
 	if ( $orderby === 'latest' ) {
-		$sites_in_catalog = wp_list_sort( $sites_in_catalog, $orderby, 'desc' );
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
 	} else {
-		$sites_in_catalog = wp_list_sort( $sites_in_catalog, $orderby );
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' ); //
 	}
 
 	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
@@ -59,9 +70,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		}
 
 		switch_to_blog( $site->blog_id );
-		$schema = \Pressbooks\Metadata\book_information_to_schema(
-			\Pressbooks\Book::getBookInformation()
-		);
+		$schema = book_information_to_schema( Book::getBookInformation() );
 		$book['title'] = $schema['name'];
 		$book['date-published'] = $schema['datePublished'] ?? '';
 		$book['subject'] = $schema['about'][0]['identifier'] ?? '';
@@ -99,6 +108,7 @@ function get_catalog_licenses() {
  * Get licenses currently in use.
  *
  * @param array $catalog_data
+ *
  * @return array
  */
 function get_available_licenses( $catalog_data ) {
@@ -119,6 +129,7 @@ function get_available_licenses( $catalog_data ) {
  * Get subjects currently in use.
  *
  * @param array $catalog_data
+ *
  * @return array
  */
 function get_available_subjects( $catalog_data ) {
@@ -136,15 +147,16 @@ function get_available_subjects( $catalog_data ) {
  * Return the default (non-page) menu items.
  *
  * @param string $items
+ *
  * @return string $items
  */
 function get_default_menu( $items = '' ) {
 	$link = ( is_front_page() ) ? network_home_url( '#main' ) : network_home_url( '/' );
 	$items = sprintf(
-		'<li><a href="%1$s">%2$s</a></li>',
-		$link,
-		__( 'Home', 'pressbooks-aldine' )
-	) . $items;
+		         '<li><a href="%1$s">%2$s</a></li>',
+		         $link,
+		         __( 'Home', 'pressbooks-aldine' )
+	         ) . $items;
 	if ( get_option( 'pb_network_contact_form' ) ) {
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
@@ -180,9 +192,10 @@ function get_default_menu( $items = '' ) {
 		);
 	}
 	/* @codingStandardsIgnoreStart $items .= sprintf(
-		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
-		get_search_form( false )
-	); @codingStandardsIgnoreEnd */
+	 * '<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
+	 * get_search_form( false )
+	 * ); @codingStandardsIgnoreEnd
+	 */
 
 	return $items;
 }
@@ -191,6 +204,7 @@ function get_default_menu( $items = '' ) {
  * Echo the default menu.
  *
  * @param string $items
+ *
  * @return null
  */
 function default_menu( $args = [], $items = '' ) {
@@ -272,6 +286,7 @@ function handle_contact_form_submission() {
  * Does a page have page sections?
  *
  * @param int $post_id The page.
+ *
  * @return bool
  */
 function has_sections( $post_id ) {
