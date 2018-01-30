@@ -58,7 +58,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	if ( $orderby === 'latest' ) {
 		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
 	} else {
-		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' ); //
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' );
 	}
 
 	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
