@@ -202,3 +202,21 @@ function output_custom_colors() {
 function remove_admin_bar_callback() {
 	remove_action( 'wp_head', '_admin_bar_bump_cb' );
 }
+
+/**
+ * Hide content editor for Catalog page.
+ */
+function hide_catalog_content_editor() {
+	$post_id = isset( $_GET['post'] ) ? $_GET['post'] : null ;
+	if ( ! isset( $post_id ) ) {
+		return;
+	}
+	$pagename = get_the_title( $post_id );
+	if ( $pagename === 'Catalog' ) {
+		add_action( 'edit_form_after_title', function() {
+			printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
+		} );
+		remove_post_type_support( 'page', 'editor' );
+		remove_post_type_support( 'page', 'thumbnail' );
+	}
+}

@@ -45,6 +45,7 @@ add_action( 'after_setup_theme', '\Aldine\Actions\setup' );
 add_action( 'after_setup_theme', '\Aldine\Actions\content_width', 0 );
 add_action( 'wp_head', '\Aldine\Actions\output_custom_colors' );
 add_action( 'init', '\Aldine\Actions\add_editor_styles' );
+add_action( 'admin_init', '\Aldine\Actions\hide_catalog_content_editor' );
 add_filter( 'mce_buttons', '\Aldine\Filters\add_style_select' );
 add_filter( 'tiny_mce_before_init', '\Aldine\Filters\add_blocks' );
 add_filter( 'body_class', '\Aldine\Filters\body_classes' );
