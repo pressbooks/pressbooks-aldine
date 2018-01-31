@@ -37,9 +37,6 @@ foreach ( $includes as $include ) {
 }
 require get_template_directory() . '/inc/intervention.php';
 
-add_action( 'after_switch_theme', '\Aldine\Activation\create_default_content', 10 );
-add_action( 'after_switch_theme', '\Aldine\Activation\create_menus', 11 );
-add_action( 'after_switch_theme', '\Aldine\Activation\assign_menus', 12 );
 add_action( 'admin_bar_init', '\Aldine\Actions\remove_admin_bar_callback' );
 add_action( 'after_setup_theme', '\Aldine\Actions\setup' );
 add_action( 'after_setup_theme', '\Aldine\Actions\content_width', 0 );
