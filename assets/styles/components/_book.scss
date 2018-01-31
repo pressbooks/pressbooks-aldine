@@ -1,7 +1,7 @@
 .book {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   max-width: 22.9375rem;
   height: 24.125rem;
@@ -30,13 +30,15 @@
 
   &__subject {
     margin: 0;
-    font-size: 0.8rem;
-    @media #{$breakpoint-not-small} { font-size: 1.25rem; }
+    font-size: 0.75rem;
+    @media #{$breakpoint-not-small} {
+      font-size: 1rem;
+    }
     text-align: left;
   }
 
   &__read-more {
-    margin: 0;
+    margin: auto 0 0;
     font-size: 1rem;
     @media #{$breakpoint-not-small} { font-size: 1.125rem; }
     text-align: left;
