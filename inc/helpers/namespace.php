@@ -204,14 +204,18 @@ function get_default_menu( $items = '' ) {
  * Echo the default menu.
  *
  * @param string $items
- *
- * @return null
  */
 function default_menu( $args = [], $items = '' ) {
 	printf(
 		"<{$args['container']} id='{$args['container_id']}' class='{$args['container_class']}'><ul id='{$args['menu_id']}' class='{$args['menu_class']}'>%s</ul></{$args['container']}>",
 		get_default_menu( $items )
 	);
+	if ( class_exists( '\PressbooksOAuth\OAuth' ) ) {
+		add_filter( 'pb_oauth_output_button', function( $bool ) {
+			return false;
+		} );
+		do_action( 'pressbooks_oauth_connect' );
+	}
 }
 
 /**
@@ -222,7 +226,7 @@ function default_menu( $args = [], $items = '' ) {
  */
 function handle_contact_form_submission() {
 	if ( ! isset( $_POST['pb_root_contact_form_nonce'] ) || ! wp_verify_nonce( $_POST['pb_root_contact_form_nonce'], 'pb_root_contact_form' ) ) {
-		return; // Security check failed.
+		return false; // Security check failed.
 	}
 	if ( isset( $_POST['submitted'] ) ) {
 		$output = [];
