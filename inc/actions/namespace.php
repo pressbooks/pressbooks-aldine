@@ -81,6 +81,17 @@ function setup() {
 		'flex-height' => true,
 	] );
 
+	// Add starter content
+	add_theme_support( 'starter-content', [
+		'options' => [
+			'show_on_front' => 'page',
+			'page_on_front' => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		],
+		'posts' => \Aldine\Activation\get_starter_posts(),
+		'nav_menus' => \Aldine\Activation\get_starter_nav_menus(),
+	] );
+
 	// Add editor style.
 	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
 }
