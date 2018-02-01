@@ -26,9 +26,9 @@ $available_licenses = get_available_licenses( $catalog_data );
 $subjects = ( defined( 'PB_PLUGIN_VERSION' ) ) ? \Pressbooks\Metadata\get_thema_subjects() : [];
 $available_subjects = get_available_subjects( $catalog_data );
 
-if ( ! empty( $catalog_data['books'] ) ) : ?>
+if ( ! empty( $catalog_data['books'] ) ) :
 
-get_header(); ?>
+	get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
