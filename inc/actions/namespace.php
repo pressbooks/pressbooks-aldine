@@ -225,15 +225,15 @@ function hide_catalog_content_editor() {
  * Enqueue block editor assets.
  */
 function enqueue_block_editor_assets() {
-   $assets = new Assets( 'pressbooks-aldine', 'theme' );
-   $assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-   wp_enqueue_script( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.js' ), [
-	   'wp-blocks',
-	   'wp-i18n',
-	   'wp-element',
-   ], null );
-   wp_enqueue_style( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.css' ), [
-	   'wp-blocks',
-   ], null );
+	wp_enqueue_script( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.js' ), [
+		'wp-blocks',
+		'wp-i18n',
+		'wp-element',
+	], null );
+	wp_enqueue_style( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.css' ), [
+		'wp-blocks',
+	], null );
 }
