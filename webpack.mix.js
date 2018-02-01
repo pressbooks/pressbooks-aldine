@@ -46,6 +46,7 @@ mix.autoload( { jquery: [ '$', 'window.jQuery', 'jQuery' ] } );
 
 mix
 	.js( `${assets}/scripts/aldine.js`, `${dist}/scripts` )
+	.js( `${assets}/scripts/catalog-admin.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
 	.js(
 		`${assets}/scripts/blocks/page-section/block.js`,

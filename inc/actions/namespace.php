@@ -204,18 +204,36 @@ function remove_admin_bar_callback() {
 }
 
 /**
+ * Hide content editor for Catalog page.
+ */
+function hide_catalog_content_editor() {
+	$post_id = $_GET['post'] ?? null ;
+	if ( ! isset( $post_id ) ) {
+		return;
+	}
+	$pagename = get_the_title( $post_id );
+	if ( $pagename === 'Catalog' ) {
+		add_action( 'edit_form_after_title', function() {
+			printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
+		} );
+		remove_post_type_support( 'page', 'editor' );
+		remove_post_type_support( 'page', 'thumbnail' );
+	}
+}
+
+/*
  * Enqueue block editor assets.
  */
 function enqueue_block_editor_assets() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+   $assets = new Assets( 'pressbooks-aldine', 'theme' );
+   $assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-	wp_enqueue_script( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.js' ), [
-		'wp-blocks',
-		'wp-i18n',
-		'wp-element',
-	], null );
-	wp_enqueue_style( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.css' ), [
-		'wp-blocks',
-	], null );
+   wp_enqueue_script( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.js' ), [
+	   'wp-blocks',
+	   'wp-i18n',
+	   'wp-element',
+   ], null );
+   wp_enqueue_style( 'aldine/page-section-block', $assets->getPath( 'scripts/blocks/page-section/block.css' ), [
+	   'wp-blocks',
+   ], null );
 }

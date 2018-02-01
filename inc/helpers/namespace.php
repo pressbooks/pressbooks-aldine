@@ -7,48 +7,86 @@
 
 namespace Aldine\Helpers;
 
-use Pressbooks\Licensing;
+use Pressbooks\Book;
+use function \Pressbooks\Metadata\book_information_to_schema;
 
 /**
- * Get catalog data.
- *
  * @param int $page
  * @param int $per_page
  * @param string $orderby
  * @param string $license
  * @param string $subject
+ *
+ * @return array
  */
 function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
-	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
-			$request = new \WP_REST_Request( 'GET', '/pressbooks/v2/books' );
-			$request->set_query_params([
-				'page' => $page,
-				'per_page' => $per_page,
-			]);
-			$response = rest_do_request( $request );
-			$pages = $response->headers['X-WP-TotalPages'];
-			$data = rest_get_server()->response_to_data( $response, true );
-			$books = [];
-		foreach ( $data as $key => $book ) {
-			$book['title'] = $book['metadata']['name'];
-			$book['date-published'] = ( isset( $book['metadata']['datePublished'] ) ) ?
-				$book['metadata']['datePublished'] :
-				'';
-			$book['subject'] = ( isset( $book['metadata']['about'][0] ) )
-				? $book['metadata']['about'][0]['identifier']
-				: '';
-			$books[] = $book;
-		}
-		if ( $orderby === 'latest' ) {
-			$books = wp_list_sort( $books, $orderby, 'desc' );
-		} else {
-			$books = wp_list_sort( $books, $orderby );
-		}
-		return [ 'pages' => $pages, 'books' => $books ];
-	} else {
-		return [ 'pages' => 0, 'books' => [] ];
+
+	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
+		return [ 'pages' => 0, 'books' => [] ]; // Bail
 	}
+
+	/**
+	 * Filter the WP_Site_Query args for the catalog display.
+	 *
+	 * @since 5.0.0
+	 */
+	$args = apply_filters(
+		'pb_aldine_catalog_query_args',
+		/** @deprecated */
+		apply_filters(
+			'pb_publisher_catalog_query_args',
+			[
+				'public' => '1',
+				'network_id' => get_network()->site_id,
+			]
+		)
+	);
+
+	/** @var \WP_Site $site */
+
+	$sites_in_catalog = [];
+	$sites = new \WP_Site_Query( $args );
+	foreach ( $sites->sites as $site ) {
+		// TODO: Using switch_to_blog() is a performance problem. Use [ https://core.trac.wordpress.org/ticket/37923 ] when available.
+		switch_to_blog( $site->blog_id );
+		if ( get_option( \Aldine\Admin\BLOG_OPTION ) ) {
+			$site->pb_title = get_bloginfo( 'name' ); // Cool hack! :face_with_rolling_eyes:
+			$sites_in_catalog[] = $site;
+		}
+		restore_current_blog();
+	}
+	if ( $orderby === 'latest' ) {
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
+	} else {
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' );
+	}
+
+	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
+	$offset = ( $page - 1 ) * $per_page;
+	$books = [];
+	foreach ( $sites_in_catalog as $i => $site ) {
+		if ( $i < $offset ) {
+			continue;
+		}
+
+		switch_to_blog( $site->blog_id );
+		$schema = book_information_to_schema( Book::getBookInformation() );
+		$book['title'] = $schema['name'];
+		$book['date-published'] = $schema['datePublished'] ?? '';
+		$book['subject'] = $schema['about'][0]['identifier'] ?? '';
+		$book['link'] = get_blogaddress_by_id( $site->blog_id );
+		$book['metadata'] = $schema;
+		$books[] = $book;
+		restore_current_blog();
+
+		if ( count( $books ) >= $per_page ) {
+			break;
+		}
+	}
+
+	return [ 'pages' => $total_pages, 'books' => $books ];
 }
+
 
 /**
  * Get licenses for catalog display.
@@ -70,6 +108,7 @@ function get_catalog_licenses() {
  * Get licenses currently in use.
  *
  * @param array $catalog_data
+ *
  * @return array
  */
 function get_available_licenses( $catalog_data ) {
@@ -90,6 +129,7 @@ function get_available_licenses( $catalog_data ) {
  * Get subjects currently in use.
  *
  * @param array $catalog_data
+ *
  * @return array
  */
 function get_available_subjects( $catalog_data ) {
@@ -107,6 +147,7 @@ function get_available_subjects( $catalog_data ) {
  * Return the default (non-page) menu items.
  *
  * @param string $items
+ *
  * @return string $items
  */
 function get_default_menu( $items = '' ) {
@@ -151,9 +192,10 @@ function get_default_menu( $items = '' ) {
 		);
 	}
 	/* @codingStandardsIgnoreStart $items .= sprintf(
-		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
-		get_search_form( false )
-	); @codingStandardsIgnoreEnd */
+	 * '<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
+	 * get_search_form( false )
+	 * ); @codingStandardsIgnoreEnd
+	 */
 
 	return $items;
 }
@@ -162,13 +204,18 @@ function get_default_menu( $items = '' ) {
  * Echo the default menu.
  *
  * @param string $items
- * @return null
  */
 function default_menu( $args = [], $items = '' ) {
 	printf(
 		"<{$args['container']} id='{$args['container_id']}' class='{$args['container_class']}'><ul id='{$args['menu_id']}' class='{$args['menu_class']}'>%s</ul></{$args['container']}>",
 		get_default_menu( $items )
 	);
+	if ( class_exists( '\PressbooksOAuth\OAuth' ) ) {
+		add_filter( 'pb_oauth_output_button', function( $bool ) {
+			return false;
+		} );
+		do_action( 'pressbooks_oauth_connect' );
+	}
 }
 
 /**
@@ -179,7 +226,7 @@ function default_menu( $args = [], $items = '' ) {
  */
 function handle_contact_form_submission() {
 	if ( ! isset( $_POST['pb_root_contact_form_nonce'] ) || ! wp_verify_nonce( $_POST['pb_root_contact_form_nonce'], 'pb_root_contact_form' ) ) {
-		return; // Security check failed.
+		return false; // Security check failed.
 	}
 	if ( isset( $_POST['submitted'] ) ) {
 		$output = [];
@@ -243,6 +290,7 @@ function handle_contact_form_submission() {
  * Does a page have page sections?
  *
  * @param int $post_id The page.
+ *
  * @return bool
  */
 function has_sections( $post_id ) {
