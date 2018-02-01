@@ -37,7 +37,7 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<?php if ( get_option( 'pb_front_page_catalog' ) ) : ?>
+<?php if ( get_option( 'pb_front_page_catalog' ) && ! empty( $catalog_data['books'] ) ) : ?>
 <div id="latest-books" class="latest-books">
 	<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
 	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>" <?php if ( $next_page <= $catalog_data['pages'] ) : ?>data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
