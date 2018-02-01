@@ -56,6 +56,7 @@ add_action( 'widgets_init', '\Aldine\Actions\widgets_init' );
 add_action( 'wp_enqueue_scripts', '\Aldine\Actions\enqueue_assets' );
 add_action( 'customize_register', '\Aldine\Customizer\customize_register' );
 add_action( 'customize_preview_init', '\Aldine\Customizer\customize_preview_js' );
+add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_color_contrast_validator' );
 
 // Catalog page: Network admin controls
 add_action( 'admin_enqueue_scripts', '\Aldine\Admin\admin_scripts' );

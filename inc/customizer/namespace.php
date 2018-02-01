@@ -12,7 +12,7 @@ use PressbooksMix\Assets;
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -169,18 +169,30 @@ function customize_preview_js() {
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
 	wp_enqueue_script( 'aldine/customizer', $assets->getPath( 'scripts/customizer.js' ), [ 'customize-preview' ], false, null );
-	// TODO @codingStandardsIgnoreStart
-	// wp_enqueue_script( 'wcag-validate-customizer-color-contrast', get_template_directory_uri() . '/lib/customizer-validate-wcag-color-contrast/customizer-validate-wcag-color-contrast.js', [ 'customize-controls' ] );
+}
 
-	// $exports = [
-	// 	'validate_color_contrast' => [
-	// 		'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
-	// 		'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
-	// 	],
-	// ];
-	// wp_scripts()->add_data(
-	// 	'wcag-validate-customizer-color-contrast',
-	// 	'data',
-	// 	sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
-	// ); // @codingStandardsIgnoreEnd
+/**
+ * @see https://github.com/soderlind/customizer-validate-wcag-color-contrast
+ */
+function enqueue_color_contrast_validator() {
+	$handle = 'wcag-validate-customizer-color-contrast';
+
+	wp_enqueue_script(
+		$handle,
+		get_template_directory_uri() . '/lib/customizer-validate-wcag-color-contrast/customizer-validate-wcag-color-contrast.js',
+		[ 'customize-controls' ]
+	);
+
+	$exports = [
+		'validate_color_contrast' => [
+			'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
+			'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
+		],
+	];
+
+	wp_scripts()->add_data(
+		$handle,
+		'data',
+		sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
+	);
 }
