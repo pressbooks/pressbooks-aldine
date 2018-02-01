@@ -207,7 +207,7 @@ function remove_admin_bar_callback() {
  * Hide content editor for Catalog page.
  */
 function hide_catalog_content_editor() {
-	$post_id = isset( $_GET['post'] ) ? $_GET['post'] : null ;
+	$post_id = $_GET['post'] ?? null ;
 	if ( ! isset( $post_id ) ) {
 		return;
 	}
