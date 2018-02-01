@@ -1,9 +1,12 @@
 {
-    "/scripts/aldine.js": "/scripts/aldine.js?id=ba190765ddbe404a6d2d",
-    "/styles/aldine.css": "/styles/aldine.css?id=fa7bbb302e39b92990db",
-    "/styles/editor.css": "/styles/editor.css?id=d96762ab5918cde0c2e1",
-    "/styles/blocks/page-section/editor.css": "/styles/blocks/page-section/editor.css?id=d41d8cd98f00b204e980",
-    "/scripts/customizer.js": "/scripts/customizer.js?id=1b0d3cfc1d85f460af53",
-    "/scripts/catalog-admin.js": "/scripts/catalog-admin.js?id=d25f1240496bd3607338",
-    "/scripts/blocks/page-section/block.js": "/scripts/blocks/page-section/block.js?id=0d61a9b8d8de8775309e"
+	"/scripts/aldine.js": "/scripts/aldine.js?id=1f58027f7de9942caf57",
+	"/styles/aldine.css": "/styles/aldine.css?id=aa47048cd3a38bde8f17",
+	"/styles/editor.css": "/styles/editor.css?id=d96762ab5918cde0c2e1",
+	"/styles/blocks/page-section/editor.css":
+		"/styles/blocks/page-section/editor.css?id=d41d8cd98f00b204e980",
+	"/scripts/customizer.js": "/scripts/customizer.js?id=1b0d3cfc1d85f460af53",
+	"/scripts/catalog-admin.js":
+		"/scripts/catalog-admin.js?id=d25f1240496bd3607338",
+	"/scripts/blocks/page-section/block.js":
+		"/scripts/blocks/page-section/block.js?id=0d61a9b8d8de8775309e"
 }

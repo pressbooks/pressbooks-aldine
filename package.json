@@ -1,6 +1,6 @@
 {
 	"name": "@pressbooks/pressbooks-aldine",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0-beta.2",
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"description": "Aldine is the root theme for Pressbooks.",
@@ -53,7 +53,7 @@
 		"pressbooks-build-tools": "^0.10.0"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.1",
+		"aetna": "^1.0.0-alpha.3",
 		"isotope-layout": "^3.0.5",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",

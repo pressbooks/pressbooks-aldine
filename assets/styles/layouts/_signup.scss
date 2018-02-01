@@ -1,0 +1,42 @@
+.mu_register.wp-signup-container {
+   @extend .page-section;
+   margin: rem(120) auto 0;
+   display: flex;
+   flex-direction: column;
+
+   * {
+     text-align: left;
+   }
+
+   h2 {
+     text-align: center;
+     order: -1;
+   }
+
+   .mu_alert {
+    margin-bottom: 2rem;
+  }
+
+  form {
+    margin-top: 0;
+  }
+
+  input:not([type="submit"]) {
+    padding: 0;
+  }
+
+  .checkbox {
+    margin-right: 1em;
+  }
+
+  .submit {
+    text-align: center;
+  }
+
+  [type="submit"] {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
