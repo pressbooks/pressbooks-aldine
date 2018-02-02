@@ -28,11 +28,15 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	/**
 	 * Filter the WP_Site_Query args for the catalog display.
 	 *
-	 * @since 5.0.0
+	 * @since 1.0.0
 	 */
 	$args = apply_filters(
 		'pb_aldine_catalog_query_args',
-		/** @deprecated */
+		/**
+		 * @deprecated 1.0.0
+		 *
+		 * @see Pressbooks Publisher
+		 */
 		apply_filters(
 			'pb_publisher_catalog_query_args',
 			[
@@ -183,6 +187,14 @@ function get_default_menu( $items = '' ) {
 				'<li><a href="%1$s">%2$s</a></li>',
 				admin_url(),
 				__( 'Admin', 'pressbooks-aldine' )
+			);
+		}
+		$user_info = get_userdata( get_current_user_id() );
+		if ( $user_info->primary_blog ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				get_blogaddress_by_id( $user_info->primary_blog ) . 'wp-admin/index.php?page=pb_catalog',
+				__( 'My Books', 'pressbooks-aldine' )
 			);
 		}
 		$items .= sprintf(
