@@ -170,6 +170,35 @@ function content_width() {
 function output_custom_colors() {
 	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 		echo \Pressbooks\Admin\Branding\get_customizer_colors();
+	} else {
+		$colors = [
+			'primary',
+			'accent',
+			'primary_fg',
+			'accent_fg',
+			'primary_dark',
+			'accent_dark',
+			'primary_alpha',
+			'accent_alpha',
+			'header_text',
+		];
+		$values = [];
+		foreach ( $colors as $k ) {
+			$v = get_option( "pb_network_color_$k" );
+			if ( $v ) {
+				$values[ $k ] = $v;
+			}
+		}
+		$output = '';
+		if ( ! empty( $values ) ) {
+			$output .= '<style type="text/css">:root{';
+			foreach ( $values as $k => $v ) {
+				$k = str_replace( '_', '-', $k );
+				$output .= "--$k:$v;";
+			}
+			$output .= '}</style>';
+		}
+		echo $output;
 	}
 }
 
