@@ -10,7 +10,7 @@
 /**
  * Ensure dependencies are loaded
  */
-if ( ! class_exists( 'PressbooksMix\\Assets' ) ) {
+if ( ! class_exists( 'Spatie\\Color\\Hex' ) ) {
 	$composer = get_template_directory() . '/vendor/autoload.php';
 	if ( ! file_exists( $composer ) ) {
 		wp_die( sprintf(
@@ -54,6 +54,7 @@ add_filter( 'query_vars', '\Aldine\Filters\register_query_vars' );
 add_filter( 'wp_nav_menu_items', '\Aldine\Filters\adjust_menu', 10, 2 );
 add_action( 'widgets_init', '\Aldine\Actions\widgets_init' );
 add_action( 'wp_enqueue_scripts', '\Aldine\Actions\enqueue_assets' );
+add_action( 'updated_option', '\Aldine\Actions\add_color_variants', 10, 3 );
 add_action( 'customize_register', '\Aldine\Customizer\customize_register' );
 add_action( 'customize_preview_init', '\Aldine\Customizer\customize_preview_js' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_color_contrast_validator' );
