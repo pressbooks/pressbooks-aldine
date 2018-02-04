@@ -1,6 +1,6 @@
 {
 	"name": "@pressbooks/pressbooks-aldine",
-	"version": "1.0.0-beta.2",
+	"version": "1.0.0-rc.0",
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"description": "Aldine is the root theme for Pressbooks.",
@@ -41,9 +41,10 @@
 			"cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
+		"lint:scripts":
+			"cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
 		"lint:styles":
-			"node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
+			"cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
 		"test": "npm run -s lint"
 	},
 	"engines": {
@@ -53,7 +54,7 @@
 		"pressbooks-build-tools": "^0.10.0"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.3",
+		"aetna": "^1.0.0-alpha.7",
 		"isotope-layout": "^3.0.5",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",

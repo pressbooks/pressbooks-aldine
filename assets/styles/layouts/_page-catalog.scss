@@ -55,7 +55,7 @@ fieldset {
   h2 {
     [aria-expanded="true"] {
       border-bottom: solid 2px var(--accent);
-      background: #fafdff;
+      background: var(--body-bg-alt);
     }
   }
 
@@ -145,7 +145,7 @@ fieldset {
   font-family: $font-family-sans-serif;
 
   a {
-    color: #000;
+    color: var(--body-text);
 
     &:hover,
     &:focus {

@@ -16,7 +16,7 @@ textarea {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom: solid 2px var(--black, #000);
+  border-bottom: solid 2px var(--body-text);
   border-radius: 0;
   padding: 0 0 1.5em;
   font-size: 1rem;
@@ -52,11 +52,11 @@ input[type="submit"] {
     text-align: center;
 
     &--error {
-      color: var(--error, #c00);
+      color: var(--error);
     }
 
     &--success {
-      color: var(--success, #070);
+      color: var(--success);
     }
   }
 
@@ -89,10 +89,10 @@ input[type="submit"] {
         }
       }
       &.error {
-        border-bottom: solid 2px #c00;
+        border-bottom: solid 2px var(--error);
 
         + label {
-          color: #c00;
+          color: var(--error);
         }
       }
     }
@@ -112,7 +112,7 @@ input[type="submit"] {
   align-items: center;
   width: 100%;
   padding: rem(65) 0 rem(120);
-  background: #f6f6f6;
+  background: var(--body-bg-alt);
 
   h2 {
     margin-bottom: rem(40);
