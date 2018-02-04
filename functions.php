@@ -29,6 +29,7 @@ $includes = [
 	'customizer',
 	'filters',
 	'helpers',
+	'shortcodes',
 	'tags',
 ];
 
@@ -52,12 +53,17 @@ add_filter( 'body_class', '\Aldine\Filters\body_classes' );
 add_filter( 'excerpt_more', '\Aldine\Filters\excerpt_more' );
 add_filter( 'query_vars', '\Aldine\Filters\register_query_vars' );
 add_filter( 'wp_nav_menu_items', '\Aldine\Filters\adjust_menu', 10, 2 );
+add_filter( 'the_content', 'do_shortcode' );
 add_action( 'widgets_init', '\Aldine\Actions\widgets_init' );
 add_action( 'wp_enqueue_scripts', '\Aldine\Actions\enqueue_assets' );
 add_action( 'updated_option', '\Aldine\Actions\add_color_variants', 10, 3 );
 add_action( 'customize_register', '\Aldine\Customizer\customize_register' );
 add_action( 'customize_preview_init', '\Aldine\Customizer\customize_preview_js' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_color_contrast_validator' );
+
+// Shortcodes
+add_shortcode( 'aldine_page_section', '\Aldine\Shortcodes\page_section' );
+add_shortcode( 'aldine_call_to_action', '\Aldine\Shortcodes\call_to_action' );
 
 // Catalog page: Network admin controls
 add_action( 'admin_enqueue_scripts', '\Aldine\Admin\admin_scripts' );

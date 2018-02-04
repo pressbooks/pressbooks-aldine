@@ -308,7 +308,7 @@ function handle_contact_form_submission() {
 function has_sections( $post_id ) {
 	$post_content = get_post_field( 'post_content', $post_id );
 	if ( ! empty( $post_content ) ) {
-		if ( strpos( $post_content, 'page-section' ) ) {
+		if ( strpos( $post_content, 'page-section' ) || strpos( $post_content, 'aldine_page_section' ) ) {
 			return true;
 		} else {
 			return false;
