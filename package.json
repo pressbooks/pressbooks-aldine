@@ -57,7 +57,7 @@
     "pressbooks-build-tools": "^0.10.0"
   },
   "dependencies": {
-    "aetna": "^1.0.0-alpha.10",
+    "aetna": "^1.0.0-alpha.11",
     "isotope-layout": "^3.0.5",
     "jquery-bridget": "^2.0.1",
     "js-cookie": "^2.2.0",
