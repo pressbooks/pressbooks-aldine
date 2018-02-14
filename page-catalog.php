@@ -46,6 +46,21 @@ else :
 	global $wp_query;
 	$wp_query->set_404();
 	status_header( 404 );
-	get_template_part( 404 );
+	get_header();
+	?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<article class="page">
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'No Books Found', 'pressbooks' ); ?></h1>
+				</header>
+				<div class="entry-content" style="text-align:center;">
+					<p><?php _e( 'Your catalog is empty.', 'pressbooks' ); ?></p>
+				</div>
+			</article>
+		</main>
+	</div>
+	<?php
+	get_footer();
 	exit();
 endif;

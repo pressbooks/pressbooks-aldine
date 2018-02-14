@@ -97,6 +97,11 @@ function create_default_content() {
 		wp_delete_post( 2, true );
 		wp_delete_comment( 1, true );
 
+		// Migrate site logo
+		if ( ! empty( $mods['custom_logo'] ) ) {
+			set_theme_mod( 'custom_logo', $mods['custom_logo'] );
+		}
+
 		// Add "pb_aldine_activated" option to enable check above
 		add_option( 'pb_aldine_activated', 1 );
 	}
