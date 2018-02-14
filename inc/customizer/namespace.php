@@ -16,9 +16,10 @@ use PressbooksMix\Assets;
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
 
-	// Remove unsupported WP controls
+	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls
 
 	$wp_customize->remove_control( 'display_header_text' );
+	$wp_customize->remove_control( 'header_textcolor' );
 
 	// Add Pressbooks controls
 
