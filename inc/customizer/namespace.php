@@ -15,6 +15,13 @@ use PressbooksMix\Assets;
  * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
+
+	// Remove unsupported WP controls
+
+	$wp_customize->remove_control( 'display_header_text' );
+
+	// Add Pressbooks controls
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
