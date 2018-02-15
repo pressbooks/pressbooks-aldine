@@ -52,10 +52,10 @@ else :
 		<main id="main" class="site-main">
 			<article class="page">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'No Books Found', 'pressbooks' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'No Books Found', 'pressbooks-aldine' ); ?></h1>
 				</header>
 				<div class="entry-content" style="text-align:center;">
-					<p><?php _e( 'Your catalog is empty.', 'pressbooks' ); ?></p>
+					<p><?php _e( 'No books have been added to the catalog.', 'pressbooks-aldine' ); ?></p>
 				</div>
 			</article>
 		</main>
