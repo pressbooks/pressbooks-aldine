@@ -1,6 +1,6 @@
 {
   "name": "@pressbooks/pressbooks-aldine",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
   "homepage": "https://github.com/pressbooks/pressbooks-aldine/",
   "description": "Aldine is the root theme for Pressbooks.",
