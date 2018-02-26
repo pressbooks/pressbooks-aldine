@@ -10,12 +10,12 @@
 **License:** GNU General Public License v3  
 **License URI:** LICENSE  
 
-Aldine is the root theme for Pressbooks.
+Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
 
 
 ## Description 
 
-Aldine is the root theme for [Pressbooks](https://pressbooks.org), based on [Underscores](https://underscores.me/).
+Aldine is the default theme for the home page of [Pressbooks](https://pressbooks.org) networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher. Aldine is based on [Underscores](https://underscores.me/).
 
 
 ## Installation 

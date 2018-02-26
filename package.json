@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.2",
   "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
   "homepage": "https://github.com/pressbooks/pressbooks-aldine/",
-  "description": "Aldine is the root theme for Pressbooks.",
+  "description": "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
   "keywords": [
     "publishing",
     "catalog",
