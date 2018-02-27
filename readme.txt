@@ -4,17 +4,17 @@
 
 Tags: publishing, catalog, pressbooks, default-theme
 
-Requires at least: 4.9.1
-Tested up to: 4.9.1
-Stable tag: 1.0.0-alpha6
-License: GNU General Public License v2 or later
+Requires at least: 4.9.4
+Tested up to: 4.9.4
+Stable tag: 1.0.0
+License: GNU General Public License v3
 License URI: LICENSE
 
-Aldine is the root theme for Pressbooks.
+Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
 
 == Description ==
 
-Aldine is the root theme for [Pressbooks](https://pressbooks.org), based on [Underscores](https://underscores.me/).
+Aldine is the default theme for the home page of [Pressbooks](https://pressbooks.org) networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher. Aldine is based on [Underscores](https://underscores.me/).
 
 == Installation ==
 
@@ -28,29 +28,19 @@ TK.
 
 == Changelog ==
 
-= 1.0.0-alpha6 =
-* **[FEATURE]** Add Per Soderlind's WCAG validator to customizer.
-* **[FEATURE]** Add Thema subject support.
+=== Aldine 1.0.0 ===
 
-= 1.0.0-alpha5 =
-* **[CORE ENHANCEMENT]** Configure for use without Pressbooks (see #26).
+#### Customisation & Branding
 
-= 1.0.0-alpha4 =
-* **[CORE ENHANCEMENT]** Save `/dist` folder.
-* **[FIX]** Add temporary fix for roots/sage-lib#2.
+Aldine is the new default network theme for Pressbooks installations. Its creation was supported by [Ryerson University](https://ryerson.ca). Designed with customization in mind, it allows network managers to add institutional branding in the form of colours, logos and contact information, as well as custom content in blocks on the front page.
 
-= 1.0.0-alpha3 =
-* **[CORE ENHANCEMENT]** Move required theme files to root (see #24 and #25).
+#### Standalone Catalog
 
-= 1.0.0-alpha2 =
-* **[CORE ENHANCEMENT]** Optimize activation routine.
-* **[FIX]** Remove extra wrapper on catalog and landing pages.
-* **[FIX]** Resolve error when activating without active widgets.
+In addition, Aldine introduces a standalone catalog page that is sortable and filterable by subject or license. Adding books to the catalog is controlled in the [same way as before](https://eduguide.pressbooks.com/chapter/catalogs/).
 
-= 1.0.0-alpha1 =
-* Basic landing page implementation
-* Basic catalog page implementation
-* Basic customizer capabilities
+#### Additional Pages
+
+You can now more easily add additional pages to the network root, such as an “About Us” or “Help” page.
 
 == Credits ==
 

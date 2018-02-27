@@ -12,6 +12,10 @@
 
   @media #{$breakpoint-large} {
     height: 880px;
+    .header__inside {
+      position: relative;
+      z-index: 99;
+    }
   }
 }
 
@@ -31,8 +35,8 @@
   height: 540px;
 
   @media #{$breakpoint-large} {
-    height: 300px;
-    margin: 120px 0;
+    height: 160px;
+    margin: 80px 0 0;
   }
 
   .entry-title {
@@ -49,6 +53,7 @@
   .entry-description {
     font-family: $font-family-sans-serif;
     font-size: 1.125rem;
+    margin-top: 0;
     margin-bottom: 0;
     text-align: center;
     max-width: 100%;

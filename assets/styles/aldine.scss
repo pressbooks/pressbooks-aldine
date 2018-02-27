@@ -12,7 +12,9 @@
 @import "common/global";
 @import "components/book";
 @import "components/forms";
+@import "layouts/footer";
 @import "layouts/header";
-@import "layouts/front-page";
-@import "layouts/pages";
-@import "layouts/catalog";
+@import "layouts/page";
+@import "layouts/page-home";
+@import "layouts/page-catalog";
+@import "layouts/signup";

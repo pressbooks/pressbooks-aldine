@@ -6,6 +6,9 @@
 
 namespace Aldine\Actions;
 
+use Spatie\Color\Hex;
+use Spatie\Color\Rgb;
+use Spatie\Color\Rgba;
 use PressbooksMix\Assets;
 
 /**
@@ -165,35 +168,38 @@ function content_width() {
  * @return void
  */
 function output_custom_colors() {
-	$colors = [
-		'primary',
-		'accent',
-		'primary_fg',
-		'accent_fg',
-		'header_text',
-	];
-
-	$values = [];
-
-	foreach ( $colors as $k ) {
-		$v = get_option( "pb_network_color_$k" );
-		if ( $v ) {
-			$values[ $k ] = $v;
+	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
+		echo \Pressbooks\Admin\Branding\get_customizer_colors();
+	} else {
+		$colors = [
+			'primary',
+			'accent',
+			'primary_fg',
+			'accent_fg',
+			'primary_dark',
+			'accent_dark',
+			'primary_alpha',
+			'accent_alpha',
+			'header_text',
+		];
+		$values = [];
+		foreach ( $colors as $k ) {
+			$v = get_option( "pb_network_color_$k" );
+			if ( $v ) {
+				$values[ $k ] = $v;
+			}
 		}
-	}
-
-	$output = '';
-
-	if ( ! empty( $values ) ) {
-		$output .= '<style type="text/css">:root{';
-		foreach ( $values as $k => $v ) {
-			$k = str_replace( '_', '-', $k );
-			$output .= "--$k:$v;";
+		$output = '';
+		if ( ! empty( $values ) ) {
+			$output .= '<style type="text/css">:root{';
+			foreach ( $values as $k => $v ) {
+				$k = str_replace( '_', '-', $k );
+				$output .= "--$k:$v;";
+			}
+			$output .= '}</style>';
 		}
-		$output .= '}</style>';
+		echo $output;
 	}
-
-	echo $output;
 }
 
 /**
@@ -201,4 +207,44 @@ function output_custom_colors() {
  */
 function remove_admin_bar_callback() {
 	remove_action( 'wp_head', '_admin_bar_bump_cb' );
+}
+
+/**
+ * Hide content editor for Catalog page.
+ */
+function hide_catalog_content_editor() {
+	$post_id = $_GET['post'] ?? null ;
+	if ( ! isset( $post_id ) ) {
+		return;
+	}
+	$pagename = get_the_title( $post_id );
+	if ( $pagename === 'Catalog' ) {
+		add_action( 'edit_form_after_title', function() {
+			printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
+		} );
+		remove_post_type_support( 'page', 'editor' );
+		remove_post_type_support( 'page', 'thumbnail' );
+	}
+}
+
+/**
+ * Add dark and alpha variants for customizer colors on update.
+ *
+ * @since 1.0.0
+ */
+function add_color_variants( $option, $old_value, $value ) {
+	if ( ! in_array( $option, [ 'pb_network_color_primary', 'pb_network_color_accent' ], true ) ) {
+		return;
+	}
+
+	$color = Hex::fromString( $value );
+	$color = $color->toRgb();
+	$color_alpha = $color->toRgba( 0.25 );
+	$color_dark = new Rgb(
+		$color->red() * 0.9,
+		$color->green() * 0.9,
+		$color->blue() * 0.9
+	);
+	update_option( $option . '_dark', (string) $color_dark );
+	update_option( $option . '_alpha', (string) $color_alpha );
 }
