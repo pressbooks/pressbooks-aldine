@@ -33,17 +33,17 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 
 	<div class="entry-content">
 		<?php
-			if ( has_sections( $post->ID ) ) {
-				the_content();
-			} else {
-				echo apply_filters(
-					'the_content',
-					sprintf(
-						'[aldine_page_section]%s[/aldine_page_section]',
-						get_post_field( 'post_content', $post )
-					)
-				);
-			}
+		if ( has_sections( $post->ID ) ) {
+			the_content();
+		} else {
+			echo apply_filters(
+				'the_content',
+				sprintf(
+					'[aldine_page_section]%s[/aldine_page_section]',
+					get_post_field( 'post_content', $post )
+				)
+			);
+		}
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
