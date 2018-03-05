@@ -26,7 +26,7 @@ function body_classes( array $classes ) {
 	}
 
 	/** Add .has-sections if page content has sections */
-	if ( is_single() || is_page() && has_sections( get_the_ID() ) ) {
+	if ( is_single() || is_front_page() || is_page() && has_sections( get_the_ID() ) ) {
 		$classes[] = 'has-sections';
 	}
 

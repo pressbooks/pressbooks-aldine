@@ -18,7 +18,7 @@ namespace Aldine\Shortcodes;
 function page_section( $atts, $content = null ) {
 	$atts = shortcode_atts(
 		[
-			'title' => 'Page Section',
+			'title' => '',
 			'variant' => '',
 		],
 		$atts,
@@ -26,9 +26,9 @@ function page_section( $atts, $content = null ) {
 	);
 
 	return sprintf(
-		'<div class="page-section%1$s"><h2>%2$s</h2>%3$s</div>',
+		'<div class="page-section%1$s">%2$s%3$s</div>',
 		( $atts['variant'] ) ? " page-section--{$atts['variant']}" : '',
-		$atts['title'],
+		( $atts['title'] ) ? "<h2>{$atts['title']}</h2>" : '',
 		$content
 	);
 }

@@ -12,6 +12,7 @@
 <?php
 
 use function Aldine\Helpers\get_catalog_data;
+use function Aldine\Helpers\has_sections;
 
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
 $latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) );
@@ -32,7 +33,17 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 
 	<div class="entry-content">
 		<?php
-			the_content();
+			if ( has_sections( $post->ID ) ) {
+				the_content();
+			} else {
+				echo apply_filters(
+					'the_content',
+					sprintf(
+						'[aldine_page_section]%s[/aldine_page_section]',
+						get_post_field( 'post_content', $post )
+					)
+				);
+			}
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
