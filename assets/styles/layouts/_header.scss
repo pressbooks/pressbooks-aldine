@@ -61,16 +61,16 @@
 }
 
 .page:not(.home) .header {
-  height: 240px;
+  height: rem(240);
 
   @media #{$breakpoint-large} {
-    height: 880px;
+    height: rem(880);
   }
 }
 
 .page.catalog {
   .header {
-    height: 381px;
+    height: rem(381);
   }
 
   .page-header {
@@ -83,12 +83,17 @@
 
   @media #{$breakpoint-large} {
     .header {
-      height: 450px;
+      height: rem(450);
     }
 
     .page-header {
-      height: 381px;
-      margin-top: -381px;
+      height: rem(381);
+      margin-top: rem(-381);
+
+      .font-size & {
+        height: rem(350);
+        margin-top: rem(-350);
+      }
     }
   }
 }
