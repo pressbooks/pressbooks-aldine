@@ -63,7 +63,7 @@ function setup() {
 
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', [
-		'default-image' => $assets->getPath( 'images/header.jpg' ),
+		'default-image' => get_template_directory_uri() . '/dist/images/header.jpg',
 		'width' => 1920,
 		'height' => 884,
 		'default-text-color' => '#000',
