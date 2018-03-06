@@ -6,8 +6,8 @@ Tags: publishing, catalog, pressbooks, default-theme
 
 Requires at least: 4.9.4
 Tested up to: 4.9.4
-Stable tag: 1.0.0
-License: GNU General Public License v3
+Stable tag: 1.0.1
+License: GNU General Public License v3 or later
 License URI: LICENSE
 
 Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
@@ -27,6 +27,16 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 TK.
 
 == Changelog ==
+
+=== Aldine 1.0.1 ===
+
+#### Patches
+
+- Load header image from `dist` ([#104](https://github.com/pressbooks/pressbooks-aldine/issues/104), props [@steven1350](https://github.com/steven1350) for reporting): [826dc93](https://github.com/pressbooks/pressbooks-aldine/commit/826dc930869041df0ffdd15748f686013fbed54e)
+- Prevent page header from overlapping menu in some situations ([#103](https://github.com/pressbooks/pressbooks-aldine/issues/103), props [@beckej13820](https://github.com/beckej13820) for reporting): [df793ac](https://github.com/pressbooks/pressbooks-aldine/commit/df793acda9a4ccd4975056e150862e73f9e8379f)
+- Improve display of pages without content ([#102](https://github.com/pressbooks/pressbooks-aldine/issues/102)): [0866e9a](https://github.com/pressbooks/pressbooks-aldine/commit/0866e9afe80f82b7d79dfd5a4d17095ee0bf716b)
+- Update activation routine to use shortcodes: [1409a01](https://github.com/pressbooks/pressbooks-aldine/commit/1409a01b7759b6b4117316763957d498a5827692)
+- Use a unique cookie name for the network homepage font size setting: [d109496](https://github.com/pressbooks/pressbooks-aldine/commit/d10949677ccc3fee67fbb9b1069c360b2270c779)
 
 === Aldine 1.0.0 ===
 
