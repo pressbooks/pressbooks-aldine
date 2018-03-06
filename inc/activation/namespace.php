@@ -21,7 +21,7 @@ function create_default_content() {
 			$home_content = apply_filters(
 				'pb_root_home_page_content',
 				sprintf(
-					'<h2>%1$s</h2><p>%2$s</p><p><a class="call-to-action" href="/about/">%3$s</a></p>',
+					'[aldine_page_section title="%1$s"]<p>%2$s</p><p>[aldine_call_to_action link="/about" text="%3$s"]</p>[/aldine_page_section]',
 					__( 'About Pressbooks', 'pressbooks-aldine' ),
 					__( 'Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish.', 'pressbooks-aldine' ),
 					__( 'Learn More', 'pressbooks-aldine' )
@@ -69,10 +69,7 @@ function create_default_content() {
 			],
 			'home' => [
 				'post_title' => __( 'Home', 'pressbooks-aldine' ),
-				'post_content' => sprintf(
-					'<div class="page-section">%s</div>',
-					$home_content
-				),
+				'post_content' => $home_content,
 			],
 		];
 
