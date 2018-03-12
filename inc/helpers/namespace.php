@@ -40,7 +40,10 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		apply_filters(
 			'pb_publisher_catalog_query_args',
 			[
-				'public' => '1',
+				'public' => 1,
+				'archived' => 0,
+				'spam' => 0,
+				'deleted' => 0,
 				'network_id' => get_network()->site_id,
 			]
 		)
