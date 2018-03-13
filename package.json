@@ -26,7 +26,9 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-			"PB_A11y": true
+			"aldine": true,
+			"PB_A11y": true,
+			"tinymce": true
 		}
 	},
 	"stylelint": {

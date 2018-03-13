@@ -7,6 +7,7 @@
 
 namespace Aldine\Filters;
 
+use PressbooksMix\Assets;
 use function Aldine\Helpers\has_sections;
 
 /**
@@ -61,62 +62,6 @@ function excerpt_more() {
 }
 
 /**
- * Add style select dropdown to TinyMCE.
- *
- * @param array $buttons The default button array.
- * @return array The modified array.
- */
-function add_style_select( $buttons ) {
-	array_unshift( $buttons, 'styleselect' );
-	return $buttons;
-}
-
-/**
- * Add custom block formats to TinyMCE.
- *
- * @param array $init_array The default array.
- * @return array The modified array.
- **/
-
-function add_blocks( $init_array ) {
-	$style_formats = [
-		[
-			'title' => __( 'Page Section', 'pressbooks-aldine' ),
-			'block' => 'div',
-			'classes' => [ 'page-section' ],
-			'wrapper' => true,
-		],
-		[
-			'title' => __( 'Page Section (Accent)', 'pressbooks-aldine' ),
-			'block' => 'div',
-			'classes' => [ 'page-section', 'page-section--accent' ],
-			'wrapper' => true,
-		],
-		[
-			'title' => __( 'Page Section (Bordered)', 'pressbooks-aldine' ),
-			'block' => 'div',
-			'classes' => [ 'page-section', 'page-section--bordered' ],
-			'wrapper' => true,
-		],
-		[
-			'title' => __( 'Page Section (Borderless)', 'pressbooks-aldine' ),
-			'block' => 'div',
-			'classes' => [ 'page-section', 'page-section--borderless' ],
-			'wrapper' => true,
-		],
-		[
-			'title' => __( 'Call to Action', 'pressbooks-aldine' ),
-			'inline' => 'a',
-			'classes' => [ 'call-to-action' ],
-		],
-	];
-
-	$init_array['style_formats'] = json_encode( $style_formats );
-
-	return $init_array;
-}
-
-/**
  * Add things to the menu.
  *
  * @param string $items
@@ -130,4 +75,31 @@ function adjust_menu( $items, $args ) {
 	}
 
 	return $items;
+}
+
+/**
+ * Add TinyMCE Buttons.
+ *
+ * @since 1.1.0
+ */
+function add_buttons( $plugin_array ) {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	$plugin_array['aldine_call_to_action'] = $assets->getPath( 'scripts/call-to-action.js' );
+	$plugin_array['aldine_page_section'] = $assets->getPath( 'scripts/page-section.js' );
+	return $plugin_array;
+}
+
+/**
+ * Register TinyMCE Buttons.
+ *
+ * @since 1.1.0
+ */
+function register_buttons( $buttons ) {
+	$c = count( $buttons );
+	$i = $c - 2;
+	$new_items = [ 'aldine_page_section', 'aldine_call_to_action' ];
+	array_splice( $buttons, $i, 0, $new_items );
+	return $buttons;
 }
