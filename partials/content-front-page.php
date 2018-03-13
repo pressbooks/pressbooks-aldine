@@ -15,7 +15,8 @@ use function Aldine\Helpers\get_catalog_data;
 use function Aldine\Helpers\has_sections;
 
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
-$latest_books_title = get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) );
+$pb_front_page_catalog_title = get_option( 'pb_front_page_catalog_title' );
+$latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __( 'Our Latest Titles', 'pressbooks-aldine' );
 if ( get_option( 'pb_front_page_catalog' ) ) {
 	$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 	$catalog_data = get_catalog_data( $page, 3, 'latest' );
