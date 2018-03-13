@@ -284,8 +284,8 @@ function tinymce_l18n() {
 				'title_label': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>',
 				'standard': '<?php _e( 'Standard', 'pressbooks-aldine' ); ?>',
 				'accent': '<?php _e( 'Accent', 'pressbooks-aldine' ); ?>',
-				'bordered': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>',
-				'borderless': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>'
+				'bordered': '<?php _e( 'Bordered', 'pressbooks-aldine' ); ?>',
+				'borderless': '<?php _e( 'Borderless', 'pressbooks-aldine' ); ?>'
 			},
 			call_to_action: {
 				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
