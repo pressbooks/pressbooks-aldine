@@ -6,7 +6,7 @@
 
 **Requires at least:** 4.9.4  
 **Tested up to:** 4.9.4  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.1.0  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
@@ -33,7 +33,18 @@ TK.
 ## Changelog 
 
 
-# Aldine 1.0.1 
+# 1.1.0 
+
+**Minor Changes**
+
+- Add editor buttons to insert shortcodes for page sections and calls to action: [#108](https://github.com/pressbooks/pressbooks-aldine/pull/108/)
+
+**Patches**
+
+- Hide archived, spammed and deleted books from catalog (props [@colomet](https://github.com/colomet) for reporting): [#107](https://github.com/pressbooks/pressbooks-aldine/pull/107/)
+
+
+# 1.0.1 
 
 #### Patches
 
@@ -44,7 +55,7 @@ TK.
 - Use a unique cookie name for the network homepage font size setting: [d109496](https://github.com/pressbooks/pressbooks-aldine/commit/d10949677ccc3fee67fbb9b1069c360b2270c779)
 
 
-# Aldine 1.0.0 
+# 1.0.0 
 
 #### Customisation & Branding
 
