@@ -47,7 +47,7 @@ add_action( 'after_setup_theme', '\Aldine\Actions\content_width', 0 );
 add_action( 'wp_head', '\Aldine\Actions\output_custom_colors' );
 add_action( 'init', '\Aldine\Actions\add_editor_styles' );
 add_action( 'admin_init', '\Aldine\Actions\hide_catalog_content_editor' );
-foreach ( array('post.php','post-new.php') as $hook ) {
+foreach ( [ 'post.php', 'post-new.php' ] as $hook ) {
 	add_action( "admin_head-$hook", '\Aldine\Actions\tinymce_l18n' );
 }
 add_filter( 'body_class', '\Aldine\Filters\body_classes' );

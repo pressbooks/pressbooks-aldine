@@ -275,7 +275,8 @@ function register_shortcode_buttons() {
  *
  * @since 1.1.0
  */
-function tinymce_l18n() { ?>
+function tinymce_l18n() {
+?>
 	<script type='text/javascript'>
 		const aldine = {
 			page_section: {
@@ -287,10 +288,11 @@ function tinymce_l18n() { ?>
 				'borderless': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>'
 			},
 			call_to_action: {
-    			'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
-    			'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
-    			'url': '<?php _e( 'URL', 'pressbooks-aldine' ); ?>'
+				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
+				'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
+				'url': '<?php _e( 'URL', 'pressbooks-aldine' ); ?>'
 			}
 		};
 	</script>
-<?php }
+<?php
+}
