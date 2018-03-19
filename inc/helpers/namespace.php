@@ -244,6 +244,7 @@ function handle_contact_form_submission() {
 		return false; // Security check failed.
 	}
 	if ( isset( $_POST['submitted'] ) ) {
+		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
 		$name = ( isset( $_POST['visitor_name'] ) ) ? $_POST['visitor_name'] : '';
 		$email = ( isset( $_POST['visitor_email'] ) ) ? $_POST['visitor_email'] : '';
@@ -277,7 +278,7 @@ function handle_contact_form_submission() {
 			$output['field'] = 'message';
 		} else {
 			$sent = wp_mail(
-				get_option( 'admin_email' ),
+				$contact_email,
 				sprintf( __( 'Contact Form Submission from %s', 'pressbooks-aldine' ), $name ),
 				sprintf(
 					"From: %1\$s <%2\$s>\nInstitution: %3\$s\n\n%4\$s",
