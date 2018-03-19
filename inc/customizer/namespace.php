@@ -149,6 +149,16 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'section'  => 'pb_network_contact_form',
 		'settings' => 'pb_network_contact_form_title',
 	]);
+	$wp_customize->add_setting('pb_network_contact_email', [
+		'type' => 'option',
+		'default' => get_option( 'admin_email', '' ),
+		'sanitize_callback' => 'sanitize_email',
+	]);
+	$wp_customize->add_control('pb_network_contact_email', [
+		'label' => __( 'Contact Email', 'pressbooks-aldine' ),
+		'section'  => 'pb_network_contact_form',
+		'settings' => 'pb_network_contact_email',
+	]);
 }
 
 /**
