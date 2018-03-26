@@ -1,3 +1,4 @@
+.wp-activate-container,
 .mu_register.wp-signup-container {
    @extend .page-section;
    margin: rem(120) auto 4rem;
@@ -36,5 +37,14 @@
     margin: 0 auto;
     text-align: center;
   }
-}
 
+  ol,
+  ul {
+    list-style-position: outside;
+  }
+
+  span.h3 {
+    padding: 0;
+    font-size: 1rem;
+  }
+}
