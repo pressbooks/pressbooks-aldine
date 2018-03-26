@@ -32,18 +32,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 540px;
+  height: rem(540);
 
   @media #{$breakpoint-large} {
-    height: 160px;
-    margin: 80px 0 0;
+    height: rem(160);
+    margin: rem(80) 0 0;
   }
 
   .entry-title {
     font-family: $font-family-sans-serif;
     font-size: 1.875rem;
     @media #{$breakpoint-large} {
-      font-size: 4.5rem;
+      font-size: 3.25rem;
+      line-height: 1.25em;
+      margin-top: 1.5em;
     }
     margin-bottom: 0;
     text-align: center;
@@ -53,6 +55,9 @@
   .entry-description {
     font-family: $font-family-sans-serif;
     font-size: 1.125rem;
+    @media #{$breakpoint-large} {
+      font-size: 2rem;
+    }
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
