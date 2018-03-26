@@ -248,8 +248,11 @@ function add_color_variants( $option, $old_value, $value ) {
 		$color->green() * 0.9,
 		$color->blue() * 0.9
 	);
-	update_option( $option . '_dark', (string) $color_dark );
-	update_option( $option . '_alpha', (string) $color_alpha );
+	$color_alpha = (string) $color_alpha;
+	$color_dark = (string) $color_dark;
+
+	update_option( $option . '_dark', $color_dark );
+	update_option( $option . '_alpha', $color_alpha );
 }
 
 /**
