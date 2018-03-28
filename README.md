@@ -1,6 +1,17 @@
 # Aldine 
 
-[![Build Status](https://travis-ci.org/pressbooks/pressbooks-aldine.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-aldine) [![GitHub Release](https://img.shields.io/github/release/pressbooks/pressbooks-aldine/all.svg)](https://github.com/pressbooks/pressbooks-aldine/releases/latest)
+[![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
+[![Current Release](https://img.shields.io/github/release/pressbooks/pressbooks-aldine.svg)](https://github.com/pressbooks/pressbooks/releases/latest/)
+[![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
+
+[![Build Status](https://travis-ci.org/pressbooks/pressbooks-aldine.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-aldine)
+[![Translate McLuhan](https://img.shields.io/badge/translated-2.96%25-red.svg)](https://www.transifex.com/pressbooks/aldine/translate/)
+
+[![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
+[![Slack](https://pressbooks-slack.now.sh/badge.svg)](https://pressbooks-slack.now.sh)
+[![Open Collective](https://opencollective.com/pressbooks/tiers/backer/badge.svg?label=backers&color=brightgreen)](https://opencollective.com/pressbooks/)
+[![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
