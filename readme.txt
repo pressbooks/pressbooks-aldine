@@ -6,7 +6,7 @@ Tags: publishing, catalog, pressbooks, default-theme
 
 Requires at least: 4.9.4
 Tested up to: 4.9.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -27,6 +27,19 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 TK.
 
 == Changelog ==
+
+=== 1.2.0 ===
+
+**Minor Changes**
+
+- Allow the contact form email to be edited in the Customizer ([#109](https://github.com/pressbooks/pressbooks-aldine/issues/109)): [#113](https://github.com/pressbooks/pressbooks-aldine/issues/113)
+- Adjust the title size to better support longer network titles ([#114](https://github.com/pressbooks/pressbooks-aldine/issues/114)): [874030e](https://github.com/pressbooks/pressbooks-aldine/commit/874030e)
+
+**Patches**
+
+- Fix an issue where active and hover state colours could not be customized ([#111](https://github.com/pressbooks/pressbooks-aldine/issues/111)): [cb604c7](https://github.com/pressbooks/pressbooks-aldine/commit/cb604c7)
+- Fix some layout issues on the registration screen ([#112](https://github.com/pressbooks/pressbooks-aldine/issues/112)): [#115](https://github.com/pressbooks/pressbooks-aldine/issues/115)
+- Fix some layout issues on the activation screen ([#116](https://github.com/pressbooks/pressbooks-aldine/issues/116)): [#117](https://github.com/pressbooks/pressbooks-aldine/issues/117)
 
 === 1.1.0 ===
 
