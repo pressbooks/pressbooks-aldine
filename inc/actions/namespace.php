@@ -293,7 +293,7 @@ function tinymce_l18n() {
 			call_to_action: {
 				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
 				'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
-				'url': '<?php _e( 'URL', 'pressbooks-aldine' ); ?>'
+				'link': '<?php _e( 'Link', 'pressbooks-aldine' ); ?>'
 			}
 		};
 	</script>

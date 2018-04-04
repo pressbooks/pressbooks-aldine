@@ -16,13 +16,19 @@
 							},
 							{
 								type:  'textbox',
-								name:  'url',
-								label: aldine.call_to_action.url,
+								name:  'link',
+								label: aldine.call_to_action.link,
 								value: '#',
 							},
 						],
 						onsubmit: function ( e ) {
-							editor.insertContent( '[aldine_call_to_action text="' + e.data.text + '" url="' + e.data.url + '"]' );
+							editor.insertContent(
+								'[aldine_call_to_action text="' +
+									e.data.text +
+									'" link="' +
+									e.data.link +
+									'"]'
+							);
 						},
 					} );
 				},
@@ -32,5 +38,8 @@
 			return null;
 		},
 	} );
-	tinymce.PluginManager.add( 'aldine_call_to_action', tinymce.plugins.aldine_call_to_action );
+	tinymce.PluginManager.add(
+		'aldine_call_to_action',
+		tinymce.plugins.aldine_call_to_action
+	);
 } )();
