@@ -12,12 +12,11 @@
 [![Slack](https://pressbooks-slack.now.sh/badge.svg)](https://pressbooks-slack.now.sh)
 [![Open Collective](https://opencollective.com/pressbooks/tiers/backer/badge.svg?label=backers&color=brightgreen)](https://opencollective.com/pressbooks/)
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
-
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
 **Requires at least:** 4.9.4  
 **Tested up to:** 4.9.4  
-**Stable tag:** 1.2.0  
+**Stable tag:** 1.2.1  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
@@ -42,6 +41,13 @@ TK.
 
 
 ## Changelog 
+
+
+# 1.2.1 
+
+**Patches**
+
+- Fix an issue where inserting a Call to Action via the toolbar used the wrong shortcode attribute for the link ([#118](https://github.com/pressbooks/pressbooks-aldine/issues/118)): [#119](https://github.com/pressbooks/pressbooks-aldine/pull/119)
 
 
 # 1.2.0 
