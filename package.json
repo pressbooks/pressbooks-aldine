@@ -49,7 +49,8 @@
 			"cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
 		"lint:styles":
 			"cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
-		"test": "npm run -s lint"
+		"test": "npm run -s lint",
+		"install": "npm run -s build:production"
 	},
 	"engines": {
 		"node": ">= 6.9.4"
