@@ -36,7 +36,9 @@ $includes = [
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
-require get_template_directory() . '/inc/intervention.php';
+if ( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+	require get_template_directory() . '/inc/intervention.php';
+}
 
 add_action( 'after_switch_theme', '\Aldine\Activation\create_default_content', 10 );
 add_action( 'after_switch_theme', '\Aldine\Activation\create_menus', 11 );
