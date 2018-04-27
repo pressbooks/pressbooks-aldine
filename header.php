@@ -44,7 +44,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
 	<header class="header" role="banner" style="background-image: url(<?php
 	if ( is_front_page() ) {
-		echo( get_header_image() );
+		if ( has_header_image() ) {
+			echo( get_header_image() );
+		} else {
+			echo get_template_directory_uri() . '/dist/images/header.jpg';
+		}
 	} else {
 		echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
 	} ?>);">
@@ -67,7 +71,7 @@
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></a>
 				<?php wp_nav_menu( [
 					'theme_location' => 'primary-menu',
 					'fallback_cb' => '\Aldine\Helpers\default_menu',
@@ -81,4 +85,4 @@
 		</div>
 	</header> <!-- .header -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content clearfix">

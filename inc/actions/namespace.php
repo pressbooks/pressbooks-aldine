@@ -63,7 +63,7 @@ function setup() {
 
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', [
-		'default-image' => $assets->getPath( 'images/header.jpg' ),
+		'default-image' => get_template_directory_uri() . '/dist/images/header.jpg',
 		'width' => 1920,
 		'height' => 884,
 		'default-text-color' => '#000',
@@ -86,6 +86,9 @@ function setup() {
 
 	// Add editor style.
 	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
+
+	// Add shortcode buttons.
+	add_action( 'init', __NAMESPACE__ . '\register_shortcode_buttons' );
 }
 
 /**
@@ -245,8 +248,56 @@ function add_color_variants( $option, $old_value, $value ) {
 		$color->green() * 0.9,
 		$color->blue() * 0.9
 	);
-	update_option( $option . '_dark', (string) $color_dark );
-	update_option( $option . '_alpha', (string) $color_alpha );
+	$color_alpha = (string) $color_alpha;
+	$color_dark = (string) $color_dark;
+
+	update_option( $option . '_dark', $color_dark );
+	update_option( $option . '_alpha', $color_alpha );
+}
+
+/**
+ * Register shortcode buttons.
+ *
+ * @since 1.1.0
+ */
+function register_shortcode_buttons() {
+	if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
+		return;
+	}
+
+	if ( get_user_option( 'rich_editing' ) !== 'true' ) {
+		return;
+	}
+
+	add_filter( 'mce_external_plugins', '\Aldine\filters\add_buttons' );
+	add_filter( 'mce_buttons', '\Aldine\filters\register_buttons' );
+}
+
+/**
+ * Localize shortcode button strings.
+ *
+ * @since 1.1.0
+ */
+function tinymce_l18n() {
+?>
+	<script type='text/javascript'>
+		const aldine = {
+			page_section: {
+				'title': '<?php _e( 'Page Section', 'pressbooks-aldine' ); ?>',
+				'title_label': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>',
+				'standard': '<?php _e( 'Standard', 'pressbooks-aldine' ); ?>',
+				'accent': '<?php _e( 'Accent', 'pressbooks-aldine' ); ?>',
+				'bordered': '<?php _e( 'Bordered', 'pressbooks-aldine' ); ?>',
+				'borderless': '<?php _e( 'Borderless', 'pressbooks-aldine' ); ?>'
+			},
+			call_to_action: {
+				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
+				'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
+				'link': '<?php _e( 'Link', 'pressbooks-aldine' ); ?>'
+			}
+		};
+	</script>
+<?php
 }
 
 /**

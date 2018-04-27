@@ -1,8 +1,9 @@
 {
 	"name": "pressbooks/pressbooks-aldine",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0-or-later",
-	"description": "Aldine is the root theme for Pressbooks.",
+	"license": "GPL-3.0-or-later",
+	"description":
+		"Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"authors": [
 		{

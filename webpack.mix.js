@@ -51,7 +51,8 @@ mix
 	.js(
 		`${assets}/scripts/blocks/page-section/block.js`,
 		`${dist}/scripts/blocks/page-section`
-	);
+	)
+	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` );
 
 // Assets
 mix

@@ -15,6 +15,14 @@ use PressbooksMix\Assets;
  * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
+
+	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls
+
+	$wp_customize->remove_control( 'display_header_text' );
+	$wp_customize->remove_control( 'header_textcolor' );
+
+	// Add Pressbooks controls
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -22,11 +30,27 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', [
 			'selector'        => '.site-title a',
-			'render_callback' => __NAMESPACE__ . '\\customize_partial_blogname',
+			'render_callback' => function() {
+				bloginfo( 'name' );
+			},
 		] );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', [
 			'selector'        => '.site-description',
-			'render_callback' => __NAMESPACE__ . '\\customize_partial_blogdescription',
+			'render_callback' => function() {
+				bloginfo( 'description' );
+			},
+		] );
+		$wp_customize->selective_refresh->add_partial( 'pb_front_page_catalog_title', [
+			'selector'        => '#latest-books-title',
+			'render_callback' => function() {
+				get_option( 'pb_front_page_catalog_title' );
+			},
+		] );
+		$wp_customize->selective_refresh->add_partial( 'pb_network_contact_form_title', [
+			'selector'        => '#contact .contact__title',
+			'render_callback' => function() {
+				get_option( 'pb_network_contact_form_title' );
+			},
 		] );
 	}
 
@@ -111,6 +135,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		$wp_customize->add_setting('pb_front_page_catalog_title', [
 			'type' => 'option',
 			'sanitize_callback' => 'sanitize_text_field',
+			'default' => __( 'Our Latest Titles', 'pressbooks-aldine' ),
 		]);
 		$wp_customize->add_control('pb_front_page_catalog_title', [
 			'label' => __( 'Front Page Catalog Title', 'pressbooks-aldine' ),
@@ -135,30 +160,23 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting('pb_network_contact_form_title', [
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_text_field',
+		'default' => __( 'Contact Us', 'pressbooks-aldine' ),
 	]);
 	$wp_customize->add_control('pb_network_contact_form_title', [
 		'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
 		'section'  => 'pb_network_contact_form',
 		'settings' => 'pb_network_contact_form_title',
 	]);
-}
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @return void
- */
-function customize_partial_blogname() {
-	bloginfo( 'name' );
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @return void
- */
-function customize_partial_blogdescription() {
-	bloginfo( 'description' );
+	$wp_customize->add_setting('pb_network_contact_email', [
+		'type' => 'option',
+		'default' => get_option( 'admin_email', '' ),
+		'sanitize_callback' => 'sanitize_email',
+	]);
+	$wp_customize->add_control('pb_network_contact_email', [
+		'label' => __( 'Contact Email', 'pressbooks-aldine' ),
+		'section'  => 'pb_network_contact_form',
+		'settings' => 'pb_network_contact_email',
+	]);
 }
 
 /**

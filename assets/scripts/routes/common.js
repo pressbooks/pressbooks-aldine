@@ -9,7 +9,7 @@ export default {
 				.addClass( 'js' );
 			$( document ).ready( function () {
 				// Fontsize handler
-				if ( Cookies.get( 'a11y-larger-fontsize' ) === '1' ) {
+				if ( Cookies.get( 'a11y-root-larger-fontsize' ) === '1' ) {
 					$( 'html' ).addClass( 'fontsize' );
 					$( '#is_normal_fontsize' )
 						.attr( 'id', 'is_large_fontsize' )
@@ -28,9 +28,9 @@ export default {
 							.addClass( 'active' )
 							.text( PB_A11y.decrease_label )
 							.attr( 'title', PB_A11y.decrease_label );
-						Cookies.set( 'a11y-larger-fontsize', '1', {
+						Cookies.set( 'a11y-root-larger-fontsize', '1', {
 							expires: 365,
-							path:    '',
+							path:    '/',
 						} );
 						return false;
 					} else {
@@ -41,9 +41,9 @@ export default {
 							.removeClass( 'active' )
 							.text( PB_A11y.increase_label )
 							.attr( 'title', PB_A11y.increase_label );
-						Cookies.set( 'a11y-larger-fontsize', '0', {
+						Cookies.set( 'a11y-root-larger-fontsize', '0', {
 							expires: 365,
-							path:    '',
+							path:    '/',
 						} );
 						return false;
 					}

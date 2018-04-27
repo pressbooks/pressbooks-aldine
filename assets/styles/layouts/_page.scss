@@ -1,1 +1,19 @@
-// TODO
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  #page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content {
+    flex-grow: 1;
+  }
+}
+
+.page.home:not(.has-sections) article {
+  margin-top: 0;
+}

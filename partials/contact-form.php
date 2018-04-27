@@ -8,7 +8,8 @@
 
 <?php
 
-$contact_form_title = get_option( 'pb_network_contact_form_title', __( 'Contact Us', 'pressbooks-aldine' ) );
+$pb_network_contact_form_title = get_option( 'pb_network_contact_form_title' );
+$contact_form_title = ( ! empty( $pb_network_contact_form_title ) ) ? $pb_network_contact_form_title : __( 'Contact Us', 'pressbooks-aldine' );
 $contact_form_response = \Aldine\Helpers\handle_contact_form_submission();
 
 ?>

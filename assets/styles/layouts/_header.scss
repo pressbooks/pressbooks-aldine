@@ -32,18 +32,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 540px;
+  height: rem(540);
 
   @media #{$breakpoint-large} {
-    height: 160px;
-    margin: 80px 0 0;
+    height: rem(160);
+    margin: rem(80) 0 0;
   }
 
   .entry-title {
     font-family: $font-family-sans-serif;
     font-size: 1.875rem;
     @media #{$breakpoint-large} {
-      font-size: 4.5rem;
+      font-size: 3.25rem;
+      line-height: 1.25em;
+      margin-top: 1.5em;
     }
     margin-bottom: 0;
     text-align: center;
@@ -53,6 +55,9 @@
   .entry-description {
     font-family: $font-family-sans-serif;
     font-size: 1.125rem;
+    @media #{$breakpoint-large} {
+      font-size: 2rem;
+    }
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -61,16 +66,16 @@
 }
 
 .page:not(.home) .header {
-  height: 240px;
+  height: rem(240);
 
   @media #{$breakpoint-large} {
-    height: 880px;
+    height: rem(880);
   }
 }
 
 .page.catalog {
   .header {
-    height: 381px;
+    height: rem(381);
   }
 
   .page-header {
@@ -83,12 +88,17 @@
 
   @media #{$breakpoint-large} {
     .header {
-      height: 450px;
+      height: rem(450);
     }
 
     .page-header {
-      height: 381px;
-      margin-top: -381px;
+      height: rem(381);
+      margin-top: rem(-381);
+
+      .font-size & {
+        height: rem(350);
+        margin-top: rem(-350);
+      }
     }
   }
 }

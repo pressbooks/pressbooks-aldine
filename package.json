@@ -1,9 +1,11 @@
 {
 	"name": "@pressbooks/pressbooks-aldine",
-	"version": "1.0.0-rc.0",
+
+	"version": "1.2.1",
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
-	"description": "Aldine is the root theme for Pressbooks.",
+	"description":
+		"Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
 	"keywords": ["publishing", "catalog", "pressbooks", "default-theme"],
 	"private": true,
 	"repository": {
@@ -15,8 +17,10 @@
 	},
 	"licenses": [
 		{
-			"type": "GPL-3.0",
-			"url": "https://opensource.org/licenses/GPL-3.0"
+
+			"type": "GPL-3.0-or-later",
+			"url":
+				"https://github.com/pressbooks/pressbooks-aldine/tree/master/LICENSE.md"
 		}
 	],
 	"browserslist": ["last 2 versions", "android 4", "opera 12"],
@@ -24,7 +28,9 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-			"PB_A11y": true
+			"aldine": true,
+			"PB_A11y": true,
+			"tinymce": true
 		}
 	},
 	"stylelint": {
@@ -45,17 +51,18 @@
 			"cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
 		"lint:styles":
 			"cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
-		"test": "npm run -s lint"
+		"test": "npm run -s lint",
+		"install": "npm run -s build:production"
 	},
 	"engines": {
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^0.10.0"
+		"pressbooks-build-tools": "^0.12.0"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.7",
-		"isotope-layout": "^3.0.5",
+		"aetna": "^1.0.0-alpha.17",
+		"isotope-layout": "^3.0.6",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",
 		"wpapi": "^1.1.2"
