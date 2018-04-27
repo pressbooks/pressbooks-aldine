@@ -243,15 +243,8 @@ function add_color_variants( $option, $old_value, $value ) {
 	$color = Hex::fromString( $value );
 	$color = $color->toRgb();
 	$color_alpha = $color->toRgba( 0.25 );
-	$color_dark = new Rgb(
-		$color->red() * 0.9,
-		$color->green() * 0.9,
-		$color->blue() * 0.9
-	);
 	$color_alpha = (string) $color_alpha;
-	$color_dark = (string) $color_dark;
 
-	update_option( $option . '_dark', $color_dark );
 	update_option( $option . '_alpha', $color_alpha );
 }
 
