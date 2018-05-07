@@ -11,8 +11,8 @@
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
 [![Open Collective](https://opencollective.com/pressbooks/tiers/backer/badge.svg?label=backers&color=brightgreen)](https://opencollective.com/pressbooks/)
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
-**Tags:** publishing, catalog, pressbooks, default-theme  
 
+**Tags:** publishing, catalog, pressbooks, default-theme  
 **Requires at least:** 4.9.4  
 **Tested up to:** 4.9.4  
 **Stable tag:** 1.2.1  
