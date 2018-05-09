@@ -62,10 +62,22 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'description' => __( 'Primary color, used for links and other primary elements.', 'pressbooks-aldine' ),
 		],
 		[
+			'slug' => 'primary_dark',
+			'hex' => '#7f0c07',
+			'label' => __( 'Primary Color (Dark)', 'pressbooks-aldine' ),
+			'description' => __( 'Darkened variant of the primary color, used for primary element hover states.', 'pressbooks-aldine' ),
+		],
+		[
 			'slug' => 'accent',
 			'hex' => '#015d75',
 			'label' => __( 'Accent Color', 'pressbooks-aldine' ),
 			'description' => __( 'Accent color, used for flourishes and secondary elements.', 'pressbooks-aldine' ),
+		],
+		[
+			'slug' => 'accent_dark',
+			'hex' => '#013542',
+			'label' => __( 'Accent Color (Dark)', 'pressbooks-aldine' ),
+			'description' => __( 'Darkened variant of the accent color, used for secondary element hover states.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary_fg',
@@ -203,8 +215,12 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
-			'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
-			'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
+			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
+			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
+			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],
 	];
 
