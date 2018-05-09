@@ -215,8 +215,12 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
-			'pb_network_color_primary_fg' => [ 'pb_network_color_primary' ],
-			'pb_network_color_accent_fg' => [ 'pb_network_color_accent' ],
+			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
+			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
+			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],
 	];
 
