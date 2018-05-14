@@ -64,8 +64,8 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		[
 			'slug' => 'primary_dark',
 			'hex' => '#7f0c07',
-			'label' => __( 'Primary Color (Dark)', 'pressbooks-aldine' ),
-			'description' => __( 'Darkened variant of the primary color, used for primary element hover states.', 'pressbooks-aldine' ),
+			'label' => __( 'Primary Color (Hover)', 'pressbooks-aldine' ),
+			'description' => __( 'Variant of the primary color, used for primary element hover states.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent',
@@ -76,8 +76,8 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		[
 			'slug' => 'accent_dark',
 			'hex' => '#013542',
-			'label' => __( 'Accent Color (Dark)', 'pressbooks-aldine' ),
-			'description' => __( 'Darkened variant of the accent color, used for secondary element hover states.', 'pressbooks-aldine' ),
+			'label' => __( 'Accent Color (Hover)', 'pressbooks-aldine' ),
+			'description' => __( 'Variant of the accent color, used for secondary element hover states.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary_fg',
