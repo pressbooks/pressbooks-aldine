@@ -14,9 +14,9 @@
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 Tags: publishing, catalog, pressbooks, default-theme
 
-Requires at least: 4.9.4
-Tested up to: 4.9.4
-Stable tag: 1.2.1
+Requires at least: 4.9.5
+Tested up to: 4.9.5
+Stable tag: 1.3.0
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -37,6 +37,18 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 TK.
 
 == Changelog ==
+
+=== 1.3.0 ===
+
+**Minor Changes**
+
+- Add customizer options for dark (hover) colours: [#125](https://github.com/pressbooks/pressbooks-aldine/issues/125)
+- Update Isotope to 3.0.6: [#120](https://github.com/pressbooks/pressbooks-aldine/issues/120)
+
+### Patches
+
+- Fix incorrect contact form title ([#122](https://github.com/pressbooks/pressbooks-aldine/issues/122)): [#123](https://github.com/pressbooks/pressbooks-aldine/issues/123)
+- Don't run Intervention functions during AJAX: [#121](https://github.com/pressbooks/pressbooks-aldine/issues/121)
 
 === 1.2.1 ===
 

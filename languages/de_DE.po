@@ -51,19 +51,19 @@ msgstr "%s auf Twitter"
 
 #: ../footer.php:70
 msgid "Powered by %s"
-msgstr ""
+msgstr "Powered by %s"
 
 #: ../footer.php:72
 msgid "Open Source"
-msgstr ""
+msgstr "Open Source"
 
 #: ../footer.php:73
 msgid "Open Textbooks"
-msgstr ""
+msgstr "Open Textbooks"
 
 #: ../footer.php:74
 msgid "Open Book Publishing"
-msgstr ""
+msgstr "Open Book Publishing"
 
 #: ../footer.php75, ../inc/activation/namespace.php:27
 msgid "Learn More"
@@ -71,11 +71,11 @@ msgstr "Mehr erfahren"
 
 #: ../footer.php79, ../footer.php:83
 msgid "Pressbooks on Facebook"
-msgstr ""
+msgstr "Pressbooks auf Facebook"
 
 #: ../footer.php85, ../footer.php:89
 msgid "Pressbooks on Twitter"
-msgstr ""
+msgstr "Pressbooks auf Twitter"
 
 #: ../functions.php:18
 msgid "Dependencies Missing"
@@ -96,7 +96,7 @@ msgstr "Logo für %s"
 
 #: ../header.php:74
 msgid "Toggle Menu"
-msgstr ""
+msgstr "Menü umschalten"
 
 #: ../inc/intervention.php:12
 msgid "Hello,"
@@ -110,29 +110,65 @@ msgstr "Hauptmenü"
 msgid "Footer Menu"
 msgstr "Fusszeilen-Menü"
 
-#: ../inc/actions/namespace.php:104
+#: ../inc/actions/namespace.php:107
 msgid "Network Footer Block 1"
 msgstr "Block 1 im Netzwerk-Fuss"
 
-#: ../inc/actions/namespace.php:114
+#: ../inc/actions/namespace.php:117
 msgid "Network Footer Block 2"
 msgstr "Block 2 im Netzwerk-Block"
 
-#: ../inc/actions/namespace.php139,
+#: ../inc/actions/namespace.php142,
 #: ../partials/content-accessibility-toolbar.php6,
 #: ../partials/content-accessibility-toolbar.php:7
 msgid "Increase Font Size"
 msgstr "Schriftgrösse vergrössern"
 
-#: ../inc/actions/namespace.php:140
+#: ../inc/actions/namespace.php:143
 msgid "Decrease Font Size"
 msgstr "Schriftgrösse verkleinern"
 
-#: ../inc/actions/namespace.php:223
+#: ../inc/actions/namespace.php:226
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "Diese Seite zeigt Ihren Netzwerk-Katalog an, Sie müssen hier nichts eingeben"
+
+#: ../inc/actions/namespace.php:279
+msgid "Page Section"
+msgstr "Seitenabschnitt"
+
+#: ../inc/actions/namespace.php280, ../partials/content-page-catalog.php:49
+msgid "Title"
+msgstr "Titel"
+
+#: ../inc/actions/namespace.php:281
+msgid "Standard"
+msgstr ""
+
+#: ../inc/actions/namespace.php:282
+msgid "Accent"
+msgstr ""
+
+#: ../inc/actions/namespace.php:283
+msgid "Bordered"
+msgstr ""
+
+#: ../inc/actions/namespace.php:284
+msgid "Borderless"
+msgstr ""
+
+#: ../inc/actions/namespace.php:287
+msgid "Call to Action"
+msgstr "Greifen Sie jetzt ein"
+
+#: ../inc/actions/namespace.php:288
+msgid "Text"
+msgstr ""
+
+#: ../inc/actions/namespace.php:289
+msgid "Link"
+msgstr ""
 
 #: ../inc/activation/namespace.php:25
 msgid "About Pressbooks"
@@ -217,7 +253,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "Katalog"
 
-#: ../inc/activation/namespace.php71, ../inc/helpers/namespace.php:162
+#: ../inc/activation/namespace.php71, ../inc/helpers/namespace.php:165
 msgid "Home"
 msgstr "Home"
 
@@ -250,151 +286,159 @@ msgid "This book is private, so you can&rsquo;t display it in your catalog."
 msgstr ""
 "Dieses Buch ist privat, Sie können es nicht in Ihrem Katalog anzeigen."
 
-#: ../inc/customizer/namespace.php:45
+#: ../inc/customizer/namespace.php:61
 msgid "Primary Color"
 msgstr "Hauptfarbe"
 
-#: ../inc/customizer/namespace.php:46
+#: ../inc/customizer/namespace.php:62
 msgid "Primary color, used for links and other primary elements."
 msgstr "Hauptfarbe, wird für Links und andere Primärelemente verwendet."
 
-#: ../inc/customizer/namespace.php:51
+#: ../inc/customizer/namespace.php:67
+msgid "Primary Color (Hover)"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:68
+msgid "Variant of the primary color, used for primary element hover states."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:73
 msgid "Accent Color"
 msgstr "Akzentfarbe"
 
-#: ../inc/customizer/namespace.php:52
+#: ../inc/customizer/namespace.php:74
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr "Akzentfarbe, wird für Verzierungen und sekundäre Elemente verwendet"
 
-#: ../inc/customizer/namespace.php:57
+#: ../inc/customizer/namespace.php:79
+msgid "Accent Color (Hover)"
+msgstr ""
+
+#: ../inc/customizer/namespace.php:80
+msgid "Variant of the accent color, used for secondary element hover states."
+msgstr ""
+
+#: ../inc/customizer/namespace.php:85
 msgid "Primary Foreground Color"
 msgstr "Primärfarbe für den Vordergrund"
 
-#: ../inc/customizer/namespace.php:58
+#: ../inc/customizer/namespace.php:86
 msgid "Used for text on a primary background."
 msgstr "Wird für Text auf einem primären Hintergrund verwendet."
 
-#: ../inc/customizer/namespace.php:63
+#: ../inc/customizer/namespace.php:91
 msgid "Accent Foreground Color"
 msgstr "Akzentfarbe für den Vordergrund"
 
-#: ../inc/customizer/namespace.php:64
+#: ../inc/customizer/namespace.php:92
 msgid "Used for text on an accent color background."
 msgstr "Wird für Text auf einem Hintergrund in Akzentfarbe verwendet."
 
-#: ../inc/customizer/namespace.php:83
+#: ../inc/customizer/namespace.php:111
 msgid "Social Media"
 msgstr "Soziale Medien"
 
-#: ../inc/customizer/namespace.php:91
+#: ../inc/customizer/namespace.php:119
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../inc/customizer/namespace.php:100
+#: ../inc/customizer/namespace.php:128
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../inc/customizer/namespace.php:107
+#: ../inc/customizer/namespace.php:135
 msgid "Front Page Catalog"
 msgstr "Hauptseiten-Katalog"
 
-#: ../inc/customizer/namespace.php:114
+#: ../inc/customizer/namespace.php:142
 msgid "Show Front Page Catalog"
 msgstr "Hauptseiten-Katalog anzeigen"
 
-#: ../inc/customizer/namespace.php:124
+#: ../inc/customizer/namespace.php150, ../partials/content-front-page.php:19
+msgid "Our Latest Titles"
+msgstr "Unsere neusten Titel"
+
+#: ../inc/customizer/namespace.php:153
 msgid "Front Page Catalog Title"
 msgstr "Titel des Hauptseiten-Katalogs"
 
-#: ../inc/customizer/namespace.php:131
+#: ../inc/customizer/namespace.php:160
 msgid "Contact Form"
 msgstr "Kontakt Formular"
 
-#: ../inc/customizer/namespace.php:138
+#: ../inc/customizer/namespace.php:167
 msgid "Show Contact Form"
 msgstr "Kontakt Formular anzeigen"
 
-#: ../inc/customizer/namespace.php:148
+#: ../inc/customizer/namespace.php175, ../partials/contact-form.php:12
+msgid "Contact Us"
+msgstr "Kontaktieren Sie uns"
+
+#: ../inc/customizer/namespace.php:178
 msgid "Contact Form Title"
 msgstr "Titel des Kontakt Formulars"
 
-#: ../inc/filters/namespace.php:60
+#: ../inc/customizer/namespace.php:188
+msgid "Contact Email"
+msgstr ""
+
+#: ../inc/filters/namespace.php:61
 msgid "Continued"
 msgstr "Fortgesetzt"
 
-#: ../inc/filters/namespace.php:84
-msgid "Page Section"
-msgstr "Seitenabschnitt"
-
-#: ../inc/filters/namespace.php:90
-msgid "Page Section (Accent)"
-msgstr "Seitenabschnitt (Akzentuiert)"
-
-#: ../inc/filters/namespace.php:96
-msgid "Page Section (Bordered)"
-msgstr "Seitenabschnitt (Umrahmt)"
-
-#: ../inc/filters/namespace.php:102
-msgid "Page Section (Borderless)"
-msgstr "Seitenabschnitt (Rahmenlos)"
-
-#: ../inc/filters/namespace.php:108
-msgid "Call to Action"
-msgstr "Greifen Sie jetzt ein"
-
-#: ../inc/helpers/namespace.php:168
+#: ../inc/helpers/namespace.php:171
 msgid "Contact"
 msgstr "Kontakt"
 
-#: ../inc/helpers/namespace.php:175
+#: ../inc/helpers/namespace.php:178
 msgid "Sign In"
 msgstr "Anmelden"
 
-#: ../inc/helpers/namespace.php:181
+#: ../inc/helpers/namespace.php:184
 msgid "Sign Up"
 msgstr "Registrieren"
 
-#: ../inc/helpers/namespace.php:189
+#: ../inc/helpers/namespace.php:192
 msgid "Admin"
 msgstr "Admin"
 
-#: ../inc/helpers/namespace.php:197
+#: ../inc/helpers/namespace.php:200
 msgid "My Books"
 msgstr "Meine Bücher"
 
-#: ../inc/helpers/namespace.php:203
+#: ../inc/helpers/namespace.php:206
 msgid "Sign Out"
 msgstr "Abmelden"
 
-#: ../inc/helpers/namespace.php:256
+#: ../inc/helpers/namespace.php:260
 msgid "Name is required."
 msgstr "Name notwendig"
 
-#: ../inc/helpers/namespace.php:260
+#: ../inc/helpers/namespace.php:264
 msgid "Email is required."
 msgstr "E-Mail notwendig"
 
-#: ../inc/helpers/namespace.php:264
+#: ../inc/helpers/namespace.php:268
 msgid "Email is invalid."
 msgstr "E-Mail ungültig"
 
-#: ../inc/helpers/namespace.php:268
+#: ../inc/helpers/namespace.php:272
 msgid "Institution is required."
 msgstr "Institution benötigt"
 
-#: ../inc/helpers/namespace.php:272
+#: ../inc/helpers/namespace.php:276
 msgid "Message is required."
 msgstr "Nachricht benötigt"
 
-#: ../inc/helpers/namespace.php:278
+#: ../inc/helpers/namespace.php:282
 msgid "Contact Form Submission from %s"
 msgstr "Kontaktformular-Eingabe von %s"
 
-#: ../inc/helpers/namespace.php:289
+#: ../inc/helpers/namespace.php:293
 msgid "Your message was sent!"
 msgstr "Ihre Nachricht wurde versendet!"
 
-#: ../inc/helpers/namespace.php:292
+#: ../inc/helpers/namespace.php:296
 msgid "Your message could not be sent."
 msgstr "Ihre Nachricht konnte nicht versendet werden!"
 
@@ -410,35 +454,27 @@ msgstr "Es wurden keine Bücher zum Katalog hinzugefügt."
 msgid "About this book"
 msgstr "Über dieses Buch"
 
-#: ../partials/contact-form.php:11
-msgid "Contact Us"
-msgstr "Kontaktieren Sie uns"
-
-#: ../partials/contact-form.php:29
+#: ../partials/contact-form.php:30
 msgid "Your name (required)"
 msgstr "Ihr Name (benötigt)"
 
-#: ../partials/contact-form.php:37
+#: ../partials/contact-form.php:38
 msgid "Your email address (required)"
 msgstr "Ihre E-Mail (benötigt)"
 
-#: ../partials/contact-form.php:45
+#: ../partials/contact-form.php:46
 msgid "Your institution (required)"
 msgstr "Ihre Institution (benötigt)"
 
-#: ../partials/contact-form.php:53
+#: ../partials/contact-form.php:54
 msgid "Your message (required)"
 msgstr "Ihre Nachricht (benötigt)"
 
-#: ../partials/contact-form.php:57
+#: ../partials/contact-form.php:58
 msgid "Send"
 msgstr "Senden"
 
-#: ../partials/content-front-page.php:18
-msgid "Our Latest Titles"
-msgstr "Unsere neusten Titel"
-
-#: ../partials/content-front-page.php:63
+#: ../partials/content-front-page.php:67
 msgid "View Complete Catalog"
 msgstr "Den ganzen Katalog ansehen"
 
@@ -487,10 +523,6 @@ msgstr "Alle Lizenzen"
 #: ../partials/content-page-catalog.php:46
 msgid "Sort by"
 msgstr "Sortieren nach"
-
-#: ../partials/content-page-catalog.php:49
-msgid "Title"
-msgstr "Titel"
 
 #: ../partials/content-page-catalog.php:50
 msgid "Subject"
