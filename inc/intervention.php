@@ -13,7 +13,8 @@ intervention( 'remove-howdy', __( 'Hello,', 'pressbooks-aldine' ) );
 intervention( 'remove-dashboard-items', [ 'activity', 'quick-draft' ] );
 intervention( 'remove-menu-items', [
 	'posts',
-	'tools',
+	'tool-import',
+	'tool-export',
 	'setting-writing',
 	'setting-reading',
 	'setting-permalink',

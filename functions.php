@@ -74,3 +74,6 @@ add_action( 'wp_ajax_pressbooks_aldine_update_catalog', '\Aldine\Admin\update_ca
 add_filter( 'wpmu_blogs_columns', '\Aldine\Admin\catalog_columns' );
 add_action( 'manage_blogs_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
 add_action( 'manage_sites_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
+
+// Remove first submenu page from Tools.
+add_action( 'admin_menu', '\Aldine\Actions\remove_tools_menu' );
