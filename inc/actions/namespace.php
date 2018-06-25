@@ -292,3 +292,12 @@ function tinymce_l18n() {
 	</script>
 <?php
 }
+
+/**
+ * Remove top-level tools menu.
+ *
+ * @since 1.4.0
+ */
+function remove_tools_menu() {
+	remove_submenu_page( 'tools.php', 'tools.php' );
+}
