@@ -14,9 +14,9 @@
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
-**Requires at least:** 4.9.5  
-**Tested up to:** 4.9.5  
-**Stable tag:** 1.3.0  
+**Requires at least:** 4.9.6  
+**Tested up to:** 4.9.6  
+**Stable tag:** 1.4.0  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
@@ -41,6 +41,13 @@ TK.
 
 
 ## Changelog 
+
+
+# 1.4.0 
+
+**Minor Changes**
+
+- Add support for privacy tools in WordPress 4.9.6: [#129](https://github.com/pressbooks/pressbooks-aldine/pull/129)
 
 
 # 1.3.0 
