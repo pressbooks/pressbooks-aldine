@@ -17,6 +17,11 @@
 		"issues": "https://github.com/pressbooks/pressbooks-aldine/issues",
 		"forum": "https://discourse.pressbooks.org/"
 	},
+	"config": {
+		"platform": {
+			"php": "7.0.27"
+		}
+	},
 	"require": {
 		"php": ">=7",
 		"composer/installers": "~1.0",
@@ -25,8 +30,7 @@
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {
-		"humanmade/coding-standards": "^0.2.1",
-		"squizlabs/php_codesniffer": "^2.8.0",
+		"pressbooks/coding-standards": "dev-master",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
 	"scripts": {

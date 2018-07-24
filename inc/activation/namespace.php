@@ -42,6 +42,7 @@ function create_default_content() {
 						__( 'designed PDF (for print-on-demand and digital distribution)', 'pressbooks-aldine' ),
 						__( 'Pressbooks is used by educational institutions around the world as well as authors and publishers.', 'pressbooks' ),
 						sprintf(
+							/* translators: %s link to about page */
 							__( 'For more information about Pressbooks, %s.', 'pressbooks-aldine' ),
 							sprintf( '<a href="https://pressbooks.com/about">%s</a>', __( 'see here', 'pressbooks-aldine' ) )
 						)
@@ -55,6 +56,7 @@ function create_default_content() {
 					sprintf(
 						'<p>%1$s</p><p>%2$s</p>',
 						sprintf(
+							/* translators: %1$s: link to how to page; %2$s: link to guide */
 							__( 'The easiest way to get started with Pressbooks is to follow our %1$s. Or, you can review our %2$s.', 'pressbooks-aldine' ),
 							sprintf( '<a href="https://pressbooks.com/how-to-make-a-book-with-pressbooks">%s</a>', __( '4 Step Guide to Making a Book on Pressbooks', 'pressbooks-aldine' ) ),
 							sprintf( '<a href="https://guide.pressbooks.com/">%s</a>', __( 'Guide to Using Pressbooks', 'pressbooks-aldine' ) )
@@ -79,7 +81,14 @@ function create_default_content() {
 		foreach ( $default_pages as $slug => $page ) {
 			$check = get_page_by_path( $slug );
 			if ( empty( $check ) ) {
-				$pages[ $slug ] = wp_insert_post( array_merge( $page, [ 'post_type' => 'page', 'post_status' => 'publish' ] ) );
+				$pages[ $slug ] = wp_insert_post(
+					array_merge(
+						$page, [
+							'post_type' => 'page',
+							'post_status' => 'publish',
+						]
+					)
+				);
 			} else {
 				$pages[ $slug ] = $check->ID;
 			}
@@ -192,11 +201,11 @@ function assign_menus() {
 			switch ( $id ) {
 				case 'primary-menu':
 					$menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' );
-				break;
+					break;
 
 				case 'network-footer-menu':
 					$menu = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
-				break;
+					break;
 			}
 
 			if ( $menu ) {

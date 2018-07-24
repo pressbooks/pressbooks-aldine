@@ -6,10 +6,8 @@
 
 namespace Aldine\Actions;
 
-use Spatie\Color\Hex;
-use Spatie\Color\Rgb;
-use Spatie\Color\Rgba;
 use PressbooksMix\Assets;
+use Spatie\Color\Hex;
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -44,30 +42,36 @@ function setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( [
-		'primary-menu' => __( 'Primary Menu', 'pressbooks-aldine' ),
-		'network-footer-menu' => __( 'Footer Menu', 'pressbooks-aldine' ),
-	] );
+	register_nav_menus(
+		[
+			'primary-menu' => __( 'Primary Menu', 'pressbooks-aldine' ),
+			'network-footer-menu' => __( 'Footer Menu', 'pressbooks-aldine' ),
+		]
+	);
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
 		*/
-	add_theme_support( 'html5', [
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	] );
+	add_theme_support(
+		'html5', [
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		]
+	);
 
 	// Set up the WordPress core custom header feature.
-	add_theme_support( 'custom-header', [
-		'default-image' => get_template_directory_uri() . '/dist/images/header.jpg',
-		'width' => 1920,
-		'height' => 884,
-		'default-text-color' => '#000',
-	] );
+	add_theme_support(
+		'custom-header', [
+			'default-image' => get_template_directory_uri() . '/dist/images/header.jpg',
+			'width' => 1920,
+			'height' => 884,
+			'default-text-color' => '#000',
+		]
+	);
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -77,12 +81,14 @@ function setup() {
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support( 'custom-logo', [
-		'height' => 40,
-		'width' => 265,
-		'flex-width' => true,
-		'flex-height' => true,
-	] );
+	add_theme_support(
+		'custom-logo', [
+			'height' => 40,
+			'width' => 265,
+			'flex-width' => true,
+			'flex-height' => true,
+		]
+	);
 
 	// Add editor style.
 	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
@@ -103,26 +109,30 @@ function widgets_init() {
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	];
-	register_sidebar( [
-		'name'          => __( 'Network Footer Block 1', 'pressbooks-aldine' ),
-		'description'   => __(
-			'Add content for your network&rsquo;s customizeable footer here.
+	register_sidebar(
+		[
+			'name'          => __( 'Network Footer Block 1', 'pressbooks-aldine' ),
+			'description'   => __(
+				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the first row (on mobile) or the first column (on desktops).',
-			'aldine'
-		),
-		'id'            => 'network-footer-block-1',
-	] + $config );
-	register_sidebar( [
-		'name'          => __( 'Network Footer Block 2', 'pressbooks-aldine' ),
-		'description'   => __(
-			'Add content for your network&rsquo;s customizeable footer here.
+				'aldine'
+			),
+			'id'            => 'network-footer-block-1',
+		] + $config
+	);
+	register_sidebar(
+		[
+			'name'          => __( 'Network Footer Block 2', 'pressbooks-aldine' ),
+			'description'   => __(
+				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the second row (on mobile) or the middle column (on desktop).',
-			'aldine'
-		),
-		'id'            => 'network-footer-block-2',
-	] + $config );
+				'aldine'
+			),
+			'id'            => 'network-footer-block-2',
+		] + $config
+	);
 }
 
 /**
@@ -216,15 +226,17 @@ function remove_admin_bar_callback() {
  * Hide content editor for Catalog page.
  */
 function hide_catalog_content_editor() {
-	$post_id = $_GET['post'] ?? null ;
+	$post_id = $_GET['post'] ?? null;
 	if ( ! isset( $post_id ) ) {
 		return;
 	}
 	$pagename = get_the_title( $post_id );
 	if ( $pagename === 'Catalog' ) {
-		add_action( 'edit_form_after_title', function() {
-			printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
-		} );
+		add_action(
+			'edit_form_after_title', function() {
+				printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
+			}
+		);
 		remove_post_type_support( 'page', 'editor' );
 		remove_post_type_support( 'page', 'thumbnail' );
 	}
@@ -272,7 +284,7 @@ function register_shortcode_buttons() {
  * @since 1.1.0
  */
 function tinymce_l18n() {
-?>
+	?>
 	<script type='text/javascript'>
 		const aldine = {
 			page_section: {
@@ -290,7 +302,7 @@ function tinymce_l18n() {
 			}
 		};
 	</script>
-<?php
+	<?php
 }
 
 /**

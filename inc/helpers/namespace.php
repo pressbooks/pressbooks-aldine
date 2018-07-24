@@ -7,8 +7,8 @@
 
 namespace Aldine\Helpers;
 
-use Pressbooks\Book;
 use function \Pressbooks\Metadata\book_information_to_schema;
+use Pressbooks\Book;
 
 /**
  * @param int $page
@@ -22,7 +22,10 @@ use function \Pressbooks\Metadata\book_information_to_schema;
 function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
 
 	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
-		return [ 'pages' => 0, 'books' => [] ]; // Bail
+		return [
+			'pages' => 0,
+			'books' => [],
+		]; // Bail
 	}
 
 	/**
@@ -91,7 +94,10 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		}
 	}
 
-	return [ 'pages' => $total_pages, 'books' => $books ];
+	return [
+		'pages' => $total_pages,
+		'books' => $books,
+	];
 }
 
 
@@ -226,9 +232,11 @@ function default_menu( $args = [], $items = '' ) {
 		get_default_menu( $items )
 	);
 	if ( class_exists( '\PressbooksOAuth\OAuth' ) ) {
-		add_filter( 'pb_oauth_output_button', function( $bool ) {
-			return false;
-		} );
+		add_filter(
+			'pb_oauth_output_button', function( $bool ) {
+				return false;
+			}
+		);
 		do_action( 'pressbooks_oauth_connect' );
 	}
 }
@@ -279,6 +287,7 @@ function handle_contact_form_submission() {
 		} else {
 			$sent = wp_mail(
 				$contact_email,
+				/* translators: %s name of contact for submitter */
 				sprintf( __( 'Contact Form Submission from %s', 'pressbooks-aldine' ), $name ),
 				sprintf(
 					"From: %1\$s <%2\$s>\nInstitution: %3\$s\n\n%4\$s",
