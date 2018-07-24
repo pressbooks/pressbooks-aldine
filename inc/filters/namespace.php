@@ -7,8 +7,8 @@
 
 namespace Aldine\Filters;
 
-use PressbooksMix\Assets;
 use function Aldine\Helpers\has_sections;
+use PressbooksMix\Assets;
 
 /**
  * Adds custom classes to the array of body classes.
@@ -32,9 +32,11 @@ function body_classes( array $classes ) {
 	}
 
 	/** Clean up class names for custom templates */
-	$classes = array_map( function ( $class ) {
-		return preg_replace( [ '/-php$/', '/^page-template-views/' ], '', $class );
-	}, $classes );
+	$classes = array_map(
+		function ( $class ) {
+				return preg_replace( [ '/-php$/', '/^page-template-views/' ], '', $class );
+		}, $classes
+	);
 
 	return array_filter( $classes );
 }

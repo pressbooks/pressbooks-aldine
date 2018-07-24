@@ -17,9 +17,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<?php if ( is_front_page() ) :
+			<?php
+			if ( is_front_page() ) :
 
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) :
+					the_post();
 
 					get_template_part( 'partials/content', 'front-page' );
 
@@ -27,7 +29,8 @@ get_header(); ?>
 
 			else :
 
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) :
+					the_post();
 
 					get_template_part( 'partials/content', 'page' );
 

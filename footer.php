@@ -20,9 +20,11 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 
 	</div><!-- #content -->
 
-	<?php if ( $pb_network_contact_form ) :
+	<?php
+	if ( $pb_network_contact_form ) :
 		include( locate_template( 'partials/contact-form.php' ) );
-	endif; ?>
+	endif;
+	?>
 
 	<footer class="footer" role="contentinfo">
 	<div class="footer__inner">
@@ -37,18 +39,22 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 					<?php dynamic_sidebar( 'network-footer-block-2' ); ?>
 					<div class="social-media">
 						<?php if ( ! empty( $network_facebook ) ) { ?>
+							<?php /* translators: %s network name */ ?>
 							<a class="facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use xlink:href="#facebook" />
 								</svg>
+								<?php /* translators: %s network name */ ?>
 								<span class="screen-reader-text"><?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 						<?php if ( ! empty( $network_twitter ) ) { ?>
+							<?php /* translators: %s network name */ ?>
 							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use xlink:href="#twitter" />
 								</svg>
+								<?php /* translators: %s network name */ ?>
 								<span class="screen-reader-text"><?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
@@ -60,22 +66,23 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 			</div>
 		</div>
 		<section class="footer__pressbooks">
-		  <a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
+			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
 				<?php // TODO ?>
 				<svg class="icon--svg">
 					<use xlink:href="#icon-pressbooks" />
 				</svg>
 			</a>
-		  <div class="footer__pressbooks__links">
+			<div class="footer__pressbooks__links">
+				<?php /* translators: %s Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-				  <li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-aldine' ); ?></a> |</li>
-				  <li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-aldine' ); ?></a> |</li>
-				  <li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-aldine' ); ?></a> |</li>
-				  <li><a href="https://pressbooks.education/about"><?php _e( 'Learn More', 'pressbooks-aldine' ); ?></a> </li>
+					<li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-aldine' ); ?></a> |</li>
+					<li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-aldine' ); ?></a> |</li>
+					<li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-aldine' ); ?></a> |</li>
+					<li><a href="https://pressbooks.education/about"><?php _e( 'Learn More', 'pressbooks-aldine' ); ?></a> </li>
 				</ul>
-		  </div>
-		  <div class="footer__pressbooks__social">
+			</div>
+			<div class="footer__pressbooks__social">
 				<a class="facebook" href="https://facebook.com/pressbooks2" title="<?php _e( 'Pressbooks on Facebook', 'pressbooks-aldine' ); ?>">
 					<svg class="icon--svg">
 						<use xlink:href="#facebook" />
@@ -88,7 +95,6 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 					</svg>
 				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-aldine' ); ?></span></a>
 			</div>
-
 		</section>
 	</div><!-- .container -->
 </footer><!-- .footer -->
