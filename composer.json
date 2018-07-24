@@ -17,6 +17,11 @@
 		"issues": "https://github.com/pressbooks/pressbooks-aldine/issues",
 		"forum": "https://discourse.pressbooks.org/"
 	},
+	"config": {
+		"platform": {
+			"php": "7.0.27"
+		}
+	},
 	"require": {
 		"php": ">=7",
 		"composer/installers": "~1.0",
