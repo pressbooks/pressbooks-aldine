@@ -38,6 +38,12 @@ TK.
 
 == Changelog ==
 
+=== 1.5.0 ===
+
+**Minor Changes**
+
+- Add a new menu item to allow logged-in users without books to create a new book: [#132](https://github.com/pressbooks/pressbooks-aldine/pull/132)
+
 === 1.4.0 ===
 
 **Minor Changes**
@@ -109,6 +115,10 @@ In addition, Aldine introduces a standalone catalog page that is sortable and fi
 
 You can now more easily add additional pages to the network root, such as an “About Us” or “Help” page.
 
+== Upgrade Notice ==
+
+- Aldine 1.5.0 requires PHP >= 7.1.
+
 == Credits ==
 
-* Based on [Underscores](https://underscores.me/), (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- Based on [Underscores](https://underscores.me/), (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

@@ -19,11 +19,11 @@
 	},
 	"config": {
 		"platform": {
-			"php": "7.0.27"
+			"php": "7.1"
 		}
 	},
 	"require": {
-		"php": ">=7",
+		"php": ">=7.1",
 		"composer/installers": "~1.0",
 		"pressbooks/mix": "^2.1",
 		"soberwp/intervention": "1.2.0-p",
