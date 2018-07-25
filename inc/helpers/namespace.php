@@ -205,6 +205,12 @@ function get_default_menu( $items = '' ) {
 				get_blogaddress_by_id( $user_info->primary_blog ) . 'wp-admin/index.php?page=pb_catalog',
 				__( 'My Books', 'pressbooks-aldine' )
 			);
+		} elseif ( in_array( get_site_option( 'registration' ), [ 'blog', 'all' ], true ) ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				network_home_url( '/wp-signup.php' ),
+				__( 'Create a New Book', 'pressbooks-aldine' )
+			);
 		}
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
