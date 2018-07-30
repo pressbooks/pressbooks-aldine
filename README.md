@@ -42,18 +42,18 @@ TK.
 
 ## Changelog 
 
-# 1.4.1 
-
-**Patches**
-
-- Ensure that unsupported catalog subject codes aren't loaded: [#133](https://github.com/pressbooks/pressbooks-aldine/pull/133)
-
-
 # 1.5.0 
 
 **Minor Changes**
 
 - Add a new menu item to allow logged-in users without books to create a new book: [#132](https://github.com/pressbooks/pressbooks-aldine/pull/132)
+
+
+# 1.4.1 
+
+**Patches**
+
+- Ensure that unsupported catalog subject codes aren't loaded: [#133](https://github.com/pressbooks/pressbooks-aldine/pull/133)
 
 
 # 1.4.0 
