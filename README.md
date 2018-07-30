@@ -16,7 +16,7 @@
 
 **Requires at least:** 4.9.6  
 **Tested up to:** 4.9.6  
-**Stable tag:** 1.4.0  
+**Stable tag:** 1.4.1  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
@@ -41,6 +41,12 @@ TK.
 
 
 ## Changelog 
+
+# 1.4.1 
+
+**Patches**
+
+- Ensure that unsupported catalog subject codes aren't loaded: [#133](https://github.com/pressbooks/pressbooks-aldine/pull/133)
 
 
 # 1.5.0 
