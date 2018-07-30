@@ -7,8 +7,9 @@
 
 namespace Aldine\Helpers;
 
-use Pressbooks\Book;
 use function \Pressbooks\Metadata\book_information_to_schema;
+use function \Pressbooks\Metadata\is_bisac;
+use Pressbooks\Book;
 
 /**
  * @param int $page
@@ -142,7 +143,7 @@ function get_available_licenses( $catalog_data ) {
 function get_available_subjects( $catalog_data ) {
 	$subjects = [];
 	foreach ( $catalog_data['books'] as $book ) {
-		if ( ! empty( $book['subject'] ) ) {
+		if ( ! empty( $book['subject'] ) && ! is_bisac( $book['subject'] ) ) {
 			$subjects[ substr( $book['subject'], 0, 1 ) ][] = substr( $book['subject'], 0, 2 );
 		}
 	}
