@@ -1,7 +1,10 @@
-<?php use function \Aldine\Helpers\maybe_truncate_string; ?>
+<?php
+use function \Aldine\Helpers\maybe_truncate_string;
+use function \Pressbooks\Metadata\is_bisac;
+?>
 
 <?php
-$subject = ( isset( $book['subject'] ) ) ? substr( $book['subject'], 0, 2 ) : '';
+$subject = ( isset( $book['subject'] ) && ! is_bisac( $book['subject'] ) ) ? substr( $book['subject'], 0, 2 ) : '';
 $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', $book['metadata']['datePublished'] ) : '';
 ?>
 <li class="book"
