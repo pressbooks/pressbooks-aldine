@@ -9,6 +9,7 @@ namespace Aldine\Helpers;
 
 use function \Pressbooks\Metadata\book_information_to_schema;
 use function \Pressbooks\Metadata\is_bisac;
+use function \Pressbooks\Utility\str_starts_with;
 use Pressbooks\Book;
 
 /**
@@ -260,8 +261,10 @@ function handle_contact_form_submission() {
 	}
 	if ( isset( $_POST['submitted'] ) ) {
 		// Check the fake anti-spam honeypot field.
-		if ( ! empty( $_POST['firstname'] ) ) {
-			return false; // Honeypot failed.
+		foreach ( $_POST as $pkey => $pval ) {
+			if ( str_starts_with( $pkey, 'firstname' ) && ! empty( $pval ) ) {
+				return false; // Honeypot failed.
+			}
 		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
