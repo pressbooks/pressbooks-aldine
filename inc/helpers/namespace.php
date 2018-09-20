@@ -259,6 +259,10 @@ function handle_contact_form_submission() {
 		return false; // Security check failed.
 	}
 	if ( isset( $_POST['submitted'] ) ) {
+		// Check the fake anti-spam honeypot field.
+		if ( ! empty( $_POST['firstname'] ) ) {
+			return false; // Honeypot failed.
+		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
 		$name = ( isset( $_POST['visitor_name'] ) ) ? $_POST['visitor_name'] : '';
@@ -315,7 +319,7 @@ function handle_contact_form_submission() {
 		}
 		return $output;
 	}
-	return;
+	return false;
 }
 
 /**
