@@ -11,6 +11,7 @@
 $pb_network_contact_form_title = get_option( 'pb_network_contact_form_title' );
 $contact_form_title = ( ! empty( $pb_network_contact_form_title ) ) ? $pb_network_contact_form_title : __( 'Contact Us', 'pressbooks-aldine' );
 $contact_form_response = \Aldine\Helpers\handle_contact_form_submission();
+$honeypot = 'firstname' . rand();
 
 ?>
 
@@ -22,6 +23,12 @@ $contact_form_response = \Aldine\Helpers\handle_contact_form_submission();
 		<?php endif; ?>
 		<?php wp_nonce_field( 'pb_root_contact_form', 'pb_root_contact_form_nonce' ); ?>
 		<input type="hidden" name="submitted" value="1">
+		<p class="form__row" style="display:none;">
+			<input type="text" name="<?php echo $honeypot; ?>" id="<?php echo $honeypot; ?>"/>
+			<label for="<?php echo $honeypot; ?>">
+				<?php _e( 'Keep this field blank (required)', 'pressbooks-aldine' ); ?>
+			</label>
+		</p>
 		<p class="form__row">
 			<input id="contact-name" 
 			<?php
