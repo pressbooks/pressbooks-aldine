@@ -14,9 +14,9 @@
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
-**Requires at least:** 4.9.6  
-**Tested up to:** 4.9.6  
-**Stable tag:** 1.4.1  
+**Requires at least:** 4.9.8  
+**Tested up to:** 4.9.8  
+**Stable tag:** 1.5.0  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
@@ -47,6 +47,7 @@ TK.
 **Minor Changes**
 
 - Add a new menu item to allow logged-in users without books to create a new book: [#132](https://github.com/pressbooks/pressbooks-aldine/pull/132)
+- Add simple honeypot to contact form ([#134](https://github.com/pressbooks/pressbooks-aldine/issues/134)): [#135](https://github.com/pressbooks/pressbooks-aldine/pull/135)
 
 
 # 1.4.1 

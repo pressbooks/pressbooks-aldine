@@ -76,10 +76,10 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 				<?php /* translators: %s Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-aldine' ); ?></a> |</li>
+					<li><a href="https://pressbooks.org/"><?php _e( 'Open Source', 'pressbooks-aldine' ); ?></a> |</li>
 					<li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-aldine' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-aldine' ); ?></a> |</li>
-					<li><a href="https://pressbooks.education/about"><?php _e( 'Learn More', 'pressbooks-aldine' ); ?></a> </li>
+					<li><a href="https://pressbooks.com/"><?php _e( 'Open Book Publishing', 'pressbooks-aldine' ); ?></a> |</li>
+					<li><a href="https://pressbooks.education/about/"><?php _e( 'Learn More', 'pressbooks-aldine' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
