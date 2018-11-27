@@ -1,7 +1,11 @@
 {
 	"name": "@pressbooks/pressbooks-aldine",
+<<<<<<< HEAD
 
 	"version": "1.2.1",
+=======
+	"version": "1.5.0",
+>>>>>>> dev
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"description":
@@ -58,7 +62,7 @@
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^0.12.0"
+		"pressbooks-build-tools": "^0.13.0"
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.17",

@@ -9,10 +9,10 @@
  * @package Aldine
  */
 
+use function Aldine\Helpers\get_available_licenses;
+use function Aldine\Helpers\get_available_subjects;
 use function Aldine\Helpers\get_catalog_data;
 use function Aldine\Helpers\get_catalog_licenses;
-use function Aldine\Helpers\get_available_subjects;
-use function Aldine\Helpers\get_available_licenses;
 
 $current_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $orderby = ( get_query_var( 'orderby' ) ) ? get_query_var( 'orderby' ) : 'title';
@@ -38,9 +38,9 @@ if ( ! empty( $catalog_data['books'] ) ) :
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+	<?php
+	get_sidebar();
+	get_footer();
 
 else :
 	global $wp_query;

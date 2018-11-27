@@ -14,9 +14,9 @@
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 Tags: publishing, catalog, pressbooks, default-theme
 
-Requires at least: 4.9.4
-Tested up to: 4.9.4
-Stable tag: 1.2.1
+Requires at least: 4.9.8
+Tested up to: 4.9.8
+Stable tag: 1.5.0
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -37,6 +37,42 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 TK.
 
 == Changelog ==
+=== 1.6.0 ===
+
+**Minor Changes**
+
+**Patches**
+
+=== 1.5.0 ===
+
+**Minor Changes**
+
+- Add a new menu item to allow logged-in users without books to create a new book: [#132](https://github.com/pressbooks/pressbooks-aldine/pull/132)
+- Add simple honeypot to contact form ([#134](https://github.com/pressbooks/pressbooks-aldine/issues/134)): [#135](https://github.com/pressbooks/pressbooks-aldine/pull/135)
+
+=== 1.4.1 ===
+
+**Patches**
+
+- Ensure that unsupported catalog subject codes aren't loaded: [#133](https://github.com/pressbooks/pressbooks-aldine/pull/133)
+
+=== 1.4.0 ===
+
+**Minor Changes**
+
+- Add support for privacy tools in WordPress 4.9.6: [#129](https://github.com/pressbooks/pressbooks-aldine/pull/129)
+
+=== 1.3.0 ===
+
+**Minor Changes**
+
+- Add customizer options for dark (hover) colours: [#125](https://github.com/pressbooks/pressbooks-aldine/issues/125)
+- Update Isotope to 3.0.6: [#120](https://github.com/pressbooks/pressbooks-aldine/issues/120)
+
+### Patches
+
+- Fix incorrect contact form title ([#122](https://github.com/pressbooks/pressbooks-aldine/issues/122)): [#123](https://github.com/pressbooks/pressbooks-aldine/issues/123)
+- Don't run Intervention functions during AJAX: [#121](https://github.com/pressbooks/pressbooks-aldine/issues/121)
 
 === 1.2.1 ===
 
@@ -91,6 +127,10 @@ In addition, Aldine introduces a standalone catalog page that is sortable and fi
 
 You can now more easily add additional pages to the network root, such as an “About Us” or “Help” page.
 
+== Upgrade Notice ==
+
+- Aldine 1.5.0 requires PHP >= 7.1.
+
 == Credits ==
 
-* Based on [Underscores](https://underscores.me/), (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- Based on [Underscores](https://underscores.me/), (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

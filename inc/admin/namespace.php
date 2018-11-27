@@ -70,7 +70,11 @@ function catalog_column( $column, $blog_id ) {
 
 	if ( 'in_catalog' === $column && ! is_main_site( $blog_id ) ) { ?>
 		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-label="<?php echo esc_attr_x( 'Show in Catalog', 'pressbooks-aldine' ); ?>" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
-		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) { ?>disabled="disabled" title="<?php echo esc_attr_x( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
-	<?php }
+		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) {
+
+			?>
+		disabled="disabled" title="<?php echo esc_attr_x( 'This book is private, so you can&rsquo;t display it in your catalog.', 'pressbooks-aldine' ); ?>"<?php } ?> />
+		<?php
+	}
 
 }

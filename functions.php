@@ -13,11 +13,13 @@
 if ( ! class_exists( 'Spatie\\Color\\Hex' ) ) {
 	$composer = get_template_directory() . '/vendor/autoload.php';
 	if ( ! file_exists( $composer ) ) {
-		wp_die( sprintf(
-			'<h1>%1$s</h1><p>%2$s</p>',
-			__( 'Dependencies Missing', 'pressbooks-aldine' ),
-			__( 'You must run <code>composer install</code> from the Aldine directory.', 'pressbooks-aldine' )
-		) );
+		wp_die(
+			sprintf(
+				'<h1>%1$s</h1><p>%2$s</p>',
+				__( 'Dependencies Missing', 'pressbooks-aldine' ),
+				__( 'You must run <code>composer install</code> from the Aldine directory.', 'pressbooks-aldine' )
+			)
+		);
 	}
 	require_once $composer;
 }
@@ -74,3 +76,6 @@ add_action( 'wp_ajax_pressbooks_aldine_update_catalog', '\Aldine\Admin\update_ca
 add_filter( 'wpmu_blogs_columns', '\Aldine\Admin\catalog_columns' );
 add_action( 'manage_blogs_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
 add_action( 'manage_sites_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
+
+// Remove first submenu page from Tools.
+add_action( 'admin_menu', '\Aldine\Actions\remove_tools_menu' );

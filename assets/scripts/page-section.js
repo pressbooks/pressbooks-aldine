@@ -20,16 +20,20 @@
 								label: 'Variant',
 								values: [
 									{
-										text: aldine.page_section.standard, value: '',
+										text: aldine.page_section.standard,
+										value: '',
 									},
 									{
-										text: aldine.page_section.accent, value: 'accent',
+										text: aldine.page_section.accent,
+										value: 'accent',
 									},
 									{
-										text: aldine.page_section.bordered, value: 'bordered',
+										text: aldine.page_section.bordered,
+										value: 'bordered',
 									},
 									{
-										text: aldine.page_section.borderless, value: 'borderless',
+										text: aldine.page_section.borderless,
+										value: 'borderless',
 									},
 								],
 								value: '', // Sets the default

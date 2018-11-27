@@ -18,11 +18,13 @@
 		<?php
 			the_content();
 
-			wp_link_pages( [
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pressbooks-aldine' ),
-				'after'  => '</div>',
-			] );
-		?>
+			wp_link_pages(
+				[
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pressbooks-aldine' ),
+					'after'  => '</div>',
+				]
+			);
+			?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

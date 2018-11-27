@@ -6,12 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-aldine\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
-"Language-Team: Hungarian (Hungary) (https://www.transifex.com/pressbooks/teams/9194/hu_HU/)\n"
+"Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/pressbooks/teams/9194/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu_HU\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "Úgy tűnik, semmit nem találtunk ezen a helyen."
+msgstr "Atrodo, kad šioje vietoje nieko nerasta."
 
 #: ../comments.php:34
 msgid "One thought on &ldquo;%1$s&rdquo;"
@@ -36,10 +36,12 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../comments.php:63
 msgid "Comments are closed."
-msgstr "A hozzászólások le vannak zárva."
+msgstr "Komentarai nepriimami."
 
 #: ../footer.php40, ../footer.php:44
 msgid "%s on Facebook"
@@ -55,7 +57,7 @@ msgstr ""
 
 #: ../footer.php:72
 msgid "Open Source"
-msgstr "Nyílt Forráskód"
+msgstr "Atviras Kodas"
 
 #: ../footer.php:73
 msgid "Open Textbooks"
@@ -63,19 +65,19 @@ msgstr ""
 
 #: ../footer.php:74
 msgid "Open Book Publishing"
-msgstr "Nyílt Könyvkiadás"
+msgstr ""
 
 #: ../footer.php75, ../inc/activation/namespace.php:27
 msgid "Learn More"
-msgstr "Tudjon meg többet"
+msgstr "Sužinoti Daugiau"
 
 #: ../footer.php79, ../footer.php:83
 msgid "Pressbooks on Facebook"
-msgstr "Pressbooks a Facebookon"
+msgstr "Facebook Pressbooks"
 
 #: ../footer.php85, ../footer.php:89
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks a Twitteren"
+msgstr "Twitter Pressbooks"
 
 #: ../functions.php:18
 msgid "Dependencies Missing"
@@ -87,7 +89,7 @@ msgstr ""
 
 #: ../header.php:44
 msgid "Skip to content"
-msgstr "Ugrás a tartalomra"
+msgstr "Pereiti prie turinio"
 
 #: ../header.php:64
 msgid "Logo for %s"
@@ -95,97 +97,97 @@ msgstr ""
 
 #: ../header.php:74
 msgid "Toggle Menu"
-msgstr ""
+msgstr "Perjungti Meniu"
 
 #: ../inc/intervention.php:12
 msgid "Hello,"
-msgstr "Szia,"
+msgstr "Labas,"
 
 #: ../inc/actions/namespace.php48, ../inc/activation/namespace.php:111
 msgid "Primary Menu"
-msgstr "Főmenü"
+msgstr "Pagrindinis Meniu"
 
 #: ../inc/actions/namespace.php49, ../inc/activation/namespace.php:132
 msgid "Footer Menu"
-msgstr "Lábléc Menü"
+msgstr "Poraštės Meniu"
 
 #: ../inc/actions/namespace.php:107
 msgid "Network Footer Block 1"
-msgstr ""
+msgstr "Tinklo poraštės 1 blokas"
 
 #: ../inc/actions/namespace.php:117
 msgid "Network Footer Block 2"
-msgstr ""
+msgstr "Tinklo poraštės 2 blokas"
 
 #: ../inc/actions/namespace.php142,
 #: ../partials/content-accessibility-toolbar.php6,
 #: ../partials/content-accessibility-toolbar.php:7
 msgid "Increase Font Size"
-msgstr "Betűméret Növelése"
+msgstr "Padidinkite Šrifto Dydį"
 
 #: ../inc/actions/namespace.php:143
 msgid "Decrease Font Size"
-msgstr "Betűméret Csökkentése"
+msgstr "Sumažinkite Šrifto Dydį"
 
 #: ../inc/actions/namespace.php:226
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"Ez az oldal megjeleníti a hálózati katalógust, így nincs szerkeszteni való "
-"tartalom."
+"Šiame puslapyje rodomas jūsų tinklo katalogas, todėl nėra jokio turinio, "
+"kurį reikia redaguoti."
 
 #: ../inc/actions/namespace.php:279
 msgid "Page Section"
-msgstr "Oldal-szekció"
+msgstr "Puslapio Skyrius"
 
 #: ../inc/actions/namespace.php280, ../partials/content-page-catalog.php:49
 msgid "Title"
-msgstr "Cím"
+msgstr "Pavadinimas"
 
 #: ../inc/actions/namespace.php:281
 msgid "Standard"
-msgstr "Sztenderd"
+msgstr "Standartinis"
 
 #: ../inc/actions/namespace.php:282
 msgid "Accent"
-msgstr ""
+msgstr "Akcentuoti"
 
 #: ../inc/actions/namespace.php:283
 msgid "Bordered"
-msgstr "Határolt"
+msgstr "Ribojasi"
 
 #: ../inc/actions/namespace.php:284
 msgid "Borderless"
-msgstr "Nincs határ"
+msgstr ""
 
 #: ../inc/actions/namespace.php:287
 msgid "Call to Action"
-msgstr ""
+msgstr "Kvietimas veikti"
 
 #: ../inc/actions/namespace.php:288
 msgid "Text"
-msgstr "Szöveg"
+msgstr "Tekstas"
 
 #: ../inc/actions/namespace.php:289
 msgid "Link"
-msgstr "Link"
+msgstr "Nuoroda"
 
 #: ../inc/activation/namespace.php:25
 msgid "About Pressbooks"
-msgstr "A Pressbookról"
+msgstr "Apie Pressbooks"
 
 #: ../inc/activation/namespace.php:26
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
-"A Pressbooks egyszerűen használható könyvíró szoftver, amelynek segítségével"
-" könyveket készíthet, bármely formátumban."
+"Pressbooks - tai paprasta naudoti knygų rašymo programinė įranga, kuri "
+"leidžia jums sukurti knygą visais formatais, kuriais norite paskelbti."
 
 #: ../inc/activation/namespace.php34, ../inc/activation/namespace.php137,
 #: ../inc/activation/namespace.php:143
 msgid "About"
-msgstr "Rólunk"
+msgstr "Apie"
 
 #: ../inc/activation/namespace.php:39
 msgid ""
@@ -193,22 +195,24 @@ msgid ""
 "publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
 "books, white papers, and more in multiple formats including:"
 msgstr ""
-"A Pressbooks egy egyszerű könyvkészítő szoftver. A Pressbooks segítségével "
-"többféle formátumban kiadhat tankönyveket, tudományos monográfiákat, "
-"tananyagokat, fiktív és valós könyveket, tanulmányokat, stb."
+"Pressbooks yra paprasta knygų gamybos programinė įranga. Pressbooks galite "
+"skelbti vadovėlius, mokslines monografijas, mokymo programas, grožinę "
+"literatūrą ir literatūros knygas, baltąsias knygas ir dar daugiau "
+"skirtingais formatais, įskaitant:"
 
 #: ../inc/activation/namespace.php:40
 msgid "MOBI (for Kindle ebooks)"
-msgstr "MOBI (Kindle e-könyvekhez)"
+msgstr "MOBI (Kindle e-knygos)"
 
 #: ../inc/activation/namespace.php:41
 msgid "EPUB (for all other ebookstores)"
-msgstr "EPUB (minden más e-könyvtár esetében)"
+msgstr "EPUB (visiems kitiems elektroniniams knygynams)"
 
 #: ../inc/activation/namespace.php:42
 msgid "designed PDF (for print-on-demand and digital distribution)"
 msgstr ""
-"tervezett PDF (nyomtatásra igény szerint és digitális terjesztés esetén)"
+"Suprojektuotas PDF (spausdinimui pagal pareikalavimą ir skaitmeniniam "
+"platinimui)"
 
 #: ../inc/activation/namespace.php:45
 msgid "For more information about Pressbooks, %s."
@@ -216,12 +220,12 @@ msgstr ""
 
 #: ../inc/activation/namespace.php:46
 msgid "see here"
-msgstr "lásd itt"
+msgstr "žiūrėti čia"
 
 #: ../inc/activation/namespace.php52, ../inc/activation/namespace.php167,
 #: ../inc/activation/namespace.php:173
 msgid "Help"
-msgstr "Súgó"
+msgstr "Pagalba"
 
 #: ../inc/activation/namespace.php:58
 msgid ""
@@ -231,48 +235,50 @@ msgstr ""
 
 #: ../inc/activation/namespace.php:59
 msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "Hogyan készítsünk könyvet a Pressbookson 4 lépésben"
+msgstr "4 žingsnių gidas, kaip sukurti knygą Pressbooks"
 
 #: ../inc/activation/namespace.php:60
 msgid "Guide to Using Pressbooks"
-msgstr "Útmutató a Pressbooks használatához"
+msgstr "Pressbooks Naudojimo Vadovas"
 
 #: ../inc/activation/namespace.php:62
 msgid ""
 "If you require further assistance, please contact your network manager."
-msgstr "Ha további segítségre van szüksége, forduljon a hálózatkezelőjéhez."
+msgstr ""
+"Jei jums reikia papildomos pagalbos, kreipkitės į savo tinklo valdytoją."
 
 #: ../inc/activation/namespace.php67, ../inc/activation/namespace.php116,
 #: ../inc/activation/namespace.php122, ../inc/activation/namespace.php152,
 #: ../inc/activation/namespace.php158, ../page-catalog.php:4
 msgid "Catalog"
-msgstr "Katalógus"
+msgstr "Katalogas"
 
 #: ../inc/activation/namespace.php71, ../inc/helpers/namespace.php:165
 msgid "Home"
-msgstr "Főoldal"
+msgstr "Pagrindinis Puslapis"
 
 #: ../inc/admin/namespace.php:30
 msgid "Catalog updated."
-msgstr "Katalógus frissítve."
+msgstr "Katalogas atnaujintas."
 
 #: ../inc/admin/namespace.php:31
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
-"Sajnáljuk, de a katalógusát nem tudtuk frissíteni. Kérjük, próbálja újra."
+"Atsiprašome, bet jūsų katalogas nebuvo atnaujintas. Prašau, pabandykite dar "
+"kartą."
 
 #: ../inc/admin/namespace.php:32
 msgid "Dismiss this notice."
-msgstr "Értesítés bezárása"
+msgstr "Atmesti šį pranešimą."
 
 #: ../inc/admin/namespace.php:61
 msgid "In Catalog"
-msgstr "Katalógusban"
+msgstr "Kataloge"
 
 #: ../inc/admin/namespace.php:72
 msgctxt "pressbooks-aldine"
 msgid "Show in Catalog"
-msgstr "Mutassa a Katalógusban"
+msgstr "Rodyti Kataloge"
 
 #: ../inc/admin/namespace.php:73
 msgctxt "pressbooks-aldine"
@@ -281,11 +287,12 @@ msgstr ""
 
 #: ../inc/customizer/namespace.php:61
 msgid "Primary Color"
-msgstr "Főszín"
+msgstr "Pirminė Spalva"
 
 #: ../inc/customizer/namespace.php:62
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
+"Pirminė spalva, naudojama nuorodoms ir kitiems pagrindiniams elementams."
 
 #: ../inc/customizer/namespace.php:67
 msgid "Primary Color (Hover)"
@@ -313,11 +320,11 @@ msgstr ""
 
 #: ../inc/customizer/namespace.php:85
 msgid "Primary Foreground Color"
-msgstr "Előtér Főszíne"
+msgstr ""
 
 #: ../inc/customizer/namespace.php:86
 msgid "Used for text on a primary background."
-msgstr "Fő háttéren használt szöveghez."
+msgstr "Naudojamas teksto pirminiam fonui."
 
 #: ../inc/customizer/namespace.php:91
 msgid "Accent Foreground Color"
@@ -329,7 +336,7 @@ msgstr ""
 
 #: ../inc/customizer/namespace.php:111
 msgid "Social Media"
-msgstr "Közösségi Média"
+msgstr "Socialiniai Tinklai"
 
 #: ../inc/customizer/namespace.php:119
 msgid "Facebook"
@@ -341,87 +348,87 @@ msgstr "Twitter"
 
 #: ../inc/customizer/namespace.php:135
 msgid "Front Page Catalog"
-msgstr "Címoldal Katalógus"
+msgstr "Titulinio Lapo Katalogas"
 
 #: ../inc/customizer/namespace.php:142
 msgid "Show Front Page Catalog"
-msgstr "Mutassa a Címoldal Katalógust"
+msgstr "Rodyti Titulinio Lapo Katalogą"
 
 #: ../inc/customizer/namespace.php150, ../partials/content-front-page.php:19
 msgid "Our Latest Titles"
-msgstr ""
+msgstr "Mūsų Naujausi Pavadinimai"
 
 #: ../inc/customizer/namespace.php:153
 msgid "Front Page Catalog Title"
-msgstr "Címoldal Katalógusának Címe"
+msgstr "Titulinio Lapo Katalogo Pavadinimas"
 
 #: ../inc/customizer/namespace.php:160
 msgid "Contact Form"
-msgstr "Kapcsolatfelvéteteli Űrlap"
+msgstr "Kontaktai"
 
 #: ../inc/customizer/namespace.php:167
 msgid "Show Contact Form"
-msgstr "Mutassa a Kapcsolatfelvételi Űrlapot"
+msgstr "Rodyti Kontaktus"
 
 #: ../inc/customizer/namespace.php175, ../partials/contact-form.php:12
 msgid "Contact Us"
-msgstr "Lépjen kapcsolatba velünk"
+msgstr "Susisiekite su mumis"
 
 #: ../inc/customizer/namespace.php:178
 msgid "Contact Form Title"
-msgstr "Kapcsolatfelvételi Űrlap Címe"
+msgstr "Kontaktinės Formos Pavadinimas"
 
 #: ../inc/customizer/namespace.php:188
 msgid "Contact Email"
-msgstr "Email Cím"
+msgstr "Kontaktinis Elektroninis Paštas"
 
 #: ../inc/filters/namespace.php:61
 msgid "Continued"
-msgstr "Folytatás"
+msgstr "Tęsinys"
 
 #: ../inc/helpers/namespace.php:171
 msgid "Contact"
-msgstr "Kapcsolat"
+msgstr "Kontaktas"
 
 #: ../inc/helpers/namespace.php:178
 msgid "Sign In"
-msgstr "Bejelentkezés"
+msgstr "Prisijungti"
 
 #: ../inc/helpers/namespace.php:184
 msgid "Sign Up"
-msgstr "Regisztráció"
+msgstr "Užsiregistruoti"
 
 #: ../inc/helpers/namespace.php:192
 msgid "Admin"
-msgstr "Admin"
+msgstr "Adminas"
 
 #: ../inc/helpers/namespace.php:200
 msgid "My Books"
-msgstr "Könyveim"
+msgstr "Mano Knygos"
 
 #: ../inc/helpers/namespace.php:206
 msgid "Sign Out"
-msgstr "Kilépés"
+msgstr "Atsijungti"
 
 #: ../inc/helpers/namespace.php:260
 msgid "Name is required."
-msgstr "Név szükséges."
+msgstr "Privaloma įvesti vardą."
 
 #: ../inc/helpers/namespace.php:264
 msgid "Email is required."
-msgstr "Email szükséges"
+msgstr "Privaloma įvesti elektroninį pašto adresą."
 
 #: ../inc/helpers/namespace.php:268
 msgid "Email is invalid."
-msgstr "Érvénytelen email cím"
+msgstr "El. paštas neteisingas."
 
 #: ../inc/helpers/namespace.php:272
 msgid "Institution is required."
-msgstr "Intézmény szükséges."
+msgstr "Privaloma nurodyti instituciją. "
 
 #: ../inc/helpers/namespace.php:276
 msgid "Message is required."
-msgstr "Üzenet szükséges."
+msgstr ""
 
 #: ../inc/helpers/namespace.php:282
 msgid "Contact Form Submission from %s"
@@ -429,51 +436,51 @@ msgstr ""
 
 #: ../inc/helpers/namespace.php:293
 msgid "Your message was sent!"
-msgstr "Üzenetét elküldtük!"
+msgstr "Jūsų žinutė išsiųsta!"
 
 #: ../inc/helpers/namespace.php:296
 msgid "Your message could not be sent."
-msgstr "Üzenetét nem lehetett elküldeni."
+msgstr "Jūsų žinutės nepavyko išsiųsti."
 
 #: ../page-catalog.php:55
 msgid "No Books Found"
-msgstr "Nem találhatók könyvek"
+msgstr "Knygos nerasta"
 
 #: ../page-catalog.php:58
 msgid "No books have been added to the catalog."
-msgstr "Még nincsenek könyvek hozzáadva a katalógushoz."
+msgstr "Knygos nebuvo įdėtos į katalogą. "
 
 #: ../partials/book.php:27
 msgid "About this book"
-msgstr "Erről a könyvről"
+msgstr "Apie šią knygą"
 
 #: ../partials/contact-form.php:30
 msgid "Your name (required)"
-msgstr "Neve (szükséges)"
+msgstr "Jūsų vardas (privaloma)"
 
 #: ../partials/contact-form.php:38
 msgid "Your email address (required)"
-msgstr "Email címe (szükséges)"
+msgstr "Jūsų el. pašto adresas (privaloma)"
 
 #: ../partials/contact-form.php:46
 msgid "Your institution (required)"
-msgstr "Intézménye (szükséges)"
+msgstr "Jūsų institucija (privaloma)"
 
 #: ../partials/contact-form.php:54
 msgid "Your message (required)"
-msgstr "Üzenete (szükséges)"
+msgstr "Jūsų žinutė (privaloma)"
 
 #: ../partials/contact-form.php:58
 msgid "Send"
-msgstr "Küldés"
+msgstr "Siųsti"
 
 #: ../partials/content-front-page.php:67
 msgid "View Complete Catalog"
-msgstr "Lásd a Teljes Katalógust"
+msgstr "Peržiūrėti Visą Katalogą"
 
 #: ../partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "Nincs Találat"
+msgstr "Nieko Nerasta"
 
 #: ../partials/content-none.php:25
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
@@ -484,8 +491,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Sajnáljuk, de semmi nem egyezik a keresési kifejezésekkel. Kérjük, "
-"próbálkozzon újra néhány különböző kulcsszóval."
+"Atsiprašome, bet niekas neatitiko jūsų paieškos terminų. Pabandykite dar "
+"kartą naudodami keletą skirtingų raktinių žodžių. "
 
 #: ../partials/content-none.php:44
 msgid ""
@@ -495,43 +502,43 @@ msgstr ""
 
 #: ../partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "Szűrés Tárgy szerint"
+msgstr "Filtruoti pagal Temą"
 
 #: ../partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "Összes Tárgy"
+msgstr "Visos Temos"
 
 #: ../partials/content-page-catalog.php:35
 msgid "Filter by License"
-msgstr "Szűrés Licence szerint"
+msgstr "Filtruoti pagal Licenciją"
 
 #: ../partials/content-page-catalog.php:37
 msgid "All Licenses"
-msgstr "Összes Licence"
+msgstr "Visos Licencijos"
 
 #: ../partials/content-page-catalog.php:46
 msgid "Sort by"
-msgstr "Rendezve"
+msgstr "Rūšiuoti pagal"
 
 #: ../partials/content-page-catalog.php:50
 msgid "Subject"
-msgstr "Tárgy"
+msgstr "Tema"
 
 #: ../partials/content-page-catalog.php:51
 msgid "Latest"
-msgstr "Legújabb"
+msgstr "Naujausias"
 
 #: ../partials/content-page-catalog.php:58
 msgid "Clear Filters"
-msgstr "Szűrők törlése"
+msgstr "Išvalyti Filtrus"
 
 #: ../partials/content-page-catalog.php:59
 msgid "Submit"
-msgstr "Beküldés"
+msgstr "Pateikti"
 
 #: ../partials/content-page.php22, ../partials/content.php:45
 msgid "Pages:"
-msgstr "Oldalak:"
+msgstr "Puslapiai:"
 
 #: ../partials/content-page.php:35
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
@@ -543,7 +550,7 @@ msgstr ""
 
 #: ../partials/paged-navigation.php:2
 msgid "Navigation"
-msgstr "Navigáció"
+msgstr ""
 
 #: ../search.php:21
 msgid "Search Results for: %s"
@@ -552,9 +559,9 @@ msgstr ""
 #: ../searchform.php:3
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Katalógus Keresése"
+msgstr "Paieškos Katalogas"
 
 #: ../searchform.php:6
 msgctxt "submit button"
 msgid "Search"
-msgstr "Keresés"
+msgstr "Paieška"

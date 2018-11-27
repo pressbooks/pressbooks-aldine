@@ -11,7 +11,6 @@ branches:
   - dev
   - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
-- 7.0
 - 7.1
 - 7.2
 - nightly
@@ -43,12 +42,13 @@ script:
 - composer test
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
+- curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+- chmod +x wp-cli.phar
+- sudo mv wp-cli.phar /usr/local/bin/wp
+- wp package install wp-cli/dist-archive-command
 - composer install --no-dev --optimize-autoloader
 - cd ../
-- zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
-  -x *.git* *assets/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
-  *.github* *.gitignore* *.travis.yml* *package-lock.json* *phpcs.xml* *webpack.mix.js*
-  *yarn.lock*
+- wp dist-archive $TRAVIS_PROJECT_SLUG $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip
 - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases

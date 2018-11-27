@@ -7,8 +7,10 @@
 
 namespace Aldine\Helpers;
 
-use Pressbooks\Book;
 use function \Pressbooks\Metadata\book_information_to_schema;
+use function \Pressbooks\Metadata\is_bisac;
+use function \Pressbooks\Utility\str_starts_with;
+use Pressbooks\Book;
 
 /**
  * @param int $page
@@ -22,7 +24,10 @@ use function \Pressbooks\Metadata\book_information_to_schema;
 function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
 
 	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
-		return [ 'pages' => 0, 'books' => [] ]; // Bail
+		return [
+			'pages' => 0,
+			'books' => [],
+		]; // Bail
 	}
 
 	/**
@@ -91,7 +96,10 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		}
 	}
 
-	return [ 'pages' => $total_pages, 'books' => $books ];
+	return [
+		'pages' => $total_pages,
+		'books' => $books,
+	];
 }
 
 
@@ -142,7 +150,7 @@ function get_available_licenses( $catalog_data ) {
 function get_available_subjects( $catalog_data ) {
 	$subjects = [];
 	foreach ( $catalog_data['books'] as $book ) {
-		if ( ! empty( $book['subject'] ) ) {
+		if ( ! empty( $book['subject'] ) && ! is_bisac( $book['subject'] ) ) {
 			$subjects[ substr( $book['subject'], 0, 1 ) ][] = substr( $book['subject'], 0, 2 );
 		}
 	}
@@ -199,6 +207,12 @@ function get_default_menu( $items = '' ) {
 				get_blogaddress_by_id( $user_info->primary_blog ) . 'wp-admin/index.php?page=pb_catalog',
 				__( 'My Books', 'pressbooks-aldine' )
 			);
+		} elseif ( in_array( get_site_option( 'registration' ), [ 'blog', 'all' ], true ) ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				network_home_url( '/wp-signup.php' ),
+				__( 'Create a New Book', 'pressbooks-aldine' )
+			);
 		}
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
@@ -226,9 +240,11 @@ function default_menu( $args = [], $items = '' ) {
 		get_default_menu( $items )
 	);
 	if ( class_exists( '\PressbooksOAuth\OAuth' ) ) {
-		add_filter( 'pb_oauth_output_button', function( $bool ) {
-			return false;
-		} );
+		add_filter(
+			'pb_oauth_output_button', function( $bool ) {
+				return false;
+			}
+		);
 		do_action( 'pressbooks_oauth_connect' );
 	}
 }
@@ -244,6 +260,12 @@ function handle_contact_form_submission() {
 		return false; // Security check failed.
 	}
 	if ( isset( $_POST['submitted'] ) ) {
+		// Check the fake anti-spam honeypot field.
+		foreach ( $_POST as $pkey => $pval ) {
+			if ( str_starts_with( $pkey, 'firstname' ) && ! empty( $pval ) ) {
+				return false; // Honeypot failed.
+			}
+		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
 		$name = ( isset( $_POST['visitor_name'] ) ) ? $_POST['visitor_name'] : '';
@@ -279,6 +301,7 @@ function handle_contact_form_submission() {
 		} else {
 			$sent = wp_mail(
 				$contact_email,
+				/* translators: %s name of contact for submitter */
 				sprintf( __( 'Contact Form Submission from %s', 'pressbooks-aldine' ), $name ),
 				sprintf(
 					"From: %1\$s <%2\$s>\nInstitution: %3\$s\n\n%4\$s",
@@ -299,7 +322,7 @@ function handle_contact_form_submission() {
 		}
 		return $output;
 	}
-	return;
+	return false;
 }
 
 /**
