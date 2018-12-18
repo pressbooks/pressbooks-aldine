@@ -30,7 +30,7 @@ export default {
 							.attr( 'title', PB_A11y.decrease_label );
 						Cookies.set( 'a11y-root-larger-fontsize', '1', {
 							expires: 365,
-							path:    '/',
+							path: '/',
 						} );
 						return false;
 					} else {
@@ -43,7 +43,7 @@ export default {
 							.attr( 'title', PB_A11y.increase_label );
 						Cookies.set( 'a11y-root-larger-fontsize', '0', {
 							expires: 365,
-							path:    '/',
+							path: '/',
 						} );
 						return false;
 					}
