@@ -59,7 +59,7 @@
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^0.13.0"
+		"pressbooks-build-tools": "^1.0.2"
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.20",
