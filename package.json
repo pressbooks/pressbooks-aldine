@@ -39,7 +39,8 @@
 		}
 	},
 	"eslintIgnore": [
-		"assets/scripts/catalog-admin.js"
+    "assets/scripts/catalog-admin.js",
+    "assets/scripts/routes/common.js"
 	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
@@ -59,10 +60,13 @@
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^0.13.0"
+		"pressbooks-build-tools": "^1.0.2",
+		"sass": "^1.15.2",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.5.21"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.20",
+		"aetna": "^1.0.0-alpha.21",
 		"isotope-layout": "^3.0.6",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",
