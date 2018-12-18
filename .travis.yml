@@ -30,6 +30,7 @@ before_install:
 - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
 install:
 - node -v
+- npm install
 - composer install -o --prefer-dist --no-interaction
 script:
 - npm run test
