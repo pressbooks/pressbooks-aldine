@@ -28,17 +28,15 @@ cache:
 before_install:
 - composer self-update
 - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
-- export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh
-  | bash
 install:
-- node -v && yarn -V
-- travis_retry yarn
+- node -v
+- npm install
 - composer install -o --prefer-dist --no-interaction
 script:
-- yarn run test
-- yarn run build
-- yarn run rmdist
-- yarn run "build:production"
+- npm run test
+- npm run build
+- npm run rmdist
+- npm run "build:production"
 - composer test
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"

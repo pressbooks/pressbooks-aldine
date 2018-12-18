@@ -1,9 +1,7 @@
-import $ from 'jquery';
-
 wp.customize( 'blogname', value => {
-	value.bind( to => $( '.home .entry-title' ).text( to ) );
+	value.bind( to => document.querySelector( '.home .entry-title' ).textContent = to );
 } );
 
 wp.customize( 'blogdescription', value => {
-	value.bind( to => $( '.home .entry-description' ).text( to ) );
+	value.bind( to => document.querySelector( '.home .entry-description' ).textContent = to );
 } );

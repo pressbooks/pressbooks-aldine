@@ -137,15 +137,15 @@ export default {
 			let $grid = $( '.books' );
 			$grid.isotope( {
 				itemSelector: '.book',
-				getSortData:  {
-					title:   '.book__title a',
+				getSortData: {
+					title: '.book__title a',
 					subject: '[data-subject]',
-					latest:  '[data-date-published]',
+					latest: '[data-date-published]',
 				},
 				sortAscending: {
-					title:   true,
+					title: true,
 					subject: false,
-					latest:  false,
+					latest: false,
 				},
 			} );
 			let licenses = document.querySelector( '.license-filters' );
