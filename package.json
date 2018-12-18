@@ -60,6 +60,7 @@
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
+		"cross-env": "*",
 		"pressbooks-build-tools": "^0.13.0"
 	},
 	"dependencies": {
