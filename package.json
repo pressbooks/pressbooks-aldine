@@ -37,8 +37,10 @@
 			"PB_A11y": true,
 			"tinymce": true
 		}
-  },
-  "eslintIgnore": ["assets/scripts/catalog-admin.js"],
+	},
+	"eslintIgnore": [
+		"assets/scripts/catalog-admin.js"
+	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
 	},
@@ -61,7 +63,7 @@
 		"pressbooks-build-tools": "^0.13.0"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.17",
+		"aetna": "^1.0.0-alpha.20",
 		"isotope-layout": "^3.0.6",
 		"jquery-bridget": "^2.0.1",
 		"js-cookie": "^2.2.0",
