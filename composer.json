@@ -30,7 +30,7 @@
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {
-		"pressbooks/coding-standards": "dev-master",
+		"pressbooks/coding-standards": "^1.0",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
 	"scripts": {
