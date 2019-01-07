@@ -61,7 +61,7 @@
 	},
 	"devDependencies": {
 		"pressbooks-build-tools": "^1.2.0",
-		"sass": "^1.15.2",
+		"sass": "^1.15.3",
 		"sass-loader": "^7.1.0",
 		"vue-template-compiler": "^2.5.21"
 	},
