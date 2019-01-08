@@ -3,52 +3,53 @@ import * as Cookies from 'js-cookie';
 export default {
 	init() {
 		// JavaScript to be fired on all pages
-		jQuery( $ => {
-			$( 'body' )
-				.removeClass( 'no-js' )
-				.addClass( 'js' );
-			$( document ).ready( function () {
-				// Fontsize handler
-				if ( Cookies.get( 'a11y-root-larger-fontsize' ) === '1' ) {
-					$( 'html' ).addClass( 'fontsize' );
-					$( '#is_normal_fontsize' )
-						.attr( 'id', 'is_large_fontsize' )
-						.attr( 'aria-checked', true )
-						.addClass( 'active' )
-						.text( PB_A11y.decrease_label )
-						.attr( 'title', PB_A11y.decrease_label );
+		// JavaScript to be fired on all pages
+		document.body.classList.remove( 'no-js' );
+		document.body.classList.add( 'js' );
+
+		// Font Size handler
+		( function () {
+			const fontSizeButton = document.querySelector( '.a11y-fontsize' );
+
+			if ( Cookies.get( 'a11y-root-larger-fontsize' ) === '1' ) {
+				document.documentElement.classList.add( 'fontsize' );
+				fontSizeButton.setAttribute( 'aria-pressed', true );
+				fontSizeButton.textContent = pressbooksBook.decrease_label;
+			}
+
+			fontSizeButton.onclick = () => {
+				// Cast the state as a boolean
+				let pressed = fontSizeButton.getAttribute( 'aria-pressed' ) === 'true' || false;
+
+				// Switch the state
+				fontSizeButton.setAttribute( 'aria-pressed', ! pressed );
+
+				if ( ! pressed ) {
+					document.documentElement.classList.add( 'fontsize' );
+					fontSizeButton.setAttribute( 'title', pressbooksBook.decrease_label );
+					fontSizeButton.textContent = pressbooksBook.decrease_label;
+					document.querySelector( '.nav-reading' ).setAttribute( 'style', '' );
+					Cookies.set( 'a11y-root-larger-fontsize', '1', {
+						expires: 365,
+						path: '/',
+					} );
+					return false;
+				} else {
+					document.documentElement.classList.remove( 'fontsize' );
+					fontSizeButton.setAttribute( 'title', pressbooksBook.increase_label );
+					fontSizeButton.textContent = pressbooksBook.increase_label;
+					document.querySelector( '.nav-reading' ).setAttribute( 'style', '' );
+					Cookies.set( 'a11y-root-larger-fontsize', '0', {
+						expires: 365,
+						path: '/',
+					} );
+					return false;
 				}
+			};
+		} )();
 
-				$( '.toggle-fontsize' ).on( 'click', function () {
-					if ( $( this ).attr( 'id' ) === 'is_normal_fontsize' ) {
-						$( 'html' ).addClass( 'fontsize' );
-						$( this )
-							.attr( 'id', 'is_large_fontsize' )
-							.attr( 'aria-checked', true )
-							.addClass( 'active' )
-							.text( PB_A11y.decrease_label )
-							.attr( 'title', PB_A11y.decrease_label );
-						Cookies.set( 'a11y-root-larger-fontsize', '1', {
-							expires: 365,
-							path: '/',
-						} );
-						return false;
-					} else {
-						$( 'html' ).removeClass( 'fontsize' );
-						$( this )
-							.attr( 'id', 'is_normal_fontsize' )
-							.removeAttr( 'aria-checked' )
-							.removeClass( 'active' )
-							.text( PB_A11y.increase_label )
-							.attr( 'title', PB_A11y.increase_label );
-						Cookies.set( 'a11y-root-larger-fontsize', '0', {
-							expires: 365,
-							path: '/',
-						} );
-						return false;
-					}
-				} );
-
+		jQuery( $ => {
+			$( document ).ready( function () {
 				// Sets a -1 tabindex to ALL sections for .focus()-ing
 				let sections = document.getElementsByTagName( 'section' );
 				for ( let i = 0, max = sections.length; i < max; i++ ) {
