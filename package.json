@@ -39,8 +39,8 @@
 		}
 	},
 	"eslintIgnore": [
-    "assets/scripts/catalog-admin.js",
-    "assets/scripts/routes/common.js"
+		"assets/scripts/catalog-admin.js",
+		"assets/scripts/routes/common.js"
 	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
