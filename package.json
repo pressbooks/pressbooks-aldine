@@ -63,7 +63,7 @@
 		"pressbooks-build-tools": "^1.2.0",
 		"sass": "^1.15.2",
 		"sass-loader": "^7.1.0",
-		"vue-template-compiler": "^2.5.21"
+		"vue-template-compiler": "^2.5.22"
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.22",
