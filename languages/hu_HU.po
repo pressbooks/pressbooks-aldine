@@ -1,10 +1,14 @@
-# Copyright (C) 2018 pressbooks-aldine
-# This file is distributed under the same license as the pressbooks-aldine package.
+# Copyright (C) 2019 Pressbooks (Book Oven Inc.)
+# This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: pressbooks-aldine\n"
+"Project-Id-Version: Aldine 1.6.0\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
+"POT-Creation-Date: 2019-02-27T17:29:06+00:00\n"
+"PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Hungarian (Hungary) (https://www.transifex.com/pressbooks/teams/9194/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -12,169 +16,153 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Domain: pressbooks-aldine\n"
+"X-Generator: WP-CLI 2.1.0\n"
 
-#: ../404.php:17
-msgid "Oops! That page can&rsquo;t be found."
+#. Theme Name of the theme
+msgid "Aldine"
 msgstr ""
 
-#: ../404.php:21
-msgid "It looks like nothing was found at this location."
-msgstr "Úgy tűnik, semmit nem találtunk ezen a helyen."
-
-#: ../comments.php:34
-msgid "One thought on &ldquo;%1$s&rdquo;"
+#. Theme URI of the theme
+msgid "https://github.com/pressbooks/pressbooks-aldine/"
 msgstr ""
 
-#: ../comments.php:40
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../comments.php:63
-msgid "Comments are closed."
-msgstr "A hozzászólások le vannak zárva."
-
-#: ../footer.php40, ../footer.php:44
-msgid "%s on Facebook"
+#. Description of the theme
+msgid ""
+"Aldine is the default theme for the home page of Pressbooks networks. It is "
+"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
+"regarded by many as the world’s first publisher."
 msgstr ""
 
-#: ../footer.php48, ../footer.php:52
-msgid "%s on Twitter"
+#. Author of the theme
+msgid "Pressbooks (Book Oven Inc.)"
 msgstr ""
 
-#: ../footer.php:70
-msgid "Powered by %s"
+#. Author URI of the theme
+msgid "https://pressbooks.org"
 msgstr ""
 
-#: ../footer.php:72
-msgid "Open Source"
-msgstr "Nyílt Forráskód"
-
-#: ../footer.php:73
-msgid "Open Textbooks"
-msgstr ""
-
-#: ../footer.php:74
-msgid "Open Book Publishing"
-msgstr "Nyílt Könyvkiadás"
-
-#: ../footer.php75, ../inc/activation/namespace.php:27
-msgid "Learn More"
-msgstr "Tudjon meg többet"
-
-#: ../footer.php79, ../footer.php:83
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks a Facebookon"
-
-#: ../footer.php85, ../footer.php:89
-msgid "Pressbooks on Twitter"
-msgstr "Pressbooks a Twitteren"
-
-#: ../functions.php:18
+#: functions.php:19
 msgid "Dependencies Missing"
 msgstr ""
 
-#: ../functions.php:19
+#: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr ""
 
-#: ../header.php:44
-msgid "Skip to content"
-msgstr "Ugrás a tartalomra"
-
-#: ../header.php:64
-msgid "Logo for %s"
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: ../header.php:74
-msgid "Toggle Menu"
+#: 404.php:21
+msgid "It looks like nothing was found at this location."
+msgstr "Úgy tűnik, semmit nem találtunk ezen a helyen."
+
+#: inc/filters/namespace.php:63
+msgid "Continued"
+msgstr "Folytatás"
+
+#: inc/customizer/namespace.php:69
+msgid "Primary Color"
+msgstr "Főszín"
+
+#: inc/customizer/namespace.php:70
+msgid "Primary color, used for links and other primary elements."
 msgstr ""
 
-#: ../inc/intervention.php:12
-msgid "Hello,"
-msgstr "Szia,"
-
-#: ../inc/actions/namespace.php48, ../inc/activation/namespace.php:111
-msgid "Primary Menu"
-msgstr "Főmenü"
-
-#: ../inc/actions/namespace.php49, ../inc/activation/namespace.php:132
-msgid "Footer Menu"
-msgstr "Lábléc Menü"
-
-#: ../inc/actions/namespace.php:107
-msgid "Network Footer Block 1"
+#: inc/customizer/namespace.php:75
+msgid "Primary Color (Hover)"
 msgstr ""
 
-#: ../inc/actions/namespace.php:117
-msgid "Network Footer Block 2"
+#: inc/customizer/namespace.php:76
+msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 
-#: ../inc/actions/namespace.php142,
-#: ../partials/content-accessibility-toolbar.php6,
-#: ../partials/content-accessibility-toolbar.php:7
-msgid "Increase Font Size"
-msgstr "Betűméret Növelése"
-
-#: ../inc/actions/namespace.php:143
-msgid "Decrease Font Size"
-msgstr "Betűméret Csökkentése"
-
-#: ../inc/actions/namespace.php:226
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
-msgstr ""
-"Ez az oldal megjeleníti a hálózati katalógust, így nincs szerkeszteni való "
-"tartalom."
-
-#: ../inc/actions/namespace.php:279
-msgid "Page Section"
-msgstr "Oldal-szekció"
-
-#: ../inc/actions/namespace.php280, ../partials/content-page-catalog.php:49
-msgid "Title"
-msgstr "Cím"
-
-#: ../inc/actions/namespace.php:281
-msgid "Standard"
-msgstr "Sztenderd"
-
-#: ../inc/actions/namespace.php:282
-msgid "Accent"
+#: inc/customizer/namespace.php:81
+msgid "Accent Color"
 msgstr ""
 
-#: ../inc/actions/namespace.php:283
-msgid "Bordered"
-msgstr "Határolt"
-
-#: ../inc/actions/namespace.php:284
-msgid "Borderless"
-msgstr "Nincs határ"
-
-#: ../inc/actions/namespace.php:287
-msgid "Call to Action"
+#: inc/customizer/namespace.php:82
+msgid "Accent color, used for flourishes and secondary elements."
 msgstr ""
 
-#: ../inc/actions/namespace.php:288
-msgid "Text"
-msgstr "Szöveg"
+#: inc/customizer/namespace.php:87
+msgid "Accent Color (Hover)"
+msgstr ""
 
-#: ../inc/actions/namespace.php:289
-msgid "Link"
-msgstr "Link"
+#: inc/customizer/namespace.php:88
+msgid "Variant of the accent color, used for secondary element hover states."
+msgstr ""
 
-#: ../inc/activation/namespace.php:25
+#: inc/customizer/namespace.php:93
+msgid "Primary Foreground Color"
+msgstr "Előtér Főszíne"
+
+#: inc/customizer/namespace.php:94
+msgid "Used for text on a primary background."
+msgstr "Fő háttéren használt szöveghez."
+
+#: inc/customizer/namespace.php:99
+msgid "Accent Foreground Color"
+msgstr ""
+
+#: inc/customizer/namespace.php:100
+msgid "Used for text on an accent color background."
+msgstr ""
+
+#: inc/customizer/namespace.php:124
+msgid "Social Media"
+msgstr "Közösségi Média"
+
+#: inc/customizer/namespace.php:136
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/customizer/namespace.php:149
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/customizer/namespace.php:158
+msgid "Front Page Catalog"
+msgstr "Címoldal Katalógus"
+
+#: inc/customizer/namespace.php:169
+msgid "Show Front Page Catalog"
+msgstr "Mutassa a Címoldal Katalógust"
+
+#: inc/customizer/namespace.php:179 partials/content-front-page.php:19
+msgid "Our Latest Titles"
+msgstr ""
+
+#: inc/customizer/namespace.php:184
+msgid "Front Page Catalog Title"
+msgstr "Címoldal Katalógusának Címe"
+
+#: inc/customizer/namespace.php:193
+msgid "Contact Form"
+msgstr "Kapcsolatfelvéteteli Űrlap"
+
+#: inc/customizer/namespace.php:204
+msgid "Show Contact Form"
+msgstr "Mutassa a Kapcsolatfelvételi Űrlapot"
+
+#: inc/customizer/namespace.php:214 partials/contact-form.php:12
+msgid "Contact Us"
+msgstr "Lépjen kapcsolatba velünk"
+
+#: inc/customizer/namespace.php:219
+msgid "Contact Form Title"
+msgstr "Kapcsolatfelvételi Űrlap Címe"
+
+#: inc/customizer/namespace.php:233
+msgid "Contact Email"
+msgstr "Email Cím"
+
+#: inc/activation/namespace.php:25
 msgid "About Pressbooks"
 msgstr "A Pressbookról"
 
-#: ../inc/activation/namespace.php:26
+#: inc/activation/namespace.php:26
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
@@ -182,12 +170,16 @@ msgstr ""
 "A Pressbooks egyszerűen használható könyvíró szoftver, amelynek segítségével"
 " könyveket készíthet, bármely formátumban."
 
-#: ../inc/activation/namespace.php34, ../inc/activation/namespace.php137,
-#: ../inc/activation/namespace.php:143
+#: inc/activation/namespace.php:27 footer.php:82
+msgid "Learn More"
+msgstr "Tudjon meg többet"
+
+#: inc/activation/namespace.php:34 inc/activation/namespace.php:146
+#: inc/activation/namespace.php:152
 msgid "About"
 msgstr "Rólunk"
 
-#: ../inc/activation/namespace.php:39
+#: inc/activation/namespace.php:39
 msgid ""
 "Pressbooks is simple book production software. You can use Pressbooks to "
 "publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
@@ -197,289 +189,309 @@ msgstr ""
 "többféle formátumban kiadhat tankönyveket, tudományos monográfiákat, "
 "tananyagokat, fiktív és valós könyveket, tanulmányokat, stb."
 
-#: ../inc/activation/namespace.php:40
+#: inc/activation/namespace.php:40
 msgid "MOBI (for Kindle ebooks)"
 msgstr "MOBI (Kindle e-könyvekhez)"
 
-#: ../inc/activation/namespace.php:41
+#: inc/activation/namespace.php:41
 msgid "EPUB (for all other ebookstores)"
 msgstr "EPUB (minden más e-könyvtár esetében)"
 
-#: ../inc/activation/namespace.php:42
+#: inc/activation/namespace.php:42
 msgid "designed PDF (for print-on-demand and digital distribution)"
 msgstr ""
 "tervezett PDF (nyomtatásra igény szerint és digitális terjesztés esetén)"
 
-#: ../inc/activation/namespace.php:45
+#. translators: %s link to about page
+#: inc/activation/namespace.php:46
 msgid "For more information about Pressbooks, %s."
 msgstr ""
 
-#: ../inc/activation/namespace.php:46
+#: inc/activation/namespace.php:47
 msgid "see here"
 msgstr "lásd itt"
 
-#: ../inc/activation/namespace.php52, ../inc/activation/namespace.php167,
-#: ../inc/activation/namespace.php:173
+#: inc/activation/namespace.php:53 inc/activation/namespace.php:176
+#: inc/activation/namespace.php:182
 msgid "Help"
 msgstr "Súgó"
 
-#: ../inc/activation/namespace.php:58
+#. translators: %1$s: link to how to page; %2$s: link to guide
+#: inc/activation/namespace.php:60
 msgid ""
 "The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
 "you can review our %2$s."
 msgstr ""
 
-#: ../inc/activation/namespace.php:59
+#: inc/activation/namespace.php:61
 msgid "4 Step Guide to Making a Book on Pressbooks"
 msgstr "Hogyan készítsünk könyvet a Pressbookson 4 lépésben"
 
-#: ../inc/activation/namespace.php:60
+#: inc/activation/namespace.php:62
 msgid "Guide to Using Pressbooks"
 msgstr "Útmutató a Pressbooks használatához"
 
-#: ../inc/activation/namespace.php:62
+#: inc/activation/namespace.php:64
 msgid ""
 "If you require further assistance, please contact your network manager."
 msgstr "Ha további segítségre van szüksége, forduljon a hálózatkezelőjéhez."
 
-#: ../inc/activation/namespace.php67, ../inc/activation/namespace.php116,
-#: ../inc/activation/namespace.php122, ../inc/activation/namespace.php152,
-#: ../inc/activation/namespace.php158, ../page-catalog.php:4
+#. Template Name of the theme
+#: inc/activation/namespace.php:69 inc/activation/namespace.php:125
+#: inc/activation/namespace.php:131 inc/activation/namespace.php:161
+#: inc/activation/namespace.php:167
 msgid "Catalog"
 msgstr "Katalógus"
 
-#: ../inc/activation/namespace.php71, ../inc/helpers/namespace.php:165
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
 msgid "Home"
 msgstr "Főoldal"
 
-#: ../inc/admin/namespace.php:30
+#: inc/activation/namespace.php:120 inc/actions/namespace.php:47
+msgid "Primary Menu"
+msgstr "Főmenü"
+
+#: inc/activation/namespace.php:141 inc/actions/namespace.php:48
+msgid "Footer Menu"
+msgstr "Lábléc Menü"
+
+#: inc/admin/namespace.php:30
 msgid "Catalog updated."
 msgstr "Katalógus frissítve."
 
-#: ../inc/admin/namespace.php:31
+#: inc/admin/namespace.php:31
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
 "Sajnáljuk, de a katalógusát nem tudtuk frissíteni. Kérjük, próbálja újra."
 
-#: ../inc/admin/namespace.php:32
+#: inc/admin/namespace.php:32
 msgid "Dismiss this notice."
 msgstr "Értesítés bezárása"
 
-#: ../inc/admin/namespace.php:61
+#: inc/admin/namespace.php:61
 msgid "In Catalog"
 msgstr "Katalógusban"
 
-#: ../inc/admin/namespace.php:72
-msgctxt "pressbooks-aldine"
-msgid "Show in Catalog"
-msgstr "Mutassa a Katalógusban"
-
-#: ../inc/admin/namespace.php:73
-msgctxt "pressbooks-aldine"
-msgid "This book is private, so you can&rsquo;t display it in your catalog."
+#: inc/actions/namespace.php:114
+msgid "Network Footer Block 1"
 msgstr ""
 
-#: ../inc/customizer/namespace.php:61
-msgid "Primary Color"
-msgstr "Főszín"
-
-#: ../inc/customizer/namespace.php:62
-msgid "Primary color, used for links and other primary elements."
+#: inc/actions/namespace.php:126
+msgid "Network Footer Block 2"
 msgstr ""
 
-#: ../inc/customizer/namespace.php:67
-msgid "Primary Color (Hover)"
+#: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
+msgid "Increase Font Size"
+msgstr "Betűméret Növelése"
+
+#: inc/actions/namespace.php:153
+msgid "Decrease Font Size"
+msgstr "Betűméret Csökkentése"
+
+#: inc/actions/namespace.php:237
+msgid ""
+"This page displays your network catalog, so there is no content to edit."
+msgstr ""
+"Ez az oldal megjeleníti a hálózati katalógust, így nincs szerkeszteni való "
+"tartalom."
+
+#: inc/actions/namespace.php:291
+msgid "Page Section"
+msgstr "Oldal-szekció"
+
+#: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
+msgid "Title"
+msgstr "Cím"
+
+#: inc/actions/namespace.php:293
+msgid "Standard"
+msgstr "Sztenderd"
+
+#: inc/actions/namespace.php:294
+msgid "Accent"
 msgstr ""
 
-#: ../inc/customizer/namespace.php:68
-msgid "Variant of the primary color, used for primary element hover states."
+#: inc/actions/namespace.php:295
+msgid "Bordered"
+msgstr "Határolt"
+
+#: inc/actions/namespace.php:296
+msgid "Borderless"
+msgstr "Nincs határ"
+
+#: inc/actions/namespace.php:299
+msgid "Call to Action"
 msgstr ""
 
-#: ../inc/customizer/namespace.php:73
-msgid "Accent Color"
-msgstr ""
+#: inc/actions/namespace.php:300
+msgid "Text"
+msgstr "Szöveg"
 
-#: ../inc/customizer/namespace.php:74
-msgid "Accent color, used for flourishes and secondary elements."
-msgstr ""
+#: inc/actions/namespace.php:301
+msgid "Link"
+msgstr "Link"
 
-#: ../inc/customizer/namespace.php:79
-msgid "Accent Color (Hover)"
-msgstr ""
-
-#: ../inc/customizer/namespace.php:80
-msgid "Variant of the accent color, used for secondary element hover states."
-msgstr ""
-
-#: ../inc/customizer/namespace.php:85
-msgid "Primary Foreground Color"
-msgstr "Előtér Főszíne"
-
-#: ../inc/customizer/namespace.php:86
-msgid "Used for text on a primary background."
-msgstr "Fő háttéren használt szöveghez."
-
-#: ../inc/customizer/namespace.php:91
-msgid "Accent Foreground Color"
-msgstr ""
-
-#: ../inc/customizer/namespace.php:92
-msgid "Used for text on an accent color background."
-msgstr ""
-
-#: ../inc/customizer/namespace.php:111
-msgid "Social Media"
-msgstr "Közösségi Média"
-
-#: ../inc/customizer/namespace.php:119
-msgid "Facebook"
-msgstr "Facebook"
-
-#: ../inc/customizer/namespace.php:128
-msgid "Twitter"
-msgstr "Twitter"
-
-#: ../inc/customizer/namespace.php:135
-msgid "Front Page Catalog"
-msgstr "Címoldal Katalógus"
-
-#: ../inc/customizer/namespace.php:142
-msgid "Show Front Page Catalog"
-msgstr "Mutassa a Címoldal Katalógust"
-
-#: ../inc/customizer/namespace.php150, ../partials/content-front-page.php:19
-msgid "Our Latest Titles"
-msgstr ""
-
-#: ../inc/customizer/namespace.php:153
-msgid "Front Page Catalog Title"
-msgstr "Címoldal Katalógusának Címe"
-
-#: ../inc/customizer/namespace.php:160
-msgid "Contact Form"
-msgstr "Kapcsolatfelvéteteli Űrlap"
-
-#: ../inc/customizer/namespace.php:167
-msgid "Show Contact Form"
-msgstr "Mutassa a Kapcsolatfelvételi Űrlapot"
-
-#: ../inc/customizer/namespace.php175, ../partials/contact-form.php:12
-msgid "Contact Us"
-msgstr "Lépjen kapcsolatba velünk"
-
-#: ../inc/customizer/namespace.php:178
-msgid "Contact Form Title"
-msgstr "Kapcsolatfelvételi Űrlap Címe"
-
-#: ../inc/customizer/namespace.php:188
-msgid "Contact Email"
-msgstr "Email Cím"
-
-#: ../inc/filters/namespace.php:61
-msgid "Continued"
-msgstr "Folytatás"
-
-#: ../inc/helpers/namespace.php:171
+#: inc/helpers/namespace.php:179
 msgid "Contact"
 msgstr "Kapcsolat"
 
-#: ../inc/helpers/namespace.php:178
+#: inc/helpers/namespace.php:186
 msgid "Sign In"
 msgstr "Bejelentkezés"
 
-#: ../inc/helpers/namespace.php:184
+#: inc/helpers/namespace.php:192
 msgid "Sign Up"
 msgstr "Regisztráció"
 
-#: ../inc/helpers/namespace.php:192
+#: inc/helpers/namespace.php:200
 msgid "Admin"
 msgstr "Admin"
 
-#: ../inc/helpers/namespace.php:200
+#: inc/helpers/namespace.php:208
 msgid "My Books"
 msgstr "Könyveim"
 
-#: ../inc/helpers/namespace.php:206
+#: inc/helpers/namespace.php:214
+msgid "Create a New Book"
+msgstr ""
+
+#: inc/helpers/namespace.php:220
 msgid "Sign Out"
 msgstr "Kilépés"
 
-#: ../inc/helpers/namespace.php:260
+#: inc/helpers/namespace.php:282
 msgid "Name is required."
 msgstr "Név szükséges."
 
-#: ../inc/helpers/namespace.php:264
+#: inc/helpers/namespace.php:286
 msgid "Email is required."
 msgstr "Email szükséges"
 
-#: ../inc/helpers/namespace.php:268
+#: inc/helpers/namespace.php:290
 msgid "Email is invalid."
 msgstr "Érvénytelen email cím"
 
-#: ../inc/helpers/namespace.php:272
+#: inc/helpers/namespace.php:294
 msgid "Institution is required."
 msgstr "Intézmény szükséges."
 
-#: ../inc/helpers/namespace.php:276
+#: inc/helpers/namespace.php:298
 msgid "Message is required."
 msgstr "Üzenet szükséges."
 
-#: ../inc/helpers/namespace.php:282
+#. translators: %s name of contact for submitter
+#: inc/helpers/namespace.php:305
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: ../inc/helpers/namespace.php:293
+#: inc/helpers/namespace.php:316
 msgid "Your message was sent!"
 msgstr "Üzenetét elküldtük!"
 
-#: ../inc/helpers/namespace.php:296
+#: inc/helpers/namespace.php:319
 msgid "Your message could not be sent."
 msgstr "Üzenetét nem lehetett elküldeni."
 
-#: ../page-catalog.php:55
+#: inc/intervention.php:12
+msgid "Hello,"
+msgstr "Szia,"
+
+#: page-catalog.php:55
 msgid "No Books Found"
 msgstr "Nem találhatók könyvek"
 
-#: ../page-catalog.php:58
+#: page-catalog.php:58
 msgid "No books have been added to the catalog."
 msgstr "Még nincsenek könyvek hozzáadva a katalógushoz."
 
-#: ../partials/book.php:27
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "A hozzászólások le vannak zárva."
+
+#. translators: %s: search query.
+#: search.php:23
+msgid "Search Results for: %s"
+msgstr ""
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "Ugrás a tartalomra"
+
+#. translators: %s name of network
+#: header.php:69
+msgid "Logo for %s"
+msgstr ""
+
+#: header.php:80
+msgid "Toggle Menu"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:43 footer.php:48
+msgid "%s on Facebook"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:53 footer.php:58
+msgid "%s on Twitter"
+msgstr ""
+
+#. translators: %s Pressbooks
+#: footer.php:77
+msgid "Powered by %s"
+msgstr ""
+
+#: footer.php:79
+msgid "Open Source"
+msgstr "Nyílt Forráskód"
+
+#: footer.php:80
+msgid "Open Textbooks"
+msgstr ""
+
+#: footer.php:81
+msgid "Open Book Publishing"
+msgstr "Nyílt Könyvkiadás"
+
+#: footer.php:86 footer.php:90
+msgid "Pressbooks on Facebook"
+msgstr "Pressbooks a Facebookon"
+
+#: footer.php:92 footer.php:96
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks a Twitteren"
+
+#: partials/book.php:39
 msgid "About this book"
 msgstr "Erről a könyvről"
 
-#: ../partials/contact-form.php:30
-msgid "Your name (required)"
-msgstr "Neve (szükséges)"
+#: partials/paged-navigation.php:2
+msgid "Navigation"
+msgstr "Navigáció"
 
-#: ../partials/contact-form.php:38
-msgid "Your email address (required)"
-msgstr "Email címe (szükséges)"
-
-#: ../partials/contact-form.php:46
-msgid "Your institution (required)"
-msgstr "Intézménye (szükséges)"
-
-#: ../partials/contact-form.php:54
-msgid "Your message (required)"
-msgstr "Üzenete (szükséges)"
-
-#: ../partials/contact-form.php:58
-msgid "Send"
-msgstr "Küldés"
-
-#: ../partials/content-front-page.php:67
-msgid "View Complete Catalog"
-msgstr "Lásd a Teljes Katalógust"
-
-#: ../partials/content-none.php:14
+#: partials/content-none.php:14
 msgid "Nothing Found"
 msgstr "Nincs Találat"
 
-#: ../partials/content-none.php:25
+#. translators: 1: link to WP admin new post page.
+#: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: ../partials/content-none.php:38
+#: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -487,74 +499,96 @@ msgstr ""
 "Sajnáljuk, de semmi nem egyezik a keresési kifejezésekkel. Kérjük, "
 "próbálkozzon újra néhány különböző kulcsszóval."
 
-#: ../partials/content-none.php:44
+#: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: ../partials/content-page-catalog.php:17
-msgid "Filter by Subject"
-msgstr "Szűrés Tárgy szerint"
-
-#: ../partials/content-page-catalog.php:19
-msgid "All Subjects"
-msgstr "Összes Tárgy"
-
-#: ../partials/content-page-catalog.php:35
-msgid "Filter by License"
-msgstr "Szűrés Licence szerint"
-
-#: ../partials/content-page-catalog.php:37
-msgid "All Licenses"
-msgstr "Összes Licence"
-
-#: ../partials/content-page-catalog.php:46
-msgid "Sort by"
-msgstr "Rendezve"
-
-#: ../partials/content-page-catalog.php:50
-msgid "Subject"
-msgstr "Tárgy"
-
-#: ../partials/content-page-catalog.php:51
-msgid "Latest"
-msgstr "Legújabb"
-
-#: ../partials/content-page-catalog.php:58
-msgid "Clear Filters"
-msgstr "Szűrők törlése"
-
-#: ../partials/content-page-catalog.php:59
-msgid "Submit"
-msgstr "Beküldés"
-
-#: ../partials/content-page.php22, ../partials/content.php:45
+#: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
 msgstr "Oldalak:"
 
-#: ../partials/content-page.php:35
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: ../partials/content.php:34
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: ../partials/paged-navigation.php:2
-msgid "Navigation"
-msgstr "Navigáció"
+#: partials/content-page-catalog.php:17
+msgid "Filter by Subject"
+msgstr "Szűrés Tárgy szerint"
 
-#: ../search.php:21
-msgid "Search Results for: %s"
+#: partials/content-page-catalog.php:19
+msgid "All Subjects"
+msgstr "Összes Tárgy"
+
+#: partials/content-page-catalog.php:39
+msgid "Filter by License"
+msgstr "Szűrés Licence szerint"
+
+#: partials/content-page-catalog.php:41
+msgid "All Licenses"
+msgstr "Összes Licence"
+
+#: partials/content-page-catalog.php:54
+msgid "Sort by"
+msgstr "Rendezve"
+
+#: partials/content-page-catalog.php:58
+msgid "Subject"
+msgstr "Tárgy"
+
+#: partials/content-page-catalog.php:59
+msgid "Latest"
+msgstr "Legújabb"
+
+#: partials/content-page-catalog.php:67
+msgid "Clear Filters"
+msgstr "Szűrők törlése"
+
+#: partials/content-page-catalog.php:68
+msgid "Submit"
+msgstr "Beküldés"
+
+#: partials/content-front-page.php:76
+msgid "View Complete Catalog"
+msgstr "Lásd a Teljes Katalógust"
+
+#: partials/contact-form.php:29
+msgid "Keep this field blank (required)"
 msgstr ""
 
-#: ../searchform.php:3
+#: partials/contact-form.php:45
+msgid "Your name (required)"
+msgstr "Neve (szükséges)"
+
+#: partials/contact-form.php:61
+msgid "Your email address (required)"
+msgstr "Email címe (szükséges)"
+
+#: partials/contact-form.php:77
+msgid "Your institution (required)"
+msgstr "Intézménye (szükséges)"
+
+#: partials/contact-form.php:93
+msgid "Your message (required)"
+msgstr "Üzenete (szükséges)"
+
+#: partials/contact-form.php:97
+msgid "Send"
+msgstr "Küldés"
+
+#: searchform.php:3
 msgctxt "label"
 msgid "Search Catalog"
 msgstr "Katalógus Keresése"
 
-#: ../searchform.php:6
+#: searchform.php:6
 msgctxt "submit button"
 msgid "Search"
 msgstr "Keresés"

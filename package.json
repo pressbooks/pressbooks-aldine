@@ -1,6 +1,5 @@
 {
 	"name": "@pressbooks/pressbooks-aldine",
-	"version": "1.5.0",
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"description": "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
@@ -60,10 +59,7 @@
 		"node": ">= 6.9.4"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^1.3.3",
-		"sass": "^1.15.2",
-		"sass-loader": "^7.1.0",
-		"vue-template-compiler": "^2.5.21"
+		"pressbooks-build-tools": "^1.3.3"
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.24",
