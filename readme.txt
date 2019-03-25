@@ -16,7 +16,7 @@ Tags: publishing, catalog, pressbooks, default-theme
 
 Requires at least: 5.1.1
 Tested up to: 5.1.1
-Stable tag: 1.6.0
+Stable tag: 1.7.0-dev
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
