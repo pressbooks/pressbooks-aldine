@@ -1,20 +1,16 @@
 # Copyright (C) 2019 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
-# Translators:
-# Thomas Dumm <t.dumm@delivros.ch>, 2018
-# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.6.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2019-02-27T17:29:06+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Thomas Dumm <t.dumm@delivros.ch>, 2018\n"
-"Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
+"Language-Team: German (Germany) (https://www.transifex.com/pressbooks/teams/9194/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.1.0\n"
@@ -44,32 +40,31 @@ msgstr ""
 
 #: functions.php:19
 msgid "Dependencies Missing"
-msgstr "Benötigte Files fehlen."
+msgstr ""
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr ""
-"Sie müssen <code>composer install </code> im Aldine Verzeichnis ausführen."
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Hoppla! Diese Seite existiert nicht."
+msgstr ""
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "An dieser Stelle wurde nichts gefunden."
+msgstr ""
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "Fortgesetzt"
+msgstr ""
 
 #: inc/customizer/namespace.php:69
 msgid "Primary Color"
-msgstr "Hauptfarbe"
+msgstr ""
 
 #: inc/customizer/namespace.php:70
 msgid "Primary color, used for links and other primary elements."
-msgstr "Hauptfarbe, wird für Links und andere Primärelemente verwendet."
+msgstr ""
 
 #: inc/customizer/namespace.php:75
 msgid "Primary Color (Hover)"
@@ -81,11 +76,11 @@ msgstr ""
 
 #: inc/customizer/namespace.php:81
 msgid "Accent Color"
-msgstr "Akzentfarbe"
+msgstr ""
 
 #: inc/customizer/namespace.php:82
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr "Akzentfarbe, wird für Verzierungen und sekundäre Elemente verwendet"
+msgstr ""
 
 #: inc/customizer/namespace.php:87
 msgid "Accent Color (Hover)"
@@ -97,63 +92,63 @@ msgstr ""
 
 #: inc/customizer/namespace.php:93
 msgid "Primary Foreground Color"
-msgstr "Primärfarbe für den Vordergrund"
+msgstr ""
 
 #: inc/customizer/namespace.php:94
 msgid "Used for text on a primary background."
-msgstr "Wird für Text auf einem primären Hintergrund verwendet."
+msgstr ""
 
 #: inc/customizer/namespace.php:99
 msgid "Accent Foreground Color"
-msgstr "Akzentfarbe für den Vordergrund"
+msgstr ""
 
 #: inc/customizer/namespace.php:100
 msgid "Used for text on an accent color background."
-msgstr "Wird für Text auf einem Hintergrund in Akzentfarbe verwendet."
+msgstr ""
 
 #: inc/customizer/namespace.php:124
 msgid "Social Media"
-msgstr "Soziale Medien"
+msgstr ""
 
 #: inc/customizer/namespace.php:136
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: inc/customizer/namespace.php:149
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: inc/customizer/namespace.php:158
 msgid "Front Page Catalog"
-msgstr "Hauptseiten-Katalog"
+msgstr ""
 
 #: inc/customizer/namespace.php:169
 msgid "Show Front Page Catalog"
-msgstr "Hauptseiten-Katalog anzeigen"
+msgstr ""
 
 #: inc/customizer/namespace.php:179 partials/content-front-page.php:19
 msgid "Our Latest Titles"
-msgstr "Unsere neusten Titel"
+msgstr ""
 
 #: inc/customizer/namespace.php:184
 msgid "Front Page Catalog Title"
-msgstr "Titel des Hauptseiten-Katalogs"
+msgstr ""
 
 #: inc/customizer/namespace.php:193
 msgid "Contact Form"
-msgstr "Kontakt Formular"
+msgstr ""
 
 #: inc/customizer/namespace.php:204
 msgid "Show Contact Form"
-msgstr "Kontakt Formular anzeigen"
+msgstr ""
 
 #: inc/customizer/namespace.php:214 partials/contact-form.php:12
 msgid "Contact Us"
-msgstr "Kontaktieren Sie uns"
+msgstr ""
 
 #: inc/customizer/namespace.php:219
 msgid "Contact Form Title"
-msgstr "Titel des Kontakt Formulars"
+msgstr ""
 
 #: inc/customizer/namespace.php:233
 msgid "Contact Email"
@@ -161,25 +156,22 @@ msgstr ""
 
 #: inc/activation/namespace.php:25
 msgid "About Pressbooks"
-msgstr "Über Pressbooks"
+msgstr ""
 
 #: inc/activation/namespace.php:26
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
-"Pressbooks ist eine einfach zu bedienende Software zum Erstellen von "
-"Büchern, mit der Sie ein Buch in allen gewünschten Formaten erstellen "
-"können."
 
 #: inc/activation/namespace.php:27 footer.php:82
 msgid "Learn More"
-msgstr "Mehr erfahren"
+msgstr ""
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
 #: inc/activation/namespace.php:152
 msgid "About"
-msgstr "Über"
+msgstr ""
 
 #: inc/activation/namespace.php:39
 msgid ""
@@ -187,36 +179,32 @@ msgid ""
 "publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
 "books, white papers, and more in multiple formats including:"
 msgstr ""
-"Pressbooks ist eine einfache Buchproduktionssoftware. Sie können Pressbooks "
-"verwenden, um Lehrbücher, wissenschaftliche Monographien, Lehrpläne, "
-"Belletristik- und Sachbücher, White-Papers und anderes in verschiedenen "
-"Formaten zu veröffentlichen, darunter:"
 
 #: inc/activation/namespace.php:40
 msgid "MOBI (for Kindle ebooks)"
-msgstr "MOBI (für Kindle eBooks)"
+msgstr ""
 
 #: inc/activation/namespace.php:41
 msgid "EPUB (for all other ebookstores)"
-msgstr "EPUB (für alle anderen eBook-Stores)"
+msgstr ""
 
 #: inc/activation/namespace.php:42
 msgid "designed PDF (for print-on-demand and digital distribution)"
-msgstr "gelayoutete PDFs (für den Druck und die digitale Nutzung)"
+msgstr ""
 
 #. translators: %s link to about page
 #: inc/activation/namespace.php:46
 msgid "For more information about Pressbooks, %s."
-msgstr "Für weitere Informationen zu Pressbooks, %s."
+msgstr ""
 
 #: inc/activation/namespace.php:47
 msgid "see here"
-msgstr "schauen Sie hier"
+msgstr ""
 
 #: inc/activation/namespace.php:53 inc/activation/namespace.php:176
 #: inc/activation/namespace.php:182
 msgid "Help"
-msgstr "Hilfe"
+msgstr ""
 
 #. translators: %1$s: link to how to page; %2$s: link to guide
 #: inc/activation/namespace.php:60
@@ -224,90 +212,83 @@ msgid ""
 "The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
 "you can review our %2$s."
 msgstr ""
-"Der einfachste Weg um mit Pressbooks vertraut zu werden, ist über unser "
-"%1$s. Oder Sie können unsere %2$sanschauen."
 
 #: inc/activation/namespace.php:61
 msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "4-Schritte-Anleitung zum Erstellen eines Buches über Pressbooks"
+msgstr ""
 
 #: inc/activation/namespace.php:62
 msgid "Guide to Using Pressbooks"
-msgstr "Anleitung zur Nutzung von Pressbooks"
+msgstr ""
 
 #: inc/activation/namespace.php:64
 msgid ""
 "If you require further assistance, please contact your network manager."
 msgstr ""
-"Wenn Sie weitere Unterstützung benötigen, wenden Sie sich bitte an Ihren "
-"Netzwerk-Manager."
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:69 inc/activation/namespace.php:125
 #: inc/activation/namespace.php:131 inc/activation/namespace.php:161
 #: inc/activation/namespace.php:167
 msgid "Catalog"
-msgstr "Katalog"
+msgstr ""
 
 #: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #: inc/activation/namespace.php:120 inc/actions/namespace.php:47
 msgid "Primary Menu"
-msgstr "Hauptmenü"
+msgstr ""
 
 #: inc/activation/namespace.php:141 inc/actions/namespace.php:48
 msgid "Footer Menu"
-msgstr "Fusszeilen-Menü"
+msgstr ""
 
 #: inc/admin/namespace.php:30
 msgid "Catalog updated."
-msgstr "Katalog aktualisiert"
+msgstr ""
 
 #: inc/admin/namespace.php:31
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
-"Entschuldigung, aber Ihr Katalog wurde nicht aktualisiert. Bitte versuche es"
-" erneut."
 
 #: inc/admin/namespace.php:32
 msgid "Dismiss this notice."
-msgstr "Diese Nachricht ausblenden"
+msgstr ""
 
 #: inc/admin/namespace.php:61
 msgid "In Catalog"
-msgstr "Im Katalog"
+msgstr ""
 
 #: inc/actions/namespace.php:114
 msgid "Network Footer Block 1"
-msgstr "Block 1 im Netzwerk-Fuss"
+msgstr ""
 
 #: inc/actions/namespace.php:126
 msgid "Network Footer Block 2"
-msgstr "Block 2 im Netzwerk-Block"
+msgstr ""
 
 #: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
-msgstr "Schriftgrösse vergrössern"
+msgstr ""
 
 #: inc/actions/namespace.php:153
 msgid "Decrease Font Size"
-msgstr "Schriftgrösse verkleinern"
+msgstr ""
 
 #: inc/actions/namespace.php:237
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"Diese Seite zeigt Ihren Netzwerk-Katalog an, Sie müssen hier nichts eingeben"
 
 #: inc/actions/namespace.php:291
 msgid "Page Section"
-msgstr "Seitenabschnitt"
+msgstr ""
 
 #: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: inc/actions/namespace.php:293
 msgid "Standard"
@@ -327,7 +308,7 @@ msgstr ""
 
 #: inc/actions/namespace.php:299
 msgid "Call to Action"
-msgstr "Greifen Sie jetzt ein"
+msgstr ""
 
 #: inc/actions/namespace.php:300
 msgid "Text"
@@ -339,23 +320,23 @@ msgstr ""
 
 #: inc/helpers/namespace.php:179
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 #: inc/helpers/namespace.php:186
 msgid "Sign In"
-msgstr "Anmelden"
+msgstr ""
 
 #: inc/helpers/namespace.php:192
 msgid "Sign Up"
-msgstr "Registrieren"
+msgstr ""
 
 #: inc/helpers/namespace.php:200
 msgid "Admin"
-msgstr "Admin"
+msgstr ""
 
 #: inc/helpers/namespace.php:208
 msgid "My Books"
-msgstr "Meine Bücher"
+msgstr ""
 
 #: inc/helpers/namespace.php:214
 msgid "Create a New Book"
@@ -363,211 +344,205 @@ msgstr ""
 
 #: inc/helpers/namespace.php:220
 msgid "Sign Out"
-msgstr "Abmelden"
+msgstr ""
 
 #: inc/helpers/namespace.php:282
 msgid "Name is required."
-msgstr "Name notwendig"
+msgstr ""
 
 #: inc/helpers/namespace.php:286
 msgid "Email is required."
-msgstr "E-Mail notwendig"
+msgstr ""
 
 #: inc/helpers/namespace.php:290
 msgid "Email is invalid."
-msgstr "E-Mail ungültig"
+msgstr ""
 
 #: inc/helpers/namespace.php:294
 msgid "Institution is required."
-msgstr "Institution benötigt"
+msgstr ""
 
 #: inc/helpers/namespace.php:298
 msgid "Message is required."
-msgstr "Nachricht benötigt"
+msgstr ""
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:305
 msgid "Contact Form Submission from %s"
-msgstr "Kontaktformular-Eingabe von %s"
+msgstr ""
 
 #: inc/helpers/namespace.php:316
 msgid "Your message was sent!"
-msgstr "Ihre Nachricht wurde versendet!"
+msgstr ""
 
 #: inc/helpers/namespace.php:319
 msgid "Your message could not be sent."
-msgstr "Ihre Nachricht konnte nicht versendet werden!"
+msgstr ""
 
 #: inc/intervention.php:12
 msgid "Hello,"
-msgstr "Hallo,"
+msgstr ""
 
 #: page-catalog.php:55
 msgid "No Books Found"
-msgstr "Es wurden keine Bücher gefunden"
+msgstr ""
 
 #: page-catalog.php:58
 msgid "No books have been added to the catalog."
-msgstr "Es wurden keine Bücher zum Katalog hinzugefügt."
+msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "Ein Überlegung zu &ldquo;%1$s&rdquo;"
+msgstr ""
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s Überlegung zu \"%2$s\""
-msgstr[1] "%1$sÜberlegungen zu \"%2$s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "Kommentare sind nicht möglich"
+msgstr ""
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr ""
 
 #: header.php:44
 msgid "Skip to content"
-msgstr "Zum Kommentar springen"
+msgstr ""
 
 #. translators: %s name of network
 #: header.php:69
 msgid "Logo for %s"
-msgstr "Logo für %s"
+msgstr ""
 
 #: header.php:80
 msgid "Toggle Menu"
-msgstr "Menü umschalten"
+msgstr ""
 
 #. translators: %s network name
 #: footer.php:43 footer.php:48
 msgid "%s on Facebook"
-msgstr "%s auf Facebook"
+msgstr ""
 
 #. translators: %s network name
 #: footer.php:53 footer.php:58
 msgid "%s on Twitter"
-msgstr "%s auf Twitter"
+msgstr ""
 
 #. translators: %s Pressbooks
 #: footer.php:77
 msgid "Powered by %s"
-msgstr "Powered by %s"
+msgstr ""
 
 #: footer.php:79
 msgid "Open Source"
-msgstr "Open Source"
+msgstr ""
 
 #: footer.php:80
 msgid "Open Textbooks"
-msgstr "Open Textbooks"
+msgstr ""
 
 #: footer.php:81
 msgid "Open Book Publishing"
-msgstr "Open Book Publishing"
+msgstr ""
 
 #: footer.php:86 footer.php:90
 msgid "Pressbooks on Facebook"
-msgstr "Pressbooks auf Facebook"
+msgstr ""
 
 #: footer.php:92 footer.php:96
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks auf Twitter"
+msgstr ""
 
 #: partials/book.php:39
 msgid "About this book"
-msgstr "Über dieses Buch"
+msgstr ""
 
 #: partials/paged-navigation.php:2
 msgid "Navigation"
-msgstr "Navigation"
+msgstr ""
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "Nichts gefunden"
+msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit Ihren ersten Beitrag zu erstellen? <a href=\"%1$s\">Fangen Sie hier "
-"an</a>."
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber nichts passt zu Ihren Suchbegriffen. Bitte versuchen "
-"Sie es erneut mit anderen Suchbegriffen."
 
 #: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Es scheint, dass wir nicht finden können, wonach Sie suchen. Vielleicht kann"
-" das Suchen helfen."
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
-msgstr "Seiten:"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "<span class=\"screen-reader-text\">%s</span>bearbeiten"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Weiterlesen <span class=\"screen-reader-text\">\"%s\"</span>"
+msgstr ""
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "Nach Thema filtern"
+msgstr ""
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "Alle Themen"
+msgstr ""
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by License"
-msgstr "Nach Lizenz filtern"
+msgstr ""
 
 #: partials/content-page-catalog.php:41
 msgid "All Licenses"
-msgstr "Alle Lizenzen"
+msgstr ""
 
 #: partials/content-page-catalog.php:54
 msgid "Sort by"
-msgstr "Sortieren nach"
+msgstr ""
 
 #: partials/content-page-catalog.php:58
 msgid "Subject"
-msgstr "Thema"
+msgstr ""
 
 #: partials/content-page-catalog.php:59
 msgid "Latest"
-msgstr "Neuste"
+msgstr ""
 
 #: partials/content-page-catalog.php:67
 msgid "Clear Filters"
-msgstr "Filter zurücksetzen"
+msgstr ""
 
 #: partials/content-page-catalog.php:68
 msgid "Submit"
-msgstr "Einreichen"
+msgstr ""
 
 #: partials/content-front-page.php:76
 msgid "View Complete Catalog"
-msgstr "Den ganzen Katalog ansehen"
+msgstr ""
 
 #: partials/contact-form.php:29
 msgid "Keep this field blank (required)"
@@ -575,30 +550,30 @@ msgstr ""
 
 #: partials/contact-form.php:45
 msgid "Your name (required)"
-msgstr "Ihr Name (benötigt)"
+msgstr ""
 
 #: partials/contact-form.php:61
 msgid "Your email address (required)"
-msgstr "Ihre E-Mail (benötigt)"
+msgstr ""
 
 #: partials/contact-form.php:77
 msgid "Your institution (required)"
-msgstr "Ihre Institution (benötigt)"
+msgstr ""
 
 #: partials/contact-form.php:93
 msgid "Your message (required)"
-msgstr "Ihre Nachricht (benötigt)"
+msgstr ""
 
 #: partials/contact-form.php:97
 msgid "Send"
-msgstr "Senden"
+msgstr ""
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Katalog durchsuchen"
+msgstr ""
 
 #: searchform.php:6
 msgctxt "submit button"
 msgid "Search"
-msgstr "Suchen"
+msgstr ""
