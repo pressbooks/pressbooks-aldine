@@ -14,9 +14,9 @@
 [![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 Tags: publishing, catalog, pressbooks, default-theme
 
-Requires at least: 4.9.8
-Tested up to: 4.9.8
-Stable tag: 1.5.0
+Requires at least: 5.1.1
+Tested up to: 5.1.1
+Stable tag: 1.6.0
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -41,7 +41,8 @@ TK.
 
 **Minor Changes**
 
-**Patches**
+- Simplify font size button: [#163](https://github.com/pressbooks/pressbooks-aldine/pull/163)
+- Avoid unnecessary jQuery usage: [#151](https://github.com/pressbooks/pressbooks-aldine/pull/151)
 
 === 1.5.0 ===
 
@@ -129,7 +130,7 @@ You can now more easily add additional pages to the network root, such as an “
 
 == Upgrade Notice ==
 
-- Aldine 1.5.0 requires PHP >= 7.1.
+- Aldine 1.6.0 requires Pressbooks >= 5.7.0
 
 == Credits ==
 
