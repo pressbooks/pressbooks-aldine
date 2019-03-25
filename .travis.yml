@@ -23,7 +23,6 @@ cache:
   apt: true
   directories:
   - "$HOME/.composer/cache"
-  - "$HOME/.yarn-cache"
   - vendor
 before_install:
 - composer self-update
