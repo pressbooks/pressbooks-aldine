@@ -24,7 +24,7 @@ function setup() {
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
 		*/
-	load_theme_textdomain( 'aldine', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'pressbooks-aldine', get_template_directory() . '/languages' );
 
 	/*
 		* Let WordPress manage the document title.
