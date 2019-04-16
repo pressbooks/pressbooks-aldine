@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.0\n"
+"Project-Id-Version: Aldine 1.6.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-02-27T17:29:06+00:00\n"
+"POT-Creation-Date: 2019-04-16T11:40:07+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/pressbooks/teams/9194/ru/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.1.0\n"
+"X-Generator: WP-CLI 2.0.1\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -42,14 +42,6 @@ msgstr ""
 msgid "https://pressbooks.org"
 msgstr ""
 
-#: functions.php:19
-msgid "Dependencies Missing"
-msgstr "Недостаток зависимости данных"
-
-#: functions.php:20
-msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr ""
-
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Упс! Невозможно найти эту страницу."
@@ -58,9 +50,257 @@ msgstr "Упс! Невозможно найти эту страницу."
 msgid "It looks like nothing was found at this location."
 msgstr "Кажется, здесь ничего нет."
 
-#: inc/filters/namespace.php:63
-msgid "Continued"
-msgstr "Продолжено"
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#. translators: %s network name
+#: footer.php:43 footer.php:48
+msgid "%s on Facebook"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:53 footer.php:58
+msgid "%s on Twitter"
+msgstr ""
+
+#. translators: %s Pressbooks
+#: footer.php:77
+msgid "Powered by %s"
+msgstr ""
+
+#: footer.php:79
+msgid "Open Source"
+msgstr "Общедоступный источник"
+
+#: footer.php:80
+msgid "Open Textbooks"
+msgstr "Общедоступные учебные пособия"
+
+#: footer.php:81
+msgid "Open Book Publishing"
+msgstr "Общедоступная публикация книг"
+
+#: footer.php:82 inc/activation/namespace.php:27
+msgid "Learn More"
+msgstr "Подробнее"
+
+#: footer.php:86 footer.php:90
+msgid "Pressbooks on Facebook"
+msgstr "Pressbooks на Facebook"
+
+#: footer.php:92 footer.php:96
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks в Twitter"
+
+#: functions.php:19
+msgid "Dependencies Missing"
+msgstr "Недостаток зависимости данных"
+
+#: functions.php:20
+msgid "You must run <code>composer install</code> from the Aldine directory."
+msgstr ""
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#. translators: %s name of network
+#: header.php:69
+msgid "Logo for %s"
+msgstr ""
+
+#: header.php:80
+msgid "Toggle Menu"
+msgstr "Переключить меню"
+
+#: inc/actions/namespace.php:47 inc/activation/namespace.php:120
+msgid "Primary Menu"
+msgstr "Набор основных команд"
+
+#: inc/actions/namespace.php:48 inc/activation/namespace.php:141
+msgid "Footer Menu"
+msgstr "Набор дополнительных команд"
+
+#: inc/actions/namespace.php:114
+msgid "Network Footer Block 1"
+msgstr "Нижний сетевой блок 1"
+
+#: inc/actions/namespace.php:126
+msgid "Network Footer Block 2"
+msgstr "Нижний сетевой блок 2"
+
+#: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
+msgid "Increase Font Size"
+msgstr "Увеличить размер шрифта"
+
+#: inc/actions/namespace.php:153
+msgid "Decrease Font Size"
+msgstr "Уменьшить размер шрифта"
+
+#: inc/actions/namespace.php:237
+msgid ""
+"This page displays your network catalog, so there is no content to edit."
+msgstr ""
+"На этой странице отображён Ваш сетевой каталог, поэтому здесь нечего "
+"редактировать."
+
+#: inc/actions/namespace.php:291
+msgid "Page Section"
+msgstr "Раздел страницы"
+
+#: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
+msgid "Title"
+msgstr "Заголовок"
+
+#: inc/actions/namespace.php:293
+msgid "Standard"
+msgstr "Стандарт"
+
+#: inc/actions/namespace.php:294
+msgid "Accent"
+msgstr "Выделение"
+
+#: inc/actions/namespace.php:295
+msgid "Bordered"
+msgstr "Ограниченный"
+
+#: inc/actions/namespace.php:296
+msgid "Borderless"
+msgstr "Безграничный"
+
+#: inc/actions/namespace.php:299
+msgid "Call to Action"
+msgstr "Призыв к действию"
+
+#: inc/actions/namespace.php:300
+msgid "Text"
+msgstr "Текст"
+
+#: inc/actions/namespace.php:301
+msgid "Link"
+msgstr "Ссылка"
+
+#: inc/activation/namespace.php:25
+msgid "About Pressbooks"
+msgstr "О Pressbooks"
+
+#: inc/activation/namespace.php:26
+msgid ""
+"Pressbooks is easy-to-use book writing software that lets you create a book "
+"in all the formats you need to publish."
+msgstr ""
+"Pressbooks — это удобное для использования программное обеспечение для "
+"написания книг, которое позволяет Вам создать книгу в любом формате, в "
+"котором Вам необходимо её опубликовать."
+
+#: inc/activation/namespace.php:34 inc/activation/namespace.php:146
+#: inc/activation/namespace.php:152
+msgid "About"
+msgstr "О"
+
+#: inc/activation/namespace.php:39
+msgid ""
+"Pressbooks is simple book production software. You can use Pressbooks to "
+"publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
+"books, white papers, and more in multiple formats including:"
+msgstr ""
+"Pressbooks — это простое программное обеспечение для производства книг. Вы "
+"можете использовать Pressbooks для публикации учебных пособий, научных "
+"статей, конспектов, художественной и нехудожественной литературы, "
+"официальных документов и так далее в различных форматах, например:"
+
+#: inc/activation/namespace.php:40
+msgid "MOBI (for Kindle ebooks)"
+msgstr "MOBI (для электронных книг Kindle)"
+
+#: inc/activation/namespace.php:41
+msgid "EPUB (for all other ebookstores)"
+msgstr "EPUB (для всех остальных магазинов электронных книг)"
+
+#: inc/activation/namespace.php:42
+msgid "designed PDF (for print-on-demand and digital distribution)"
+msgstr ""
+"оформленный PDF (для издания по заказу и электронного распространения)"
+
+#. translators: %s link to about page
+#: inc/activation/namespace.php:46
+msgid "For more information about Pressbooks, %s."
+msgstr ""
+
+#: inc/activation/namespace.php:47
+msgid "see here"
+msgstr "см. здесь"
+
+#: inc/activation/namespace.php:53 inc/activation/namespace.php:176
+#: inc/activation/namespace.php:182
+msgid "Help"
+msgstr "Помощь"
+
+#. translators: %1$s: link to how to page; %2$s: link to guide
+#: inc/activation/namespace.php:60
+msgid ""
+"The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
+"you can review our %2$s."
+msgstr ""
+
+#: inc/activation/namespace.php:61
+msgid "4 Step Guide to Making a Book on Pressbooks"
+msgstr "Инструкция по созданию книги на Pressbooks в 4 шага"
+
+#: inc/activation/namespace.php:62
+msgid "Guide to Using Pressbooks"
+msgstr "Инструкция по использованию Pressbooks"
+
+#: inc/activation/namespace.php:64
+msgid ""
+"If you require further assistance, please contact your network manager."
+msgstr ""
+"Если Вам необходима дальнейшая помощь, пожалуйста, свяжитесь со своим "
+"сетевым диспетчером."
+
+#. Template Name of the theme
+#: inc/activation/namespace.php:69 inc/activation/namespace.php:125
+#: inc/activation/namespace.php:131 inc/activation/namespace.php:161
+#: inc/activation/namespace.php:167
+msgid "Catalog"
+msgstr "Каталог"
+
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
+msgid "Home"
+msgstr "Главная страница"
+
+#: inc/admin/namespace.php:30
+msgid "Catalog updated."
+msgstr "Каталог обновлён."
+
+#: inc/admin/namespace.php:31
+msgid "Sorry, but your catalog was not updated. Please try again."
+msgstr ""
+"Извините, но Ваш каталог не был обновлён. Пожалуйста, попробуйте ещё раз."
+
+#: inc/admin/namespace.php:32
+msgid "Dismiss this notice."
+msgstr "Закрыть это уведомление."
+
+#: inc/admin/namespace.php:61
+msgid "In Catalog"
+msgstr "В каталог"
 
 #: inc/customizer/namespace.php:69
 msgid "Primary Color"
@@ -163,182 +403,9 @@ msgstr "Заголовок контактной формы"
 msgid "Contact Email"
 msgstr "Контактный адрес электронной почты"
 
-#: inc/activation/namespace.php:25
-msgid "About Pressbooks"
-msgstr "О Pressbooks"
-
-#: inc/activation/namespace.php:26
-msgid ""
-"Pressbooks is easy-to-use book writing software that lets you create a book "
-"in all the formats you need to publish."
-msgstr ""
-"Pressbooks — это удобное для использования программное обеспечение для "
-"написания книг, которое позволяет Вам создать книгу в любом формате, в "
-"котором Вам необходимо её опубликовать."
-
-#: inc/activation/namespace.php:27 footer.php:82
-msgid "Learn More"
-msgstr "Подробнее"
-
-#: inc/activation/namespace.php:34 inc/activation/namespace.php:146
-#: inc/activation/namespace.php:152
-msgid "About"
-msgstr "О"
-
-#: inc/activation/namespace.php:39
-msgid ""
-"Pressbooks is simple book production software. You can use Pressbooks to "
-"publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
-"books, white papers, and more in multiple formats including:"
-msgstr ""
-"Pressbooks — это простое программное обеспечение для производства книг. Вы "
-"можете использовать Pressbooks для публикации учебных пособий, научных "
-"статей, конспектов, художественной и нехудожественной литературы, "
-"официальных документов и так далее в различных форматах, например:"
-
-#: inc/activation/namespace.php:40
-msgid "MOBI (for Kindle ebooks)"
-msgstr "MOBI (для электронных книг Kindle)"
-
-#: inc/activation/namespace.php:41
-msgid "EPUB (for all other ebookstores)"
-msgstr "EPUB (для всех остальных магазинов электронных книг)"
-
-#: inc/activation/namespace.php:42
-msgid "designed PDF (for print-on-demand and digital distribution)"
-msgstr ""
-"оформленный PDF (для издания по заказу и электронного распространения)"
-
-#. translators: %s link to about page
-#: inc/activation/namespace.php:46
-msgid "For more information about Pressbooks, %s."
-msgstr ""
-
-#: inc/activation/namespace.php:47
-msgid "see here"
-msgstr "см. здесь"
-
-#: inc/activation/namespace.php:53 inc/activation/namespace.php:176
-#: inc/activation/namespace.php:182
-msgid "Help"
-msgstr "Помощь"
-
-#. translators: %1$s: link to how to page; %2$s: link to guide
-#: inc/activation/namespace.php:60
-msgid ""
-"The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
-"you can review our %2$s."
-msgstr ""
-
-#: inc/activation/namespace.php:61
-msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "Инструкция по созданию книги на Pressbooks в 4 шага"
-
-#: inc/activation/namespace.php:62
-msgid "Guide to Using Pressbooks"
-msgstr "Инструкция по использованию Pressbooks"
-
-#: inc/activation/namespace.php:64
-msgid ""
-"If you require further assistance, please contact your network manager."
-msgstr ""
-"Если Вам необходима дальнейшая помощь, пожалуйста, свяжитесь со своим "
-"сетевым диспетчером."
-
-#. Template Name of the theme
-#: inc/activation/namespace.php:69 inc/activation/namespace.php:125
-#: inc/activation/namespace.php:131 inc/activation/namespace.php:161
-#: inc/activation/namespace.php:167
-msgid "Catalog"
-msgstr "Каталог"
-
-#: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
-msgid "Home"
-msgstr "Главная страница"
-
-#: inc/activation/namespace.php:120 inc/actions/namespace.php:47
-msgid "Primary Menu"
-msgstr "Набор основных команд"
-
-#: inc/activation/namespace.php:141 inc/actions/namespace.php:48
-msgid "Footer Menu"
-msgstr "Набор дополнительных команд"
-
-#: inc/admin/namespace.php:30
-msgid "Catalog updated."
-msgstr "Каталог обновлён."
-
-#: inc/admin/namespace.php:31
-msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"Извините, но Ваш каталог не был обновлён. Пожалуйста, попробуйте ещё раз."
-
-#: inc/admin/namespace.php:32
-msgid "Dismiss this notice."
-msgstr "Закрыть это уведомление."
-
-#: inc/admin/namespace.php:61
-msgid "In Catalog"
-msgstr "В каталог"
-
-#: inc/actions/namespace.php:114
-msgid "Network Footer Block 1"
-msgstr "Нижний сетевой блок 1"
-
-#: inc/actions/namespace.php:126
-msgid "Network Footer Block 2"
-msgstr "Нижний сетевой блок 2"
-
-#: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
-msgid "Increase Font Size"
-msgstr "Увеличить размер шрифта"
-
-#: inc/actions/namespace.php:153
-msgid "Decrease Font Size"
-msgstr "Уменьшить размер шрифта"
-
-#: inc/actions/namespace.php:237
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
-msgstr ""
-"На этой странице отображён Ваш сетевой каталог, поэтому здесь нечего "
-"редактировать."
-
-#: inc/actions/namespace.php:291
-msgid "Page Section"
-msgstr "Раздел страницы"
-
-#: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
-msgid "Title"
-msgstr "Заголовок"
-
-#: inc/actions/namespace.php:293
-msgid "Standard"
-msgstr "Стандарт"
-
-#: inc/actions/namespace.php:294
-msgid "Accent"
-msgstr "Выделение"
-
-#: inc/actions/namespace.php:295
-msgid "Bordered"
-msgstr "Ограниченный"
-
-#: inc/actions/namespace.php:296
-msgid "Borderless"
-msgstr "Безграничный"
-
-#: inc/actions/namespace.php:299
-msgid "Call to Action"
-msgstr "Призыв к действию"
-
-#: inc/actions/namespace.php:300
-msgid "Text"
-msgstr "Текст"
-
-#: inc/actions/namespace.php:301
-msgid "Link"
-msgstr "Ссылка"
+#: inc/filters/namespace.php:63
+msgid "Continued"
+msgstr "Продолжено"
 
 #: inc/helpers/namespace.php:179
 msgid "Contact"
@@ -413,85 +480,37 @@ msgstr "Книги не найдены"
 msgid "No books have been added to the catalog."
 msgstr "Нет добавленных в каталог книг."
 
-#. translators: 1: title.
-#: comments.php:35
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
-
-#. translators: 1: comment count number, 2: title.
-#: comments.php:41
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-
-#: comments.php:68
-msgid "Comments are closed."
-msgstr "Комментарии закрыты."
-
-#. translators: %s: search query.
-#: search.php:23
-msgid "Search Results for: %s"
-msgstr ""
-
-#: header.php:44
-msgid "Skip to content"
-msgstr "Перейти к содержанию"
-
-#. translators: %s name of network
-#: header.php:69
-msgid "Logo for %s"
-msgstr ""
-
-#: header.php:80
-msgid "Toggle Menu"
-msgstr "Переключить меню"
-
-#. translators: %s network name
-#: footer.php:43 footer.php:48
-msgid "%s on Facebook"
-msgstr ""
-
-#. translators: %s network name
-#: footer.php:53 footer.php:58
-msgid "%s on Twitter"
-msgstr ""
-
-#. translators: %s Pressbooks
-#: footer.php:77
-msgid "Powered by %s"
-msgstr ""
-
-#: footer.php:79
-msgid "Open Source"
-msgstr "Общедоступный источник"
-
-#: footer.php:80
-msgid "Open Textbooks"
-msgstr "Общедоступные учебные пособия"
-
-#: footer.php:81
-msgid "Open Book Publishing"
-msgstr "Общедоступная публикация книг"
-
-#: footer.php:86 footer.php:90
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks на Facebook"
-
-#: footer.php:92 footer.php:96
-msgid "Pressbooks on Twitter"
-msgstr "Pressbooks в Twitter"
-
 #: partials/book.php:39
 msgid "About this book"
 msgstr "О книге"
 
-#: partials/paged-navigation.php:2
-msgid "Navigation"
-msgstr "Навигация"
+#: partials/contact-form.php:29
+msgid "Keep this field blank (required)"
+msgstr ""
+
+#: partials/contact-form.php:45
+msgid "Your name (required)"
+msgstr "Ваше имя (обязательно)"
+
+#: partials/contact-form.php:61
+msgid "Your email address (required)"
+msgstr "Адрес Вашей электронной почты (обязательно)"
+
+#: partials/contact-form.php:77
+msgid "Your institution (required)"
+msgstr "Название Вашей организации (обязательно)"
+
+#: partials/contact-form.php:93
+msgid "Your message (required)"
+msgstr "Ваше сообщение (обязательно)"
+
+#: partials/contact-form.php:97
+msgid "Send"
+msgstr "Отправить"
+
+#: partials/content-front-page.php:76
+msgid "View Complete Catalog"
+msgstr "Посмотреть полный каталог"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
@@ -517,20 +536,6 @@ msgid ""
 msgstr ""
 "Кажется, мы не можем найти того, что Вы ищите. Возможно, Вам поможет функция"
 " поиска."
-
-#: partials/content-page.php:23 partials/content.php:50
-msgid "Pages:"
-msgstr "Страницы:"
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: partials/content-page.php:37
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: partials/content.php:37
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
@@ -568,33 +573,28 @@ msgstr "Отменить фильтры"
 msgid "Submit"
 msgstr "Отправить"
 
-#: partials/content-front-page.php:76
-msgid "View Complete Catalog"
-msgstr "Посмотреть полный каталог"
+#: partials/content-page.php:23 partials/content.php:50
+msgid "Pages:"
+msgstr "Страницы:"
 
-#: partials/contact-form.php:29
-msgid "Keep this field blank (required)"
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content-page.php:37
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: partials/contact-form.php:45
-msgid "Your name (required)"
-msgstr "Ваше имя (обязательно)"
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content.php:37
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
-#: partials/contact-form.php:61
-msgid "Your email address (required)"
-msgstr "Адрес Вашей электронной почты (обязательно)"
+#: partials/paged-navigation.php:2
+msgid "Navigation"
+msgstr "Навигация"
 
-#: partials/contact-form.php:77
-msgid "Your institution (required)"
-msgstr "Название Вашей организации (обязательно)"
-
-#: partials/contact-form.php:93
-msgid "Your message (required)"
-msgstr "Ваше сообщение (обязательно)"
-
-#: partials/contact-form.php:97
-msgid "Send"
-msgstr "Отправить"
+#. translators: %s: search query.
+#: search.php:23
+msgid "Search Results for: %s"
+msgstr ""
 
 #: searchform.php:3
 msgctxt "label"
