@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.1
+
+### Patches
+
+* Fix translations not loading: 144da94
+
 ## 1.6.0
 
 ### Upgrade Notice
