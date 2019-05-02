@@ -77,7 +77,7 @@ $pb_network_contact_form = get_option( 'pb_network_contact_form' );
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
 					<li><a href="https://pressbooks.education/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-aldine' ); ?></a> |</li>
-					<li><a href="<?php echo network_home_url('/#contacts'); ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a> </li>
+					<li><a href="<?php echo network_home_url( '/#contact' ); ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
