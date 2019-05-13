@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.1\n"
+"Project-Id-Version: Aldine 1.6.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-04-16T11:40:07+00:00\n"
+"POT-Creation-Date: 2019-05-13T16:54:07+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: makeabook project <makeabookproject@gmail.com>, 2018\n"
 "Language-Team: Hebrew (https://www.transifex.com/pressbooks/teams/9194/he/)\n"
@@ -85,26 +85,18 @@ msgid "Powered by %s"
 msgstr "מופעל על ידי %s"
 
 #: footer.php:79
-msgid "Open Source"
-msgstr "קוד פתוח"
-
-#: footer.php:80
-msgid "Open Textbooks"
-msgstr "ספרי לימוד"
-
-#: footer.php:81
-msgid "Open Book Publishing"
-msgstr "פרסום הספר- הוצאה לאור"
-
-#: footer.php:82 inc/activation/namespace.php:27
-msgid "Learn More"
-msgstr "למד עוד"
-
-#: footer.php:86 footer.php:90
-msgid "Pressbooks on Facebook"
+msgid "Guides and Tutorials"
 msgstr ""
 
-#: footer.php:92 footer.php:96
+#: footer.php:80 inc/helpers/namespace.php:179
+msgid "Contact"
+msgstr "יצירת קשר"
+
+#: footer.php:84 footer.php:86
+msgid "Pressbooks on YouTube"
+msgstr ""
+
+#: footer.php:88 footer.php:92
 msgid "Pressbooks on Twitter"
 msgstr ""
 
@@ -203,6 +195,10 @@ msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
+
+#: inc/activation/namespace.php:27
+msgid "Learn More"
+msgstr "למד עוד"
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
 #: inc/activation/namespace.php:152
@@ -388,10 +384,6 @@ msgstr "מייל ליצירת קשר"
 #: inc/filters/namespace.php:63
 msgid "Continued"
 msgstr "מתמשך"
-
-#: inc/helpers/namespace.php:179
-msgid "Contact"
-msgstr "יצירת קשר"
 
 #: inc/helpers/namespace.php:186
 msgid "Sign In"

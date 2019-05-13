@@ -1,11 +1,15 @@
 # Copyright (C) 2019 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
+# Translators:
+# Abhi Prakash <Apofficial18@gmail.com>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.1\n"
+"Project-Id-Version: Aldine 1.6.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-04-16T11:40:07+00:00\n"
+"POT-Creation-Date: 2019-05-13T16:54:07+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
+"Last-Translator: Abhi Prakash <Apofficial18@gmail.com>, 2019\n"
 "Language-Team: Hindi (https://www.transifex.com/pressbooks/teams/9194/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,11 +21,11 @@ msgstr ""
 
 #. Theme Name of the theme
 msgid "Aldine"
-msgstr ""
+msgstr "Aldine"
 
 #. Theme URI of the theme
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
-msgstr ""
+msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 msgid ""
@@ -29,14 +33,17 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
+"Aldine Pressbooks नेटवर्क के मुख पृष्ठ के लिए डिफ़ॉल्ट थीम है। इसका नाम "
+"Aldine Press के लिए रखा गया है, जिसकी स्थापना 1494 में Adlus Manutlus द्वारा"
+" की गई थी, जिन्हें दुनिया के पहले प्रकाशक के रूप में माना जाता है।"
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr ""
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.org"
-msgstr ""
+msgstr "https://pressbooks.org"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -79,26 +86,18 @@ msgid "Powered by %s"
 msgstr ""
 
 #: footer.php:79
-msgid "Open Source"
+msgid "Guides and Tutorials"
 msgstr ""
 
-#: footer.php:80
-msgid "Open Textbooks"
+#: footer.php:80 inc/helpers/namespace.php:179
+msgid "Contact"
 msgstr ""
 
-#: footer.php:81
-msgid "Open Book Publishing"
+#: footer.php:84 footer.php:86
+msgid "Pressbooks on YouTube"
 msgstr ""
 
-#: footer.php:82 inc/activation/namespace.php:27
-msgid "Learn More"
-msgstr ""
-
-#: footer.php:86 footer.php:90
-msgid "Pressbooks on Facebook"
-msgstr ""
-
-#: footer.php:92 footer.php:96
+#: footer.php:88 footer.php:92
 msgid "Pressbooks on Twitter"
 msgstr ""
 
@@ -196,6 +195,10 @@ msgstr ""
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
+msgstr ""
+
+#: inc/activation/namespace.php:27
+msgid "Learn More"
 msgstr ""
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
@@ -381,10 +384,6 @@ msgstr ""
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr ""
-
-#: inc/helpers/namespace.php:179
-msgid "Contact"
 msgstr ""
 
 #: inc/helpers/namespace.php:186

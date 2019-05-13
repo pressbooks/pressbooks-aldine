@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.1\n"
+"Project-Id-Version: Aldine 1.6.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-04-16T11:40:07+00:00\n"
+"POT-Creation-Date: 2019-05-13T16:54:07+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
@@ -84,26 +84,18 @@ msgid "Powered by %s"
 msgstr ""
 
 #: footer.php:79
-msgid "Open Source"
-msgstr "Atvērts avots"
+msgid "Guides and Tutorials"
+msgstr ""
 
-#: footer.php:80
-msgid "Open Textbooks"
-msgstr "Atvērtas mācību grāmatas"
+#: footer.php:80 inc/helpers/namespace.php:179
+msgid "Contact"
+msgstr "Saziņa"
 
-#: footer.php:81
-msgid "Open Book Publishing"
-msgstr "Atvērta grāmatu publicēšana"
+#: footer.php:84 footer.php:86
+msgid "Pressbooks on YouTube"
+msgstr ""
 
-#: footer.php:82 inc/activation/namespace.php:27
-msgid "Learn More"
-msgstr "Uzzināt vairāk"
-
-#: footer.php:86 footer.php:90
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks profils Facebook'ā"
-
-#: footer.php:92 footer.php:96
+#: footer.php:88 footer.php:92
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks profils Twitter'ā"
 
@@ -207,6 +199,10 @@ msgstr ""
 "Pressbooks vietne ir viegli lietojama grāmatu rakstīšanas programmatūra, kas"
 " ļauj Jums izveidot grāmatu jebkurā formātā, kādā Jums ir nepieciešams to "
 "publicēt."
+
+#: inc/activation/namespace.php:27
+msgid "Learn More"
+msgstr "Uzzināt vairāk"
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
 #: inc/activation/namespace.php:152
@@ -404,10 +400,6 @@ msgstr "Epasts saziņai"
 #: inc/filters/namespace.php:63
 msgid "Continued"
 msgstr "Turpinājās"
-
-#: inc/helpers/namespace.php:179
-msgid "Contact"
-msgstr "Saziņa"
 
 #: inc/helpers/namespace.php:186
 msgid "Sign In"
