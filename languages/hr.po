@@ -1,0 +1,597 @@
+# Copyright (C) 2019 Pressbooks (Book Oven Inc.)
+# This file is distributed under the GNU GPL v3 or later.
+# Translators:
+# Dubravko Cvikl <dcvikl@cvikl.hr>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Aldine 1.6.2\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
+"POT-Creation-Date: 2019-05-13T16:54:07+00:00\n"
+"PO-Revision-Date: 2018-03-06 14:24+0000\n"
+"Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
+"Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hr_HR\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Domain: pressbooks-aldine\n"
+"X-Generator: WP-CLI 2.0.1\n"
+
+#. Theme Name of the theme
+msgid "Aldine"
+msgstr "Aldine"
+
+#. Theme URI of the theme
+msgid "https://github.com/pressbooks/pressbooks-aldine/"
+msgstr "https://github.com/pressbooks/pressbooks-aldine/"
+
+#. Description of the theme
+msgid ""
+"Aldine is the default theme for the home page of Pressbooks networks. It is "
+"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
+"regarded by many as the world’s first publisher."
+msgstr ""
+"Aldine je zadana izgled/tema za početnu stranicu Pressbooks mreža. Ime je "
+"dobio po Aldine Pressu koji je 1494. osnovao Aldus Manutius, a mnogi ga "
+"smatraju prvim svjetskim izdavačem."
+
+#. Author of the theme
+msgid "Pressbooks (Book Oven Inc.)"
+msgstr "Pressbooks (Book Oven Inc.)"
+
+#. Author URI of the theme
+msgid "https://pressbooks.org"
+msgstr "https://pressbooks.org"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Ne možemo pronaći tu stranicu."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location."
+msgstr "Izgleda da na toj lokaciji nije ništa pronađeno."
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Jedna misao o &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s misao o &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s misli o &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s misli o &ldquo;%2$s&rdquo;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Komentari su zatvoreni."
+
+#. translators: %s network name
+#: footer.php:43 footer.php:48
+msgid "%s on Facebook"
+msgstr "%s na Facebook-u"
+
+#. translators: %s network name
+#: footer.php:53 footer.php:58
+msgid "%s on Twitter"
+msgstr "%s na Twitter-u"
+
+#. translators: %s Pressbooks
+#: footer.php:77
+msgid "Powered by %s"
+msgstr "Pokreće %s"
+
+#: footer.php:79
+msgid "Guides and Tutorials"
+msgstr "Vodiči i upute"
+
+#: footer.php:80 inc/helpers/namespace.php:179
+msgid "Contact"
+msgstr "Kontakt"
+
+#: footer.php:84 footer.php:86
+msgid "Pressbooks on YouTube"
+msgstr "Pressbooks na YouTube-u"
+
+#: footer.php:88 footer.php:92
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks na Twitter-u"
+
+#: functions.php:19
+msgid "Dependencies Missing"
+msgstr "Nedostaju obavezni dijelovi"
+
+#: functions.php:20
+msgid "You must run <code>composer install</code> from the Aldine directory."
+msgstr "Morate pokrenuti <code>composer install</code> iz mape Aldine."
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "Skoči na sadržaj"
+
+#. translators: %s name of network
+#: header.php:69
+msgid "Logo for %s"
+msgstr "Logo za %s"
+
+#: header.php:80
+msgid "Toggle Menu"
+msgstr "Prebaci izbornik"
+
+#: inc/actions/namespace.php:47 inc/activation/namespace.php:120
+msgid "Primary Menu"
+msgstr "Primarni izbornik"
+
+#: inc/actions/namespace.php:48 inc/activation/namespace.php:141
+msgid "Footer Menu"
+msgstr "Izbornik podnožja"
+
+#: inc/actions/namespace.php:114
+msgid "Network Footer Block 1"
+msgstr "Mrežni blok podnožja 1"
+
+#: inc/actions/namespace.php:126
+msgid "Network Footer Block 2"
+msgstr "Mrežni blok podnožja 2"
+
+#: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
+msgid "Increase Font Size"
+msgstr "Povećaj pismo"
+
+#: inc/actions/namespace.php:153
+msgid "Decrease Font Size"
+msgstr "Smanji pismo"
+
+#: inc/actions/namespace.php:237
+msgid ""
+"This page displays your network catalog, so there is no content to edit."
+msgstr ""
+"Ova stranica prikazuje katalog mreže tako nema sadržaja za uređivanje."
+
+#: inc/actions/namespace.php:291
+msgid "Page Section"
+msgstr "Odjeljak stranice"
+
+#: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
+msgid "Title"
+msgstr "Naslov"
+
+#: inc/actions/namespace.php:293
+msgid "Standard"
+msgstr "Standard"
+
+#: inc/actions/namespace.php:294
+msgid "Accent"
+msgstr "Naglašeno"
+
+#: inc/actions/namespace.php:295
+msgid "Bordered"
+msgstr "Obrubljeno"
+
+#: inc/actions/namespace.php:296
+msgid "Borderless"
+msgstr "Bez okvira"
+
+#: inc/actions/namespace.php:299
+msgid "Call to Action"
+msgstr "Poziv na djelovanje"
+
+#: inc/actions/namespace.php:300
+msgid "Text"
+msgstr "Tekst"
+
+#: inc/actions/namespace.php:301
+msgid "Link"
+msgstr "Veza"
+
+#: inc/activation/namespace.php:25
+msgid "About Pressbooks"
+msgstr "O Pressbooks"
+
+#: inc/activation/namespace.php:26
+msgid ""
+"Pressbooks is easy-to-use book writing software that lets you create a book "
+"in all the formats you need to publish."
+msgstr ""
+"Presskooks je jednostavan za korištenje i omogućava Vam izradu knjiga u svim"
+" potrebnim formatima za objavljivanje."
+
+#: inc/activation/namespace.php:27
+msgid "Learn More"
+msgstr "Saznaj više"
+
+#: inc/activation/namespace.php:34 inc/activation/namespace.php:146
+#: inc/activation/namespace.php:152
+msgid "About"
+msgstr "O"
+
+#: inc/activation/namespace.php:39
+msgid ""
+"Pressbooks is simple book production software. You can use Pressbooks to "
+"publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
+"books, white papers, and more in multiple formats including:"
+msgstr ""
+"Pressbooks je jednostavan softver za proizvodnju knjiga. Pressbooks možete "
+"koristiti za izdavanje udžbenika, znanstvenih monografija, nastavnih planova"
+" i programa, fikcijskih i ostalih knjiga, znanstvenih radova ... u kratko "
+"svih vrsta publikacija u više izlaznih formata, uključujući:"
+
+#: inc/activation/namespace.php:40
+msgid "MOBI (for Kindle ebooks)"
+msgstr "MOBI (za Kindle e-Knjige)"
+
+#: inc/activation/namespace.php:41
+msgid "EPUB (for all other ebookstores)"
+msgstr "EPUB (za sve ostale trgovine i uređaje e-Knjiga)"
+
+#: inc/activation/namespace.php:42
+msgid "designed PDF (for print-on-demand and digital distribution)"
+msgstr ""
+"PDF (za digitalni ispis na zahtjev i distribuciju u digitalnom obliku)"
+
+#. translators: %s link to about page
+#: inc/activation/namespace.php:46
+msgid "For more information about Pressbooks, %s."
+msgstr "Za više informacija o Pressbooks, %s."
+
+#: inc/activation/namespace.php:47
+msgid "see here"
+msgstr "vidi ovdje"
+
+#: inc/activation/namespace.php:53 inc/activation/namespace.php:176
+#: inc/activation/namespace.php:182
+msgid "Help"
+msgstr "Pomoć"
+
+#. translators: %1$s: link to how to page; %2$s: link to guide
+#: inc/activation/namespace.php:60
+msgid ""
+"The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
+"you can review our %2$s."
+msgstr ""
+"Najjednostavniji način za započeti sa Pressbooks je da pratite naš %1$s ili "
+"pogledajte naš %2$s."
+
+#: inc/activation/namespace.php:61
+msgid "4 Step Guide to Making a Book on Pressbooks"
+msgstr "Vodić u 4 koraka kako napisati knjigu na Pressbooks"
+
+#: inc/activation/namespace.php:62
+msgid "Guide to Using Pressbooks"
+msgstr "Vodič za korištenje Pressbooks"
+
+#: inc/activation/namespace.php:64
+msgid ""
+"If you require further assistance, please contact your network manager."
+msgstr "Ako trebate dodatnu pomoć, molimo kontaktirajte svog voditelja mreže."
+
+#. Template Name of the theme
+#: inc/activation/namespace.php:69 inc/activation/namespace.php:125
+#: inc/activation/namespace.php:131 inc/activation/namespace.php:161
+#: inc/activation/namespace.php:167
+msgid "Catalog"
+msgstr "Katalog"
+
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
+msgid "Home"
+msgstr "Početna"
+
+#: inc/admin/namespace.php:30
+msgid "Catalog updated."
+msgstr "Katalog ažuriran."
+
+#: inc/admin/namespace.php:31
+msgid "Sorry, but your catalog was not updated. Please try again."
+msgstr ""
+"Ispričavamo se, ali Vaš katalog nije ažuriran. Molimo pokušajte ponovno."
+
+#: inc/admin/namespace.php:32
+msgid "Dismiss this notice."
+msgstr "Odbaci ovu obavijest."
+
+#: inc/admin/namespace.php:61
+msgid "In Catalog"
+msgstr "U katalogu"
+
+#: inc/customizer/namespace.php:69
+msgid "Primary Color"
+msgstr "Osnovna boja"
+
+#: inc/customizer/namespace.php:70
+msgid "Primary color, used for links and other primary elements."
+msgstr ""
+"Osnovna/primarna boja, koristi se za poveznice i ostale osnovne elemente."
+
+#: inc/customizer/namespace.php:75
+msgid "Primary Color (Hover)"
+msgstr "Primarna boja (Hover)"
+
+#: inc/customizer/namespace.php:76
+msgid "Variant of the primary color, used for primary element hover states."
+msgstr ""
+"Varijanta primarne/osnovne boje, koristi se kada se mišem prelazi preko "
+"poveznice."
+
+#: inc/customizer/namespace.php:81
+msgid "Accent Color"
+msgstr "Boja naglaska"
+
+#: inc/customizer/namespace.php:82
+msgid "Accent color, used for flourishes and secondary elements."
+msgstr "Boja naglaska, koristi se za naglašavanja i sekundarne elemente."
+
+#: inc/customizer/namespace.php:87
+msgid "Accent Color (Hover)"
+msgstr "Boja naglaska (Hover)"
+
+#: inc/customizer/namespace.php:88
+msgid "Variant of the accent color, used for secondary element hover states."
+msgstr ""
+"Varijanta boje naglaska, koristi se kada se mišem prelazi preko poveznice."
+
+#: inc/customizer/namespace.php:93
+msgid "Primary Foreground Color"
+msgstr "Primarna boja prednjeg plana"
+
+#: inc/customizer/namespace.php:94
+msgid "Used for text on a primary background."
+msgstr "Koristi se za tekst na primarnoj podlozi."
+
+#: inc/customizer/namespace.php:99
+msgid "Accent Foreground Color"
+msgstr "Boja naglaska prednjeg plana"
+
+#: inc/customizer/namespace.php:100
+msgid "Used for text on an accent color background."
+msgstr "Koristi se za tekst na pozadini u boji naglaska."
+
+#: inc/customizer/namespace.php:124
+msgid "Social Media"
+msgstr "Društvene mreže"
+
+#: inc/customizer/namespace.php:136
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/customizer/namespace.php:149
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/customizer/namespace.php:158
+msgid "Front Page Catalog"
+msgstr "Katalog na početnoj stranici"
+
+#: inc/customizer/namespace.php:169
+msgid "Show Front Page Catalog"
+msgstr "Prikaži katalog na početnoj stranici"
+
+#: inc/customizer/namespace.php:179 partials/content-front-page.php:19
+msgid "Our Latest Titles"
+msgstr "Naši najnoviji naslovi"
+
+#: inc/customizer/namespace.php:184
+msgid "Front Page Catalog Title"
+msgstr "Naziv kataloga na početnoj stranici"
+
+#: inc/customizer/namespace.php:193
+msgid "Contact Form"
+msgstr "Obrazac za kontakt"
+
+#: inc/customizer/namespace.php:204
+msgid "Show Contact Form"
+msgstr "Prikaži obrazac za kontakt"
+
+#: inc/customizer/namespace.php:214 partials/contact-form.php:12
+msgid "Contact Us"
+msgstr "Kontaktirajte nas"
+
+#: inc/customizer/namespace.php:219
+msgid "Contact Form Title"
+msgstr "Naslov obrasca za kontakt"
+
+#: inc/customizer/namespace.php:233
+msgid "Contact Email"
+msgstr "Adresa e-pošte za kontakt"
+
+#: inc/filters/namespace.php:63
+msgid "Continued"
+msgstr "Nastavak"
+
+#: inc/helpers/namespace.php:186
+msgid "Sign In"
+msgstr "Prijava"
+
+#: inc/helpers/namespace.php:192
+msgid "Sign Up"
+msgstr "Registracija"
+
+#: inc/helpers/namespace.php:200
+msgid "Admin"
+msgstr "Admin"
+
+#: inc/helpers/namespace.php:208
+msgid "My Books"
+msgstr "Moje knjige"
+
+#: inc/helpers/namespace.php:214
+msgid "Create a New Book"
+msgstr "Izradi novu knjigu"
+
+#: inc/helpers/namespace.php:220
+msgid "Sign Out"
+msgstr "Odjava"
+
+#: inc/helpers/namespace.php:282
+msgid "Name is required."
+msgstr "Ime je neophodno."
+
+#: inc/helpers/namespace.php:286
+msgid "Email is required."
+msgstr "Adresa e-pošte je neophodna."
+
+#: inc/helpers/namespace.php:290
+msgid "Email is invalid."
+msgstr "Adresa e-pošte je nevažeća."
+
+#: inc/helpers/namespace.php:294
+msgid "Institution is required."
+msgstr "Ustanova je neophodna."
+
+#: inc/helpers/namespace.php:298
+msgid "Message is required."
+msgstr "Poruka je neophodna."
+
+#. translators: %s name of contact for submitter
+#: inc/helpers/namespace.php:305
+msgid "Contact Form Submission from %s"
+msgstr "Upit putem obrasca za kontakt od %s"
+
+#: inc/helpers/namespace.php:316
+msgid "Your message was sent!"
+msgstr "Vaša poruka je poslana!"
+
+#: inc/helpers/namespace.php:319
+msgid "Your message could not be sent."
+msgstr "Vaša poruka nije mogla biti poslana."
+
+#: inc/intervention.php:12
+msgid "Hello,"
+msgstr "Pozdrav,"
+
+#: page-catalog.php:55
+msgid "No Books Found"
+msgstr "Niti jedna knjiga nije pronađena"
+
+#: page-catalog.php:58
+msgid "No books have been added to the catalog."
+msgstr "Niti jedna knjiga nije dodana u katalog."
+
+#: partials/book.php:39
+msgid "About this book"
+msgstr "O ovoj knjizi"
+
+#: partials/contact-form.php:29
+msgid "Keep this field blank (required)"
+msgstr "Ostavite ovo polje prazno (potrebno)"
+
+#: partials/contact-form.php:45
+msgid "Your name (required)"
+msgstr "Vaše ime (potrebno)"
+
+#: partials/contact-form.php:61
+msgid "Your email address (required)"
+msgstr "Vaša adresa e-pošte (potrebno)"
+
+#: partials/contact-form.php:77
+msgid "Your institution (required)"
+msgstr "Vaša ustanova (potrebno)"
+
+#: partials/contact-form.php:93
+msgid "Your message (required)"
+msgstr "Vaša poruka (potrebno)"
+
+#: partials/contact-form.php:97
+msgid "Send"
+msgstr "Pošalji"
+
+#: partials/content-front-page.php:76
+msgid "View Complete Catalog"
+msgstr "Prikaz čitavog kataloga"
+
+#: partials/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ništa nije pronađeno"
+
+#. translators: 1: link to WP admin new post page.
+#: partials/content-none.php:27
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Spremni za Vašu prvu objavu? <a href=\"%1$s\">Započnite ovdje</a>."
+
+#: partials/content-none.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Žao nam je, ali ništa ne odgovara vašim pojmovima za pretraživanje. "
+"Pokušajte ponovno s nekim drugim ključnim riječima."
+
+#: partials/content-none.php:48
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Izgleda da ne možemo pronaći što tražite. Možda pretraživanje može pomoći."
+
+#: partials/content-page-catalog.php:17
+msgid "Filter by Subject"
+msgstr "Filtriraj prema predmetu"
+
+#: partials/content-page-catalog.php:19
+msgid "All Subjects"
+msgstr "Svi predmeti"
+
+#: partials/content-page-catalog.php:39
+msgid "Filter by License"
+msgstr "Filtriraj prema Licenci"
+
+#: partials/content-page-catalog.php:41
+msgid "All Licenses"
+msgstr "Sve licence"
+
+#: partials/content-page-catalog.php:54
+msgid "Sort by"
+msgstr "Rasporedi po"
+
+#: partials/content-page-catalog.php:58
+msgid "Subject"
+msgstr "Predmet"
+
+#: partials/content-page-catalog.php:59
+msgid "Latest"
+msgstr "Nedavno"
+
+#: partials/content-page-catalog.php:67
+msgid "Clear Filters"
+msgstr "Obriši filtere"
+
+#: partials/content-page-catalog.php:68
+msgid "Submit"
+msgstr "Podnesi"
+
+#: partials/content-page.php:23 partials/content.php:50
+msgid "Pages:"
+msgstr "Stranice:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content-page.php:37
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Uredi <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content.php:37
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Nastavi čitati <span class=\"screen-reader-text\">\"%s\"</span>"
+
+#: partials/paged-navigation.php:2
+msgid "Navigation"
+msgstr "Navigacija"
+
+#. translators: %s: search query.
+#: search.php:23
+msgid "Search Results for: %s"
+msgstr "Rezultati pretraživanja za: %s"
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search Catalog"
+msgstr "Pretraži katalog"
+
+#: searchform.php:6
+msgctxt "submit button"
+msgid "Search"
+msgstr "Pretraži"
