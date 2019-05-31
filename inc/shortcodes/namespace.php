@@ -52,7 +52,7 @@ function call_to_action( $atts ) {
 	);
 
 	// Fallback for shortcodes using the old url attribute
-	if ($atts['link'] === '#' && $atts['url']) {
+	if ( $atts['link'] === '#' && $atts['url'] ) {
 		$atts['link'] = $atts['url'];
 	}
 
