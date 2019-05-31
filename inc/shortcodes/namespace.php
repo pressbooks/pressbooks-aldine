@@ -44,11 +44,17 @@ function call_to_action( $atts ) {
 	$atts = shortcode_atts(
 		[
 			'link' => '#',
+			'url' => false,
 			'text' => 'Call To Action',
 		],
 		$atts,
 		'aldine_call_to_action'
 	);
+
+	// Fallback for shortcodes using the old url attribute
+	if ($atts['link'] === '#' && $atts['url']) {
+		$atts['link'] = $atts['url'];
+	}
 
 	return sprintf(
 		'<a class="call-to-action" href="%1$s" title="%2$s">%2$s</a>',
