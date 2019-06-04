@@ -15,15 +15,15 @@
 $network_facebook = get_option( 'pb_network_facebook' );
 $network_twitter = get_option( 'pb_network_twitter' );
 $pb_network_contact_form = get_option( 'pb_network_contact_form' );
-$pb_network_contact_link = get_option( 'pb_network_contact_link');
+$pb_network_contact_link = get_option( 'pb_network_contact_link' );
 
-if( $pb_network_contact_form ) {
+if ( $pb_network_contact_form ) {
 	$contact_link = network_home_url( '/#contact' );
 } else {
-	if( !empty( $pb_network_contact_link ) ){
+	if ( ! empty( $pb_network_contact_link ) ) {
 		$contact_link = $pb_network_contact_link;
 	} else {
-		$contact_link = "mailto:" . get_option( 'admin_email' );
+		$contact_link = 'mailto:' . get_option( 'admin_email' );
 	}
 }
 

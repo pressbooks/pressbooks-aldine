@@ -207,7 +207,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 		]
 	);
-	if ( get_option( 'pb_network_contact_form') == true){
+	if ( get_option( 'pb_network_contact_form' ) === true ) {
 		$wp_customize->add_setting(
 			'pb_network_contact_form_title', [
 				'type' => 'option',
@@ -246,7 +246,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'pb_network_contact_link', [
 				'label' => __( 'Contact Link', 'pressbooks-aldine' ),
 				'section' => 'pb_network_contact_form',
-				'settings' => 'pb_network_contact_link'
+				'settings' => 'pb_network_contact_link',
 			]
 		);
 	}
