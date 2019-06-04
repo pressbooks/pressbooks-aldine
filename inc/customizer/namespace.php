@@ -207,34 +207,49 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 		]
 	);
-	$wp_customize->add_setting(
-		'pb_network_contact_form_title', [
-			'type' => 'option',
-			'sanitize_callback' => 'sanitize_text_field',
-			'default' => __( 'Contact Us', 'pressbooks-aldine' ),
-		]
-	);
-	$wp_customize->add_control(
-		'pb_network_contact_form_title', [
-			'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
-			'section'  => 'pb_network_contact_form',
-			'settings' => 'pb_network_contact_form_title',
-		]
-	);
-	$wp_customize->add_setting(
-		'pb_network_contact_email', [
-			'type' => 'option',
-			'default' => get_option( 'admin_email', '' ),
-			'sanitize_callback' => 'sanitize_email',
-		]
-	);
-	$wp_customize->add_control(
-		'pb_network_contact_email', [
-			'label' => __( 'Contact Email', 'pressbooks-aldine' ),
-			'section'  => 'pb_network_contact_form',
-			'settings' => 'pb_network_contact_email',
-		]
-	);
+	if ( get_option( 'pb_network_contact_form') == true){
+		$wp_customize->add_setting(
+			'pb_network_contact_form_title', [
+				'type' => 'option',
+				'sanitize_callback' => 'sanitize_text_field',
+				'default' => __( 'Contact Us', 'pressbooks-aldine' ),
+			]
+		);
+		$wp_customize->add_control(
+			'pb_network_contact_form_title', [
+				'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
+				'section'  => 'pb_network_contact_form',
+				'settings' => 'pb_network_contact_form_title',
+			]
+		);
+		$wp_customize->add_setting(
+			'pb_network_contact_email', [
+				'type' => 'option',
+				'default' => get_option( 'admin_email', '' ),
+				'sanitize_callback' => 'sanitize_email',
+			]
+		);
+		$wp_customize->add_control(
+			'pb_network_contact_email', [
+				'label' => __( 'Contact Email', 'pressbooks-aldine' ),
+				'section'  => 'pb_network_contact_form',
+				'settings' => 'pb_network_contact_email',
+			]
+		);
+	} else {
+		$wp_customize->add_setting(
+			'pb_network_contact_link', [
+				'type' => 'option',
+			]
+		);
+		$wp_customize->add_control(
+			'pb_network_contact_link', [
+				'label' => __( 'Contact Link', 'pressbooks-aldine' ),
+				'section' => 'pb_network_contact_form',
+				'settings' => 'pb_network_contact_link'
+			]
+		);
+	}
 }
 
 /**
