@@ -292,9 +292,10 @@ function enqueue_color_contrast_validator() {
 	);
 }
 
-function enqueue_customizer_toggle() {
+function enqueue_customizer_scripts() {
 	$assets = new Assets( 'pressbooks-aldine', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
+	wp_enqueue_script( 'aldine/customizer-a11y', $assets->getPath( 'scripts/customizer-a11y.js' ), [ 'wp.i18n' ], false, null );
 	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ), false, null );
 }
