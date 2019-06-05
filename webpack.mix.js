@@ -45,7 +45,6 @@ mix
 	.js( `${assets}/scripts/call-to-action.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/catalog-admin.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
-	.js( `${assets}/scripts/customizer-a11y.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer-toggle.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` );
 
