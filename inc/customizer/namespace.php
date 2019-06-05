@@ -27,6 +27,8 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname', [
@@ -197,6 +199,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'pb_network_contact_form', [
 			'type' => 'option',
+			'transport' => 'refresh',
 		]
 	);
 	$wp_customize->add_control(
@@ -207,7 +210,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 		]
 	);
-	if ( get_option( 'pb_network_contact_form' ) === true ) {
 		$wp_customize->add_setting(
 			'pb_network_contact_form_title', [
 				'type' => 'option',
@@ -236,7 +238,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 				'settings' => 'pb_network_contact_email',
 			]
 		);
-	} else {
 		$wp_customize->add_setting(
 			'pb_network_contact_link', [
 				'type' => 'option',
@@ -249,7 +250,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 				'settings' => 'pb_network_contact_link',
 			]
 		);
-	}
 }
 
 /**
@@ -290,4 +290,11 @@ function enqueue_color_contrast_validator() {
 		'data',
 		sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
 	);
+}
+
+function enqueue_customizer_toggle() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ), false, null );
 }
