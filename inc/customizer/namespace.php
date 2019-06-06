@@ -15,7 +15,6 @@ use PressbooksMix\Assets;
  * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
-
 	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls
 
 	$wp_customize->remove_control( 'display_header_text' );
@@ -295,6 +294,8 @@ function enqueue_color_contrast_validator() {
 function enqueue_customizer_scripts() {
 	$assets = new Assets( 'pressbooks-aldine', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$pb_a11y_script =  plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
 
-	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ), false, null );
+	wp_enqueue_script( 'pb-a11y', $pb_a11y_script, [ 'wp-i18n' ], false, true );
+	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ), [ 'wp-i18n', 'pb-a11y' ], null );
 }
