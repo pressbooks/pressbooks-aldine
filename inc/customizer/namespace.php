@@ -26,8 +26,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-
-
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname', [
@@ -198,7 +196,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'pb_network_contact_form', [
 			'type' => 'option',
-			'transport' => 'refresh',
 		]
 	);
 	$wp_customize->add_control(
@@ -209,46 +206,46 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 		]
 	);
-		$wp_customize->add_setting(
-			'pb_network_contact_form_title', [
-				'type' => 'option',
-				'sanitize_callback' => 'sanitize_text_field',
-				'default' => __( 'Contact Us', 'pressbooks-aldine' ),
-			]
-		);
-		$wp_customize->add_control(
-			'pb_network_contact_form_title', [
-				'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
-				'section'  => 'pb_network_contact_form',
-				'settings' => 'pb_network_contact_form_title',
-			]
-		);
-		$wp_customize->add_setting(
-			'pb_network_contact_email', [
-				'type' => 'option',
-				'default' => get_option( 'admin_email', '' ),
-				'sanitize_callback' => 'sanitize_email',
-			]
-		);
-		$wp_customize->add_control(
-			'pb_network_contact_email', [
-				'label' => __( 'Contact Email', 'pressbooks-aldine' ),
-				'section'  => 'pb_network_contact_form',
-				'settings' => 'pb_network_contact_email',
-			]
-		);
-		$wp_customize->add_setting(
-			'pb_network_contact_link', [
-				'type' => 'option',
-			]
-		);
-		$wp_customize->add_control(
-			'pb_network_contact_link', [
-				'label' => __( 'Contact Link', 'pressbooks-aldine' ),
-				'section' => 'pb_network_contact_form',
-				'settings' => 'pb_network_contact_link',
-			]
-		);
+	$wp_customize->add_setting(
+		'pb_network_contact_form_title', [
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_text_field',
+			'default' => __( 'Contact Us', 'pressbooks-aldine' ),
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_contact_form_title', [
+			'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
+			'section' => 'pb_network_contact_form',
+			'settings' => 'pb_network_contact_form_title',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_contact_email', [
+			'type' => 'option',
+			'default' => get_option( 'admin_email', '' ),
+			'sanitize_callback' => 'sanitize_email',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_contact_email', [
+			'label' => __( 'Contact Email', 'pressbooks-aldine' ),
+			'section' => 'pb_network_contact_form',
+			'settings' => 'pb_network_contact_email',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_contact_link', [
+			'type' => 'option',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_contact_link', [
+			'label' => __( 'Contact Link', 'pressbooks-aldine' ),
+			'section' => 'pb_network_contact_form',
+			'settings' => 'pb_network_contact_link',
+		]
+	);
 }
 
 /**
@@ -291,11 +288,19 @@ function enqueue_color_contrast_validator() {
 	);
 }
 
-function enqueue_customizer_scripts() {
+/**
+ * Contact form UI tweaks (checkbox should toggle either/or)
+ */
+function enqueue_contact_form_tweaks() {
 	$assets = new Assets( 'pressbooks-aldine', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-	$pb_a11y_script =  plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
+	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ) );
+}
 
+/**
+ * Enqueue pb-a11y hacks in customizer
+ */
+function enqueue_pb_a11y_in_customizer() {
+	$pb_a11y_script = plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
 	wp_enqueue_script( 'pb-a11y', $pb_a11y_script, [ 'wp-i18n' ], false, true );
-	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ), [ 'wp-i18n', 'pb-a11y' ], null );
 }
