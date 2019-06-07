@@ -1,4 +1,3 @@
-
 wp.customize( 'blogname', value => {
 	value.bind( to => document.querySelector( '.home .entry-title' ).textContent = to );
 } );
