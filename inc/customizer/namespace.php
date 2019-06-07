@@ -15,7 +15,6 @@ use PressbooksMix\Assets;
  * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
-
 	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls
 
 	$wp_customize->remove_control( 'display_header_text' );
@@ -217,7 +216,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'pb_network_contact_form_title', [
 			'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
-			'section'  => 'pb_network_contact_form',
+			'section' => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_form_title',
 		]
 	);
@@ -231,8 +230,20 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'pb_network_contact_email', [
 			'label' => __( 'Contact Email', 'pressbooks-aldine' ),
-			'section'  => 'pb_network_contact_form',
+			'section' => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_email',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_contact_link', [
+			'type' => 'option',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_contact_link', [
+			'label' => __( 'Contact Link', 'pressbooks-aldine' ),
+			'section' => 'pb_network_contact_form',
+			'settings' => 'pb_network_contact_link',
 		]
 	);
 }
@@ -275,4 +286,21 @@ function enqueue_color_contrast_validator() {
 		'data',
 		sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) )
 	);
+}
+
+/**
+ * Contact form UI tweaks (checkbox should toggle either/or)
+ */
+function enqueue_contact_form_tweaks() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ) );
+}
+
+/**
+ * Enqueue pb-a11y hacks in customizer
+ */
+function enqueue_pb_a11y_in_customizer() {
+	$pb_a11y_script = plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
+	wp_enqueue_script( 'pb-a11y', $pb_a11y_script, [ 'wp-i18n' ], false, true );
 }

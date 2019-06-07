@@ -21,9 +21,9 @@ mix.setResourceRoot( '../' );
 
 // BrowserSync
 mix.browserSync( {
-	host:  'localhost',
+	host: 'localhost',
 	proxy: 'https://pressbooks.test',
-	port:  3100,
+	port: 3100,
 	files: [
 		'*.php',
 		`${inc}/**/*.php`,
@@ -45,6 +45,7 @@ mix
 	.js( `${assets}/scripts/call-to-action.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/catalog-admin.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
+	.js( `${assets}/scripts/customizer-toggle.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` );
 
 // Assets
