@@ -10,9 +10,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.3\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbook-aldine/\n"
-"POT-Creation-Date: 2019-05-28T16:24:06+00:00\n"
+"Project-Id-Version: Aldine 1.6.4\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
+"POT-Creation-Date: 2019-06-11T15:39:58+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Dac Chartrand <dac@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -77,33 +77,33 @@ msgid "Comments are closed."
 msgstr "Les commentaires ont été désactivés."
 
 #. translators: %s network name
-#: footer.php:43 footer.php:48
+#: footer.php:60 footer.php:65
 msgid "%s on Facebook"
 msgstr "%s sur Facebook"
 
 #. translators: %s network name
-#: footer.php:53 footer.php:58
+#: footer.php:70 footer.php:75
 msgid "%s on Twitter"
 msgstr "%s sur Twitter"
 
 #. translators: %s Pressbooks
-#: footer.php:77
+#: footer.php:94
 msgid "Powered by %s"
 msgstr "Propulsé par %s"
 
-#: footer.php:79
+#: footer.php:96
 msgid "Guides and Tutorials"
 msgstr "Guides et tutoriels"
 
-#: footer.php:80 inc/helpers/namespace.php:179
+#: footer.php:98 inc/helpers/namespace.php:179
 msgid "Contact"
 msgstr "Contact"
 
-#: footer.php:84 footer.php:86
+#: footer.php:103 footer.php:105
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks sur YouTube"
 
-#: footer.php:88 footer.php:92
+#: footer.php:107 footer.php:111
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks sur Twitter"
 
@@ -308,106 +308,110 @@ msgstr "Ne plus afficher."
 msgid "In Catalog"
 msgstr "Dans le catalogue"
 
-#: inc/customizer/namespace.php:69
+#: inc/customizer/namespace.php:68
 msgid "Primary Color"
 msgstr "Couleur principale"
 
-#: inc/customizer/namespace.php:70
+#: inc/customizer/namespace.php:69
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
 "Couleur principale pour les liens et d&rsquo;autres éléments principaux"
 
-#: inc/customizer/namespace.php:75
+#: inc/customizer/namespace.php:74
 msgid "Primary Color (Hover)"
 msgstr "Couleur principale (survol)"
 
-#: inc/customizer/namespace.php:76
+#: inc/customizer/namespace.php:75
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 "Variante de la couleur principale lorsque qu&rsquo;il y a survol d&rsquo;un "
 "élément principal"
 
-#: inc/customizer/namespace.php:81
+#: inc/customizer/namespace.php:80
 msgid "Accent Color"
 msgstr "Couleur accent"
 
-#: inc/customizer/namespace.php:82
+#: inc/customizer/namespace.php:81
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr "Couleur accent pour les fioritures et autres éléments secondaires"
 
-#: inc/customizer/namespace.php:87
+#: inc/customizer/namespace.php:86
 msgid "Accent Color (Hover)"
 msgstr "Couleur accent (survol)"
 
-#: inc/customizer/namespace.php:88
+#: inc/customizer/namespace.php:87
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 "Variante de la couleur accent lorsqu&rsquo;il y a survol d&rsquo;un élément "
 "secondaire"
 
-#: inc/customizer/namespace.php:93
+#: inc/customizer/namespace.php:92
 msgid "Primary Foreground Color"
 msgstr "Couleur principale de l&rsquo;avant-plan"
 
-#: inc/customizer/namespace.php:94
+#: inc/customizer/namespace.php:93
 msgid "Used for text on a primary background."
 msgstr "Pour le texte affiché sur un arrière-plan principal"
 
-#: inc/customizer/namespace.php:99
+#: inc/customizer/namespace.php:98
 msgid "Accent Foreground Color"
 msgstr "Couleur accent de l&rsquo;avant-plan"
 
-#: inc/customizer/namespace.php:100
+#: inc/customizer/namespace.php:99
 msgid "Used for text on an accent color background."
 msgstr "Pour le texte affiché sur un arrière-plan de couleur accent"
 
-#: inc/customizer/namespace.php:124
+#: inc/customizer/namespace.php:123
 msgid "Social Media"
 msgstr "Réseaux sociaux"
 
-#: inc/customizer/namespace.php:136
+#: inc/customizer/namespace.php:135
 msgid "Facebook"
 msgstr "Facebook"
 
-#: inc/customizer/namespace.php:149
+#: inc/customizer/namespace.php:148
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/namespace.php:158
+#: inc/customizer/namespace.php:157
 msgid "Front Page Catalog"
 msgstr "Catalogue de page couverture"
 
-#: inc/customizer/namespace.php:169
+#: inc/customizer/namespace.php:168
 msgid "Show Front Page Catalog"
 msgstr "Voir le catalogue de page couverture"
 
-#: inc/customizer/namespace.php:179 partials/content-front-page.php:19
+#: inc/customizer/namespace.php:178 partials/content-front-page.php:19
 msgid "Our Latest Titles"
 msgstr "Nos derniers titres"
 
-#: inc/customizer/namespace.php:184
+#: inc/customizer/namespace.php:183
 msgid "Front Page Catalog Title"
 msgstr "Titre du catalogue de page couverture"
 
-#: inc/customizer/namespace.php:193
+#: inc/customizer/namespace.php:192
 msgid "Contact Form"
 msgstr "Formulaire de contact"
 
-#: inc/customizer/namespace.php:204
+#: inc/customizer/namespace.php:203
 msgid "Show Contact Form"
 msgstr "Voir le formulaire de contact"
 
-#: inc/customizer/namespace.php:214 partials/contact-form.php:12
+#: inc/customizer/namespace.php:213 partials/contact-form.php:12
 msgid "Contact Us"
 msgstr "Contactez-nous"
 
-#: inc/customizer/namespace.php:219
+#: inc/customizer/namespace.php:218
 msgid "Contact Form Title"
 msgstr "Titre du formulaire de contact"
 
-#: inc/customizer/namespace.php:233
+#: inc/customizer/namespace.php:232
 msgid "Contact Email"
 msgstr "Courriel de contact"
+
+#: inc/customizer/namespace.php:244
+msgid "Contact Link"
+msgstr ""
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
