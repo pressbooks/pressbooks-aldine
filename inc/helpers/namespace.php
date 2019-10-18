@@ -80,7 +80,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		}
 
 		$book_information = $dc->get( $site->blog_id, $dc::BOOK_INFORMATION_ARRAY );
-		if ( $book_information ) {
+		if ( is_array( $book_information ) && ! empty( $book_information ) ) {
 			$schema = book_information_to_schema( $book_information );
 			$book['title'] = $schema['name'];
 			$book['date-published'] = $schema['datePublished'] ?? '';
