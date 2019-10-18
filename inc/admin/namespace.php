@@ -5,8 +5,8 @@
 
 namespace Aldine\Admin;
 
-use Pressbooks\DataCollector\Book as BookDataCollector;
 use PressbooksMix\Assets;
+use Pressbooks\DataCollector\Book as BookDataCollector;
 
 /**
  * Uses old option to provide a simpler upgrade path from pressbooks-publisher theme
