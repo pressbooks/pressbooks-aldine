@@ -61,7 +61,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	$sites = get_sites( $args );
 	foreach ( $sites as $site ) {
 		if ( get_site_meta( $site->blog_id, $dc::IN_CATALOG, true ) ) {
-			$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE, ); // Cool hack! :face_with_rolling_eyes:
+			$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE ); // Cool hack! :face_with_rolling_eyes:
 			$sites_in_catalog[] = $site;
 		}
 	}
