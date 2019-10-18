@@ -5,6 +5,7 @@
 
 namespace Aldine\Admin;
 
+use Pressbooks\DataCollector\Book as BookDataCollector;
 use PressbooksMix\Assets;
 
 /**
@@ -47,8 +48,10 @@ function update_catalog() {
 
 	if ( $in_catalog === 'true' ) {
 		update_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION, 1 );
+		update_site_meta( $blog_id, BookDataCollector::IN_CATALOG, 1 );
 	} else {
 		delete_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION );
+		update_site_meta( $blog_id, BookDataCollector::IN_CATALOG, 0 );
 	}
 }
 

@@ -10,7 +10,7 @@ namespace Aldine\Helpers;
 use function \Pressbooks\Metadata\book_information_to_schema;
 use function \Pressbooks\Metadata\is_bisac;
 use function \Pressbooks\Utility\str_starts_with;
-use Pressbooks\Book;
+use Pressbooks\DataCollector\Book as BookDataCollector;
 
 /**
  * @param int $page
@@ -56,16 +56,14 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 
 	/** @var \WP_Site $site */
 
+	$dc = BookDataCollector::init();
 	$sites_in_catalog = [];
-	$sites = new \WP_Site_Query( $args );
-	foreach ( $sites->sites as $site ) {
-		// TODO: Using switch_to_blog() is a performance problem. Use [ https://core.trac.wordpress.org/ticket/37923 ] when available.
-		switch_to_blog( $site->blog_id );
-		if ( get_option( \Aldine\Admin\BLOG_OPTION ) ) {
-			$site->pb_title = get_bloginfo( 'name' ); // Cool hack! :face_with_rolling_eyes:
+	$sites = get_sites( $args );
+	foreach ( $sites as $site ) {
+		if ( get_site_meta( $site->blog_id, $dc::IN_CATALOG, true ) ) {
+			$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE, ); // Cool hack! :face_with_rolling_eyes:
 			$sites_in_catalog[] = $site;
 		}
-		restore_current_blog();
 	}
 	if ( $orderby === 'latest' ) {
 		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
@@ -81,15 +79,16 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 			continue;
 		}
 
-		switch_to_blog( $site->blog_id );
-		$schema = book_information_to_schema( Book::getBookInformation() );
-		$book['title'] = $schema['name'];
-		$book['date-published'] = $schema['datePublished'] ?? '';
-		$book['subject'] = $schema['about'][0]['identifier'] ?? '';
-		$book['link'] = get_blogaddress_by_id( $site->blog_id );
-		$book['metadata'] = $schema;
-		$books[] = $book;
-		restore_current_blog();
+		$book_information = $dc->get( $site->blog_id, $dc::BOOK_INFORMATION_ARRAY );
+		if ( $book_information ) {
+			$schema = book_information_to_schema( $book_information );
+			$book['title'] = $schema['name'];
+			$book['date-published'] = $schema['datePublished'] ?? '';
+			$book['subject'] = $schema['about'][0]['identifier'] ?? '';
+			$book['link'] = get_blogaddress_by_id( $site->blog_id );
+			$book['metadata'] = $schema;
+			$books[] = $book;
+		}
 
 		if ( count( $books ) >= $per_page ) {
 			break;
