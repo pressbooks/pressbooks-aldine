@@ -23,15 +23,14 @@ if ( $pb_network_contact_form ) {
 	if ( ! empty( $pb_network_contact_link ) ) {
 		$contact_link = $pb_network_contact_link;
 	} else {
-		$contact_link = '';
+		/**
+		 * Filter the "Contact" link.
+		 *
+		 * @since Pressbooks 5.6.0
+		 */
+		$contact_link = apply_filters( 'pb_contact_link', $contact_link );
 	}
 }
-/**
- * Filter the "Contact" link.
- *
- * @since Pressbooks 5.6.0
- */
-$contact_link = apply_filters( 'pb_contact_link', $contact_link );
 
 ?>
 
