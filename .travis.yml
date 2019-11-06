@@ -1,3 +1,4 @@
+dist: bionic
 language: php
 sudo: false
 notifications:
@@ -9,22 +10,23 @@ notifications:
 branches:
   only:
   - dev
+  - hotfix
   - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
-- 7.1
-- 7.2
-- nightly
+  - 7.1
+  - 7.2
+  - 7.3
 env:
-- TRAVIS_NODE_VERSION="8"
+- TRAVIS_NODE_VERSION="10"
 matrix:
   allow_failures:
   - php: nightly
 cache:
   apt: true
   directories:
-  - "$HOME/.composer/cache"
-  - "$HOME/.yarn-cache"
-  - vendor
+    - "$HOME/.composer/cache"
+    - node_modules
+    - vendor
 before_install:
 - composer self-update
 - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
