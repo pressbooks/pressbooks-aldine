@@ -7,14 +7,15 @@
 # Hubert GB <hgblouin@tciinc.ca>, 2019
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
+# Steel Wagstaff <steel@pressbooks.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.6.4\n"
+"Project-Id-Version: Aldine 1.7.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-06-11T15:39:58+00:00\n"
+"POT-Creation-Date: 2019-11-06T18:27:31+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Dac Chartrand <dac@pressbooks.com>, 2019\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.3.0\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -77,33 +78,33 @@ msgid "Comments are closed."
 msgstr "Les commentaires ont été désactivés."
 
 #. translators: %s network name
-#: footer.php:60 footer.php:65
+#: footer.php:59 footer.php:64
 msgid "%s on Facebook"
 msgstr "%s sur Facebook"
 
 #. translators: %s network name
-#: footer.php:70 footer.php:75
+#: footer.php:69 footer.php:74
 msgid "%s on Twitter"
 msgstr "%s sur Twitter"
 
 #. translators: %s Pressbooks
-#: footer.php:94
+#: footer.php:93
 msgid "Powered by %s"
 msgstr "Propulsé par %s"
 
-#: footer.php:96
+#: footer.php:95
 msgid "Guides and Tutorials"
 msgstr "Guides et tutoriels"
 
-#: footer.php:98 inc/helpers/namespace.php:179
+#: footer.php:97 inc/helpers/namespace.php:178
 msgid "Contact"
 msgstr "Contact"
 
-#: footer.php:103 footer.php:105
+#: footer.php:102 footer.php:104
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks sur YouTube"
 
-#: footer.php:107 footer.php:111
+#: footer.php:106 footer.php:110
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks sur Twitter"
 
@@ -287,24 +288,24 @@ msgstr ""
 msgid "Catalog"
 msgstr "Catalogue"
 
-#: inc/activation/namespace.php:73 inc/helpers/namespace.php:173
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:172
 msgid "Home"
 msgstr "Accueil"
 
-#: inc/admin/namespace.php:30
+#: inc/admin/namespace.php:31
 msgid "Catalog updated."
 msgstr "Catalogue mis à jour"
 
-#: inc/admin/namespace.php:31
+#: inc/admin/namespace.php:32
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
 "Désolé, votre catalogue n&rsquo;a pas été mis à jour. Veuillez réessayer."
 
-#: inc/admin/namespace.php:32
+#: inc/admin/namespace.php:33
 msgid "Dismiss this notice."
 msgstr "Ne plus afficher."
 
-#: inc/admin/namespace.php:61
+#: inc/admin/namespace.php:64
 msgid "In Catalog"
 msgstr "Dans le catalogue"
 
@@ -411,66 +412,66 @@ msgstr "Courriel de contact"
 
 #: inc/customizer/namespace.php:244
 msgid "Contact Link"
-msgstr ""
+msgstr "Lien de contact"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
 msgstr "Suite"
 
-#: inc/helpers/namespace.php:186
+#: inc/helpers/namespace.php:185
 msgid "Sign In"
 msgstr "Se connecter"
 
-#: inc/helpers/namespace.php:192
+#: inc/helpers/namespace.php:191
 msgid "Sign Up"
 msgstr "S&rsquo;inscrire"
 
-#: inc/helpers/namespace.php:200
+#: inc/helpers/namespace.php:199
 msgid "Admin"
 msgstr "Administrateur"
 
-#: inc/helpers/namespace.php:208
+#: inc/helpers/namespace.php:207
 msgid "My Books"
 msgstr "Mes livres"
 
-#: inc/helpers/namespace.php:214
+#: inc/helpers/namespace.php:213
 msgid "Create a New Book"
 msgstr "Créer un nouveau livre"
 
-#: inc/helpers/namespace.php:220
+#: inc/helpers/namespace.php:219
 msgid "Sign Out"
 msgstr "Se déconnecter"
 
-#: inc/helpers/namespace.php:282
+#: inc/helpers/namespace.php:281
 msgid "Name is required."
 msgstr "Nom requis"
 
-#: inc/helpers/namespace.php:286
+#: inc/helpers/namespace.php:285
 msgid "Email is required."
 msgstr "Adresse courriel requise"
 
-#: inc/helpers/namespace.php:290
+#: inc/helpers/namespace.php:289
 msgid "Email is invalid."
 msgstr "Adresse courriel invalide"
 
-#: inc/helpers/namespace.php:294
+#: inc/helpers/namespace.php:293
 msgid "Institution is required."
 msgstr "Nom de l&rsquo;établissement requis"
 
-#: inc/helpers/namespace.php:298
+#: inc/helpers/namespace.php:297
 msgid "Message is required."
 msgstr "Message requis"
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:305
+#: inc/helpers/namespace.php:304
 msgid "Contact Form Submission from %s"
 msgstr "Envoi du formulaire de contact à partir de %s"
 
-#: inc/helpers/namespace.php:316
+#: inc/helpers/namespace.php:315
 msgid "Your message was sent!"
 msgstr "Votre message a été envoyé!"
 
-#: inc/helpers/namespace.php:319
+#: inc/helpers/namespace.php:318
 msgid "Your message could not be sent."
 msgstr "Votre message n&rsquo;a pas pu être envoyé."
 
