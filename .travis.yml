@@ -13,9 +13,9 @@ branches:
   - hotfix
   - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
-  - 7.1
-  - 7.2
-  - 7.3
+- 7.1
+- 7.2
+- 7.3
 env:
 - TRAVIS_NODE_VERSION="10"
 matrix:
@@ -24,9 +24,9 @@ matrix:
 cache:
   apt: true
   directories:
-    - "$HOME/.composer/cache"
-    - node_modules
-    - vendor
+  - "$HOME/.composer/cache"
+  - node_modules
+  - vendor
 before_install:
 - composer self-update
 - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
@@ -54,7 +54,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: H1gOixA2icGJrrJQBqU8ta9/pws8V3RM3JJF3G8CXtQ7mWOlC20Ntev1nB+fQS4mdiIWJ92eum4KKXBr80Od4m/hGIO2JSbpzN2v7bTlAx9eWB6wyShrfq+/IMw1vuqo9SyZM5+TJMbWAIu21pXFt6r7gPzX676iV9l2QQ2EJVV3s8VxYlfOGk/w+tVSp8t6Iq6FHVbks3QQ8bQriHwIC6LvvtRalarwTXI0vUfNNRrNpMATkxdddbleKnEfXpIuwvtblTWTuGp8ZIiC2QUKKraU4cbYWoAK/sJ+6gK3wIaXFbhhv85B/CW5xbbB916Bz5EKeZXm2QTRdKHFD13xQH3m9iqIZdK1w1SmwkyuhcwLvqF5fl087RWBz8w9pLp5dHI7HmoXVDHQrtNkyWN4uSXQpPweZmCf2D0qgRR3dRaPRdOG0PK+SXoRU1hr4dsTQ/tpbCYzJRXejnrOqOd/YvkuMZzzpE17YaogkGz5U55//cdwIr47wxWPspB0xCtDidrvualY2o+hdjeXN7Pv/pGXos+TYpHmjjEsp5dOmIAx+djTk5dn0LK/oJzHR1kfFGDWFTp0xNTywCG/x2224BO3vTyBKELR4NPeGX2goUO2VK6inntUXDf5OsfBeVsf0B0NhFR76VtkriXBpo/K4ppmXVNxKmK0etqS88V+HX4=
+    secure: bbbOG0wczvrmXUuMXYnL8kp4w1tvCNsXha3L7kGmCY144Gh+rXUOG63xxdSP5dRj5tk1jKIJ6Hc7xg614qODxuiyBclIDOIUXT+DEIUhCNu5+7XjuqjIce6077ipFOB4sQmcWEzqZx9RIl18sjkDp4h5WaDAbQQOfsUylXw+/uSBALJsvvLG/38L+LrYg7bh77IKYd94CKexsxBjQ5Y0C82yC5BoTH0xYfGj2hSmB/mGXyrn3UTHubQmQpHjoXzC78TL21BkzfaNrVeNHEgSbBpkg1HRarq9CrrSTnP4IRLfm38YPQV6WQatMPT1FWTXBhfxjIWmboCHOs/79NdZlQiY2Van44v66E1NkFcspVpPs/n6bDXm1PZxwy+rvkTpyl6olbaKnPpWRzbQCJ9MCxGur4lC54M8DpjJ10kvoP3kKNbzU73zkYNkoJH10yljoMdu2zQO86iLYqHV/t+rW0L/MDAX9bbnM5d5dLag83b8kaUFN3wtcpMjnh2YI4k+ulx2IzqwReqLUksE7KtSB/O2x4XXW8a4HU1DWJEHjBOFklFHFSsYhkr58RGvjusiCGB+dPKAEJkdaEXLHMpYcLcsg6YA5wszJouzcQHZkz6SYnM+iWJopOTRQiY7PK6JMPbIrxk7a7vXYPjoUWqc2JkeY6I7eux8Xio/bFCbnV4=
   file: pressbooks-aldine-$TRAVIS_TAG.zip
   on:
     tags: true
