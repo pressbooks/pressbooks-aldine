@@ -13,7 +13,7 @@ Tags: publishing, catalog, pressbooks, default-theme
 
 Requires at least: 5.2.4
 Tested up to: 5.2.4
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -30,13 +30,13 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
-= 1.7.0 =
+= 1.7.1 =
 
-* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.7.0
+* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.7.1
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
 == Upgrade Notice ==
-= 1.7.0 =
+= 1.7.1 =
 
 - Aldine requires Pressbooks >= 5.10.0
 
