@@ -44,23 +44,22 @@
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
 	},
-	"scripts": {
-		"build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"build:profile": "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"rmdist": "rimraf dist",
-		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/**/*.js\"",
-		"lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
-		"test": "npm run -s lint"
-	},
+  "scripts": {
+    "install-build-tools": "npm install --no-save pressbooks-build-tools",
+    "watch": "npm run production -- --watch",
+    "prod": "npm run production",
+    "build:production": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "test": "npm run -s lint",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/**/*.js\"",
+    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss"
+  },
 	"engines": {
-		"node": ">= 6.9.4"
+		"node": ">= 10"
 	},
-	"devDependencies": {
-		"pressbooks-build-tools": "^1.4.3"
-	},
+	"devDependencies": {},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.26",
 		"isotope-layout": "^3.0.6",
