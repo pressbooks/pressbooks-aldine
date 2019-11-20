@@ -37,7 +37,6 @@ install:
 script:
 - npm run install-build-tools
 - npm run test
-- npm run build
 - npm run rmdist
 - npm run "build:production"
 - composer test
