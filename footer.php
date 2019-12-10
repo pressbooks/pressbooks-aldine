@@ -28,7 +28,7 @@ if ( $pb_network_contact_form ) {
 		 *
 		 * @since Pressbooks 5.6.0
 		 */
-		$contact_link = apply_filters( 'pb_contact_link', $contact_link );
+		$contact_link = apply_filters( 'pb_contact_link', '' );
 	}
 }
 
