@@ -48,8 +48,8 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 			'pb_publisher_catalog_query_args',
 			[
 				'number' => 1000000,
-				'meta_key' => $dc::IN_CATALOG,
-				'meta_value' => 1,
+				'meta_key' => $dc::IN_CATALOG, // @codingStandardsIgnoreLine
+				'meta_value' => 1, // @codingStandardsIgnoreLine
 				'public' => 1,
 				'archived' => 0,
 				'spam' => 0,
