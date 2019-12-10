@@ -30,6 +30,8 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		]; // Bail
 	}
 
+	$dc = BookDataCollector::init();
+
 	/**
 	 * Filter the WP_Site_Query args for the catalog display.
 	 *
@@ -45,6 +47,9 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		apply_filters(
 			'pb_publisher_catalog_query_args',
 			[
+				'number' => 1000000,
+				'meta_key' => $dc::IN_CATALOG,
+				'meta_value' => 1,
 				'public' => 1,
 				'archived' => 0,
 				'spam' => 0,
@@ -56,14 +61,11 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 
 	/** @var \WP_Site $site */
 
-	$dc = BookDataCollector::init();
 	$sites_in_catalog = [];
 	$sites = get_sites( $args );
 	foreach ( $sites as $site ) {
-		if ( get_site_meta( $site->blog_id, $dc::IN_CATALOG, true ) ) {
-			$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE ); // Cool hack! :face_with_rolling_eyes:
-			$sites_in_catalog[] = $site;
-		}
+		$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE ); // Cool hack! :face_with_rolling_eyes:
+		$sites_in_catalog[] = $site;
 	}
 	if ( $orderby === 'latest' ) {
 		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
