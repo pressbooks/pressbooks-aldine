@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.7.0\n"
+"Project-Id-Version: Aldine 1.7.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-11-06T18:27:31+00:00\n"
+"POT-Creation-Date: 2019-12-10T20:14:29+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Guides and Tutorials"
 msgstr ""
 
-#: footer.php:97 inc/helpers/namespace.php:178
+#: footer.php:97 inc/helpers/namespace.php:180
 msgid "Contact"
 msgstr "Saziņa"
 
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "Katalogs"
 
-#: inc/activation/namespace.php:73 inc/helpers/namespace.php:172
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:174
 msgid "Home"
 msgstr "Mājaslapa"
 
@@ -405,60 +405,60 @@ msgstr ""
 msgid "Continued"
 msgstr "Turpinājās"
 
-#: inc/helpers/namespace.php:185
+#: inc/helpers/namespace.php:187
 msgid "Sign In"
 msgstr "Ieiet"
 
-#: inc/helpers/namespace.php:191
+#: inc/helpers/namespace.php:193
 msgid "Sign Up"
 msgstr "Reģistrēties"
 
-#: inc/helpers/namespace.php:199
+#: inc/helpers/namespace.php:201
 msgid "Admin"
 msgstr "Administrēšana"
 
-#: inc/helpers/namespace.php:207
+#: inc/helpers/namespace.php:209
 msgid "My Books"
 msgstr "Manas grāmatas"
 
-#: inc/helpers/namespace.php:213
+#: inc/helpers/namespace.php:215
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:219
+#: inc/helpers/namespace.php:221
 msgid "Sign Out"
 msgstr "Iziet"
 
-#: inc/helpers/namespace.php:281
+#: inc/helpers/namespace.php:283
 msgid "Name is required."
 msgstr "Nepieciešami uzrakstīt vārdu"
 
-#: inc/helpers/namespace.php:285
+#: inc/helpers/namespace.php:287
 msgid "Email is required."
 msgstr "Nepieciešami uzrakstīt epastu."
 
-#: inc/helpers/namespace.php:289
+#: inc/helpers/namespace.php:291
 msgid "Email is invalid."
 msgstr "Epasts ir nepareizs."
 
-#: inc/helpers/namespace.php:293
+#: inc/helpers/namespace.php:295
 msgid "Institution is required."
 msgstr "Nepieciešami uzrakstīt institūcijas nosaukumu."
 
-#: inc/helpers/namespace.php:297
+#: inc/helpers/namespace.php:299
 msgid "Message is required."
 msgstr "Nepieciešami uzrakstīt ziņojumu."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:304
+#: inc/helpers/namespace.php:306
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:315
+#: inc/helpers/namespace.php:317
 msgid "Your message was sent!"
 msgstr "Jūsu ziņojums nosūtīts!"
 
-#: inc/helpers/namespace.php:318
+#: inc/helpers/namespace.php:320
 msgid "Your message could not be sent."
 msgstr "Jūsu ziņojums nevar būt nosūtīts."
 
