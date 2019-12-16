@@ -54,7 +54,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: bbbOG0wczvrmXUuMXYnL8kp4w1tvCNsXha3L7kGmCY144Gh+rXUOG63xxdSP5dRj5tk1jKIJ6Hc7xg614qODxuiyBclIDOIUXT+DEIUhCNu5+7XjuqjIce6077ipFOB4sQmcWEzqZx9RIl18sjkDp4h5WaDAbQQOfsUylXw+/uSBALJsvvLG/38L+LrYg7bh77IKYd94CKexsxBjQ5Y0C82yC5BoTH0xYfGj2hSmB/mGXyrn3UTHubQmQpHjoXzC78TL21BkzfaNrVeNHEgSbBpkg1HRarq9CrrSTnP4IRLfm38YPQV6WQatMPT1FWTXBhfxjIWmboCHOs/79NdZlQiY2Van44v66E1NkFcspVpPs/n6bDXm1PZxwy+rvkTpyl6olbaKnPpWRzbQCJ9MCxGur4lC54M8DpjJ10kvoP3kKNbzU73zkYNkoJH10yljoMdu2zQO86iLYqHV/t+rW0L/MDAX9bbnM5d5dLag83b8kaUFN3wtcpMjnh2YI4k+ulx2IzqwReqLUksE7KtSB/O2x4XXW8a4HU1DWJEHjBOFklFHFSsYhkr58RGvjusiCGB+dPKAEJkdaEXLHMpYcLcsg6YA5wszJouzcQHZkz6SYnM+iWJopOTRQiY7PK6JMPbIrxk7a7vXYPjoUWqc2JkeY6I7eux8Xio/bFCbnV4=
+    secure: $GITHUB_ACCESS_TOKEN
   file: pressbooks-aldine-$TRAVIS_TAG.zip
   on:
     tags: true
