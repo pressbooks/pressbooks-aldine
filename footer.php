@@ -113,8 +113,6 @@ if ( $pb_network_contact_form ) {
 	</div><!-- .container -->
 </footer><!-- .footer -->
 
-<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
-
 </div> <!-- .site -->
 
 <?php wp_footer(); ?>
