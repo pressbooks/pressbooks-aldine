@@ -145,14 +145,6 @@ function enqueue_assets() {
 	wp_enqueue_style( 'aldine/style', $assets->getPath( 'styles/aldine.css' ), false, null );
 	wp_enqueue_style( 'aldine/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600', false, null );
 	wp_enqueue_script( 'aldine/script', $assets->getPath( 'scripts/aldine.js' ), [ 'jquery' ], null, true );
-	wp_localize_script(
-		'aldine/script',
-		'PB_A11y',
-		[
-			'increase_label' => __( 'Increase Font Size', 'pressbooks-aldine' ),
-			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-aldine' ),
-		]
-	);
 }
 
 /**
