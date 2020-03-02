@@ -30,13 +30,13 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
-= 1.7.2 =
+= 1.8.0 =
 
-* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.7.2
+* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.8.0
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
 == Upgrade Notice ==
-= 1.7.2 =
+= 1.8.0 =
 
 - Aldine requires Pressbooks >= 5.12.0
 
