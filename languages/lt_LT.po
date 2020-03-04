@@ -1,13 +1,13 @@
-# Copyright (C) 2019 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2020 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2018
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.7.2\n"
+"Project-Id-Version: Aldine 1.8.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2019-12-10T20:14:29+00:00\n"
+"POT-Creation-Date: 2020-03-02T19:09:06+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/pressbooks/teams/9194/lt_LT/)\n"
@@ -137,54 +137,46 @@ msgstr "Tinklo poraštės 1 blokas"
 msgid "Network Footer Block 2"
 msgstr "Tinklo poraštės 2 blokas"
 
-#: inc/actions/namespace.php:152 partials/content-accessibility-toolbar.php:4
-msgid "Increase Font Size"
-msgstr "Padidinkite Šrifto Dydį"
-
-#: inc/actions/namespace.php:153
-msgid "Decrease Font Size"
-msgstr "Sumažinkite Šrifto Dydį"
-
-#: inc/actions/namespace.php:237
+#: inc/actions/namespace.php:229
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "Šiame puslapyje rodomas jūsų tinklo katalogas, todėl nėra jokio turinio, "
 "kurį reikia redaguoti."
 
-#: inc/actions/namespace.php:291
+#: inc/actions/namespace.php:283
 msgid "Page Section"
 msgstr "Puslapio Skyrius"
 
-#: inc/actions/namespace.php:292 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:284 partials/content-page-catalog.php:57
 msgid "Title"
 msgstr "Pavadinimas"
 
-#: inc/actions/namespace.php:293
+#: inc/actions/namespace.php:285
 msgid "Standard"
 msgstr "Standartinis"
 
-#: inc/actions/namespace.php:294
+#: inc/actions/namespace.php:286
 msgid "Accent"
 msgstr "Akcentuoti"
 
-#: inc/actions/namespace.php:295
+#: inc/actions/namespace.php:287
 msgid "Bordered"
 msgstr "Ribojasi"
 
-#: inc/actions/namespace.php:296
+#: inc/actions/namespace.php:288
 msgid "Borderless"
 msgstr ""
 
-#: inc/actions/namespace.php:299
+#: inc/actions/namespace.php:291
 msgid "Call to Action"
 msgstr "Kvietimas veikti"
 
-#: inc/actions/namespace.php:300
+#: inc/actions/namespace.php:292
 msgid "Text"
 msgstr "Tekstas"
 
-#: inc/actions/namespace.php:301
+#: inc/actions/namespace.php:293
 msgid "Link"
 msgstr "Nuoroda"
 
