@@ -150,6 +150,19 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'settings' => 'pb_network_twitter',
 		]
 	);
+	$wp_customize->add_setting(
+		'pb_network_instagram', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_instagram', [
+			'label' => __( 'Instagram', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_instagram',
+		]
+	);
 
 	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 		$wp_customize->add_section(
