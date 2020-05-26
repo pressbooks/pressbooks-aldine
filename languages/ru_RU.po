@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.8.0\n"
+"Project-Id-Version: Aldine 1.8.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2020-03-02T19:09:06+00:00\n"
+"POT-Creation-Date: 2020-05-26T21:22:04+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/pressbooks/teams/9194/ru/)\n"
@@ -70,33 +70,38 @@ msgid "Comments are closed."
 msgstr "Комментарии закрыты."
 
 #. translators: %s network name
-#: footer.php:59 footer.php:64
+#: footer.php:60 footer.php:65
 msgid "%s on Facebook"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:69 footer.php:74
+#: footer.php:70 footer.php:75
 msgid "%s on Twitter"
 msgstr ""
 
+#. translators: %s network name
+#: footer.php:80 footer.php:85
+msgid "%s on Instagram"
+msgstr ""
+
 #. translators: %s Pressbooks
-#: footer.php:93
+#: footer.php:104
 msgid "Powered by %s"
 msgstr ""
 
-#: footer.php:95
+#: footer.php:106
 msgid "Guides and Tutorials"
 msgstr ""
 
-#: footer.php:97 inc/helpers/namespace.php:180
+#: footer.php:108 inc/helpers/namespace.php:180
 msgid "Contact"
 msgstr "Связь"
 
-#: footer.php:102 footer.php:104
+#: footer.php:113 footer.php:115
 msgid "Pressbooks on YouTube"
 msgstr ""
 
-#: footer.php:106 footer.php:110
+#: footer.php:117 footer.php:121
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks в Twitter"
 
@@ -108,16 +113,16 @@ msgstr "Недостаток зависимости данных"
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr ""
 
-#: header.php:44
+#: header.php:45
 msgid "Skip to content"
 msgstr "Перейти к содержанию"
 
 #. translators: %s name of network
-#: header.php:69
+#: header.php:70
 msgid "Logo for %s"
 msgstr ""
 
-#: header.php:80
+#: header.php:81
 msgid "Toggle Menu"
 msgstr "Переключить меню"
 
@@ -355,43 +360,47 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/namespace.php:157
+#: inc/customizer/namespace.php:161
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer/namespace.php:170
 msgid "Front Page Catalog"
 msgstr "Главная страница каталога"
 
-#: inc/customizer/namespace.php:168
+#: inc/customizer/namespace.php:181
 msgid "Show Front Page Catalog"
 msgstr "Показать главную страницу каталога"
 
-#: inc/customizer/namespace.php:178 partials/content-front-page.php:19
+#: inc/customizer/namespace.php:191 partials/content-front-page.php:19
 msgid "Our Latest Titles"
 msgstr "Наши новейшие заголовки"
 
-#: inc/customizer/namespace.php:183
+#: inc/customizer/namespace.php:196
 msgid "Front Page Catalog Title"
 msgstr "Заголовки на первой странице каталога"
 
-#: inc/customizer/namespace.php:192
+#: inc/customizer/namespace.php:205
 msgid "Contact Form"
 msgstr "Контактная форма"
 
-#: inc/customizer/namespace.php:203
+#: inc/customizer/namespace.php:216
 msgid "Show Contact Form"
 msgstr "Показать контактную форму"
 
-#: inc/customizer/namespace.php:213 partials/contact-form.php:12
+#: inc/customizer/namespace.php:226 partials/contact-form.php:12
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
-#: inc/customizer/namespace.php:218
+#: inc/customizer/namespace.php:231
 msgid "Contact Form Title"
 msgstr "Заголовок контактной формы"
 
-#: inc/customizer/namespace.php:232
+#: inc/customizer/namespace.php:245
 msgid "Contact Email"
 msgstr "Контактный адрес электронной почты"
 
-#: inc/customizer/namespace.php:244
+#: inc/customizer/namespace.php:257
 msgid "Contact Link"
 msgstr ""
 
