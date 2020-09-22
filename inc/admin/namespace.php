@@ -7,8 +7,8 @@ namespace Aldine\Admin;
 
 use PressbooksMix\Assets;
 use Pressbooks\DataCollector\Book as BookDataCollector;
-use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
 use Pressbooks\BookDirectory;
+use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
 
 /**
  * Uses old option to provide a simpler upgrade path from pressbooks-publisher theme
