@@ -5,8 +5,8 @@
 
 namespace Aldine\Admin;
 
-use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
 use PressbooksMix\Assets;
+use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
 use Pressbooks\BookDirectory;
 use Pressbooks\DataCollector\Book as BookDataCollector;
 
