@@ -6,6 +6,8 @@
 namespace Aldine\Admin;
 
 use PressbooksMix\Assets;
+use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
+use Pressbooks\BookDirectory;
 use Pressbooks\DataCollector\Book as BookDataCollector;
 
 /**
@@ -52,7 +54,16 @@ function update_catalog() {
 	} else {
 		delete_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION );
 		update_site_meta( $blog_id, BookDataCollector::IN_CATALOG, 0 );
+		// Exclude book when network option book directory non-catalog exclude is enabled
+		$option = get_site_option( 'pressbooks_sharingandprivacy_options', [], true );
+		if (
+			isset( $option[ SharingAndPrivacyOptions::NETWORK_DIRECTORY_EXCLUDED ] ) &&
+			( (bool) $option[ SharingAndPrivacyOptions::NETWORK_DIRECTORY_EXCLUDED ] === true )
+		) {
+			BookDirectory::init()->deleteBookFromDirectory( [ $blog_id ] );
+		}
 	}
+	update_blog_details( $blog_id, [ 'last_updated' => current_time( 'mysql', true ) ] );
 }
 
 /**
