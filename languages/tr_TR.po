@@ -1,7 +1,7 @@
 # Copyright (C) 2020 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
-# Dubravko Cvikl <dcvikl@cvikl.hr>, 2019
+# Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -9,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine\n"
 "POT-Creation-Date: 2020-10-20T21:08:56+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
-"Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
+"Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
+"Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr_HR\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.3.0\n"
 
@@ -33,9 +33,9 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
-"Aldine je zadana izgled/tema za početnu stranicu Pressbooks mreža. Ime je "
-"dobio po Aldine Pressu koji je 1494. osnovao Aldus Manutius, a mnogi ga "
-"smatraju prvim svjetskim izdavačem."
+"Aldine, Pressbooks ağlarının ana sayfası için varsayılan temadır. Adını, "
+"birçok kişi tarafından dünyanın ilk yayıncısı olarak kabul edilen Aldus "
+"Manutius tarafından 1494 yılında kurulan Aldine Press'ten almıştır."
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
@@ -47,165 +47,164 @@ msgstr "https://pressbooks.org"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ups! Ne možemo pronaći tu stranicu."
+msgstr "Oops! Bu sayfa bulunamıyor."
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "Izgleda da na toj lokaciji nije ništa pronađeno."
+msgstr "Görünüşe göre bu konumda hiçbir şey bulunamadı."
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "Jedna misao o &ldquo;%1$s&rdquo;"
+msgstr "Bir düşünce &ldquo;%1$s&rdquo;"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s misao o &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s misli o &ldquo;%2$s&rdquo;"
-msgstr[2] "%1$s misli o &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s üzerine düşünceler &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s üzerine düşünceler &ldquo;%2$s&rdquo;"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "Komentari su zatvoreni."
+msgstr "Yoruma kapalı."
 
 #. translators: %s network name
 #: footer.php:60 footer.php:65
 msgid "%s on Facebook"
-msgstr "%s na Facebook-u"
+msgstr "%s Facebook'ta"
 
 #. translators: %s network name
 #: footer.php:70 footer.php:75
 msgid "%s on Twitter"
-msgstr "%s na Twitter-u"
+msgstr "%s Twitter'da"
 
 #. translators: %s network name
 #: footer.php:80 footer.php:85
 msgid "%s on Instagram"
-msgstr ""
+msgstr "%s Instagram'da"
 
 #. translators: %s Pressbooks
 #: footer.php:104
 msgid "Powered by %s"
-msgstr "Pokreće %s"
+msgstr "Powered by %s"
 
 #: footer.php:106
 msgid "Guides and Tutorials"
-msgstr "Vodiči i upute"
+msgstr "Kılavuzlar ve Öğreticiler"
 
 #: footer.php:108 inc/helpers/namespace.php:180
 msgid "Contact"
-msgstr "Kontakt"
+msgstr "İletişim"
 
 #: footer.php:113 footer.php:115
 msgid "Pressbooks on YouTube"
-msgstr "Pressbooks na YouTube-u"
+msgstr "Pressbooks YouTube"
 
 #: footer.php:117 footer.php:121
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks na Twitter-u"
+msgstr "Pressbooks Twitter"
 
 #: functions.php:19
 msgid "Dependencies Missing"
-msgstr "Nedostaju obavezni dijelovi"
+msgstr "Bağımlılıklar Eksik "
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr "Morate pokrenuti <code>composer install</code> iz mape Aldine."
+msgstr "Aldine dizininden <code>composer install</code> çalıştırmalısınız."
 
 #: header.php:45
 msgid "Skip to content"
-msgstr "Skoči na sadržaj"
+msgstr "İçeriğe geç"
 
 #. translators: %s name of network
 #: header.php:70
 msgid "Logo for %s"
-msgstr "Logo za %s"
+msgstr "%s için Logo"
 
 #: header.php:81
 msgid "Toggle Menu"
-msgstr "Prebaci izbornik"
+msgstr "Toggle Menü"
 
 #: inc/actions/namespace.php:47 inc/activation/namespace.php:120
 msgid "Primary Menu"
-msgstr "Primarni izbornik"
+msgstr "Ana Menü"
 
 #: inc/actions/namespace.php:48 inc/activation/namespace.php:141
 msgid "Footer Menu"
-msgstr "Izbornik podnožja"
+msgstr "Altbilgi Menüsü"
 
 #: inc/actions/namespace.php:114
 msgid "Network Footer Block 1"
-msgstr "Mrežni blok podnožja 1"
+msgstr "Ağ Altbilgi Bloğu 1"
 
 #: inc/actions/namespace.php:126
 msgid "Network Footer Block 2"
-msgstr "Mrežni blok podnožja 2"
+msgstr "Ağ Altbilgi Bloğu 2"
 
 #: inc/actions/namespace.php:229
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"Ova stranica prikazuje katalog mreže tako nema sadržaja za uređivanje."
+"Bu sayfa ağ kataloğunuzu gösterir, bu nedenle düzenlenecek içerik yoktur."
 
 #: inc/actions/namespace.php:283
 msgid "Page Section"
-msgstr "Odjeljak stranice"
+msgstr "Sayfa Bölümü"
 
 #: inc/actions/namespace.php:284 partials/content-page-catalog.php:57
 msgid "Title"
-msgstr "Naslov"
+msgstr "Başlık"
 
 #: inc/actions/namespace.php:285
 msgid "Standard"
-msgstr "Standard"
+msgstr "Standart"
 
 #: inc/actions/namespace.php:286
 msgid "Accent"
-msgstr "Naglašeno"
+msgstr "Aksan"
 
 #: inc/actions/namespace.php:287
 msgid "Bordered"
-msgstr "Obrubljeno"
+msgstr "Kenarlıklı"
 
 #: inc/actions/namespace.php:288
 msgid "Borderless"
-msgstr "Bez okvira"
+msgstr "Kenarlıksız"
 
 #: inc/actions/namespace.php:291
 msgid "Call to Action"
-msgstr "Poziv na djelovanje"
+msgstr "Eylem çağrısı"
 
 #: inc/actions/namespace.php:292
 msgid "Text"
-msgstr "Tekst"
+msgstr "Metin"
 
 #: inc/actions/namespace.php:293
 msgid "Link"
-msgstr "Veza"
+msgstr "Link"
 
 #: inc/activation/namespace.php:25
 msgid "About Pressbooks"
-msgstr "O Pressbooks"
+msgstr "Pressbooks Hakkında"
 
 #: inc/activation/namespace.php:26
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
-"Presskooks je jednostavan za korištenje i omogućava Vam izradu knjiga u svim"
-" potrebnim formatima za objavljivanje."
+"Pressbooks, yayınlamanız gereken tüm formatlarda bir kitap oluşturmanıza "
+"izin veren, kullanımı kolay bir kitap yazma yazılımıdır."
 
 #: inc/activation/namespace.php:27
 msgid "Learn More"
-msgstr "Saznaj više"
+msgstr "Daha fazla bilgi edin"
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
 #: inc/activation/namespace.php:152
 msgid "About"
-msgstr "O"
+msgstr "Hakkında"
 
 #: inc/activation/namespace.php:39
 msgid ""
@@ -213,37 +212,36 @@ msgid ""
 "publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
 "books, white papers, and more in multiple formats including:"
 msgstr ""
-"Pressbooks je jednostavan softver za proizvodnju knjiga. Pressbooks možete "
-"koristiti za izdavanje udžbenika, znanstvenih monografija, nastavnih planova"
-" i programa, fikcijskih i ostalih knjiga, znanstvenih radova ... u kratko "
-"svih vrsta publikacija u više izlaznih formata, uključujući:"
+"Pressbooks basit kitap üretim yazılımıdır. Aşağıdakiler dahil olmak üzere "
+"çeşitli formatlarda ders kitapları, bilimsel monografiler, ders programları,"
+" kurgu ve kurgu olmayan kitaplar, teknik incelemeler ve daha fazlasını "
+"yayınlamak için Pressbook'ları kullanabilirsiniz:"
 
 #: inc/activation/namespace.php:40
 msgid "MOBI (for Kindle ebooks)"
-msgstr "MOBI (za Kindle e-Knjige)"
+msgstr "MOBI (Kindle ekitaplar için)"
 
 #: inc/activation/namespace.php:41
 msgid "EPUB (for all other ebookstores)"
-msgstr "EPUB (za sve ostale trgovine i uređaje e-Knjiga)"
+msgstr "EPUB (tüm diğer ekitap mağazaları için)"
 
 #: inc/activation/namespace.php:42
 msgid "designed PDF (for print-on-demand and digital distribution)"
-msgstr ""
-"PDF (za digitalni ispis na zahtjev i distribuciju u digitalnom obliku)"
+msgstr "tasarlanmış PDF (istek üzerine baskı ve dijital dağıtım için)"
 
 #. translators: %s link to about page
 #: inc/activation/namespace.php:46
 msgid "For more information about Pressbooks, %s."
-msgstr "Za više informacija o Pressbooks, %s."
+msgstr "Pressbooks hakkında daha fazla bilgi için, %s."
 
 #: inc/activation/namespace.php:47
 msgid "see here"
-msgstr "vidi ovdje"
+msgstr "buraya bakın"
 
 #: inc/activation/namespace.php:53 inc/activation/namespace.php:176
 #: inc/activation/namespace.php:182
 msgid "Help"
-msgstr "Pomoć"
+msgstr "Yardım"
 
 #. translators: %1$s: link to how to page; %2$s: link to guide
 #: inc/activation/namespace.php:60
@@ -251,21 +249,23 @@ msgid ""
 "The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
 "you can review our %2$s."
 msgstr ""
-"Najjednostavniji način za započeti sa Pressbooks je da pratite naš %1$s ili "
-"pogledajte naš %2$s."
+"Pressbooks'u kullanmaya başlamanın en kolay yolu, %1$s. Veya gözden "
+"geçirebilirsiniz %2$s."
 
 #: inc/activation/namespace.php:61
 msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "Vodić u 4 koraka kako napisati knjigu na Pressbooks"
+msgstr "Pressbooksda Kitap Yapmak İçin 4 Adım Kılavuzu"
 
 #: inc/activation/namespace.php:62
 msgid "Guide to Using Pressbooks"
-msgstr "Vodič za korištenje Pressbooks"
+msgstr "Pressbooks Kullanma Kılavuzu"
 
 #: inc/activation/namespace.php:64
 msgid ""
 "If you require further assistance, please contact your network manager."
-msgstr "Ako trebate dodatnu pomoć, molimo kontaktirajte svog voditelja mreže."
+msgstr ""
+"Daha fazla yardıma ihtiyacınız olursa, lütfen ağ yöneticinizle iletişime "
+"geçin."
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:69 inc/activation/namespace.php:125
@@ -276,80 +276,78 @@ msgstr "Katalog"
 
 #: inc/activation/namespace.php:73 inc/helpers/namespace.php:174
 msgid "Home"
-msgstr "Početna"
+msgstr "Ana Sayfa"
 
 #: inc/admin/namespace.php:33
 msgid "Catalog updated."
-msgstr "Katalog ažuriran."
+msgstr "Katalog güncellendi."
 
 #: inc/admin/namespace.php:34
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"Ispričavamo se, ali Vaš katalog nije ažuriran. Molimo pokušajte ponovno."
+msgstr "Maalesef kataloğunuz güncellenmedi. Lütfen tekrar deneyin."
 
 #: inc/admin/namespace.php:35
 msgid "Dismiss this notice."
-msgstr "Odbaci ovu obavijest."
+msgstr "Bu uyarıyı reddedin."
 
 #: inc/admin/namespace.php:75
 msgid "In Catalog"
-msgstr "U katalogu"
+msgstr "Katalogda"
 
 #: inc/customizer/namespace.php:68
 msgid "Primary Color"
-msgstr "Osnovna boja"
+msgstr "Ana renk"
 
 #: inc/customizer/namespace.php:69
 msgid "Primary color, used for links and other primary elements."
-msgstr ""
-"Osnovna/primarna boja, koristi se za poveznice i ostale osnovne elemente."
+msgstr "Bağlantılar ve diğer birincil öğeler için kullanılan birincil renk."
 
 #: inc/customizer/namespace.php:74
 msgid "Primary Color (Hover)"
-msgstr "Primarna boja (Hover)"
+msgstr "Birincil Renk (Üzerine Gelme)"
 
 #: inc/customizer/namespace.php:75
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
-"Varijanta primarne/osnovne boje, koristi se kada se mišem prelazi preko "
-"poveznice."
+"Birincil öğenin üzerine gelme durumları için kullanılan birincil rengin "
+"çeşidi."
 
 #: inc/customizer/namespace.php:80
 msgid "Accent Color"
-msgstr "Boja naglaska"
+msgstr "Vurgu Rengi"
 
 #: inc/customizer/namespace.php:81
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr "Boja naglaska, koristi se za naglašavanja i sekundarne elemente."
+msgstr "Vurgu rengi, süslemeler ve ikincil öğeler için kullanılır."
 
 #: inc/customizer/namespace.php:86
 msgid "Accent Color (Hover)"
-msgstr "Boja naglaska (Hover)"
+msgstr "Vurgu Rengi (Üzerine Gelme)"
 
 #: inc/customizer/namespace.php:87
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
-"Varijanta boje naglaska, koristi se kada se mišem prelazi preko poveznice."
+"İkincil öğelerin üzerine gelme durumları için kullanılan vurgu rengi çeşidi."
 
 #: inc/customizer/namespace.php:92
 msgid "Primary Foreground Color"
-msgstr "Primarna boja prednjeg plana"
+msgstr "Birincil Ön Plan Rengi"
 
 #: inc/customizer/namespace.php:93
 msgid "Used for text on a primary background."
-msgstr "Koristi se za tekst na primarnoj podlozi."
+msgstr "Birincil arkaplan üzerindeki metin için kullanılır."
 
 #: inc/customizer/namespace.php:98
 msgid "Accent Foreground Color"
-msgstr "Boja naglaska prednjeg plana"
+msgstr "Vurgu Ön Plan Rengi"
 
 #: inc/customizer/namespace.php:99
 msgid "Used for text on an accent color background."
-msgstr "Koristi se za tekst na pozadini u boji naglaska."
+msgstr "Vurgulu renk arka planındaki metin için kullanılır."
 
 #: inc/customizer/namespace.php:123
 msgid "Social Media"
-msgstr "Društvene mreže"
+msgstr "Sosyal medya"
 
 #: inc/customizer/namespace.php:135
 msgid "Facebook"
@@ -361,242 +359,244 @@ msgstr "Twitter"
 
 #: inc/customizer/namespace.php:161
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/customizer/namespace.php:170
 msgid "Front Page Catalog"
-msgstr "Katalog na početnoj stranici"
+msgstr "Ön Sayfa Kataloğu"
 
 #: inc/customizer/namespace.php:181
 msgid "Show Front Page Catalog"
-msgstr "Prikaži katalog na početnoj stranici"
+msgstr "Ön Sayfa Kataloğunu Göster"
 
 #: inc/customizer/namespace.php:191 partials/content-front-page.php:19
 msgid "Our Latest Titles"
-msgstr "Naši najnoviji naslovi"
+msgstr "En Son Kitaplarımız"
 
 #: inc/customizer/namespace.php:196
 msgid "Front Page Catalog Title"
-msgstr "Naziv kataloga na početnoj stranici"
+msgstr "Ön Sayfa Katalog Başlığı"
 
 #: inc/customizer/namespace.php:205
 msgid "Contact Form"
-msgstr "Obrazac za kontakt"
+msgstr "İletişim Formu"
 
 #: inc/customizer/namespace.php:216
 msgid "Show Contact Form"
-msgstr "Prikaži obrazac za kontakt"
+msgstr "İletişim Formunu Göster"
 
 #: inc/customizer/namespace.php:226 partials/contact-form.php:12
 msgid "Contact Us"
-msgstr "Kontaktirajte nas"
+msgstr "Bize Ulaşın"
 
 #: inc/customizer/namespace.php:231
 msgid "Contact Form Title"
-msgstr "Naslov obrasca za kontakt"
+msgstr "İletişim Formu Başlığı"
 
 #: inc/customizer/namespace.php:245
 msgid "Contact Email"
-msgstr "Adresa e-pošte za kontakt"
+msgstr "İletişim E-posta"
 
 #: inc/customizer/namespace.php:257
 msgid "Contact Link"
-msgstr ""
+msgstr "İletişim Linki"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "Nastavak"
+msgstr "Devam eden"
 
 #: inc/helpers/namespace.php:187
 msgid "Sign In"
-msgstr "Prijava"
+msgstr "Oturum aç"
 
 #: inc/helpers/namespace.php:193
 msgid "Sign Up"
-msgstr "Registracija"
+msgstr "Kaydol"
 
 #: inc/helpers/namespace.php:201
 msgid "Admin"
-msgstr "Admin"
+msgstr "Yönetici"
 
 #: inc/helpers/namespace.php:209
 msgid "My Books"
-msgstr "Moje knjige"
+msgstr "Kitaplarım"
 
 #: inc/helpers/namespace.php:215
 msgid "Create a New Book"
-msgstr "Izradi novu knjigu"
+msgstr "Yeni Kitap Oluşturun"
 
 #: inc/helpers/namespace.php:221
 msgid "Sign Out"
-msgstr "Odjava"
+msgstr "Oturumu Kapat"
 
 #: inc/helpers/namespace.php:283
 msgid "Name is required."
-msgstr "Ime je neophodno."
+msgstr "İsim gerekli."
 
 #: inc/helpers/namespace.php:287
 msgid "Email is required."
-msgstr "Adresa e-pošte je neophodna."
+msgstr "Email gereklidir."
 
 #: inc/helpers/namespace.php:291
 msgid "Email is invalid."
-msgstr "Adresa e-pošte je nevažeća."
+msgstr "E-posta geçersiz."
 
 #: inc/helpers/namespace.php:295
 msgid "Institution is required."
-msgstr "Ustanova je neophodna."
+msgstr "Kurum gerekli."
 
 #: inc/helpers/namespace.php:299
 msgid "Message is required."
-msgstr "Poruka je neophodna."
+msgstr "Mesaj gereklidir."
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:306
 msgid "Contact Form Submission from %s"
-msgstr "Upit putem obrasca za kontakt od %s"
+msgstr "İletişim Formu Gönderimi %s"
 
 #: inc/helpers/namespace.php:317
 msgid "Your message was sent!"
-msgstr "Vaša poruka je poslana!"
+msgstr "Mesajınız gönderildi!"
 
 #: inc/helpers/namespace.php:320
 msgid "Your message could not be sent."
-msgstr "Vaša poruka nije mogla biti poslana."
+msgstr "Mesajınız gönderilemedi."
 
 #: inc/intervention.php:12
 msgid "Hello,"
-msgstr "Pozdrav,"
+msgstr "Merhaba,"
 
 #: page-catalog.php:55
 msgid "No Books Found"
-msgstr "Niti jedna knjiga nije pronađena"
+msgstr "Kitap Bulunamadı"
 
 #: page-catalog.php:58
 msgid "No books have been added to the catalog."
-msgstr "Niti jedna knjiga nije dodana u katalog."
+msgstr "Kataloğa kitap eklenmedi."
 
 #: partials/book.php:39
 msgid "About this book"
-msgstr "O ovoj knjizi"
+msgstr "Bu kitap hakkında"
 
 #: partials/contact-form.php:29
 msgid "Keep this field blank (required)"
-msgstr "Ostavite ovo polje prazno (potrebno)"
+msgstr "Bu alanı boş bırakın (gerekli)"
 
 #: partials/contact-form.php:45
 msgid "Your name (required)"
-msgstr "Vaše ime (potrebno)"
+msgstr "Adınız (gerekli)"
 
 #: partials/contact-form.php:61
 msgid "Your email address (required)"
-msgstr "Vaša adresa e-pošte (potrebno)"
+msgstr "E-posta adresiniz (gerekli)"
 
 #: partials/contact-form.php:77
 msgid "Your institution (required)"
-msgstr "Vaša ustanova (potrebno)"
+msgstr "Kurumunuz (gerekli)"
 
 #: partials/contact-form.php:93
 msgid "Your message (required)"
-msgstr "Vaša poruka (potrebno)"
+msgstr "Mesajınız (gerekli)"
 
 #: partials/contact-form.php:97
 msgid "Send"
-msgstr "Pošalji"
+msgstr "Gönder"
 
 #: partials/content-front-page.php:76
 msgid "View Complete Catalog"
-msgstr "Prikaz čitavog kataloga"
+msgstr "Tüm Kataloğu Görüntüle"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "Ništa nije pronađeno"
+msgstr "Hiçbirşey Bulunamadı"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Spremni za Vašu prvu objavu? <a href=\"%1$s\">Započnite ovdje</a>."
+msgstr ""
+"İlk paylaşımını yapmak için hazır mısın? <a href=\"%1$s\">Buradan "
+"başlayın</a>."
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Žao nam je, ali ništa ne odgovara vašim pojmovima za pretraživanje. "
-"Pokušajte ponovno s nekim drugim ključnim riječima."
+"Maalesef arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar "
+"kelimelerle tekrar deneyin."
 
 #: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Izgleda da ne možemo pronaći što tražite. Možda pretraživanje može pomoći."
+"Görünüşe göre istediğiniz şeyi bulamıyoruz. Belki aramak yardımcı olabilir."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "Filtriraj prema predmetu"
+msgstr "Konuya Göre Filtrele"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "Svi predmeti"
+msgstr "Bütün konular"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by License"
-msgstr "Filtriraj prema Licenci"
+msgstr "Lisansa Göre Filtrele"
 
 #: partials/content-page-catalog.php:41
 msgid "All Licenses"
-msgstr "Sve licence"
+msgstr "Tüm Lisanslar"
 
 #: partials/content-page-catalog.php:54
 msgid "Sort by"
-msgstr "Rasporedi po"
+msgstr "Sıralama; "
 
 #: partials/content-page-catalog.php:58
 msgid "Subject"
-msgstr "Predmet"
+msgstr "Konu"
 
 #: partials/content-page-catalog.php:59
 msgid "Latest"
-msgstr "Nedavno"
+msgstr "En son"
 
 #: partials/content-page-catalog.php:67
 msgid "Clear Filters"
-msgstr "Obriši filtere"
+msgstr "Filtreleri temizle"
 
 #: partials/content-page-catalog.php:68
 msgid "Submit"
-msgstr "Podnesi"
+msgstr "Gönder"
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
-msgstr "Stranice:"
+msgstr "Sayfalar: "
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Uredi <span class=\"screen-reader-text\">%s</span>"
+msgstr "Düzenle<span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Nastavi čitati <span class=\"screen-reader-text\">\"%s\"</span>"
+msgstr "Okumaya devam et<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: partials/paged-navigation.php:2
 msgid "Navigation"
-msgstr "Navigacija"
+msgstr "Navigasyon"
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr "Rezultati pretraživanja za: %s"
+msgstr "Araştırma Sonuçları: %s"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Pretraži katalog"
+msgstr "Arama Kataloğu"
 
 #: searchform.php:6
 msgctxt "submit button"
 msgid "Search"
-msgstr "Pretraži"
+msgstr "Arama"
