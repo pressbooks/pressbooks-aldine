@@ -2,15 +2,15 @@
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Giuseppe Pignataro <rogepix@gmail.com>, 2018
-# Antonio Devís <colomet@hotmail.com>, 2018
+# Antonio D., 2018
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.8.1\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2020-05-26T21:22:04+00:00\n"
+"Project-Id-Version: Aldine 1.8.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine\n"
+"POT-Creation-Date: 2020-10-20T21:08:56+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
+"Last-Translator: Antonio D., 2018\n"
 "Language-Team: Italian (https://www.transifex.com/pressbooks/teams/9194/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -274,20 +274,20 @@ msgstr "Catalogo"
 msgid "Home"
 msgstr "Home"
 
-#: inc/admin/namespace.php:31
+#: inc/admin/namespace.php:33
 msgid "Catalog updated."
 msgstr "Catalogo aggiornato."
 
-#: inc/admin/namespace.php:32
+#: inc/admin/namespace.php:34
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
 "Ci dispiace, ma il tuo catalogo non è stato aggiornato. Riprova, per favore."
 
-#: inc/admin/namespace.php:33
+#: inc/admin/namespace.php:35
 msgid "Dismiss this notice."
 msgstr "Ignora questa notizia."
 
-#: inc/admin/namespace.php:64
+#: inc/admin/namespace.php:75
 msgid "In Catalog"
 msgstr "In catalogo"
 
