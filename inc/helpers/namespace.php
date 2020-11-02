@@ -200,6 +200,12 @@ function get_default_menu( $items = '' ) {
 				admin_url(),
 				__( 'Admin', 'pressbooks-aldine' )
 			);
+		} else {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				user_admin_url(),
+				__( 'Admin', 'pressbooks-aldine' )
+			);
 		}
 		$user_info = get_userdata( get_current_user_id() );
 		if ( $user_info->primary_blog ) {
