@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.8.3\n"
+"Project-Id-Version: Aldine 1.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine\n"
-"POT-Creation-Date: 2020-10-20T21:08:56+00:00\n"
+"POT-Creation-Date: 2020-11-17T23:29:08+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio D., 2018\n"
 "Language-Team: Italian (https://www.transifex.com/pressbooks/teams/9194/it/)\n"
@@ -411,52 +411,52 @@ msgstr "Accedi"
 msgid "Sign Up"
 msgstr "Iscriviti"
 
-#: inc/helpers/namespace.php:201
+#: inc/helpers/namespace.php:201 inc/helpers/namespace.php:207
 msgid "Admin"
 msgstr "Amministratore"
 
-#: inc/helpers/namespace.php:209
+#: inc/helpers/namespace.php:215
 msgid "My Books"
 msgstr "I Miei Libri"
 
-#: inc/helpers/namespace.php:215
+#: inc/helpers/namespace.php:221
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:221
+#: inc/helpers/namespace.php:227
 msgid "Sign Out"
 msgstr "Disconnetti"
 
-#: inc/helpers/namespace.php:283
+#: inc/helpers/namespace.php:289
 msgid "Name is required."
 msgstr "È richiesto un Nome."
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:293
 msgid "Email is required."
 msgstr "È richiesta un'Email."
 
-#: inc/helpers/namespace.php:291
+#: inc/helpers/namespace.php:297
 msgid "Email is invalid."
 msgstr "L'Email non è valida."
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:301
 msgid "Institution is required."
 msgstr "È richiesta un'organizzazione."
 
-#: inc/helpers/namespace.php:299
+#: inc/helpers/namespace.php:305
 msgid "Message is required."
 msgstr "È richiesto un messaggio."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:306
+#: inc/helpers/namespace.php:312
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:317
+#: inc/helpers/namespace.php:323
 msgid "Your message was sent!"
 msgstr "Il tuo messaggio è stato inviato!"
 
-#: inc/helpers/namespace.php:320
+#: inc/helpers/namespace.php:326
 msgid "Your message could not be sent."
 msgstr "Il tuo messaggio non può essere inviato."
 
