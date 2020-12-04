@@ -1,6 +1,8 @@
 dist: bionic
+services:
+- mysql
 language: php
-sudo: false
+sudo: required
 
 notifications:
   email:
