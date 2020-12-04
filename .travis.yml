@@ -1,6 +1,7 @@
 dist: bionic
 language: php
 sudo: false
+
 notifications:
   email:
     on_success: never
@@ -37,15 +38,18 @@ install:
 script:
 - npm run install-build-tools
 - npm run test
-- npm run rmdist
-- npm run "build:production"
-- composer test
+- if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.3" ]]; then composer require pcov/clobber; vendor/bin/pcov clobber; vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml; fi
+- if [[ ${TRAVIS_PHP_VERSION:0:3} != "7.3" ]]; then vendor/bin/phpunit --configuration phpunit.xml; fi
+- composer standards
+after_success:
+- bash <(curl -s https://codecov.io/bash)
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
 - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 - chmod +x wp-cli.phar
 - sudo mv wp-cli.phar /usr/local/bin/wp
 - wp package install wp-cli/dist-archive-command
+- npm run build:production
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - wp dist-archive $TRAVIS_PROJECT_SLUG $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip

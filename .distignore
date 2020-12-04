@@ -1,6 +1,7 @@
 .git
 assets/src
 bin
+codecove.yml
 node_modules
 tests
 .editorconfig
