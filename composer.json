@@ -30,12 +30,15 @@
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~6.5",
+		"phpunit/phpunit": "^7",
 		"pressbooks/coding-standards": "^1.0",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
 	"scripts": {
-		"test": ["@standards"],
+		"test": [
+      "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml",
+      "@standards"
+    ],
 		"standards": [
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
 		],
