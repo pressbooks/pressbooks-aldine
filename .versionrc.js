@@ -2,10 +2,6 @@ module.exports = {
 	"scripts": {
       postbump: "composer readme"
     },
-	"skip": {
-		commit: true,
-		tag: true
-	},
 	"bumpFiles": [
 		{
 			filename: "style.css",
