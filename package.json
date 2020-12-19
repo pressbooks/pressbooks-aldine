@@ -3,8 +3,8 @@
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
 	"description": "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
-  "version": "1.9.0",
-  "keywords": [
+	"version": "1.9.0",
+	"keywords": [
 		"publishing",
 		"catalog",
 		"pressbooks",
@@ -51,6 +51,7 @@
 		"prod": "npm run production",
 		"build:production": "npm run production",
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"release": "standard-version -a -t ''",
 		"rmdist": "rimraf dist",
 		"test": "npm run -s lint",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
@@ -63,7 +64,8 @@
 	"devDependencies": {
 		"@commitlint/config-conventional": "^11.0.0",
 		"commitlint": "^11.0.0",
-		"husky": "^4.3.0"
+		"husky": "^4.3.0",
+		"standard-version": "^9.0.0"
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.26",
