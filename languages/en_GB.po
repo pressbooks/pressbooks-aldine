@@ -1,7 +1,7 @@
 # Copyright (C) 2021 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
-# Antonio D., 2018
+# Steel Wagstaff <steel@pressbooks.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -9,23 +9,23 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2021-02-28T06:38:59+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Antonio D., 2018\n"
-"Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2021\n"
+"Language-Team: English (United Kingdom) (https://www.transifex.com/pressbooks/teams/9194/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.3.0\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
-msgstr ""
+msgstr "Aldine"
 
 #. Theme URI of the theme
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
-msgstr ""
+msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 msgid ""
@@ -33,178 +33,178 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
+"Aldine is the default theme for the home page of Pressbooks networks. It is "
+"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
+"regarded by many as the world’s first publisher."
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr ""
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.org"
-msgstr ""
+msgstr "https://pressbooks.org"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ups! Nav iespējams atrast šo lapaspusi."
+msgstr "Oops! That page can&rsquo;t be found."
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "Izskatās, ka te nekas nav."
+msgstr "It looks like nothing was found at this location."
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "One thought on &ldquo;%1$s&rdquo;"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "Komentāri ir aizvērti."
+msgstr "Comments are closed."
 
 #. translators: %s network name
 #: footer.php:60 footer.php:65
 msgid "%s on Facebook"
-msgstr ""
+msgstr "%s on Facebook"
 
 #. translators: %s network name
 #: footer.php:70 footer.php:75
 msgid "%s on Twitter"
-msgstr ""
+msgstr "%s on Twitter"
 
 #. translators: %s network name
 #: footer.php:80 footer.php:85
 msgid "%s on Instagram"
-msgstr ""
+msgstr "%s on Instagram"
 
 #. translators: %s Pressbooks
 #: footer.php:104
 msgid "Powered by %s"
-msgstr ""
+msgstr "Powered by %s"
 
 #: footer.php:106
 msgid "Guides and Tutorials"
-msgstr ""
+msgstr "Guides and Tutorials"
 
 #: footer.php:108 inc/helpers/namespace.php:180
 msgid "Contact"
-msgstr "Saziņa"
+msgstr "Contact"
 
 #: footer.php:113 footer.php:115
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbooks on YouTube"
 
 #: footer.php:117 footer.php:121
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks profils Twitter'ā"
+msgstr "Pressbooks on Twitter"
 
 #: functions.php:19
 msgid "Dependencies Missing"
-msgstr "Atkarīgo daļu nepieciešamība"
+msgstr "Dependencies Missing"
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr ""
+msgstr "You must run <code>composer install</code> from the Aldine directory."
 
 #: header.php:45
 msgid "Skip to content"
-msgstr "Pāriet pie satura"
+msgstr "Skip to content"
 
 #. translators: %s name of network
 #: header.php:70
 msgid "Logo for %s"
-msgstr ""
+msgstr "Logo for %s"
 
 #: header.php:81
 msgid "Toggle Menu"
-msgstr "Pārslēgt izvēlni"
+msgstr "Toggle Menu"
 
 #: inc/actions/namespace.php:47 inc/activation/namespace.php:120
 msgid "Primary Menu"
-msgstr "Pamatizvēlne"
+msgstr "Primary Menu"
 
 #: inc/actions/namespace.php:48 inc/activation/namespace.php:141
 msgid "Footer Menu"
-msgstr "Papildus izvēlne"
+msgstr "Footer Menu"
 
 #: inc/actions/namespace.php:114
 msgid "Network Footer Block 1"
-msgstr "Apakšējais tīkla bloks 1"
+msgstr "Network Footer Block 1"
 
 #: inc/actions/namespace.php:126
 msgid "Network Footer Block 2"
-msgstr "Apakšējais tīkla bloks 2"
+msgstr "Network Footer Block 2"
 
 #: inc/actions/namespace.php:229
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"Šajā lapaspusē tiek radīts Jūsu tīkla katalogs, tāpēc te nav satura "
-"rediģēšanai."
+"This page displays your network catalogue, so there is no content to edit."
 
 #: inc/actions/namespace.php:283
 msgid "Page Section"
-msgstr "Lapaspuses sadaļa"
+msgstr "Page Section"
 
 #: inc/actions/namespace.php:284 partials/content-page-catalog.php:57
 msgid "Title"
-msgstr "Virsraksts"
+msgstr "Title"
 
 #: inc/actions/namespace.php:285
 msgid "Standard"
-msgstr "Standarts"
+msgstr "Standard"
 
 #: inc/actions/namespace.php:286
 msgid "Accent"
-msgstr "Izcelšana"
+msgstr "Accent"
 
 #: inc/actions/namespace.php:287
 msgid "Bordered"
-msgstr "Ar apmalēm"
+msgstr "Bordered"
 
 #: inc/actions/namespace.php:288
 msgid "Borderless"
-msgstr "Bez apmalēm"
+msgstr "Borderless"
 
 #: inc/actions/namespace.php:291
 msgid "Call to Action"
-msgstr "Izsaukums darbībai"
+msgstr "Call to Action"
 
 #: inc/actions/namespace.php:292
 msgid "Text"
-msgstr "Teksts"
+msgstr "Text"
 
 #: inc/actions/namespace.php:293
 msgid "Link"
-msgstr "Saite"
+msgstr "Link"
 
 #: inc/activation/namespace.php:25
 msgid "About Pressbooks"
-msgstr "Par Pressbooks vietni"
+msgstr "About Pressbooks"
 
 #: inc/activation/namespace.php:26
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
-"Pressbooks vietne ir viegli lietojama grāmatu rakstīšanas programmatūra, kas"
-" ļauj Jums izveidot grāmatu jebkurā formātā, kādā Jums ir nepieciešams to "
-"publicēt."
+"Pressbooks is easy-to-use book writing software that lets you create a book "
+"in all the formats you need to publish."
 
 #: inc/activation/namespace.php:27
 msgid "Learn More"
-msgstr "Uzzināt vairāk"
+msgstr "Learn More"
 
 #: inc/activation/namespace.php:34 inc/activation/namespace.php:146
 #: inc/activation/namespace.php:152
 msgid "About"
-msgstr "Par"
+msgstr "About"
 
 #: inc/activation/namespace.php:39
 msgid ""
@@ -212,36 +212,35 @@ msgid ""
 "publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
 "books, white papers, and more in multiple formats including:"
 msgstr ""
-"Pressbooks vietne ir viegla grāmatu ražošanas programmatūra. Jūs varat "
-"izmantot Pressbooks, lai publicētu mācību grāmatas, zinātniskus rakstus, "
-"konspektus, daiļliteratūras un ārpusliteratūras grāmatas, oficiālus "
-"dokumentus un vēl daudz citu formātu, iekļaujot: "
+"Pressbooks is simple book production software. You can use Pressbooks to "
+"publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
+"books, white papers, and more in multiple formats including:"
 
 #: inc/activation/namespace.php:40
 msgid "MOBI (for Kindle ebooks)"
-msgstr "MOBI (Kindle elektroniskām grāmatām)"
+msgstr "MOBI (for Kindle ebooks)"
 
 #: inc/activation/namespace.php:41
 msgid "EPUB (for all other ebookstores)"
-msgstr "EPUB (visiem citiem elektronisko grāmatu veikaliem)"
+msgstr "EPUB (for all other ebookstores)"
 
 #: inc/activation/namespace.php:42
 msgid "designed PDF (for print-on-demand and digital distribution)"
-msgstr "noformēts PDF (izdrukai pēc pieprasījuma un digitālai izplatīšanai)"
+msgstr "designed PDF (for print-on-demand and digital distribution)"
 
 #. translators: %s link to about page
 #: inc/activation/namespace.php:46
 msgid "For more information about Pressbooks, %s."
-msgstr ""
+msgstr "For more information about Pressbooks, %s."
 
 #: inc/activation/namespace.php:47
 msgid "see here"
-msgstr "sk. te"
+msgstr "see here"
 
 #: inc/activation/namespace.php:53 inc/activation/namespace.php:176
 #: inc/activation/namespace.php:182
 msgid "Help"
-msgstr "Palīdzība "
+msgstr "Help"
 
 #. translators: %1$s: link to how to page; %2$s: link to guide
 #: inc/activation/namespace.php:60
@@ -249,106 +248,102 @@ msgid ""
 "The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
 "you can review our %2$s."
 msgstr ""
+"The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
+"you can review our %2$s."
 
 #: inc/activation/namespace.php:61
 msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "4 soļu instrukcija grāmatas izstrādāšanai Pressbooks vietnē"
+msgstr "4 Step Guide to Making a Book on Pressbooks"
 
 #: inc/activation/namespace.php:62
 msgid "Guide to Using Pressbooks"
-msgstr "Instrukcija Pressbooks vietnes izmantošanai"
+msgstr "Guide to Using Pressbooks"
 
 #: inc/activation/namespace.php:64
 msgid ""
 "If you require further assistance, please contact your network manager."
 msgstr ""
-"Ja Jums ir nepieciešama turpmāka palīdzība, lūdzu, sazinieties ar Jūsu tīkla"
-" pārvaldnieku."
+"If you require further assistance, please contact your network manager."
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:69 inc/activation/namespace.php:125
 #: inc/activation/namespace.php:131 inc/activation/namespace.php:161
 #: inc/activation/namespace.php:167
 msgid "Catalog"
-msgstr "Katalogs"
+msgstr "Catalogue"
 
 #: inc/activation/namespace.php:73 inc/helpers/namespace.php:174
 msgid "Home"
-msgstr "Mājaslapa"
+msgstr "Home"
 
 #: inc/admin/namespace.php:33
 msgid "Catalog updated."
-msgstr "Katalogs atjaunots."
+msgstr "Catalogue"
 
 #: inc/admin/namespace.php:34
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"Atvainojiet, bet Jūsu katalogs nebija atjaunots. Lūdzu, mēģiniet vēlreiz."
+msgstr "Sorry, but your catalogue was not updated. Please try again."
 
 #: inc/admin/namespace.php:35
 msgid "Dismiss this notice."
-msgstr "Aizvērt šo paziņojumu."
+msgstr "Dismiss this notice."
 
 #: inc/admin/namespace.php:75
 msgid "In Catalog"
-msgstr "Katalogā"
+msgstr "In Catalogue"
 
 #: inc/customizer/namespace.php:68
 msgid "Primary Color"
-msgstr "Pamatkrāsa"
+msgstr "Primary Colour"
 
 #: inc/customizer/namespace.php:69
 msgid "Primary color, used for links and other primary elements."
-msgstr "Pamatkrāsa, kura ir izmantojama saitēm un citām pamatelementiem."
+msgstr "Primary colour, used for links and other primary elements."
 
 #: inc/customizer/namespace.php:74
 msgid "Primary Color (Hover)"
-msgstr "Pamatkrāsa (norādījuma gadījumā)"
+msgstr "Primary Colour (Hover)"
 
 #: inc/customizer/namespace.php:75
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr ""
-"Pamatkrāsas variācija, kura ir izmantojama pamatelementiem norādījuma "
-"stāvoklī."
+msgstr "Variant of the primary colour, used for primary element hover states."
 
 #: inc/customizer/namespace.php:80
 msgid "Accent Color"
-msgstr "Izcelšanas krāsa"
+msgstr "Accent Colour"
 
 #: inc/customizer/namespace.php:81
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr ""
-"Izcelšanas krāsa, kas ir izmantojama dekorējošiem un papildus elementiem. "
+msgstr "Accent colour, used for flourishes and secondary elements."
 
 #: inc/customizer/namespace.php:86
 msgid "Accent Color (Hover)"
-msgstr "Izcelšanas krāsa (norādījuma gadījumā)"
+msgstr "Accent Colour (Hover)"
 
 #: inc/customizer/namespace.php:87
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
-"Izcelšanas krāsas variācija, kura ir izmantojama papildus elementiem "
-"norādījuma gadījumā."
+"Variant of the accent colour, used for secondary element hover states."
 
 #: inc/customizer/namespace.php:92
 msgid "Primary Foreground Color"
-msgstr "Priekšplāna pamatkrāsa"
+msgstr "Primary Foreground Colour"
 
 #: inc/customizer/namespace.php:93
 msgid "Used for text on a primary background."
-msgstr "Izmantojama tekstam pamatfonā. "
+msgstr "Used for text on a primary background."
 
 #: inc/customizer/namespace.php:98
 msgid "Accent Foreground Color"
-msgstr "Priekšplāna izcelšanas krāsa"
+msgstr "Accent Foreground Colour"
 
 #: inc/customizer/namespace.php:99
 msgid "Used for text on an accent color background."
-msgstr "Izmantojama tekstam izceltā pamatfonā krasā."
+msgstr "Used for text on an accent colour background."
 
 #: inc/customizer/namespace.php:123
 msgid "Social Media"
-msgstr "Sociālie mēdiji"
+msgstr "Social Media"
 
 #: inc/customizer/namespace.php:135
 msgid "Facebook"
@@ -360,243 +355,243 @@ msgstr "Twitter"
 
 #: inc/customizer/namespace.php:161
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/customizer/namespace.php:170
 msgid "Front Page Catalog"
-msgstr "Priekšlapas katalogs"
+msgstr "Front Page Catalogue"
 
 #: inc/customizer/namespace.php:181
 msgid "Show Front Page Catalog"
-msgstr "Rādīt priekšlapas kataogu"
+msgstr "Show Front Page Catalogue"
 
 #: inc/customizer/namespace.php:191 partials/content-front-page.php:19
 msgid "Our Latest Titles"
-msgstr "Mūsu jaunākie virsraksti"
+msgstr "Our Latest Titles"
 
 #: inc/customizer/namespace.php:196
 msgid "Front Page Catalog Title"
-msgstr "Priekšlapas kataloga virsraksts"
+msgstr "Front Page Catalogue Title"
 
 #: inc/customizer/namespace.php:205
 msgid "Contact Form"
-msgstr "Saziņas forma"
+msgstr "Contact Form"
 
 #: inc/customizer/namespace.php:216
 msgid "Show Contact Form"
-msgstr "Rādīt saziņas formu"
+msgstr "Show Contact Form"
 
 #: inc/customizer/namespace.php:226 partials/contact-form.php:12
 msgid "Contact Us"
-msgstr "Sazināties ar mums"
+msgstr "Contact Us"
 
 #: inc/customizer/namespace.php:231
 msgid "Contact Form Title"
-msgstr "Saziņas formas virsraksts"
+msgstr "Contact Form Title"
 
 #: inc/customizer/namespace.php:245
 msgid "Contact Email"
-msgstr "Epasts saziņai"
+msgstr "Contact Email"
 
 #: inc/customizer/namespace.php:257
 msgid "Contact Link"
-msgstr ""
+msgstr "Contact Link"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "Turpinājās"
+msgstr "Continued"
 
 #: inc/helpers/namespace.php:187
 msgid "Sign In"
-msgstr "Ieiet"
+msgstr "Sign In"
 
 #: inc/helpers/namespace.php:193
 msgid "Sign Up"
-msgstr "Reģistrēties"
+msgstr "Sign Up"
 
 #: inc/helpers/namespace.php:201 inc/helpers/namespace.php:207
 msgid "Admin"
-msgstr "Administrēšana"
+msgstr "Admin"
 
 #: inc/helpers/namespace.php:215
 msgid "My Books"
-msgstr "Manas grāmatas"
+msgstr "My Books"
 
 #: inc/helpers/namespace.php:221
 msgid "Create a New Book"
-msgstr ""
+msgstr "Create a New Book"
 
 #: inc/helpers/namespace.php:227
 msgid "Sign Out"
-msgstr "Iziet"
+msgstr "Sign Out"
 
 #: inc/helpers/namespace.php:289
 msgid "Name is required."
-msgstr "Nepieciešami uzrakstīt vārdu"
+msgstr "Name is required."
 
 #: inc/helpers/namespace.php:293
 msgid "Email is required."
-msgstr "Nepieciešami uzrakstīt epastu."
+msgstr "Email is required."
 
 #: inc/helpers/namespace.php:297
 msgid "Email is invalid."
-msgstr "Epasts ir nepareizs."
+msgstr "Email is invalid."
 
 #: inc/helpers/namespace.php:301
 msgid "Institution is required."
-msgstr "Nepieciešami uzrakstīt institūcijas nosaukumu."
+msgstr "Institution is required."
 
 #: inc/helpers/namespace.php:305
 msgid "Message is required."
-msgstr "Nepieciešami uzrakstīt ziņojumu."
+msgstr "Message is required."
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:312
 msgid "Contact Form Submission from %s"
-msgstr ""
+msgstr "Contact Form Submission from %s"
 
 #: inc/helpers/namespace.php:323
 msgid "Your message was sent!"
-msgstr "Jūsu ziņojums nosūtīts!"
+msgstr "Your message was sent!"
 
 #: inc/helpers/namespace.php:326
 msgid "Your message could not be sent."
-msgstr "Jūsu ziņojums nevar būt nosūtīts."
+msgstr "Your message could not be sent."
 
 #: inc/intervention.php:12
 msgid "Hello,"
-msgstr "Sveiki,"
+msgstr "Hello,"
 
 #: page-catalog.php:55
 msgid "No Books Found"
-msgstr "Grāmatas nav atrastas"
+msgstr "No Books Found"
 
 #: page-catalog.php:58
 msgid "No books have been added to the catalog."
-msgstr "Grāmatas nebija pievienotas katalogam."
+msgstr "No books have been added to the catalogue."
 
 #: partials/book.php:39
 msgid "About this book"
-msgstr "Par šo grāmatu"
+msgstr "About this book"
 
 #: partials/contact-form.php:29
 msgid "Keep this field blank (required)"
-msgstr ""
+msgstr "Keep this field blank (required)"
 
 #: partials/contact-form.php:45
 msgid "Your name (required)"
-msgstr "Jūsu vārds (nepieciešams)"
+msgstr "Your name (required)"
 
 #: partials/contact-form.php:61
 msgid "Your email address (required)"
-msgstr "Jūsu epasts (nepieciešams)"
+msgstr "Your email address (required)"
 
 #: partials/contact-form.php:77
 msgid "Your institution (required)"
-msgstr "Jūsu institūcijas nosaukums (nepieciešams)"
+msgstr "Your institution (required)"
 
 #: partials/contact-form.php:93
 msgid "Your message (required)"
-msgstr "Jūsu ziņojums (nepieciešams)"
+msgstr "Your message (required)"
 
 #: partials/contact-form.php:97
 msgid "Send"
-msgstr "Sūtīt"
+msgstr "Send"
 
 #: partials/content-front-page.php:76
 msgid "View Complete Catalog"
-msgstr "Paskatīties pilnu katalogu "
+msgstr "View Complete Catalogue"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "Nekas nebija atrasts "
+msgstr "Nothing Found"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Atvainojiet, bet nekas neatbilst Jūsu meklējamajiem terminiem. Lūdzu, "
-"mēģiniet vēlreiz, ievadot citus atslēgvārdus."
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 
 #: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Izskatās, ka mēs nevaram atrast to, ko Jūs meklējat. Varbūt Jums palīdzēs "
-"meklēšanas rīks."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "Filtrēt pēc tēmas"
+msgstr "Filter by Subject"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "Visas tēmas"
+msgstr "All Subjects"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by License"
-msgstr "Filtrēt pēc licencēm"
+msgstr "Filter by License"
 
 #: partials/content-page-catalog.php:41
 msgid "All Licenses"
-msgstr "Visas licences"
+msgstr "All Licenses"
 
 #: partials/content-page-catalog.php:54
 msgid "Sort by"
-msgstr "Kārtot pēc"
+msgstr "Sort by"
 
 #: partials/content-page-catalog.php:58
 msgid "Subject"
-msgstr "Tēma"
+msgstr "Subject"
 
 #: partials/content-page-catalog.php:59
 msgid "Latest"
-msgstr "Jaunākais"
+msgstr "Latest"
 
 #: partials/content-page-catalog.php:67
 msgid "Clear Filters"
-msgstr "Noņemt filtrus"
+msgstr "Clear Filters"
 
 #: partials/content-page-catalog.php:68
 msgid "Submit"
-msgstr "Iesniegt"
+msgstr "Submit"
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
-msgstr "Lapaspuses:"
+msgstr "Pages:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "Edit <span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: partials/paged-navigation.php:2
 msgid "Navigation"
-msgstr "Navigācija"
+msgstr "Navigation"
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Search Results for: %s"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Meklējuma katalogs"
+msgstr "Search Catalogue"
 
 #: searchform.php:6
 msgctxt "submit button"
 msgid "Search"
-msgstr "Meklējums"
+msgstr "Search"

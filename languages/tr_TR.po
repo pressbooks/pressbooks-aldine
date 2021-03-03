@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.9.0\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine\n"
-"POT-Creation-Date: 2020-11-17T23:29:08+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
+"POT-Creation-Date: 2021-02-28T06:38:59+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
