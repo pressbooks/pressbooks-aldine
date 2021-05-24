@@ -52,10 +52,8 @@ jobs:
       - name: Install dependencies
         run: |
           node -v
-          npm install -g lerna
           npm install
           npm run install-build-tools
-          lerna run install-build-tools
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
           composer global require "phpunit/phpunit:7.5.20"
@@ -71,7 +69,6 @@ jobs:
       - name: Run Frontend Tests
         run: |
           npm run test
-          lerna run test
       - name: Run PHP Tests
         run: vendor/bin/phpunit
 
