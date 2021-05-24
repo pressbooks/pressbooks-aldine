@@ -20,11 +20,11 @@ export default {
 					let anchorUponArrival = document.location.hash;
 					setTimeout( function () {
 						$( anchorUponArrival ).scrollTo( { duration: 1500 } );
-						$( anchorUponArrival ).focus();
+						$( anchorUponArrival ).trigger( 'focus' );
 					}, 100 );
 				}
 			} );
-			$( '.js-header-nav-toggle' ).click( event => {
+			$( '.js-header-nav-toggle' ).on( 'click', event => {
 				event.preventDefault();
 				$( '.header__nav' ).toggleClass( 'header__nav--active' );
 			} );
