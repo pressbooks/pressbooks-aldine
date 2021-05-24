@@ -1,7 +1,7 @@
 name: CI workflow
 on:
   push:
-    branches: [ dev, main, pba-751-jQueryUpgrade ]
+    branches: [ dev, main ]
     tags:
       - '*.*.*'
   pull_request:
@@ -54,7 +54,6 @@ jobs:
           node -v
           npm install -g lerna
           npm install
-          npm run bootstrap
           npm run install-build-tools
           lerna run install-build-tools
           export PATH="$HOME/.composer/vendor/bin:$PATH"
