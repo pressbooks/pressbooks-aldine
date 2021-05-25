@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.9.0\n"
+"Project-Id-Version: Aldine 1.9.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-02-28T06:38:59+00:00\n"
+"POT-Creation-Date: 2021-05-15T17:39:58+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio D., 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
