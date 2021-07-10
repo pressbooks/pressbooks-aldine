@@ -1,9 +1,16 @@
 ( function () {
 	tinymce.create( 'tinymce.plugins.aldine_page_section', {
+		/**
+		 * @param editor
+		 * @param url
+		 */
 		init: function ( editor, url ) {
 			editor.addButton( 'aldine_page_section', {
 				title: aldine.page_section.title,
 				icon: 'icon dashicons-layout',
+				/**
+				 *
+				 */
 				onclick: function () {
 					editor.windowManager.open( {
 						title: aldine.page_section.title,
@@ -39,6 +46,9 @@
 								value: '', // Sets the default
 							},
 						],
+						/**
+						 * @param e
+						 */
 						onsubmit: function ( e ) {
 							editor.insertContent(
 								'[aldine_page_section title="' +
@@ -52,6 +62,10 @@
 				},
 			} );
 		},
+		/**
+		 * @param n
+		 * @param cm
+		 */
 		createControl: function ( n, cm ) {
 			return null;
 		},

@@ -1,7 +1,10 @@
-const jQueryBridget = require( 'jquery-bridget' );
 const Isotope = require( 'isotope-layout' );
+const jQueryBridget = require( 'jquery-bridget' );
 
 export default {
+	/**
+	 *
+	 */
 	init() {
 		// JavaScript to be fired on the catalog page
 		( function () {
@@ -19,6 +22,9 @@ export default {
 
 				// Function to create a node list
 				// of the content between this <h2> and the next
+				/**
+				 * @param elem
+				 */
 				const getContent = elem => {
 					let elems = [];
 					while (
@@ -56,6 +62,9 @@ export default {
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
 
+				/**
+				 *
+				 */
 				btn.onclick = () => {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
@@ -83,6 +92,9 @@ export default {
 
 				// Function to create a node list
 				// of the content between this <h2> and the next
+				/**
+				 * @param elem
+				 */
 				const getContent = elem => {
 					let elems = [];
 					while (
@@ -120,6 +132,9 @@ export default {
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
 
+				/**
+				 *
+				 */
 				btn.onclick = () => {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
@@ -296,5 +311,8 @@ export default {
 			// 	});
 		} );
 	},
+	/**
+	 *
+	 */
 	finalize() {},
 };

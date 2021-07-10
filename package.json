@@ -35,7 +35,17 @@
 			"aldine": true,
 			"PB_A11y": true,
 			"tinymce": true
-		}
+		},
+    "rules": {
+      "import/no-anonymous-default-export": ["error", {
+        "allowArrowFunction": true,
+        "allowObject": true
+      }],
+      "jsdoc/require-param-type": "off",
+      "jsdoc/require-returns": "off",
+      "jsdoc/require-param-description": "off",
+      "jsdoc/no-undefined-types": "off"
+    }
 	},
 	"eslintIgnore": [
 		"assets/scripts/catalog-admin.js",
@@ -46,15 +56,15 @@
 	},
 	"scripts": {
 		"install-build-tools": "npm install --no-save pressbooks-build-tools",
-		"watch": "npm run production -- --watch",
+		"watch": "mix watch",
 		"prod": "npm run production",
 		"build:production": "npm run production",
-		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"production": "mix --production",
 		"rmdist": "rimraf dist",
 		"test": "npm run -s lint",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"assets/scripts/**/*.js\"",
-		"lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss"
+		"lint:scripts": "eslint \"assets/scripts/**/*.js\"",
+		"lint:styles": "stylelint \"assets/styles/**/*.scss\" --syntax scss"
 	},
 	"engines": {
 		"node": ">= 10"

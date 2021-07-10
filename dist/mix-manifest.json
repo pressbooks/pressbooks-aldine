@@ -1,10 +1,19 @@
 {
-    "/scripts/aldine.js": "/scripts/aldine.js?id=24a75fe45555163733a7",
-    "/styles/aldine.css": "/styles/aldine.css?id=76e97fa4ea15ad04df17",
-    "/styles/editor.css": "/styles/editor.css?id=c45cb52a8c16b5642bf6",
-    "/scripts/call-to-action.js": "/scripts/call-to-action.js?id=14b2ac09b5fc52660522",
-    "/scripts/catalog-admin.js": "/scripts/catalog-admin.js?id=2eac08aee521dcb38f28",
-    "/scripts/customizer.js": "/scripts/customizer.js?id=379b2c9a57b903659698",
-    "/scripts/customizer-toggle.js": "/scripts/customizer-toggle.js?id=21056ebdee6d334bd081",
-    "/scripts/page-section.js": "/scripts/page-section.js?id=b62a3319a10d83a36aea"
+    "/scripts/aldine.js": "/scripts/aldine.js?id=d1502669a08aba6476ef",
+    "/scripts/call-to-action.js": "/scripts/call-to-action.js?id=33370b66c7af12320fc0",
+    "/scripts/catalog-admin.js": "/scripts/catalog-admin.js?id=c750be8d290dd92a61a5",
+    "/scripts/customizer.js": "/scripts/customizer.js?id=14dca3944228dd789c27",
+    "/scripts/customizer-toggle.js": "/scripts/customizer-toggle.js?id=c31594589675d7c5662a",
+    "/scripts/page-section.js": "/scripts/page-section.js?id=19d5c30146ea1a763bcf",
+    "/styles/editor.css": "/styles/editor.css?id=b7c2449babe566571767",
+    "/styles/aldine.css": "/styles/aldine.css?id=55b4e080cb57b22723b5",
+    "/fonts/pressbooks-theme.woff": "/fonts/pressbooks-theme.woff?id=2a7aae81673f4707bbe7",
+    "/images/banner.jpg": "/images/banner.jpg?id=04a813e0b4f94ddfef19",
+    "/images/catalog-header.jpg": "/images/catalog-header.jpg?id=223b9f7a23985f2a72df",
+    "/images/header.jpg": "/images/header.jpg?id=c6712212b6aa749cf1cf",
+    "/images/left-arrow.svg": "/images/left-arrow.svg?id=91d479e2d001857a3ee4",
+    "/images/logo.svg": "/images/logo.svg?id=d71cb98d33ef823ffd27",
+    "/images/pb.svg": "/images/pb.svg?id=c08fb158c15a470648a7",
+    "/images/right-arrow.svg": "/images/right-arrow.svg?id=ee2d7230318ea54ae20b",
+    "/images/yt_icon_mono_dark.png": "/images/yt_icon_mono_dark.png?id=ee68b73409979a929440"
 }
