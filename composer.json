@@ -30,7 +30,7 @@
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^7",
+		"phpunit/phpunit": "^9",
 		"pressbooks/coding-standards": "^1.0",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
