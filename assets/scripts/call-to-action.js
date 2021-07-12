@@ -1,9 +1,16 @@
 ( function () {
 	tinymce.create( 'tinymce.plugins.aldine_call_to_action', {
+		/**
+		 * @param editor
+		 * @param url
+		 */
 		init: function ( editor, url ) {
 			editor.addButton( 'aldine_call_to_action', {
 				title: aldine.call_to_action.title,
 				icon: 'icon dashicons-flag',
+				/**
+				 *
+				 */
 				onclick: function () {
 					editor.windowManager.open( {
 						title: aldine.call_to_action.title,
@@ -21,6 +28,9 @@
 								value: '#',
 							},
 						],
+						/**
+						 * @param e
+						 */
 						onsubmit: function ( e ) {
 							editor.insertContent(
 								'[aldine_call_to_action text="' +
@@ -34,6 +44,10 @@
 				},
 			} );
 		},
+		/**
+		 * @param n
+		 * @param cm
+		 */
 		createControl: function ( n, cm ) {
 			return null;
 		},

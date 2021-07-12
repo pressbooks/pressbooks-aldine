@@ -6,6 +6,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 	checkbox.addEventListener( 'click', toggleReadOnly );
 
+	/**
+	 *
+	 */
 	function toggleReadOnly() {
 		if ( checkbox.checked === false ) {
 			email.classList.add( 'hidden' );

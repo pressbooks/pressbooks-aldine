@@ -1,8 +1,8 @@
 // import local dependencies
-import Router from './util/Router';
+import catalog from './routes/catalog';
 import common from './routes/common';
 import home from './routes/home';
-import catalog from './routes/catalog';
+import Router from './util/Router';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router( {
