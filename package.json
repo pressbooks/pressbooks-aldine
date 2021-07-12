@@ -55,7 +55,6 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
 	},
 	"scripts": {
-		"install-build-tools": "npm install --no-save pressbooks-build-tools",
 		"watch": "mix watch",
 		"prod": "npm run production",
 		"build:production": "npm run production",
