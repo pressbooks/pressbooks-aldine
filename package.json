@@ -36,16 +36,19 @@
 			"PB_A11y": true,
 			"tinymce": true
 		},
-    "rules": {
-      "import/no-anonymous-default-export": ["error", {
-        "allowArrowFunction": true,
-        "allowObject": true
-      }],
-      "jsdoc/require-param-type": "off",
-      "jsdoc/require-returns": "off",
-      "jsdoc/require-param-description": "off",
-      "jsdoc/no-undefined-types": "off"
-    }
+		"rules": {
+			"import/no-anonymous-default-export": [
+				"error",
+				{
+					"allowArrowFunction": true,
+					"allowObject": true
+				}
+			],
+			"jsdoc/require-param-type": "off",
+			"jsdoc/require-returns": "off",
+			"jsdoc/require-param-description": "off",
+			"jsdoc/no-undefined-types": "off"
+		}
 	},
 	"eslintIgnore": [
 		"assets/scripts/catalog-admin.js",
@@ -68,9 +71,11 @@
 	"engines": {
 		"node": ">= 10"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"pressbooks-build-tools": "^3.0.1"
+	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.26",
+		"aetna": "^1.0.0-alpha.27",
 		"isotope-layout": "^3.0.6",
 		"jquery-bridget": "^2.0.1"
 	}
