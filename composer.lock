@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8d8b043ab5da08715e6d21993616f9e",
+    "content-hash": "ea6f3106bbfeb8ca34dbd2da053f16ea",
     "packages": [
         {
             "name": "composer/installers",
@@ -229,23 +229,23 @@
         },
         {
             "name": "spatie/color",
-            "version": "1.1.1",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/color.git",
-                "reference": "5c424dbfa919cc7acdacbf6fdcedb89f790bc04b"
+                "reference": "a82a3080bd6ddc4914a6960d0a590c1c8b601e81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/color/zipball/5c424dbfa919cc7acdacbf6fdcedb89f790bc04b",
-                "reference": "5c424dbfa919cc7acdacbf6fdcedb89f790bc04b",
+                "url": "https://api.github.com/repos/spatie/color/zipball/a82a3080bd6ddc4914a6960d0a590c1c8b601e81",
+                "reference": "a82a3080bd6ddc4914a6960d0a590c1c8b601e81",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.*"
+                "phpunit/phpunit": "^6.5||^9.0"
             },
             "type": "library",
             "autoload": {
@@ -273,7 +273,13 @@
                 "rgb",
                 "spatie"
             ],
-            "time": "2017-02-03T10:05:49+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-02-18T09:37:02+00:00"
         }
     ],
     "packages-dev": [
@@ -2231,12 +2237,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
