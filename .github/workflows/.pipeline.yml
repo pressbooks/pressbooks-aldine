@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: vendor
-          key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
+          key: php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
