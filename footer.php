@@ -103,9 +103,9 @@ if ( $pb_network_contact_form ) {
 				<?php /* translators: %s Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li><a href="https://pressbooks.education/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-aldine' ); ?></a></li>
+					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.education/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-aldine' ); ?></a></li>
 					<?php if ( $contact_link ) : ?>
-						<li>|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
+						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
