@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.9.2\n"
+"Project-Id-Version: Aldine 1.9.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-05-15T17:39:58+00:00\n"
+"POT-Creation-Date: 2021-07-09T01:17:21+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: makeabook project <makeabookproject@gmail.com>, 2018\n"
 "Language-Team: Hebrew (https://www.transifex.com/pressbooks/teams/9194/he/)\n"
@@ -134,52 +134,52 @@ msgstr "תפריט ראשי"
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/actions/namespace.php:114
+#: inc/actions/namespace.php:121
 msgid "Network Footer Block 1"
 msgstr ""
 
-#: inc/actions/namespace.php:126
+#: inc/actions/namespace.php:133
 msgid "Network Footer Block 2"
 msgstr ""
 
-#: inc/actions/namespace.php:229
+#: inc/actions/namespace.php:236
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr "עמוד זה מציג את קטלוג הרשת שלך, אין תוכן לערוך."
 
-#: inc/actions/namespace.php:283
+#: inc/actions/namespace.php:290
 msgid "Page Section"
 msgstr ""
 
-#: inc/actions/namespace.php:284 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:291 partials/content-page-catalog.php:57
 msgid "Title"
 msgstr "כותרת"
 
-#: inc/actions/namespace.php:285
+#: inc/actions/namespace.php:292
 msgid "Standard"
 msgstr ""
 
-#: inc/actions/namespace.php:286
+#: inc/actions/namespace.php:293
 msgid "Accent"
 msgstr "הדגשה"
 
-#: inc/actions/namespace.php:287
+#: inc/actions/namespace.php:294
 msgid "Bordered"
 msgstr ""
 
-#: inc/actions/namespace.php:288
+#: inc/actions/namespace.php:295
 msgid "Borderless"
 msgstr ""
 
-#: inc/actions/namespace.php:291
+#: inc/actions/namespace.php:298
 msgid "Call to Action"
 msgstr ""
 
-#: inc/actions/namespace.php:292
+#: inc/actions/namespace.php:299
 msgid "Text"
 msgstr "טקסט"
 
-#: inc/actions/namespace.php:293
+#: inc/actions/namespace.php:300
 msgid "Link"
 msgstr "קישור"
 

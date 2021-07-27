@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.9.2\n"
+"Project-Id-Version: Aldine 1.9.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-05-15T17:39:58+00:00\n"
+"POT-Creation-Date: 2021-07-09T01:17:21+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -144,54 +144,54 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu de bas de page"
 
-#: inc/actions/namespace.php:114
+#: inc/actions/namespace.php:121
 msgid "Network Footer Block 1"
 msgstr "Bas de page du réseau, bloc 1"
 
-#: inc/actions/namespace.php:126
+#: inc/actions/namespace.php:133
 msgid "Network Footer Block 2"
 msgstr "Bas de page du réseau, bloc 2"
 
-#: inc/actions/namespace.php:229
+#: inc/actions/namespace.php:236
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "Votre catalogue réseau s&rsquo;affiche sur cette page, il n&rsquo;y a pas de"
 " contenu à modifier."
 
-#: inc/actions/namespace.php:283
+#: inc/actions/namespace.php:290
 msgid "Page Section"
 msgstr "Section de page"
 
-#: inc/actions/namespace.php:284 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:291 partials/content-page-catalog.php:57
 msgid "Title"
 msgstr "Titre"
 
-#: inc/actions/namespace.php:285
+#: inc/actions/namespace.php:292
 msgid "Standard"
 msgstr "Standard"
 
-#: inc/actions/namespace.php:286
+#: inc/actions/namespace.php:293
 msgid "Accent"
 msgstr "Accent"
 
-#: inc/actions/namespace.php:287
+#: inc/actions/namespace.php:294
 msgid "Bordered"
 msgstr "Avec bordure"
 
-#: inc/actions/namespace.php:288
+#: inc/actions/namespace.php:295
 msgid "Borderless"
 msgstr "Sans bordure"
 
-#: inc/actions/namespace.php:291
+#: inc/actions/namespace.php:298
 msgid "Call to Action"
 msgstr "Appel à l&rsquo;action"
 
-#: inc/actions/namespace.php:292
+#: inc/actions/namespace.php:299
 msgid "Text"
 msgstr "Texte"
 
-#: inc/actions/namespace.php:293
+#: inc/actions/namespace.php:300
 msgid "Link"
 msgstr "Lien"
 
