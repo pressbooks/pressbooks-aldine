@@ -167,64 +167,94 @@ function get_available_subjects( $catalog_data ) {
  * @return string $items
  */
 function get_default_menu( $items = '' ) {
+	$item_classes = [
+		'prefix' => 'nav--primary-item',
+		'Home' => 'home',
+		'Contact' => 'contact',
+		'SignIn' => 'sign-in',
+		'SignUp' => 'sign-up',
+		'Admin' => 'admin',
+		'CreateANewBook' => 'create-book',
+		'MyBooks' => 'my-books',
+		'SignOut' => 'sign-out',
+	];
+
 	$link = ( is_front_page() ) ? network_home_url( '#main' ) : network_home_url( '/' );
 	$items = sprintf(
-		'<li><a href="%1$s">%2$s</a></li>',
+		'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 		$link,
-		__( 'Home', 'pressbooks-aldine' )
+		__( 'Home', 'pressbooks-aldine' ),
+		$item_classes['prefix'],
+		$item_classes['Home']
 	) . $items;
 	if ( get_option( 'pb_network_contact_form' ) ) {
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			'#contact',
-			__( 'Contact', 'pressbooks-aldine' )
+			__( 'Contact', 'pressbooks-aldine' ),
+			$item_classes['prefix'],
+			$item_classes['Contact']
 		);
 	}
 	if ( ! is_user_logged_in() ) {
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_login_url( get_permalink() ),
-			__( 'Sign In', 'pressbooks-aldine' )
+			__( 'Sign In', 'pressbooks-aldine' ),
+			$item_classes['prefix'],
+			$item_classes['SignIn']
 		);
 		if ( in_array( get_site_option( 'registration' ), [ 'user', 'all' ], true ) ) {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				network_home_url( '/wp-signup.php' ),
-				__( 'Sign Up', 'pressbooks-aldine' )
+				__( 'Sign Up', 'pressbooks-aldine' ),
+				$item_classes['prefix'],
+				$item_classes['SignUp']
 			);
 		}
 	} else {
 		if ( is_super_admin() || is_user_member_of_blog() ) {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				admin_url(),
-				__( 'Admin', 'pressbooks-aldine' )
+				__( 'Admin', 'pressbooks-aldine' ),
+				$item_classes['prefix'],
+				$item_classes['Admin']
 			);
 		} else {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				user_admin_url(),
-				__( 'Admin', 'pressbooks-aldine' )
+				__( 'Admin', 'pressbooks-aldine' ),
+				$item_classes['prefix'],
+				$item_classes['Admin']
 			);
 		}
 		$user_info = get_userdata( get_current_user_id() );
 		if ( $user_info->primary_blog ) {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				get_blogaddress_by_id( $user_info->primary_blog ) . 'wp-admin/index.php?page=pb_catalog',
-				__( 'My Books', 'pressbooks-aldine' )
+				__( 'My Books', 'pressbooks-aldine' ),
+				$item_classes['prefix'],
+				$item_classes['MyBooks']
 			);
 		} elseif ( in_array( get_site_option( 'registration' ), [ 'blog', 'all' ], true ) ) {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				network_home_url( '/wp-signup.php' ),
-				__( 'Create a New Book', 'pressbooks-aldine' )
+				__( 'Create a New Book', 'pressbooks-aldine' ),
+				$item_classes['prefix'],
+				$item_classes['CreateANewBook']
 			);
 		}
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_logout_url( get_permalink() ),
-			__( 'Sign Out', 'pressbooks-aldine' )
+			__( 'Sign Out', 'pressbooks-aldine' ),
+			$item_classes['prefix'],
+			$item_classes['SignOut']
 		);
 	}
 	/* @codingStandardsIgnoreStart $items .= sprintf(
