@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.9.3\n"
+"Project-Id-Version: Aldine 1.10.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-07-09T01:17:21+00:00\n"
+"POT-Creation-Date: 2021-08-03T18:39:02+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: makeabook project <makeabookproject@gmail.com>, 2018\n"
 "Language-Team: Hebrew (https://www.transifex.com/pressbooks/teams/9194/he/)\n"
@@ -93,7 +93,7 @@ msgstr "מופעל על ידי %s"
 msgid "Guides and Tutorials"
 msgstr ""
 
-#: footer.php:108 inc/helpers/namespace.php:180
+#: footer.php:108 inc/helpers/namespace.php:194
 msgid "Contact"
 msgstr "יצירת קשר"
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "קטלוג"
 
-#: inc/activation/namespace.php:73 inc/helpers/namespace.php:174
+#: inc/activation/namespace.php:73 inc/helpers/namespace.php:186
 msgid "Home"
 msgstr "בית"
 
@@ -390,60 +390,60 @@ msgstr ""
 msgid "Continued"
 msgstr "מתמשך"
 
-#: inc/helpers/namespace.php:187
+#: inc/helpers/namespace.php:203
 msgid "Sign In"
 msgstr "התחבר"
 
-#: inc/helpers/namespace.php:193
+#: inc/helpers/namespace.php:211
 msgid "Sign Up"
 msgstr "הירשם"
 
-#: inc/helpers/namespace.php:201 inc/helpers/namespace.php:207
+#: inc/helpers/namespace.php:221 inc/helpers/namespace.php:229
 msgid "Admin"
 msgstr "מנהל"
 
-#: inc/helpers/namespace.php:215
+#: inc/helpers/namespace.php:239
 msgid "My Books"
 msgstr "הספר שלי"
 
-#: inc/helpers/namespace.php:221
+#: inc/helpers/namespace.php:247
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:227
+#: inc/helpers/namespace.php:255
 msgid "Sign Out"
 msgstr "התנתק"
 
-#: inc/helpers/namespace.php:289
+#: inc/helpers/namespace.php:319
 msgid "Name is required."
 msgstr "נדרש שם."
 
-#: inc/helpers/namespace.php:293
+#: inc/helpers/namespace.php:323
 msgid "Email is required."
 msgstr "נדרשת כתובת מייל"
 
-#: inc/helpers/namespace.php:297
+#: inc/helpers/namespace.php:327
 msgid "Email is invalid."
 msgstr "כתובת מייל לא חוקית."
 
-#: inc/helpers/namespace.php:301
+#: inc/helpers/namespace.php:331
 msgid "Institution is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:305
+#: inc/helpers/namespace.php:335
 msgid "Message is required."
 msgstr ""
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:312
+#: inc/helpers/namespace.php:342
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:323
+#: inc/helpers/namespace.php:353
 msgid "Your message was sent!"
 msgstr "הודעתך נשלחה!"
 
-#: inc/helpers/namespace.php:326
+#: inc/helpers/namespace.php:356
 msgid "Your message could not be sent."
 msgstr "לא ניתן לשלוח את ההודעה"
 

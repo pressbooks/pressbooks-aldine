@@ -2,14 +2,14 @@
 # This file is distributed under the GNU GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.9.3\n"
+"Project-Id-Version: Aldine 1.10.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-07-09T01:17:21+00:00\n"
+"POT-Creation-Date: 2021-08-03T18:39:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: pressbooks-aldine\n"
@@ -87,7 +87,7 @@ msgid "Guides and Tutorials"
 msgstr ""
 
 #: footer.php:108
-#: inc/helpers/namespace.php:180
+#: inc/helpers/namespace.php:194
 msgid "Contact"
 msgstr ""
 
@@ -257,7 +257,7 @@ msgid "Catalog"
 msgstr ""
 
 #: inc/activation/namespace.php:73
-#: inc/helpers/namespace.php:174
+#: inc/helpers/namespace.php:186
 msgid "Home"
 msgstr ""
 
@@ -387,61 +387,61 @@ msgstr ""
 msgid "Continued"
 msgstr ""
 
-#: inc/helpers/namespace.php:187
+#: inc/helpers/namespace.php:203
 msgid "Sign In"
 msgstr ""
 
-#: inc/helpers/namespace.php:193
+#: inc/helpers/namespace.php:211
 msgid "Sign Up"
 msgstr ""
 
-#: inc/helpers/namespace.php:201
-#: inc/helpers/namespace.php:207
+#: inc/helpers/namespace.php:221
+#: inc/helpers/namespace.php:229
 msgid "Admin"
 msgstr ""
 
-#: inc/helpers/namespace.php:215
+#: inc/helpers/namespace.php:239
 msgid "My Books"
 msgstr ""
 
-#: inc/helpers/namespace.php:221
+#: inc/helpers/namespace.php:247
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:227
+#: inc/helpers/namespace.php:255
 msgid "Sign Out"
 msgstr ""
 
-#: inc/helpers/namespace.php:289
+#: inc/helpers/namespace.php:319
 msgid "Name is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:293
+#: inc/helpers/namespace.php:323
 msgid "Email is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:297
+#: inc/helpers/namespace.php:327
 msgid "Email is invalid."
 msgstr ""
 
-#: inc/helpers/namespace.php:301
+#: inc/helpers/namespace.php:331
 msgid "Institution is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:305
+#: inc/helpers/namespace.php:335
 msgid "Message is required."
 msgstr ""
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:312
+#: inc/helpers/namespace.php:342
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:323
+#: inc/helpers/namespace.php:353
 msgid "Your message was sent!"
 msgstr ""
 
-#: inc/helpers/namespace.php:326
+#: inc/helpers/namespace.php:356
 msgid "Your message could not be sent."
 msgstr ""
 
