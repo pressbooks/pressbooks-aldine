@@ -11,7 +11,7 @@
 
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
-**Requires at least:** 5.3  
+**Requires at least:** 5.8  
 **Tested up to:** 5.8
 **Stable tag:** 1.10.0
 **License:** GNU General Public License v3 or later  
