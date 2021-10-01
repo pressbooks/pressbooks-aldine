@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "059d238d3535c84ce365607bf4a4b989",
+    "content-hash": "82a6c1b3ddb7f8bb2af896915dfe3935",
     "packages": [
         {
             "name": "composer/installers",
@@ -229,16 +229,16 @@
         },
         {
             "name": "spatie/color",
-            "version": "1.2.4",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/color.git",
-                "reference": "a82a3080bd6ddc4914a6960d0a590c1c8b601e81"
+                "reference": "fafbf8900541230e10abb2b165990e4758c28024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/color/zipball/a82a3080bd6ddc4914a6960d0a590c1c8b601e81",
-                "reference": "a82a3080bd6ddc4914a6960d0a590c1c8b601e81",
+                "url": "https://api.github.com/repos/spatie/color/zipball/fafbf8900541230e10abb2b165990e4758c28024",
+                "reference": "fafbf8900541230e10abb2b165990e4758c28024",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-18T09:37:02+00:00"
+            "time": "2021-09-06T08:57:14+00:00"
         }
     ],
     "packages-dev": [
