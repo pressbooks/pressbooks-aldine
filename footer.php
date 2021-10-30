@@ -8,6 +8,7 @@
  *
  * @package Aldine
  */
+
 ?>
 
 <?php
@@ -94,7 +95,7 @@ if ( $pb_network_contact_form ) {
 		</div>
 		<section class="footer__pressbooks">
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<?php // TODO ?>
+				<?php // TODO. ?>
 				<svg class="icon--svg">
 					<use xlink:href="#icon-pressbooks" />
 				</svg>

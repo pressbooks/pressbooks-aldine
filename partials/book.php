@@ -1,4 +1,10 @@
 <?php
+/**
+ * Template for displaying books in network catalog
+ *
+ * @package Aldine
+ */
+
 use function \Aldine\Helpers\maybe_truncate_string;
 use function \Pressbooks\Metadata\is_bisac;
 ?>
@@ -22,13 +28,15 @@ if ( $date ) {
 		<a href="<?php echo $book['link']; ?>"><?php echo maybe_truncate_string( $book['metadata']['name'] ); ?></a>
 	</p>
 	<?php
-	/* <?php if (isset( $book['metadata']['author'] ) ) { ?>
+	/*
+	<?php if (isset( $book['metadata']['author'] ) ) { ?>
 	<p class="book__author">
 		<?php _e( 'By', 'pressbooks-aldine' ); ?> <?php foreach ( $book['metadata']['author'] as $author ) {
 			echo $author['name'];
 		} ?>
 	</p>
-	<?php } ?> */
+	<?php } ?>
+	*/
 	?>
 	<?php if ( ! empty( $subject ) ) { ?>
 	<p class="book__subject">

@@ -68,11 +68,11 @@ add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_co
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_contact_form_tweaks' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_pb_a11y_in_customizer' );
 
-// Shortcodes
+// Shortcodes.
 add_shortcode( 'aldine_page_section', '\Aldine\Shortcodes\page_section' );
 add_shortcode( 'aldine_call_to_action', '\Aldine\Shortcodes\call_to_action' );
 
-// Catalog page: Network admin controls
+// Catalog page: Network admin controls.
 add_action( 'admin_enqueue_scripts', '\Aldine\Admin\admin_scripts' );
 add_action( 'wp_ajax_pressbooks_aldine_update_catalog', '\Aldine\Admin\update_catalog' );
 add_filter( 'wpmu_blogs_columns', '\Aldine\Admin\catalog_columns' );

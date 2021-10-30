@@ -66,11 +66,10 @@ function excerpt_more() {
 /**
  * Add things to the menu.
  *
- * @param string $items
- * @param object $args
+ * @param string $items Items
+ * @param object $args Args
  * @return string
  */
-
 function adjust_menu( $items, $args ) {
 	if ( $args->theme_location === 'primary-menu' ) {
 		return \Aldine\Helpers\get_default_menu( $items );
@@ -82,6 +81,7 @@ function adjust_menu( $items, $args ) {
 /**
  * Add TinyMCE Buttons.
  *
+ * @param array $plugin_array Plugin array
  * @since 1.1.0
  */
 function add_buttons( $plugin_array ) {
@@ -96,6 +96,7 @@ function add_buttons( $plugin_array ) {
 /**
  * Register TinyMCE Buttons.
  *
+ * @param array $buttons TinyMCE Buttons
  * @since 1.1.0
  */
 function register_buttons( $buttons ) {

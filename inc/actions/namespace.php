@@ -1,6 +1,7 @@
 <?php
-
 /**
+ * Aldine Actions
+ *
  * @package Aldine
  */
 
@@ -244,6 +245,9 @@ function hide_catalog_content_editor() {
 /**
  * Add dark and alpha variants for customizer colors on update.
  *
+ * @param array $option Option
+ * @param string $old_value Unused parameter
+ * @param string $value Color value
  * @since 1.0.0
  */
 function add_color_variants( $option, $old_value, $value ) {

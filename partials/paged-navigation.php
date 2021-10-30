@@ -1,3 +1,13 @@
+<?php
+/**
+ * Book navigation template
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Aldine
+ */
+
+?>
 <nav class="booknav" aria-labelledby="latest-books-title book-navigation">
 	<span class="screen-reader-text"><?php _e( 'Navigation', 'pressbooks-aldine' ); ?></span>
 	<?php if ( $previous_page ) : ?>

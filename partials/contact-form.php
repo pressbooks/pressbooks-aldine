@@ -4,6 +4,7 @@
  *
  * @package Aldine
  */
+
 ?>
 
 <?php
@@ -11,7 +12,7 @@
 $pb_network_contact_form_title = get_option( 'pb_network_contact_form_title' );
 $contact_form_title = ( ! empty( $pb_network_contact_form_title ) ) ? $pb_network_contact_form_title : __( 'Contact Us', 'pressbooks-aldine' );
 $contact_form_response = \Aldine\Helpers\handle_contact_form_submission();
-$honeypot = 'firstname' . rand();
+$honeypot = 'firstname' . wp_rand();
 
 ?>
 
@@ -30,7 +31,7 @@ $honeypot = 'firstname' . rand();
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-name" 
+			<input id="contact-name"
 			<?php
 			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_name' ) :
 				?>
@@ -46,7 +47,7 @@ $honeypot = 'firstname' . rand();
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-email" 
+			<input id="contact-email"
 			<?php
 			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_email' ) :
 				?>
@@ -62,7 +63,7 @@ $honeypot = 'firstname' . rand();
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-institution" 
+			<input id="contact-institution"
 			<?php
 			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_institution' ) :
 				?>
@@ -78,7 +79,7 @@ $honeypot = 'firstname' . rand();
 			</label>
 		</p>
 		<p class="form__row">
-			<textarea id="contact-message" 
+			<textarea id="contact-message"
 			<?php
 			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'message' ) :
 				?>
