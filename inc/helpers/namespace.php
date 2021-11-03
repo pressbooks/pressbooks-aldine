@@ -273,7 +273,7 @@ function get_default_menu( $items = '' ) {
  */
 function default_menu( $args = [], $items = '' ) {
 	printf(
-		"<{$args['container']} id='{$args['container_id']}' class='{$args['container_class']}'><ul id='{$args['menu_id']}' class='{$args['menu_class']}'>%s</ul></{$args['container']}>",
+		"<{$args['container']} id='{$args['container_id']}' class='{$args['container_class']}' aria-label='{$args['container_aria_label']}'><ul id='{$args['menu_id']}' class='{$args['menu_class']}'>%s</ul></{$args['container']}>",
 		get_default_menu( $items )
 	);
 	if ( class_exists( '\PressbooksOAuth\OAuth' ) ) {
