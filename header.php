@@ -87,6 +87,7 @@
 						'container' => 'nav',
 						'container_class' => 'js-header-nav',
 						'container_id' => 'navigation',
+						'container_aria_label' => 'primary',
 						'menu_id' => 'nav-primary-menu',
 						'menu_class' => 'nav--primary',
 					]
