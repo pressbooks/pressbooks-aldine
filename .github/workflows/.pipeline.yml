@@ -103,7 +103,7 @@ jobs:
         run: composer test
         if: matrix.experimental == true && matrix.wordpress != 'trunk'
 
-      - name: Run PHP Tests
+      - name: Run PHP Tests with PHPUnit 9
         run: |
           composer remove --dev phpunit/phpunit
           composer update --dev yoast/phpunit-polyfills --with-dependencies --ignore-platform-reqs
