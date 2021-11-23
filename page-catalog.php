@@ -55,7 +55,7 @@ else :
 					<h1 class="entry-title"><?php _e( 'No Books Found', 'pressbooks-aldine' ); ?></h1>
 				</header>
 				<div class="entry-content" style="text-align:center;">
-					<p><?php _e( 'No books have been added to the catalog.', 'pressbooks-aldine' ); ?></p>
+					<p><?php _e( 'No books have been added to the catalog yet.', 'pressbooks-aldine' ); ?></p>
 				</div>
 			</article>
 		</main>
