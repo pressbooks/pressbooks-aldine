@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.10.0\n"
+"Project-Id-Version: Aldine 1.11.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-08-03T18:39:02+00:00\n"
+"POT-Creation-Date: 2021-11-23T20:51:23+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -473,8 +473,8 @@ msgid "No Books Found"
 msgstr "Niti jedna knjiga nije pronađena"
 
 #: page-catalog.php:58
-msgid "No books have been added to the catalog."
-msgstr "Niti jedna knjiga nije dodana u katalog."
+msgid "No books have been added to the catalog yet."
+msgstr ""
 
 #: partials/book.php:39
 msgid "About this book"
@@ -583,8 +583,8 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Nastavi čitati <span class=\"screen-reader-text\">\"%s\"</span>"
 
 #: partials/paged-navigation.php:2
-msgid "Navigation"
-msgstr "Navigacija"
+msgid "Book Catalog Navigation"
+msgstr ""
 
 #. translators: %s: search query.
 #: search.php:23
