@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.10.0\n"
+"Project-Id-Version: Aldine 1.11.0-dev\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-08-03T18:39:02+00:00\n"
+"POT-Creation-Date: 2021-11-23T20:47:09+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio D., 2018\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/pressbooks/teams/9194/lt_LT/)\n"
@@ -470,8 +470,8 @@ msgid "No Books Found"
 msgstr "Knygos nerasta"
 
 #: page-catalog.php:58
-msgid "No books have been added to the catalog."
-msgstr "Knygos nebuvo įdėtos į katalogą. "
+msgid "No books have been added to the catalog yet."
+msgstr ""
 
 #: partials/book.php:39
 msgid "About this book"
@@ -579,7 +579,7 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: partials/paged-navigation.php:2
-msgid "Navigation"
+msgid "Book Catalog Navigation"
 msgstr ""
 
 #. translators: %s: search query.

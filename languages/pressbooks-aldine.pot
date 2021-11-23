@@ -2,14 +2,14 @@
 # This file is distributed under the GNU GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.10.0\n"
+"Project-Id-Version: Aldine 1.11.0-dev\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-03T18:39:02+00:00\n"
+"POT-Creation-Date: 2021-11-23T20:47:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: pressbooks-aldine\n"
@@ -454,7 +454,7 @@ msgid "No Books Found"
 msgstr ""
 
 #: page-catalog.php:58
-msgid "No books have been added to the catalog."
+msgid "No books have been added to the catalog yet."
 msgstr ""
 
 #: partials/book.php:39
@@ -558,7 +558,7 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: partials/paged-navigation.php:2
-msgid "Navigation"
+msgid "Book Catalog Navigation"
 msgstr ""
 
 #. translators: %s: search query.
