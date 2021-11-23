@@ -20,19 +20,21 @@
 	"config": {
 		"platform": {
 			"php": "7.3"
-		}
+		},
+    "sort-packages": true
 	},
 	"require": {
-		"php": ">=7.1",
+		"php": ">=7.3",
 		"composer/installers": "^1.7",
 		"pressbooks/mix": "^2.1",
 		"soberwp/intervention": "1.2.0-p",
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^7",
-		"pressbooks/coding-standards": "^1.0",
-		"wpreadme2markdown/wp2md": "^3.0"
+		"phpunit/phpunit": "^7.5",
+		"pressbooks/coding-standards": "^1.1",
+		"wpreadme2markdown/wp2md": "^3.0",
+		"yoast/phpunit-polyfills": "^1.0.1"
 	},
 	"scripts": {
 		"test": [
@@ -44,6 +46,9 @@
 		"standards": [
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
 		],
+    "fix": [
+      "vendor/bin/phpcbf --standard=phpcs.ruleset.xml inc partials *.php"
+    ],
 		"localize": [
 			"wp-pot -o=languages/pressbooks-aldine.pot -d=pressbooks-aldine -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '**/*.php'"
 		],

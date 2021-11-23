@@ -13,11 +13,13 @@ use function \Pressbooks\Utility\str_starts_with;
 use Pressbooks\DataCollector\Book as BookDataCollector;
 
 /**
- * @param int $page
- * @param int $per_page
- * @param string $orderby
- * @param string $license
- * @param string $subject
+ * Get catalog data
+ *
+ * @param int $page Catalog page
+ * @param int $per_page Books per page
+ * @param string $orderby Sort order
+ * @param string $license Copyright license
+ * @param string $subject Subject
  *
  * @return array
  */
@@ -27,7 +29,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		return [
 			'pages' => 0,
 			'books' => [],
-		]; // Bail
+		];
 	}
 
 	$dc = BookDataCollector::init();
@@ -40,6 +42,8 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	$args = apply_filters(
 		'pb_aldine_catalog_query_args',
 		/**
+		 * Deprecation notice
+		 *
 		 * @deprecated 1.0.0
 		 *
 		 * @see Pressbooks Publisher
@@ -59,12 +63,16 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		)
 	);
 
-	/** @var \WP_Site $site */
+	/**
+	 * WordPress site
+	 *
+	 * @var \WP_Site $site
+	 */
 
 	$sites_in_catalog = [];
 	$sites = get_sites( $args );
 	foreach ( $sites as $site ) {
-		$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE ); // Cool hack! :face_with_rolling_eyes:
+		$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE );
 		$sites_in_catalog[] = $site;
 	}
 	if ( $orderby === 'latest' ) {
@@ -103,7 +111,6 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 	];
 }
 
-
 /**
  * Get licenses for catalog display.
  *
@@ -123,7 +130,7 @@ function get_catalog_licenses() {
 /**
  * Get licenses currently in use.
  *
- * @param array $catalog_data
+ * @param array $catalog_data Catalog data
  *
  * @return array
  */
@@ -144,7 +151,7 @@ function get_available_licenses( $catalog_data ) {
 /**
  * Get subjects currently in use.
  *
- * @param array $catalog_data
+ * @param array $catalog_data Catalog data
  *
  * @return array
  */
@@ -162,7 +169,7 @@ function get_available_subjects( $catalog_data ) {
 /**
  * Return the default (non-page) menu items.
  *
- * @param string $items
+ * @param string $items Items
  *
  * @return string $items
  */
@@ -269,7 +276,8 @@ function get_default_menu( $items = '' ) {
 /**
  * Echo the default menu.
  *
- * @param string $items
+ * @param array $args Array
+ * @param string $items Items
  */
 function default_menu( $args = [], $items = '' ) {
 	printf(
@@ -345,7 +353,7 @@ function handle_contact_form_submission() {
 					stripslashes( $name ),
 					$email,
 					stripslashes( $institution ),
-					strip_tags( $message )
+					wp_strip_all_tags( $message )
 				),
 				"From: ${email}\r\nReply-To: ${email}\r\n"
 			);

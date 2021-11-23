@@ -1,3 +1,11 @@
+<?php
+/**
+ * The catalog search form
+ *
+ * @package Aldine
+ */
+
+?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label for="s">
 		<?php _ex( 'Search Catalog', 'label', 'pressbooks-aldine' ); ?>

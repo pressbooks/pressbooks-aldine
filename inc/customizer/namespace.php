@@ -15,12 +15,12 @@ use PressbooksMix\Assets;
  * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function customize_register( \WP_Customize_Manager $wp_customize ) {
-	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls
+	// Remove unsupported WP controls, @see \WP_Customize_Manager::register_controls.
 
 	$wp_customize->remove_control( 'display_header_text' );
 	$wp_customize->remove_control( 'header_textcolor' );
 
-	// Add Pressbooks controls
+	// Add Pressbooks controls.
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -272,6 +272,8 @@ function customize_preview_js() {
 }
 
 /**
+ * Load color contrast validation tool
+ *
  * @see https://github.com/soderlind/customizer-validate-wcag-color-contrast
  */
 function enqueue_color_contrast_validator() {

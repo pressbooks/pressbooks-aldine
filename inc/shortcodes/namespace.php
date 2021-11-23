@@ -10,8 +10,8 @@ namespace Aldine\Shortcodes;
 /**
  * Shortcode for Page Section.
  *
- * @param array $atts
- * @param string $content
+ * @param array $atts Shortcode attributes
+ * @param string $content Page content
  *
  * @return string
  */
@@ -36,7 +36,7 @@ function page_section( $atts, $content = null ) {
 /**
  * Shortcode for custom Call to Action.
  *
- * @param array $atts
+ * @param array $atts Shortcode attributes
  *
  * @return string
  */
@@ -51,7 +51,7 @@ function call_to_action( $atts ) {
 		'aldine_call_to_action'
 	);
 
-	// Fallback for shortcodes using the old url attribute
+	// Fallback for shortcodes using the old url attribute.
 	if ( $atts['link'] === '#' && $atts['url'] ) {
 		$atts['link'] = $atts['url'];
 	}
