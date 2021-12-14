@@ -36,8 +36,9 @@ function create_default_content() {
 				'post_content' => apply_filters(
 					'pb_root_about_page_content',
 					sprintf(
-						'<p>%1$s</p><p>%2$s</p>',
-						__( 'Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more. Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution.', 'pressbooks-aldine' ),
+						'<p>%1$s</p><p>%2$s</p><p>%3$s</p>',
+						__( 'Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more.', 'pressbooks-aldine' ),
+						__( 'Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution.', 'pressbooks-aldine' ),
 						sprintf(
 							/* translators: %1$s: link to Pressbooks product page; %2$2: link to Pressbooks getting started page */
 							__( 'Pressbooks\' %1$s are used by hundreds of educational institutions and thousands of individual authors and publishers around the world. %2$s to learn more about how you or your institution can get started with Pressbooks.', 'pressbooks' ),
@@ -78,7 +79,7 @@ function create_default_content() {
 						sprintf(
 						/* translators: %s: link to Pressbooks support request form */
 							__( 'For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them.', 'pressbooks-aldine' ),
-							sprintf( '<a href=""', __( 'support request form', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://pressbooks.com/pressbooksedu-support/">%s</a>', __( 'support request form', 'pressbooks-aldine' ) )
 						)
 					)
 				),
