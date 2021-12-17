@@ -11,6 +11,14 @@ body {
 
   #content {
     flex-grow: 1;
+
+    .entry-content a {
+      text-decoration: underline;
+    }
+
+    a.call-to-action {
+      text-decoration: none;
+    }
   }
 }
 
