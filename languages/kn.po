@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.11.0\n"
+"Project-Id-Version: Aldine 1.12.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-11-23T20:51:23+00:00\n"
+"POT-Creation-Date: 2021-12-19T15:36:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://www.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -71,38 +71,42 @@ msgid "Comments are closed."
 msgstr "ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಮುಚ್ಚಲಾಗಿದೆ."
 
 #. translators: %s network name
-#: footer.php:60 footer.php:65
+#: footer.php:61 footer.php:66
 msgid "%s on Facebook"
 msgstr "ಫೇಸ್ ಬುಕ್ ನಲ್ಲಿ %s"
 
 #. translators: %s network name
-#: footer.php:70 footer.php:75
+#: footer.php:71 footer.php:76
 msgid "%s on Twitter"
 msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ %s"
 
 #. translators: %s network name
-#: footer.php:80 footer.php:85
+#: footer.php:81 footer.php:86
 msgid "%s on Instagram"
 msgstr "ಇನ್‍ಸ್ಟಾಗ್ರಾಮ್‍ನಲ್ಲಿ %s"
 
 #. translators: %s Pressbooks
-#: footer.php:104
+#: footer.php:105
 msgid "Powered by %s"
 msgstr "%s ನಿಂದ ಸಾಮರ್ಥ್ಯ ಪಡೆದಿದೆ"
 
-#: footer.php:106
+#: footer.php:107
 msgid "Guides and Tutorials"
 msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‍ಗಳು"
 
-#: footer.php:108 inc/helpers/namespace.php:194
+#: footer.php:108
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:110 inc/helpers/namespace.php:201
 msgid "Contact"
 msgstr "ಸಂಪರ್ಕಿಸಿ"
 
-#: footer.php:113 footer.php:115
+#: footer.php:115 footer.php:117
 msgid "Pressbooks on YouTube"
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
-#: footer.php:117 footer.php:121
+#: footer.php:119 footer.php:123
 msgid "Pressbooks on Twitter"
 msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
@@ -127,70 +131,70 @@ msgstr "%s ಲೋಗೋ"
 msgid "Toggle Menu"
 msgstr "ಟಾಗಲ್ ಮೆನು"
 
-#: inc/actions/namespace.php:47 inc/activation/namespace.php:120
+#: inc/actions/namespace.php:48 inc/activation/namespace.php:139
 msgid "Primary Menu"
 msgstr "ಪ್ರಾಥಮಿಕ ಮೆನು"
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:141
+#: inc/actions/namespace.php:49 inc/activation/namespace.php:160
 msgid "Footer Menu"
 msgstr "ಅಡಿಬರಹ ಮೆನು"
 
-#: inc/actions/namespace.php:121
+#: inc/actions/namespace.php:122
 msgid "Network Footer Block 1"
 msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 1"
 
-#: inc/actions/namespace.php:133
+#: inc/actions/namespace.php:134
 msgid "Network Footer Block 2"
 msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 2"
 
-#: inc/actions/namespace.php:236
+#: inc/actions/namespace.php:237
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "ಈ ಪುಟವು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಂಪಾದಿಸಲು "
 "ಯಾವುದೇ ವಿಷಯವಿಲ್ಲ."
 
-#: inc/actions/namespace.php:290
+#: inc/actions/namespace.php:294
 msgid "Page Section"
 msgstr "ಪುಟ ವಿಭಾಗ"
 
-#: inc/actions/namespace.php:291 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:295 partials/content-page-catalog.php:57
 msgid "Title"
 msgstr "ಶೀರ್ಷಿಕೆ"
 
-#: inc/actions/namespace.php:292
+#: inc/actions/namespace.php:296
 msgid "Standard"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: inc/actions/namespace.php:293
+#: inc/actions/namespace.php:297
 msgid "Accent"
 msgstr "ಆಕ್ಸೆಂಟ್"
 
-#: inc/actions/namespace.php:294
+#: inc/actions/namespace.php:298
 msgid "Bordered"
 msgstr "ಬಾರ್ಡರ್ಡ್"
 
-#: inc/actions/namespace.php:295
+#: inc/actions/namespace.php:299
 msgid "Borderless"
 msgstr "ಬಾರ್ಡರ್ ಲೆಸ್"
 
-#: inc/actions/namespace.php:298
+#: inc/actions/namespace.php:302
 msgid "Call to Action"
 msgstr "ಕ್ರಿಯೆಗೆ ಕರೆ ಮಾಡಿ"
 
-#: inc/actions/namespace.php:299
+#: inc/actions/namespace.php:303
 msgid "Text"
 msgstr "ಪಠ್ಯ"
 
-#: inc/actions/namespace.php:300
+#: inc/actions/namespace.php:304
 msgid "Link"
 msgstr "ಕೊಂಡಿ"
 
-#: inc/activation/namespace.php:25
+#: inc/activation/namespace.php:26
 msgid "About Pressbooks"
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಬಗ್ಗೆ"
 
-#: inc/activation/namespace.php:26
+#: inc/activation/namespace.php:27
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
@@ -198,102 +202,137 @@ msgstr ""
 "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸುಲಭವಾಗಿ ಬಳಸಬಹುದಾದ ಪುಸ್ತಕ ಬರೆಯುವ ಸಾಫ್ಟ್ ವೇರ್ ಆಗಿದ್ದು, ನೀವು "
 "ಪ್ರಕಟಿಸಬೇಕಾದ ಎಲ್ಲಾ ಸ್ವರೂಪಗಳಲ್ಲಿ ಪುಸ್ತಕವನ್ನು ರಚಿಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ."
 
-#: inc/activation/namespace.php:27
+#: inc/activation/namespace.php:28
 msgid "Learn More"
 msgstr "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
 
-#: inc/activation/namespace.php:34 inc/activation/namespace.php:146
-#: inc/activation/namespace.php:152
+#: inc/activation/namespace.php:35 inc/activation/namespace.php:165
+#: inc/activation/namespace.php:171
 msgid "About"
 msgstr "ಬಗ್ಗೆ"
 
-#: inc/activation/namespace.php:39
-msgid ""
-"Pressbooks is simple book production software. You can use Pressbooks to "
-"publish textbooks, scholarly monographs, syllabi, fiction and non-fiction "
-"books, white papers, and more in multiple formats including:"
-msgstr ""
-"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸರಳ ಪುಸ್ತಕ ನಿರ್ಮಾಣ ಸಾಫ್ಟ್ ವೇರ್ ಆಗಿದೆ. ಪಠ್ಯಪುಸ್ತಕಗಳು, "
-"ವಿದ್ವತ್ಪೂರ್ಣ ಮೊನೊಗ್ರಾಫ್ ಗಳು, ಸಿಲಾಬಿ, ಕಾಲ್ಪನಿಕ ಮತ್ತು ಕಾಲ್ಪನಿಕವಲ್ಲದ ಪುಸ್ತಕಗಳು,"
-" ಬಿಳಿ ಕಾಗದಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳನ್ನು ಅನೇಕ ಸ್ವರೂಪಗಳಲ್ಲಿ ಪ್ರಕಟಿಸಲು ನೀವು "
-"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಬಳಸಬಹುದು:"
-
 #: inc/activation/namespace.php:40
-msgid "MOBI (for Kindle ebooks)"
-msgstr "ಮೊಬಿ (ಕಿಂಡಲ್ ಇಬುಕ್ ಗಳಿಗಾಗಿ)"
+msgid ""
+"Pressbooks is simple book production software that makes it easy to write, "
+"develop, and share your ideas. You can use Pressbooks to publish open "
+"educational resources, textbooks, scholarly monographs, fiction and non-"
+"fiction books, white papers, syllabi, and more."
+msgstr ""
 
 #: inc/activation/namespace.php:41
-msgid "EPUB (for all other ebookstores)"
-msgstr "ಇ.ಪಿ.ಯು.ಬಿ.(ಇತರ ಎಲ್ಲ ಪುಸ್ತಕ ಮಳಿಗೆಗಳಿಗೆ)"
-
-#: inc/activation/namespace.php:42
-msgid "designed PDF (for print-on-demand and digital distribution)"
+msgid ""
+"Pressbooks lets creators quickly publish their content to the web and "
+"produce exports in multiple formats, including accessible EPUBs and PDFs "
+"specially designed for print-on-demand or digital distribution."
 msgstr ""
-"ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಪಿಡಿಎಫ್ (ಪ್ರಿಂಟ್-ಆನ್-ಡಿಮ್ಯಾಂಡ್ ಮತ್ತು ಡಿಜಿಟಲ್ ವಿತರಣೆಗಾಗಿ)"
 
-#. translators: %s link to about page
+#: inc/activation/namespace.php:45
+msgid "suite of products"
+msgstr ""
+
 #: inc/activation/namespace.php:46
-msgid "For more information about Pressbooks, %s."
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, %s."
+msgid "Contact us"
+msgstr ""
 
-#: inc/activation/namespace.php:47
-msgid "see here"
-msgstr "ಇಲ್ಲಿ ನೋಡಿ"
-
-#: inc/activation/namespace.php:53 inc/activation/namespace.php:176
-#: inc/activation/namespace.php:182
+#: inc/activation/namespace.php:52 inc/activation/namespace.php:195
+#: inc/activation/namespace.php:201
 msgid "Help"
 msgstr "ಸಹಾಯ"
 
-#. translators: %1$s: link to how to page; %2$s: link to guide
-#: inc/activation/namespace.php:60
+#. translators: %s: link to guide
+#: inc/activation/namespace.php:59
 msgid ""
-"The easiest way to get started with Pressbooks is to follow our %1$s. Or, "
-"you can review our %2$s."
+"Are you looking for help on your Pressbooks project? The most comprehensive "
+"resource available is the %s, which contains everything you need to know "
+"about creating, enriching and exporting your work."
 msgstr ""
-"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಜೊತೆ ಪ್ರಾರಂಭಿಸಲು ಸುಲಭವಾದ ಮಾರ್ಗವೆಂದರೆ ನಮ್ಮ %1$s ಅನುಸರಿಸುವುದು. "
-"ಅಥವಾ, ನೀವು ನಮ್ಮ %2$s ಪರಿಶೀಲಿಸಬಹುದು."
 
-#: inc/activation/namespace.php:61
-msgid "4 Step Guide to Making a Book on Pressbooks"
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಮೇಲೆ ಪುಸ್ತಕ ತಯಾರಿಸಲು 4 ಹಂತ ಮಾರ್ಗದರ್ಶಿ"
+#: inc/activation/namespace.php:60
+msgid "Pressbooks User Guide"
+msgstr ""
 
-#: inc/activation/namespace.php:62
-msgid "Guide to Using Pressbooks"
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಬಳಸಲು ಮಾರ್ಗದರ್ಶಿ"
-
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:64
 msgid ""
-"If you require further assistance, please contact your network manager."
+"You can find short video tutorials and webinars about features and product "
+"updates on the %1$s. If you’re just getting started with Pressbooks, this "
+"%2$s will guide you."
 msgstr ""
-"ನಿಮಗೆ ಹೆಚ್ಚಿನ ಸಹಾಯದ ಅಗತ್ಯವಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಿಮ್ಮ ನೆಟ್‍ವರ್ಕ್ ಮ್ಯಾನೇಜರ್ ಅನ್ನು "
-"ಸಂಪರ್ಕಿಸಿ."
+
+#: inc/activation/namespace.php:65
+msgid "Pressbooks YouTube channel"
+msgstr ""
+
+#: inc/activation/namespace.php:66
+msgid "short video series"
+msgstr ""
+
+#. translators: %s: link to Pressbooks webinar schedule
+#: inc/activation/namespace.php:70
+msgid ""
+"If you learn best by learning by attending live training sessions, you can "
+"register for and attend one of Pressbooks' %s."
+msgstr ""
+
+#: inc/activation/namespace.php:71
+msgid "monthly webinars"
+msgstr ""
+
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
+#: inc/activation/namespace.php:75
+msgid ""
+"The %1$s also contains links to other useful support resources and has "
+"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
+"where you can ask and answer questions of other users."
+msgstr ""
+
+#: inc/activation/namespace.php:76
+msgid "Pressbooks support page"
+msgstr ""
+
+#: inc/activation/namespace.php:77
+msgid "community forum"
+msgstr ""
+
+#. translators: %s: link to Pressbooks support request form
+#: inc/activation/namespace.php:81
+msgid ""
+"For additional support needs, reach out to your institution’s Pressbooks "
+"network managers. If you don’t know who your network managers are, please "
+"fill out the %s to be put in touch with them."
+msgstr ""
+
+#: inc/activation/namespace.php:82
+msgid "support request form"
+msgstr ""
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:69 inc/activation/namespace.php:125
-#: inc/activation/namespace.php:131 inc/activation/namespace.php:161
-#: inc/activation/namespace.php:167
+#: inc/activation/namespace.php:88 inc/activation/namespace.php:144
+#: inc/activation/namespace.php:150 inc/activation/namespace.php:180
+#: inc/activation/namespace.php:186
 msgid "Catalog"
 msgstr "ಕ್ಯಾಟಲಾಗ್"
 
-#: inc/activation/namespace.php:73 inc/helpers/namespace.php:186
+#: inc/activation/namespace.php:92 inc/helpers/namespace.php:193
 msgid "Home"
 msgstr "ಮುಖಪುಟ"
 
-#: inc/admin/namespace.php:33
+#: inc/admin/namespace.php:37
 msgid "Catalog updated."
 msgstr "ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿದೆ."
 
-#: inc/admin/namespace.php:34
+#: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
 "ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
-#: inc/admin/namespace.php:35
+#: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
 msgstr "ಈ ಅಧಿಸೂಚನೆಯನ್ನು ವಜಾಗೊಳಿಸಿ."
 
-#: inc/admin/namespace.php:75
+#: inc/admin/namespace.php:83
 msgid "In Catalog"
 msgstr "ಕ್ಯಾಟಲಾಗ್‍ನಲ್ಲಿ"
 
@@ -385,7 +424,7 @@ msgstr "ಸಂಪರ್ಕ ನಮೂನೆ"
 msgid "Show Contact Form"
 msgstr "ಸಂಪರ್ಕ ನಮೂನೆ ತೋರಿಸು"
 
-#: inc/customizer/namespace.php:226 partials/contact-form.php:12
+#: inc/customizer/namespace.php:226 partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ"
 
@@ -405,60 +444,60 @@ msgstr "ಸಂಪರ್ಕ ಲಿಂಕ್"
 msgid "Continued"
 msgstr "ಮುಂದುವರಿಸಿದೆ"
 
-#: inc/helpers/namespace.php:203
+#: inc/helpers/namespace.php:210
 msgid "Sign In"
 msgstr "ಸೈನ್ ಇನ್"
 
-#: inc/helpers/namespace.php:211
+#: inc/helpers/namespace.php:218
 msgid "Sign Up"
 msgstr "ಸೈನ್ ಅಪ್ ಮಾಡಿ"
 
-#: inc/helpers/namespace.php:221 inc/helpers/namespace.php:229
+#: inc/helpers/namespace.php:228 inc/helpers/namespace.php:236
 msgid "Admin"
 msgstr "ನಿರ್ವಹಣೆಗಾರ"
 
-#: inc/helpers/namespace.php:239
+#: inc/helpers/namespace.php:246
 msgid "My Books"
 msgstr "ನನ್ನ ಪುಸ್ತಕಗಳು"
 
-#: inc/helpers/namespace.php:247
+#: inc/helpers/namespace.php:254
 msgid "Create a New Book"
 msgstr "ಹೊಸ ಪುಸ್ತಕವನ್ನು ರಚಿಸಿ"
 
-#: inc/helpers/namespace.php:255
+#: inc/helpers/namespace.php:262
 msgid "Sign Out"
 msgstr "ಸೈನ್ ಔಟ್"
 
-#: inc/helpers/namespace.php:319
+#: inc/helpers/namespace.php:327
 msgid "Name is required."
 msgstr "ಹೆಸರು ಬೇಕು."
 
-#: inc/helpers/namespace.php:323
+#: inc/helpers/namespace.php:331
 msgid "Email is required."
 msgstr "ಇಮೇಲ್ ಅಗತ್ಯವಿದೆ."
 
-#: inc/helpers/namespace.php:327
+#: inc/helpers/namespace.php:335
 msgid "Email is invalid."
 msgstr "ಇಮೇಲ್ ಅಮಾನ್ಯವಾಗಿದೆ."
 
-#: inc/helpers/namespace.php:331
+#: inc/helpers/namespace.php:339
 msgid "Institution is required."
 msgstr "ಸಂಸ್ಥೆಯ ಅಗತ್ಯವಿದೆ."
 
-#: inc/helpers/namespace.php:335
+#: inc/helpers/namespace.php:343
 msgid "Message is required."
 msgstr "ಸಂದೇಶದ ಅಗತ್ಯವಿದೆ."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:342
+#: inc/helpers/namespace.php:350
 msgid "Contact Form Submission from %s"
 msgstr "%s ನಿಂದ ಸಂಪರ್ಕ ನಮೂನೆ ಸಲ್ಲಿಕೆ"
 
-#: inc/helpers/namespace.php:353
+#: inc/helpers/namespace.php:361
 msgid "Your message was sent!"
 msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲಾಗಿದೆ!"
 
-#: inc/helpers/namespace.php:356
+#: inc/helpers/namespace.php:364
 msgid "Your message could not be sent."
 msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
 
@@ -474,31 +513,31 @@ msgstr "ಯಾವುದೇ ಪುಸ್ತಕಗಳು ಕಂಡುಬಂದಿ�
 msgid "No books have been added to the catalog yet."
 msgstr ""
 
-#: partials/book.php:39
+#: partials/book.php:47
 msgid "About this book"
 msgstr "ಈ ಪುಸ್ತಕದ ಬಗ್ಗೆ"
 
-#: partials/contact-form.php:29
+#: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
 msgstr "ಈ ಫೀಲ್ಡ್ ಅನ್ನು ಖಾಲಿ ಇರಿಸಿ (ಅಗತ್ಯ)"
 
-#: partials/contact-form.php:45
+#: partials/contact-form.php:46
 msgid "Your name (required)"
 msgstr "ನಿಮ್ಮ ಹೆಸರು (ಅಗತ್ಯ)"
 
-#: partials/contact-form.php:61
+#: partials/contact-form.php:62
 msgid "Your email address (required)"
 msgstr "ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ (ಅಗತ್ಯ)"
 
-#: partials/contact-form.php:77
+#: partials/contact-form.php:78
 msgid "Your institution (required)"
 msgstr "ನಿಮ್ಮ ಸಂಸ್ಥೆ (ಅಗತ್ಯ)"
 
-#: partials/contact-form.php:93
+#: partials/contact-form.php:94
 msgid "Your message (required)"
 msgstr "ನಿಮ್ಮ ಸಂದೇಶ (ಅಗತ್ಯ)"
 
-#: partials/contact-form.php:97
+#: partials/contact-form.php:98
 msgid "Send"
 msgstr "ಕಳುಹಿಸು"
 
@@ -583,7 +622,11 @@ msgstr "ಸಂಪಾದನೆ <span class=\"screen-reader-text\">%s</span>"
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "ಓದುವುದನ್ನು ಮುಂದುವರಿಸಿ<span class=\"screen-reader-text\"> %s \"</span>"
 
-#: partials/paged-navigation.php:2
+#: partials/paged-navigation.php:12
+msgid "Navigation"
+msgstr ""
+
+#: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
 msgstr ""
 
@@ -592,12 +635,12 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "ಹುಡುಕಾಟದ ಫಲಿತಾಂಶಗಳು %1$s %2$s"
 
-#: searchform.php:3
+#: searchform.php:11
 msgctxt "label"
 msgid "Search Catalog"
 msgstr "ಕ್ಯಾಟಲಾಗ್‍ನಲ್ಲಿ ಹುಡುಕಿ"
 
-#: searchform.php:6
+#: searchform.php:14
 msgctxt "submit button"
 msgid "Search"
 msgstr "ಹುಡುಕಿ"
