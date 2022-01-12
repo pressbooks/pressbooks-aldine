@@ -239,16 +239,16 @@
         },
         {
             "name": "spatie/color",
-            "version": "v1.3.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/color.git",
-                "reference": "fafbf8900541230e10abb2b165990e4758c28024"
+                "reference": "c0615ecb8cb3b6d769eb1d479d999aaaebb65e55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/color/zipball/fafbf8900541230e10abb2b165990e4758c28024",
-                "reference": "fafbf8900541230e10abb2b165990e4758c28024",
+                "url": "https://api.github.com/repos/spatie/color/zipball/c0615ecb8cb3b6d769eb1d479d999aaaebb65e55",
+                "reference": "c0615ecb8cb3b6d769eb1d479d999aaaebb65e55",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-06T08:57:14+00:00"
+            "time": "2022-01-11T18:45:48+00:00"
         }
     ],
     "packages-dev": [
