@@ -20,6 +20,7 @@ if ( $date ) {
 	?>
 	data-date-published="<?php echo $date; ?>"<?php } ?>
 	data-license="<?php echo ( new \Pressbooks\Licensing() )->getLicenseFromUrl( $book['metadata']['license']['url'] ); ?>"
+	data-institution="<?php echo implode( ',', $institutions ); ?>"
 	<?php
 	if ( ! empty( $subject ) ) {
 		?>

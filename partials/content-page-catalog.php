@@ -35,6 +35,21 @@
 			<?php endforeach; ?>
 			</div>
 		</fieldset>
+		<fieldset class="institution-filters">
+			<h2><?php _e( 'Filter by Institution', 'pressbooks-aldine' ); ?></h2>
+			<input type="radio" name="institution" id="all-institutions" value="" <?php checked( $institution, '' ); ?>>
+			<label for="all-institutions"><?php _e( 'All Institutions', 'pressbooks-aldine' ); ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+			<?php
+			foreach ( $institutions as $key => $value ) :
+				if ( in_array( $key, $available_institutions, true ) ) :
+					?>
+					<input type="radio" name="institution" id="<?php echo $key; ?>" value="<?php echo $key; ?>" <?php checked( $institution, $key ); ?>>
+					<label for="<?php echo $key; ?>"><?php echo $value; ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
+					<?php
+				endif;
+			endforeach;
+			?>
+		</fieldset>
 		<fieldset class="license-filters">
 			<h2><?php _e( 'Filter by License', 'pressbooks-aldine' ); ?></h2>
 			<input type="radio" name="license" id="all-licenses" value="" <?php checked( $license, '' ); ?>>

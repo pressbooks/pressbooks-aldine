@@ -149,6 +149,40 @@ function get_available_licenses( $catalog_data ) {
 }
 
 /**
+ * Get institutions for catalog display.
+ *
+ * @return array
+ */
+function get_institutions(): array {
+	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
+		return [];
+	}
+
+	return \Pressbooks\Metadata\get_institutions();
+}
+
+/**
+ * Get institutions currently in use.
+ *
+ * @param array $catalog_data Catalog data
+ * @param array $institutions
+ *
+ * @return array
+ */
+function get_available_institutions( array $catalog_data, array $institutions = [] ): array {
+	$institutions = $institutions ?? get_institutions();
+	$book_institutions = array_reduce( $catalog_data['books'], static function( $carry, $book ) {
+		$names = array_reduce( $book['metadata']['institutions'] ?? [], static function( $carry, $institution ) {
+			return array_merge( $carry, [ $institution['name'] ] );
+		}, [] );
+
+		return array_merge( $carry, $names );
+	}, [] );
+
+	return array_intersect( $institutions, $book_institutions );
+}
+
+/**
  * Get subjects currently in use.
  *
  * @param array $catalog_data Catalog data
