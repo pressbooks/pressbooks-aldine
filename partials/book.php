@@ -7,11 +7,12 @@
 
 use function \Aldine\Helpers\maybe_truncate_string;
 use function \Pressbooks\Metadata\is_bisac;
-?>
 
-<?php
 $subject = ( isset( $book['subject'] ) && ! is_bisac( $book['subject'] ) ) ? substr( $book['subject'], 0, 2 ) : '';
 $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', $book['metadata']['datePublished'] ) : '';
+$institutions = array_reduce( $book['metadata']['institutions'] ?? [], static function ( $carry, $item ) {
+	return array_merge( $carry, [ $item['name'] ] );
+}, [] );
 ?>
 <li class="book"
 <?php
@@ -19,6 +20,7 @@ if ( $date ) {
 	?>
 	data-date-published="<?php echo $date; ?>"<?php } ?>
 	data-license="<?php echo ( new \Pressbooks\Licensing() )->getLicenseFromUrl( $book['metadata']['license']['url'] ); ?>"
+	data-institution="<?php echo implode( ',', $institutions ); ?>"
 	<?php
 	if ( ! empty( $subject ) ) {
 		?>
@@ -43,6 +45,11 @@ if ( $date ) {
 		<a href="<?php echo network_home_url( "/catalog/#$subject" ) ?>"><?php echo \Pressbooks\Metadata\get_subject_from_thema( $book['subject'] ); ?></a>
 	</p>
 	<?php } ?>
+	<?php if ( $institutions ) : ?>
+	<p class="book__institutions">
+		<?php echo implode( ', ', $institutions ); ?>
+	</p>
+	<?php endif; ?>
 	<p class="book__read-more">
 		<a href="<?php echo $book['link']; ?>"><?php _e( 'About this book', 'pressbooks-aldine' ); ?> <svg aria-hidden="true"><use xlink:href="#arrow-right" /></svg></a>
 	</p>

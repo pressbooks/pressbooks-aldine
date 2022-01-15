@@ -11,10 +11,13 @@
   border: solid 2px var(--accent);
   background: var(--accent);
 
-  a {
-    margin: 0;
+  a, p {
     font-family: $font-family-sans-serif;
     color: var(--accent-fg);
+  }
+
+  a {
+    margin: 0;
     text-decoration: none;
     text-align: center;
     hyphens: auto;
@@ -36,6 +39,16 @@
       font-size: 1rem;
     }
     text-align: left;
+  }
+
+  &__institutions {
+    margin: .5rem 0 0 0;
+    font-size: 0.875rem;
+    text-align: left;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   &__read-more {
