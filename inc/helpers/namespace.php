@@ -165,7 +165,7 @@ function get_institutions(): array {
  * Get institutions currently in use.
  *
  * @param array $catalog_data Catalog data
- * @param array $institutions
+ * @param array $institutions Institutions
  *
  * @return array
  */
