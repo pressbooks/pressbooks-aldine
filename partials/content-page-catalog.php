@@ -41,7 +41,7 @@
 			<label for="all-institutions"><?php _e( 'All Institutions', 'pressbooks-aldine' ); ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>
 			<?php
 			foreach ( $institutions as $key => $value ) :
-				if ( in_array( $key, $available_institutions, true ) ) :
+				if ( array_key_exists( $key, $available_institutions ) ) :
 					?>
 					<input type="radio" name="institution" id="<?php echo $key; ?>" value="<?php echo $key; ?>" <?php checked( $institution, $key ); ?>>
 					<label for="<?php echo $key; ?>"><?php echo $value; ?> <svg class="checked"><use xlink:href="#checkmark" /></svg></label>

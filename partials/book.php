@@ -10,9 +10,12 @@ use function \Pressbooks\Metadata\is_bisac;
 
 $subject = ( isset( $book['subject'] ) && ! is_bisac( $book['subject'] ) ) ? substr( $book['subject'], 0, 2 ) : '';
 $date = ( isset( $book['metadata']['datePublished'] ) ) ? str_replace( '-', '', $book['metadata']['datePublished'] ) : '';
-$institutions = array_reduce( $book['metadata']['institutions'] ?? [], static function ( $carry, $item ) {
-	return array_merge( $carry, [ $item['name'] ] );
-}, [] );
+$institution_codes = array_map( static function ( $item ) {
+	return $item['code'];
+}, $book['metadata']['institutions'] ?? [] );
+$institution_names = array_map( static function ( $item ) {
+	return \Pressbooks\Metadata\get_institution_by_code( $item['code'] );
+}, $book['metadata']['institutions'] ?? [] );
 ?>
 <li class="book"
 <?php
@@ -20,7 +23,7 @@ if ( $date ) {
 	?>
 	data-date-published="<?php echo $date; ?>"<?php } ?>
 	data-license="<?php echo ( new \Pressbooks\Licensing() )->getLicenseFromUrl( $book['metadata']['license']['url'] ); ?>"
-	data-institution="<?php echo implode( ',', $institutions ); ?>"
+	data-institution="<?php echo implode( ',', $institution_codes ); ?>"
 	<?php
 	if ( ! empty( $subject ) ) {
 		?>
@@ -45,9 +48,9 @@ if ( $date ) {
 		<a href="<?php echo network_home_url( "/catalog/#$subject" ) ?>"><?php echo \Pressbooks\Metadata\get_subject_from_thema( $book['subject'] ); ?></a>
 	</p>
 	<?php } ?>
-	<?php if ( $institutions ) : ?>
+	<?php if ( $institution_names ) : ?>
 	<p class="book__institutions">
-		<?php echo implode( ', ', $institutions ); ?>
+		<?php echo implode( ', ', $institution_names ); ?>
 	</p>
 	<?php endif; ?>
 	<p class="book__read-more">
