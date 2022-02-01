@@ -1,15 +1,15 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
-# Omshivaprakash H L <omshivaprakash@gmail.com>, 2021
+# Omshivaprakash H L <omshivaprakash@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.12.0\n"
+"Project-Id-Version: Aldine 1.13.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-12-19T15:36:57+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:24:33+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
+"Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2022\n"
 "Language-Team: Kannada (https://www.transifex.com/pressbooks/teams/9194/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -98,7 +98,7 @@ msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟ�
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:110 inc/helpers/namespace.php:201
+#: footer.php:110 inc/helpers/namespace.php:235
 msgid "Contact"
 msgstr "ಸಂಪರ್ಕಿಸಿ"
 
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Page Section"
 msgstr "ಪುಟ ವಿಭಾಗ"
 
-#: inc/actions/namespace.php:295 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "ಶೀರ್ಷಿಕೆ"
 
@@ -315,7 +315,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "ಕ್ಯಾಟಲಾಗ್"
 
-#: inc/activation/namespace.php:92 inc/helpers/namespace.php:193
+#: inc/activation/namespace.php:92 inc/helpers/namespace.php:227
 msgid "Home"
 msgstr "ಮುಖಪುಟ"
 
@@ -444,60 +444,60 @@ msgstr "ಸಂಪರ್ಕ ಲಿಂಕ್"
 msgid "Continued"
 msgstr "ಮುಂದುವರಿಸಿದೆ"
 
-#: inc/helpers/namespace.php:210
+#: inc/helpers/namespace.php:244
 msgid "Sign In"
 msgstr "ಸೈನ್ ಇನ್"
 
-#: inc/helpers/namespace.php:218
+#: inc/helpers/namespace.php:252
 msgid "Sign Up"
 msgstr "ಸೈನ್ ಅಪ್ ಮಾಡಿ"
 
-#: inc/helpers/namespace.php:228 inc/helpers/namespace.php:236
+#: inc/helpers/namespace.php:262 inc/helpers/namespace.php:270
 msgid "Admin"
 msgstr "ನಿರ್ವಹಣೆಗಾರ"
 
-#: inc/helpers/namespace.php:246
+#: inc/helpers/namespace.php:280
 msgid "My Books"
 msgstr "ನನ್ನ ಪುಸ್ತಕಗಳು"
 
-#: inc/helpers/namespace.php:254
+#: inc/helpers/namespace.php:288
 msgid "Create a New Book"
 msgstr "ಹೊಸ ಪುಸ್ತಕವನ್ನು ರಚಿಸಿ"
 
-#: inc/helpers/namespace.php:262
+#: inc/helpers/namespace.php:296
 msgid "Sign Out"
 msgstr "ಸೈನ್ ಔಟ್"
 
-#: inc/helpers/namespace.php:327
+#: inc/helpers/namespace.php:361
 msgid "Name is required."
 msgstr "ಹೆಸರು ಬೇಕು."
 
-#: inc/helpers/namespace.php:331
+#: inc/helpers/namespace.php:365
 msgid "Email is required."
 msgstr "ಇಮೇಲ್ ಅಗತ್ಯವಿದೆ."
 
-#: inc/helpers/namespace.php:335
+#: inc/helpers/namespace.php:369
 msgid "Email is invalid."
 msgstr "ಇಮೇಲ್ ಅಮಾನ್ಯವಾಗಿದೆ."
 
-#: inc/helpers/namespace.php:339
+#: inc/helpers/namespace.php:373
 msgid "Institution is required."
 msgstr "ಸಂಸ್ಥೆಯ ಅಗತ್ಯವಿದೆ."
 
-#: inc/helpers/namespace.php:343
+#: inc/helpers/namespace.php:377
 msgid "Message is required."
 msgstr "ಸಂದೇಶದ ಅಗತ್ಯವಿದೆ."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:350
+#: inc/helpers/namespace.php:384
 msgid "Contact Form Submission from %s"
 msgstr "%s ನಿಂದ ಸಂಪರ್ಕ ನಮೂನೆ ಸಲ್ಲಿಕೆ"
 
-#: inc/helpers/namespace.php:361
+#: inc/helpers/namespace.php:395
 msgid "Your message was sent!"
 msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲಾಗಿದೆ!"
 
-#: inc/helpers/namespace.php:364
+#: inc/helpers/namespace.php:398
 msgid "Your message could not be sent."
 msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
 
@@ -505,15 +505,15 @@ msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು 
 msgid "Hello,"
 msgstr "ಹಲೋ,"
 
-#: page-catalog.php:55
+#: page-catalog.php:60
 msgid "No Books Found"
 msgstr "ಯಾವುದೇ ಪುಸ್ತಕಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: page-catalog.php:58
+#: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
 msgstr ""
 
-#: partials/book.php:47
+#: partials/book.php:57
 msgid "About this book"
 msgstr "ಈ ಪುಸ್ತಕದ ಬಗ್ಗೆ"
 
@@ -581,30 +581,38 @@ msgid "All Subjects"
 msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳು"
 
 #: partials/content-page-catalog.php:39
+msgid "Filter by Institution"
+msgstr ""
+
+#: partials/content-page-catalog.php:41
+msgid "All Institutions"
+msgstr ""
+
+#: partials/content-page-catalog.php:54
 msgid "Filter by License"
 msgstr "ಪರವಾನಗಿಯಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಿ"
 
-#: partials/content-page-catalog.php:41
+#: partials/content-page-catalog.php:56
 msgid "All Licenses"
 msgstr "ಎಲ್ಲಾ ಪರವಾನಗಿಗಳು"
 
-#: partials/content-page-catalog.php:54
+#: partials/content-page-catalog.php:69
 msgid "Sort by"
 msgstr "ಅಂತೆ ವಿಂಗಡಿಸಿ"
 
-#: partials/content-page-catalog.php:58
+#: partials/content-page-catalog.php:73
 msgid "Subject"
 msgstr "ವಿಷಯ"
 
-#: partials/content-page-catalog.php:59
+#: partials/content-page-catalog.php:74
 msgid "Latest"
 msgstr "ಇತ್ತೀಚಿನ"
 
-#: partials/content-page-catalog.php:67
+#: partials/content-page-catalog.php:82
 msgid "Clear Filters"
 msgstr "ಫಿಲ್ಟರ್ ಗಳನ್ನು ತೆರವುಗೊಳಿಸು"
 
-#: partials/content-page-catalog.php:68
+#: partials/content-page-catalog.php:83
 msgid "Submit"
 msgstr "ಸಲ್ಲಿಸು"
 
@@ -624,7 +632,7 @@ msgstr "ಓದುವುದನ್ನು ಮುಂದುವರಿಸಿ<span class
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "ನ್ಯಾವಿಗೇಶನ್"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"

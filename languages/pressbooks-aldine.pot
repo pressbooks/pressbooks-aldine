@@ -1,17 +1,17 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.12.0\n"
+"Project-Id-Version: Aldine 1.13.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-19T15:36:57+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:24:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: pressbooks-aldine\n"
 
 #. Theme Name of the theme
@@ -91,7 +91,7 @@ msgid "Pressbooks Directory"
 msgstr ""
 
 #: footer.php:110
-#: inc/helpers/namespace.php:201
+#: inc/helpers/namespace.php:235
 msgid "Contact"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgid "Page Section"
 msgstr ""
 
 #: inc/actions/namespace.php:295
-#: partials/content-page-catalog.php:57
+#: partials/content-page-catalog.php:72
 msgid "Title"
 msgstr ""
 
@@ -288,7 +288,7 @@ msgid "Catalog"
 msgstr ""
 
 #: inc/activation/namespace.php:92
-#: inc/helpers/namespace.php:193
+#: inc/helpers/namespace.php:227
 msgid "Home"
 msgstr ""
 
@@ -418,61 +418,61 @@ msgstr ""
 msgid "Continued"
 msgstr ""
 
-#: inc/helpers/namespace.php:210
+#: inc/helpers/namespace.php:244
 msgid "Sign In"
 msgstr ""
 
-#: inc/helpers/namespace.php:218
+#: inc/helpers/namespace.php:252
 msgid "Sign Up"
 msgstr ""
 
-#: inc/helpers/namespace.php:228
-#: inc/helpers/namespace.php:236
+#: inc/helpers/namespace.php:262
+#: inc/helpers/namespace.php:270
 msgid "Admin"
 msgstr ""
 
-#: inc/helpers/namespace.php:246
+#: inc/helpers/namespace.php:280
 msgid "My Books"
 msgstr ""
 
-#: inc/helpers/namespace.php:254
+#: inc/helpers/namespace.php:288
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:262
+#: inc/helpers/namespace.php:296
 msgid "Sign Out"
 msgstr ""
 
-#: inc/helpers/namespace.php:327
+#: inc/helpers/namespace.php:361
 msgid "Name is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:331
+#: inc/helpers/namespace.php:365
 msgid "Email is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:335
+#: inc/helpers/namespace.php:369
 msgid "Email is invalid."
 msgstr ""
 
-#: inc/helpers/namespace.php:339
+#: inc/helpers/namespace.php:373
 msgid "Institution is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:343
+#: inc/helpers/namespace.php:377
 msgid "Message is required."
 msgstr ""
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:350
+#: inc/helpers/namespace.php:384
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:361
+#: inc/helpers/namespace.php:395
 msgid "Your message was sent!"
 msgstr ""
 
-#: inc/helpers/namespace.php:364
+#: inc/helpers/namespace.php:398
 msgid "Your message could not be sent."
 msgstr ""
 
@@ -480,15 +480,15 @@ msgstr ""
 msgid "Hello,"
 msgstr ""
 
-#: page-catalog.php:55
+#: page-catalog.php:60
 msgid "No Books Found"
 msgstr ""
 
-#: page-catalog.php:58
+#: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
 msgstr ""
 
-#: partials/book.php:47
+#: partials/book.php:57
 msgid "About this book"
 msgstr ""
 
@@ -546,30 +546,38 @@ msgid "All Subjects"
 msgstr ""
 
 #: partials/content-page-catalog.php:39
-msgid "Filter by License"
+msgid "Filter by Institution"
 msgstr ""
 
 #: partials/content-page-catalog.php:41
-msgid "All Licenses"
+msgid "All Institutions"
 msgstr ""
 
 #: partials/content-page-catalog.php:54
+msgid "Filter by License"
+msgstr ""
+
+#: partials/content-page-catalog.php:56
+msgid "All Licenses"
+msgstr ""
+
+#: partials/content-page-catalog.php:69
 msgid "Sort by"
 msgstr ""
 
-#: partials/content-page-catalog.php:58
+#: partials/content-page-catalog.php:73
 msgid "Subject"
 msgstr ""
 
-#: partials/content-page-catalog.php:59
+#: partials/content-page-catalog.php:74
 msgid "Latest"
 msgstr ""
 
-#: partials/content-page-catalog.php:67
+#: partials/content-page-catalog.php:82
 msgid "Clear Filters"
 msgstr ""
 
-#: partials/content-page-catalog.php:68
+#: partials/content-page-catalog.php:83
 msgid "Submit"
 msgstr ""
 
