@@ -1,13 +1,13 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Nienke Coppens <nienke.coppens@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.12.0\n"
+"Project-Id-Version: Aldine 1.13.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2021-12-19T15:36:57+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:24:33+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Nienke Coppens <nienke.coppens@gmail.com>, 2020\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/pressbooks/teams/9194/nl_NL/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -98,7 +98,7 @@ msgstr "Handleidingen en Tutorials"
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:110 inc/helpers/namespace.php:201
+#: footer.php:110 inc/helpers/namespace.php:235
 msgid "Contact"
 msgstr "Contact"
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Page Section"
 msgstr "Pagina Sectie"
 
-#: inc/actions/namespace.php:295 partials/content-page-catalog.php:57
+#: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "Titel"
 
@@ -314,7 +314,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "Catalogus"
 
-#: inc/activation/namespace.php:92 inc/helpers/namespace.php:193
+#: inc/activation/namespace.php:92 inc/helpers/namespace.php:227
 msgid "Home"
 msgstr "Home"
 
@@ -449,60 +449,60 @@ msgstr "Contact Link"
 msgid "Continued"
 msgstr "Voortgezet"
 
-#: inc/helpers/namespace.php:210
+#: inc/helpers/namespace.php:244
 msgid "Sign In"
 msgstr "Inloggen"
 
-#: inc/helpers/namespace.php:218
+#: inc/helpers/namespace.php:252
 msgid "Sign Up"
 msgstr "Aanmelden"
 
-#: inc/helpers/namespace.php:228 inc/helpers/namespace.php:236
+#: inc/helpers/namespace.php:262 inc/helpers/namespace.php:270
 msgid "Admin"
 msgstr "Beheer"
 
-#: inc/helpers/namespace.php:246
+#: inc/helpers/namespace.php:280
 msgid "My Books"
 msgstr "Mijn Boeken"
 
-#: inc/helpers/namespace.php:254
+#: inc/helpers/namespace.php:288
 msgid "Create a New Book"
 msgstr "Maak een Nieuw Boek"
 
-#: inc/helpers/namespace.php:262
+#: inc/helpers/namespace.php:296
 msgid "Sign Out"
 msgstr "Uitloggen"
 
-#: inc/helpers/namespace.php:327
+#: inc/helpers/namespace.php:361
 msgid "Name is required."
 msgstr "Naam is verplicht"
 
-#: inc/helpers/namespace.php:331
+#: inc/helpers/namespace.php:365
 msgid "Email is required."
 msgstr "E-mail is verplicht"
 
-#: inc/helpers/namespace.php:335
+#: inc/helpers/namespace.php:369
 msgid "Email is invalid."
 msgstr "E-mail is ongeldig."
 
-#: inc/helpers/namespace.php:339
+#: inc/helpers/namespace.php:373
 msgid "Institution is required."
 msgstr "Insituut is verplicht"
 
-#: inc/helpers/namespace.php:343
+#: inc/helpers/namespace.php:377
 msgid "Message is required."
 msgstr "Bericht is verplicht."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:350
+#: inc/helpers/namespace.php:384
 msgid "Contact Form Submission from %s"
 msgstr "Contactformulier Invoerformulier"
 
-#: inc/helpers/namespace.php:361
+#: inc/helpers/namespace.php:395
 msgid "Your message was sent!"
 msgstr "Uw bericht is verxonden!"
 
-#: inc/helpers/namespace.php:364
+#: inc/helpers/namespace.php:398
 msgid "Your message could not be sent."
 msgstr "Uw bericht kon niet worden verzonden."
 
@@ -510,15 +510,15 @@ msgstr "Uw bericht kon niet worden verzonden."
 msgid "Hello,"
 msgstr "Hallo,"
 
-#: page-catalog.php:55
+#: page-catalog.php:60
 msgid "No Books Found"
 msgstr "Geen Boeken Gevonden"
 
-#: page-catalog.php:58
+#: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
 msgstr ""
 
-#: partials/book.php:47
+#: partials/book.php:57
 msgid "About this book"
 msgstr "Over dit boek"
 
@@ -585,30 +585,38 @@ msgid "All Subjects"
 msgstr "Alle Onderwerpen"
 
 #: partials/content-page-catalog.php:39
+msgid "Filter by Institution"
+msgstr ""
+
+#: partials/content-page-catalog.php:41
+msgid "All Institutions"
+msgstr ""
+
+#: partials/content-page-catalog.php:54
 msgid "Filter by License"
 msgstr "Filter op Licentie"
 
-#: partials/content-page-catalog.php:41
+#: partials/content-page-catalog.php:56
 msgid "All Licenses"
 msgstr "Alle Licenties"
 
-#: partials/content-page-catalog.php:54
+#: partials/content-page-catalog.php:69
 msgid "Sort by"
 msgstr "Sorteer op"
 
-#: partials/content-page-catalog.php:58
+#: partials/content-page-catalog.php:73
 msgid "Subject"
 msgstr "Onderwerp"
 
-#: partials/content-page-catalog.php:59
+#: partials/content-page-catalog.php:74
 msgid "Latest"
 msgstr "Laatste"
 
-#: partials/content-page-catalog.php:67
+#: partials/content-page-catalog.php:82
 msgid "Clear Filters"
 msgstr "Filters Wissen"
 
-#: partials/content-page-catalog.php:68
+#: partials/content-page-catalog.php:83
 msgid "Submit"
 msgstr "Verzenden"
 
