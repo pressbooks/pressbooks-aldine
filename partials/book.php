@@ -14,7 +14,7 @@ $institution_codes = array_map( static function ( $item ) {
 	return $item['code'];
 }, $book['metadata']['institutions'] ?? [] );
 $institution_names = array_map( static function ( $item ) {
-	return \Pressbooks\Metadata\get_institution_by_code( $item['code'] );
+	return \Pressbooks\Metadata\get_institution_name( $item['code'] );
 }, $book['metadata']['institutions'] ?? [] );
 ?>
 <li class="book"
