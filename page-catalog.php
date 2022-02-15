@@ -27,7 +27,7 @@ $next_page = $current_page + 1;
 $licenses = get_catalog_licenses();
 $available_licenses = get_available_licenses( $catalog_data );
 $institutions = get_institutions();
-$available_institutions = get_available_institutions( $catalog_data, $institutions );
+$available_institutions = get_available_institutions( $catalog_data );
 $subjects = ( defined( 'PB_PLUGIN_VERSION' ) ) ? \Pressbooks\Metadata\get_thema_subjects() : [];
 $available_subjects = get_available_subjects( $catalog_data );
 

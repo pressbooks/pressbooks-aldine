@@ -158,19 +158,18 @@ function get_institutions(): array {
 		return [];
 	}
 
-	return \Pressbooks\Metadata\get_institutions();
+	return \Pressbooks\Metadata\get_institutions_flattened();
 }
 
 /**
  * Get institutions currently in use.
  *
  * @param array $catalog_data Catalog data
- * @param array $institutions Institutions
  *
  * @return array
  */
-function get_available_institutions( array $catalog_data, array $institutions = [] ): array {
-	$institutions = $institutions ?? get_institutions();
+function get_available_institutions( array $catalog_data ): array {
+	$institution_list = get_institutions();
 	$book_institutions = array_reduce( $catalog_data['books'], static function( $carry, $book ) {
 		$names = array_reduce( $book['metadata']['institutions'] ?? [], static function( $carry, $institution ) {
 			return array_merge( $carry, [ $institution['name'] ] );
@@ -179,7 +178,7 @@ function get_available_institutions( array $catalog_data, array $institutions = 
 		return array_merge( $carry, $names );
 	}, [] );
 
-	return array_intersect( $institutions, $book_institutions );
+	return array_intersect( $institution_list, $book_institutions );
 }
 
 /**
