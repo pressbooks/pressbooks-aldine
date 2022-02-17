@@ -26,6 +26,7 @@
 	"require": {
 		"php": ">=7.3",
 		"composer/installers": "^1.7",
+		"phpcompatibility/php-compatibility": "^9.3",
 		"pressbooks/mix": "^2.1",
 		"soberwp/intervention": "1.2.0-p",
 		"spatie/color": "^1.1"
