@@ -7,7 +7,7 @@
 # Hubert GB <hgblouin@tciinc.ca>, 2019
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
-# Steel Wagstaff <steel@pressbooks.com>, 2019
+# Steel Wagstaff <steel@pressbooks.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2022-02-22T21:53:05+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -242,7 +242,7 @@ msgstr ""
 
 #: inc/activation/namespace.php:46
 msgid "Contact us"
-msgstr ""
+msgstr "Contactez-nous"
 
 #: inc/activation/namespace.php:52 inc/activation/namespace.php:195
 #: inc/activation/namespace.php:201
