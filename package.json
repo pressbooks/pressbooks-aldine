@@ -68,7 +68,7 @@
 		"lint:styles": "stylelint \"assets/styles/**/*.scss\" --syntax scss"
 	},
 	"engines": {
-		"node": ">= 10"
+		"node": ">= 14"
 	},
 	"devDependencies": {
 		"pressbooks-build-tools": "^3.0.1"
