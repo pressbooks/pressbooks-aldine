@@ -38,9 +38,6 @@ $includes = [
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
-if ( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-	require get_template_directory() . '/inc/intervention.php';
-}
 
 add_action( 'after_switch_theme', '\Aldine\Activation\create_default_content', 10 );
 add_action( 'after_switch_theme', '\Aldine\Activation\create_menus', 11 );
@@ -59,7 +56,9 @@ add_filter( 'excerpt_more', '\Aldine\Filters\excerpt_more' );
 add_filter( 'query_vars', '\Aldine\Filters\register_query_vars' );
 add_filter( 'wp_nav_menu_items', '\Aldine\Filters\adjust_menu', 10, 2 );
 add_filter( 'the_content', 'do_shortcode' );
+add_filter( 'show_admin_bar', '__return_false' );
 add_action( 'widgets_init', '\Aldine\Actions\widgets_init' );
+add_action( 'widgets_init', '\Aldine\Actions\remove_widgets' );
 add_action( 'wp_enqueue_scripts', '\Aldine\Actions\enqueue_assets' );
 add_action( 'updated_option', '\Aldine\Actions\add_color_variants', 10, 3 );
 add_action( 'customize_register', '\Aldine\Customizer\customize_register' );
@@ -79,5 +78,5 @@ add_filter( 'wpmu_blogs_columns', '\Aldine\Admin\catalog_columns' );
 add_action( 'manage_blogs_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
 add_action( 'manage_sites_custom_column', '\Aldine\Admin\catalog_column', 1, 3 );
 
-// Remove first submenu page from Tools.
-add_action( 'admin_menu', '\Aldine\Actions\remove_tools_menu' );
+// Remove unwanted menu pages.
+add_action( 'admin_menu', '\Aldine\Actions\remove_menu_items' );
