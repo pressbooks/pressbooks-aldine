@@ -309,10 +309,40 @@ function tinymce_l18n() {
 }
 
 /**
- * Remove top-level tools menu.
+ * Remove unwanted menu pages.
  *
- * @since 1.4.0
+ * @since 1.15.0
  */
-function remove_tools_menu() {
+function remove_menu_items() {
+	remove_menu_page( 'edit.php' );
+	remove_submenu_page( 'tools.php', 'import.php' );
+	remove_submenu_page( 'tools.php', 'export.php' );
 	remove_submenu_page( 'tools.php', 'tools.php' );
+	remove_submenu_page( 'options-general.php', 'options-writing.php' );
+	remove_submenu_page( 'options-general.php', 'options-reading.php' );
+	remove_submenu_page( 'options-general.php', 'options-permalink.php' );
+}
+
+/**
+ * Remove unwanted widgets.
+ *
+ * @since 1.15.0
+ */
+function remove_widgets() {
+	unregister_widget('WP_Widget_Pages');
+	unregister_widget('WP_Widget_Calendar');
+	unregister_widget('WP_Widget_Archives');
+	unregister_widget('WP_Widget_Links');
+	unregister_widget('WP_Widget_Meta');
+	unregister_widget('WP_Widget_Search');
+	unregister_widget('WP_Widget_Categories');
+	unregister_widget('WP_Widget_Recent_Posts');
+	unregister_widget('WP_Widget_Recent_Comments');
+	unregister_widget('WP_Widget_RSS');
+	unregister_widget('WP_Widget_Tag_Cloud');
+	unregister_widget('WP_Widget_Media_Audio');
+	unregister_widget('WP_Nav_Menu_Widget');
+	unregister_widget('WP_Widget_Custom_HTML');
+	unregister_widget('WP_Widget_Media_Video');
+	unregister_widget('Akismet_Widget');
 }

@@ -28,7 +28,6 @@
 		"composer/installers": "^2",
 		"phpcompatibility/php-compatibility": "^9.3",
 		"pressbooks/mix": "^2.1",
-		"soberwp/intervention": "2.0.0-rc.5",
 		"spatie/color": "^1.1"
 	},
 	"require-dev": {

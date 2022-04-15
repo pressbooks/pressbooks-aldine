@@ -20,6 +20,9 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	$wp_customize->remove_control( 'display_header_text' );
 	$wp_customize->remove_control( 'header_textcolor' );
 
+	// Remove unsupported WP section, @see \WP_Customize_Manager::register_sections.
+	$wp_customize->remove_section( 'static_front_page' );
+
 	// Add Pressbooks controls.
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
