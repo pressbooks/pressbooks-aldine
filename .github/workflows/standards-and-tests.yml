@@ -1,7 +1,7 @@
 name: Run Standards & Tests
 on:
   push:
-    branches: [ dev, main ]
+    branches: [ dev, master ]
     tags:
       - '*.*.*'
   pull_request:
@@ -41,11 +41,11 @@ jobs:
           path: vendor
           key: php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
 
-      - name: Setup PHP
+      - name: Setup PHP with Composer 2
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: phpcs, composer:v1
+          tools: phpcs, composer
           coverage: pcov
 
       - name: Install PHP dependencies
