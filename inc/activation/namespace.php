@@ -98,7 +98,7 @@ function create_default_content() {
 			],
 		];
 
-		if ( getenv('PB_CUSTOM_SIGNUP') ) {
+		if ( getenv( 'PB_CUSTOM_SIGNUP' ) ) {
 			$pages['register'] = [
 				'post_title' => __( 'Register', 'pressbooks-aldine' ),
 				'post_content' => '',

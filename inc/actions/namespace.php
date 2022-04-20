@@ -349,12 +349,11 @@ function remove_widgets() {
 
 /**
  * Override signup page if PB_CUSTOM_SIGNUP is set.
- *
  */
 function override_signup_page() {
 	global $pagenow;
-	if( getenv('PB_CUSTOM_SIGNUP') && ! is_user_logged_in() && $pagenow === 'wp-signup.php' ) {
-		wp_redirect( network_home_url('/register'));
+	if ( getenv( 'PB_CUSTOM_SIGNUP' ) && ! is_user_logged_in() && $pagenow === 'wp-signup.php' ) {
+		wp_redirect( network_home_url( '/register' ) );
 		exit();
 	}
 }
