@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Spectral:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+$header-font: 'Karla', sans-serif;
+$body-font: 'Spectral', serif;
+
 label {
   margin: 0 0 1rem;
   font-family: $font-family-sans-serif;
@@ -120,45 +125,108 @@ input[type="submit"] {
   }
 }
 
+// TODO: Add styles needed for signin/signup pages
 .signup {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  flex-wrap: wrap;
-  font-family: "Karla", serif;
+  line-height: 1.4;
 
-  @media #{$breakpoint-not-large} {
-    flex-direction: column;
-  }
+  &--wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-family: $header-font;
 
-  h2 {
-    line-height: 1;
-    text-transform: none;
-    text-align: left;
-    font-size: rem(48);
-    font-weight: normal;
-    &:before {
-      content: "";
-      margin-bottom: 0;
-      background: none;
+    @media #{$breakpoint-not-large} {
+      flex-direction: column;
     }
   }
 
-  .form__wrapper {
-    align-self: stretch;
-    background: var(--support-color);
-    flex: 1;
+  &--section {
+    width: 50%;
+    padding: 0 2rem;
   }
 
-  .social__wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  &--section:first-child {
+      background: $light-grey-blue;
+  }
+
+    &--header-title {
+      text-transform: none;
+      text-align: left;
+      font-size: $big-font-size;
+      font-weight: 400;
+
+      &::before {
+        content: "";
+        margin-bottom: 0;
+        background: none;
+      }
+    }
+  }
+
+.form {
+  width: 100%;
+
+  &--input-wrapper {
+    position: relative;
+  }
+
+  input[type="email"], input[type="text"] {
+    background: white;
+    border: solid 1px $dark-blue;
+    padding: 5px;
+    min-width: 66%;
+    font-weight: 400;
+    height: 40px;
+  }
+
+  label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #666;
+    transition: .3s;
+    z-index: 0;
+    font-size: $small-font-size;
+  }
+
+  input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    z-index: 999;
+    padding: 0 5px;
+    background: white;
+    color: #666;
+  }
+
+  input:focus + label {
+    top: -11px;
+    left: 5px;
+    z-index: 999;
+    padding: 0 5px;
+    background: white;
+    color: $dark-blue;
+  }
+
+  ::placeholder {
+    color: transparent;
+  }
+
+  input:focus {
+    border: 2px solid $dark-blue;
+  }
+
+  &button {
+    font-size: $medium-font-size;
+    text-transform: none;
+    padding: .5rem 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  &--input-description {
+    font-size: $tiny-font-size;
+  }
+}
+/*
 
     .social__buttons {
       display: flex;
@@ -177,3 +245,4 @@ input[type="submit"] {
     }
   }
 }
+*/
