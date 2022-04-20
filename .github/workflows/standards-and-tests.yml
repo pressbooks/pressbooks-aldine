@@ -1,4 +1,4 @@
-name: CI workflow
+name: Run Standards & Tests
 on:
   push:
     branches: [ dev, main ]
@@ -32,11 +32,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
       - name: Start required services
         run: sudo systemctl start mysql.service
 
@@ -46,12 +41,6 @@ jobs:
           path: vendor
           key: php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -59,24 +48,10 @@ jobs:
           tools: phpcs, composer:v1
           coverage: pcov
 
-      - name: Install Node dependencies
-        run: |
-          node -v
-          npm install
-        if: matrix.experimental == false
-
       - name: Install PHP dependencies
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
-
-      - name: Run Lint
-        run: npm run lint
-        if: matrix.experimental == false
-
-      - name: Run Frontend Tests
-        run: npm run test
-        if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer
         run: composer standards
