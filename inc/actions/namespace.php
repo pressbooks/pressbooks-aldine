@@ -346,3 +346,16 @@ function remove_widgets() {
 	unregister_widget( 'WP_Widget_Media_Video' );
 	unregister_widget( 'Akismet_Widget' );
 }
+
+/**
+ * Override signup page if PB_CUSTOM_SIGNUP is set.
+ *
+ */
+function override_signup_page() {
+	global $pagenow;
+	if( getenv('PB_CUSTOM_SIGNUP') && $pagenow === 'wp-signup.php' ) {
+		wp_redirect( network_home_url('/register'));
+		exit();
+	}
+}
+
