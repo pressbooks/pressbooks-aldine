@@ -64,8 +64,8 @@ $body-font: 'Spectral', serif;
   &--social-button {
     display: flex;
     align-items: center;
-    padding: 5px 15px;
-    width: 250px;
+    padding: 15px 20px;
+    width: 300px;
     background: $grey-blue;
     border: none;
     border-radius: 5px;
@@ -82,6 +82,7 @@ $body-font: 'Spectral', serif;
       fill: $dark-blue;
       margin-right: 15px;
       width: 30px;
+      height: 30px;
     }
   }
   &--social-button:hover {
