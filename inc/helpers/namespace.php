@@ -357,30 +357,30 @@ function handle_contact_form_submission() {
 			'message' => esc_textarea( $message ),
 		];
 		if ( empty( $name ) ) {
-			$output['message'] = __( 'Name is required.', 'pressbooks-aldine' );
+			$output['message'] = esc_html__( 'Name is required.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
 			$output['field'] = 'visitor_name';
 		} elseif ( empty( $email ) ) {
-			$output['message'] = __( 'Email is required.', 'pressbooks-aldine' );
+			$output['message'] = esc_html__( 'Email is required.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
 			$output['field'] = 'visitor_email';
 		} elseif ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
-			$output['message'] = __( 'Email is invalid.', 'pressbooks-aldine' );
+			$output['message'] = esc_html__( 'Email is invalid.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
 			$output['field'] = 'visitor_email';
 		} elseif ( empty( $institution ) ) {
-			$output['message'] = __( 'Institution is required.', 'pressbooks-aldine' );
+			$output['message'] = esc_html__( 'Institution is required.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
 			$output['field'] = 'visitor_institution';
 		} elseif ( empty( $message ) ) {
-			$output['message'] = __( 'Message is required.', 'pressbooks-aldine' );
+			$output['message'] = esc_html__( 'Message is required.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
 			$output['field'] = 'message';
 		} else {
 			$sent = wp_mail(
 				$contact_email,
 				/* translators: %s name of contact for submitter */
-				sprintf( __( 'Contact Form Submission from %s', 'pressbooks-aldine' ), $name ),
+				sprintf( esc_html__( 'Contact Form Submission from %s', 'pressbooks-aldine' ), $name ),
 				sprintf(
 					"From: %1\$s <%2\$s>\nInstitution: %3\$s\n\n%4\$s",
 					stripslashes( $name ),
@@ -391,10 +391,10 @@ function handle_contact_form_submission() {
 				"From: ${email}\r\nReply-To: ${email}\r\n"
 			);
 			if ( $sent ) {
-				$output['message'] = __( 'Your message was sent!', 'pressbooks-aldine' );
+				$output['message'] = esc_html__( 'Your message was sent!', 'pressbooks-aldine' );
 				$output['status'] = 'success';
 			} else {
-				$output['message'] = __( 'Your message could not be sent.', 'pressbooks-aldine' );
+				$output['message'] = esc_html__( 'Your message could not be sent.', 'pressbooks-aldine' );
 				$output['status'] = 'error';
 			}
 		}

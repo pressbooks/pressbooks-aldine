@@ -45,8 +45,8 @@ function setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(
 		[
-			'primary-menu' => __( 'Primary Menu', 'pressbooks-aldine' ),
-			'network-footer-menu' => __( 'Footer Menu', 'pressbooks-aldine' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'pressbooks-aldine' ),
+			'network-footer-menu' => esc_html__( 'Footer Menu', 'pressbooks-aldine' ),
 		]
 	);
 
@@ -119,8 +119,8 @@ function widgets_init() {
 	];
 	register_sidebar(
 		[
-			'name'          => __( 'Network Footer Block 1', 'pressbooks-aldine' ),
-			'description'   => __(
+			'name'          => esc_html__( 'Network Footer Block 1', 'pressbooks-aldine' ),
+			'description'   => esc_html__(
 				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the first row (on mobile) or the first column (on desktops).',
@@ -131,8 +131,8 @@ function widgets_init() {
 	);
 	register_sidebar(
 		[
-			'name'          => __( 'Network Footer Block 2', 'pressbooks-aldine' ),
-			'description'   => __(
+			'name'          => esc_html__( 'Network Footer Block 2', 'pressbooks-aldine' ),
+			'description'   => esc_html__(
 				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the second row (on mobile) or the middle column (on desktop).',
@@ -234,7 +234,7 @@ function hide_catalog_content_editor() {
 	if ( $pagename === 'Catalog' ) {
 		add_action(
 			'edit_form_after_title', function() {
-				printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
+				printf( '<p>%s</p>', esc_html__( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
 			}
 		);
 		remove_post_type_support( 'page', 'editor' );
@@ -291,17 +291,17 @@ function tinymce_l18n() {
 	<script type='text/javascript'>
 		const aldine = {
 			page_section: {
-				'title': '<?php _e( 'Page Section', 'pressbooks-aldine' ); ?>',
-				'title_label': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>',
-				'standard': '<?php _e( 'Standard', 'pressbooks-aldine' ); ?>',
-				'accent': '<?php _e( 'Accent', 'pressbooks-aldine' ); ?>',
-				'bordered': '<?php _e( 'Bordered', 'pressbooks-aldine' ); ?>',
-				'borderless': '<?php _e( 'Borderless', 'pressbooks-aldine' ); ?>'
+				'title': '<?php esc_html_e( 'Page Section', 'pressbooks-aldine' ); ?>',
+				'title_label': '<?php esc_html_e( 'Title', 'pressbooks-aldine' ); ?>',
+				'standard': '<?php esc_html_e( 'Standard', 'pressbooks-aldine' ); ?>',
+				'accent': '<?php esc_html_e( 'Accent', 'pressbooks-aldine' ); ?>',
+				'bordered': '<?php esc_html_e( 'Bordered', 'pressbooks-aldine' ); ?>',
+				'borderless': '<?php esc_html_e( 'Borderless', 'pressbooks-aldine' ); ?>'
 			},
 			call_to_action: {
-				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
-				'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
-				'link': '<?php _e( 'Link', 'pressbooks-aldine' ); ?>'
+				'title': '<?php esc_html_e( 'Call to Action', 'pressbooks-aldine' ); ?>',
+				'text': '<?php esc_html_e( 'Text', 'pressbooks-aldine' ); ?>',
+				'link': '<?php esc_html_e( 'Link', 'pressbooks-aldine' ); ?>'
 			}
 		};
 	</script>

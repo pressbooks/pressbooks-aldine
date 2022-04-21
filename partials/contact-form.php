@@ -10,7 +10,7 @@
 <?php
 
 $pb_network_contact_form_title = get_option( 'pb_network_contact_form_title' );
-$contact_form_title = ( ! empty( $pb_network_contact_form_title ) ) ? $pb_network_contact_form_title : __( 'Contact Us', 'pressbooks-aldine' );
+$contact_form_title = ( ! empty( $pb_network_contact_form_title ) ) ? $pb_network_contact_form_title : esc_html__( 'Contact Us', 'pressbooks-aldine' );
 $contact_form_response = \Aldine\Helpers\handle_contact_form_submission();
 $honeypot = 'firstname' . wp_rand();
 
@@ -27,7 +27,7 @@ $honeypot = 'firstname' . wp_rand();
 		<p class="form__row" style="display:none;">
 			<input type="text" name="<?php echo $honeypot; ?>" id="<?php echo $honeypot; ?>"/>
 			<label for="<?php echo $honeypot; ?>">
-				<?php _e( 'Keep this field blank (required)', 'pressbooks-aldine' ); ?>
+				<?php esc_html_e( 'Keep this field blank (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
@@ -43,7 +43,7 @@ $honeypot = 'firstname' . wp_rand();
 							?>
 			" required>
 			<label for="contact-name">
-				<?php _e( 'Your name (required)', 'pressbooks-aldine' ); ?>
+				<?php esc_html_e( 'Your name (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
@@ -59,7 +59,7 @@ $honeypot = 'firstname' . wp_rand();
 								?>
 			" required>
 			<label for="contact-email">
-				<?php _e( 'Your email address (required)', 'pressbooks-aldine' ); ?>
+				<?php esc_html_e( 'Your email address (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
@@ -75,7 +75,7 @@ $honeypot = 'firstname' . wp_rand();
 								?>
 			" required>
 			<label for="contact-institution">
-				<?php _e( 'Your institution (required)', 'pressbooks-aldine' ); ?>
+				<?php esc_html_e( 'Your institution (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
@@ -91,10 +91,10 @@ $honeypot = 'firstname' . wp_rand();
 								?>
 			</textarea>
 			<label for="contact-message">
-				<?php _e( 'Your message (required)', 'pressbooks-aldine' ); ?>
+				<?php esc_html_e( 'Your message (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
-			<input class="button button--small button--outline" type="submit" value="<?php _e( 'Send', 'pressbooks-aldine' ); ?>" /></p>
+			<input class="button button--small button--outline" type="submit" value="<?php esc_html_e( 'Send', 'pressbooks-aldine' ); ?>" /></p>
 	</form>
 </aside>

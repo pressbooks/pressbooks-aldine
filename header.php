@@ -67,7 +67,7 @@
 							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 							/* translators: %s name of network */
-							sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+							sprintf( esc_html__( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 						);
 						?>
 					<?php } else { ?>
@@ -78,7 +78,7 @@
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php esc_html_e( 'Toggle Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></a>
 				<?php
 				wp_nav_menu(
 					[

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a custom signup page
+ * The template for displaying custom signup/signin pages
  *
  * Template Name: Auth
  *
@@ -20,23 +20,23 @@ wp_enqueue_script( 'custom-signup', $assets->getPath( 'scripts/custom-signup.js'
 $action = $_GET['action'] ?? 'signup';
 
 if ( $action === 'signup' ) {
-	$main_title = __( 'Create a new account', 'pressbooks-aldine' );
-	$title = __( 'Sign up with your email and a password', 'pressbooks-aldine' );
+	$main_title = esc_html__( 'Create a new account', 'pressbooks-aldine' );
+	$title = esc_html__( 'Sign up with your email and a password', 'pressbooks-aldine' );
 	$url = home_url() . '/auth/?action=signup';
-	$button_cta = __( 'Create Your Account', 'pressbooks-aldine' );
-	$invite_cta = __( 'Already have an account?', 'pressbooks-aldine' );
-	$invite_cta_link = home_url() . '/auth/?action=login';
-	$invite_cta_link_text = __( 'Log in', 'pressbooks-aldine' );
-	$sign_action = __( 'Or sign up with one of the following', 'pressbooks-aldine' );
+	$button_cta = esc_html__( 'Create Your Account', 'pressbooks-aldine' );
+	$invite_cta = esc_html__( 'Already have an account?', 'pressbooks-aldine' );
+	$invite_cta_link = home_url() . '/auth/?action=signin';
+	$invite_cta_link_text = esc_html__( 'Sign in', 'pressbooks-aldine' );
+	$sign_action = esc_html__( 'Or sign up with one of the following', 'pressbooks-aldine' );
 } else {
-	$main_title = __( 'Welcome back!', 'pressbooks-aldine' );
-	$title = __( 'Log in to your existing account', 'pressbooks-aldine' );
-	$url = home_url() . '/auth/?action=login';
-	$button_cta = __( 'Login', 'pressbooks-aldine' );
-	$invite_cta = __( 'Don\'t have an account?', 'pressbooks-aldine' );
+	$main_title = esc_html__( 'Welcome back!', 'pressbooks-aldine' );
+	$title = esc_html__( 'Sign in to your existing account', 'pressbooks-aldine' );
+	$url = home_url() . '/auth/?action=signin';
+	$button_cta = esc_html__( 'Sign in', 'pressbooks-aldine' );
+	$invite_cta = esc_html__( 'Don\'t have an account?', 'pressbooks-aldine' );
 	$invite_cta_link = home_url() . '/auth/?action=signup';
-	$invite_cta_link_text = __( 'Register here', 'pressbooks-aldine' );
-	$sign_action = __( 'Or sign in with one of the following', 'pressbooks-aldine' );
+	$invite_cta_link_text = esc_html__( 'Register here', 'pressbooks-aldine' );
+	$sign_action = esc_html__( 'Or sign in with one of the following', 'pressbooks-aldine' );
 }
 
 // Implement this hook to process the form.
@@ -58,7 +58,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 	?>
 </head>
 
-<body class="page signup">
+<body class="page <?php echo $action; ?>">
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -95,7 +95,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 					wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 					wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 					/* translators: %s name of network */
-						sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+						sprintf( esc_html__( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 				);
 				?>
 			<?php } else { ?>
@@ -116,14 +116,13 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 		<div class="form--input-wrapper">
 			<?php if ( $action === 'signup' ) : ?>
 			<input id="email" type="email" autocomplete="email" placeholder=" " name="user_email" required/>
+			<label for="email"><?php esc_html_e( 'Email address', 'pressbooks-aldine' ); ?></label>
+			<p class="form--input-description"><?php esc_html_e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
 			<input id="login" type="text" placeholder=" " name="user_login" required/>
+			<label for="login"><?php esc_html_e( 'Username or email address', 'pressbooks-aldine' ); ?></label>
 			<?php endif; ?>
-			<label for="email"><?php _e( 'Email address', 'pressbooks-aldine' ); ?></label>
 		</div>
-		<?php if ( $action === 'signup' ) : ?>
-			<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
-		<?php endif; ?>
 			<?php if ( isset( $errors['user_email'] ) ) : ?>
 				<p class="form--input-description error"><?php echo wp_kses( $errors['user_email'][0], true ); ?></p>
 			<?php endif; ?>
@@ -131,12 +130,21 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 				<p class="form--input-description error"><?php echo wp_kses( $errors['invalid_username'][0], true ); ?></p>
 			<?php endif; ?>
 		<div class="form--input-wrapper">
-			<input id="password" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required/>
-			<label for="password"><?php _e( 'Password', 'pressbooks-aldine' ); ?></label>
-		</div>
 			<?php if ( $action === 'signup' ) : ?>
-		<p class="form--input-description"><?php _e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
+			<input id="new-pass" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required/>
+			<label for="new-pass"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
+			<p class="form--input-description"><?php esc_html_e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
+			<?php else : ?>
+			<input id="password" type="password" autocomplete="password" placeholder=" "  name="password" required/>
+			<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
+				<!-- TODO: Add 'show password button' like the one in the WP login form
+				<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
+					<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+				</button>
+				-->
+			<p class="form--input-description"><a href="<?php echo wp_lostpassword_url(); ?>"><?php esc_html_e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
 			<?php endif; ?>
+		</div>
 			<?php if ( isset( $errors['password_validation_error'] ) ) : ?>
 				<p class="form--input-description error"><?php echo wp_kses( $errors['password_validation_error'][0], true ); ?></p>
 			<?php endif; ?>
@@ -146,9 +154,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 		<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
 		<button type="submit"><?php echo esc_html( $button_cta ); ?></button>
 			<?php if ( $action === 'signup' ) : ?>
-				<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
-			<?php else : ?>
-				<p class="form--input-description"><a href="<?php echo wp_lostpassword_url(); ?>"><?php _e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
+				<p class="form--input-description"><?php esc_html_e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
 			<?php endif; ?>
 		<?php wp_nonce_field( 'pb_nonce_signup', 'pb_nonce_signup' ); ?>
 		</form>

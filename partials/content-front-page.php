@@ -16,7 +16,7 @@ use function Aldine\Helpers\has_sections;
 
 $front_page_catalog = get_option( 'pb_front_page_catalog' );
 $pb_front_page_catalog_title = get_option( 'pb_front_page_catalog_title' );
-$latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __( 'Our Latest Titles', 'pressbooks-aldine' );
+$latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : esc_html__( 'Our Latest Titles', 'pressbooks-aldine' );
 if ( get_option( 'pb_front_page_catalog' ) ) {
 	$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 	$catalog_data = get_catalog_data( $page, 3, 'latest' );
@@ -55,7 +55,7 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 <?php if ( get_option( 'pb_front_page_catalog' ) && ! empty( $catalog_data['books'] ) ) : ?>
 <div id="latest-books" class="latest-books">
 	<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
-	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>" 
+	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>"
 																										<?php
 																										if ( $next_page <= $catalog_data['pages'] ) :
 																											?>
@@ -73,7 +73,7 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 		?>
 	</div>
 	<p class="catalog-link">
-		<a class="call-to-action" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
+		<a class="call-to-action" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php esc_html_e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
 	</p>
 </div>
 <?php endif; ?>

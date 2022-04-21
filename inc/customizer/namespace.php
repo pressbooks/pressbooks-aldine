@@ -68,38 +68,38 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		[
 			'slug' => 'primary',
 			'hex' => '#b01109',
-			'label' => __( 'Primary Color', 'pressbooks-aldine' ),
-			'description' => __( 'Primary color, used for links and other primary elements.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Primary Color', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Primary color, used for links and other primary elements.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary_dark',
 			'hex' => '#7f0c07',
-			'label' => __( 'Primary Color (Hover)', 'pressbooks-aldine' ),
-			'description' => __( 'Variant of the primary color, used for primary element hover states.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Primary Color (Hover)', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Variant of the primary color, used for primary element hover states.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent',
 			'hex' => '#015d75',
-			'label' => __( 'Accent Color', 'pressbooks-aldine' ),
-			'description' => __( 'Accent color, used for flourishes and secondary elements.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Accent Color', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Accent color, used for flourishes and secondary elements.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent_dark',
 			'hex' => '#013542',
-			'label' => __( 'Accent Color (Hover)', 'pressbooks-aldine' ),
-			'description' => __( 'Variant of the accent color, used for secondary element hover states.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Accent Color (Hover)', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Variant of the accent color, used for secondary element hover states.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary_fg',
 			'hex' => '#ffffff',
-			'label' => __( 'Primary Foreground Color', 'pressbooks-aldine' ),
-			'description' => __( 'Used for text on a primary background.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Primary Foreground Color', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Used for text on a primary background.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'accent_fg',
 			'hex' => '#ffffff',
-			'label' => __( 'Accent Foreground Color', 'pressbooks-aldine' ),
-			'description' => __( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Accent Foreground Color', 'pressbooks-aldine' ),
+			'description' => esc_html__( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
 		],
 	] as $color ) {
 		$wp_customize->add_setting(
@@ -123,7 +123,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	}
 	$wp_customize->add_section(
 		'pb_network_social', [
-			'title' => __( 'Social Media', 'pressbooks-aldine' ),
+			'title' => esc_html__( 'Social Media', 'pressbooks-aldine' ),
 			'priority' => 30,
 		]
 	);
@@ -135,7 +135,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_facebook', [
-			'label' => __( 'Facebook', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Facebook', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_social',
 			'settings' => 'pb_network_facebook',
 		]
@@ -148,7 +148,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_twitter', [
-			'label' => __( 'Twitter', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Twitter', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_social',
 			'settings' => 'pb_network_twitter',
 		]
@@ -161,7 +161,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_instagram', [
-			'label' => __( 'Instagram', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Instagram', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_social',
 			'settings' => 'pb_network_instagram',
 		]
@@ -170,7 +170,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
 		$wp_customize->add_section(
 			'pb_front_page_catalog', [
-				'title' => __( 'Front Page Catalog', 'pressbooks-aldine' ),
+				'title' => esc_html__( 'Front Page Catalog', 'pressbooks-aldine' ),
 				'priority' => 25,
 			]
 		);
@@ -181,7 +181,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		);
 		$wp_customize->add_control(
 			'pb_front_page_catalog', [
-				'label' => __( 'Show Front Page Catalog', 'pressbooks-aldine' ),
+				'label' => esc_html__( 'Show Front Page Catalog', 'pressbooks-aldine' ),
 				'section'  => 'pb_front_page_catalog',
 				'settings' => 'pb_front_page_catalog',
 				'type' => 'checkbox',
@@ -191,12 +191,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'pb_front_page_catalog_title', [
 				'type' => 'option',
 				'sanitize_callback' => 'sanitize_text_field',
-				'default' => __( 'Our Latest Titles', 'pressbooks-aldine' ),
+				'default' => esc_html__( 'Our Latest Titles', 'pressbooks-aldine' ),
 			]
 		);
 		$wp_customize->add_control(
 			'pb_front_page_catalog_title', [
-				'label' => __( 'Front Page Catalog Title', 'pressbooks-aldine' ),
+				'label' => esc_html__( 'Front Page Catalog Title', 'pressbooks-aldine' ),
 				'section'  => 'pb_front_page_catalog',
 				'settings' => 'pb_front_page_catalog_title',
 			]
@@ -205,7 +205,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 
 	$wp_customize->add_section(
 		'pb_network_contact_form', [
-			'title' => __( 'Contact Form', 'pressbooks-aldine' ),
+			'title' => esc_html__( 'Contact Form', 'pressbooks-aldine' ),
 			'priority' => 25,
 		]
 	);
@@ -216,7 +216,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_contact_form', [
-			'label' => __( 'Show Contact Form', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Show Contact Form', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_form',
 			'type' => 'checkbox',
@@ -226,12 +226,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		'pb_network_contact_form_title', [
 			'type' => 'option',
 			'sanitize_callback' => 'sanitize_text_field',
-			'default' => __( 'Contact Us', 'pressbooks-aldine' ),
+			'default' => esc_html__( 'Contact Us', 'pressbooks-aldine' ),
 		]
 	);
 	$wp_customize->add_control(
 		'pb_network_contact_form_title', [
-			'label' => __( 'Contact Form Title', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Contact Form Title', 'pressbooks-aldine' ),
 			'section' => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_form_title',
 		]
@@ -245,7 +245,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_contact_email', [
-			'label' => __( 'Contact Email', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Contact Email', 'pressbooks-aldine' ),
 			'section' => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_email',
 		]
@@ -257,7 +257,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_contact_link', [
-			'label' => __( 'Contact Link', 'pressbooks-aldine' ),
+			'label' => esc_html__( 'Contact Link', 'pressbooks-aldine' ),
 			'section' => 'pb_network_contact_form',
 			'settings' => 'pb_network_contact_link',
 		]

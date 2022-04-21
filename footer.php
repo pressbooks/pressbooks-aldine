@@ -58,32 +58,32 @@ if ( $pb_network_contact_form ) {
 					<div class="social-media">
 						<?php if ( ! empty( $network_facebook ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( esc_html__( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use href="#facebook" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
-								<span class="screen-reader-text"><?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
+								<span class="screen-reader-text"><?php printf( esc_html__( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 						<?php if ( ! empty( $network_twitter ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( esc_html__( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use href="#twitter" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
-								<span class="screen-reader-text"><?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
+								<span class="screen-reader-text"><?php printf( esc_html__( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 						<?php if ( ! empty( $network_instagram ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="instagram" href="<?php echo $network_instagram; ?>" title="<?php printf( __( '%s on Instagram', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="instagram" href="<?php echo $network_instagram; ?>" title="<?php printf( esc_html__( '%s on Instagram', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use href="#instagram" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
-								<span class="screen-reader-text"><?php printf( __( '%s on Instagram', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
+								<span class="screen-reader-text"><?php printf( esc_html__( '%s on Instagram', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 					</div>
@@ -102,25 +102,25 @@ if ( $pb_network_contact_form ) {
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s Pressbooks */ ?>
-				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
+				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( esc_html__( 'Powered by %s', 'pressbooks-aldine' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/support/"><?php _e( 'Guides and Tutorials', 'pressbooks-aldine' ); ?></a></li>
-					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-pressbooks-directory">|<a href="https://pressbooks.directory"><?php _e( 'Pressbooks Directory', 'pressbooks-aldine' ); ?></a></li>
+					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/support/"><?php esc_html_e( 'Guides and Tutorials', 'pressbooks-aldine' ); ?></a></li>
+					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-pressbooks-directory">|<a href="https://pressbooks.directory"><?php esc_html_e( 'Pressbooks Directory', 'pressbooks-aldine' ); ?></a></li>
 					<?php if ( $contact_link ) : ?>
-						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
+						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php esc_html_e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a class="facebook" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?>">
+				<a class="facebook" href="https://www.youtube.com/user/pressbooks" title="<?php esc_html_e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?>">
 					<img class="youtube-link" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/yt_icon_mono_dark.png" alt="YouTube">
-					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?></span>
 				</a>
-				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-aldine' ); ?>">
+				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php esc_html_e( 'Pressbooks on Twitter', 'pressbooks-aldine' ); ?>">
 					<svg class="icon--svg">
 						<use href="#twitter" />
 					</svg>
-				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-aldine' ); ?></span></a>
+				<span class="screen-reader-text"><?php esc_html_e( 'Pressbooks on Twitter', 'pressbooks-aldine' ); ?></span></a>
 			</div>
 		</section>
 	</div><!-- .container -->

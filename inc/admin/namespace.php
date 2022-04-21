@@ -34,9 +34,9 @@ function admin_scripts( $hook ) {
 	wp_localize_script(
 		'pressbooks-aldine-admin', 'PB_Aldine_Admin', [
 			'aldineAdminNonce' => wp_create_nonce( 'pressbooks-aldine-admin' ),
-			'catalog_updated' => __( 'Catalog updated.', 'pressbooks-aldine' ),
-			'catalog_not_updated' => __( 'Sorry, but your catalog was not updated. Please try again.', 'pressbooks-aldine' ),
-			'dismiss_notice' => __( 'Dismiss this notice.', 'pressbooks-aldine' ),
+			'catalog_updated' => esc_html__( 'Catalog updated.', 'pressbooks-aldine' ),
+			'catalog_not_updated' => esc_html__( 'Sorry, but your catalog was not updated. Please try again.', 'pressbooks-aldine' ),
+			'dismiss_notice' => esc_html__( 'Dismiss this notice.', 'pressbooks-aldine' ),
 		]
 	);
 }
@@ -80,7 +80,7 @@ function update_catalog() {
  * @return array
  */
 function catalog_columns( $columns ) {
-	$columns['in_catalog'] = __( 'In Catalog', 'pressbooks-aldine' );
+	$columns['in_catalog'] = esc_html__( 'In Catalog', 'pressbooks-aldine' );
 	return $columns;
 }
 

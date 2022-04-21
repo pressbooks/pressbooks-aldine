@@ -32,7 +32,7 @@ function create_default_content() {
 
 		$default_pages = [
 			'about' => [
-				'post_title' => __( 'About', 'pressbooks-aldine' ),
+				'post_title' => esc_html__( 'About', 'pressbooks-aldine' ),
 				'post_content' => apply_filters(
 					'pb_root_about_page_content',
 					sprintf(
@@ -42,14 +42,14 @@ function create_default_content() {
 						sprintf(
 							/* translators: %1$s: link to Pressbooks product page; %2$2: link to Pressbooks getting started page */
 							__( 'Pressbooks\' %1$s are used by hundreds of educational institutions and thousands of individual authors and publishers around the world. %2$s to learn more about how you or your institution can get started with Pressbooks.', 'pressbooks' ),
-							sprintf( '<a href="https://pressbooks.com/our-products/">%s</a>', __( 'suite of products', 'pressbooks-aldine' ) ),
-							sprintf( '<a href="https://pressbooks.com/get-started/">%s</a>', __( 'Contact us', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://pressbooks.com/our-products/">%s</a>', esc_html__( 'suite of products', 'pressbooks-aldine' ) ),
+							sprintf( '<a href="https://pressbooks.com/get-started/">%s</a>', esc_html__( 'Contact us', 'pressbooks-aldine' ) )
 						)
 					)
 				),
 			],
 			'help' => [
-				'post_title' => __( 'Help', 'pressbooks-aldine' ),
+				'post_title' => esc_html__( 'Help', 'pressbooks-aldine' ),
 				'post_content' => apply_filters(
 					'pb_root_help_page_content',
 					sprintf(
@@ -57,43 +57,43 @@ function create_default_content() {
 						sprintf(
 						/* translators: %s: link to guide */
 							__( 'Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://guide.pressbooks.com/">%s</a>', __( 'Pressbooks User Guide', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://guide.pressbooks.com/">%s</a>', esc_html__( 'Pressbooks User Guide', 'pressbooks-aldine' ) )
 						),
 						sprintf(
 						/* translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist */
 							__( 'You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://www.youtube.com/c/Pressbooks">%s</a>', __( 'Pressbooks YouTube channel', 'pressbooks-aldine' ) ),
-							sprintf( '<a href="https://www.youtube.com/playlist?list=PLMFmJu3NJheuRt1rZwNCEElROtSjc5dJG">%s</a>', __( 'short video series', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://www.youtube.com/c/Pressbooks">%s</a>', esc_html__( 'Pressbooks YouTube channel', 'pressbooks-aldine' ) ),
+							sprintf( '<a href="https://www.youtube.com/playlist?list=PLMFmJu3NJheuRt1rZwNCEElROtSjc5dJG">%s</a>', esc_html__( 'short video series', 'pressbooks-aldine' ) )
 						),
 						sprintf(
 						/* translators: %s: link to Pressbooks webinar schedule */
 							__( 'If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks\' %s.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://pressbooks.com/webinars/">%s</a>', __( 'monthly webinars', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://pressbooks.com/webinars/">%s</a>', esc_html__( 'monthly webinars', 'pressbooks-aldine' ) )
 						),
 						sprintf(
 						/* translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum */
 							__( 'The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://pressbooks.com/support/">%s</a>', __( 'Pressbooks support page', 'pressbooks-aldine' ) ),
-							sprintf( '<a href="https://pressbooks.community/">%s</a>', __( 'community forum', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://pressbooks.com/support/">%s</a>', esc_html__( 'Pressbooks support page', 'pressbooks-aldine' ) ),
+							sprintf( '<a href="https://pressbooks.community/">%s</a>', esc_html__( 'community forum', 'pressbooks-aldine' ) )
 						),
 						sprintf(
 						/* translators: %s: link to Pressbooks support request form */
 							__( 'For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://pressbooks.com/pressbooksedu-support/">%s</a>', __( 'support request form', 'pressbooks-aldine' ) )
+							sprintf( '<a href="https://pressbooks.com/pressbooksedu-support/">%s</a>', esc_html__( 'support request form', 'pressbooks-aldine' ) )
 						)
 					)
 				),
 			],
 			'catalog' => [
-				'post_title' => __( 'Catalog', 'pressbooks-aldine' ),
+				'post_title' => esc_html__( 'Catalog', 'pressbooks-aldine' ),
 				'post_content' => '',
 			],
 			'home' => [
-				'post_title' => __( 'Home', 'pressbooks-aldine' ),
+				'post_title' => esc_html__( 'Home', 'pressbooks-aldine' ),
 				'post_content' => $home_content,
 			],
 			'auth' => [
-				'post_title' => __( 'Auth', 'pressbooks-aldine' ),
+				'post_title' => esc_html__( 'Auth', 'pressbooks-aldine' ),
 				'post_content' => '',
 			],
 		];
@@ -140,18 +140,18 @@ function create_default_content() {
  * Create default primary and footer menus.
  */
 function create_menus() {
-	$menu_name = __( 'Primary Menu', 'pressbooks-aldine' );
+	$menu_name = esc_html__( 'Primary Menu', 'pressbooks-aldine' );
 
 	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
 		$menu_id = wp_create_nav_menu( $menu_name );
 
-		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		$catalog = get_page_by_title( esc_html__( 'Catalog', 'pressbooks-aldine' ) );
 		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
 			wp_update_nav_menu_item(
 				$menu_id,
 				0,
 				[
-					'menu-item-title' => __( 'Catalog', 'pressbooks-aldine' ),
+					'menu-item-title' => esc_html__( 'Catalog', 'pressbooks-aldine' ),
 					'menu-item-type' => 'post_type',
 					'menu-item-object' => 'page',
 					'menu-item-object-id' => $catalog->ID,
@@ -161,18 +161,18 @@ function create_menus() {
 		}
 	}
 
-	$menu_name = __( 'Footer Menu', 'pressbooks-aldine' );
+	$menu_name = esc_html__( 'Footer Menu', 'pressbooks-aldine' );
 
 	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
 		$menu_id = wp_create_nav_menu( $menu_name );
 
-		$about = get_page_by_title( __( 'About', 'pressbooks-aldine' ) );
+		$about = get_page_by_title( esc_html__( 'About', 'pressbooks-aldine' ) );
 		if ( $about ) {
 			wp_update_nav_menu_item(
 				$menu_id,
 				0,
 				[
-					'menu-item-title' => __( 'About', 'pressbooks-aldine' ),
+					'menu-item-title' => esc_html__( 'About', 'pressbooks-aldine' ),
 					'menu-item-type' => 'post_type',
 					'menu-item-object' => 'page',
 					'menu-item-object-id' => $about->ID,
@@ -181,13 +181,13 @@ function create_menus() {
 			);
 		}
 
-		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		$catalog = get_page_by_title( esc_html__( 'Catalog', 'pressbooks-aldine' ) );
 		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
 			wp_update_nav_menu_item(
 				$menu_id,
 				0,
 				[
-					'menu-item-title' => __( 'Catalog', 'pressbooks-aldine' ),
+					'menu-item-title' => esc_html__( 'Catalog', 'pressbooks-aldine' ),
 					'menu-item-type' => 'post_type',
 					'menu-item-object' => 'page',
 					'menu-item-object-id' => $catalog->ID,
@@ -196,13 +196,13 @@ function create_menus() {
 			);
 		}
 
-		$help = get_page_by_title( __( 'Help', 'pressbooks-aldine' ) );
+		$help = get_page_by_title( esc_html__( 'Help', 'pressbooks-aldine' ) );
 		if ( $help ) {
 			wp_update_nav_menu_item(
 				$menu_id,
 				0,
 				[
-					'menu-item-title' => __( 'Help', 'pressbooks-aldine' ),
+					'menu-item-title' => esc_html__( 'Help', 'pressbooks-aldine' ),
 					'menu-item-type' => 'post_type',
 					'menu-item-object' => 'page',
 					'menu-item-object-id' => $help->ID,

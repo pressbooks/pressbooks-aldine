@@ -60,7 +60,7 @@ function register_query_vars( $vars ) {
  * @return string
  */
 function excerpt_more() {
-	return ' &hellip; <a href="' . get_permalink() . '">' . __( 'Continued', 'pressbooks-aldine' ) . '</a>';
+	return ' &hellip; <a href="' . get_permalink() . '">' . esc_html__( 'Continued', 'pressbooks-aldine' ) . '</a>';
 }
 
 /**

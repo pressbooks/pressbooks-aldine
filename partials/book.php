@@ -36,7 +36,7 @@ if ( $date ) {
 	/*
 	<?php if (isset( $book['metadata']['author'] ) ) { ?>
 	<p class="book__author">
-		<?php _e( 'By', 'pressbooks-aldine' ); ?> <?php foreach ( $book['metadata']['author'] as $author ) {
+		<?php esc_html_e( 'By', 'pressbooks-aldine' ); ?> <?php foreach ( $book['metadata']['author'] as $author ) {
 			echo $author['name'];
 		} ?>
 	</p>
@@ -54,6 +54,6 @@ if ( $date ) {
 	</p>
 	<?php endif; ?>
 	<p class="book__read-more">
-		<a href="<?php echo $book['link']; ?>"><?php _e( 'About this book', 'pressbooks-aldine' ); ?> <svg aria-hidden="true"><use xlink:href="#arrow-right" /></svg></a>
+		<a href="<?php echo $book['link']; ?>"><?php esc_html_e( 'About this book', 'pressbooks-aldine' ); ?> <svg aria-hidden="true"><use xlink:href="#arrow-right" /></svg></a>
 	</p>
 </li>
