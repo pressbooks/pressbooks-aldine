@@ -79,7 +79,7 @@ do_action( 'pb_custom_signup_form_handler' )
 	</div>
 </header>
 <p class="signup--tagline"><?php _e( 'Start creating your <span id="typed"></span><span class="typed-cursor"></span> today', 'pressbooks-aldine' ); ?></p>
-<h1 class="signup--page-title"><?php _e( 'Create a new account', 'pressbooks-aldine' );?></h1>
+<h1 class="signup--page-title"><?php _e( 'Create a new account', 'pressbooks-aldine' ); ?></h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
 	<section class="signup--section">
