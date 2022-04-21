@@ -23,8 +23,10 @@ do_action( 'pb_custom_signup_form_handler' )
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Create your account</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/dist/styles/aldine.css" />
-	<?php do_action( 'pb_custom_signup_header' );
-	// TODO: figure out how to customize/replace wp_head(); ?>
+	<?php
+	do_action( 'pb_custom_signup_header' );
+	// TODO: figure out how to customize/replace wp_head(); in this template.
+	?>
 </head>
 
 <body class="page signup">
@@ -60,10 +62,10 @@ do_action( 'pb_custom_signup_form_handler' )
 				<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				printf(
-						'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-						wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-						wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-						/* translators: %s name of network */
+					'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
+					wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+					wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+					/* translators: %s name of network */
 						sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 				);
 				?>
