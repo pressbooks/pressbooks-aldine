@@ -15,12 +15,18 @@ nocache_headers();
 do_action( 'pb_custom_signup_form_handler' )
 
 ?>
-<html lang="en">
+<!doctype html>
+<html <?php language_attributes(); ?>>
 <head>
-	<title>Pressbooks Signup</title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Create your account</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/dist/styles/aldine.css" />
-	<?php do_action( 'pb_custom_signup_header' ); ?>
+	<?php do_action( 'pb_custom_signup_header' );
+	// TODO: figure out how to customize/replace wp_head(); ?>
 </head>
+
 <body class="page signup">
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
@@ -45,56 +51,55 @@ do_action( 'pb_custom_signup_form_handler' )
 			<path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
 		</symbol>
 </svg>
-	</defs>
+</defs>
 </svg>
-	<header class="header" role="banner">
-		<div class="header__inside">
-			<div class="header__brand">
-				<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
-					<?php if ( has_custom_logo() ) { ?>
-						<?php
-						$custom_logo_id = get_theme_mod( 'custom_logo' );
-						printf(
-							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-							/* translators: %s name of network */
-								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
-						);
-						?>
-					<?php } else { ?>
-						<svg class="header__logo--svg">
-							<use xlink:href="#logo-pressbooks" />
-						</svg>
-					<?php } ?>
-				</a>
-			</div>
-		</div>
-	</header>
+<header class="header" role="banner">
+	<div class="header__brand">
+		<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+			<?php if ( has_custom_logo() ) { ?>
+				<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				printf(
+						'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
+						wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+						wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+						/* translators: %s name of network */
+						sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+				);
+				?>
+			<?php } else { ?>
+				<svg class="header__logo--svg">
+					<use xlink:href="#logo-pressbooks" />
+				</svg>
+			<?php } ?>
+		</a>
+	</div>
+</header>
 <p class="signup--tagline"><?php _e( 'Start creating your textbook today', 'pressbooks-aldine' ); ?></p>
+<h1 class="signup--page-title">Create a new account</h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
 	<section class="signup--section">
 		<h2 class="signup--header-title"><?php _e( 'Sign up with your email and a password', 'pressbooks-aldine' ); ?></h2>
 		<form class="form"<?php echo home_url(); ?>/register" method="post">
-			<div class="form--input-wrapper">
-				<input id="email" type="email" autocomplete="email" placeholder=" " required/>
-				<label for="email"><?php _e( 'Email address', 'pressbooks-aldine' ); ?></label>
-			</div>
-			<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
-			<div class="form--input-wrapper">
-				<input id="password" type="text" autocomplete="new-password" placeholder=" " required/>
-				<label for="password"><?php _e( 'Password', 'pressbooks-aldine' ); ?></label>
-			</div>
-			<p class="form--input-description"><?php _e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
-			<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
-			<button type="submit"><?php _e( 'Create Your Account', 'pressbooks-aldine' ); ?></button>
-			<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
+		<div class="form--input-wrapper">
+			<input id="email" type="email" autocomplete="email" placeholder=" " required/>
+			<label for="email"><?php _e( 'Email address', 'pressbooks-aldine' ); ?></label>
+		</div>
+		<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
+		<div class="form--input-wrapper">
+			<input id="password" type="text" autocomplete="new-password" placeholder=" " required/>
+			<label for="password"><?php _e( 'Password', 'pressbooks-aldine' ); ?></label>
+		</div>
+		<p class="form--input-description"><?php _e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
+		<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
+		<button type="submit"><?php _e( 'Create Your Account', 'pressbooks-aldine' ); ?></button>
+		<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
 		</form>
 		<h2 class="signup--header-title">Already have an account? <a href="<?php echo site_url(); ?>/wp-login.php">Log in</a></h2>
 	</section>
 	<section class="signup--section">
-		<h2 class="signup--header-title"><?php _e( 'Or sign up with one of the following:', 'pressbooks-aldine' ); ?></h2>
+		<h2 class="signup--header-title"><?php _e( 'Or sign up with one of the following', 'pressbooks-aldine' ); ?></h2>
 		<div class="signup--social-buttons">
 			<button class="signup--social-button google"><svg class="logo-google"><use xlink:href="#logo-google" /></svg>Google</button>
 			<button class="signup--social-button twitter"><svg class="logo-twitter"><use xlink:href="#logo-twitter" /></svg>Twitter</button>
