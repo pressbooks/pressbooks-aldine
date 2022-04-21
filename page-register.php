@@ -21,7 +21,7 @@ do_action( 'pb_custom_signup_form_handler' )
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Create your account</title>
+	<title>Create a new account</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/dist/styles/aldine.css" />
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<?php
@@ -79,7 +79,7 @@ do_action( 'pb_custom_signup_form_handler' )
 	</div>
 </header>
 <p class="signup--tagline"><?php _e( 'Start creating your <span id="typed"></span><span class="typed-cursor"></span> today', 'pressbooks-aldine' ); ?></p>
-<h1 class="signup--page-title">Create a new account</h1>
+<h1 class="signup--page-title"><?php _e( 'Create a new account', 'pressbooks-aldine' );?></h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
 	<section class="signup--section">
@@ -114,10 +114,10 @@ do_action( 'pb_custom_signup_form_handler' )
 <?php do_action( 'pb_custom_signup_after_wrapper' ); ?>
 <script>
 	var options = {
-		strings: ['open textbook', 'scholarly monograph', 'manifesto', 'reference guide', 'essay collection', 'manuscript', 'novel', 'handbook', 'magnum opus', 'daybook', 'treatise', 'collected works', 'world-changing screed' ],
-		typeSpeed: 60,
-		backSpeed: 30,
-		backDelay: 500,
+		strings: ['open textbook', 'scholarly monograph', 'world-changing manifesto', 'graduate thesis', 'reference guide', 'essay collection', 'student portfolio', 'novel', 'position paper', 'handbook', 'magnum opus', 'research report', 'daybook', 'collected works' ],
+		typeSpeed: 80,
+		backSpeed: 40,
+		backDelay: 400,
 		loop: true,
 	};
 
