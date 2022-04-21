@@ -46,7 +46,8 @@ mix
 	.js( `${assets}/scripts/catalog-admin.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer-toggle.js`, `${dist}/scripts` )
-	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` );
+	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` )
+	.js( `${assets}/scripts/custom-signup.js`, `${dist}/scripts` );
 
 // Assets
 mix

@@ -9,29 +9,40 @@
  * @package Aldine
  */
 
+use PressbooksMix\Assets;
+
 add_filter( 'wp_robots', 'wp_robots_no_robots' );
 nocache_headers();
+$assets = new Assets( 'pressbooks-aldine', 'theme' );
+$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+wp_enqueue_script( 'custom-signup', $assets->getPath( 'scripts/custom-signup.js' ) );
 
-$action = $_GET['action'] ?? 'register';
+$action = $_GET['action'] ?? 'signup';
 
-if( $action === 'register' ) {
+if ( $action === 'signup' ) {
 	$main_title = __( 'Create a new account', 'pressbooks-aldine' );
 	$title = __( 'Sign up with your email and a password', 'pressbooks-aldine' );
-	$url = home_url().'/register/action=register';
+	$url = home_url() . '/auth/?action=signup';
 	$button_cta = __( 'Create Your Account', 'pressbooks-aldine' );
 	$invite_cta = __( 'Already have an account?', 'pressbooks-aldine' );
-	$invite_cta_link = home_url().'/auth/?action=login';
+	$invite_cta_link = home_url() . '/auth/?action=login';
 	$invite_cta_link_text = __( 'Log in', 'pressbooks-aldine' );
+	$sign_action = __( 'Or sign up with one of the following', 'pressbooks-aldine' );
 } else {
 	$main_title = __( 'Welcome back!', 'pressbooks-aldine' );
 	$title = __( 'Log in to your existing account', 'pressbooks-aldine' );
-	$url = home_url().'/register/action=login';
+	$url = home_url() . '/auth/?action=login';
 	$button_cta = __( 'Login', 'pressbooks-aldine' );
 	$invite_cta = __( 'Don\'t have an account?', 'pressbooks-aldine' );
-	$invite_cta_link = home_url().'/auth/?action=register';
+	$invite_cta_link = home_url() . '/auth/?action=signup';
 	$invite_cta_link_text = __( 'Register here', 'pressbooks-aldine' );
+	$sign_action = __( 'Or sign in with one of the following', 'pressbooks-aldine' );
 }
-do_action( 'pb_custom_signup_form_handler' )
+
+// Implement this hook to process the form.
+do_action( 'pb_custom_signup_form_handler' );
+
+$errors = apply_filters( 'pb_custom_signup_errors', [] );
 
 ?>
 <!doctype html>
@@ -40,12 +51,10 @@ do_action( 'pb_custom_signup_form_handler' )
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Create a new account</title>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/dist/styles/aldine.css" />
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<title><?php echo esc_html( $title ); ?></title>
 	<?php
+	wp_head();
 	do_action( 'pb_custom_signup_header' );
-	// TODO: figure out how to customize/replace wp_head(); in this template.
 	?>
 </head>
 
@@ -98,35 +107,55 @@ do_action( 'pb_custom_signup_form_handler' )
 	</div>
 </header>
 <p class="signup--tagline"><?php _e( 'Start creating your <span id="typed"></span><span class="typed-cursor"></span> today', 'pressbooks-aldine' ); ?></p>
-<h1 class="signup--page-title"><?php echo $main_title; ?></h1>
+<h1 class="signup--page-title"><?php echo esc_html( $main_title ); ?></h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
 	<section class="signup--section">
-		<h2 class="signup--header-title"><?php echo $title; ?></h2>
-		<form class="form" action="<?php echo $url; ?>" method="post">
+		<h2 class="signup--header-title"><?php echo esc_html( $title ); ?></h2>
+		<form class="form" action="<?php echo esc_html( $url ); ?>" method="post">
 		<div class="form--input-wrapper">
+			<?php if ( $action === 'signup' ) : ?>
 			<input id="email" type="email" autocomplete="email" placeholder=" " name="user_email" required/>
+			<?php else : ?>
+			<input id="login" type="text" placeholder=" " name="user_login" required/>
+			<?php endif; ?>
 			<label for="email"><?php _e( 'Email address', 'pressbooks-aldine' ); ?></label>
 		</div>
-		<?php if($action === 'register') : ?>
+		<?php if ( $action === 'signup' ) : ?>
 			<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
 		<?php endif; ?>
+			<?php if ( isset( $errors['user_email'] ) ) : ?>
+				<p class="form--input-description error"><?php echo wp_kses( $errors['user_email'][0], true ); ?></p>
+			<?php endif; ?>
+			<?php if ( isset( $errors['invalid_username'] ) ) : ?>
+				<p class="form--input-description error"><?php echo wp_kses( $errors['invalid_username'][0], true ); ?></p>
+			<?php endif; ?>
 		<div class="form--input-wrapper">
 			<input id="password" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required/>
 			<label for="password"><?php _e( 'Password', 'pressbooks-aldine' ); ?></label>
 		</div>
-			<?php if($action === 'register') : ?>
+			<?php if ( $action === 'signup' ) : ?>
 		<p class="form--input-description"><?php _e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
 			<?php endif; ?>
+			<?php if ( isset( $errors['password_validation_error'] ) ) : ?>
+				<p class="form--input-description error"><?php echo wp_kses( $errors['password_validation_error'][0], true ); ?></p>
+			<?php endif; ?>
+			<?php if ( isset( $errors['incorrect_password'] ) ) : ?>
+				<p class="form--input-description error"><?php echo wp_kses( $errors['incorrect_password'][0], true ); ?></p>
+			<?php endif; ?>
 		<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
-		<button type="submit"><?php echo $button_cta; ?></button>
-		<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
+		<button type="submit"><?php echo esc_html( $button_cta ); ?></button>
+			<?php if ( $action === 'signup' ) : ?>
+				<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
+			<?php else : ?>
+				<p class="form--input-description"><a href="<?php echo wp_lostpassword_url(); ?>"><?php _e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
+			<?php endif; ?>
 		<?php wp_nonce_field( 'pb_nonce_signup', 'pb_nonce_signup' ); ?>
 		</form>
-		<h2 class="signup--header-title"><?php echo $invite_cta; ?> <a href="<?php echo $invite_cta_link; ?>"><?php echo $invite_cta_link_text; ?></a></h2>
+		<h2 class="signup--header-title"><?php echo esc_html( $invite_cta ); ?> <a href="<?php echo esc_html( $invite_cta_link ); ?>"><?php echo esc_html( $invite_cta_link_text ); ?></a></h2>
 	</section>
 	<section class="signup--section">
-		<h2 class="signup--header-title"><?php _e( 'Or sign up with one of the following', 'pressbooks-aldine' ); ?></h2>
+		<h2 class="signup--header-title"><?php echo esc_html( $sign_action ); ?></h2>
 		<div class="signup--social-buttons">
 			<button class="signup--social-button google"><svg class="logo-google"><use xlink:href="#logo-google" /></svg>Google</button>
 			<button class="signup--social-button twitter"><svg class="logo-twitter"><use xlink:href="#logo-twitter" /></svg>Twitter</button>
@@ -136,16 +165,5 @@ do_action( 'pb_custom_signup_form_handler' )
 	</section>
 </div>
 <?php do_action( 'pb_custom_signup_after_wrapper' ); ?>
-<script>
-	var options = {
-		strings: ['open textbook', 'scholarly monograph', 'world-changing manifesto', 'graduate thesis', 'reference guide', 'essay collection', 'student portfolio', 'novel', 'position paper', 'handbook', 'magnum opus', 'research report', 'daybook', 'collected works' ],
-		typeSpeed: 80,
-		backSpeed: 40,
-		backDelay: 400,
-		loop: true,
-	};
-
-	var typed = new Typed('#typed', options);
-</script>
 </body>
 </html>

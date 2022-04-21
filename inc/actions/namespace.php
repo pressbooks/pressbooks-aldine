@@ -351,10 +351,25 @@ function remove_widgets() {
  * Override signup page if PB_CUSTOM_SIGNUP is set.
  */
 function override_signup_page() {
-	global $pagenow;
-	if ( getenv( 'PB_CUSTOM_SIGNUP' ) && ! is_user_logged_in() && $pagenow === 'wp-signup.php' ) {
-		wp_redirect( network_home_url( '/auth' ) );
-		exit();
+
+	if ( getenv( 'PB_CUSTOM_SIGNUP' ) && ! is_user_logged_in() ) {
+
+		global $pagenow;
+
+		$action = $_REQUEST['action'] ?? '';
+
+		$actions_to_override = [ 'login', '' ]; // only redirect on main login page we don't want to override lost password and other actions.
+
+		if ( $pagenow === 'wp-signup.php' || $action === 'register' ) {
+			wp_redirect( network_home_url( '/auth/?action=signup' ) );
+			exit();
+		}
+
+		if ( $pagenow === 'wp-login.php' && in_array( $action, $actions_to_override, true ) ) {
+			wp_redirect( network_home_url( '/auth/?action=login' ) );
+			exit();
+		}
 	}
+
 }
 

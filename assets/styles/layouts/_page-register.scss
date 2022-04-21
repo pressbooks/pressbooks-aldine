@@ -95,6 +95,7 @@ $body-font: 'Spectral', serif;
     text-decoration: none;
     text-align: left;
     text-transform: none;
+    cursor: pointer;
 
     svg {
       fill: $dark-blue;
@@ -172,6 +173,7 @@ $body-font: 'Spectral', serif;
       padding: .5rem 1.5rem;
       margin-bottom: .5rem;
       border-radius: .5rem;
+      cursor: pointer;
     }
 
     &--input-description {
