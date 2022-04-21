@@ -115,11 +115,11 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 		<form class="form" action="<?php echo esc_html( $url ); ?>" method="post">
 		<div class="form--input-wrapper">
 			<?php if ( $action === 'signup' ) : ?>
-			<input id="email" type="email" autocomplete="email" placeholder=" " name="user_email" required/>
+			<input id="email" type="email" autocomplete="email" placeholder=" " name="user_email" required>
 			<label for="email"><?php esc_html_e( 'Email address', 'pressbooks-aldine' ); ?></label>
 			<p class="form--input-description"><?php esc_html_e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
-			<input id="login" type="text" placeholder=" " name="user_login" required/>
+			<input id="login" type="text" placeholder=" " name="user_login" required>
 			<label for="login"><?php esc_html_e( 'Username or email address', 'pressbooks-aldine' ); ?></label>
 			<?php endif; ?>
 		</div>
@@ -131,11 +131,11 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 			<?php endif; ?>
 		<div class="form--input-wrapper">
 			<?php if ( $action === 'signup' ) : ?>
-			<input id="new-pass" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required/>
+			<input id="new-pass" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required>
 			<label for="new-pass"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
 			<p class="form--input-description"><?php esc_html_e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
-			<input id="password" type="password" autocomplete="password" placeholder=" "  name="password" required/>
+			<input id="password" type="password" autocomplete="password" placeholder=" "  name="password" required>
 			<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
 				<!-- TODO: Add 'show password button' like the one in the WP login form
 				<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
