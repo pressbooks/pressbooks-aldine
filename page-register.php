@@ -23,6 +23,7 @@ do_action( 'pb_custom_signup_form_handler' )
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Create your account</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' ); ?>/dist/styles/aldine.css" />
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<?php
 	do_action( 'pb_custom_signup_header' );
 	// TODO: figure out how to customize/replace wp_head(); in this template.
@@ -77,7 +78,7 @@ do_action( 'pb_custom_signup_form_handler' )
 		</a>
 	</div>
 </header>
-<p class="signup--tagline"><?php _e( 'Start creating your textbook today', 'pressbooks-aldine' ); ?></p>
+<p class="signup--tagline"><?php _e( 'Start creating your <span id="typed"></span><span class="typed-cursor"></span> today', 'pressbooks-aldine' ); ?></p>
 <h1 class="signup--page-title">Create a new account</h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
@@ -111,5 +112,16 @@ do_action( 'pb_custom_signup_form_handler' )
 	</section>
 </div>
 <?php do_action( 'pb_custom_signup_after_wrapper' ); ?>
+<script>
+	var options = {
+		strings: ['open textbook', 'scholarly monograph', 'manifesto', 'reference guide', 'essay collection', 'manuscript', 'novel', 'handbook', 'magnum opus', 'daybook', 'treatise', 'collected works', 'world-changing screed' ],
+		typeSpeed: 60,
+		backSpeed: 30,
+		backDelay: 500,
+		loop: true,
+	};
+
+	var typed = new Typed('#typed', options);
+</script>
 </body>
 </html>
