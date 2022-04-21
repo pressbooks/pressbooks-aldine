@@ -353,7 +353,7 @@ function remove_widgets() {
 function override_signup_page() {
 	global $pagenow;
 	if ( getenv( 'PB_CUSTOM_SIGNUP' ) && ! is_user_logged_in() && $pagenow === 'wp-signup.php' ) {
-		wp_redirect( network_home_url( '/register' ) );
+		wp_redirect( network_home_url( '/auth' ) );
 		exit();
 	}
 }

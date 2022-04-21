@@ -81,5 +81,5 @@ add_action( 'manage_sites_custom_column', '\Aldine\Admin\catalog_column', 1, 3 )
 // Remove unwanted menu pages.
 add_action( 'admin_menu', '\Aldine\Actions\remove_menu_items' );
 
-// Override signup page.
+// Override signup page if enabled.
 add_action( 'init', '\Aldine\Actions\override_signup_page' );

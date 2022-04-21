@@ -2,7 +2,7 @@
 /**
  * The template for displaying a custom signup page
  *
- * Template Name: Register
+ * Template Name: Auth
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,6 +12,25 @@
 add_filter( 'wp_robots', 'wp_robots_no_robots' );
 nocache_headers();
 
+$action = $_GET['action'] ?? 'register';
+
+if( $action === 'register' ) {
+	$main_title = __( 'Create a new account', 'pressbooks-aldine' );
+	$title = __( 'Sign up with your email and a password', 'pressbooks-aldine' );
+	$url = home_url().'/register/action=register';
+	$button_cta = __( 'Create Your Account', 'pressbooks-aldine' );
+	$invite_cta = __( 'Already have an account?', 'pressbooks-aldine' );
+	$invite_cta_link = home_url().'/auth/?action=login';
+	$invite_cta_link_text = __( 'Log in', 'pressbooks-aldine' );
+} else {
+	$main_title = __( 'Welcome back!', 'pressbooks-aldine' );
+	$title = __( 'Log in to your existing account', 'pressbooks-aldine' );
+	$url = home_url().'/register/action=login';
+	$button_cta = __( 'Login', 'pressbooks-aldine' );
+	$invite_cta = __( 'Don\'t have an account?', 'pressbooks-aldine' );
+	$invite_cta_link = home_url().'/auth/?action=register';
+	$invite_cta_link_text = __( 'Register here', 'pressbooks-aldine' );
+}
 do_action( 'pb_custom_signup_form_handler' )
 
 ?>
@@ -79,27 +98,32 @@ do_action( 'pb_custom_signup_form_handler' )
 	</div>
 </header>
 <p class="signup--tagline"><?php _e( 'Start creating your <span id="typed"></span><span class="typed-cursor"></span> today', 'pressbooks-aldine' ); ?></p>
-<h1 class="signup--page-title"><?php _e( 'Create a new account', 'pressbooks-aldine' ); ?></h1>
+<h1 class="signup--page-title"><?php echo $main_title; ?></h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
 	<section class="signup--section">
-		<h2 class="signup--header-title"><?php _e( 'Sign up with your email and a password', 'pressbooks-aldine' ); ?></h2>
-		<form class="form"<?php echo home_url(); ?>/register" method="post">
+		<h2 class="signup--header-title"><?php echo $title; ?></h2>
+		<form class="form" action="<?php echo $url; ?>" method="post">
 		<div class="form--input-wrapper">
-			<input id="email" type="email" autocomplete="email" placeholder=" " required/>
+			<input id="email" type="email" autocomplete="email" placeholder=" " name="user_email" required/>
 			<label for="email"><?php _e( 'Email address', 'pressbooks-aldine' ); ?></label>
 		</div>
-		<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
+		<?php if($action === 'register') : ?>
+			<p class="form--input-description"><?php _e( 'Will be used to send your registration details', 'pressbooks-aldine' ); ?></p>
+		<?php endif; ?>
 		<div class="form--input-wrapper">
-			<input id="password" type="text" autocomplete="new-password" placeholder=" " required/>
+			<input id="password" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required/>
 			<label for="password"><?php _e( 'Password', 'pressbooks-aldine' ); ?></label>
 		</div>
+			<?php if($action === 'register') : ?>
 		<p class="form--input-description"><?php _e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
+			<?php endif; ?>
 		<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
-		<button type="submit"><?php _e( 'Create Your Account', 'pressbooks-aldine' ); ?></button>
+		<button type="submit"><?php echo $button_cta; ?></button>
 		<p class="form--input-description"><?php _e( 'By signing up for Pressbooks. you agree to our privacy policy and terms of service.', 'pressbooks-aldine' ); ?></p>
+		<?php wp_nonce_field( 'pb_nonce_signup', 'pb_nonce_signup' ); ?>
 		</form>
-		<h2 class="signup--header-title">Already have an account? <a href="<?php echo site_url(); ?>/wp-login.php">Log in</a></h2>
+		<h2 class="signup--header-title"><?php echo $invite_cta; ?> <a href="<?php echo $invite_cta_link; ?>"><?php echo $invite_cta_link_text; ?></a></h2>
 	</section>
 	<section class="signup--section">
 		<h2 class="signup--header-title"><?php _e( 'Or sign up with one of the following', 'pressbooks-aldine' ); ?></h2>

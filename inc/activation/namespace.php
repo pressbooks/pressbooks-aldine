@@ -92,18 +92,11 @@ function create_default_content() {
 				'post_title' => __( 'Home', 'pressbooks-aldine' ),
 				'post_content' => $home_content,
 			],
-			'register' => [
-				'post_title' => __( 'Register', 'pressbooks-aldine' ),
+			'auth' => [
+				'post_title' => __( 'Auth', 'pressbooks-aldine' ),
 				'post_content' => '',
 			],
 		];
-
-		if ( getenv( 'PB_CUSTOM_SIGNUP' ) ) {
-			$pages['register'] = [
-				'post_title' => __( 'Register', 'pressbooks-aldine' ),
-				'post_content' => '',
-			];
-		}
 
 		// Add our pages.
 		$pages = [];
