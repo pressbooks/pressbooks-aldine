@@ -58,7 +58,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 	?>
 </head>
 
-<body class="page <?php echo $action; ?>">
+<body class="page <?php echo esc_attr( $action ); ?>">
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -86,7 +86,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 </svg>
 <header class="header" role="banner">
 	<div class="header__brand">
-		<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+		<a title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" href="<?php echo esc_url( network_home_url() ); ?>">
 			<?php if ( has_custom_logo() ) { ?>
 				<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -142,7 +142,7 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 					<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
 				</button>
 				-->
-			<p class="form--input-description"><a href="<?php echo wp_lostpassword_url(); ?>"><?php esc_html_e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
+			<p class="form--input-description"><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
 			<?php endif; ?>
 		</div>
 			<?php if ( isset( $errors['password_validation_error'] ) ) : ?>
