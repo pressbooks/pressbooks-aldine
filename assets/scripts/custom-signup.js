@@ -13,12 +13,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 	const hideButton = document.querySelector( '.button-toggle' );
 
-	hideButton.addEventListener('click', function() {
+	hideButton.addEventListener( 'click', function () {
 		const password = document.querySelector( '.password' );
-		password.setAttribute('type', password.getAttribute('type') === 'password' ? 'text' : 'password');
+		password.setAttribute( 'type', password.getAttribute( 'type' ) === 'password' ? 'text' : 'password' );
 		const eye = document.querySelector( '.open' );
 		const closed = document.querySelector( '.closed' );
 		eye.classList.toggle( 'hide' );
 		closed.classList.toggle( 'hide' );
-	});
+	} );
 } );
