@@ -124,70 +124,91 @@ $body-font: 'Spectral', serif;
   }
 
   .form {
-    width: 100%;
     margin: 2rem 0 1rem;
 
     &--input-wrapper {
       position: relative;
-    }
 
-    input[type="email"], input[type="text"], input[type="password"] {
-      background: white;
-      border: solid 1px $dark-blue;
-      padding: 5px;
-      width: 100%;
-      max-width: 525px;
-      font-weight: 400;
-      height: 45px;
-    }
+      input[type="email"], input[type="text"], input[type="password"] {
+        background: white;
+        border: solid 1px $dark-blue;
+        padding: 5px;
+        width: 100%;
+        max-width: 525px;
+        font-weight: 400;
+        height: 45px;
+      }
 
-    label {
-      position: absolute;
-      top: 12px;
-      left: 10px;
-      color: #666;
-      transition: .3s;
-      z-index: 0;
-      font-size: $small-font-size;
-    }
+      label {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        color: #666;
+        transition: .3s;
+        z-index: 0;
+        font-size: $small-font-size;
+      }
 
-    input:not(:placeholder-shown) + label {
-      top: -10px;
-      left: 5px;
-      z-index: 999;
-      padding: 0 5px;
-      background: white;
-      color: #666;
-    }
+      input:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 5px;
+        z-index: 999;
+        padding: 0 5px;
+        background: white;
+        color: #666;
+      }
 
-    input:focus + label {
-      top: -11px;
-      left: 5px;
-      z-index: 999;
-      padding: 0 5px;
-      background: white;
-      color: $dark-blue;
-    }
+      input:focus + label {
+        top: -11px;
+        left: 5px;
+        z-index: 999;
+        padding: 0 5px;
+        background: white;
+        color: $dark-blue;
+      }
 
-    ::placeholder {
-      color: transparent;
-    }
+      ::placeholder {
+        color: transparent;
+      }
 
-    input:focus {
-      border: 2px solid $dark-blue;
-    }
+      input:focus {
+        border: 2px solid $dark-blue;
+      }
 
-    button {
-      font-size: $medium-font-size;
-      text-transform: none;
-      padding: .5rem 1.5rem;
-      margin-bottom: .5rem;
-      border-radius: .5rem;
-      cursor: pointer;
+      button {
+        font-size: $medium-font-size;
+        text-transform: none;
+        padding: .5rem 1.5rem;
+        margin-bottom: .5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+      }
+
+      .button-toggle {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.3rem;
+        display: block;
+        cursor: pointer;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+        .hide {
+          display: none;
+        }
+      }
+
     }
 
     &--input-description {
+      padding-top: 0.2rem;
       font-size: $tiny-font-size;
+      &.error {
+        padding: 0.5rem 0;
+        font-size: $small-font-size;
+        color: $pb-red;
+      }
     }
   }
 }

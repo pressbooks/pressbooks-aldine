@@ -81,8 +81,15 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 		<symbol id="logo-linkedin" viewBox="0 0 50 50">
 			<path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
 		</symbol>
-</svg>
-</defs>
+		<symbol id="eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+			<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+		</symbol>
+		<symbol id="closed-eye" viewBox="0 0 20 20" fill="currentColor">
+			<path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path>
+			<path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path>
+		</symbol>
+	</defs>
 </svg>
 <header class="header" role="banner">
 	<div class="header__brand">
@@ -131,17 +138,16 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 			<?php endif; ?>
 		<div class="form--input-wrapper">
 			<?php if ( $action === 'signup' ) : ?>
-			<input id="new-pass" type="text" autocomplete="new-password" placeholder=" "  name="user_pwd" required>
+			<input id="new-pass" class="password" type="password" autocomplete="new-password" placeholder=" "  name="user_pwd" required>
 			<label for="new-pass"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
 			<p class="form--input-description"><?php esc_html_e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
-			<input id="password" type="password" autocomplete="password" placeholder=" "  name="password" required>
+			<input id="password" class="password" type="password" autocomplete="password" placeholder=" "  name="user_pwd" required>
+				<a class="button-toggle" data-toggle="0" aria-label="Show password">
+					<svg class="open"><use xlink:href="#eye" /></svg>
+					<svg class="closed hide"><use xlink:href="#closed-eye" /></svg>
+				</a>
 			<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
-				<!-- TODO: Add 'show password button' like the one in the WP login form
-				<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
-					<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
-				</button>
-				-->
 			<p class="form--input-description"><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
 			<?php endif; ?>
 		</div>
@@ -150,6 +156,12 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 			<?php endif; ?>
 			<?php if ( isset( $errors['incorrect_password'] ) ) : ?>
 				<p class="form--input-description error"><?php echo wp_kses( $errors['incorrect_password'][0], true ); ?></p>
+			<?php endif; ?>
+			<?php if ( $action === 'signin' ) : ?>
+			<div class="form--checkbox-wrapper">
+				<input name="remember_me" type="checkbox" id="remember_me" value="forever">
+				<label for="remember_me"><?php esc_html_e( 'Remember me', 'pressbooks-aldine' ); ?></label>
+			</div>
 			<?php endif; ?>
 		<?php do_action( 'pb_custom_signup_extra_fields' ); ?>
 		<button type="submit"><?php echo esc_html( $button_cta ); ?></button>

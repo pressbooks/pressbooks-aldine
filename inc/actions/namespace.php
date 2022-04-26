@@ -352,7 +352,31 @@ function remove_widgets() {
  */
 function override_signup_page() {
 
-	if ( getenv( 'PB_CUSTOM_SIGNUP' ) && ! is_user_logged_in() ) {
+	if ( ! getenv( 'PB_CUSTOM_SIGNUP' ) ) {
+		return;
+	}
+
+	add_action( 'wp_trash_post', function( $post_id ) {
+		// Prevent auth page deletion.
+		$post = get_post( $post_id );
+		if ( 'page' === $post->post_type && 'auth' === $post->post_name ) {
+			wp_die( esc_html__( 'You cannot delete the auth page.', 'pressbooks-aldine' ) );
+		}
+	}, 10, 1 );
+
+	add_action('pre_get_posts', function( $query ) {
+		if ( ! is_admin() && ! $query->is_main_query() ) {
+			return;
+		}
+		global $typenow;
+		if ( 'page' === $typenow ) {
+			$auth_page = get_page_by_path( 'auth' ); // Prevent auth page display.
+			$query->set( 'post__not_in', [ $auth_page->ID ] );
+			return;
+		}
+	});
+
+	if ( ! is_user_logged_in() ) {
 
 		global $pagenow;
 
@@ -366,7 +390,7 @@ function override_signup_page() {
 		}
 
 		if ( $pagenow === 'wp-login.php' && in_array( $action, $actions_to_override, true ) ) {
-			wp_redirect( network_home_url( '/auth/?action=login' ) );
+			wp_redirect( network_home_url( '/auth/?action=signin' ) );
 			exit();
 		}
 	}
