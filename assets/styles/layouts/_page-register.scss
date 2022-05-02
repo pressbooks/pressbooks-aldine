@@ -211,6 +211,15 @@ $body-font: 'Spectral', serif;
       }
     }
   }
+
+
+  .form--message-wrapper {
+    h2 {
+      text-align: left;
+      text-transform: none;
+    }
+  }
+
 }
 
 .signin .form--input-wrapper {

@@ -2900,6 +2900,10 @@ fieldset:last-of-type {
   font-size: 1rem;
   color: #bb2026;
 }
+.signup .form--message-wrapper h2, .signin .form--message-wrapper h2 {
+  text-align: left;
+  text-transform: none;
+}
 
 .signin .form--input-wrapper {
   margin-top: 2rem;

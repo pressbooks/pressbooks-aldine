@@ -43,6 +43,7 @@ if ( $action === 'signup' ) {
 do_action( 'pb_custom_signup_form_handler' );
 
 $errors = apply_filters( 'pb_custom_signup_errors', [] );
+$result = apply_filters( 'pb_custom_signup_message', [] );
 
 ?>
 <!doctype html>
@@ -117,7 +118,8 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 <h1 class="signup--page-title"><?php echo esc_html( $main_title ); ?></h1>
 <?php do_action( 'pb_custom_signup_before_wrapper' ); ?>
 <div class="signup--wrapper">
-	<section class="signup--section">
+	<?php if ( ! $result ) : ?>
+		<section class="signup--section">
 		<h2 class="signup--header-title"><?php echo esc_html( $title ); ?></h2>
 		<form class="form" action="<?php echo esc_html( $url ); ?>" method="post">
 		<div class="form--input-wrapper">
@@ -143,11 +145,11 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 			<p class="form--input-description"><?php esc_html_e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
 			<input id="password" class="password" type="password" autocomplete="password" placeholder=" "  name="user_pwd" required>
+				<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
 				<a class="button-toggle" data-toggle="0" aria-label="Show password">
 					<svg class="open"><use xlink:href="#eye" /></svg>
 					<svg class="closed hide"><use xlink:href="#closed-eye" /></svg>
 				</a>
-			<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
 			<p class="form--input-description"><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'pressbooks-aldine' ); ?></a></p>
 			<?php endif; ?>
 		</div>
@@ -172,6 +174,11 @@ $errors = apply_filters( 'pb_custom_signup_errors', [] );
 		</form>
 		<h2 class="signup--header-title"><?php echo esc_html( $invite_cta ); ?> <a href="<?php echo esc_html( $invite_cta_link ); ?>"><?php echo esc_html( $invite_cta_link_text ); ?></a></h2>
 	</section>
+	<?php else : ?>
+		<section class="signup--section">
+		<?php echo wp_kses_post( $result ) ?>
+		</section>
+	<?php endif; ?>
 	<section class="signup--section">
 		<h2 class="signup--header-title"><?php echo esc_html( $sign_action ); ?></h2>
 		<div class="signup--social-buttons">
