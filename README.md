@@ -1,4 +1,4 @@
-# Aldine 
+# Aldine
 
 [![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
 [![Current Release](https://img.shields.io/github/release/pressbooks/pressbooks-aldine.svg)](https://github.com/pressbooks/pressbooks/releases/latest/)
@@ -11,34 +11,34 @@
 
 **Tags:** publishing, catalog, pressbooks, default-theme  
 
-**Requires at least:** 5.9
-**Tested up to:** 5.9
-**Stable tag:** 1.14.0  
+**Requires at least:** 5.9.3
+**Tested up to:** 5.9.3
+**Stable tag:** 1.14.1  
 **License:** GNU General Public License v3 or later  
 **License URI:** LICENSE  
 
 Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
 
 
-## Description 
+## Description
 
 Aldine is the default theme for the home page of [Pressbooks](https://pressbooks.org) networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher. Aldine is based on [Underscores](https://underscores.me/).
 
 
-## Installation 
+## Installation
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's [.zip file](https://github.com/pressbooks/pressbooks-aldine/releases/latest/). Click Install Now.
 3. Click Activate to use your new theme right away.
 
 
-## Changelog 
+## Changelog
 
-### 1.14.0
+### 1.14.1
 
-* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.14.0
+* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.14.1
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
-## Credits 
+## Credits
 
 - Based on [Underscores](https://underscores.me/), (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.14.0\n"
+"Project-Id-Version: Aldine 1.14.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2022-02-22T21:53:05+00:00\n"
+"POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio D., 2018\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/pressbooks/teams/9194/lt_LT/)\n"
@@ -336,108 +336,108 @@ msgstr "Atmesti šį pranešimą."
 msgid "In Catalog"
 msgstr "Kataloge"
 
-#: inc/customizer/namespace.php:68
+#: inc/customizer/namespace.php:71
 msgid "Primary Color"
 msgstr "Pirminė Spalva"
 
-#: inc/customizer/namespace.php:69
+#: inc/customizer/namespace.php:72
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
 "Pirminė spalva, naudojama nuorodoms ir kitiems pagrindiniams elementams."
 
-#: inc/customizer/namespace.php:74
+#: inc/customizer/namespace.php:77
 msgid "Primary Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:75
+#: inc/customizer/namespace.php:78
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:80
+#: inc/customizer/namespace.php:83
 msgid "Accent Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:81
+#: inc/customizer/namespace.php:84
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr ""
 
-#: inc/customizer/namespace.php:86
+#: inc/customizer/namespace.php:89
 msgid "Accent Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:87
+#: inc/customizer/namespace.php:90
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:92
+#: inc/customizer/namespace.php:95
 msgid "Primary Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:93
+#: inc/customizer/namespace.php:96
 msgid "Used for text on a primary background."
 msgstr "Naudojamas teksto pirminiam fonui."
 
-#: inc/customizer/namespace.php:98
+#: inc/customizer/namespace.php:101
 msgid "Accent Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:99
+#: inc/customizer/namespace.php:102
 msgid "Used for text on an accent color background."
 msgstr ""
 
-#: inc/customizer/namespace.php:123
+#: inc/customizer/namespace.php:126
 msgid "Social Media"
 msgstr "Socialiniai Tinklai"
 
-#: inc/customizer/namespace.php:135
+#: inc/customizer/namespace.php:138
 msgid "Facebook"
 msgstr "Facebook"
 
-#: inc/customizer/namespace.php:148
+#: inc/customizer/namespace.php:151
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/namespace.php:161
+#: inc/customizer/namespace.php:164
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer/namespace.php:170
+#: inc/customizer/namespace.php:173
 msgid "Front Page Catalog"
 msgstr "Titulinio Lapo Katalogas"
 
-#: inc/customizer/namespace.php:181
+#: inc/customizer/namespace.php:184
 msgid "Show Front Page Catalog"
 msgstr "Rodyti Titulinio Lapo Katalogą"
 
-#: inc/customizer/namespace.php:191 partials/content-front-page.php:19
+#: inc/customizer/namespace.php:194 partials/content-front-page.php:19
 msgid "Our Latest Titles"
 msgstr "Mūsų Naujausi Pavadinimai"
 
-#: inc/customizer/namespace.php:196
+#: inc/customizer/namespace.php:199
 msgid "Front Page Catalog Title"
 msgstr "Titulinio Lapo Katalogo Pavadinimas"
 
-#: inc/customizer/namespace.php:205
+#: inc/customizer/namespace.php:208
 msgid "Contact Form"
 msgstr "Kontaktai"
 
-#: inc/customizer/namespace.php:216
+#: inc/customizer/namespace.php:219
 msgid "Show Contact Form"
 msgstr "Rodyti Kontaktus"
 
-#: inc/customizer/namespace.php:226 partials/contact-form.php:13
+#: inc/customizer/namespace.php:229 partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "Susisiekite su mumis"
 
-#: inc/customizer/namespace.php:231
+#: inc/customizer/namespace.php:234
 msgid "Contact Form Title"
 msgstr "Kontaktinės Formos Pavadinimas"
 
-#: inc/customizer/namespace.php:245
+#: inc/customizer/namespace.php:248
 msgid "Contact Email"
 msgstr "Kontaktinis Elektroninis Paštas"
 
-#: inc/customizer/namespace.php:257
+#: inc/customizer/namespace.php:260
 msgid "Contact Link"
 msgstr ""
 
@@ -501,10 +501,6 @@ msgstr "Jūsų žinutė išsiųsta!"
 #: inc/helpers/namespace.php:397
 msgid "Your message could not be sent."
 msgstr "Jūsų žinutės nepavyko išsiųsti."
-
-#: inc/intervention.php:12
-msgid "Hello,"
-msgstr "Labas,"
 
 #: page-catalog.php:60
 msgid "No Books Found"
