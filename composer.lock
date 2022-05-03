@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e312e1480a403f1bb1b1112655f26d72",
+    "content-hash": "f981f76baf1673a5867057e9a872892b",
     "packages": [
         {
             "name": "composer/installers",
@@ -210,25 +210,26 @@
         },
         {
             "name": "pressbooks/mix",
-            "version": "2.1.1",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pressbooks/mix.git",
-                "reference": "452955abf7334d2e054cf8d33236adf21c4c9961"
+                "reference": "234f0e54e2c597a5d95436e0999b0568e81c42f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pressbooks/mix/zipball/452955abf7334d2e054cf8d33236adf21c4c9961",
-                "reference": "452955abf7334d2e054cf8d33236adf21c4c9961",
+                "url": "https://api.github.com/repos/pressbooks/mix/zipball/234f0e54e2c597a5d95436e0999b0568e81c42f1",
+                "reference": "234f0e54e2c597a5d95436e0999b0568e81c42f1",
                 "shasum": ""
             },
             "require-dev": {
                 "pressbooks/coding-standards": "^1.1"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PressbooksMix\\": "inc/"
+                    "PressbooksMix\\": "inc/class-assets.php"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -243,9 +244,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pressbooks/mix/issues",
-                "source": "https://github.com/pressbooks/mix/tree/2.1.1"
+                "source": "https://github.com/pressbooks/mix/tree/dev"
             },
-            "time": "2022-05-03T15:44:17+00:00"
+            "time": "2022-05-03T18:37:34+00:00"
         },
         {
             "name": "spatie/color",
@@ -4148,7 +4149,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pressbooks/mix": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
