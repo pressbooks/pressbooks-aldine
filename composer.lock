@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f981f76baf1673a5867057e9a872892b",
+    "content-hash": "e312e1480a403f1bb1b1112655f26d72",
     "packages": [
         {
             "name": "composer/installers",
@@ -210,22 +210,21 @@
         },
         {
             "name": "pressbooks/mix",
-            "version": "dev-dev",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pressbooks/mix.git",
-                "reference": "234f0e54e2c597a5d95436e0999b0568e81c42f1"
+                "reference": "c0c4ced76872e7521edad0113993a1c7e921338a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pressbooks/mix/zipball/234f0e54e2c597a5d95436e0999b0568e81c42f1",
-                "reference": "234f0e54e2c597a5d95436e0999b0568e81c42f1",
+                "url": "https://api.github.com/repos/pressbooks/mix/zipball/c0c4ced76872e7521edad0113993a1c7e921338a",
+                "reference": "c0c4ced76872e7521edad0113993a1c7e921338a",
                 "shasum": ""
             },
             "require-dev": {
                 "pressbooks/coding-standards": "^1.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -244,9 +243,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pressbooks/mix/issues",
-                "source": "https://github.com/pressbooks/mix/tree/dev"
+                "source": "https://github.com/pressbooks/mix/tree/2.1.2"
             },
-            "time": "2022-05-03T18:37:34+00:00"
+            "time": "2022-05-03T18:48:43+00:00"
         },
         {
             "name": "spatie/color",
@@ -4149,9 +4148,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "pressbooks/mix": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
