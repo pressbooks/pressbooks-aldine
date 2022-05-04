@@ -59,6 +59,12 @@ jobs:
           tools: phpcs, composer
           coverage: pcov
 
+      - name: Install Node dependencies
+        run: |
+          node -v
+          npm install
+        if: matrix.experimental == false
+
       - name: Install PHP dependencies
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
