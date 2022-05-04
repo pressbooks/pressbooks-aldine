@@ -27,16 +27,16 @@ if ( $action === 'signup' ) {
 	$invite_cta = esc_html__( 'Already have an account?', 'pressbooks-aldine' );
 	$invite_cta_link = home_url() . '/auth/?action=signin';
 	$invite_cta_link_text = esc_html__( 'Sign in', 'pressbooks-aldine' );
-	$sign_action = esc_html__( 'Or sign up with one of the following', 'pressbooks-aldine' );
+	$sign_action = esc_html__( 'Or sign up with:', 'pressbooks-aldine' );
 } else {
 	$main_title = esc_html__( 'Welcome back!', 'pressbooks-aldine' );
-	$title = esc_html__( 'Sign in to your existing account', 'pressbooks-aldine' );
+	$title = esc_html__( 'Sign in', 'pressbooks-aldine' );
 	$url = home_url() . '/auth/?action=signin';
 	$button_cta = esc_html__( 'Sign in', 'pressbooks-aldine' );
 	$invite_cta = esc_html__( 'Don\'t have an account?', 'pressbooks-aldine' );
 	$invite_cta_link = home_url() . '/auth/?action=signup';
 	$invite_cta_link_text = esc_html__( 'Register here', 'pressbooks-aldine' );
-	$sign_action = esc_html__( 'Or sign in with one of the following', 'pressbooks-aldine' );
+	$sign_action = esc_html__( 'Or sign in with:', 'pressbooks-aldine' );
 }
 
 // Implement this hook to process the form.
@@ -142,7 +142,7 @@ $result = apply_filters( 'pb_custom_signup_message', [] );
 			<?php if ( $action === 'signup' ) : ?>
 			<input id="new-pass" class="password" type="password" autocomplete="new-password" placeholder=" "  name="user_pwd" required>
 			<label for="new-pass"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
-			<p class="form--input-description"><?php esc_html_e( 'At least 12 characters, with at least one upper case letter and one number', 'pressbooks-aldine' ); ?></p>
+			<p class="form--input-description"><?php esc_html_e( 'Must include at least 12 characters, with at least one uppercase letter and one number', 'pressbooks-aldine' ); ?></p>
 			<?php else : ?>
 			<input id="password" class="password" type="password" autocomplete="password" placeholder=" "  name="user_pwd" required>
 				<label for="password"><?php esc_html_e( 'Password', 'pressbooks-aldine' ); ?></label>
