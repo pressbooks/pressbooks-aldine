@@ -68,7 +68,7 @@
 		"lint:styles": "stylelint \"assets/styles/**/*.scss\" --syntax scss"
 	},
 	"engines": {
-		"node": ">= 10"
+		"node": ">= 14"
 	},
 	"devDependencies": {
 		"pressbooks-build-tools": "^3.0.1"
@@ -76,6 +76,6 @@
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.27",
 		"isotope-layout": "^3.0.6",
-		"jquery-bridget": "^3.0.0"
+		"jquery-bridget": "^3.0.1"
 	}
 }

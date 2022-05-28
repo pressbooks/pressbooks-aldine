@@ -165,6 +165,7 @@ export default {
 			} );
 			let licenses = document.querySelector( '.license-filters' );
 			let subjects = document.querySelector( '.subject-filters' );
+			let institutions = document.querySelector( '.institution-filters' );
 			let sorts = document.querySelector( '.sorts' );
 			let clearFilters = document.querySelector( '.clear-filters' );
 			clearFilters.hidden = false;
@@ -172,47 +173,66 @@ export default {
 				if ( event.target.type !== 'radio' ) {
 					return;
 				}
-				let license = '';
-				let subject = '';
-				let filterValue = '*';
-				if ( subjects.querySelector( 'input[type="radio"]:checked' ).value ) {
-					subject = `[data-subject="${
-						subjects.querySelector( 'input[type="radio"]:checked' ).value
-					}"]`;
+
+				const subject = subjects.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-subject="${subjects.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const institution = institutions.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-institution*="${institutions.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const license = event.target.value
+					? `[data-license="${event.target.value}"]`
+					: '';
+
+				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+
+				$grid.isotope( { filter: filterValue } );
+			} );
+			institutions.addEventListener( 'click', function ( event ) {
+				if ( event.target.type !== 'radio' ) {
+					return;
 				}
-				if ( event.target.value ) {
-					license = `[data-license="${event.target.value}"]`;
-				}
-				if ( license || subject ) {
-					filterValue = `${license}${subject}`;
-				}
+
+				const subject = subjects.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-subject="${subjects.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const license = licenses.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-license="${licenses.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const institution = event.target.value
+					? `[data-institution*="${event.target.value}"]`
+					: '';
+
+				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+
 				$grid.isotope( { filter: filterValue } );
 			} );
 			subjects.addEventListener( 'click', function ( event ) {
 				if ( event.target.type !== 'radio' ) {
 					return;
 				}
-				let license = '';
-				let subject = '';
-				let filterValue = '*';
-				if ( licenses.querySelector( 'input[type="radio"]:checked' ).value ) {
-					license = `[data-license="${
-						licenses.querySelector( 'input[type="radio"]:checked' ).value
-					}"]`;
-				}
-				if ( event.target.value ) {
-					subject = `[data-subject="${event.target.value}"]`;
-				}
-				if ( license || subject ) {
-					filterValue = `${license}${subject}`;
-				}
+
+				const license = licenses.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-license="${licenses.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const institution = institutions.querySelector( 'input[type="radio"]:checked' ).value
+					? `[data-institution*="${institutions.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					: '';
+				const subject = event.target.value
+					? `[data-subject="${event.target.value}"]`
+					: '';
+
+				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+
 				$grid.isotope( { filter: filterValue } );
 			} );
 			clearFilters.addEventListener( 'click', function () {
 				let allLicenses = document.getElementById( 'all-licenses' );
 				let allSubjects = document.getElementById( 'all-subjects' );
+				let allInstitutions = document.getElementById( 'all-institutions' );
 				allLicenses.checked = true;
 				allSubjects.checked = true;
+				allInstitutions.checked = true;
 				$grid.isotope( { filter: '*' } );
 			} );
 			sorts.addEventListener( 'click', function ( event ) {

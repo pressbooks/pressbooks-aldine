@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
     - name: Install Transifex Client
       run: sudo pip install transifex-client
     - name: Pull translations from Transifex
-      run: tx pull -a --minimum-perc=25
+      run: tx pull --all --force --minimum-perc=25
       env:
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
     - name: Setup PHP with tools
