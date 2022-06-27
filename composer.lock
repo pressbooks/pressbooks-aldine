@@ -249,16 +249,16 @@
         },
         {
             "name": "spatie/color",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/color.git",
-                "reference": "351f82e8a6354a7858a86391c181ae015dbd7048"
+                "reference": "d6e9b2766d8e24aab835e414248728762bd63530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/color/zipball/351f82e8a6354a7858a86391c181ae015dbd7048",
-                "reference": "351f82e8a6354a7858a86391c181ae015dbd7048",
+                "url": "https://api.github.com/repos/spatie/color/zipball/d6e9b2766d8e24aab835e414248728762bd63530",
+                "reference": "d6e9b2766d8e24aab835e414248728762bd63530",
                 "shasum": ""
             },
             "require": {
@@ -293,13 +293,17 @@
                 "rgb",
                 "spatie"
             ],
+            "support": {
+                "issues": "https://github.com/spatie/color/issues",
+                "source": "https://github.com/spatie/color/tree/1.5.2"
+            },
             "funding": [
                 {
                     "url": "https://github.com/spatie",
                     "type": "github"
                 }
             ],
-            "time": "2022-04-12T14:45:41+00:00"
+            "time": "2022-06-24T21:50:06+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
