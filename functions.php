@@ -55,7 +55,7 @@ add_filter( 'body_class', '\Aldine\Filters\body_classes' );
 add_filter( 'excerpt_more', '\Aldine\Filters\excerpt_more' );
 add_filter( 'query_vars', '\Aldine\Filters\register_query_vars' );
 add_filter( 'wp_nav_menu_items', '\Aldine\Filters\adjust_menu', 10, 2 );
-add_filter( 'the_content', 'do_shortcode' );
+add_filter( 'the_content', 'apply_shortcodes' );
 add_filter( 'show_admin_bar', '__return_false' );
 add_action( 'widgets_init', '\Aldine\Actions\widgets_init' );
 add_action( 'widgets_init', '\Aldine\Actions\remove_widgets' );
