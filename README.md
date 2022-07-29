@@ -6,24 +6,22 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
 
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
-[![Build Status](https://travis-ci.org/pressbooks/pressbooks-aldine.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-aldine)
 [![Translate Aldine](https://img.shields.io/badge/dynamic/json.svg?label=translated&url=https%3A%2F%2Ftenpercent.now.sh%2F%3Forganization%3Dpressbooks%26project%3Daldine&query=%24.status&colorB=e05d44&suffix=%25)](https://www.transifex.com/pressbooks/aldine/translate/)
 
-**Tags:** publishing, catalog, pressbooks, default-theme  
-
-**Requires at least:** 5.9.3
-**Tested up to:** 5.9.3
-**Stable tag:** 1.14.1  
-**License:** GNU General Public License v3 or later  
-**License URI:** LICENSE  
+Contributors: conner_bw, greatislander, steelwagstaff
+Tags: publishing, catalog, pressbooks, default-theme
+Requires at least: 5.9.3 
+Tested up to: 6.0.1 
+Stable tag: 1.14.1
+Requires PHP: 7.4
+License: GNU General Public License v3 or later 
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
-
 
 ## Description
 
 Aldine is the default theme for the home page of [Pressbooks](https://pressbooks.org) networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher. Aldine is based on [Underscores](https://underscores.me/).
-
 
 ## Installation
 
@@ -31,13 +29,30 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 2. Click Upload Theme and Choose File, then select the theme's [.zip file](https://github.com/pressbooks/pressbooks-aldine/releases/latest/). Click Install Now.
 3. Click Activate to use your new theme right away.
 
-
 ## Changelog
 
 ### 1.14.1
 
 * See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.14.1
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
+
+## Upgrade Notice
+
+### 1.14.1
+
+- Aldine requires Pressbooks >= 5.34.1
+
+### 1.14.0
+
+- Aldine requires Pressbooks >= 5.33.0
+
+### 1.13.0
+
+- Aldine requires Pressbooks >= 5.32.0
+
+### 1.8.3
+
+- Aldine requires Pressbooks >= 5.17.0
 
 ## Credits
 
