@@ -68,7 +68,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v3
         if: matrix.experimental == false
 
       - name: Prepare Build
