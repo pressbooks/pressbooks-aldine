@@ -11,7 +11,7 @@ const routes = new Router( {
 	// Home page
 	home,
 	// Catalog page
-	catalog,
+	pageTemplatePageCatalog: catalog,
 } );
 
 // Load Events

@@ -7,14 +7,9 @@
  * @package Aldine
  */
 
-?>
-
-<?php
-
 use function Aldine\Helpers\get_catalog_data;
 use function Aldine\Helpers\has_sections;
 
-$front_page_catalog = get_option( 'pb_front_page_catalog' );
 $pb_front_page_catalog_title = get_option( 'pb_front_page_catalog_title' );
 $latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __( 'Our Latest Titles', 'pressbooks-aldine' );
 if ( get_option( 'pb_front_page_catalog' ) ) {
@@ -22,6 +17,11 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 	$catalog_data = get_catalog_data( $page, 3, 'latest' );
 	$previous_page = ( $page > 1 ) ? $page - 1 : 0;
 	$next_page = $page + 1;
+}
+
+$catalog_page = \Aldine\Helpers\get_catalog_page();
+if ( $catalog_page ) {
+	$catalog_permalink = get_permalink( $catalog_page->ID );
 }
 
 ?>
@@ -55,10 +55,10 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 <?php if ( get_option( 'pb_front_page_catalog' ) && ! empty( $catalog_data['books'] ) ) : ?>
 <div id="latest-books" class="latest-books">
 	<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
-	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>" 
-																										<?php
-																										if ( $next_page <= $catalog_data['pages'] ) :
-																											?>
+	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>"
+		<?php
+		if ( $next_page <= $catalog_data['pages'] ) :
+		?>
 		data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
 		<ul class="books">
 		<?php
@@ -73,7 +73,7 @@ if ( get_option( 'pb_front_page_catalog' ) ) {
 		?>
 	</div>
 	<p class="catalog-link">
-		<a class="call-to-action" href="<?php echo network_home_url( '/catalog/' ); ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
+		<a class="call-to-action" href="<?php echo $catalog_permalink ?? ''; ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
 	</p>
 </div>
 <?php endif; ?>

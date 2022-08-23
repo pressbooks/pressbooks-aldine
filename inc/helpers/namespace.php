@@ -437,3 +437,16 @@ function maybe_truncate_string( $string, $length = 40 ) {
 	}
 	return $string;
 }
+
+/**
+ * Get catalog page.
+ *
+ * @return WP_Post|null
+ */
+function get_catalog_page(): ?\WP_Post {
+	$catalog_pages = get_pages( [
+		'meta_key' => '_wp_page_template',
+		'meta_value' => 'page-catalog.php',
+	]);
+	return $catalog_pages[0] ?? null;
+}
