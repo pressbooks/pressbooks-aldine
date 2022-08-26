@@ -55,7 +55,10 @@
 		"assets/scripts/routes/common.js"
 	],
 	"stylelint": {
-		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
+		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+		"rules": {
+			"scss/at-extend-no-missing-placeholder": null
+		}
 	},
 	"scripts": {
 		"build": "mix",

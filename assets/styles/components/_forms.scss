@@ -23,8 +23,7 @@ textarea {
   font-weight: 600;
   font-family: $font-family-sans-serif;
   background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
 
   &:focus {
     outline: none;
@@ -88,6 +87,7 @@ input[type="submit"] {
           font-size: 0.75rem;
         }
       }
+
       &.error {
         border-bottom: solid 2px var(--error);
 

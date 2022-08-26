@@ -74,6 +74,7 @@
       width: calc(100vw - 5.125rem);
       max-width: 75rem;
     }
+
     .books {
       flex-direction: row;
       justify-content: center;
@@ -93,6 +94,7 @@
     .previous,
     .next {
       width: rem(32);
+
       svg {
         width: rem(32);
         height: rem(32);
