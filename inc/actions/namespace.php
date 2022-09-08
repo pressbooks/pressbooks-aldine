@@ -234,8 +234,7 @@ function hide_catalog_content_editor() {
 	if ( $template === 'page-catalog.php' ) {
 		add_action(
 			'edit_form_after_title', function() {
-//				printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
-				printf( '<p>%s</p>', __( 'Note for devs: We want to allow to edit it but with some restrictions', 'pressbooks-aldine' ) );
+				printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );
 			}
 		);
 		remove_post_type_support( 'page', 'editor' );
