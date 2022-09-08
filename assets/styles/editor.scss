@@ -1,8 +1,10 @@
-@import '~aetna/assets/styles/common/_variables.scss';
-@import '~aetna/assets/styles/common/_global.scss';
+@import '~aetna/assets/styles/common/variables';
+@import '~aetna/assets/styles/common/global';
 
 body#tinymce {
   margin: 12px !important;
-  @import '~aetna/assets/styles/components/_buttons.scss';
-  @import '~aetna/assets/styles/layouts/_page-sections.scss';
+  /* stylelint-disable no-invalid-position-at-import-rule */
+  @import '~aetna/assets/styles/components/buttons';
+  @import '~aetna/assets/styles/layouts/page-sections';
+  /* stylelint-enable */
 }

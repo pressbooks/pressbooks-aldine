@@ -12,7 +12,7 @@ fieldset {
     text-align: left;
     text-transform: none;
 
-    &:before {
+    &::before {
       display: none;
     }
 
@@ -127,6 +127,7 @@ fieldset {
     padding: 0;
     margin: 2rem 0 1rem 1rem;
   }
+
   .book {
     height: 14.375rem;
     width: calc(50% - 1rem);
@@ -224,12 +225,12 @@ fieldset {
 
     .subject-groups {
       width: calc(100% + 0.125rem);
-      margin-left: -0.06125rem;
+      margin-left: -0.0612rem;
 
       div {
         position: relative;
         width: calc(100% + 0.125rem);
-        margin-left: -0.06125rem;
+        margin-left: -0.0612rem;
         border-bottom: 0;
       }
     }

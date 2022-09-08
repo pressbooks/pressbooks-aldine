@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 ( function () {
 	tinymce.create( 'tinymce.plugins.aldine_call_to_action', {
 		/**
