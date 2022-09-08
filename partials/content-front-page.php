@@ -58,7 +58,7 @@ if ( $catalog_page ) {
 	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>"
 		<?php
 		if ( $next_page <= $catalog_data['pages'] ) :
-		?>
+			?>
 		data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
 		<ul class="books">
 		<?php
