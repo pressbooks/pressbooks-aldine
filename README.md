@@ -10,9 +10,9 @@
 
 Contributors: conner_bw, greatislander, steelwagstaff
 Tags: publishing, catalog, pressbooks, default-theme
-Requires at least: 5.9.3 
-Tested up to: 6.0.1 
-Stable tag: 1.14.1
+Requires at least: 6.0.2 
+Tested up to: 6.0.2 
+Stable tag: 1.15.0
 Requires PHP: 7.4
 License: GNU General Public License v3 or later 
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -31,9 +31,9 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 
 ## Changelog
 
-### 1.14.1
+### 1.15.0
 
-* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.14.1
+* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.15.0
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
 ## Upgrade Notice
