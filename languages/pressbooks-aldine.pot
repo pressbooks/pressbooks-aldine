@@ -2,16 +2,16 @@
 # This file is distributed under the GNU GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.14.1\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
+"Project-Id-Version: Aldine 1.15.0\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
+"POT-Creation-Date: 2022-09-12T23:16:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.5.0\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: pressbooks-aldine\n"
 
 #. Theme Name of the theme
@@ -127,12 +127,12 @@ msgid "Toggle Menu"
 msgstr ""
 
 #: inc/actions/namespace.php:48
-#: inc/activation/namespace.php:139
+#: inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr ""
 
 #: inc/actions/namespace.php:49
-#: inc/activation/namespace.php:160
+#: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr ""
 
@@ -185,109 +185,107 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: inc/activation/namespace.php:26
+#: inc/activation/namespace.php:28
 msgid "About Pressbooks"
 msgstr ""
 
-#: inc/activation/namespace.php:27
+#: inc/activation/namespace.php:29
 msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
 msgstr ""
 
-#: inc/activation/namespace.php:28
+#: inc/activation/namespace.php:30
 msgid "Learn More"
 msgstr ""
 
-#: inc/activation/namespace.php:35
-#: inc/activation/namespace.php:165
-#: inc/activation/namespace.php:171
+#: inc/activation/namespace.php:37
+#: inc/activation/namespace.php:170
+#: inc/activation/namespace.php:176
 msgid "About"
 msgstr ""
 
-#: inc/activation/namespace.php:40
+#: inc/activation/namespace.php:42
 msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
 msgstr ""
 
-#: inc/activation/namespace.php:41
+#: inc/activation/namespace.php:43
 msgid "Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution."
 msgstr ""
 
-#: inc/activation/namespace.php:45
+#: inc/activation/namespace.php:47
 msgid "suite of products"
 msgstr ""
 
-#: inc/activation/namespace.php:46
+#: inc/activation/namespace.php:48
 msgid "Contact us"
 msgstr ""
 
-#: inc/activation/namespace.php:52
-#: inc/activation/namespace.php:195
-#: inc/activation/namespace.php:201
+#: inc/activation/namespace.php:54
+#: inc/activation/namespace.php:200
+#: inc/activation/namespace.php:206
 msgid "Help"
 msgstr ""
 
 #. translators: %s: link to guide
-#: inc/activation/namespace.php:59
+#: inc/activation/namespace.php:61
 msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
 msgstr ""
 
-#: inc/activation/namespace.php:60
+#: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr ""
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
-#: inc/activation/namespace.php:64
+#: inc/activation/namespace.php:66
 msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
 msgstr ""
 
-#: inc/activation/namespace.php:65
+#: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
 msgstr ""
 
-#: inc/activation/namespace.php:66
+#: inc/activation/namespace.php:68
 msgid "short video series"
 msgstr ""
 
 #. translators: %s: link to Pressbooks webinar schedule
-#: inc/activation/namespace.php:70
+#: inc/activation/namespace.php:72
 msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
 msgstr ""
 
-#: inc/activation/namespace.php:71
+#: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr ""
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
-#: inc/activation/namespace.php:75
+#: inc/activation/namespace.php:77
 msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
 msgstr ""
 
-#: inc/activation/namespace.php:76
+#: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
 msgstr ""
 
-#: inc/activation/namespace.php:77
+#: inc/activation/namespace.php:79
 msgid "community forum"
 msgstr ""
 
 #. translators: %s: link to Pressbooks support request form
-#: inc/activation/namespace.php:81
+#: inc/activation/namespace.php:83
 msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
 msgstr ""
 
-#: inc/activation/namespace.php:82
+#: inc/activation/namespace.php:84
 msgid "support request form"
 msgstr ""
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:88
-#: inc/activation/namespace.php:144
-#: inc/activation/namespace.php:150
-#: inc/activation/namespace.php:180
-#: inc/activation/namespace.php:186
+#: inc/activation/namespace.php:90
+#: inc/activation/namespace.php:155
+#: inc/activation/namespace.php:191
 msgid "Catalog"
 msgstr ""
 
-#: inc/activation/namespace.php:92
+#: inc/activation/namespace.php:97
 #: inc/helpers/namespace.php:226
 msgid "Home"
 msgstr ""
@@ -381,7 +379,7 @@ msgid "Show Front Page Catalog"
 msgstr ""
 
 #: inc/customizer/namespace.php:194
-#: partials/content-front-page.php:19
+#: partials/content-front-page.php:14
 msgid "Our Latest Titles"
 msgstr ""
 
@@ -476,11 +474,11 @@ msgstr ""
 msgid "Your message could not be sent."
 msgstr ""
 
-#: page-catalog.php:60
+#: page-catalog.php:65
 msgid "No Books Found"
 msgstr ""
 
-#: page-catalog.php:63
+#: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
 msgstr ""
 

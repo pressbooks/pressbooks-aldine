@@ -12,7 +12,7 @@ fieldset {
     text-align: left;
     text-transform: none;
 
-    &:before {
+    &::before {
       display: none;
     }
 
@@ -121,12 +121,13 @@ fieldset {
   margin: 0 1rem;
 }
 
-.catalog {
+.page-template-page-catalog {
   .books {
     width: calc(100% - 1rem);
     padding: 0;
     margin: 2rem 0 1rem 1rem;
   }
+
   .book {
     height: 14.375rem;
     width: calc(50% - 1rem);
@@ -224,12 +225,12 @@ fieldset {
 
     .subject-groups {
       width: calc(100% + 0.125rem);
-      margin-left: -0.06125rem;
+      margin-left: -0.0612rem;
 
       div {
         position: relative;
         width: calc(100% + 0.125rem);
-        margin-left: -0.06125rem;
+        margin-left: -0.0612rem;
         border-bottom: 0;
       }
     }
@@ -240,7 +241,7 @@ fieldset {
     margin-left: 0;
   }
 
-  .catalog .book {
+  .page-template-page-catalog .book {
     height: 16.25rem;
     width: calc(100% / 3 - 1rem);
     margin: 0 1rem 1rem 0;
@@ -248,7 +249,7 @@ fieldset {
 }
 
 @media #{$breakpoint-large} {
-  .catalog #content {
+  .page-template-page-catalog #content {
     width: calc(100% - 1rem);
     margin-left: auto;
     margin-right: auto;
@@ -279,13 +280,13 @@ fieldset {
     margin-left: 0;
   }
 
-  .catalog .books {
+  .page-template-page-catalog .books {
     width: 75%;
     float: right;
     margin-left: 0;
   }
 
-  .catalog .book {
+  .page-template-page-catalog .book {
     height: 16.25rem;
     max-width: calc(100% / 3 - 1rem);
     margin: 0 1rem 1rem 0;

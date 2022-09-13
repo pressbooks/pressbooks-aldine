@@ -230,8 +230,8 @@ function hide_catalog_content_editor() {
 	if ( ! isset( $post_id ) ) {
 		return;
 	}
-	$pagename = get_the_title( $post_id );
-	if ( $pagename === 'Catalog' ) {
+	$template = get_page_template_slug( $post_id );
+	if ( $template === 'page-catalog.php' ) {
 		add_action(
 			'edit_form_after_title', function() {
 				printf( '<p>%s</p>', __( 'This page displays your network catalog, so there is no content to edit.', 'pressbooks-aldine' ) );

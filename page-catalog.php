@@ -9,6 +9,11 @@
  * @package Aldine
  */
 
+if ( has_filter( 'pb_network_catalog' ) ) {
+	echo apply_filters( 'pb_network_catalog', '' );
+	return;
+}
+
 use function Aldine\Helpers\get_available_institutions;
 use function Aldine\Helpers\get_available_licenses;
 use function Aldine\Helpers\get_available_subjects;

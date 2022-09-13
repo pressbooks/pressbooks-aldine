@@ -15,7 +15,7 @@ export default {
 				// Give each <h3> a toggle button child
 				heading.innerHTML = `
 				<button type="button" aria-expanded="false">
-					${heading.textContent}
+					${ heading.textContent }
 					<svg aria-hidden="true" focusable="false" class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
 			  `;
@@ -85,7 +85,7 @@ export default {
 				// Give each <h3> a toggle button child
 				heading.innerHTML = `
 				<button type="button" aria-expanded="false">
-					${heading.innerHTML}
+					${ heading.innerHTML }
 					<svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
 			  `;
@@ -175,16 +175,16 @@ export default {
 				}
 
 				const subject = subjects.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-subject="${subjects.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-subject="${ subjects.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const institution = institutions.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-institution*="${institutions.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-institution*="${ institutions.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const license = event.target.value
-					? `[data-license="${event.target.value}"]`
+					? `[data-license="${ event.target.value }"]`
 					: '';
 
-				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+				const filterValue = subject || license || institution ? `${ subject }${ license }${ institution }` : '*';
 
 				$grid.isotope( { filter: filterValue } );
 			} );
@@ -194,16 +194,16 @@ export default {
 				}
 
 				const subject = subjects.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-subject="${subjects.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-subject="${ subjects.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const license = licenses.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-license="${licenses.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-license="${ licenses.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const institution = event.target.value
-					? `[data-institution*="${event.target.value}"]`
+					? `[data-institution*="${ event.target.value }"]`
 					: '';
 
-				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+				const filterValue = subject || license || institution ? `${ subject }${ license }${ institution }` : '*';
 
 				$grid.isotope( { filter: filterValue } );
 			} );
@@ -213,16 +213,16 @@ export default {
 				}
 
 				const license = licenses.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-license="${licenses.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-license="${ licenses.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const institution = institutions.querySelector( 'input[type="radio"]:checked' ).value
-					? `[data-institution*="${institutions.querySelector( 'input[type="radio"]:checked' ).value}"]`
+					? `[data-institution*="${ institutions.querySelector( 'input[type="radio"]:checked' ).value }"]`
 					: '';
 				const subject = event.target.value
-					? `[data-subject="${event.target.value}"]`
+					? `[data-subject="${ event.target.value }"]`
 					: '';
 
-				const filterValue = subject || license || institution ? `${subject}${license}${institution}` : '*';
+				const filterValue = subject || license || institution ? `${ subject }${ license }${ institution }` : '*';
 
 				$grid.isotope( { filter: filterValue } );
 			} );

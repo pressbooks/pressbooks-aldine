@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.4 ]
         os: [ ubuntu-20.04 ]
-        wordpress: [ 5.9.3, latest ]
+        wordpress: [ 6.0.2, latest ]
         experimental: [ false ]
         include:
           - php: 8.0
@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Node
         uses: actions/setup-node@v2
@@ -41,7 +41,7 @@ jobs:
         run: sudo systemctl start mysql.service
 
       - name: Cache PHP dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: vendor
           key: php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -93,7 +93,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v3
         if: matrix.experimental == false
 
       - name: Prepare Build

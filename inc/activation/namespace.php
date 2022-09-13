@@ -7,6 +7,8 @@
 
 namespace Aldine\Activation;
 
+use function Aldine\Helpers\get_catalog_page;
+
 /**
  * Create default page content, importing from Pressbooks Publisher, if possible.
  */
@@ -87,6 +89,9 @@ function create_default_content() {
 			'catalog' => [
 				'post_title' => __( 'Catalog', 'pressbooks-aldine' ),
 				'post_content' => '',
+				'meta_input' => [
+					'_wp_page_template' => 'page-catalog.php',
+				],
 			],
 			'home' => [
 				'post_title' => __( 'Home', 'pressbooks-aldine' ),
@@ -141,7 +146,7 @@ function create_menus() {
 	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
 		$menu_id = wp_create_nav_menu( $menu_name );
 
-		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		$catalog = get_catalog_page();
 		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
 			wp_update_nav_menu_item(
 				$menu_id,
@@ -177,7 +182,7 @@ function create_menus() {
 			);
 		}
 
-		$catalog = get_page_by_title( __( 'Catalog', 'pressbooks-aldine' ) );
+		$catalog = get_catalog_page();
 		if ( $catalog && defined( 'PB_PLUGIN_VERSION' ) ) {
 			wp_update_nav_menu_item(
 				$menu_id,

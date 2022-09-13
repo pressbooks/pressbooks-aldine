@@ -12,6 +12,7 @@
 
   @media #{$breakpoint-large} {
     height: 880px;
+
     .header__inside {
       position: relative;
       z-index: 99;
@@ -47,6 +48,7 @@
       line-height: 1.25em;
       margin-top: 1.5em;
     }
+
     margin-bottom: 0;
     text-align: center;
     max-width: 100%;
@@ -58,6 +60,7 @@
     @media #{$breakpoint-large} {
       font-size: 2rem;
     }
+
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -73,7 +76,7 @@
   }
 }
 
-.page.catalog {
+.page.page-template-page-catalog {
   .header {
     height: rem(381);
   }
