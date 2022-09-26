@@ -45,14 +45,19 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
 	<header class="header" role="banner" style="background-image: url(
 	<?php
-	if ( is_front_page() ) {
-		if ( has_header_image() ) {
-			echo( get_header_image() );
-		} else {
-			echo get_template_directory_uri() . '/dist/images/header.jpg';
-		}
+
+	if ( has_post_thumbnail() ) {
+		echo get_the_post_thumbnail_url();
 	} else {
-		echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+		if (is_front_page()) {
+			if (has_header_image()) {
+				echo(get_header_image());
+			} else {
+				echo get_template_directory_uri() . '/dist/images/header.jpg';
+			}
+		} else {
+			echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+		}
 	}
 	?>
 	);">
