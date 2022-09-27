@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-barba="wrapper">
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -45,14 +45,19 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
 	<header class="header" role="banner" style="background-image: url(
 	<?php
-	if ( is_front_page() ) {
-		if ( has_header_image() ) {
-			echo( get_header_image() );
-		} else {
-			echo get_template_directory_uri() . '/dist/images/header.jpg';
-		}
+
+	if ( has_post_thumbnail() ) {
+		echo get_the_post_thumbnail_url();
 	} else {
-		echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+		if ( is_front_page() ) {
+			if ( has_header_image() ) {
+				echo( get_header_image() );
+			} else {
+				echo get_template_directory_uri() . '/dist/images/header.jpg';
+			}
+		} else {
+			echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+		}
 	}
 	?>
 	);">
