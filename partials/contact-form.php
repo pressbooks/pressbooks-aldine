@@ -31,65 +31,67 @@ $honeypot = 'firstname' . wp_rand();
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-name"
-			<?php
-			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_name' ) :
-				?>
-				class="error"<?php endif; ?> type="text" name="visitor_name" value="
-							<?php
-							if ( $contact_form_response['status'] === 'error' ) :
-								echo $contact_form_response['values']['visitor_name'];
-			endif;
-							?>
-			" required>
+			<input
+					id="contact-name"
+					<?php if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_name' ) : ?>
+						class="error"
+					<?php endif; ?>
+					type="text"
+					name="visitor_name"
+					<?php if ( $contact_form_response && $contact_form_response['status'] === 'error' ) : ?>
+						value="<?php echo $contact_form_response['values']['visitor_name']; ?>"
+					<?php endif; ?>
+					required
+			/>
 			<label for="contact-name">
 				<?php _e( 'Your name (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-email"
-			<?php
-			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_email' ) :
-				?>
-				class="error" <?php endif; ?>type="email" name="visitor_email" value="
-								<?php
-								if ( $contact_form_response['status'] === 'error' ) :
-										echo $contact_form_response['values']['visitor_email'];
-			endif;
-								?>
-			" required>
+			<input
+					id="contact-email"
+					<?php if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_email' ) : ?>
+						class="error"
+					<?php endif; ?>
+					type="email"
+					name="visitor_email"
+					<?php if ( $contact_form_response && $contact_form_response['status'] === 'error' ) : ?>
+						value="<?php echo $contact_form_response['values']['visitor_email']; ?>"
+					<?php endif; ?>
+					required
+			/>
 			<label for="contact-email">
 				<?php _e( 'Your email address (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
-			<input id="contact-institution"
-			<?php
-			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_institution' ) :
-				?>
-				class="error" <?php endif; ?>type="text" name="visitor_institution" value="
-								<?php
-								if ( $contact_form_response['status'] === 'error' ) :
-									echo $contact_form_response['values']['visitor_institution'];
-			endif;
-								?>
-			" required>
+			<input
+					id="contact-institution"
+					<?php if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'visitor_institution' ) : ?>
+						class="error"
+					<?php endif; ?>
+					type="text"
+					name="visitor_institution"
+					<?php if ( $contact_form_response && $contact_form_response['status'] === 'error' ) : ?>
+						value="<?php echo $contact_form_response['values']['visitor_institution']; ?>"
+					<?php endif; ?>
+					required
+			/>
 			<label for="contact-institution">
 				<?php _e( 'Your institution (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
 		<p class="form__row">
-			<textarea id="contact-message"
-			<?php
-			if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'message' ) :
-				?>
-				class="error" <?php endif; ?>name="message" required>
-								<?php
-								if ( $contact_form_response['status'] === 'error' ) :
-									echo $contact_form_response['values']['message'];
-			endif;
-								?>
-			</textarea>
+			<textarea
+					id="contact-message"
+					<?php if ( isset( $contact_form_response['field'] ) && $contact_form_response['field'] === 'message' ) : ?>
+						class="error"
+					<?php endif; ?>
+					name="message"
+					required
+			><?php if ( $contact_form_response && $contact_form_response['status'] === 'error' ) : ?>
+					<?php echo $contact_form_response['values']['message']; ?>
+				<?php endif; ?></textarea>
 			<label for="contact-message">
 				<?php _e( 'Your message (required)', 'pressbooks-aldine' ); ?>
 			</label>
