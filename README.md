@@ -31,9 +31,9 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 
 ## Changelog
 
-### 1.16.0
+### 1.16.1
 
-* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.16.0
+* See: https://github.com/pressbooks/pressbooks-aldine/releases/tag/1.16.1
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
 ## Upgrade Notice
