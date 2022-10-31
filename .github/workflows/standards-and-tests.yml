@@ -15,12 +15,12 @@ jobs:
       matrix:
         php: [ 7.4, 8.0 ]
         os: [ ubuntu-20.04 ]
-        wordpress: [ 6.0.2, latest ]
+        wordpress: [ 6.0.3, latest ]
         include:
           - experimental: true
           - experimental: false
             php: 8.0
-            wordpress: 6.0.2
+            wordpress: 6.0.3
 
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
