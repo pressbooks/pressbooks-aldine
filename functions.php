@@ -64,6 +64,7 @@ add_action( 'updated_option', '\Aldine\Actions\add_color_variants', 10, 3 );
 add_action( 'customize_register', '\Aldine\Customizer\customize_register' );
 add_action( 'customize_preview_init', '\Aldine\Customizer\customize_preview_js' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_color_contrast_validator' );
+add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\featured_books_scripts' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_contact_form_tweaks' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_pb_a11y_in_customizer' );
 

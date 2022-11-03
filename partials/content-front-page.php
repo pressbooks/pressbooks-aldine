@@ -7,19 +7,18 @@
  * @package Aldine
  */
 
-use function Aldine\Helpers\get_catalog_data;
+use function Aldine\Helpers\get_catalog_page;
+use function Aldine\Helpers\get_featured_books;
 use function Aldine\Helpers\has_sections;
 
 $pb_front_page_catalog_title = get_option( 'pb_front_page_catalog_title' );
-$latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __( 'Our Latest Titles', 'pressbooks-aldine' );
+$latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __('Our Latest Titles',
+'pressbooks-aldine');
 if ( get_option( 'pb_front_page_catalog' ) ) {
-	$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-	$catalog_data = get_catalog_data( $page, 3, 'latest' );
-	$previous_page = ( $page > 1 ) ? $page - 1 : 0;
-	$next_page = $page + 1;
+	$catalog_data = get_featured_books();
 }
 
-$catalog_page = \Aldine\Helpers\get_catalog_page();
+$catalog_page = get_catalog_page();
 if ( $catalog_page ) {
 	$catalog_permalink = get_permalink( $catalog_page->ID );
 }
@@ -51,29 +50,23 @@ if ( $catalog_page ) {
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
 <?php if ( get_option( 'pb_front_page_catalog' ) && ! empty( $catalog_data['books'] ) ) : ?>
-<div id="latest-books" class="latest-books">
-	<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
-	<div class="slider" role="region" aria-labelledby="latest-books-title" data-total-pages="<?php echo $catalog_data['pages']; ?>"
-		<?php
-		if ( $next_page <= $catalog_data['pages'] ) :
+	<div id="latest-books" class="latest-books">
+		<h2 id="latest-books-title"><?php echo $latest_books_title; ?></h2>
+		<div class="books">
+			<?php
+			foreach ( $catalog_data['books'] as $book ) :
+				include( locate_template( 'partials/book.php' ) );
+			endforeach;
 			?>
-		data-next-page="<?php echo $next_page; ?>"<?php endif; ?>>
-		<ul class="books">
-		<?php
-		foreach ( $catalog_data['books'] as $book ) :
-			include( locate_template( 'partials/book.php' ) );
-		endforeach;
-		?>
-		</ul>
-		<?php
-		if ( $previous_page || $next_page ) {
-			include( locate_template( 'partials/paged-navigation.php' ) ); }
-		?>
+		</div>
+		<p class="catalog-link">
+			<a class="call-to-action" href="<?php echo $catalog_permalink ?? ''; ?>">
+													<?php
+													_e('View Complete Catalog',
+													'pressbooks-aldine');
+													?>
+						</a>
+		</p>
 	</div>
-	<p class="catalog-link">
-		<a class="call-to-action" href="<?php echo $catalog_permalink ?? ''; ?>"><?php _e( 'View Complete Catalog', 'pressbooks-aldine' ); ?></a>
-	</p>
-</div>
 <?php endif; ?>

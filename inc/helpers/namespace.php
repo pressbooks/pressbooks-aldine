@@ -7,33 +7,22 @@
 
 namespace Aldine\Helpers;
 
+use const Aldine\Customizer\MAX_FEATURED_BOOKS;
+use function Pressbooks\Metadata\get_institutions_flattened;
 use function \Pressbooks\Metadata\book_information_to_schema;
 use function \Pressbooks\Metadata\is_bisac;
 use function \Pressbooks\Utility\str_starts_with;
 use Pressbooks\DataCollector\Book as BookDataCollector;
+use Pressbooks\Licensing;
 
 /**
- * Get catalog data
+ * Get all the books in the catalog
  *
- * @param int $page Catalog page
- * @param int $per_page Books per page
- * @param string $orderby Sort order
- * @param string $license Copyright license
- * @param string $subject Subject
- *
- * @return array
+ * @return array[]
  */
-function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
-
-	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
-		return [
-			'pages' => 0,
-			'books' => [],
-		];
-	}
+function get_catalog_options(): array {
 
 	$dc = BookDataCollector::init();
-
 	/**
 	 * Filter the WP_Site_Query args for the catalog display.
 	 *
@@ -62,7 +51,40 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 			]
 		)
 	);
+	return get_catalog_data( $args );
+}
 
+/**
+ * Get featured books
+ *
+ * @return array
+ */
+function get_featured_books(): array {
+
+	$featured_books = [];
+
+	foreach ( range( 1, MAX_FEATURED_BOOKS ) as $book ) {
+		$book = get_option( 'pb_front_page_catalog_book_' . $book );
+		if ( $book ) {
+			$featured_books[] = $book;
+		}
+	}
+
+	$args = [
+		'site__in'      => $featured_books,
+	];
+
+	return get_catalog_data( $args );
+}
+
+/**
+ * Get catalog data
+ *
+ * @param  array $args Query arguments
+ * @return array[]
+ */
+function get_catalog_data( array $args ): array {
+	$dc = BookDataCollector::init();
 	/**
 	 * WordPress site
 	 *
@@ -75,38 +97,20 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
 		$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE );
 		$sites_in_catalog[] = $site;
 	}
-	if ( $orderby === 'latest' ) {
-		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
-	} else {
-		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' );
-	}
-
-	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
-	$offset = ( $page - 1 ) * $per_page;
 	$books = [];
-	foreach ( $sites_in_catalog as $i => $site ) {
-		if ( $i < $offset ) {
-			continue;
-		}
-
+	foreach ( $sites_in_catalog as $site ) {
 		$book_information = $dc->get( $site->blog_id, $dc::BOOK_INFORMATION_ARRAY );
 		if ( is_array( $book_information ) && ! empty( $book_information ) ) {
 			$schema = book_information_to_schema( $book_information );
 			$book['title'] = $schema['name'];
-			$book['date-published'] = $schema['datePublished'] ?? '';
-			$book['subject'] = $schema['about'][0]['identifier'] ?? '';
+			$book['id'] = $site->blog_id;
 			$book['link'] = get_blogaddress_by_id( $site->blog_id );
 			$book['metadata'] = $schema;
 			$books[] = $book;
 		}
-
-		if ( count( $books ) >= $per_page ) {
-			break;
-		}
 	}
 
 	return [
-		'pages' => $total_pages,
 		'books' => $books,
 	];
 }
@@ -118,7 +122,7 @@ function get_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $licen
  */
 function get_catalog_licenses() {
 	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
-		$licenses = ( new \Pressbooks\Licensing() )->getSupportedTypes();
+		$licenses = ( new Licensing() )->getSupportedTypes();
 		foreach ( $licenses as $key => $value ) {
 			$licenses[ $key ] = preg_replace( '/\([^)]+\)/', '', $value['desc'] );
 		}
@@ -136,7 +140,7 @@ function get_catalog_licenses() {
  */
 function get_available_licenses( $catalog_data ) {
 	$licenses = [];
-	$licensing = new \Pressbooks\Licensing();
+	$licensing = new Licensing();
 
 	foreach ( $catalog_data['books'] as $book ) {
 		$license = $licensing->getLicenseFromUrl( $book['metadata']['license']['url'] );
@@ -158,7 +162,7 @@ function get_institutions(): array {
 		return [];
 	}
 
-	return \Pressbooks\Metadata\get_institutions_flattened();
+	return get_institutions_flattened();
 }
 
 /**

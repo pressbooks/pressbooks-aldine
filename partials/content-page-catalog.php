@@ -89,7 +89,7 @@
 	endforeach;
 	?>
 </ul>
-<?php if ( $catalog_data['pages'] > 1 ) : ?>
+<?php if ( isset($catalog_data['pages']) && $catalog_data['pages'] > 1 ) : ?>
 <nav class="catalog-navigation">
 	<?php
 	if ( $previous_page ) :
