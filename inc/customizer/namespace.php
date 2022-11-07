@@ -209,6 +209,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 
 		$options = get_catalog_options();
 		$books = collect( $options['books'] )->pluck( 'title', 'id' )->toArray();
+		$books = [ '' => __( 'Select a book', 'pressbooks-aldine' ) ] + $books;
 
 		foreach ( range( 1, MAX_FEATURED_BOOKS ) as $i ) {
 			$wp_customize->add_setting(

@@ -70,8 +70,13 @@ function get_featured_books(): array {
 		}
 	}
 
+	if ( empty( $featured_books ) ) {
+		return [];
+	}
+
 	$args = [
 		'site__in'      => $featured_books,
+		'sort_by_featured' => true,
 	];
 
 	return get_catalog_data( $args );
@@ -109,8 +114,114 @@ function get_catalog_data( array $args ): array {
 			$books[] = $book;
 		}
 	}
+	// Sort by featured books.
+	if ( isset( $args['sort_by_featured'] ) ) {
+		usort( $books, function ( $a, $b ) use ( $args ) {
+			return array_search( $a['id'], $args['site__in'], true ) - array_search($b['id'],
+			$args['site__in'], true);
+		} );
+	}
 
 	return [
+		'books' => $books,
+	];
+}
+
+/**
+ * Get paginated catalog data
+ *
+ * @param int $page Catalog page
+ * @param int $per_page Books per page
+ * @param string $orderby Sort order
+ * @param string $license Copyright license
+ * @param string $subject Subject
+ *
+ * @return array
+ */
+function get_paginated_catalog_data( $page = 1, $per_page = 10, $orderby = 'title', $license = '', $subject = '' ) {
+
+	if ( ! defined( 'PB_PLUGIN_VERSION' ) ) {
+		return [
+			'pages' => 0,
+			'books' => [],
+		];
+	}
+
+	$dc = BookDataCollector::init();
+
+	/**
+	 * Filter the WP_Site_Query args for the catalog display.
+	 *
+	 * @since 1.0.0
+	 */
+	$args = apply_filters(
+		'pb_aldine_catalog_query_args',
+		/**
+		 * Deprecation notice
+		 *
+		 * @deprecated 1.0.0
+		 *
+		 * @see Pressbooks Publisher
+		 */
+		apply_filters(
+			'pb_publisher_catalog_query_args',
+			[
+				'number' => 1000000,
+				'meta_key' => $dc::IN_CATALOG, // @codingStandardsIgnoreLine
+				'meta_value' => 1, // @codingStandardsIgnoreLine
+				'public' => 1,
+				'archived' => 0,
+				'spam' => 0,
+				'deleted' => 0,
+				'network_id' => get_network()->site_id,
+			]
+		)
+	);
+
+	/**
+	 * WordPress site
+	 *
+	 * @var \WP_Site $site
+	 */
+
+	$sites_in_catalog = [];
+	$sites = get_sites( $args );
+	foreach ( $sites as $site ) {
+		$site->pb_title = $dc->get( $site->blog_id, $dc::TITLE );
+		$sites_in_catalog[] = $site;
+	}
+	if ( $orderby === 'latest' ) {
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'last_updated', 'DESC' );
+	} else {
+		$sites_in_catalog = wp_list_sort( $sites_in_catalog, 'pb_title', 'ASC' );
+	}
+
+	$total_pages = ceil( count( $sites_in_catalog ) / $per_page );
+	$offset = ( $page - 1 ) * $per_page;
+	$books = [];
+	foreach ( $sites_in_catalog as $i => $site ) {
+		if ( $i < $offset ) {
+			continue;
+		}
+
+		$book_information = $dc->get( $site->blog_id, $dc::BOOK_INFORMATION_ARRAY );
+		if ( is_array( $book_information ) && ! empty( $book_information ) ) {
+			$schema = book_information_to_schema( $book_information );
+			$book['title'] = $schema['name'];
+			$book['date-published'] = $schema['datePublished'] ?? '';
+			$book['subject'] = $schema['about'][0]['identifier'] ?? '';
+			$book['link'] = get_blogaddress_by_id( $site->blog_id );
+			$book['metadata'] = $schema;
+			$books[] = $book;
+		}
+
+		if ( count( $books ) >= $per_page ) {
+			break;
+		}
+	}
+
+	return [
+		'pages' => $total_pages,
 		'books' => $books,
 	];
 }

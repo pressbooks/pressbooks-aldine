@@ -30,7 +30,7 @@ export default {
 					while (
 						elem.nextElementSibling &&
 						elem.nextElementSibling.tagName !== 'H2'
-						) {
+					) {
 						elems.push( elem.nextElementSibling );
 						elem = elem.nextElementSibling;
 					}
@@ -100,7 +100,7 @@ export default {
 					while (
 						elem.nextElementSibling &&
 						elem.nextElementSibling.tagName !== 'H3'
-						) {
+					) {
 						elems.push( elem.nextElementSibling );
 						elem = elem.nextElementSibling;
 					}

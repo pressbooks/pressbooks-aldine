@@ -18,15 +18,15 @@ use function Aldine\Helpers\get_available_institutions;
 use function Aldine\Helpers\get_available_licenses;
 use function Aldine\Helpers\get_available_subjects;
 use function Aldine\Helpers\get_catalog_licenses;
-use function Aldine\Helpers\get_featured_books;
 use function Aldine\Helpers\get_institutions;
+use function Aldine\Helpers\get_paginated_catalog_data;
 
 $current_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $orderby = ( get_query_var( 'orderby' ) ) ? get_query_var( 'orderby' ) : 'title';
 $subject = ( get_query_var( 'subject' ) ) ? get_query_var( 'subject' ) : '';
 $license = ( get_query_var( 'license' ) ) ? get_query_var( 'license' ) : '';
 $institution = get_query_var( 'institution' ) ?? '';
-$catalog_data = get_featured_books();
+$catalog_data = get_paginated_catalog_data();
 $previous_page = ( $current_page > 1 ) ? $current_page - 1 : 0;
 $next_page = $current_page + 1;
 $licenses = get_catalog_licenses();

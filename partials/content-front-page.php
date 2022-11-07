@@ -56,7 +56,7 @@ if ( $catalog_page ) {
 		<div class="books">
 			<?php
 			foreach ( $catalog_data['books'] as $book ) :
-				include( locate_template( 'partials/book.php' ) );
+				include( locate_template( 'partials/featured-book.php' ) );
 			endforeach;
 			?>
 		</div>
