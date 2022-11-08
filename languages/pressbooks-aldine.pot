@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-04T17:15:14+00:00\n"
+"POT-Creation-Date: 2022-11-08T16:31:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: pressbooks-aldine\n"
@@ -91,7 +91,7 @@ msgid "Pressbooks Directory"
 msgstr ""
 
 #: footer.php:110
-#: inc/helpers/namespace.php:234
+#: inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgid "Catalog"
 msgstr ""
 
 #: inc/activation/namespace.php:97
-#: inc/helpers/namespace.php:226
+#: inc/helpers/namespace.php:341
 msgid "Home"
 msgstr ""
 
@@ -306,109 +306,117 @@ msgstr ""
 msgid "In Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:71
+#: inc/customizer/namespace.php:74
 msgid "Primary Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:72
+#: inc/customizer/namespace.php:75
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
 
-#: inc/customizer/namespace.php:77
+#: inc/customizer/namespace.php:80
 msgid "Primary Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:78
+#: inc/customizer/namespace.php:81
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:83
+#: inc/customizer/namespace.php:86
 msgid "Accent Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:84
+#: inc/customizer/namespace.php:87
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr ""
 
-#: inc/customizer/namespace.php:89
+#: inc/customizer/namespace.php:92
 msgid "Accent Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:90
+#: inc/customizer/namespace.php:93
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:95
+#: inc/customizer/namespace.php:98
 msgid "Primary Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:96
+#: inc/customizer/namespace.php:99
 msgid "Used for text on a primary background."
 msgstr ""
 
-#: inc/customizer/namespace.php:101
+#: inc/customizer/namespace.php:104
 msgid "Accent Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:102
+#: inc/customizer/namespace.php:105
 msgid "Used for text on an accent color background."
 msgstr ""
 
-#: inc/customizer/namespace.php:126
+#: inc/customizer/namespace.php:129
 msgid "Social Media"
 msgstr ""
 
-#: inc/customizer/namespace.php:138
+#: inc/customizer/namespace.php:141
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer/namespace.php:151
+#: inc/customizer/namespace.php:154
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer/namespace.php:164
+#: inc/customizer/namespace.php:167
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer/namespace.php:173
+#: inc/customizer/namespace.php:176
 msgid "Front Page Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:184
+#: inc/customizer/namespace.php:188
 msgid "Show Front Page Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:194
-#: partials/content-front-page.php:14
+#: inc/customizer/namespace.php:199
+#: partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr ""
 
-#: inc/customizer/namespace.php:199
+#: inc/customizer/namespace.php:204
 msgid "Front Page Catalog Title"
 msgstr ""
 
-#: inc/customizer/namespace.php:208
+#: inc/customizer/namespace.php:212
+msgid "Select a book"
+msgstr ""
+
+#: inc/customizer/namespace.php:222
+msgid "Featured book"
+msgstr ""
+
+#: inc/customizer/namespace.php:234
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer/namespace.php:219
+#: inc/customizer/namespace.php:245
 msgid "Show Contact Form"
 msgstr ""
 
-#: inc/customizer/namespace.php:229
+#: inc/customizer/namespace.php:255
 #: partials/contact-form.php:13
 msgid "Contact Us"
 msgstr ""
 
-#: inc/customizer/namespace.php:234
+#: inc/customizer/namespace.php:260
 msgid "Contact Form Title"
 msgstr ""
 
-#: inc/customizer/namespace.php:248
+#: inc/customizer/namespace.php:274
 msgid "Contact Email"
 msgstr ""
 
-#: inc/customizer/namespace.php:260
+#: inc/customizer/namespace.php:286
 msgid "Contact Link"
 msgstr ""
 
@@ -416,61 +424,61 @@ msgstr ""
 msgid "Continued"
 msgstr ""
 
-#: inc/helpers/namespace.php:243
+#: inc/helpers/namespace.php:358
 msgid "Sign In"
 msgstr ""
 
-#: inc/helpers/namespace.php:251
+#: inc/helpers/namespace.php:366
 msgid "Sign Up"
 msgstr ""
 
-#: inc/helpers/namespace.php:261
-#: inc/helpers/namespace.php:269
+#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:384
 msgid "Admin"
 msgstr ""
 
-#: inc/helpers/namespace.php:279
+#: inc/helpers/namespace.php:394
 msgid "My Books"
 msgstr ""
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:402
 msgid "Create a New Book"
 msgstr ""
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:410
 msgid "Sign Out"
 msgstr ""
 
-#: inc/helpers/namespace.php:360
+#: inc/helpers/namespace.php:475
 msgid "Name is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:364
+#: inc/helpers/namespace.php:479
 msgid "Email is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:368
+#: inc/helpers/namespace.php:483
 msgid "Email is invalid."
 msgstr ""
 
-#: inc/helpers/namespace.php:372
+#: inc/helpers/namespace.php:487
 msgid "Institution is required."
 msgstr ""
 
-#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:491
 msgid "Message is required."
 msgstr ""
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:383
+#: inc/helpers/namespace.php:498
 msgid "Contact Form Submission from %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:394
+#: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
 msgstr ""
 
-#: inc/helpers/namespace.php:397
+#: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
 msgstr ""
 
@@ -510,7 +518,7 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: partials/content-front-page.php:76
+#: partials/content-front-page.php:66
 msgid "View Complete Catalog"
 msgstr ""
 
