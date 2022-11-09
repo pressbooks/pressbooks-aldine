@@ -2155,9 +2155,15 @@ input[type=submit] {
   margin-top: -540px;
   background: transparent;
 }
+.home #content.custom-homepage {
+  margin-top: 0;
+}
 @media screen and (min-width: 60rem) {
   .home #content {
     margin-top: -880px;
+  }
+  .home #content.custom-homepage {
+    margin-top: 0;
   }
 }
 
@@ -2208,11 +2214,11 @@ input[type=submit] {
   }
 }
 
-.page:not(.home) .header {
+.page .header {
   height: 15rem;
 }
 @media screen and (min-width: 60rem) {
-  .page:not(.home) .header {
+  .page .header {
     height: 55rem;
   }
 }
@@ -2282,7 +2288,7 @@ body #content a.call-to-action {
   text-decoration: none;
 }
 
-.page.home:not(.has-sections) article {
+.page article {
   margin-top: 0;
 }
 
