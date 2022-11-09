@@ -1,11 +1,11 @@
 name: Run Standards & Tests
 on:
   push:
-    branches: [ dev, master ]
+    branches: [dev, master]
     tags:
       - '*.*.*'
   pull_request:
-    branches: [ dev ]
+    branches: [dev]
 jobs:
   tests:
     runs-on: ${{ matrix.os }}
@@ -13,9 +13,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [ 7.4, 8.0 ]
-        os: [ ubuntu-20.04 ]
-        wordpress: [ 6.0.3, latest ]
+        php: [8.0, 8.1]
+        os: [ubuntu-20.04]
+        wordpress: [6.0.3, latest]
         include:
           - experimental: true
           - experimental: false
