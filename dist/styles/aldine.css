@@ -1949,14 +1949,13 @@ nav {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  max-width: 18rem;
-  height: 25rem;
+  aspect-ratio: 3/4;
   border: solid 1px var(--accent);
   margin: 0 0 2rem;
 }
 .featured_book__cover {
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
