@@ -334,7 +334,7 @@ function get_default_menu( $items = '' ) {
 		'SignOut' => 'sign-out',
 	];
 
-	$link = ( is_front_page() ) ? network_home_url( '#main' ) : network_home_url( '/' );
+	$link = network_home_url( '/' );
 	$items = sprintf(
 		'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 		$link,
@@ -564,4 +564,20 @@ function get_catalog_page(): ?\WP_Post {
 		'meta_value' => 'page-catalog.php', //phpcs:ignore HM.Performance.SlowMetaQuery.slow_query_meta_value
 	]);
 	return $catalog_pages[0] ?? null;
+}
+
+/**
+ * This function generate a class to know if the current page is a custom frontpage.
+ *
+ * @return string
+ */
+function custom_homepage(): string {
+	$home_page = get_option( 'page_on_front' );
+	if ( $home_page ) {
+		$template = get_page_template_slug( $home_page );
+		if ( 'page-catalog.php' === $template ) {
+			return 'custom-homepage';
+		}
+	}
+	return '';
 }

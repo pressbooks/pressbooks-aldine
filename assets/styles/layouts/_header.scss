@@ -20,12 +20,19 @@
   }
 }
 
-.home #content {
+.home #content{
   margin-top: -540px;
   background: transparent;
 
+  &.custom-homepage {
+    margin-top: 0;
+  }
   @media #{$breakpoint-large} {
     margin-top: -880px;
+
+    &.custom-homepage {
+      margin-top: 0;
+    }
   }
 }
 
@@ -68,7 +75,7 @@
   }
 }
 
-.page:not(.home) .header {
+.page .header {
   height: rem(240);
 
   @media #{$breakpoint-large} {

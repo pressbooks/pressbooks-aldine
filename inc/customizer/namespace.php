@@ -227,6 +227,28 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 				]
 			);
 		}
+
+		$wp_customize->add_section(
+			'page_on_front', [
+				'title' => __( 'Front Page Settings', 'pressbooks-aldine' ),
+				'priority' => 24,
+			]
+		);
+
+		$wp_customize->add_setting(
+			'page_on_front', [
+				'type' => 'option',
+				'capability' => 'manage_options',
+			],
+		);
+
+		$wp_customize->add_control(
+			'page_on_front', [
+				'label' => __( 'Network Home Page', 'pressbooks-aldine' ),
+				'section'  => 'page_on_front',
+				'type' => 'dropdown-pages',
+			]
+		);
 	}
 
 	$wp_customize->add_section(
