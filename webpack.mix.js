@@ -74,4 +74,7 @@ mix.webpackConfig( {
 			isotope: 'isotope-layout',
 		},
 	},
+	stats: {
+		children: true
+	}
 } );
