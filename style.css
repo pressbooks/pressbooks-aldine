@@ -5,10 +5,10 @@ Author:				Pressbooks (Book Oven Inc.)
 Author URI:			https://pressbooks.org
 Description:		Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
 Tags:				publishing, catalog, pressbooks, default-theme
-Version:			1.17.0
-Requires at least:	6.0.3
-Tested up to:		6.0.3
-Requires PHP:		7.4
+Version:			1.18.0
+Requires at least:	6.1.1
+Tested up to:		6.1.1
+Requires PHP:		8.0
 License:			GNU GPL v3 or later
 License URI:		https://github.com/pressbooks/pressbooks-aldine/tree/master/LICENSE.md
 Text Domain:		pressbooks-aldine
