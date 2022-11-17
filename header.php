@@ -9,6 +9,8 @@
  * @package Aldine
  */
 
+use function Aldine\Helpers\custom_homepage;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -20,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper">
+<body <?php body_class(); ?>>
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -102,4 +104,4 @@
 		</div>
 	</header> <!-- .header -->
 
-	<div id="content" class="site-content clearfix">
+	<div id="content" class="site-content clearfix <?php echo custom_homepage(); ?>">
