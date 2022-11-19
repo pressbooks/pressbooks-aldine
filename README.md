@@ -37,7 +37,6 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 * Full release history available at: https://github.com/pressbooks/pressbooks-aldine/releases
 
 ## Upgrade Notices
-
 ### Aldine 1.18.0
 * Aldine requires PHP >= 8.0
 * Aldine requires WordPress >= 6.1.1
