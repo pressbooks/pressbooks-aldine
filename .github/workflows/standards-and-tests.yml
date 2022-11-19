@@ -1,11 +1,11 @@
 name: Run Standards & Tests
 on:
   push:
-    branches: [ dev, master ]
+    branches: [dev, master]
     tags:
       - '*.*.*'
   pull_request:
-    branches: [ dev ]
+    branches: [dev]
 jobs:
   tests:
     runs-on: ${{ matrix.os }}
