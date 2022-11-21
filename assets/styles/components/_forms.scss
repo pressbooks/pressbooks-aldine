@@ -36,7 +36,8 @@ input[type="submit"] {
 }
 
 .form {
-  width: rem(354);
+  max-width: rem(354);
+  width: calc(100% - 2rem);
 
   ::placeholder {
     color: var(--black);
