@@ -7,7 +7,10 @@
 
 namespace Aldine\Customizer;
 
+use function Aldine\Helpers\get_catalog_options;
 use PressbooksMix\Assets;
+
+const MAX_FEATURED_BOOKS = 4;
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -177,14 +180,16 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		$wp_customize->add_setting(
 			'pb_front_page_catalog', [
 				'type' => 'option',
-			]
+			],
 		);
+
 		$wp_customize->add_control(
 			'pb_front_page_catalog', [
 				'label' => __( 'Show Front Page Catalog', 'pressbooks-aldine' ),
 				'section'  => 'pb_front_page_catalog',
 				'settings' => 'pb_front_page_catalog',
 				'type' => 'checkbox',
+				'default' => '0',
 			]
 		);
 		$wp_customize->add_setting(
@@ -199,6 +204,49 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 				'label' => __( 'Front Page Catalog Title', 'pressbooks-aldine' ),
 				'section'  => 'pb_front_page_catalog',
 				'settings' => 'pb_front_page_catalog_title',
+			]
+		);
+
+		$options = get_catalog_options();
+		$books = collect( $options['books'] )->pluck( 'title', 'id' )->toArray();
+		$books = [ '' => __( 'Select a book', 'pressbooks-aldine' ) ] + $books;
+
+		foreach ( range( 1, MAX_FEATURED_BOOKS ) as $i ) {
+			$wp_customize->add_setting(
+				"pb_front_page_catalog_book_{$i}", [
+					'type' => 'option',
+				]
+			);
+			$wp_customize->add_control(
+				"pb_front_page_catalog_book_{$i}", [
+					'label' => __( 'Featured book', 'pressbooks-aldine' ) . " {$i}",
+					'section'  => 'pb_front_page_catalog',
+					'settings' => "pb_front_page_catalog_book_{$i}",
+					'type' => 'select',
+					'choices' => $books,
+				]
+			);
+		}
+
+		$wp_customize->add_section(
+			'page_on_front', [
+				'title' => __( 'Front Page Settings', 'pressbooks-aldine' ),
+				'priority' => 24,
+			]
+		);
+
+		$wp_customize->add_setting(
+			'page_on_front', [
+				'type' => 'option',
+				'capability' => 'manage_options',
+			],
+		);
+
+		$wp_customize->add_control(
+			'page_on_front', [
+				'label' => __( 'Network Home Page', 'pressbooks-aldine' ),
+				'section'  => 'page_on_front',
+				'type' => 'dropdown-pages',
 			]
 		);
 	}
@@ -272,6 +320,16 @@ function customize_preview_js() {
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
 	wp_enqueue_script( 'aldine/customizer', $assets->getPath( 'scripts/customizer.js' ), [ 'customize-preview' ], false, null );
+}
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function featured_books_scripts() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	wp_enqueue_script( 'aldine/featured-books', $assets->getPath( 'scripts/featured-books.js' ), [], false, null );
 }
 
 /**

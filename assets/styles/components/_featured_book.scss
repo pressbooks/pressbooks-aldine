@@ -1,0 +1,40 @@
+#latest-books {
+  .books {
+    align-items: flex-start;
+  }
+}
+
+.featured_book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  border: solid 1px var(--accent);
+  margin: 0 0 2rem;
+
+  &__cover {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 17rem;
+  }
+
+  a {
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    hyphens: auto;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 1rem;
+    min-height: 4rem;
+  }
+}
