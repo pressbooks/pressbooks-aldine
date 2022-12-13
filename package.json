@@ -61,7 +61,7 @@
 		}
 	},
 	"scripts": {
-		"build": "mix",
+		"build": "npm run production",
 		"lint:scripts": "eslint \"assets/scripts/**/*.js\"",
 		"lint:styles": "stylelint \"assets/styles/**/*.scss\"",
 		"lint": "run-s lint:*",
