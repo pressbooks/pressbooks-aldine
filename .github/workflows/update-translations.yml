@@ -10,7 +10,9 @@ jobs:
       with:
         token: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
     - name: Install Transifex Client
-      run: curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+      run: |
+        curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+        source ~/.bashrc
     - name: Pull translations from Transifex
       run: tx pull --all --force --minimum-perc=25
       env:
