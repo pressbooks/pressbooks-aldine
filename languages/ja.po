@@ -1,7 +1,7 @@
 # Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
-# Antonio D., 2018
+# Eduardo Vera, 2023
 # 
 msgid ""
 msgstr ""
@@ -9,23 +9,23 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Antonio D., 2018\n"
-"Language-Team: Hungarian (Hungary) (https://app.transifex.com/pressbooks/teams/9194/hu_HU/)\n"
+"Last-Translator: Eduardo Vera, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu_HU\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
-msgstr ""
+msgstr "Aldine"
 
 #. Theme URI of the theme
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
-msgstr ""
+msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 msgid ""
@@ -33,180 +33,177 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
+"Aldine は Pressbooks "
+"サイトネットワークのホームページのデフォルトテーマです。これは、多くの人に世界初の出版社とされるアルドゥス・マヌティウスが1494年に設立したアルド印刷所にちなんで名付けられました。"
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr ""
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.org"
-msgstr ""
+msgstr "https://pressbooks.org"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "エラー:お探しのページが見つかりません。"
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "Úgy tűnik, semmit nem találtunk ezen a helyen."
+msgstr "ここには何も見つからないようです。"
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "「%1$s」への1件のコメント"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "「%2$s」への%1$s件のコメント"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "A hozzászólások le vannak zárva."
+msgstr "コメントは受け付けていません。"
 
 #. translators: %s network name
 #: footer.php:61 footer.php:66
 msgid "%s on Facebook"
-msgstr ""
+msgstr "%s の Facebook"
 
 #. translators: %s network name
 #: footer.php:71 footer.php:76
 msgid "%s on Twitter"
-msgstr ""
+msgstr "%s の Twitter"
 
 #. translators: %s network name
 #: footer.php:81 footer.php:86
 msgid "%s on Instagram"
-msgstr ""
+msgstr "%s の Instagram"
 
 #. translators: %s Pressbooks
 #: footer.php:105
 msgid "Powered by %s"
-msgstr ""
+msgstr "Powered by %s"
 
 #: footer.php:107
 msgid "Guides and Tutorials"
-msgstr ""
+msgstr "ガイドとチュートリアル"
 
 #: footer.php:108
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Pressbooks ディレクトリ"
 
 #: footer.php:110 inc/helpers/namespace.php:234
 msgid "Contact"
-msgstr "Kapcsolat"
+msgstr "お問い合わせ"
 
 #: footer.php:115 footer.php:117
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbooks の YouTube"
 
 #: footer.php:119 footer.php:123
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks a Twitteren"
+msgstr "Pressbooks の Twitter"
 
 #: functions.php:19
 msgid "Dependencies Missing"
-msgstr ""
+msgstr "依存関係が見つかりません"
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr ""
+msgstr "Aldine ディレクトリのルートから <code>composer install</code> を実行する必要があります。"
 
 #: header.php:45
 msgid "Skip to content"
-msgstr "Ugrás a tartalomra"
+msgstr "コンテンツへスキップ"
 
 #. translators: %s name of network
 #: header.php:70
 msgid "Logo for %s"
-msgstr ""
+msgstr "%s のロゴ"
 
 #: header.php:81
 msgid "Toggle Menu"
-msgstr ""
+msgstr "メニューを切り替え"
 
 #: inc/actions/namespace.php:48 inc/activation/namespace.php:139
 msgid "Primary Menu"
-msgstr "Főmenü"
+msgstr "メインメニュー"
 
 #: inc/actions/namespace.php:49 inc/activation/namespace.php:160
 msgid "Footer Menu"
-msgstr "Lábléc Menü"
+msgstr "フッターメニュー"
 
 #: inc/actions/namespace.php:122
 msgid "Network Footer Block 1"
-msgstr ""
+msgstr "サイトネットワークのブロック1"
 
 #: inc/actions/namespace.php:134
 msgid "Network Footer Block 2"
-msgstr ""
+msgstr "サイトネットワークのブロック2"
 
 #: inc/actions/namespace.php:237
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
-msgstr ""
-"Ez az oldal megjeleníti a hálózati katalógust, így nincs szerkeszteni való "
-"tartalom."
+msgstr "このページはサイトネットワークのカタログを表示するため、編集するコンテンツがありません。"
 
 #: inc/actions/namespace.php:294
 msgid "Page Section"
-msgstr "Oldal-szekció"
+msgstr "ページセクション"
 
 #: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
 msgid "Title"
-msgstr "Cím"
+msgstr "タイトル"
 
 #: inc/actions/namespace.php:296
 msgid "Standard"
-msgstr "Sztenderd"
+msgstr "標準"
 
 #: inc/actions/namespace.php:297
 msgid "Accent"
-msgstr ""
+msgstr "アクセント"
 
 #: inc/actions/namespace.php:298
 msgid "Bordered"
-msgstr "Határolt"
+msgstr "枠線付け"
 
 #: inc/actions/namespace.php:299
 msgid "Borderless"
-msgstr "Nincs határ"
+msgstr "枠線なし"
 
 #: inc/actions/namespace.php:302
 msgid "Call to Action"
-msgstr ""
+msgstr "行動喚起"
 
 #: inc/actions/namespace.php:303
 msgid "Text"
-msgstr "Szöveg"
+msgstr "テキスト"
 
 #: inc/actions/namespace.php:304
 msgid "Link"
-msgstr "Link"
+msgstr "リンク"
 
 #: inc/activation/namespace.php:26
 msgid "About Pressbooks"
-msgstr "A Pressbookról"
+msgstr "Pressbooks について"
 
 #: inc/activation/namespace.php:27
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
-msgstr ""
-"A Pressbooks egyszerűen használható könyvíró szoftver, amelynek segítségével"
-" könyveket készíthet, bármely formátumban."
+msgstr "Pressbooks は本を使いやすい書くソフトウェアであり、すべての公開する必要な形式で本を作成できます。"
 
 #: inc/activation/namespace.php:28
 msgid "Learn More"
-msgstr "Tudjon meg többet"
+msgstr "さらに詳しく"
 
 #: inc/activation/namespace.php:35 inc/activation/namespace.php:165
 #: inc/activation/namespace.php:171
 msgid "About"
-msgstr "Rólunk"
+msgstr "Pressbooks について"
 
 #: inc/activation/namespace.php:40
 msgid ""
@@ -215,6 +212,8 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
+"Pressbooks は本の簡単な制作ソフトウェアであり、自分のアイデアを簡単に書き、開発、共有できます。Pressbooks "
+"を使用して、オープン教育リソース、書籍、学術論文、フィクション・ノンフィクションの本、白書、シラバスなどを公開できます。"
 
 #: inc/activation/namespace.php:41
 msgid ""
@@ -222,19 +221,21 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
+"Pressbooks で作成者はウェブにコンテンツを素早く公開したり、オンデマンド印刷またはデジタル配信用に特別に設計されたアクセス可能な EPUB と"
+" PDF を含む複数の形式にエクスポートを作成したりできます。"
 
 #: inc/activation/namespace.php:45
 msgid "suite of products"
-msgstr ""
+msgstr "製品スイート"
 
 #: inc/activation/namespace.php:46
 msgid "Contact us"
-msgstr ""
+msgstr "お問い合わせ"
 
 #: inc/activation/namespace.php:52 inc/activation/namespace.php:195
 #: inc/activation/namespace.php:201
 msgid "Help"
-msgstr "Súgó"
+msgstr "ヘルプ"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:59
@@ -243,10 +244,12 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
+"Pressbooks プロジェクトのヘルプをお探しですか ? "
+"利用可能な最も充実したリソースは%sです。作品を作成、強化、エクスポートについて知っておく必要があるすべてを含みます。"
 
 #: inc/activation/namespace.php:60
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Pressbooks ユーザーガイド"
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
@@ -256,25 +259,27 @@ msgid ""
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
 "%2$s will guide you."
 msgstr ""
+"機能と製品更新について %1$sに短いビデオチュートリアルとウェビナーを表示できます。Pressbooks "
+"を始めたばかりの場合、この%2$sで進めます。"
 
 #: inc/activation/namespace.php:65
 msgid "Pressbooks YouTube channel"
-msgstr ""
+msgstr "Pressbooks の YouTube チャンネル"
 
 #: inc/activation/namespace.php:66
 msgid "short video series"
-msgstr ""
+msgstr "短いビデオシリーズ"
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:70
 msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
-msgstr ""
+msgstr "ライブトレーニングセッションに参加するのが一番よくわかったら、いずれかの Pressbooks の%sに登録と参加できます。"
 
 #: inc/activation/namespace.php:71
 msgid "monthly webinars"
-msgstr ""
+msgstr "毎月のウェビナー"
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
@@ -284,14 +289,16 @@ msgid ""
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
+"%1$sにも他の役に立つサポートリソースへのリンクが含んで、いくつかのよく寄せられる質問の答えがあります。Pressbooks "
+"は質問して他のユーザーを返信できる%2$sも管理します。"
 
 #: inc/activation/namespace.php:76
 msgid "Pressbooks support page"
-msgstr ""
+msgstr "Pressbooks サポートページ"
 
 #: inc/activation/namespace.php:77
 msgid "community forum"
-msgstr ""
+msgstr "コミュニティフォーラム"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:81
@@ -300,90 +307,91 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
+"追加の必要なサポートについては、機関の Pressbooks "
+"サイトネットワーク管理者に連絡します。サイトネットワーク管理者がわからない場合、連絡するには%sを入力してください。"
 
 #: inc/activation/namespace.php:82
 msgid "support request form"
-msgstr ""
+msgstr "サポートをリクエストフォルム"
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:88 inc/activation/namespace.php:144
 #: inc/activation/namespace.php:150 inc/activation/namespace.php:180
 #: inc/activation/namespace.php:186
 msgid "Catalog"
-msgstr "Katalógus"
+msgstr "カタログ"
 
 #: inc/activation/namespace.php:92 inc/helpers/namespace.php:226
 msgid "Home"
-msgstr "Főoldal"
+msgstr "ホーム"
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
-msgstr "Katalógus frissítve."
+msgstr "カタログは更新しました。"
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"Sajnáljuk, de a katalógusát nem tudtuk frissíteni. Kérjük, próbálja újra."
+msgstr "カタログは更新しませんでした。もう一度お試しください。"
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
-msgstr "Értesítés bezárása"
+msgstr "この通知を非表示にする。"
 
 #: inc/admin/namespace.php:83
 msgid "In Catalog"
-msgstr "Katalógusban"
+msgstr "カタログである"
 
 #: inc/customizer/namespace.php:71
 msgid "Primary Color"
-msgstr "Főszín"
+msgstr "メインの色"
 
 #: inc/customizer/namespace.php:72
 msgid "Primary color, used for links and other primary elements."
-msgstr ""
+msgstr "メインの色、リンクや他のメイン要素に使用される。"
 
 #: inc/customizer/namespace.php:77
 msgid "Primary Color (Hover)"
-msgstr ""
+msgstr "メインの色 (ホバー)"
 
 #: inc/customizer/namespace.php:78
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr ""
+msgstr "メインの色のバリエーション、メイン要素のホバー状態に使用される。"
 
 #: inc/customizer/namespace.php:83
 msgid "Accent Color"
-msgstr ""
+msgstr "アクセントの色"
 
 #: inc/customizer/namespace.php:84
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr ""
+msgstr "アクセントの色、フローリッシュやセカンダリ要素に使用される。"
 
 #: inc/customizer/namespace.php:89
 msgid "Accent Color (Hover)"
-msgstr ""
+msgstr "アクセントの色 (ホバー)"
 
 #: inc/customizer/namespace.php:90
 msgid "Variant of the accent color, used for secondary element hover states."
-msgstr ""
+msgstr "メインの色のバリエーション、セカンダリ要素のホバー状態に使用される。"
 
 #: inc/customizer/namespace.php:95
 msgid "Primary Foreground Color"
-msgstr "Előtér Főszíne"
+msgstr "メインの前景色"
 
 #: inc/customizer/namespace.php:96
 msgid "Used for text on a primary background."
-msgstr "Fő háttéren használt szöveghez."
+msgstr "メイン背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:101
 msgid "Accent Foreground Color"
-msgstr ""
+msgstr "アクセントの前景色"
 
 #: inc/customizer/namespace.php:102
 msgid "Used for text on an accent color background."
-msgstr ""
+msgstr "アクセントの色の背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:126
 msgid "Social Media"
-msgstr "Közösségi Média"
+msgstr "ソーシャルメディア"
 
 #: inc/customizer/namespace.php:138
 msgid "Facebook"
@@ -395,249 +403,247 @@ msgstr "Twitter"
 
 #: inc/customizer/namespace.php:164
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/customizer/namespace.php:173
 msgid "Front Page Catalog"
-msgstr "Címoldal Katalógus"
+msgstr "フロントページカタログ"
 
 #: inc/customizer/namespace.php:184
 msgid "Show Front Page Catalog"
-msgstr "Mutassa a Címoldal Katalógust"
+msgstr "フロントページカタログを表示"
 
 #: inc/customizer/namespace.php:194 partials/content-front-page.php:19
 msgid "Our Latest Titles"
-msgstr ""
+msgstr "最新の書名"
 
 #: inc/customizer/namespace.php:199
 msgid "Front Page Catalog Title"
-msgstr "Címoldal Katalógusának Címe"
+msgstr "フロントページカタログのタイトル"
 
 #: inc/customizer/namespace.php:208
 msgid "Contact Form"
-msgstr "Kapcsolatfelvéteteli Űrlap"
+msgstr "お問い合わせフォーム"
 
 #: inc/customizer/namespace.php:219
 msgid "Show Contact Form"
-msgstr "Mutassa a Kapcsolatfelvételi Űrlapot"
+msgstr "お問い合わせフォームを表示"
 
 #: inc/customizer/namespace.php:229 partials/contact-form.php:13
 msgid "Contact Us"
-msgstr "Lépjen kapcsolatba velünk"
+msgstr "お問い合わせ"
 
 #: inc/customizer/namespace.php:234
 msgid "Contact Form Title"
-msgstr "Kapcsolatfelvételi Űrlap Címe"
+msgstr "お問い合わせフォームのタイトル"
 
 #: inc/customizer/namespace.php:248
 msgid "Contact Email"
-msgstr "Email Cím"
+msgstr "お問い合わせメールアドレス"
 
 #: inc/customizer/namespace.php:260
 msgid "Contact Link"
-msgstr ""
+msgstr "お問い合わせリンク"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "Folytatás"
+msgstr "続く"
 
 #: inc/helpers/namespace.php:243
 msgid "Sign In"
-msgstr "Bejelentkezés"
+msgstr "ログイン"
 
 #: inc/helpers/namespace.php:251
 msgid "Sign Up"
-msgstr "Regisztráció"
+msgstr "登録"
 
 #: inc/helpers/namespace.php:261 inc/helpers/namespace.php:269
 msgid "Admin"
-msgstr "Admin"
+msgstr "管理"
 
 #: inc/helpers/namespace.php:279
 msgid "My Books"
-msgstr "Könyveim"
+msgstr "自分の本"
 
 #: inc/helpers/namespace.php:287
 msgid "Create a New Book"
-msgstr ""
+msgstr "新規本を作成"
 
 #: inc/helpers/namespace.php:295
 msgid "Sign Out"
-msgstr "Kilépés"
+msgstr "ログアウト"
 
 #: inc/helpers/namespace.php:360
 msgid "Name is required."
-msgstr "Név szükséges."
+msgstr "名前は必要です。"
 
 #: inc/helpers/namespace.php:364
 msgid "Email is required."
-msgstr "Email szükséges"
+msgstr "メールアドレスは必要です。"
 
 #: inc/helpers/namespace.php:368
 msgid "Email is invalid."
-msgstr "Érvénytelen email cím"
+msgstr "メールアドレスは無効です。"
 
 #: inc/helpers/namespace.php:372
 msgid "Institution is required."
-msgstr "Intézmény szükséges."
+msgstr "機関は必要です。"
 
 #: inc/helpers/namespace.php:376
 msgid "Message is required."
-msgstr "Üzenet szükséges."
+msgstr "メッセージは必要です。"
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:383
 msgid "Contact Form Submission from %s"
-msgstr ""
+msgstr "%s からお問い合わせフォーム"
 
 #: inc/helpers/namespace.php:394
 msgid "Your message was sent!"
-msgstr "Üzenetét elküldtük!"
+msgstr "メッセージは送信しました !"
 
 #: inc/helpers/namespace.php:397
 msgid "Your message could not be sent."
-msgstr "Üzenetét nem lehetett elküldeni."
+msgstr "メッセージは送信できませんでした。"
 
 #: page-catalog.php:60
 msgid "No Books Found"
-msgstr "Nem találhatók könyvek"
+msgstr "本が見つかりませんでした。"
 
 #: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "カタログに追加された本がありません。"
 
 #: partials/book.php:57
 msgid "About this book"
-msgstr "Erről a könyvről"
+msgstr "この本をについて"
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
-msgstr ""
+msgstr "このフィールドを空白のままにする (必要)"
 
 #: partials/contact-form.php:46
 msgid "Your name (required)"
-msgstr "Neve (szükséges)"
+msgstr "名前 (必要)"
 
 #: partials/contact-form.php:62
 msgid "Your email address (required)"
-msgstr "Email címe (szükséges)"
+msgstr "メールアドレス (必要)"
 
 #: partials/contact-form.php:78
 msgid "Your institution (required)"
-msgstr "Intézménye (szükséges)"
+msgstr "機関 (必要)"
 
 #: partials/contact-form.php:94
 msgid "Your message (required)"
-msgstr "Üzenete (szükséges)"
+msgstr "メッセージ (必要)"
 
 #: partials/contact-form.php:98
 msgid "Send"
-msgstr "Küldés"
+msgstr "送信"
 
 #: partials/content-front-page.php:76
 msgid "View Complete Catalog"
-msgstr "Lásd a Teljes Katalógust"
+msgstr "完全なカタログを表示"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "Nincs Találat"
+msgstr "何も見つかりませんでした"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgstr "最初の投稿を公開する準備はできましたか ? <a href=\"%1$s\">ここから始めましょう</a>。"
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Sajnáljuk, de semmi nem egyezik a keresési kifejezésekkel. Kérjük, "
-"próbálkozzon újra néhány különböző kulcsszóval."
+msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
 
 #: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "Szűrés Tárgy szerint"
+msgstr "件名で絞り込む"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "Összes Tárgy"
+msgstr "すべての件名"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "機関で絞り込む"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "すべての機関"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
-msgstr "Szűrés Licence szerint"
+msgstr "ライセンスで絞り込む"
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
-msgstr "Összes Licence"
+msgstr "すべてのライセンス"
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
-msgstr "Rendezve"
+msgstr "並び順"
 
 #: partials/content-page-catalog.php:73
 msgid "Subject"
-msgstr "Tárgy"
+msgstr "件名"
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
-msgstr "Legújabb"
+msgstr "最新"
 
 #: partials/content-page-catalog.php:82
 msgid "Clear Filters"
-msgstr "Szűrők törlése"
+msgstr "絞り込みをクリア"
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
-msgstr "Beküldés"
+msgstr "送信"
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
-msgstr "Oldalak:"
+msgstr "ページ:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "<span class=\"screen-reader-text\">%s</span> を編集"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "続きを読む <span class=\"screen-reader-text\">「%s」</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "本カタログナビゲーション"
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "検索結果: %s"
 
 #: searchform.php:11
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Katalógus Keresése"
+msgstr "カタログで検索"
 
 #: searchform.php:14
 msgctxt "submit button"
 msgid "Search"
-msgstr "Keresés"
+msgstr "検索"
