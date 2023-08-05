@@ -354,7 +354,7 @@ function get_default_menu( $items = '' ) {
 	if ( ! is_user_logged_in() ) {
 		$items .= sprintf(
 			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
-			wp_login_url( get_permalink() ),
+			wp_login_url( admin_url( 'index.php?page=pb_home_page' ) ),
 			__( 'Sign In', 'pressbooks-aldine' ),
 			$item_classes['prefix'],
 			$item_classes['SignIn']

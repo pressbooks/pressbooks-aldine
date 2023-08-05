@@ -2,6 +2,7 @@
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
+# Ali Fuat Demir <afuatdemir@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -9,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
-"Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
+"Last-Translator: Ali Fuat Demir <afuatdemir@gmail.com>, 2022\n"
+"Language-Team: Turkish (Turkey) (https://app.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,11 +93,11 @@ msgstr "Powered by %s"
 
 #: footer.php:107
 msgid "Guides and Tutorials"
-msgstr "Kılavuzlar ve Öğreticiler"
+msgstr "Kılavuz ve Öğreticiler"
 
 #: footer.php:108
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Pressbooks Dizini"
 
 #: footer.php:110 inc/helpers/namespace.php:234
 msgid "Contact"
@@ -129,7 +130,7 @@ msgstr "%s için Logo"
 
 #: header.php:81
 msgid "Toggle Menu"
-msgstr "Toggle Menü"
+msgstr "Menüyü Aç/Kapat"
 
 #: inc/actions/namespace.php:48 inc/activation/namespace.php:139
 msgid "Primary Menu"
@@ -187,7 +188,7 @@ msgstr "Metin"
 
 #: inc/actions/namespace.php:304
 msgid "Link"
-msgstr "Link"
+msgstr "Bağlantı"
 
 #: inc/activation/namespace.php:26
 msgid "About Pressbooks"
@@ -217,6 +218,11 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
+"Pressbooks, fikirlerinizi yazmayı, geliştirmeyi ve paylaşmayı kolaylaştıran "
+"basit bir kitap yazma yazılımıdır. Açık eğitim kaynakları, ders kitapları, "
+"bilimsel monografiler, kurgu ve kurgu olmayan kitapları, teknik incelemeler,"
+" ders programları ve daha fazlasını yayınlamak için Pressbooks'u "
+"kullanabilirsiniz."
 
 #: inc/activation/namespace.php:41
 msgid ""
@@ -224,14 +230,18 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
+"Pressbooks, içerik oluşturucuların içeriklerini hızla web'de yayınlamalarına"
+" ve isteğe bağlı olarak baskı veya dijital dağıtım için özel olarak "
+"tasarlanmış erişilebilir EPUB'lar ve PDF'ler dahil olmak üzere birden çok "
+"biçimde indirilebilir dosyalar üretmelerine imkan tanır."
 
 #: inc/activation/namespace.php:45
 msgid "suite of products"
-msgstr ""
+msgstr "ürün paketi"
 
 #: inc/activation/namespace.php:46
 msgid "Contact us"
-msgstr ""
+msgstr "Bize ulaşın"
 
 #: inc/activation/namespace.php:52 inc/activation/namespace.php:195
 #: inc/activation/namespace.php:201
@@ -245,10 +255,13 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
+"Pressbooks projeniz için yardım mı arıyorsunuz? Mevcut en kapsamlı kaynak, "
+"çalışmanızı oluşturma, zenginleştirme ve dışa aktarma hakkında bilmeniz "
+"gereken her şeyi içeren %s'dir."
 
 #: inc/activation/namespace.php:60
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Pressbooks Kullanıcı Kılavuzu "
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
@@ -258,14 +271,17 @@ msgid ""
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
 "%2$s will guide you."
 msgstr ""
+"%1$s de özellikler ve ürün güncellemeleri hakkında kısa video eğitimleri ve "
+"web seminerleri bulabilirsinizPressboks'a yeni başlıyorsanız bu %2$s size "
+"rehberlik edecektir."
 
 #: inc/activation/namespace.php:65
 msgid "Pressbooks YouTube channel"
-msgstr ""
+msgstr "Pressbooks YouTube kanalı"
 
 #: inc/activation/namespace.php:66
 msgid "short video series"
-msgstr ""
+msgstr "kısa video serileri "
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:70
@@ -273,10 +289,12 @@ msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
 msgstr ""
+"Canlı öğretici oturumlarına katılarak iyi öğreniyorsanız, Pressbooks'un %s "
+"ye kaydolup  eğitimlere katılabilirsiniz."
 
 #: inc/activation/namespace.php:71
 msgid "monthly webinars"
-msgstr ""
+msgstr "aylık webinarlar "
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
@@ -286,14 +304,17 @@ msgid ""
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
+"1%1$s ayrıca diğer faydalı destek kaynaklarına bağlantı ve sık sorulan bazı "
+"soruların cevaplarını içerir. Pressbooks ayrıca soru sorabileceğiniz  ve "
+"diğer kullanıcıların sorularını cevaplayabileceğiniz bir 2%2$s tutar."
 
 #: inc/activation/namespace.php:76
 msgid "Pressbooks support page"
-msgstr ""
+msgstr "Pressbooks destek sayfası "
 
 #: inc/activation/namespace.php:77
 msgid "community forum"
-msgstr ""
+msgstr "topluluk formu"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:81
@@ -302,10 +323,13 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
+"Ek destek gereksinimleri için kurumunuzun Pressbooks ağ yöneticilerine "
+"ulaşın. Ağ yöneticilerinizin kim olduğunu bilmiyorsanız lütfen sizinle "
+"iletişime geçmeleri için %s%s doldurun."
 
 #: inc/activation/namespace.php:82
 msgid "support request form"
-msgstr ""
+msgstr "Destek Talep Formu"
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:88 inc/activation/namespace.php:144
@@ -508,7 +532,7 @@ msgstr "Kitap Bulunamadı"
 
 #: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "Kataloğa eklenmiş kitap bulunamadı "
 
 #: partials/book.php:57
 msgid "About this book"
@@ -578,11 +602,11 @@ msgstr "Bütün konular"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "Kuruluşa Göre Süz"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "Tüm Kurluşlar"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
@@ -628,11 +652,11 @@ msgstr "Okumaya devam et<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "Gezinti"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "Kitap Kataloğunda Gezinme"
 
 #. translators: %s: search query.
 #: search.php:23

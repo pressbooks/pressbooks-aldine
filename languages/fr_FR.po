@@ -8,6 +8,7 @@
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2022
+# MMOUNA MOUM, 2022
 # 
 msgid ""
 msgstr ""
@@ -15,13 +16,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
 "POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2022\n"
-"Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
+"Last-Translator: MMOUNA MOUM, 2022\n"
+"Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.5.0\n"
 
@@ -72,6 +73,7 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s réactions à &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s commentaires sur &laquo; %2$s &raquo;"
+msgstr[2] "%1$s commentaires sur &laquo; %2$s &raquo;"
 
 #: comments.php:68
 msgid "Comments are closed."
@@ -90,7 +92,7 @@ msgstr "%s sur Twitter"
 #. translators: %s network name
 #: footer.php:81 footer.php:86
 msgid "%s on Instagram"
-msgstr ""
+msgstr "Sur Instagram"
 
 #. translators: %s Pressbooks
 #: footer.php:105
@@ -103,7 +105,7 @@ msgstr "Guides et tutoriels"
 
 #: footer.php:108
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Répertoire des livres de Pressbooks"
 
 #: footer.php:110 inc/helpers/namespace.php:234
 msgid "Contact"
@@ -228,6 +230,11 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
+"Pressbooks est un logiciel de production de livres simple qui facilite "
+"l'écriture, le développement et le partage de vos idées. Vous pouvez "
+"utiliser Pressbooks pour publier des ressources éducatives ouvertes, des "
+"manuels, des monographies, des livres de fiction et de non-fiction, des "
+"livres blancs, des plans de cours, etc."
 
 #: inc/activation/namespace.php:41
 msgid ""
@@ -235,10 +242,14 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
+"Pressbooks permet aux créateurs de publier rapidement leur contenu sur le "
+"web et de produire des exportations dans plusieurs formats, notamment des "
+"EPUB accessibles et des PDF spécialement conçus pour l'impression à la "
+"demande ou la distribution numérique."
 
 #: inc/activation/namespace.php:45
 msgid "suite of products"
-msgstr ""
+msgstr "gamme de produits"
 
 #: inc/activation/namespace.php:46
 msgid "Contact us"
@@ -256,10 +267,13 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
+"Vous cherchez de l'aide pour votre projet Pressbooks ? La ressource la plus "
+"complète disponible est le , qui contient tout ce que vous devez savoir sur "
+"la création, l'enrichissement et l'exportation de votre travail."
 
 #: inc/activation/namespace.php:60
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Guide de l'utilisateur de Pressbooks"
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
@@ -269,14 +283,17 @@ msgid ""
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
 "%2$s will guide you."
 msgstr ""
+"Vous pouvez trouver de courts tutoriels vidéo et des webinaires sur les "
+"fonctionnalités et les mises à jour des produits sur le site . Si vous "
+"débutez avec Pressbooks, ceci vous guidera."
 
 #: inc/activation/namespace.php:65
 msgid "Pressbooks YouTube channel"
-msgstr ""
+msgstr "Chaîne YouTube de Pressbooks"
 
 #: inc/activation/namespace.php:66
 msgid "short video series"
-msgstr ""
+msgstr "courtes séries de vidéos"
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:70
@@ -284,10 +301,13 @@ msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
 msgstr ""
+"Si vous préférez apprendre en assistant à des sessions de formation en "
+"direct, vous pouvez vous inscrire et assister à l'une des formations de "
+"Pressbooks."
 
 #: inc/activation/namespace.php:71
 msgid "monthly webinars"
-msgstr ""
+msgstr "webinaires mensuels en ligne"
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
@@ -297,14 +317,19 @@ msgid ""
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
+"La page d'assistance de Pressbooks contient également des liens vers "
+"d'autres ressources d'assistance utiles et des réponses à certaines "
+"questions fréquemment posées. Pressbooks gère également un forum "
+"communautaire où vous pouvez poser des questions aux autres utilisateurs et "
+"y répondre."
 
 #: inc/activation/namespace.php:76
 msgid "Pressbooks support page"
-msgstr ""
+msgstr "La page d'assistance de Pressbooks "
 
 #: inc/activation/namespace.php:77
 msgid "community forum"
-msgstr ""
+msgstr "forum de la communauté"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:81
@@ -313,10 +338,14 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
+"Pour tout besoin d'assistance supplémentaire, contactez les responsables du "
+"réseau Pressbooks de votre établissement. Si vous ne savez pas qui sont vos "
+"responsables de réseau, veuillez remplir le formulaire pour être mis en "
+"contact avec eux."
 
 #: inc/activation/namespace.php:82
 msgid "support request form"
-msgstr ""
+msgstr "formulaire de demande d'assistance"
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:88 inc/activation/namespace.php:144
@@ -413,7 +442,7 @@ msgstr "Twitter"
 
 #: inc/customizer/namespace.php:164
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/customizer/namespace.php:173
 msgid "Front Page Catalog"
@@ -522,7 +551,7 @@ msgstr "Aucune livre trouvé"
 
 #: page-catalog.php:63
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "Aucun livre n'a encore été ajouté au catalogue."
 
 #: partials/book.php:57
 msgid "About this book"
@@ -593,11 +622,11 @@ msgstr "Tous les sujets"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "Filtrer par institution"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "Toutes les institutions"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
@@ -643,11 +672,11 @@ msgstr "Continuer à lire <span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "Navigation dans le catalogue des livres"
 
 #. translators: %s: search query.
 #: search.php:23
