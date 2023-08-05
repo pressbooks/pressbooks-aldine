@@ -2150,11 +2150,14 @@ input[type=submit] {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 540px;
+  height: 15rem;
+}
+.home .header .header__inside {
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 60rem) {
   .home .header {
-    height: 880px;
+    height: 55rem;
   }
   .home .header .header__inside {
     position: relative;
@@ -2163,7 +2166,7 @@ input[type=submit] {
 }
 
 .home #content {
-  margin-top: -540px;
+  margin-top: -15rem;
   background: transparent;
 }
 .home #content.custom-homepage {
@@ -2171,7 +2174,7 @@ input[type=submit] {
 }
 @media screen and (min-width: 60rem) {
   .home #content {
-    margin-top: -880px;
+    margin-top: -55rem;
   }
   .home #content.custom-homepage {
     margin-top: 0;
@@ -2189,7 +2192,7 @@ input[type=submit] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 33.75rem;
+  height: 15rem;
 }
 @media screen and (min-width: 60rem) {
   .home .entry-header {
