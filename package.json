@@ -20,7 +20,7 @@
 	"licenses": [
 		{
 			"type": "GPL-3.0-or-later",
-			"url": "https://github.com/pressbooks/pressbooks-aldine/tree/master/LICENSE.md"
+			"url": "https://github.com/pressbooks/pressbooks-aldine/tree/production/LICENSE.md"
 		}
 	],
 	"browserslist": [
@@ -61,7 +61,7 @@
 		}
 	},
 	"scripts": {
-		"build": "mix",
+		"build": "npm run production",
 		"lint:scripts": "eslint \"assets/scripts/**/*.js\"",
 		"lint:styles": "stylelint \"assets/styles/**/*.scss\"",
 		"lint": "run-s lint:*",
@@ -71,14 +71,14 @@
 		"test": "npm run lint"
 	},
 	"engines": {
-		"node": ">= 14"
+		"node": ">= 18"
 	},
 	"devDependencies": {
 		"npm-run-all": "^4.1.5",
 		"pressbooks-build-tools": "^4.0.0"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0",
+		"aetna": "^1.0.2",
 		"isotope-layout": "^3.0.6",
 		"jquery-bridget": "^3.0.1"
 	}
