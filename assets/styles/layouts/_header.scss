@@ -8,10 +8,14 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 540px;
+  height: 15rem;
+
+  .header__inside {
+    padding-top: 1.5rem;
+  }
 
   @media #{$breakpoint-large} {
-    height: 880px;
+    height: 55rem;
 
     .header__inside {
       position: relative;
@@ -21,14 +25,14 @@
 }
 
 .home #content{
-  margin-top: -540px;
+  margin-top: -15rem;
   background: transparent;
 
   &.custom-homepage {
     margin-top: 0;
   }
   @media #{$breakpoint-large} {
-    margin-top: -880px;
+    margin-top: -55rem;
 
     &.custom-homepage {
       margin-top: 0;
@@ -40,11 +44,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: rem(540);
+  height: 15rem;
 
   @media #{$breakpoint-large} {
-    height: rem(160);
-    margin: rem(80) 0 0;
+    height: 10rem;
+    margin: 5rem 0 0;
   }
 
   .entry-title {
@@ -76,10 +80,10 @@
 }
 
 .page .header {
-  height: rem(240);
+  height: 15rem;
 
   @media #{$breakpoint-large} {
-    height: rem(880);
+    height: 55rem;
   }
 }
 
