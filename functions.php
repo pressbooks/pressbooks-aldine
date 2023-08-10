@@ -81,3 +81,7 @@ add_action( 'manage_sites_custom_column', '\Aldine\Admin\catalog_column', 1, 3 )
 
 // Remove unwanted menu pages.
 add_action( 'admin_menu', '\Aldine\Actions\remove_menu_items' );
+
+// Remove unwanted actions.
+remove_action( 'before_delete_post', '_reset_front_page_settings_for_post' );
+remove_action( 'wp_trash_post', '_reset_front_page_settings_for_post' );
