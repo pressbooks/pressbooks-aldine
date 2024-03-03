@@ -635,15 +635,15 @@ msgstr "Filtrar por licencia"
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
-msgstr ""
+msgstr "Todas las licencias"
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
-msgstr ""
+msgstr "Ordenar por"
 
 #: partials/content-page-catalog.php:73
 msgid "Subject"
-msgstr ""
+msgstr "Tema"
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
