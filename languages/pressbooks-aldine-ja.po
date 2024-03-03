@@ -188,17 +188,17 @@ msgstr "リンク"
 
 #: inc/activation/namespace.php:28
 msgid "About Pressbooks"
-msgstr ""
+msgstr "Pressbooks について"
 
 #: inc/activation/namespace.php:29
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
-msgstr ""
+msgstr "Pressbooks は本を使いやすい書くソフトウェアであり、すべての公開する必要な形式で本を作成できます。"
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
-msgstr ""
+msgstr "さらに詳しく"
 
 #: inc/activation/namespace.php:37 inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
