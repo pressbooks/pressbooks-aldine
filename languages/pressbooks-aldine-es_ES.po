@@ -345,11 +345,12 @@ msgstr "Inicio"
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
-msgstr ""
+msgstr "Catálogo actualizado."
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
 msgstr ""
+"Lo siento, pero tu catálogo no ha sido actualizado. Inténtalo de nuevo."
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
