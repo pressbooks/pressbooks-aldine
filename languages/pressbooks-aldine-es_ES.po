@@ -619,11 +619,11 @@ msgstr "Filtrar por tema"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr ""
+msgstr "Todos los temas"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "Filtrar por institución"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
