@@ -448,7 +448,7 @@ msgstr "Título de la página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:212
 msgid "Select a book"
-msgstr ""
+msgstr "Selecciona un libro"
 
 #: inc/customizer/namespace.php:222
 msgid "Featured book"
