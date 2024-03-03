@@ -527,11 +527,11 @@ msgstr "本が見つかりませんでした。"
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "カタログに追加された本がありません。"
 
 #: partials/book.php:57
 msgid "About this book"
-msgstr ""
+msgstr "この本をについて"
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
