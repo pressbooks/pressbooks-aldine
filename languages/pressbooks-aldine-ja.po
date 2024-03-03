@@ -294,11 +294,11 @@ msgstr ""
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
-msgstr ""
+msgstr "Pressbooks サポートページ"
 
 #: inc/activation/namespace.php:79
 msgid "community forum"
-msgstr ""
+msgstr "コミュニティフォーラム"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
