@@ -230,12 +230,12 @@ msgstr "製品スイート"
 
 #: inc/activation/namespace.php:48
 msgid "Contact us"
-msgstr ""
+msgstr "お問い合わせ"
 
 #: inc/activation/namespace.php:54 inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
