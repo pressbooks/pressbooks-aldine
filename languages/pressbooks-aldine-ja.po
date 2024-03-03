@@ -330,11 +330,11 @@ msgstr "カタログは更新しました。"
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
+msgstr "カタログは更新しませんでした。もう一度お試しください。"
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
-msgstr ""
+msgstr "この通知を非表示にする。"
 
 #: inc/admin/namespace.php:83
 msgid "In Catalog"
