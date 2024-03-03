@@ -211,7 +211,7 @@ msgstr "Aprende más"
 #: inc/activation/namespace.php:37 inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: inc/activation/namespace.php:42
 msgid ""
@@ -220,6 +220,11 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
+"Pressbooks es un software de producción sencilla de libros que facilita la "
+"escritura, el desarrollo y la difusión de tus ideas. Puedes usar Pressbooks "
+"para publicar recursos educativos abiertos, libros de texto, monografías "
+"académicas, libros de ficción y de no ficción, documentos técnicos, sílabos "
+"y más."
 
 #: inc/activation/namespace.php:43
 msgid ""
