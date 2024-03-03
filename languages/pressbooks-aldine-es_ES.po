@@ -232,14 +232,18 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
+"Pressbooks permite que los creadores publiquen en poco tiempo su contenido "
+"en la web y lo exporten a diferentes formatos, como los accesibles EPUB y "
+"PDF, diseñados especialmente para la impresión bajo demanda o la "
+"distribución digital."
 
 #: inc/activation/namespace.php:47
 msgid "suite of products"
-msgstr ""
+msgstr "solución completa de productos"
 
 #: inc/activation/namespace.php:48
 msgid "Contact us"
-msgstr ""
+msgstr "Contacta con nosotros"
 
 #: inc/activation/namespace.php:54 inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
