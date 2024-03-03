@@ -456,7 +456,7 @@ msgstr "Libro destacado"
 
 #: inc/customizer/namespace.php:233
 msgid "Front Page Settings"
-msgstr ""
+msgstr "Ajustes de la página de inicio"
 
 #: inc/customizer/namespace.php:247
 msgid "Network Home Page"
