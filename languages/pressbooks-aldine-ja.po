@@ -390,11 +390,11 @@ msgstr "アクセントの色の背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:129
 msgid "Social Media"
-msgstr ""
+msgstr "ソーシャルメディア"
 
 #: inc/customizer/namespace.php:141
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: inc/customizer/namespace.php:154
 msgid "Twitter"
