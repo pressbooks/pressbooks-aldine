@@ -331,7 +331,7 @@ msgstr ""
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
-msgstr ""
+msgstr "formulario de solicitud de soporte"
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:90 inc/activation/namespace.php:155
