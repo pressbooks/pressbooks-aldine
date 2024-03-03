@@ -580,7 +580,7 @@ msgstr "検索キーワードに一致するものが見つかりませんでし
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
