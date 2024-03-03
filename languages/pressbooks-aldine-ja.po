@@ -264,11 +264,11 @@ msgstr ""
 
 #: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
-msgstr ""
+msgstr "Pressbooks の YouTube チャンネル"
 
 #: inc/activation/namespace.php:68
 msgid "short video series"
-msgstr ""
+msgstr "短いビデオシリーズ"
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
