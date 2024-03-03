@@ -184,7 +184,7 @@ msgstr "テキスト"
 
 #: inc/actions/namespace.php:304
 msgid "Link"
-msgstr ""
+msgstr "リンク"
 
 #: inc/activation/namespace.php:28
 msgid "About Pressbooks"
