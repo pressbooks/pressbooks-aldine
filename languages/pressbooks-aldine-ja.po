@@ -608,11 +608,11 @@ msgstr "すべてのライセンス"
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
-msgstr ""
+msgstr "並び順"
 
 #: partials/content-page-catalog.php:73
 msgid "Subject"
-msgstr ""
+msgstr "件名"
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
