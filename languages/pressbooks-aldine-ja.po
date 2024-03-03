@@ -406,11 +406,11 @@ msgstr "Instagram"
 
 #: inc/customizer/namespace.php:176
 msgid "Front Page Catalog"
-msgstr ""
+msgstr "フロントページカタログ"
 
 #: inc/customizer/namespace.php:188
 msgid "Show Front Page Catalog"
-msgstr ""
+msgstr "フロントページカタログを表示"
 
 #: inc/customizer/namespace.php:199 partials/content-front-page.php:15
 msgid "Our Latest Titles"
