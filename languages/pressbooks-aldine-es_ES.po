@@ -371,11 +371,13 @@ msgstr ""
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color (Hover)"
-msgstr ""
+msgstr "Color principal (al pasar el cursor)"
 
 #: inc/customizer/namespace.php:81
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
+"Variante del color principal, utilizada para los elementos principales al "
+"pasar el cursor."
 
 #: inc/customizer/namespace.php:86
 msgid "Accent Color"
