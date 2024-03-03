@@ -687,9 +687,9 @@ msgstr "Resultados de búsqueda de: %s"
 #: searchform.php:11
 msgctxt "label"
 msgid "Search Catalog"
-msgstr ""
+msgstr "Buscar en el catálogo"
 
 #: searchform.php:14
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
