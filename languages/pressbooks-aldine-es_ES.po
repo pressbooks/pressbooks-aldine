@@ -354,11 +354,11 @@ msgstr ""
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
-msgstr ""
+msgstr "Descartar este aviso."
 
 #: inc/admin/namespace.php:83
 msgid "In Catalog"
-msgstr ""
+msgstr "En el catálogo"
 
 #: inc/customizer/namespace.php:74
 msgid "Primary Color"
