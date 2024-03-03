@@ -520,11 +520,11 @@ msgstr "El nombre es obligatorio."
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
-msgstr ""
+msgstr "El correo electrónico es obligatorio."
 
 #: inc/helpers/namespace.php:483
 msgid "Email is invalid."
-msgstr ""
+msgstr "El correo electrónico no es valido."
 
 #: inc/helpers/namespace.php:487
 msgid "Institution is required."
