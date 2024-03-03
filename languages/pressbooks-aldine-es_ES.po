@@ -504,11 +504,11 @@ msgstr "Administración"
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
-msgstr ""
+msgstr "Mis libros"
 
 #: inc/helpers/namespace.php:402
 msgid "Create a New Book"
-msgstr ""
+msgstr "Crear un nuevo libro"
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
