@@ -382,11 +382,11 @@ msgstr "メイン背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:104
 msgid "Accent Foreground Color"
-msgstr ""
+msgstr "アクセントの前景色"
 
 #: inc/customizer/namespace.php:105
 msgid "Used for text on an accent color background."
-msgstr ""
+msgstr "アクセントの色の背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:129
 msgid "Social Media"
