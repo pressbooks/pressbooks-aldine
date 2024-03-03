@@ -642,11 +642,11 @@ msgstr "続きを読む <span class=\"screen-reader-text\">「%s」</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "本カタログナビゲーション"
 
 #. translators: %s: search query.
 #: search.php:23
