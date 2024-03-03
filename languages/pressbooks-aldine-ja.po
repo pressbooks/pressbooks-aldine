@@ -354,7 +354,7 @@ msgstr "メインの色 (ホバー)"
 
 #: inc/customizer/namespace.php:81
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr ""
+msgstr "メインの色のバリエーション、メイン要素のホバー状態に使用される。"
 
 #: inc/customizer/namespace.php:86
 msgid "Accent Color"
