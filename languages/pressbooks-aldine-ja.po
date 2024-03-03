@@ -307,6 +307,8 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
+"追加の必要なサポートについては、機関の Pressbooks "
+"サイトネットワーク管理者に連絡します。サイトネットワーク管理者がわからない場合、連絡するには%sを入力してください。"
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
