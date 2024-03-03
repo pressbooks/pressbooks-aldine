@@ -201,10 +201,12 @@ msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
+"Pressbooks es un software de escritura de libros fácil de usar que te "
+"permite crear un libro en todos los formatos que necesites publicar."
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
-msgstr ""
+msgstr "Aprende más"
 
 #: inc/activation/namespace.php:37 inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
