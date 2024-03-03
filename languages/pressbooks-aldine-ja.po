@@ -515,7 +515,7 @@ msgstr "%s からお問い合わせフォーム"
 
 #: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
-msgstr ""
+msgstr "メッセージは送信しました !"
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
