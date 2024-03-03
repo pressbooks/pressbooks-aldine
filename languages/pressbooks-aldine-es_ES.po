@@ -492,7 +492,7 @@ msgstr "Continuar"
 
 #: inc/helpers/namespace.php:358
 msgid "Sign In"
-msgstr ""
+msgstr "Acceder"
 
 #: inc/helpers/namespace.php:366
 msgid "Sign Up"
