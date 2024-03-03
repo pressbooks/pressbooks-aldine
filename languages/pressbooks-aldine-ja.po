@@ -478,11 +478,11 @@ msgstr "管理"
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
-msgstr ""
+msgstr "自分の本"
 
 #: inc/helpers/namespace.php:402
 msgid "Create a New Book"
-msgstr ""
+msgstr "新規本を作成"
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
