@@ -677,12 +677,12 @@ msgstr "Navegar"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "Navegación por el catálogo de libros"
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados de búsqueda de: %s"
 
 #: searchform.php:11
 msgctxt "label"
