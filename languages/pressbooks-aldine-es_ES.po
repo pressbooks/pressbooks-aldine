@@ -424,11 +424,11 @@ msgstr "Facebook"
 
 #: inc/customizer/namespace.php:154
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: inc/customizer/namespace.php:167
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: inc/customizer/namespace.php:176
 msgid "Front Page Catalog"
