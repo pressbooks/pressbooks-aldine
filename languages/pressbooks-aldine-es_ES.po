@@ -460,7 +460,7 @@ msgstr "Ajustes de la página de inicio"
 
 #: inc/customizer/namespace.php:247
 msgid "Network Home Page"
-msgstr ""
+msgstr "Página de inicio de la red"
 
 #: inc/customizer/namespace.php:256
 msgid "Contact Form"
