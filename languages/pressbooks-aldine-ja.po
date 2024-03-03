@@ -470,11 +470,11 @@ msgstr "ログイン"
 
 #: inc/helpers/namespace.php:366
 msgid "Sign Up"
-msgstr ""
+msgstr "登録"
 
 #: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
 msgid "Admin"
-msgstr ""
+msgstr "管理"
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
