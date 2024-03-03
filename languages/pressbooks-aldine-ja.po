@@ -414,7 +414,7 @@ msgstr "フロントページカタログを表示"
 
 #: inc/customizer/namespace.php:199 partials/content-front-page.php:15
 msgid "Our Latest Titles"
-msgstr ""
+msgstr "最新の書名"
 
 #: inc/customizer/namespace.php:204
 msgid "Front Page Catalog Title"
