@@ -537,11 +537,11 @@ msgstr "El mensaje es obligatorio."
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:498
 msgid "Contact Form Submission from %s"
-msgstr ""
+msgstr "Formulario de contacto enviado por %s"
 
 #: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
-msgstr ""
+msgstr "¡Mensaje enviado!"
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
