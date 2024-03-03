@@ -438,11 +438,11 @@ msgstr ""
 
 #: inc/customizer/namespace.php:256
 msgid "Contact Form"
-msgstr ""
+msgstr "お問い合わせフォーム"
 
 #: inc/customizer/namespace.php:267
 msgid "Show Contact Form"
-msgstr ""
+msgstr "お問い合わせフォームを表示"
 
 #: inc/customizer/namespace.php:277 partials/contact-form.php:13
 msgid "Contact Us"
