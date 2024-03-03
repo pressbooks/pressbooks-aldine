@@ -563,7 +563,7 @@ msgstr "完全なカタログを表示"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "何も見つかりませんでした"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
