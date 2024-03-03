@@ -480,15 +480,15 @@ msgstr "Título del formulario de contacto"
 
 #: inc/customizer/namespace.php:296
 msgid "Contact Email"
-msgstr ""
+msgstr "Correo electrónico de contacto"
 
 #: inc/customizer/namespace.php:308
 msgid "Contact Link"
-msgstr ""
+msgstr "Enlace de contacto"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr ""
+msgstr "Continuar"
 
 #: inc/helpers/namespace.php:358
 msgid "Sign In"
