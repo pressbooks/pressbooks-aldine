@@ -416,11 +416,11 @@ msgstr "Utilizado para el texto sobre un fondo cuyo color es el de énfasis."
 
 #: inc/customizer/namespace.php:129
 msgid "Social Media"
-msgstr ""
+msgstr "Medios sociales"
 
 #: inc/customizer/namespace.php:141
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: inc/customizer/namespace.php:154
 msgid "Twitter"
