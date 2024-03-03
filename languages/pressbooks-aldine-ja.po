@@ -535,11 +535,11 @@ msgstr "この本をについて"
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
-msgstr ""
+msgstr "このフィールドを空白のままにする (必要)"
 
 #: partials/contact-form.php:47
 msgid "Your name (required)"
-msgstr ""
+msgstr "名前 (必要)"
 
 #: partials/contact-form.php:64
 msgid "Your email address (required)"
