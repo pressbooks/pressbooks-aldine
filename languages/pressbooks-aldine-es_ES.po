@@ -464,7 +464,7 @@ msgstr ""
 
 #: inc/customizer/namespace.php:256
 msgid "Contact Form"
-msgstr ""
+msgstr "Formulario de contacto"
 
 #: inc/customizer/namespace.php:267
 msgid "Show Contact Form"
