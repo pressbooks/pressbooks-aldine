@@ -450,11 +450,11 @@ msgstr "お問い合わせ"
 
 #: inc/customizer/namespace.php:282
 msgid "Contact Form Title"
-msgstr ""
+msgstr "お問い合わせフォームのタイトル"
 
 #: inc/customizer/namespace.php:296
 msgid "Contact Email"
-msgstr ""
+msgstr "お問い合わせメールアドレス"
 
 #: inc/customizer/namespace.php:308
 msgid "Contact Link"
