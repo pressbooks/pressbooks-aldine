@@ -589,7 +589,7 @@ msgstr "Ver el catálogo completo"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "No se ha encontrado nada"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
