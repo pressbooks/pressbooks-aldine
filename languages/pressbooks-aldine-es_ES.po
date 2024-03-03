@@ -404,15 +404,15 @@ msgstr "Color principal de primer plano"
 
 #: inc/customizer/namespace.php:99
 msgid "Used for text on a primary background."
-msgstr ""
+msgstr "Utilizado para el texto sobre un fondo cuyo color es el principal."
 
 #: inc/customizer/namespace.php:104
 msgid "Accent Foreground Color"
-msgstr ""
+msgstr "Color de énfasis de primer plano"
 
 #: inc/customizer/namespace.php:105
 msgid "Used for text on an accent color background."
-msgstr ""
+msgstr "Utilizado para el texto sobre un fondo cuyo color es el de énfasis."
 
 #: inc/customizer/namespace.php:129
 msgid "Social Media"
