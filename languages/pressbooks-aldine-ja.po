@@ -418,7 +418,7 @@ msgstr "最新の書名"
 
 #: inc/customizer/namespace.php:204
 msgid "Front Page Catalog Title"
-msgstr ""
+msgstr "フロントページカタログのタイトル"
 
 #: inc/customizer/namespace.php:212
 msgid "Select a book"
