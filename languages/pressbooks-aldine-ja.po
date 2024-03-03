@@ -584,11 +584,11 @@ msgstr "お探しのコンテンツを見つけられませんでした。検索
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr ""
+msgstr "件名で絞り込む"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr ""
+msgstr "すべての件名"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
