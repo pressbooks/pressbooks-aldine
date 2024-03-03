@@ -190,11 +190,11 @@ msgstr "Texto"
 
 #: inc/actions/namespace.php:304
 msgid "Link"
-msgstr ""
+msgstr "Enlace"
 
 #: inc/activation/namespace.php:28
 msgid "About Pressbooks"
-msgstr ""
+msgstr "Acerca de Pressbooks"
 
 #: inc/activation/namespace.php:29
 msgid ""
