@@ -624,7 +624,7 @@ msgstr "絞り込みをクリア"
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
-msgstr ""
+msgstr "送信"
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
