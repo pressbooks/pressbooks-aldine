@@ -434,7 +434,7 @@ msgstr "フロントページ設定"
 
 #: inc/customizer/namespace.php:247
 msgid "Network Home Page"
-msgstr ""
+msgstr "サイトネットワークのホームページ"
 
 #: inc/customizer/namespace.php:256
 msgid "Contact Form"
