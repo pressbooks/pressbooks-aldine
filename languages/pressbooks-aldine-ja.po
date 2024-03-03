@@ -651,7 +651,7 @@ msgstr "本カタログナビゲーション"
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "検索結果: %s"
 
 #: searchform.php:11
 msgctxt "label"
