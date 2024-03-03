@@ -426,7 +426,7 @@ msgstr "本を選択"
 
 #: inc/customizer/namespace.php:222
 msgid "Featured book"
-msgstr ""
+msgstr "注目本"
 
 #: inc/customizer/namespace.php:233
 msgid "Front Page Settings"
