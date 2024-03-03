@@ -358,11 +358,11 @@ msgstr "メインの色のバリエーション、メイン要素のホバー状
 
 #: inc/customizer/namespace.php:86
 msgid "Accent Color"
-msgstr ""
+msgstr "アクセントの色"
 
 #: inc/customizer/namespace.php:87
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr ""
+msgstr "アクセントの色、フローリッシュやセカンダリ要素に使用される。"
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color (Hover)"
