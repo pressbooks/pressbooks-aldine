@@ -337,11 +337,11 @@ msgstr "formulario de solicitud de soporte"
 #: inc/activation/namespace.php:90 inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
-msgstr ""
+msgstr "Catálogo"
 
 #: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
