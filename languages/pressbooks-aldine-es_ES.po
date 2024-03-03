@@ -291,10 +291,12 @@ msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
 msgstr ""
+"Si aprendes mejor con sesiones formativas en directo, puedes registrarte "
+"para asistir a uno de los %s de Pressbooks."
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
-msgstr ""
+msgstr "webinarios mensuales"
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
