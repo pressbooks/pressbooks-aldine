@@ -519,11 +519,11 @@ msgstr "メッセージは送信しました !"
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
-msgstr ""
+msgstr "メッセージは送信できませんでした。"
 
 #: page-catalog.php:65
 msgid "No Books Found"
-msgstr ""
+msgstr "本が見つかりませんでした。"
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
