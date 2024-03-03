@@ -316,7 +316,7 @@ msgstr "página de soporte de Pressbooks"
 
 #: inc/activation/namespace.php:79
 msgid "community forum"
-msgstr ""
+msgstr "foro de la comunidad"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
@@ -325,6 +325,9 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
+"Si necesitas soporte adicional, contacta con los administradores de la red "
+"de Pressbooks de tu institución. Si no sabes quiénes son los administradores"
+" de tu red, rellena el %s para ponerte en contacto con ellos."
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
