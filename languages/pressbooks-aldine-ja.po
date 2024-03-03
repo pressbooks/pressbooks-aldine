@@ -458,11 +458,11 @@ msgstr "お問い合わせメールアドレス"
 
 #: inc/customizer/namespace.php:308
 msgid "Contact Link"
-msgstr ""
+msgstr "お問い合わせリンク"
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr ""
+msgstr "続く"
 
 #: inc/helpers/namespace.php:358
 msgid "Sign In"
