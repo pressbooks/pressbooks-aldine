@@ -338,11 +338,11 @@ msgstr "この通知を非表示にする。"
 
 #: inc/admin/namespace.php:83
 msgid "In Catalog"
-msgstr ""
+msgstr "カタログである"
 
 #: inc/customizer/namespace.php:74
 msgid "Primary Color"
-msgstr ""
+msgstr "メインの色"
 
 #: inc/customizer/namespace.php:75
 msgid "Primary color, used for links and other primary elements."
