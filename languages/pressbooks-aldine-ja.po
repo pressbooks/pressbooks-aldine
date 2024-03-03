@@ -244,10 +244,12 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
+"Pressbooks プロジェクトのヘルプをお探しですか ? "
+"利用可能な最も充実したリソースは%sです。作品を作成、強化、エクスポートについて知っておく必要があるすべてを含みます。"
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Pressbooks ユーザーガイド"
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
