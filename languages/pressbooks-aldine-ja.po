@@ -494,11 +494,11 @@ msgstr "名前は必要です。"
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
-msgstr ""
+msgstr "メールアドレスは必要です。"
 
 #: inc/helpers/namespace.php:483
 msgid "Email is invalid."
-msgstr ""
+msgstr "メールアドレスは無効です。"
 
 #: inc/helpers/namespace.php:487
 msgid "Institution is required."
