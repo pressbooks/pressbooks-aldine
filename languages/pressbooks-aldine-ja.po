@@ -312,13 +312,13 @@ msgstr ""
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
-msgstr ""
+msgstr "サポートをリクエストフォルム"
 
 #. Template Name of the theme
 #: inc/activation/namespace.php:90 inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
-msgstr ""
+msgstr "カタログ"
 
 #: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
 msgid "Home"
