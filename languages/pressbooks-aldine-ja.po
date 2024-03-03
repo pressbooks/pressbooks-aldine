@@ -600,11 +600,11 @@ msgstr "すべての機関"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
-msgstr ""
+msgstr "ライセンスで絞り込む"
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
-msgstr ""
+msgstr "すべてのライセンス"
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
