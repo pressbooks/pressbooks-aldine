@@ -203,7 +203,7 @@ msgstr "さらに詳しく"
 #: inc/activation/namespace.php:37 inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
-msgstr ""
+msgstr "Pressbooks について"
 
 #: inc/activation/namespace.php:42
 msgid ""
@@ -212,6 +212,8 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
+"Pressbooks は本の簡単な制作ソフトウェアであり、自分のアイデアを簡単に書き、開発、共有できます。Pressbooks "
+"を使用して、オープン教育リソース、書籍、学術論文、フィクション・ノンフィクションの本、白書、シラバスなどを公開できます。"
 
 #: inc/activation/namespace.php:43
 msgid ""
