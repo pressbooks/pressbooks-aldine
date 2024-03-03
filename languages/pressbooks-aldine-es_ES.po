@@ -432,11 +432,11 @@ msgstr "Instagram"
 
 #: inc/customizer/namespace.php:176
 msgid "Front Page Catalog"
-msgstr ""
+msgstr "Página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:188
 msgid "Show Front Page Catalog"
-msgstr ""
+msgstr "Mostrar la página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:199 partials/content-front-page.php:15
 msgid "Our Latest Titles"
