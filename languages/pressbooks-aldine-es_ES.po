@@ -395,10 +395,12 @@ msgstr "Color de énfasis (al pasar el cursor)"
 #: inc/customizer/namespace.php:93
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
+"Variante del color de énfasis, utilizada para los elementos secundarios al "
+"pasar el cursor."
 
 #: inc/customizer/namespace.php:98
 msgid "Primary Foreground Color"
-msgstr ""
+msgstr "Color principal de primer plano"
 
 #: inc/customizer/namespace.php:99
 msgid "Used for text on a primary background."
