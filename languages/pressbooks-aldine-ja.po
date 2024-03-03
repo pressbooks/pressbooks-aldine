@@ -322,11 +322,11 @@ msgstr "カタログ"
 
 #: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
-msgstr ""
+msgstr "カタログは更新しました。"
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
