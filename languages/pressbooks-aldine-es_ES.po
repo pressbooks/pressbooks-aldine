@@ -545,15 +545,15 @@ msgstr "¡Mensaje enviado!"
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
-msgstr ""
+msgstr "No se pudo enviar el mensaje."
 
 #: page-catalog.php:65
 msgid "No Books Found"
-msgstr ""
+msgstr "No se han encontrado libros."
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "Todavía no se han añadido libros al catálogo."
 
 #: partials/book.php:57
 msgid "About this book"
