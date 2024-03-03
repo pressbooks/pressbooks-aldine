@@ -472,11 +472,11 @@ msgstr "Mostrar formulario de contacto"
 
 #: inc/customizer/namespace.php:277 partials/contact-form.php:13
 msgid "Contact Us"
-msgstr ""
+msgstr "Contacta con nosotros"
 
 #: inc/customizer/namespace.php:282
 msgid "Contact Form Title"
-msgstr ""
+msgstr "Título del formulario de contacto"
 
 #: inc/customizer/namespace.php:296
 msgid "Contact Email"
