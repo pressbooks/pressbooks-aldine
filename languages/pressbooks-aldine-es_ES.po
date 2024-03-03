@@ -248,7 +248,7 @@ msgstr "Contacta con nosotros"
 #: inc/activation/namespace.php:54 inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
@@ -257,6 +257,9 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
+"¿Buscas ayuda para tu proyecto de Pressbooks? El recurso más completo "
+"disponible es la %s, que contiene todo lo que necesitas saber para crear, "
+"enriquecer y exportar tu trabajo."
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
