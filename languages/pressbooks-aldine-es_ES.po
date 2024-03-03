@@ -273,6 +273,9 @@ msgid ""
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
 "%2$s will guide you."
 msgstr ""
+"Puedes encontrar videotutoriales cortos y webinarios sobre características y"
+" actualizaciones del producto en el %1$s. Si apenas estás dando tus primeros"
+" pasos en Pressbooks, esta %2$s te guiará."
 
 #: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
