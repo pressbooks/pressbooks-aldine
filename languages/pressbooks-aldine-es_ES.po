@@ -362,11 +362,12 @@ msgstr "En el catálogo"
 
 #: inc/customizer/namespace.php:74
 msgid "Primary Color"
-msgstr ""
+msgstr "Color principal"
 
 #: inc/customizer/namespace.php:75
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
+"Color principal, utilizado para los enlaces y otros elementos principales."
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color (Hover)"
