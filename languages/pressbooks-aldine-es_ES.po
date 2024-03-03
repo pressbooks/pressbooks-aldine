@@ -496,11 +496,11 @@ msgstr "Acceder"
 
 #: inc/helpers/namespace.php:366
 msgid "Sign Up"
-msgstr ""
+msgstr "Registro"
 
 #: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
 msgid "Admin"
-msgstr ""
+msgstr "Administración"
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
