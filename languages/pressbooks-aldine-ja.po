@@ -592,11 +592,11 @@ msgstr "すべての件名"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "機関で絞り込む"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "すべての機関"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
