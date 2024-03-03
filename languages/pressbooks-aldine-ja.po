@@ -279,7 +279,7 @@ msgstr "ライブトレーニングセッションに参加するのが一番よ
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
-msgstr ""
+msgstr "毎月のウェビナー"
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
@@ -289,6 +289,8 @@ msgid ""
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
+"%1$sにも他の役に立つサポートリソースへのリンクが含んで、いくつかのよく寄せられる質問の答えがあります。Pressbooks "
+"は質問して他のユーザーを返信できる%2$sも管理します。"
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
