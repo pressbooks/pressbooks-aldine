@@ -610,10 +610,12 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Parece que no podemos encontrar lo que estás intentando ubicar. Quizá te "
+"ayude hacer una búsqueda."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr ""
+msgstr "Filtrar por tema"
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
