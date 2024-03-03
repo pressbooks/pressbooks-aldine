@@ -528,11 +528,11 @@ msgstr "El correo electrónico no es valido."
 
 #: inc/helpers/namespace.php:487
 msgid "Institution is required."
-msgstr ""
+msgstr "La institución es obligatoria."
 
 #: inc/helpers/namespace.php:491
 msgid "Message is required."
-msgstr ""
+msgstr "El mensaje es obligatorio."
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:498
