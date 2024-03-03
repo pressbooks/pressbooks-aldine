@@ -263,7 +263,7 @@ msgstr ""
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "guía de usuario de Pressbooks"
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
