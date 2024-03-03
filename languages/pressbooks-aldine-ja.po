@@ -374,11 +374,11 @@ msgstr "メインの色のバリエーション、セカンダリ要素のホバ
 
 #: inc/customizer/namespace.php:98
 msgid "Primary Foreground Color"
-msgstr ""
+msgstr "メインの前景色"
 
 #: inc/customizer/namespace.php:99
 msgid "Used for text on a primary background."
-msgstr ""
+msgstr "メイン背景で文章に使用される。"
 
 #: inc/customizer/namespace.php:104
 msgid "Accent Foreground Color"
