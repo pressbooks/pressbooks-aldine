@@ -547,11 +547,11 @@ msgstr "メールアドレス (必要)"
 
 #: partials/contact-form.php:81
 msgid "Your institution (required)"
-msgstr ""
+msgstr "機関 (必要)"
 
 #: partials/contact-form.php:96
 msgid "Your message (required)"
-msgstr ""
+msgstr "メッセージ (必要)"
 
 #: partials/contact-form.php:100
 msgid "Send"
