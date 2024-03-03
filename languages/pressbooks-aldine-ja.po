@@ -221,10 +221,12 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
+"Pressbooks で作成者はウェブにコンテンツを素早く公開したり、オンデマンド印刷またはデジタル配信用に特別に設計されたアクセス可能な EPUB と"
+" PDF を含む複数の形式にエクスポートを作成したりできます。"
 
 #: inc/activation/namespace.php:47
 msgid "suite of products"
-msgstr ""
+msgstr "製品スイート"
 
 #: inc/activation/namespace.php:48
 msgid "Contact us"
