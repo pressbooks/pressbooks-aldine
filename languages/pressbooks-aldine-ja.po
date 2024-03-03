@@ -275,7 +275,7 @@ msgstr "短いビデオシリーズ"
 msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
-msgstr ""
+msgstr "ライブトレーニングセッションに参加するのが一番よくわかったら、いずれかの Pressbooks の%sに登録と参加できます。"
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
