@@ -279,11 +279,11 @@ msgstr ""
 
 #: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
-msgstr ""
+msgstr "canal de YouTube de Pressbooks"
 
 #: inc/activation/namespace.php:68
 msgid "short video series"
-msgstr ""
+msgstr "serie corta de vídeos"
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
