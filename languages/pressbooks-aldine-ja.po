@@ -486,11 +486,11 @@ msgstr "新規本を作成"
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
-msgstr ""
+msgstr "ログアウト"
 
 #: inc/helpers/namespace.php:475
 msgid "Name is required."
-msgstr ""
+msgstr "名前は必要です。"
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
