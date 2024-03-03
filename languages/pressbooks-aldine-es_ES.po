@@ -440,11 +440,11 @@ msgstr "Mostrar la página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:199 partials/content-front-page.php:15
 msgid "Our Latest Titles"
-msgstr ""
+msgstr "Nuestras publicaciones más recientes"
 
 #: inc/customizer/namespace.php:204
 msgid "Front Page Catalog Title"
-msgstr ""
+msgstr "Título de la página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:212
 msgid "Select a book"
