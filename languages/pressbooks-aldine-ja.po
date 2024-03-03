@@ -511,7 +511,7 @@ msgstr "メッセージは必要です。"
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:498
 msgid "Contact Form Submission from %s"
-msgstr ""
+msgstr "%s からお問い合わせフォーム"
 
 #: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
