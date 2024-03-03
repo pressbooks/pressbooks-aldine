@@ -430,7 +430,7 @@ msgstr "注目本"
 
 #: inc/customizer/namespace.php:233
 msgid "Front Page Settings"
-msgstr ""
+msgstr "フロントページ設定"
 
 #: inc/customizer/namespace.php:247
 msgid "Network Home Page"
