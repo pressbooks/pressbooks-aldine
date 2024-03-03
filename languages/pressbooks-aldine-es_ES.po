@@ -595,12 +595,15 @@ msgstr "No se ha encontrado nada"
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"¿Quieres publicar tu primera entrada? <a href=\"%1$s\">Empieza por aquí</a>."
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Lo siento, pero no hay nada que coincida con tus criterios de búsqueda. "
+"Inténtalo de nuevo con algunas palabras clave distintas."
 
 #: partials/content-none.php:48
 msgid ""
