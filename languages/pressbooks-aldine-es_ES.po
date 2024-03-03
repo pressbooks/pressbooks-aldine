@@ -512,11 +512,11 @@ msgstr "Crear un nuevo libro"
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
-msgstr ""
+msgstr "Salir"
 
 #: inc/helpers/namespace.php:475
 msgid "Name is required."
-msgstr ""
+msgstr "El nombre es obligatorio."
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
