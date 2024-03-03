@@ -306,10 +306,13 @@ msgid ""
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
+"La %1$s también contiene enlaces a otros recursos útiles de soporte, así "
+"como respuestas a algunas preguntas frecuentes. Pressbooks también mantiene "
+"un %2$s, donde puedes hacer preguntas y responder las de otros usuarios."
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
-msgstr ""
+msgstr "página de soporte de Pressbooks"
 
 #: inc/activation/namespace.php:79
 msgid "community forum"
