@@ -627,11 +627,11 @@ msgstr "Filtrar por institución"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "Todas las instituciones"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
-msgstr ""
+msgstr "Filtrar por licencia"
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
