@@ -647,11 +647,11 @@ msgstr "Tema"
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
-msgstr ""
+msgstr "Recientes"
 
 #: partials/content-page-catalog.php:82
 msgid "Clear Filters"
-msgstr ""
+msgstr "Vaciar filtros"
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
