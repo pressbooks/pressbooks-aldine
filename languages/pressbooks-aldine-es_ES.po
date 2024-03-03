@@ -581,11 +581,11 @@ msgstr "Mensaje (obligatorio)"
 
 #: partials/contact-form.php:100
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: partials/content-front-page.php:66
 msgid "View Complete Catalog"
-msgstr ""
+msgstr "Ver el catálogo completo"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
