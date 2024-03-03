@@ -452,7 +452,7 @@ msgstr "Selecciona un libro"
 
 #: inc/customizer/namespace.php:222
 msgid "Featured book"
-msgstr ""
+msgstr "Libro destacado"
 
 #: inc/customizer/namespace.php:233
 msgid "Front Page Settings"
