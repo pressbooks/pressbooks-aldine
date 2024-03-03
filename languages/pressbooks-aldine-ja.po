@@ -616,11 +616,11 @@ msgstr "件名"
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
-msgstr ""
+msgstr "最新"
 
 #: partials/content-page-catalog.php:82
 msgid "Clear Filters"
-msgstr ""
+msgstr "絞り込みをクリア"
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
