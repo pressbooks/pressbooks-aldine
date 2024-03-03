@@ -669,11 +669,11 @@ msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continuar leyendo <span class=\"screen-reader-text\">«%s»</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "Navegar"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
