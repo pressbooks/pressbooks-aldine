@@ -557,11 +557,11 @@ msgstr "Todavía no se han añadido libros al catálogo."
 
 #: partials/book.php:57
 msgid "About this book"
-msgstr ""
+msgstr "Acerca de este libro"
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
-msgstr ""
+msgstr "Deja este campo en blanco (obligatorio)"
 
 #: partials/contact-form.php:47
 msgid "Your name (required)"
