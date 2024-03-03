@@ -555,11 +555,11 @@ msgstr "メッセージ (必要)"
 
 #: partials/contact-form.php:100
 msgid "Send"
-msgstr ""
+msgstr "送信"
 
 #: partials/content-front-page.php:66
 msgid "View Complete Catalog"
-msgstr ""
+msgstr "完全なカタログを表示"
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
