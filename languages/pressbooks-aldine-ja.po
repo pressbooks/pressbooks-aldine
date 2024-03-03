@@ -628,7 +628,7 @@ msgstr "送信"
 
 #: partials/content-page.php:23 partials/content.php:50
 msgid "Pages:"
-msgstr ""
+msgstr "ページ:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
