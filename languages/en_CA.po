@@ -1,0 +1,662 @@
+# Copyright (C) 2023 Pressbooks (Book Oven Inc.)
+# This file is distributed under the GNU GPL v3 or later.
+# Translators:
+# Steel Wagstaff <steel@pressbooks.com>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Aldine 1.19.1\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
+"POT-Creation-Date: 2023-09-18T20:17:49-07:00\n"
+"PO-Revision-Date: 2024-02-29 15:38+0000\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2024\n"
+"Language-Team: English (Canada) (https://app.transifex.com/pressbooks/teams/9194/en_CA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_CA\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: pressbooks-aldine\n"
+"X-Generator: WP-CLI 2.7.1\n"
+
+#. Theme Name of the theme
+msgid "Aldine"
+msgstr "Aldine"
+
+#. Theme URI of the theme
+msgid "https://github.com/pressbooks/pressbooks-aldine/"
+msgstr "https://github.com/pressbooks/pressbooks-aldine/"
+
+#. Description of the theme
+msgid ""
+"Aldine is the default theme for the home page of Pressbooks networks. It is "
+"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
+"regarded by many as the world’s first publisher."
+msgstr ""
+"Aldine is the default theme for the home page of Pressbooks networks. It is "
+"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
+"regarded by many as the world’s first publisher."
+
+#. Author of the theme
+msgid "Pressbooks (Book Oven Inc.)"
+msgstr "Pressbooks (Book Oven Inc.)"
+
+#. Author URI of the theme
+msgid "https://pressbooks.org"
+msgstr "https://pressbooks.org"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! That page can&rsquo;t be found."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location."
+msgstr "It looks like nothing was found at this location."
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "One thought on &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#. translators: %s network name
+#: footer.php:61 footer.php:66
+msgid "%s on Facebook"
+msgstr "%s on Facebook"
+
+#. translators: %s network name
+#: footer.php:71 footer.php:76
+msgid "%s on Twitter"
+msgstr "%s on Twitter"
+
+#. translators: %s network name
+#: footer.php:81 footer.php:86
+msgid "%s on Instagram"
+msgstr "%s on Instagram"
+
+#. translators: %s Pressbooks
+#: footer.php:105
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: footer.php:107
+msgid "Guides and Tutorials"
+msgstr "Guides and Tutorials"
+
+#: footer.php:108
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:110 inc/helpers/namespace.php:349
+msgid "Contact"
+msgstr "Contact"
+
+#: footer.php:115 footer.php:117
+msgid "Pressbooks on YouTube"
+msgstr "Pressbooks on YouTube"
+
+#: footer.php:119 footer.php:123
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks on Twitter"
+
+#: functions.php:19
+msgid "Dependencies Missing"
+msgstr "Dependencies Missing"
+
+#: functions.php:20
+msgid "You must run <code>composer install</code> from the Aldine directory."
+msgstr "You must run <code>composer install</code> from the Aldine directory."
+
+#: header.php:47
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#. translators: %s name of network
+#: header.php:77
+msgid "Logo for %s"
+msgstr "Logo for %s"
+
+#: header.php:88
+msgid "Toggle Menu"
+msgstr "Toggle Menu"
+
+#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: inc/actions/namespace.php:122
+msgid "Network Footer Block 1"
+msgstr "Network Footer Block 1"
+
+#: inc/actions/namespace.php:134
+msgid "Network Footer Block 2"
+msgstr "Network Footer Block 2"
+
+#: inc/actions/namespace.php:237
+msgid ""
+"This page displays your network catalog, so there is no content to edit."
+msgstr ""
+"This page displays your network catalogue, so there is no content to edit."
+
+#: inc/actions/namespace.php:294
+msgid "Page Section"
+msgstr "Page Section"
+
+#: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
+msgid "Title"
+msgstr "Title"
+
+#: inc/actions/namespace.php:296
+msgid "Standard"
+msgstr "Standard"
+
+#: inc/actions/namespace.php:297
+msgid "Accent"
+msgstr "Accent"
+
+#: inc/actions/namespace.php:298
+msgid "Bordered"
+msgstr "Bordered"
+
+#: inc/actions/namespace.php:299
+msgid "Borderless"
+msgstr "Borderless"
+
+#: inc/actions/namespace.php:302
+msgid "Call to Action"
+msgstr "Call to Action"
+
+#: inc/actions/namespace.php:303
+msgid "Text"
+msgstr "Text"
+
+#: inc/actions/namespace.php:304
+msgid "Link"
+msgstr "Link"
+
+#: inc/activation/namespace.php:28
+msgid "About Pressbooks"
+msgstr "About Pressbooks"
+
+#: inc/activation/namespace.php:29
+msgid ""
+"Pressbooks is easy-to-use book writing software that lets you create a book "
+"in all the formats you need to publish."
+msgstr ""
+"Pressbooks is easy-to-use book writing software that lets you create a book "
+"in all the formats you need to publish."
+
+#: inc/activation/namespace.php:30
+msgid "Learn More"
+msgstr "Learn More"
+
+#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:176
+msgid "About"
+msgstr "About"
+
+#: inc/activation/namespace.php:42
+msgid ""
+"Pressbooks is simple book production software that makes it easy to write, "
+"develop, and share your ideas. You can use Pressbooks to publish open "
+"educational resources, textbooks, scholarly monographs, fiction and non-"
+"fiction books, white papers, syllabi, and more."
+msgstr ""
+
+#: inc/activation/namespace.php:43
+msgid ""
+"Pressbooks lets creators quickly publish their content to the web and "
+"produce exports in multiple formats, including accessible EPUBs and PDFs "
+"specially designed for print-on-demand or digital distribution."
+msgstr ""
+
+#: inc/activation/namespace.php:47
+msgid "suite of products"
+msgstr ""
+
+#: inc/activation/namespace.php:48
+msgid "Contact us"
+msgstr ""
+
+#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:206
+msgid "Help"
+msgstr "Help"
+
+#. translators: %s: link to guide
+#: inc/activation/namespace.php:61
+msgid ""
+"Are you looking for help on your Pressbooks project? The most comprehensive "
+"resource available is the %s, which contains everything you need to know "
+"about creating, enriching and exporting your work."
+msgstr ""
+
+#: inc/activation/namespace.php:62
+msgid "Pressbooks User Guide"
+msgstr ""
+
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
+#: inc/activation/namespace.php:66
+msgid ""
+"You can find short video tutorials and webinars about features and product "
+"updates on the %1$s. If you’re just getting started with Pressbooks, this "
+"%2$s will guide you."
+msgstr ""
+
+#: inc/activation/namespace.php:67
+msgid "Pressbooks YouTube channel"
+msgstr ""
+
+#: inc/activation/namespace.php:68
+msgid "short video series"
+msgstr ""
+
+#. translators: %s: link to Pressbooks webinar schedule
+#: inc/activation/namespace.php:72
+msgid ""
+"If you learn best by learning by attending live training sessions, you can "
+"register for and attend one of Pressbooks' %s."
+msgstr ""
+
+#: inc/activation/namespace.php:73
+msgid "monthly webinars"
+msgstr ""
+
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
+#: inc/activation/namespace.php:77
+msgid ""
+"The %1$s also contains links to other useful support resources and has "
+"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
+"where you can ask and answer questions of other users."
+msgstr ""
+
+#: inc/activation/namespace.php:78
+msgid "Pressbooks support page"
+msgstr ""
+
+#: inc/activation/namespace.php:79
+msgid "community forum"
+msgstr ""
+
+#. translators: %s: link to Pressbooks support request form
+#: inc/activation/namespace.php:83
+msgid ""
+"For additional support needs, reach out to your institution’s Pressbooks "
+"network managers. If you don’t know who your network managers are, please "
+"fill out the %s to be put in touch with them."
+msgstr ""
+
+#: inc/activation/namespace.php:84
+msgid "support request form"
+msgstr ""
+
+#. Template Name of the theme
+#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:191
+msgid "Catalog"
+msgstr "Catalogue"
+
+#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
+msgid "Home"
+msgstr "Home"
+
+#: inc/admin/namespace.php:37
+msgid "Catalog updated."
+msgstr "Catalogue"
+
+#: inc/admin/namespace.php:38
+msgid "Sorry, but your catalog was not updated. Please try again."
+msgstr "Sorry, but your catalogue was not updated. Please try again."
+
+#: inc/admin/namespace.php:39
+msgid "Dismiss this notice."
+msgstr "Dismiss this notice."
+
+#: inc/admin/namespace.php:83
+msgid "In Catalog"
+msgstr "In Catalogue"
+
+#: inc/customizer/namespace.php:74
+msgid "Primary Color"
+msgstr "Primary Colour"
+
+#: inc/customizer/namespace.php:75
+msgid "Primary color, used for links and other primary elements."
+msgstr "Primary colour, used for links and other primary elements."
+
+#: inc/customizer/namespace.php:80
+msgid "Primary Color (Hover)"
+msgstr "Primary Colour (Hover)"
+
+#: inc/customizer/namespace.php:81
+msgid "Variant of the primary color, used for primary element hover states."
+msgstr "Variant of the primary colour, used for primary element hover states."
+
+#: inc/customizer/namespace.php:86
+msgid "Accent Color"
+msgstr "Accent Colour"
+
+#: inc/customizer/namespace.php:87
+msgid "Accent color, used for flourishes and secondary elements."
+msgstr "Accent colour, used for flourishes and secondary elements."
+
+#: inc/customizer/namespace.php:92
+msgid "Accent Color (Hover)"
+msgstr "Accent Colour (Hover)"
+
+#: inc/customizer/namespace.php:93
+msgid "Variant of the accent color, used for secondary element hover states."
+msgstr ""
+"Variant of the accent colour, used for secondary element hover states."
+
+#: inc/customizer/namespace.php:98
+msgid "Primary Foreground Color"
+msgstr "Primary Foreground Colour"
+
+#: inc/customizer/namespace.php:99
+msgid "Used for text on a primary background."
+msgstr "Used for text on a primary background."
+
+#: inc/customizer/namespace.php:104
+msgid "Accent Foreground Color"
+msgstr "Accent Foreground Colour"
+
+#: inc/customizer/namespace.php:105
+msgid "Used for text on an accent color background."
+msgstr "Used for text on an accent colour background."
+
+#: inc/customizer/namespace.php:129
+msgid "Social Media"
+msgstr "Social Media"
+
+#: inc/customizer/namespace.php:141
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/customizer/namespace.php:154
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/customizer/namespace.php:167
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/customizer/namespace.php:176
+msgid "Front Page Catalog"
+msgstr "Front Page Catalogue"
+
+#: inc/customizer/namespace.php:188
+msgid "Show Front Page Catalog"
+msgstr "Show Front Page Catalogue"
+
+#: inc/customizer/namespace.php:199 partials/content-front-page.php:15
+msgid "Our Latest Titles"
+msgstr "Our Latest Titles"
+
+#: inc/customizer/namespace.php:204
+msgid "Front Page Catalog Title"
+msgstr "Front Page Catalogue Title"
+
+#: inc/customizer/namespace.php:212
+msgid "Select a book"
+msgstr ""
+
+#: inc/customizer/namespace.php:222
+msgid "Featured book"
+msgstr ""
+
+#: inc/customizer/namespace.php:233
+msgid "Front Page Settings"
+msgstr ""
+
+#: inc/customizer/namespace.php:247
+msgid "Network Home Page"
+msgstr ""
+
+#: inc/customizer/namespace.php:256
+msgid "Contact Form"
+msgstr "Contact Form"
+
+#: inc/customizer/namespace.php:267
+msgid "Show Contact Form"
+msgstr "Show Contact Form"
+
+#: inc/customizer/namespace.php:277 partials/contact-form.php:13
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: inc/customizer/namespace.php:282
+msgid "Contact Form Title"
+msgstr "Contact Form Title"
+
+#: inc/customizer/namespace.php:296
+msgid "Contact Email"
+msgstr "Contact Email"
+
+#: inc/customizer/namespace.php:308
+msgid "Contact Link"
+msgstr "Contact Link"
+
+#: inc/filters/namespace.php:63
+msgid "Continued"
+msgstr "Continued"
+
+#: inc/helpers/namespace.php:358
+msgid "Sign In"
+msgstr "Sign In"
+
+#: inc/helpers/namespace.php:366
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
+msgid "Admin"
+msgstr "Admin"
+
+#: inc/helpers/namespace.php:394
+msgid "My Books"
+msgstr "My Books"
+
+#: inc/helpers/namespace.php:402
+msgid "Create a New Book"
+msgstr "Create a New Book"
+
+#: inc/helpers/namespace.php:410
+msgid "Sign Out"
+msgstr "Sign Out"
+
+#: inc/helpers/namespace.php:475
+msgid "Name is required."
+msgstr "Name is required."
+
+#: inc/helpers/namespace.php:479
+msgid "Email is required."
+msgstr "Email is required."
+
+#: inc/helpers/namespace.php:483
+msgid "Email is invalid."
+msgstr "Email is invalid."
+
+#: inc/helpers/namespace.php:487
+msgid "Institution is required."
+msgstr "Institution is required."
+
+#: inc/helpers/namespace.php:491
+msgid "Message is required."
+msgstr "Message is required."
+
+#. translators: %s name of contact for submitter
+#: inc/helpers/namespace.php:498
+msgid "Contact Form Submission from %s"
+msgstr "Contact Form Submission from %s"
+
+#: inc/helpers/namespace.php:509
+msgid "Your message was sent!"
+msgstr "Your message was sent!"
+
+#: inc/helpers/namespace.php:512
+msgid "Your message could not be sent."
+msgstr "Your message could not be sent."
+
+#: page-catalog.php:65
+msgid "No Books Found"
+msgstr "No Books Found"
+
+#: page-catalog.php:68
+msgid "No books have been added to the catalog yet."
+msgstr "No books have been added to the catalogue yet."
+
+#: partials/book.php:57
+msgid "About this book"
+msgstr "About this book"
+
+#: partials/contact-form.php:30
+msgid "Keep this field blank (required)"
+msgstr "Keep this field blank (required)"
+
+#: partials/contact-form.php:47
+msgid "Your name (required)"
+msgstr "Your name (required)"
+
+#: partials/contact-form.php:64
+msgid "Your email address (required)"
+msgstr "Your email address (required)"
+
+#: partials/contact-form.php:81
+msgid "Your institution (required)"
+msgstr "Your institution (required)"
+
+#: partials/contact-form.php:96
+msgid "Your message (required)"
+msgstr "Your message (required)"
+
+#: partials/contact-form.php:100
+msgid "Send"
+msgstr "Send"
+
+#: partials/content-front-page.php:66
+msgid "View Complete Catalog"
+msgstr "View Complete Catalogue"
+
+#: partials/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#. translators: 1: link to WP admin new post page.
+#: partials/content-none.php:27
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: partials/content-none.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+
+#: partials/content-none.php:48
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+
+#: partials/content-page-catalog.php:17
+msgid "Filter by Subject"
+msgstr "Filter by Subject"
+
+#: partials/content-page-catalog.php:19
+msgid "All Subjects"
+msgstr "All Subjects"
+
+#: partials/content-page-catalog.php:39
+msgid "Filter by Institution"
+msgstr ""
+
+#: partials/content-page-catalog.php:41
+msgid "All Institutions"
+msgstr ""
+
+#: partials/content-page-catalog.php:54
+msgid "Filter by License"
+msgstr "Filter by License"
+
+#: partials/content-page-catalog.php:56
+msgid "All Licenses"
+msgstr "All Licenses"
+
+#: partials/content-page-catalog.php:69
+msgid "Sort by"
+msgstr "Sort by"
+
+#: partials/content-page-catalog.php:73
+msgid "Subject"
+msgstr "Subject"
+
+#: partials/content-page-catalog.php:74
+msgid "Latest"
+msgstr "Latest"
+
+#: partials/content-page-catalog.php:82
+msgid "Clear Filters"
+msgstr "Clear Filters"
+
+#: partials/content-page-catalog.php:83
+msgid "Submit"
+msgstr "Submit"
+
+#: partials/content-page.php:23 partials/content.php:50
+msgid "Pages:"
+msgstr "Pages:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content-page.php:37
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Edit <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content.php:37
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: partials/paged-navigation.php:12
+msgid "Navigation"
+msgstr "Navigation"
+
+#: partials/paged-navigation.php:14
+msgid "Book Catalog Navigation"
+msgstr "Book Catalogue Navigation"
+
+#. translators: %s: search query.
+#: search.php:23
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: searchform.php:11
+msgctxt "label"
+msgid "Search Catalog"
+msgstr "Search Catalogue"
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr "Search"
