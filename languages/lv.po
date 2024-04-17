@@ -2,6 +2,7 @@
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Steel Wagstaff <steel@pressbooks.com>, 2024
+# Antonio D., 2024
 # 
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "POT-Creation-Date: 2023-09-18T20:17:49-07:00\n"
 "PO-Revision-Date: 2024-02-29 15:38+0000\n"
-"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2024\n"
+"Last-Translator: Antonio D., 2024\n"
 "Language-Team: Latvian (https://app.transifex.com/pressbooks/teams/9194/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -645,7 +646,7 @@ msgstr ""
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr ""
+msgstr "Navigācija"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
