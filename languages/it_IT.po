@@ -1,16 +1,17 @@
 # Copyright (C) 2023 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
+# Antonio D., 2018
 # Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2024
-# Antonio D., 2024
+# Steel Wagstaff <steel@pressbooks.com>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.19.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2023-09-18T20:17:49-07:00\n"
-"PO-Revision-Date: 2024-02-29 15:38+0000\n"
-"Last-Translator: Antonio D., 2024\n"
+"POT-Creation-Date: 2023-08-15T13:43:00+00:00\n"
+"PO-Revision-Date: 2018-03-06 14:24+0000\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/pressbooks/teams/9194/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.8.1\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -103,7 +104,7 @@ msgstr "Contatto"
 
 #: footer.php:115 footer.php:117
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbooks su YouTube"
 
 #: footer.php:119 footer.php:123
 msgid "Pressbooks on Twitter"
@@ -480,7 +481,7 @@ msgstr "I Miei Libri"
 
 #: inc/helpers/namespace.php:402
 msgid "Create a New Book"
-msgstr ""
+msgstr "Crea un Nuovo Libro"
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
@@ -525,7 +526,7 @@ msgstr "Nessun libro trovato."
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
-msgstr ""
+msgstr "Nessun libro è stato ancora aggiunto al catalogo."
 
 #: partials/book.php:57
 msgid "About this book"
@@ -533,7 +534,7 @@ msgstr "Riguardo questo libro"
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
-msgstr ""
+msgstr "Mantieni questo campo vuoto (richiesto)"
 
 #: partials/contact-form.php:47
 msgid "Your name (required)"
@@ -592,11 +593,11 @@ msgstr "Tutti gli Argomenti"
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
-msgstr ""
+msgstr "Filtra per istituzione"
 
 #: partials/content-page-catalog.php:41
 msgid "All Institutions"
-msgstr ""
+msgstr "Tutte le istituzioni"
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
@@ -633,12 +634,12 @@ msgstr "Pagine:"
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "Modificare <span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continua a leggere<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
@@ -646,17 +647,17 @@ msgstr "Navigazione"
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
-msgstr ""
+msgstr "Navigazione nel catalogo dei libri"
 
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Risultati della ricerca per: %s"
 
 #: searchform.php:11
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "Cerca Catalogo"
+msgstr "Cerca nel Catalogo"
 
 #: searchform.php:14
 msgctxt "submit button"
