@@ -17,7 +17,7 @@ jobs:
       requires_pressbooks: false
       use_mariadb: false
   trigger_bedrock_updates:
-    needs: plugin-tests
+    needs: theme-tests
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Bedrock Updates
