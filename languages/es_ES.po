@@ -449,11 +449,11 @@ msgstr "Título de la página de inicio del catálogo"
 
 #: inc/customizer/namespace.php:212
 msgid "Select a book"
-msgstr ""
+msgstr "Selecciona un libro"
 
 #: inc/customizer/namespace.php:222
 msgid "Featured book"
-msgstr ""
+msgstr "Libro destacado"
 
 #: inc/customizer/namespace.php:233
 msgid "Front Page Settings"
@@ -461,7 +461,7 @@ msgstr "Ajustes de la página de inicio"
 
 #: inc/customizer/namespace.php:247
 msgid "Network Home Page"
-msgstr ""
+msgstr "Página de inicio de la red"
 
 #: inc/customizer/namespace.php:256
 msgid "Contact Form"
