@@ -422,7 +422,7 @@ msgstr "フロントページカタログのタイトル"
 
 #: inc/customizer/namespace.php:212
 msgid "Select a book"
-msgstr ""
+msgstr "本を選択"
 
 #: inc/customizer/namespace.php:222
 msgid "Featured book"
