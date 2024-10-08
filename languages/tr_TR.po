@@ -1,16 +1,15 @@
-# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2023 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
-# Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
-# Ali Fuat Demir <afuatdemir@gmail.com>, 2022
+# Steel Wagstaff <steel@pressbooks.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.14.1\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/\n"
-"POT-Creation-Date: 2022-05-03T20:56:57+00:00\n"
-"PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Ali Fuat Demir <afuatdemir@gmail.com>, 2022\n"
+"Project-Id-Version: Aldine 1.19.1\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
+"POT-Creation-Date: 2023-09-18T20:17:49-07:00\n"
+"PO-Revision-Date: 2024-02-29 15:38+0000\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2024\n"
 "Language-Team: Turkish (Turkey) (https://app.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Language: tr_TR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.5.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 
 #. Theme Name of the theme
 msgid "Aldine"
@@ -99,7 +98,7 @@ msgstr "Kılavuz ve Öğreticiler"
 msgid "Pressbooks Directory"
 msgstr "Pressbooks Dizini"
 
-#: footer.php:110 inc/helpers/namespace.php:234
+#: footer.php:110 inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "İletişim"
 
@@ -119,24 +118,24 @@ msgstr "Bağımlılıklar Eksik "
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr "Aldine dizininden <code>composer install</code> çalıştırmalısınız."
 
-#: header.php:45
+#: header.php:47
 msgid "Skip to content"
 msgstr "İçeriğe geç"
 
 #. translators: %s name of network
-#: header.php:70
+#: header.php:77
 msgid "Logo for %s"
 msgstr "%s için Logo"
 
-#: header.php:81
+#: header.php:88
 msgid "Toggle Menu"
 msgstr "Menüyü Aç/Kapat"
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:139
+#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr "Ana Menü"
 
-#: inc/actions/namespace.php:49 inc/activation/namespace.php:160
+#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr "Altbilgi Menüsü"
 
@@ -190,11 +189,11 @@ msgstr "Metin"
 msgid "Link"
 msgstr "Bağlantı"
 
-#: inc/activation/namespace.php:26
+#: inc/activation/namespace.php:28
 msgid "About Pressbooks"
 msgstr "Pressbooks Hakkında"
 
-#: inc/activation/namespace.php:27
+#: inc/activation/namespace.php:29
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
@@ -202,16 +201,16 @@ msgstr ""
 "Pressbooks, yayınlamanız gereken tüm formatlarda bir kitap oluşturmanıza "
 "izin veren, kullanımı kolay bir kitap yazma yazılımıdır."
 
-#: inc/activation/namespace.php:28
+#: inc/activation/namespace.php:30
 msgid "Learn More"
 msgstr "Daha fazla bilgi edin"
 
-#: inc/activation/namespace.php:35 inc/activation/namespace.php:165
-#: inc/activation/namespace.php:171
+#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:176
 msgid "About"
 msgstr "Hakkında"
 
-#: inc/activation/namespace.php:40
+#: inc/activation/namespace.php:42
 msgid ""
 "Pressbooks is simple book production software that makes it easy to write, "
 "develop, and share your ideas. You can use Pressbooks to publish open "
@@ -224,7 +223,7 @@ msgstr ""
 " ders programları ve daha fazlasını yayınlamak için Pressbooks'u "
 "kullanabilirsiniz."
 
-#: inc/activation/namespace.php:41
+#: inc/activation/namespace.php:43
 msgid ""
 "Pressbooks lets creators quickly publish their content to the web and "
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
@@ -235,21 +234,21 @@ msgstr ""
 "tasarlanmış erişilebilir EPUB'lar ve PDF'ler dahil olmak üzere birden çok "
 "biçimde indirilebilir dosyalar üretmelerine imkan tanır."
 
-#: inc/activation/namespace.php:45
+#: inc/activation/namespace.php:47
 msgid "suite of products"
 msgstr "ürün paketi"
 
-#: inc/activation/namespace.php:46
+#: inc/activation/namespace.php:48
 msgid "Contact us"
 msgstr "Bize ulaşın"
 
-#: inc/activation/namespace.php:52 inc/activation/namespace.php:195
-#: inc/activation/namespace.php:201
+#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:206
 msgid "Help"
 msgstr "Yardım"
 
 #. translators: %s: link to guide
-#: inc/activation/namespace.php:59
+#: inc/activation/namespace.php:61
 msgid ""
 "Are you looking for help on your Pressbooks project? The most comprehensive "
 "resource available is the %s, which contains everything you need to know "
@@ -259,13 +258,13 @@ msgstr ""
 "çalışmanızı oluşturma, zenginleştirme ve dışa aktarma hakkında bilmeniz "
 "gereken her şeyi içeren %s'dir."
 
-#: inc/activation/namespace.php:60
+#: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr "Pressbooks Kullanıcı Kılavuzu "
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
 #. Fundamental of Pressbooks YouTube playlist
-#: inc/activation/namespace.php:64
+#: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
@@ -275,16 +274,16 @@ msgstr ""
 "web seminerleri bulabilirsinizPressboks'a yeni başlıyorsanız bu %2$s size "
 "rehberlik edecektir."
 
-#: inc/activation/namespace.php:65
+#: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
 msgstr "Pressbooks YouTube kanalı"
 
-#: inc/activation/namespace.php:66
+#: inc/activation/namespace.php:68
 msgid "short video series"
 msgstr "kısa video serileri "
 
 #. translators: %s: link to Pressbooks webinar schedule
-#: inc/activation/namespace.php:70
+#: inc/activation/namespace.php:72
 msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
@@ -292,13 +291,13 @@ msgstr ""
 "Canlı öğretici oturumlarına katılarak iyi öğreniyorsanız, Pressbooks'un %s "
 "ye kaydolup  eğitimlere katılabilirsiniz."
 
-#: inc/activation/namespace.php:71
+#: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr "aylık webinarlar "
 
 #. translators: %1$s: link to Pressbooks support page; %2$s: link to
 #. Pressbooks community forum
-#: inc/activation/namespace.php:75
+#: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
@@ -308,16 +307,16 @@ msgstr ""
 "soruların cevaplarını içerir. Pressbooks ayrıca soru sorabileceğiniz  ve "
 "diğer kullanıcıların sorularını cevaplayabileceğiniz bir 2%2$s tutar."
 
-#: inc/activation/namespace.php:76
+#: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
 msgstr "Pressbooks destek sayfası "
 
-#: inc/activation/namespace.php:77
+#: inc/activation/namespace.php:79
 msgid "community forum"
 msgstr "topluluk formu"
 
 #. translators: %s: link to Pressbooks support request form
-#: inc/activation/namespace.php:81
+#: inc/activation/namespace.php:83
 msgid ""
 "For additional support needs, reach out to your institution’s Pressbooks "
 "network managers. If you don’t know who your network managers are, please "
@@ -327,18 +326,17 @@ msgstr ""
 "ulaşın. Ağ yöneticilerinizin kim olduğunu bilmiyorsanız lütfen sizinle "
 "iletişime geçmeleri için %s%s doldurun."
 
-#: inc/activation/namespace.php:82
+#: inc/activation/namespace.php:84
 msgid "support request form"
 msgstr "Destek Talep Formu"
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:88 inc/activation/namespace.php:144
-#: inc/activation/namespace.php:150 inc/activation/namespace.php:180
-#: inc/activation/namespace.php:186
+#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:191
 msgid "Catalog"
 msgstr "Katalog"
 
-#: inc/activation/namespace.php:92 inc/helpers/namespace.php:226
+#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
 msgid "Home"
 msgstr "Ana Sayfa"
 
@@ -358,110 +356,126 @@ msgstr "Bu uyarıyı reddedin."
 msgid "In Catalog"
 msgstr "Katalogda"
 
-#: inc/customizer/namespace.php:71
+#: inc/customizer/namespace.php:74
 msgid "Primary Color"
 msgstr "Ana renk"
 
-#: inc/customizer/namespace.php:72
+#: inc/customizer/namespace.php:75
 msgid "Primary color, used for links and other primary elements."
 msgstr "Bağlantılar ve diğer birincil öğeler için kullanılan birincil renk."
 
-#: inc/customizer/namespace.php:77
+#: inc/customizer/namespace.php:80
 msgid "Primary Color (Hover)"
 msgstr "Birincil Renk (Üzerine Gelme)"
 
-#: inc/customizer/namespace.php:78
+#: inc/customizer/namespace.php:81
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 "Birincil öğenin üzerine gelme durumları için kullanılan birincil rengin "
 "çeşidi."
 
-#: inc/customizer/namespace.php:83
+#: inc/customizer/namespace.php:86
 msgid "Accent Color"
 msgstr "Vurgu Rengi"
 
-#: inc/customizer/namespace.php:84
+#: inc/customizer/namespace.php:87
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr "Vurgu rengi, süslemeler ve ikincil öğeler için kullanılır."
 
-#: inc/customizer/namespace.php:89
+#: inc/customizer/namespace.php:92
 msgid "Accent Color (Hover)"
 msgstr "Vurgu Rengi (Üzerine Gelme)"
 
-#: inc/customizer/namespace.php:90
+#: inc/customizer/namespace.php:93
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 "İkincil öğelerin üzerine gelme durumları için kullanılan vurgu rengi çeşidi."
 
-#: inc/customizer/namespace.php:95
+#: inc/customizer/namespace.php:98
 msgid "Primary Foreground Color"
 msgstr "Birincil Ön Plan Rengi"
 
-#: inc/customizer/namespace.php:96
+#: inc/customizer/namespace.php:99
 msgid "Used for text on a primary background."
 msgstr "Birincil arkaplan üzerindeki metin için kullanılır."
 
-#: inc/customizer/namespace.php:101
+#: inc/customizer/namespace.php:104
 msgid "Accent Foreground Color"
 msgstr "Vurgu Ön Plan Rengi"
 
-#: inc/customizer/namespace.php:102
+#: inc/customizer/namespace.php:105
 msgid "Used for text on an accent color background."
 msgstr "Vurgulu renk arka planındaki metin için kullanılır."
 
-#: inc/customizer/namespace.php:126
+#: inc/customizer/namespace.php:129
 msgid "Social Media"
 msgstr "Sosyal medya"
 
-#: inc/customizer/namespace.php:138
+#: inc/customizer/namespace.php:141
 msgid "Facebook"
 msgstr "Facebook"
 
-#: inc/customizer/namespace.php:151
+#: inc/customizer/namespace.php:154
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/namespace.php:164
+#: inc/customizer/namespace.php:167
 msgid "Instagram"
 msgstr "Instagram"
 
-#: inc/customizer/namespace.php:173
+#: inc/customizer/namespace.php:176
 msgid "Front Page Catalog"
 msgstr "Ön Sayfa Kataloğu"
 
-#: inc/customizer/namespace.php:184
+#: inc/customizer/namespace.php:188
 msgid "Show Front Page Catalog"
 msgstr "Ön Sayfa Kataloğunu Göster"
 
-#: inc/customizer/namespace.php:194 partials/content-front-page.php:19
+#: inc/customizer/namespace.php:199 partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "En Son Kitaplarımız"
 
-#: inc/customizer/namespace.php:199
+#: inc/customizer/namespace.php:204
 msgid "Front Page Catalog Title"
 msgstr "Ön Sayfa Katalog Başlığı"
 
-#: inc/customizer/namespace.php:208
+#: inc/customizer/namespace.php:212
+msgid "Select a book"
+msgstr ""
+
+#: inc/customizer/namespace.php:222
+msgid "Featured book"
+msgstr ""
+
+#: inc/customizer/namespace.php:233
+msgid "Front Page Settings"
+msgstr ""
+
+#: inc/customizer/namespace.php:247
+msgid "Network Home Page"
+msgstr ""
+
+#: inc/customizer/namespace.php:256
 msgid "Contact Form"
 msgstr "İletişim Formu"
 
-#: inc/customizer/namespace.php:219
+#: inc/customizer/namespace.php:267
 msgid "Show Contact Form"
 msgstr "İletişim Formunu Göster"
 
-#: inc/customizer/namespace.php:229 partials/contact-form.php:13
+#: inc/customizer/namespace.php:277 partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "Bize Ulaşın"
 
-#: inc/customizer/namespace.php:234
+#: inc/customizer/namespace.php:282
 msgid "Contact Form Title"
 msgstr "İletişim Formu Başlığı"
 
-#: inc/customizer/namespace.php:248
+#: inc/customizer/namespace.php:296
 msgid "Contact Email"
 msgstr "İletişim E-posta"
 
-#: inc/customizer/namespace.php:260
+#: inc/customizer/namespace.php:308
 msgid "Contact Link"
 msgstr "İletişim Linki"
 
@@ -469,68 +483,68 @@ msgstr "İletişim Linki"
 msgid "Continued"
 msgstr "Devam eden"
 
-#: inc/helpers/namespace.php:243
+#: inc/helpers/namespace.php:358
 msgid "Sign In"
 msgstr "Oturum aç"
 
-#: inc/helpers/namespace.php:251
+#: inc/helpers/namespace.php:366
 msgid "Sign Up"
 msgstr "Kaydol"
 
-#: inc/helpers/namespace.php:261 inc/helpers/namespace.php:269
+#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
 msgid "Admin"
 msgstr "Yönetici"
 
-#: inc/helpers/namespace.php:279
+#: inc/helpers/namespace.php:394
 msgid "My Books"
 msgstr "Kitaplarım"
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:402
 msgid "Create a New Book"
 msgstr "Yeni Kitap Oluşturun"
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:410
 msgid "Sign Out"
 msgstr "Oturumu Kapat"
 
-#: inc/helpers/namespace.php:360
+#: inc/helpers/namespace.php:475
 msgid "Name is required."
 msgstr "İsim gerekli."
 
-#: inc/helpers/namespace.php:364
+#: inc/helpers/namespace.php:479
 msgid "Email is required."
 msgstr "Email gereklidir."
 
-#: inc/helpers/namespace.php:368
+#: inc/helpers/namespace.php:483
 msgid "Email is invalid."
 msgstr "E-posta geçersiz."
 
-#: inc/helpers/namespace.php:372
+#: inc/helpers/namespace.php:487
 msgid "Institution is required."
 msgstr "Kurum gerekli."
 
-#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:491
 msgid "Message is required."
 msgstr "Mesaj gereklidir."
 
 #. translators: %s name of contact for submitter
-#: inc/helpers/namespace.php:383
+#: inc/helpers/namespace.php:498
 msgid "Contact Form Submission from %s"
 msgstr "İletişim Formu Gönderimi %s"
 
-#: inc/helpers/namespace.php:394
+#: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
 msgstr "Mesajınız gönderildi!"
 
-#: inc/helpers/namespace.php:397
+#: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
 msgstr "Mesajınız gönderilemedi."
 
-#: page-catalog.php:60
+#: page-catalog.php:65
 msgid "No Books Found"
 msgstr "Kitap Bulunamadı"
 
-#: page-catalog.php:63
+#: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
 msgstr "Kataloğa eklenmiş kitap bulunamadı "
 
@@ -542,27 +556,27 @@ msgstr "Bu kitap hakkında"
 msgid "Keep this field blank (required)"
 msgstr "Bu alanı boş bırakın (gerekli)"
 
-#: partials/contact-form.php:46
+#: partials/contact-form.php:47
 msgid "Your name (required)"
 msgstr "Adınız (gerekli)"
 
-#: partials/contact-form.php:62
+#: partials/contact-form.php:64
 msgid "Your email address (required)"
 msgstr "E-posta adresiniz (gerekli)"
 
-#: partials/contact-form.php:78
+#: partials/contact-form.php:81
 msgid "Your institution (required)"
 msgstr "Kurumunuz (gerekli)"
 
-#: partials/contact-form.php:94
+#: partials/contact-form.php:96
 msgid "Your message (required)"
 msgstr "Mesajınız (gerekli)"
 
-#: partials/contact-form.php:98
+#: partials/contact-form.php:100
 msgid "Send"
 msgstr "Gönder"
 
-#: partials/content-front-page.php:76
+#: partials/content-front-page.php:66
 msgid "View Complete Catalog"
 msgstr "Tüm Kataloğu Görüntüle"
 
