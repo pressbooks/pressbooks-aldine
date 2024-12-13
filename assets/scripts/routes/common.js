@@ -31,9 +31,9 @@ export default {
 				$( '.header__nav' ).toggleClass( 'header__nav--active' );
 			} );
 		} );
-		// Props to Dave Rupert: https://daverupert.com/2017/11/happier-html5-forms/
-		const inputs = document.querySelectorAll( 'input, textarea' );
 
+		// Check form field validity when focus changes
+		const inputs = document.querySelectorAll( 'input, textarea' );
 		inputs.forEach( input => {
 			input.addEventListener('invalid', () => {
 					input.classList.add('error');
