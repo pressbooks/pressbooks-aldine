@@ -68,12 +68,12 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_twitter ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on X', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<use href="#twitter" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
-								<span class="screen-reader-text"><?php printf( __( '%s on Twitter', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
+								<span class="screen-reader-text"><?php printf( __( '%s on X', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?></span>
 							</a>
 						<?php } ?>
 						<?php if ( ! empty( $network_instagram ) ) { ?>

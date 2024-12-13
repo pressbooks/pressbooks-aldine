@@ -151,7 +151,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_twitter', [
-			'label' => __( 'Twitter', 'pressbooks-aldine' ),
+			'label' => __( 'X', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_social',
 			'settings' => 'pb_network_twitter',
 		]
