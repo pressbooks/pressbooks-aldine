@@ -1,53 +1,54 @@
 export default {
 	init() {
 		// JavaScript to be fired on all pages
-		document.body.classList.replace('no-js', 'js');
+		document.body.classList.replace( 'no-js', 'js' );
 
-		// Make all <section> elements focusable
-		document.addEventListener('DOMContentLoaded', () => {
-			const sections = document.querySelectorAll('section');
-			sections.forEach(section => {
-				section.setAttribute('tabindex', '-1');
-				section.classList.add('focusable');
-			});
-
-			// Smooth scroll to anchor if there's a hash in the URL & anchor exists on the page
-			if (document.location.hash && document.location.hash !== '#') {
-				const anchorElement = document.querySelector(document.location.hash);
-				if (anchorElement) {
-					anchorElement.scrollIntoView({ behavior: 'smooth' });
-					anchorElement.focus();
-				} else {
-					console.warn(`Anchor element "${document.location.hash}" not found in the document.`);
+		jQuery( $ => {
+			$( document ).ready( function () {
+				// Sets a -1 tabindex to ALL sections for .focus()-ing
+				let sections = document.getElementsByTagName( 'section' );
+				for ( let i = 0, max = sections.length; i < max; i++ ) {
+					sections[i].setAttribute( 'tabindex', -1 );
+					sections[i].className += ' focusable';
 				}
-			}
 
-			// Toggle navigation menu
-			const navToggle = document.querySelector('.js-header-nav-toggle');
-			if (navToggle) {
-				navToggle.addEventListener('click', event => {
-					event.preventDefault();
-					const navMenu = document.querySelector('.header__nav');
-					if (navMenu) {
-						navMenu.classList.toggle('header__nav--active');
-					}
-				});
-			}
+				// Scroll to anchor if there's a hash in the URL & anchor exists on the page
+				if (document.location.hash && document.location.hash !== '#') {
+					const anchorUponArrival = document.location.hash;
+					setTimeout(() => {
+						const $anchorElement = $(anchorUponArrival);
+						if ($anchorElement.length) {
+							$anchorElement.scrollTo({ duration: 1500 });
+							$anchorElement.trigger('focus');
+						} else {
+							console.warn(`Anchor element "${anchorUponArrival}" not found in the document.`);
+						}
+					}, 100);
+				}
+			} );
+			$( '.js-header-nav-toggle' ).on( 'click', event => {
+				event.preventDefault();
+				$( '.header__nav' ).toggleClass( 'header__nav--active' );
+			} );
+		} );
+		// Props to Dave Rupert: https://daverupert.com/2017/11/happier-html5-forms/
+		const inputs = document.querySelectorAll( 'input, textarea' );
 
-			// Form validation helpers
-			const inputs = document.querySelectorAll('input, textarea');
-			inputs.forEach(input => {
-				input.addEventListener('invalid', () => {
+		inputs.forEach( input => {
+			input.addEventListener('invalid', () => {
 					input.classList.add('error');
 				});
-				input.addEventListener('focus', () => {
+			input.addEventListener( 'focus', function () {
+				input.classList.remove( 'error' );
+			} );
+			input.addEventListener('blur', () => {
+				if (!input.checkValidity()) {
+					input.classList.add('error');
+				} else {
 					input.classList.remove('error');
-				});
-				input.addEventListener('blur', () => {
-					input.checkValidity();
-				});
+				}
 			});
-		});
+		} );
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired
