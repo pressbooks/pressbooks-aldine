@@ -24,10 +24,15 @@ export default {
 
 			// Toggle navigation menu
 			const navToggle = document.querySelector('.js-header-nav-toggle');
-			navToggle?.addEventListener('click', event => {
-				event.preventDefault();
-				document.querySelector('.header__nav')?.classList.toggle('header__nav--active');
-			});
+			if (navToggle) {
+				navToggle.addEventListener('click', event => {
+					event.preventDefault();
+					const navMenu = document.querySelector('.header__nav');
+					if (navMenu) {
+						navMenu.classList.toggle('header__nav--active');
+					}
+				});
+			}
 
 			// Form validation helpers
 			const inputs = document.querySelectorAll('input, textarea');
