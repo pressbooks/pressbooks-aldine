@@ -131,6 +131,45 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		]
 	);
 	$wp_customize->add_setting(
+		'pb_network_linkedin', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_linkedin', [
+			'label' => __( 'LinkedIn', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_linkedin',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_youtube', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_youtube', [
+			'label' => __( 'YouTube', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_youtube',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_bluesky', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_bluesky', [
+			'label' => __( 'Bluesky', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_bluesky',
+		]
+	);
+	$wp_customize->add_setting(
 		'pb_network_facebook', [
 			'type' => 'option',
 			'sanitize_callback' => 'esc_url_raw',
