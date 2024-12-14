@@ -185,6 +185,7 @@ function output_custom_colors() {
 		echo \Pressbooks\Admin\Branding\get_customizer_colors();
 	} else {
 		$colors = [
+			'header_bg',
 			'primary',
 			'accent',
 			'primary_fg',

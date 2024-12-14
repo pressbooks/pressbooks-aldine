@@ -68,6 +68,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	}
 
 	foreach ( [
+        [
+			 'slug' => 'header_bg',
+			 'hex' => '#fff',
+			 'label' => __( 'Header Background', 'pressbooks-aldine' ),
+			 'description' => __( 'Header background color.', 'pressbooks-aldine' ),
+        ],
 		[
 			'slug' => 'primary',
 			'hex' => '#b01109',
@@ -387,10 +393,11 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
+			'pb_network_color_header_bg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
-			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
-			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
 			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
 			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],
