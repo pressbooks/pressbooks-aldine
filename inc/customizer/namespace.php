@@ -68,12 +68,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	}
 
 	foreach ( [
-        [
-			 'slug' => 'header_bg',
-			 'hex' => '#fff',
-			 'label' => __( 'Header Background', 'pressbooks-aldine' ),
-			 'description' => __( 'Header background color.', 'pressbooks-aldine' ),
-        ],
+		[
+			'slug' => 'header_bg',
+			'hex' => '#fff',
+			'label' => __( 'Header Background', 'pressbooks-aldine' ),
+			'description' => __( 'Header background color.', 'pressbooks-aldine' ),
+		],
 		[
 			'slug' => 'primary',
 			'hex' => '#b01109',

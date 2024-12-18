@@ -69,16 +69,16 @@ use function Aldine\Helpers\custom_homepage;
 		<div class="header__container">
 			<div class="header__inside">
 				<div class="header__brand">
-					<a title="<?php echo get_bloginfo('name', 'display'); ?>" href="<?php echo network_home_url(); ?>">
-						<?php if (has_custom_logo()) { ?>
+					<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+						<?php if ( has_custom_logo() ) { ?>
 							<?php
-							$custom_logo_id = get_theme_mod('custom_logo');
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
 							printf(
 								'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-								wp_get_attachment_image_src($custom_logo_id, 'logo')[0],
-								wp_get_attachment_image_srcset($custom_logo_id, 'large'),
+								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 								/* translators: %s name of network */
-								sprintf(__('Logo for %s', 'pressbooks-aldine'), get_bloginfo('name', 'display'))
+								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 							);
 							?>
 						<?php } else { ?>

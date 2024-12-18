@@ -55,7 +55,7 @@ if ( $pb_network_contact_form ) {
 					<?php dynamic_sidebar( 'network-footer-block-1' ); ?>
 				</div>
 			<?php } ?>
-			<?php if ( is_active_sidebar( 'network-footer-block-2' ) || !empty( $network_linkedin ) || !empty( $network_youtube ) || !empty( $network_bluesky ) || ! empty( $network_facebook ) || ! empty( $network_twitter ) || ! empty( $network_instagram ) ) { ?>
+			<?php if ( is_active_sidebar( 'network-footer-block-2' ) || ! empty( $network_linkedin ) || ! empty( $network_youtube ) || ! empty( $network_bluesky ) || ! empty( $network_facebook ) || ! empty( $network_twitter ) || ! empty( $network_instagram ) ) { ?>
 				<div class="footer__network__block footer__network__block--2">
 					<?php dynamic_sidebar( 'network-footer-block-2' ); ?>
 					<div class="social-media">
