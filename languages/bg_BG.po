@@ -1,13 +1,13 @@
-# Copyright (C) 2023 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Radost G <radosvetagiuleva@abv.bg>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.1\n"
+"Project-Id-Version: Aldine 1.19.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2023-08-15T13:43:00+00:00\n"
+"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Radost G <radosvetagiuleva@abv.bg>, 2024\n"
 "Language-Team: Bulgarian (Bulgaria) (https://app.transifex.com/pressbooks/teams/9194/bg_BG/)\n"
@@ -17,17 +17,20 @@ msgstr ""
 "Language: bg_BG\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.11.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Aldine"
 msgstr "Алдин"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid ""
 "Aldine is the default theme for the home page of Pressbooks networks. It is "
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
@@ -38,10 +41,12 @@ msgstr ""
 "(смятан от мнозина за първи издател в света)."
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr ""
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.org"
 msgstr ""
 
@@ -72,44 +77,59 @@ msgstr ""
 "Функцията за коментари е изключена или няма възможност за повече коментари."
 
 #. translators: %s network name
-#: footer.php:61 footer.php:66
+#: footer.php:64 footer.php:69
+msgid "%s on LinkedIn"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:74 footer.php:79
+msgid "%s on YouTube"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:84 footer.php:89
+msgid "%s on Bluesky"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:94 footer.php:99
 msgid "%s on Facebook"
 msgstr "%s във Фейсбук"
 
 #. translators: %s network name
-#: footer.php:71 footer.php:76
-msgid "%s on Twitter"
-msgstr "%sв Туитър"
+#: footer.php:104 footer.php:109
+msgid "%s on X"
+msgstr ""
 
 #. translators: %s network name
-#: footer.php:81 footer.php:86
+#: footer.php:114 footer.php:119
 msgid "%s on Instagram"
 msgstr "%sв Инстаграм "
 
 #. translators: %s Pressbooks
-#: footer.php:105
+#: footer.php:138
 msgid "Powered by %s"
 msgstr "Създадено от %s"
 
-#: footer.php:107
+#: footer.php:140
 msgid "Guides and Tutorials"
 msgstr "Ръководства и уроци"
 
-#: footer.php:108
+#: footer.php:141
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:110 inc/helpers/namespace.php:349
+#: footer.php:143 inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "Контакти"
 
-#: footer.php:115 footer.php:117
+#: footer.php:148 footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr "Виж ни в Ютюб"
 
-#: footer.php:119 footer.php:123
-msgid "Pressbooks on Twitter"
-msgstr "Виж ни в Туитър"
+#: footer.php:154 footer.php:158
+msgid "Pressbooks on LinkedIn"
+msgstr ""
 
 #: functions.php:19
 msgid "Dependencies Missing"
@@ -121,16 +141,16 @@ msgstr ""
 "Трябва да стартирате <code> инсталацията на софтуера за създаване  </code>  "
 "от директорията Aldine."
 
-#: header.php:47
+#: header.php:50
 msgid "Skip to content"
 msgstr "Преминете към съдържанието"
 
 #. translators: %s name of network
-#: header.php:77
+#: header.php:81
 msgid "Logo for %s"
 msgstr "Лого за %s"
 
-#: header.php:88
+#: header.php:92
 msgid "Toggle Menu"
 msgstr "Превключване на менюто"
 
@@ -150,46 +170,46 @@ msgstr "Блок 1 - долен колонтитул "
 msgid "Network Footer Block 2"
 msgstr "Блок 2 - долен колонтитул "
 
-#: inc/actions/namespace.php:237
+#: inc/actions/namespace.php:238
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "Тази страница показва вашия мрежов каталог, така че няма съдържание за "
 "редактиране."
 
-#: inc/actions/namespace.php:294
+#: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr "Раздел на страницата"
 
-#: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "Заглавие"
 
-#: inc/actions/namespace.php:296
+#: inc/actions/namespace.php:297
 msgid "Standard"
 msgstr "Стандарт"
 
-#: inc/actions/namespace.php:297
+#: inc/actions/namespace.php:298
 msgid "Accent"
 msgstr "Акцент"
 
-#: inc/actions/namespace.php:298
+#: inc/actions/namespace.php:299
 msgid "Bordered"
 msgstr "Рамкировка"
 
-#: inc/actions/namespace.php:299
+#: inc/actions/namespace.php:300
 msgid "Borderless"
 msgstr "Без рамки"
 
-#: inc/actions/namespace.php:302
+#: inc/actions/namespace.php:303
 msgid "Call to Action"
 msgstr "Призив за действие"
 
-#: inc/actions/namespace.php:303
+#: inc/actions/namespace.php:304
 msgid "Text"
 msgstr "Текст"
 
-#: inc/actions/namespace.php:304
+#: inc/actions/namespace.php:305
 msgid "Link"
 msgstr "Линк-Връзка"
 
@@ -340,126 +360,146 @@ msgid "In Catalog"
 msgstr "В Каталога"
 
 #: inc/customizer/namespace.php:74
+msgid "Header Background"
+msgstr ""
+
+#: inc/customizer/namespace.php:75
+msgid "Header background color."
+msgstr ""
+
+#: inc/customizer/namespace.php:80
 msgid "Primary Color"
 msgstr "Основен цвят"
 
-#: inc/customizer/namespace.php:75
+#: inc/customizer/namespace.php:81
 msgid "Primary color, used for links and other primary elements."
 msgstr "Основен цвят, използван за връзки и други основни елементи."
 
-#: inc/customizer/namespace.php:80
+#: inc/customizer/namespace.php:86
 msgid "Primary Color (Hover)"
 msgstr "Основен цвят (задръжте курсора)"
 
-#: inc/customizer/namespace.php:81
+#: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 "Вариант на основния цвят, използван за състояния на задържане на основния "
 "елемент."
 
-#: inc/customizer/namespace.php:86
+#: inc/customizer/namespace.php:92
 msgid "Accent Color"
 msgstr "Цвят на акцента"
 
-#: inc/customizer/namespace.php:87
+#: inc/customizer/namespace.php:93
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr "Цвят на акцент, използван за вторични елементи."
 
-#: inc/customizer/namespace.php:92
+#: inc/customizer/namespace.php:98
 msgid "Accent Color (Hover)"
 msgstr "Цвят на акцента (задръжте курсора на мишката)"
 
-#: inc/customizer/namespace.php:93
+#: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 "Вариант на цвета на акцента, използван за състояния на задържане на вторичен"
 " елемент."
 
-#: inc/customizer/namespace.php:98
+#: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
 msgstr "Основен цвят на преден план"
 
-#: inc/customizer/namespace.php:99
+#: inc/customizer/namespace.php:105
 msgid "Used for text on a primary background."
 msgstr "Използва се за текст на основен фон."
 
-#: inc/customizer/namespace.php:104
+#: inc/customizer/namespace.php:110
 msgid "Accent Foreground Color"
 msgstr "Цвят на преден план с акцент"
 
-#: inc/customizer/namespace.php:105
+#: inc/customizer/namespace.php:111
 msgid "Used for text on an accent color background."
 msgstr "Използва се за текст на цветен фон с акцент."
 
-#: inc/customizer/namespace.php:129
+#: inc/customizer/namespace.php:135
 msgid "Social Media"
 msgstr "Социални Медии"
 
-#: inc/customizer/namespace.php:141
+#: inc/customizer/namespace.php:147
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/customizer/namespace.php:160
+msgid "YouTube"
+msgstr ""
+
+#: inc/customizer/namespace.php:173
+msgid "Bluesky"
+msgstr ""
+
+#: inc/customizer/namespace.php:186
 msgid "Facebook"
 msgstr "Фейсбук"
 
-#: inc/customizer/namespace.php:154
-msgid "Twitter"
-msgstr "Туитър"
+#: inc/customizer/namespace.php:199
+msgid "X"
+msgstr ""
 
-#: inc/customizer/namespace.php:167
+#: inc/customizer/namespace.php:212
 msgid "Instagram"
 msgstr "Инстаграм"
 
-#: inc/customizer/namespace.php:176
+#: inc/customizer/namespace.php:221
 msgid "Front Page Catalog"
 msgstr "Каталог Първа Страница"
 
-#: inc/customizer/namespace.php:188
+#: inc/customizer/namespace.php:233
 msgid "Show Front Page Catalog"
 msgstr "Покажи Каталога на Първа Страница"
 
-#: inc/customizer/namespace.php:199 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "Нашите Последни Заглавия"
 
-#: inc/customizer/namespace.php:204
+#: inc/customizer/namespace.php:249
 msgid "Front Page Catalog Title"
 msgstr "Заглавие на Каталога на Първа Страница"
 
-#: inc/customizer/namespace.php:212
+#: inc/customizer/namespace.php:257
 msgid "Select a book"
 msgstr ""
 
-#: inc/customizer/namespace.php:222
+#: inc/customizer/namespace.php:267
 msgid "Featured book"
 msgstr ""
 
-#: inc/customizer/namespace.php:233
+#: inc/customizer/namespace.php:278
 msgid "Front Page Settings"
 msgstr ""
 
-#: inc/customizer/namespace.php:247
+#: inc/customizer/namespace.php:292
 msgid "Network Home Page"
 msgstr ""
 
-#: inc/customizer/namespace.php:256
+#: inc/customizer/namespace.php:301
 msgid "Contact Form"
 msgstr "Форма за Контакт"
 
-#: inc/customizer/namespace.php:267
+#: inc/customizer/namespace.php:312
 msgid "Show Contact Form"
 msgstr "Покажи Формата за Контакт"
 
-#: inc/customizer/namespace.php:277 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322 partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "Контакти"
 
-#: inc/customizer/namespace.php:282
+#: inc/customizer/namespace.php:327
 msgid "Contact Form Title"
 msgstr "Заглавие на формуляра за контакт"
 
-#: inc/customizer/namespace.php:296
+#: inc/customizer/namespace.php:341
 msgid "Contact Email"
 msgstr "Имейл за контакт"
 
-#: inc/customizer/namespace.php:308
+#: inc/customizer/namespace.php:353
 msgid "Contact Link"
 msgstr "Връзка за контакт"
 
