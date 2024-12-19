@@ -1,9 +1,7 @@
 export default {
 	init() {
 		// JavaScript to be fired on all pages
-		// JavaScript to be fired on all pages
-		document.body.classList.remove( 'no-js' );
-		document.body.classList.add( 'js' );
+		document.body.classList.replace( 'no-js', 'js' );
 
 		jQuery( $ => {
 			$( document ).ready( function () {
@@ -14,14 +12,18 @@ export default {
 					sections[i].className += ' focusable';
 				}
 
-				// If there is a '#' in the URL (someone linking directly to a page with an anchor), go directly to that area and focus is
-				// Thanks to WebAIM.org for this idea
-				if ( document.location.hash && document.location.hash !== '#' ) {
-					let anchorUponArrival = document.location.hash;
-					setTimeout( function () {
-						$( anchorUponArrival ).scrollTo( { duration: 1500 } );
-						$( anchorUponArrival ).trigger( 'focus' );
-					}, 100 );
+				// Scroll to anchor if there's a hash in the URL & anchor exists on the page
+				if (document.location.hash && document.location.hash !== '#') {
+					const anchorUponArrival = document.location.hash;
+					setTimeout(() => {
+						const $anchorElement = $(anchorUponArrival);
+						if ($anchorElement.length) {
+							$anchorElement.scrollTo({ duration: 1500 });
+							$anchorElement.trigger('focus');
+						} else {
+							console.warn(`Anchor element "${anchorUponArrival}" not found in the document.`);
+						}
+					}, 100);
 				}
 			} );
 			$( '.js-header-nav-toggle' ).on( 'click', event => {
@@ -29,23 +31,23 @@ export default {
 				$( '.header__nav' ).toggleClass( 'header__nav--active' );
 			} );
 		} );
-		// Props to Dave Rupert: https://daverupert.com/2017/11/happier-html5-forms/
-		const inputs = document.querySelectorAll( 'input, textarea' );
 
+		// Check form field validity when focus changes
+		const inputs = document.querySelectorAll( 'input, textarea' );
 		inputs.forEach( input => {
-			input.addEventListener(
-				'invalid',
-				event => {
-					input.classList.add( 'error' );
-				},
-				false
-			);
+			input.addEventListener('invalid', () => {
+					input.classList.add('error');
+				});
 			input.addEventListener( 'focus', function () {
 				input.classList.remove( 'error' );
 			} );
-			input.addEventListener( 'blur', function () {
-				input.checkValidity();
-			} );
+			input.addEventListener('blur', () => {
+				if (!input.checkValidity()) {
+					input.classList.add('error');
+				} else {
+					input.classList.remove('error');
+				}
+			});
 		} );
 	},
 	finalize() {

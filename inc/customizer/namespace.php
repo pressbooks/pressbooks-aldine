@@ -69,6 +69,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 
 	foreach ( [
 		[
+			'slug' => 'header_bg',
+			'hex' => '#fff',
+			'label' => __( 'Header Background', 'pressbooks-aldine' ),
+			'description' => __( 'Header background color.', 'pressbooks-aldine' ),
+		],
+		[
 			'slug' => 'primary',
 			'hex' => '#b01109',
 			'label' => __( 'Primary Color', 'pressbooks-aldine' ),
@@ -131,6 +137,45 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		]
 	);
 	$wp_customize->add_setting(
+		'pb_network_linkedin', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_linkedin', [
+			'label' => __( 'LinkedIn', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_linkedin',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_youtube', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_youtube', [
+			'label' => __( 'YouTube', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_youtube',
+		]
+	);
+	$wp_customize->add_setting(
+		'pb_network_bluesky', [
+			'type' => 'option',
+			'sanitize_callback' => 'esc_url_raw',
+		]
+	);
+	$wp_customize->add_control(
+		'pb_network_bluesky', [
+			'label' => __( 'Bluesky', 'pressbooks-aldine' ),
+			'section'  => 'pb_network_social',
+			'settings' => 'pb_network_bluesky',
+		]
+	);
+	$wp_customize->add_setting(
 		'pb_network_facebook', [
 			'type' => 'option',
 			'sanitize_callback' => 'esc_url_raw',
@@ -151,7 +196,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'pb_network_twitter', [
-			'label' => __( 'Twitter', 'pressbooks-aldine' ),
+			'label' => __( 'X', 'pressbooks-aldine' ),
 			'section'  => 'pb_network_social',
 			'settings' => 'pb_network_twitter',
 		]
@@ -348,10 +393,11 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
+			'pb_network_color_header_bg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
-			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
-			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
 			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
 			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],
