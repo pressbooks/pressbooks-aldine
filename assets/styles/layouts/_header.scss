@@ -25,14 +25,14 @@
 }
 
 .home #content{
-  margin-top: -15rem;
+  margin-top: -13rem;
   background: transparent;
 
   &.custom-homepage {
     margin-top: 0;
   }
   @media #{$breakpoint-large} {
-    margin-top: -55rem;
+    margin-top: -53rem;
 
     &.custom-homepage {
       margin-top: 0;
