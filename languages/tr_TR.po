@@ -494,7 +494,7 @@ msgstr "Ön Sayfa Ayarları"
 
 #: inc/customizer/namespace.php:292
 msgid "Network Home Page"
-msgstr ""
+msgstr "Ağ Ana Sayfası"
 
 #: inc/customizer/namespace.php:301
 msgid "Contact Form"
