@@ -490,7 +490,7 @@ msgstr ""
 
 #: inc/customizer/namespace.php:278
 msgid "Front Page Settings"
-msgstr ""
+msgstr "Ön Sayfa Ayarları"
 
 #: inc/customizer/namespace.php:292
 msgid "Network Home Page"
