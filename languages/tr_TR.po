@@ -89,7 +89,7 @@ msgstr "%s YouTube'da"
 #. translators: %s network name
 #: footer.php:84 footer.php:89
 msgid "%s on Bluesky"
-msgstr ""
+msgstr "%s Bluesky'de"
 
 #. translators: %s network name
 #: footer.php:94 footer.php:99
@@ -99,7 +99,7 @@ msgstr "%s Facebook'ta"
 #. translators: %s network name
 #: footer.php:104 footer.php:109
 msgid "%s on X"
-msgstr ""
+msgstr "%s X'de"
 
 #. translators: %s network name
 #: footer.php:114 footer.php:119
