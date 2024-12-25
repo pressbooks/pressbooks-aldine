@@ -482,7 +482,7 @@ msgstr "Ön Sayfa Katalog Başlığı"
 
 #: inc/customizer/namespace.php:257
 msgid "Select a book"
-msgstr ""
+msgstr "Kitap seç"
 
 #: inc/customizer/namespace.php:267
 msgid "Featured book"
