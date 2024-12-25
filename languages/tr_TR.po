@@ -450,7 +450,7 @@ msgstr "YouTube"
 
 #: inc/customizer/namespace.php:173
 msgid "Bluesky"
-msgstr ""
+msgstr "Bluesky"
 
 #: inc/customizer/namespace.php:186
 msgid "Facebook"
@@ -486,7 +486,7 @@ msgstr "Kitap seç"
 
 #: inc/customizer/namespace.php:267
 msgid "Featured book"
-msgstr ""
+msgstr "Öne çıkan kitap"
 
 #: inc/customizer/namespace.php:278
 msgid "Front Page Settings"
