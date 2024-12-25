@@ -379,11 +379,11 @@ msgstr "Katalogda"
 
 #: inc/customizer/namespace.php:74
 msgid "Header Background"
-msgstr ""
+msgstr "Başlık Arka Plan"
 
 #: inc/customizer/namespace.php:75
 msgid "Header background color."
-msgstr ""
+msgstr "Başlık arka plan rengi."
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color"
