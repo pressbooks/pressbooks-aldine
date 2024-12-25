@@ -442,7 +442,7 @@ msgstr "Sosyal medya"
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/customizer/namespace.php:160
 msgid "YouTube"
