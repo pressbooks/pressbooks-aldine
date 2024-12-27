@@ -81,7 +81,7 @@ msgstr "%s の LinkedIn"
 #. translators: %s network name
 #: footer.php:74 footer.php:79
 msgid "%s on YouTube"
-msgstr ""
+msgstr "%s の YouTube"
 
 #. translators: %s network name
 #: footer.php:84 footer.php:89
