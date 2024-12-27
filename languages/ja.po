@@ -96,7 +96,7 @@ msgstr "%s の Facebook"
 #. translators: %s network name
 #: footer.php:104 footer.php:109
 msgid "%s on X"
-msgstr ""
+msgstr "%s の X"
 
 #. translators: %s network name
 #: footer.php:114 footer.php:119
