@@ -100,7 +100,7 @@ msgstr "%s en Facebook"
 #. translators: %s network name
 #: footer.php:104 footer.php:109
 msgid "%s on X"
-msgstr ""
+msgstr "%s en X"
 
 #. translators: %s network name
 #: footer.php:114 footer.php:119
@@ -130,7 +130,7 @@ msgstr "Pressbooks en YouTube"
 
 #: footer.php:154 footer.php:158
 msgid "Pressbooks on LinkedIn"
-msgstr ""
+msgstr "Pressbooks en LinkedIn"
 
 #: functions.php:19
 msgid "Dependencies Missing"
