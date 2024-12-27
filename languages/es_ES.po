@@ -449,11 +449,11 @@ msgstr "Medios sociales"
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/customizer/namespace.php:160
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #: inc/customizer/namespace.php:173
 msgid "Bluesky"
