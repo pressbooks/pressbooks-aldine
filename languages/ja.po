@@ -362,7 +362,7 @@ msgstr "カタログである"
 
 #: inc/customizer/namespace.php:74
 msgid "Header Background"
-msgstr ""
+msgstr "ヘッダー背景"
 
 #: inc/customizer/namespace.php:75
 msgid "Header background color."
@@ -422,7 +422,7 @@ msgstr "ソーシャルメディア"
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/customizer/namespace.php:160
 msgid "YouTube"
