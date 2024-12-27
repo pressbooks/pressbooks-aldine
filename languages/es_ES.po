@@ -90,7 +90,7 @@ msgstr "%s en YouTube"
 #. translators: %s network name
 #: footer.php:84 footer.php:89
 msgid "%s on Bluesky"
-msgstr ""
+msgstr "%s en Bluesky"
 
 #. translators: %s network name
 #: footer.php:94 footer.php:99
