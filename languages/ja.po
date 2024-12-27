@@ -76,7 +76,7 @@ msgstr "コメントは受け付けていません。"
 #. translators: %s network name
 #: footer.php:64 footer.php:69
 msgid "%s on LinkedIn"
-msgstr ""
+msgstr "%s の LinkedIn"
 
 #. translators: %s network name
 #: footer.php:74 footer.php:79
