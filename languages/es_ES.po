@@ -383,11 +383,11 @@ msgstr "En el catálogo"
 
 #: inc/customizer/namespace.php:74
 msgid "Header Background"
-msgstr ""
+msgstr "Fondo de la cabecera"
 
 #: inc/customizer/namespace.php:75
 msgid "Header background color."
-msgstr ""
+msgstr "Color de fondo de la cabecera."
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color"
