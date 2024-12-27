@@ -426,11 +426,11 @@ msgstr "LinkedIn"
 
 #: inc/customizer/namespace.php:160
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #: inc/customizer/namespace.php:173
 msgid "Bluesky"
-msgstr ""
+msgstr "Bluesky"
 
 #: inc/customizer/namespace.php:186
 msgid "Facebook"
@@ -438,7 +438,7 @@ msgstr "Facebook"
 
 #: inc/customizer/namespace.php:199
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: inc/customizer/namespace.php:212
 msgid "Instagram"
