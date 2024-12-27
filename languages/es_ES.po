@@ -80,12 +80,12 @@ msgstr "Los comentarios están cerrados."
 #. translators: %s network name
 #: footer.php:64 footer.php:69
 msgid "%s on LinkedIn"
-msgstr ""
+msgstr "%s en LinkedIn"
 
 #. translators: %s network name
 #: footer.php:74 footer.php:79
 msgid "%s on YouTube"
-msgstr ""
+msgstr "%s en YouTube"
 
 #. translators: %s network name
 #: footer.php:84 footer.php:89
