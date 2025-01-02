@@ -1,13 +1,13 @@
-# Copyright (C) 2023 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Omshivaprakash H L <omshivaprakash@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.1\n"
+"Project-Id-Version: Aldine 1.19.2\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2023-08-15T13:43:00+00:00\n"
+"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2022\n"
 "Language-Team: Kannada (https://app.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -17,17 +17,20 @@ msgstr ""
 "Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.11.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Aldine"
 msgstr "ಆಲ್ಡಿನ್"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
 msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
+#: style.css
 msgid ""
 "Aldine is the default theme for the home page of Pressbooks networks. It is "
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
@@ -38,10 +41,12 @@ msgstr ""
 "ಇದನ್ನು ವಿಶ್ವದ ಮೊದಲ ಪ್ರಕಾಶಕರು ಎಂದು ಅನೇಕರು ಪರಿಗಣಿಸುತ್ತಾರೆ."
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ (ಬುಕ್ ಓವನ್ ಇಂಕ್.)"
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.org"
 msgstr "https://pressbooks.org"
 
@@ -71,44 +76,59 @@ msgid "Comments are closed."
 msgstr "ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಮುಚ್ಚಲಾಗಿದೆ."
 
 #. translators: %s network name
-#: footer.php:61 footer.php:66
+#: footer.php:64 footer.php:69
+msgid "%s on LinkedIn"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:74 footer.php:79
+msgid "%s on YouTube"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:84 footer.php:89
+msgid "%s on Bluesky"
+msgstr ""
+
+#. translators: %s network name
+#: footer.php:94 footer.php:99
 msgid "%s on Facebook"
 msgstr "ಫೇಸ್ ಬುಕ್ ನಲ್ಲಿ %s"
 
 #. translators: %s network name
-#: footer.php:71 footer.php:76
-msgid "%s on Twitter"
-msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ %s"
+#: footer.php:104 footer.php:109
+msgid "%s on X"
+msgstr ""
 
 #. translators: %s network name
-#: footer.php:81 footer.php:86
+#: footer.php:114 footer.php:119
 msgid "%s on Instagram"
 msgstr "ಇನ್‍ಸ್ಟಾಗ್ರಾಮ್‍ನಲ್ಲಿ %s"
 
 #. translators: %s Pressbooks
-#: footer.php:105
+#: footer.php:138
 msgid "Powered by %s"
 msgstr "%s ನಿಂದ ಸಾಮರ್ಥ್ಯ ಪಡೆದಿದೆ"
 
-#: footer.php:107
+#: footer.php:140
 msgid "Guides and Tutorials"
 msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‍ಗಳು"
 
-#: footer.php:108
+#: footer.php:141
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:110 inc/helpers/namespace.php:349
+#: footer.php:143 inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "ಸಂಪರ್ಕಿಸಿ"
 
-#: footer.php:115 footer.php:117
+#: footer.php:148 footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
-#: footer.php:119 footer.php:123
-msgid "Pressbooks on Twitter"
-msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
+#: footer.php:154 footer.php:158
+msgid "Pressbooks on LinkedIn"
+msgstr ""
 
 #: functions.php:19
 msgid "Dependencies Missing"
@@ -118,16 +138,16 @@ msgstr "ಅವಲಂಬನೆಗಳು ಕಾಣೆಯಾಗಿವೆ"
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr "ನೀವು <code>composer install</code> ಆಲ್ಡಿನ್ ಡೈರೆಕ್ಟರಿಯಿಂದ ಓಡಬೇಕು."
 
-#: header.php:47
+#: header.php:50
 msgid "Skip to content"
 msgstr "ವಿಷಯಕ್ಕೆ ಬಿಟ್ಟುಬಿಡಿ"
 
 #. translators: %s name of network
-#: header.php:77
+#: header.php:81
 msgid "Logo for %s"
 msgstr "%s ಲೋಗೋ"
 
-#: header.php:88
+#: header.php:92
 msgid "Toggle Menu"
 msgstr "ಟಾಗಲ್ ಮೆನು"
 
@@ -147,46 +167,46 @@ msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 1"
 msgid "Network Footer Block 2"
 msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 2"
 
-#: inc/actions/namespace.php:237
+#: inc/actions/namespace.php:238
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 "ಈ ಪುಟವು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಂಪಾದಿಸಲು "
 "ಯಾವುದೇ ವಿಷಯವಿಲ್ಲ."
 
-#: inc/actions/namespace.php:294
+#: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr "ಪುಟ ವಿಭಾಗ"
 
-#: inc/actions/namespace.php:295 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "ಶೀರ್ಷಿಕೆ"
 
-#: inc/actions/namespace.php:296
+#: inc/actions/namespace.php:297
 msgid "Standard"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: inc/actions/namespace.php:297
+#: inc/actions/namespace.php:298
 msgid "Accent"
 msgstr "ಆಕ್ಸೆಂಟ್"
 
-#: inc/actions/namespace.php:298
+#: inc/actions/namespace.php:299
 msgid "Bordered"
 msgstr "ಬಾರ್ಡರ್ಡ್"
 
-#: inc/actions/namespace.php:299
+#: inc/actions/namespace.php:300
 msgid "Borderless"
 msgstr "ಬಾರ್ಡರ್ ಲೆಸ್"
 
-#: inc/actions/namespace.php:302
+#: inc/actions/namespace.php:303
 msgid "Call to Action"
 msgstr "ಕ್ರಿಯೆಗೆ ಕರೆ ಮಾಡಿ"
 
-#: inc/actions/namespace.php:303
+#: inc/actions/namespace.php:304
 msgid "Text"
 msgstr "ಪಠ್ಯ"
 
-#: inc/actions/namespace.php:304
+#: inc/actions/namespace.php:305
 msgid "Link"
 msgstr "ಕೊಂಡಿ"
 
@@ -336,122 +356,142 @@ msgid "In Catalog"
 msgstr "ಕ್ಯಾಟಲಾಗ್‍ನಲ್ಲಿ"
 
 #: inc/customizer/namespace.php:74
+msgid "Header Background"
+msgstr ""
+
+#: inc/customizer/namespace.php:75
+msgid "Header background color."
+msgstr ""
+
+#: inc/customizer/namespace.php:80
 msgid "Primary Color"
 msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ"
 
-#: inc/customizer/namespace.php:75
+#: inc/customizer/namespace.php:81
 msgid "Primary color, used for links and other primary elements."
 msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ, ಲಿಂಕ್ ಗಳು ಮತ್ತು ಇತರ ಪ್ರಾಥಮಿಕ ಅಂಶಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: inc/customizer/namespace.php:80
+#: inc/customizer/namespace.php:86
 msgid "Primary Color (Hover)"
 msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ (ಹೋವರ್)"
 
-#: inc/customizer/namespace.php:81
+#: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣದ ರೂಪಾಂತರ, ಪ್ರಾಥಮಿಕ ಅಂಶ ಹೋವರ್ ಸ್ಥಿತಿಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: inc/customizer/namespace.php:86
+#: inc/customizer/namespace.php:92
 msgid "Accent Color"
 msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ"
 
-#: inc/customizer/namespace.php:87
+#: inc/customizer/namespace.php:93
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಪ್ರವರ್ಧಮಾನಕ್ಕೆ ಮತ್ತು ದ್ವಿತೀಯ ಅಂಶಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: inc/customizer/namespace.php:92
+#: inc/customizer/namespace.php:98
 msgid "Accent Color (Hover)"
 msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ (ಹೋವರ್)"
 
-#: inc/customizer/namespace.php:93
+#: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr "ದ್ವಿತೀಯ ಧಾತು ಹೋವರ್ ಸ್ಥಿತಿಗಳಿಗೆ ಬಳಸಲಾಗುವ ಆಕ್ಸೆಂಟ್ ಬಣ್ಣದ ರೂಪಾಂತರ."
 
-#: inc/customizer/namespace.php:98
+#: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
 msgstr "ಪ್ರಾಥಮಿಕ ಮುನ್ನೆಲೆ ಬಣ್ಣ"
 
-#: inc/customizer/namespace.php:99
+#: inc/customizer/namespace.php:105
 msgid "Used for text on a primary background."
 msgstr "ಪ್ರಾಥಮಿಕ ಹಿನ್ನೆಲೆಯ ಪಠ್ಯಕ್ಕೆ ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: inc/customizer/namespace.php:104
+#: inc/customizer/namespace.php:110
 msgid "Accent Foreground Color"
 msgstr "ಆಕ್ಸೆಂಟ್ ಮುನ್ನೆಲೆ ಬಣ್ಣ"
 
-#: inc/customizer/namespace.php:105
+#: inc/customizer/namespace.php:111
 msgid "Used for text on an accent color background."
 msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣದ ಹಿನ್ನೆಲೆಯ ಮೇಲೆ ಪಠ್ಯಕ್ಕೆ ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: inc/customizer/namespace.php:129
+#: inc/customizer/namespace.php:135
 msgid "Social Media"
 msgstr "ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ"
 
-#: inc/customizer/namespace.php:141
+#: inc/customizer/namespace.php:147
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/customizer/namespace.php:160
+msgid "YouTube"
+msgstr ""
+
+#: inc/customizer/namespace.php:173
+msgid "Bluesky"
+msgstr ""
+
+#: inc/customizer/namespace.php:186
 msgid "Facebook"
 msgstr "ಫೇಸ್‍ಬುಕ್"
 
-#: inc/customizer/namespace.php:154
-msgid "Twitter"
-msgstr "ಟ್ವಿಟರ್"
+#: inc/customizer/namespace.php:199
+msgid "X"
+msgstr ""
 
-#: inc/customizer/namespace.php:167
+#: inc/customizer/namespace.php:212
 msgid "Instagram"
 msgstr "ಇನ್ಸ್ಟಾಗ್ರಾಮ್"
 
-#: inc/customizer/namespace.php:176
+#: inc/customizer/namespace.php:221
 msgid "Front Page Catalog"
 msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್"
 
-#: inc/customizer/namespace.php:188
+#: inc/customizer/namespace.php:233
 msgid "Show Front Page Catalog"
 msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್ ತೋರಿಸು"
 
-#: inc/customizer/namespace.php:199 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "ನಮ್ಮ ಇತ್ತೀಚಿನ ಶೀರ್ಷಿಕೆಗಳು"
 
-#: inc/customizer/namespace.php:204
+#: inc/customizer/namespace.php:249
 msgid "Front Page Catalog Title"
 msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್ ಶೀರ್ಷಿಕೆ"
 
-#: inc/customizer/namespace.php:212
+#: inc/customizer/namespace.php:257
 msgid "Select a book"
 msgstr ""
 
-#: inc/customizer/namespace.php:222
+#: inc/customizer/namespace.php:267
 msgid "Featured book"
 msgstr ""
 
-#: inc/customizer/namespace.php:233
+#: inc/customizer/namespace.php:278
 msgid "Front Page Settings"
 msgstr ""
 
-#: inc/customizer/namespace.php:247
+#: inc/customizer/namespace.php:292
 msgid "Network Home Page"
 msgstr ""
 
-#: inc/customizer/namespace.php:256
+#: inc/customizer/namespace.php:301
 msgid "Contact Form"
 msgstr "ಸಂಪರ್ಕ ನಮೂನೆ"
 
-#: inc/customizer/namespace.php:267
+#: inc/customizer/namespace.php:312
 msgid "Show Contact Form"
 msgstr "ಸಂಪರ್ಕ ನಮೂನೆ ತೋರಿಸು"
 
-#: inc/customizer/namespace.php:277 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322 partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ"
 
-#: inc/customizer/namespace.php:282
+#: inc/customizer/namespace.php:327
 msgid "Contact Form Title"
 msgstr "ಸಂಪರ್ಕ ಪ್ರಪತ್ರ ಶೀರ್ಷಿಕೆ"
 
-#: inc/customizer/namespace.php:296
+#: inc/customizer/namespace.php:341
 msgid "Contact Email"
 msgstr "ಸಂಪರ್ಕ ಇಮೇಲ್"
 
-#: inc/customizer/namespace.php:308
+#: inc/customizer/namespace.php:353
 msgid "Contact Link"
 msgstr "ಸಂಪರ್ಕ ಲಿಂಕ್"
 
