@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.19.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.2...1.19.3) (2025-01-02)
+
+
+### Bug Fixes
+
+* add additional selector to contact class ([#457](https://github.com/pressbooks/pressbooks-aldine/issues/457)) ([fd386f9](https://github.com/pressbooks/pressbooks-aldine/commit/fd386f9a29835082f96fad1e14e8edb1d2804d9d))
+* increase recommended logo size, improve javascript, replace Twitter logo ([#474](https://github.com/pressbooks/pressbooks-aldine/issues/474)) ([85cffed](https://github.com/pressbooks/pressbooks-aldine/commit/85cffed33df821a8f0bfa58eb874e551e99775cb))
+
+
+### Chores
+
+* **deps:** bump spatie/color from 1.6.0 to 1.6.2 in the composer-dependencies group across 1 directory ([#471](https://github.com/pressbooks/pressbooks-aldine/issues/471)) ([b59ef82](https://github.com/pressbooks/pressbooks-aldine/commit/b59ef826066148a009f27a867d940080d9a5f7fc))
+* **deps:** bump spatie/color from 1.6.2 to 1.7.0 in the composer-dependencies group across 1 directory ([#480](https://github.com/pressbooks/pressbooks-aldine/issues/480)) ([9e2acf1](https://github.com/pressbooks/pressbooks-aldine/commit/9e2acf18db19dc0cda9fdbef7aa2a8b2924ea3ad))
+* **deps:** bump the npm_and_yarn group with 3 updates ([#469](https://github.com/pressbooks/pressbooks-aldine/issues/469)) ([fc9663f](https://github.com/pressbooks/pressbooks-aldine/commit/fc9663ff9e57230df32ea6cf74326978f68c4443))
+* **i10n:** Updates for project Aldine ([#478](https://github.com/pressbooks/pressbooks-aldine/issues/478)) ([c02986b](https://github.com/pressbooks/pressbooks-aldine/commit/c02986b6c809d8138fef23950ac2637871e0f562))
+* **l10n:** update pot file ([#476](https://github.com/pressbooks/pressbooks-aldine/issues/476)) ([a28926d](https://github.com/pressbooks/pressbooks-aldine/commit/a28926df305f7ae6afd5e6578a04a3990cd11c63))
+
 ## [1.19.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.1...1.19.2) (2024-10-08)
 
 
