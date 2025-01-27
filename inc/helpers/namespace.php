@@ -503,7 +503,7 @@ function handle_contact_form_submission() {
 					stripslashes( $institution ),
 					wp_strip_all_tags( $message )
 				),
-				"From: ${email}\r\nReply-To: ${email}\r\n"
+				"From: {$email}\r\nReply-To: {$email}\r\n"
 			);
 			if ( $sent ) {
 				$output['message'] = __( 'Your message was sent!', 'pressbooks-aldine' );
