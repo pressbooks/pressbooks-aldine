@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.19.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.3...1.19.4) (2025-02-11)
+
+
+### Bug Fixes
+
+* deprecation warning message ([#482](https://github.com/pressbooks/pressbooks-aldine/issues/482)) ([95a556b](https://github.com/pressbooks/pressbooks-aldine/commit/95a556b19b75ccec429a5075560429318d63769d))
+
+
+### Chores
+
+* **deps-dev:** bump yoast/phpunit-polyfills from 1.1.2 to 1.1.3 in the composer-dev-dependencies group ([#481](https://github.com/pressbooks/pressbooks-aldine/issues/481)) ([a99ed7c](https://github.com/pressbooks/pressbooks-aldine/commit/a99ed7c11b52312cdff0a3fa12ed30d888a4391e))
+* **l10n:** update pot file ([#484](https://github.com/pressbooks/pressbooks-aldine/issues/484)) ([5213d22](https://github.com/pressbooks/pressbooks-aldine/commit/5213d227f1764548e320d9da8cb7878bec637a32))
+* update workflows ([#486](https://github.com/pressbooks/pressbooks-aldine/issues/486)) ([8b863b0](https://github.com/pressbooks/pressbooks-aldine/commit/8b863b07886c1cc054e38fc93f736392ff5f149e))
+
 ## [1.19.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.2...1.19.3) (2025-01-02)
 
 
