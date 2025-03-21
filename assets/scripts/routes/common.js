@@ -27,7 +27,8 @@ export default {
 				}
 			} );
 			$( '.js-header-nav-toggle' ).on( 'click', event => {
-				event.preventDefault();
+				const expanded = $( '.js-header-nav-toggle' ).attr('aria-expanded') === 'true' || false;
+				$( '.js-header-nav-toggle' ).attr('aria-expanded', !expanded);
 				$( '.header__nav' ).toggleClass( 'header__nav--active' );
 			} );
 		} );
