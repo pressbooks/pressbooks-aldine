@@ -4,6 +4,15 @@
   background-size: cover;
 }
 
+button.header__nav-icon {
+  appearance: none;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: transparent;
+  padding: 0;
+}
+
 .home .header {
   background-position: bottom;
   background-repeat: no-repeat;

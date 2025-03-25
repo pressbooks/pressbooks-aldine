@@ -89,7 +89,7 @@ use function Aldine\Helpers\custom_homepage;
 					</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></a>
+				<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e( 'Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></button>
 				<?php
 				wp_nav_menu(
 					[
