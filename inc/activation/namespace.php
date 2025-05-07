@@ -73,9 +73,9 @@ function create_default_content() {
 							sprintf( '<a href="https://pressbooks.com/webinars/">%s</a>', __( 'monthly webinars', 'pressbooks-aldine' ) )
 						),
 						sprintf(
-						/* translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum */
+						/* translators: %1$s: link to Pressbooks User Guide page; %2$s: link to Pressbooks community forum */
 							__( 'The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users.', 'pressbooks-aldine' ),
-							sprintf( '<a href="https://pressbooks.com/support/">%s</a>', __( 'Pressbooks support page', 'pressbooks-aldine' ) ),
+							sprintf( '<a href="https://guide.pressbooks.com">%s</a>', __( 'Pressbooks User Guide', 'pressbooks-aldine' ) ),
 							sprintf( '<a href="https://pressbooks.community/">%s</a>', __( 'community forum', 'pressbooks-aldine' ) )
 						),
 						sprintf(
