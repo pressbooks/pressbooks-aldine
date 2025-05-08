@@ -62,11 +62,11 @@ if ( $catalog_page ) {
 		</div>
 		<p class="catalog-link">
 			<a class="call-to-action" href="<?php echo $catalog_permalink ?? ''; ?>">
-													<?php
-													_e('View Complete Catalog',
-													'pressbooks-aldine');
-													?>
-						</a>
+				<?php
+				_e('View Complete Catalog',
+				'pressbooks-aldine');
+				?>
+			</a>
 		</p>
 	</div>
 <?php endif; ?>
