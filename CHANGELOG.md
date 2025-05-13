@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.20.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.4...1.20.0) (2025-05-08)
+
+
+### Features
+
+* add link to latest book in the home page ([#494](https://github.com/pressbooks/pressbooks-aldine/issues/494)) ([ed6ab78](https://github.com/pressbooks/pressbooks-aldine/commit/ed6ab78fbacb3650e2ddbb9bf2bfc039aa9a111b))
+
+
+### Bug Fixes
+
+* mobile nav toggle communicates state ([#490](https://github.com/pressbooks/pressbooks-aldine/issues/490)) ([6f5b171](https://github.com/pressbooks/pressbooks-aldine/commit/6f5b171dc5714eab06f852449a72351b40015844))
+* replace guides and tutorials link with user guide ([#493](https://github.com/pressbooks/pressbooks-aldine/issues/493)) ([441584e](https://github.com/pressbooks/pressbooks-aldine/commit/441584e390fabacc5044de23c6097dcaad6b4d7e))
+
+
+### Chores
+
+* bump aetna ([#492](https://github.com/pressbooks/pressbooks-aldine/issues/492)) ([1253c78](https://github.com/pressbooks/pressbooks-aldine/commit/1253c78b3d605fe53edcd06367fc5eabc8a6d3e6))
+* **deps-dev:** bump yoast/phpunit-polyfills ([b8a6f20](https://github.com/pressbooks/pressbooks-aldine/commit/b8a6f205cce2556629b7514b62168eea790fa62f))
+* **deps-dev:** bump yoast/phpunit-polyfills from 1.1.3 to 1.1.4 in the composer-dev-dependencies group ([#488](https://github.com/pressbooks/pressbooks-aldine/issues/488)) ([b8a6f20](https://github.com/pressbooks/pressbooks-aldine/commit/b8a6f205cce2556629b7514b62168eea790fa62f))
+* **deps:** bump spatie/color from 1.7.0 to 1.8.0 in the composer-dependencies group ([#487](https://github.com/pressbooks/pressbooks-aldine/issues/487)) ([5477514](https://github.com/pressbooks/pressbooks-aldine/commit/547751475e5c4bc30fa033469bd257daecb0b922))
+* **deps:** bump spatie/color in the composer-dependencies group ([5477514](https://github.com/pressbooks/pressbooks-aldine/commit/547751475e5c4bc30fa033469bd257daecb0b922))
+* replace guides and tutorials link with user guide ([#495](https://github.com/pressbooks/pressbooks-aldine/issues/495)) ([baa00fc](https://github.com/pressbooks/pressbooks-aldine/commit/baa00fcb2fff7974bcbf43224762a6293554689d))
+
 ## [1.19.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.3...1.19.4) (2025-02-11)
 
 
