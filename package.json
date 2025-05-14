@@ -65,6 +65,7 @@
 		"lint:scripts": "eslint \"assets/scripts/**/*.js\"",
 		"lint:styles": "stylelint \"assets/styles/**/*.scss\"",
 		"lint": "run-s lint:*",
+		"lint:fix": "eslint --fix \"assets/scripts/**/*.js\"",
 		"production": "mix --production",
 		"rmdist": "rimraf dist",
 		"start": "mix watch",

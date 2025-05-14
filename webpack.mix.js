@@ -36,6 +36,7 @@ mix.browserSync( {
 // Sass
 mix.sass( `${assets}/styles/aldine.scss`, `${dist}/styles/aldine.css` );
 mix.sass( `${assets}/styles/editor.scss`, `${dist}/styles/editor.css` );
+mix.sass( `${assets}/styles/search-featured-books.scss`, `${dist}/styles/search-featured-books.css` );
 
 // Javascript
 mix.autoload( { jquery: [ '$', 'window.jQuery', 'jQuery' ] } );
@@ -46,7 +47,8 @@ mix
 	.js( `${assets}/scripts/catalog-admin.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer.js`, `${dist}/scripts` )
 	.js( `${assets}/scripts/customizer-toggle.js`, `${dist}/scripts` )
-	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` );
+	.js( `${assets}/scripts/page-section.js`, `${dist}/scripts` )
+	.js( `${assets}/scripts/search-featured-books.js`, `${dist}/scripts` );
 
 // Assets
 mix
