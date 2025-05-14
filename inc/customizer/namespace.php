@@ -24,7 +24,7 @@ function ajax_search_catalog_books(): void {
 		'number'     => 20,
 		'search'     => '*' . $query . '*',
 		'meta_key'   => $dc::IN_CATALOG,
-		'meta_value' => 1,
+		'meta_value' => 1, // phpcs:ignore HM.Performance.SlowMetaQuery.slow_query_meta_value
 		'public'     => 1,
 		'archived'   => 0,
 		'spam'       => 0,

@@ -1,3 +1,12 @@
+<?php
+/**
+ * Featured Books Search Control
+ *
+ * @package Aldine
+ */
+
+?>
+
 <label data-setting="<?php echo esc_attr( $this->id ); ?>">
 	<span id="search-books-label-<?php echo esc_attr( $this->id ); ?>" class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 	<div class="search-books-field">
