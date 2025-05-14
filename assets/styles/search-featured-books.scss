@@ -38,8 +38,10 @@
   pointer-events: none;
 }
 
+/* stylelint-disable selector-id-pattern */
 #sub-accordion-section-pb_front_page_catalog,
 #customize-theme-controls {
     overflow: visible !important;
     height: auto !important;
 }
+/* stylelint-enable selector-id-pattern */
