@@ -7,7 +7,6 @@
 
 namespace Aldine\Customizer;
 
-use function Aldine\Helpers\get_catalog_options;
 use PressbooksMix\Assets;
 
 const MAX_FEATURED_BOOKS = 4;
@@ -16,64 +15,39 @@ const MAX_FEATURED_BOOKS = 4;
  * Ajax handler to search catalog books.
  */
 function ajax_search_catalog_books() {
-    if ( ! current_user_can( 'manage_options' ) || ! isset( $_GET['q'] ) ) {
-        wp_send_json_error();
-    }
-    $query = sanitize_text_field( wp_unslash( $_GET['q'] ) );
-    $dc = \Pressbooks\DataCollector\Book::init();
-    $args = [
-        'number'     => 20,
-        'search'     => '*' . $query . '*',
-        'meta_key'   => $dc::IN_CATALOG,
-        'meta_value' => 1,
-        'public'     => 1,
-        'archived'   => 0,
-        'spam'       => 0,
-        'deleted'    => 0,
-        'network_id' => \get_current_network_id(),
-    ];
-    $sites = get_sites( $args );
-    $results = [];
-    foreach ( $sites as $site ) {
-        $title = $dc->get( $site->blog_id, $dc::TITLE );
-        $results[] = [ 'id' => $site->blog_id, 'text' => $title ];
-    }
-    wp_send_json_success( $results );
+	if ( ! current_user_can( 'manage_options' ) || ! isset( $_GET['q'] ) ) {
+		wp_send_json_error();
+	}
+	$query = sanitize_text_field( wp_unslash( $_GET['q'] ) );
+	$dc = \Pressbooks\DataCollector\Book::init();
+	$args = [
+		'number'     => 20,
+		'search'     => '*' . $query . '*',
+		'meta_key'   => $dc::IN_CATALOG,
+		'meta_value' => 1,
+		'public'     => 1,
+		'archived'   => 0,
+		'spam'       => 0,
+		'deleted'    => 0,
+		'network_id' => \get_current_network_id(),
+	];
+	$sites = get_sites( $args );
+	$results = [];
+	foreach ( $sites as $site ) {
+		$title = $dc->get( $site->blog_id, $dc::TITLE );
+		$results[] = [
+			'id' => $site->blog_id,
+			'text' => $title,
+		];
+	}
+	wp_send_json_success( $results );
 }
-add_action( 'wp_ajax_pb_search_catalog_books', __NAMESPACE__ . '\\ajax_search_catalog_books' );
+add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_catalog_books' );
 
 // Only load Customizer controls when WP_Customize_Control class is available.
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
-    return;
+	return;
 }
-
-/**
- * Customizer control for searching books.
- */
-class Search_Books_Control extends \WP_Customize_Control {
-    public $type = 'search-books';
-    public function render_content() {
-        ?>
-<?php
-    $dc = \Pressbooks\DataCollector\Book::init();
-    $current_id = intval( $this->value() );
-    $current_title = $current_id ? $dc->get( $current_id, $dc::TITLE ) : '';
-?>
-<label data-setting="<?php echo esc_attr( $this->id ); ?>">
-    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-    <input type="text"
-           class="search-books-input"
-           data-setting="<?php echo esc_attr( $this->id ); ?>"
-           value="<?php echo esc_attr( $current_title ); ?>"
-           autocomplete="off"
-    />
-    <ul class="search-books-results"></ul>
-</label>
-        <?php
-    }
-}
-
-const MAX_FEATURED_BOOKS = 4;
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -315,10 +289,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			]
 		);
 
-		$options = get_catalog_options();
-		$books = collect( $options['books'] )->pluck( 'title', 'id' )->toArray();
-		$books = [ '' => __( 'Select a book', 'pressbooks-aldine' ) ] + $books;
-
 		foreach ( range( 1, MAX_FEATURED_BOOKS ) as $i ) {
 			$wp_customize->add_setting(
 				"pb_front_page_catalog_book_{$i}", [
@@ -326,7 +296,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 				]
 			);
 			$wp_customize->add_control(
-				new Search_Books_Control(
+				new SearchFeaturedBooks(
 					$wp_customize,
 					"pb_front_page_catalog_book_{$i}",
 					[
@@ -495,62 +465,22 @@ function enqueue_pb_a11y_in_customizer() {
 /**
  * Enqueue scripts for catalog search control.
  */
-function enqueue_catalog_search_control_scripts() {
-    // Register an inline-only script handle for catalog search control
-    wp_register_script(
-        'aldine-catalog-search',
-        '', // No external file
-        [ 'jquery', 'customize-controls' ],
-        false,
-        true
-    );
-    wp_enqueue_script( 'aldine-catalog-search' );
-    wp_localize_script( 'aldine-catalog-search', 'PB_Ajax', [
-        'ajax_url' => admin_url( 'admin-ajax.php' ),
-    ] );
-    $js = <<<JS
-jQuery(function($){
-    function initSearchControl(container){
-        var \$input = container.find('.search-books-input');
-        var \$results = container.find('.search-books-results');
-        var settingId = \$input.data('setting');
-        \$input.on('input', function(){
-            var term = $(this).val();
-            if (! term.length) {
-                \$results.empty();
-                return;
-            }
-            $.get(PB_Ajax.ajax_url, {
-                action: 'pb_search_catalog_books',
-                q: term
-            }, function(response){
-                \$results.empty();
-                if (response.success) {
-                    response.data.forEach(function(item){
-                        var \$li = $('<li>').text(item.text).attr('data-value', item.id);
-                        \$results.append(\$li);
-                    });
-                }
-            });
-        });
-        \$results.on('click', 'li', function(){
-            var id = $(this).data('value');
-            var text = $(this).text();
-            \$input.val(text);
-            wp.customize(settingId, function(value){
-                value.set(id);
-            });
-            \$results.empty();
-        });
-    }
-    wp.customize.control.each(function(control){
-        var container = control.container;
-        if (container.find('.search-books-input').length) {
-            initSearchControl(container);
-        }
-    });
-});
-JS;
-    wp_add_inline_script( 'aldine-catalog-search', $js );
+function enqueue_catalog_search_control_assets() {
+	$assets = new Assets( 'pressbooks-aldine', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	wp_enqueue_script(
+		'aldine/customizer-search',
+		$assets->getPath( 'scripts/search-featured-books.js' ),
+		[ 'jquery' ],
+		false,
+		true
+	);
+
+	wp_localize_script( 'aldine/customizer-search', 'PB_Ajax', [
+		'ajax_url' => admin_url( 'admin-ajax.php' ),
+	] );
+
+	wp_register_style( 'search-featured-books', $assets->getPath( 'styles/search-featured-books.css' ) );
+	wp_enqueue_style( 'search-featured-books' );
 }
-add_action( 'customize_controls_enqueue_scripts', __NAMESPACE__ . '\\enqueue_catalog_search_control_scripts' );
