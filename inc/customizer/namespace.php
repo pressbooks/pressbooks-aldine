@@ -14,7 +14,7 @@ const MAX_FEATURED_BOOKS = 4;
 /**
  * Ajax handler to search catalog books.
  */
-function ajax_search_catalog_books() {
+function ajax_search_catalog_books(): void {
 	if ( ! current_user_can( 'manage_options' ) || ! isset( $_GET['q'] ) ) {
 		wp_send_json_error();
 	}
@@ -41,12 +41,6 @@ function ajax_search_catalog_books() {
 		];
 	}
 	wp_send_json_success( $results );
-}
-add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_catalog_books' );
-
-// Only load Customizer controls when WP_Customize_Control class is available.
-if ( ! class_exists( 'WP_Customize_Control' ) ) {
-	return;
 }
 
 /**
@@ -465,7 +459,7 @@ function enqueue_pb_a11y_in_customizer() {
 /**
  * Enqueue scripts for catalog search control.
  */
-function enqueue_catalog_search_control_assets() {
+function enqueue_catalog_search_control_assets(): void {
 	$assets = new Assets( 'pressbooks-aldine', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 

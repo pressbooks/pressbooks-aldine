@@ -70,6 +70,7 @@ add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\featured_b
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_contact_form_tweaks' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_pb_a11y_in_customizer' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_catalog_search_control_assets' );
+add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_catalog_books' );
 
 // Shortcodes.
 add_shortcode( 'aldine_page_section', '\Aldine\Shortcodes\page_section' );
