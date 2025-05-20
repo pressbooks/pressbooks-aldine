@@ -39,6 +39,8 @@ foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
 
+\HM\Autoloader\register_class_path( 'Aldine', __DIR__ . '/inc' );
+
 add_action( 'after_switch_theme', '\Aldine\Activation\create_default_content', 10 );
 add_action( 'after_switch_theme', '\Aldine\Activation\create_menus', 11 );
 add_action( 'after_switch_theme', '\Aldine\Activation\assign_menus', 12 );
@@ -67,6 +69,8 @@ add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_co
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\featured_books_scripts' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_contact_form_tweaks' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_pb_a11y_in_customizer' );
+add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_catalog_search_control_assets' );
+add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_catalog_books' );
 
 // Shortcodes.
 add_shortcode( 'aldine_page_section', '\Aldine\Shortcodes\page_section' );
