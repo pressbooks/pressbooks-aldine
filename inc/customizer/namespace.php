@@ -27,12 +27,12 @@ function ajax_search_catalog_books(): void {
 			[
 				'key'     => $dc::TITLE,
 				'value'   => $query,
-				'compare' => 'LIKE',
+				'compare' => 'LIKE', //phpcs:ignore HM.Performance.SlowMetaQuery.nonperformant_comparison
 			],
 			[
 				'key'     => $dc::IN_CATALOG,
 				'value'   => 1,
-				'compare' => '=',
+				'compare' => '=', //phpcs:ignore HM.Performance.SlowMetaQuery.nonperformant_comparison
 			],
 		],
 		'public'     => 1,
