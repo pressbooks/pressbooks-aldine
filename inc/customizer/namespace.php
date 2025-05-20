@@ -22,9 +22,19 @@ function ajax_search_catalog_books(): void {
 	$dc = \Pressbooks\DataCollector\Book::init();
 	$args = [
 		'number'     => 20,
-		'search'     => '*' . $query . '*',
-		'meta_key'   => $dc::IN_CATALOG,
-		'meta_value' => 1, // phpcs:ignore HM.Performance.SlowMetaQuery.slow_query_meta_value
+		'meta_query' => [
+			'relation' => 'AND',
+			[
+				'key'     => $dc::TITLE,
+				'value'   => $query,
+				'compare' => 'LIKE',
+			],
+			[
+				'key'     => $dc::IN_CATALOG,
+				'value'   => 1,
+				'compare' => '=',
+			],
+		],
 		'public'     => 1,
 		'archived'   => 0,
 		'spam'       => 0,
@@ -34,10 +44,9 @@ function ajax_search_catalog_books(): void {
 	$sites = get_sites( $args );
 	$results = [];
 	foreach ( $sites as $site ) {
-		$title = $dc->get( $site->blog_id, $dc::TITLE );
 		$results[] = [
-			'id' => $site->blog_id,
-			'text' => $title,
+			'id'   => $site->blog_id,
+			'text' => $dc->get( $site->blog_id, $dc::TITLE ),
 		];
 	}
 	wp_send_json_success( $results );
