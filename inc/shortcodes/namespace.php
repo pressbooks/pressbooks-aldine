@@ -73,7 +73,7 @@ function call_to_action( $atts ) {
  * @param array $atts Shortcode attributes.
  * @return string HTML markup of featured books.
  */
-function last_titles_shortcode( $atts ) {
+function last_titles_shortcode( $atts ): string {
 	$atts = shortcode_atts( [
 		'title' => get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) ),
 	], $atts, 'last-titles' );

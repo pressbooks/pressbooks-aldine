@@ -16,8 +16,8 @@
 
 	<div class="entry-content">
 		<?php
-			$content = get_the_content();
-			$has_titles_shortcode = preg_match( '/\[last-titles.*?\]/', $content );
+		$content = get_the_content();
+		$has_titles_shortcode = preg_match( '/\[last-titles.*?\]/', $content );
 		if ( $has_titles_shortcode ) {
 			$main_content = preg_replace( '/\[last-titles.*?\]/', '', $content );
 			$main_content = apply_filters( 'the_content', $main_content );
@@ -27,13 +27,13 @@
 			the_content();
 		}
 
-			wp_link_pages(
-				[
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pressbooks-aldine' ),
-					'after'  => '</div>',
-				]
-			);
-			?>
+		wp_link_pages(
+			[
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pressbooks-aldine' ),
+				'after'  => '</div>',
+			]
+		);
+		?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
