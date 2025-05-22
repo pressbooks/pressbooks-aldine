@@ -7,6 +7,8 @@
 
 namespace Aldine\Shortcodes;
 
+use function Aldine\Helpers\get_featured_books;
+
 /**
  * Shortcode for Page Section.
  *
@@ -61,4 +63,39 @@ function call_to_action( $atts ) {
 		$atts['link'],
 		$atts['text']
 	);
+}
+
+/**
+ * Shortcode to display featured books anywhere.
+ *
+ * Usage: [last-titles title="Custom Title"]
+ *
+ * @param array $atts Shortcode attributes.
+ * @return string HTML markup of featured books.
+ */
+function last_titles_shortcode( $atts ) {
+	$atts = shortcode_atts( [
+		'title' => get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) ),
+	], $atts, 'last-titles' );
+
+	$books = get_featured_books();
+	if ( empty( $books ) || empty( $books['books'] ) ) {
+		return '';
+	}
+
+	$output  = '<div id="latest-books" class="latest-books">';
+	$output .= '<h2 id="latest-books-title">' . esc_html( $atts['title'] ) . '</h2>';
+	$output .= '<div class="books">';
+	foreach ( $books['books'] as $book ) {
+		ob_start();
+		$template = locate_template( 'partials/featured-book.php', false, false );
+		if ( $template ) {
+			include $template;
+		}
+		$output .= ob_get_clean();
+	}
+	$output .= '</div>';
+	$output .= '</div>';
+
+	return $output;
 }

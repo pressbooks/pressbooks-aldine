@@ -48,24 +48,29 @@ use function Aldine\Helpers\custom_homepage;
 </svg>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
-	<header class="header" role="banner" style="background-image: url(
 	<?php
 
-	if ( has_post_thumbnail() ) {
-		echo get_the_post_thumbnail_url();
+	$template = get_page_template_slug();
+	if ( $template === 'page-featured-books.php' ) {
+		echo "<header class='header' role='banner'>";
 	} else {
-		if ( is_front_page() ) {
-			if ( has_header_image() ) {
-				echo( get_header_image() );
-			} else {
-				echo get_template_directory_uri() . '/dist/images/header.jpg';
-			}
+		if ( has_post_thumbnail() ) {
+			echo get_the_post_thumbnail_url();
 		} else {
-			echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+			echo "<header class='header' role='banner' style='background-image: url(";
+			if ( is_front_page() ) {
+				if ( has_header_image() ) {
+					echo( get_header_image() );
+				} else {
+					echo get_template_directory_uri() . '/dist/images/header.jpg';
+				}
+			} else {
+				echo get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+			}
 		}
+		echo ")'>";
 	}
 	?>
-	);">
 		<div class="header__container">
 			<div class="header__inside">
 				<div class="header__brand">

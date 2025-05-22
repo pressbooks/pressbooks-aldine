@@ -75,6 +75,7 @@ add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_c
 // Shortcodes.
 add_shortcode( 'aldine_page_section', '\Aldine\Shortcodes\page_section' );
 add_shortcode( 'aldine_call_to_action', '\Aldine\Shortcodes\call_to_action' );
+add_shortcode( 'last-titles', '\Aldine\Shortcodes\last_titles_shortcode' );
 
 // Catalog page: Network admin controls.
 add_action( 'admin_enqueue_scripts', '\Aldine\Admin\admin_scripts' );
