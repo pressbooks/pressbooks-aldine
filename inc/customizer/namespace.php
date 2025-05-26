@@ -35,7 +35,7 @@ function ajax_search_catalog_books(): void {
 				'compare' => '=', //phpcs:ignore HM.Performance.SlowMetaQuery.nonperformant_comparison
 			],
 		],
-		'orderby'    => 'meta_value',
+		'orderby'    => 'meta_value', // phpcs:ignore HM.Performance.SlowOrderBy.slow_order
 		'meta_key'   => $dc::TITLE,
 		'order'      => 'ASC',
 		'public'     => 1,
