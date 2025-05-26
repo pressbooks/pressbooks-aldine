@@ -17,6 +17,10 @@ jQuery( function ( $ ) {
 					.attr( 'aria-expanded', 'false' )
 					.removeAttr( 'aria-activedescendant' );
 				$results.hide();
+
+				wp.customize( settingId, function ( value ) {
+					value.set( '' );
+				} );
 				return;
 			}
 
