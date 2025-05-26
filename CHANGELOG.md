@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.21.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.20.0...1.21.0) (2025-05-26)
+
+
+### Features
+
+* search books from the catalog in customizer ([#496](https://github.com/pressbooks/pressbooks-aldine/issues/496)) ([27b54fc](https://github.com/pressbooks/pressbooks-aldine/commit/27b54fc8d76ae138529e372b675258a8ed756ae4))
+
+
+### Bug Fixes
+
+* remove featured book from customizer ([#499](https://github.com/pressbooks/pressbooks-aldine/issues/499)) ([7ab0595](https://github.com/pressbooks/pressbooks-aldine/commit/7ab0595ba5fa172f7e506a6380dd953cfbe90192))
+* sort search results by blog title ([#501](https://github.com/pressbooks/pressbooks-aldine/issues/501)) ([be33d9d](https://github.com/pressbooks/pressbooks-aldine/commit/be33d9df51f920554ca23147f62ead2b204c700a))
+
 ## [1.20.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.19.4...1.20.0) (2025-05-08)
 
 
