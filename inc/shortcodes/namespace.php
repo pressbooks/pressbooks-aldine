@@ -76,7 +76,7 @@ function call_to_action( $atts ) {
 function latest_titles_shortcode( $atts ): string {
 	$atts = shortcode_atts( [
 		'title' => get_option( 'pb_front_page_catalog_title', __( 'Our Latest Titles', 'pressbooks-aldine' ) ),
-	], $atts, 'last-titles' );
+	], $atts, 'latest-titles' );
 
 	$books = get_featured_books();
 	if ( empty( $books ) || empty( $books['books'] ) ) {

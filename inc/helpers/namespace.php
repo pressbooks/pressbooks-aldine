@@ -581,3 +581,27 @@ function custom_homepage(): string {
 	}
 	return '';
 }
+
+/**
+ * Get the header tag with the appropriate background image.
+ *
+ * @return string
+ */
+function get_header_tag(): string {
+	$template = get_page_template_slug();
+	if ( $template === 'page-featured-books.php' ) {
+		return "<header class='header' role='banner'>";
+	}
+
+	$background_url = match ( true ) {
+		has_post_thumbnail() => get_the_post_thumbnail_url(),
+		is_front_page() && has_header_image() => get_header_image(),
+		is_front_page() => get_template_directory_uri() . '/dist/images/header.jpg',
+		default => get_template_directory_uri() . '/dist/images/catalog-header.jpg',
+	};
+
+	return sprintf(
+		"<header class='header' role='banner' style='background-image: url(%s);'>",
+		esc_url( $background_url )
+	);
+}

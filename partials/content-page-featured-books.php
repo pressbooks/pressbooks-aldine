@@ -58,7 +58,7 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
 <?php
 if ( $has_titles_shortcode ) {
 	$atts = shortcode_parse_atts( str_replace( '[last-titles', '', str_replace( ']', '', $content ) ) );
