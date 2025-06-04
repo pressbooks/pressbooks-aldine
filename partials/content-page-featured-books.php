@@ -17,9 +17,9 @@
 	<div class="entry-content">
 		<?php
 		$content = get_the_content();
-		$has_titles_shortcode = preg_match( '/\[last-titles.*?\]/', $content );
+		$has_titles_shortcode = preg_match( '/\[latest-titles.*?\]/', $content );
 		if ( $has_titles_shortcode ) {
-			$main_content = preg_replace( '/\[last-titles.*?\]/', '', $content );
+			$main_content = preg_replace( '/\[latest-titles.*?\]/', '', $content );
 			$main_content = apply_filters( 'the_content', $main_content );
 			$main_content = str_replace( ']]>', ']]&gt;', $main_content );
 			echo $main_content;
@@ -61,7 +61,7 @@
 </article>
 <?php
 if ( $has_titles_shortcode ) {
-	$atts = shortcode_parse_atts( str_replace( '[last-titles', '', str_replace( ']', '', $content ) ) );
+	$atts = shortcode_parse_atts( str_replace( '[latest-titles', '', str_replace( ']', '', $content ) ) );
 	$title = isset( $atts['title'] ) ? ' title="' . esc_attr( $atts['title'] ) . '"' : '';
 	echo do_shortcode( '[latest-titles' . $title . ']' );
 }
