@@ -63,6 +63,6 @@
 if ( $has_titles_shortcode ) {
 	$atts = shortcode_parse_atts( str_replace( '[last-titles', '', str_replace( ']', '', $content ) ) );
 	$title = isset( $atts['title'] ) ? ' title="' . esc_attr( $atts['title'] ) . '"' : '';
-	echo do_shortcode( '[last-titles' . $title . ']' );
+	echo do_shortcode( '[latest-titles' . $title . ']' );
 }
 ?>
