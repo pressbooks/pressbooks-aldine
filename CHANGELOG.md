@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.21.0...1.22.0) (2025-06-04)
+
+
+### Features
+
+* featured books template integration ([#498](https://github.com/pressbooks/pressbooks-aldine/issues/498)) ([21dd7fc](https://github.com/pressbooks/pressbooks-aldine/commit/21dd7fcdc71bc24495db48fd0494a58eb0065ebf))
+
 ## [1.21.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.20.0...1.21.0) (2025-05-26)
 
 
