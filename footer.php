@@ -83,7 +83,7 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_bluesky ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="linkedin" href="<?php echo $network_bluesky; ?>"> title="<?php printf( __( '%s on Bluesky', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="bluesky" href="<?php echo $network_bluesky;?>" title="<?php printf( __( '%s on Bluesky', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<title><?php echo esc_html__( 'Bluesky logo', 'pressbooks-aldine' ); ?></title>
 									<use href="#bluesky" />
