@@ -83,7 +83,7 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_bluesky ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="bluesky" href="<?php echo $network_bluesky;?>" title="<?php printf( __( '%s on Bluesky', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="bluesky" href="<?php echo $network_bluesky; ?>" title="<?php printf( __( '%s on Bluesky', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
 								<svg class="icon--svg">
 									<title><?php echo esc_html__( 'Bluesky logo', 'pressbooks-aldine' ); ?></title>
 									<use href="#bluesky" />
@@ -135,7 +135,7 @@ if ( $pb_network_contact_form ) {
 		<section class="footer__pressbooks">
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
 				<svg class="icon--svg" role="img" aria-label="Pressbooks logo">
-					<title><?php echo esc_html__( "Pressbooks logo", 'pressbooks-aldine' );?></title>
+					<title><?php echo esc_html__( 'Pressbooks logo', 'pressbooks-aldine' ); ?></title>
 					<use xlink:href="#icon-pressbooks" />
 				</svg>
 			</a>
