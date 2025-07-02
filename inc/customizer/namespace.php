@@ -110,12 +110,29 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		);
 	}
 
+	$color_defaults = [
+		'header_bg'    => '#fff',
+		'header_links' => '#b01109',
+		'primary'      => '#b01109',
+		'primary_dark' => '#7f0c07',
+		'accent'       => '#015d75',
+		'accent_dark'  => '#013542',
+		'primary_fg'   => '#fff',
+		'accent_fg'    => '#fff',
+	];
+
 	foreach ( [
 		[
 			'slug' => 'header_bg',
 			'hex' => '#fff',
 			'label' => __( 'Header Background', 'pressbooks-aldine' ),
 			'description' => __( 'Header background color.', 'pressbooks-aldine' ),
+		],
+		[
+			'slug' => 'header_links',
+			'hex' => '#b01109',
+			'label' => __( 'Header Links', 'pressbooks-aldine' ),
+			'description' => __( 'Header link color.', 'pressbooks-aldine' ),
 		],
 		[
 			'slug' => 'primary',
@@ -154,6 +171,13 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'description' => __( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
 		],
 	] as $color ) {
+		if ( $color['slug'] === 'header_links' ) {
+			$primary = get_option( 'pb_network_color_primary', false );
+			if ( $primary !== false ) {
+				$color['hex'] = $primary;
+			}
+		}
+
 		$wp_customize->add_setting(
 			"pb_network_color_{$color['slug']}", [
 				'type' => 'option',
@@ -434,11 +458,12 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
-			'pb_network_color_header_bg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
+			'pb_network_color_header_bg' => [ 'pb_network_color_header_links' ],
+			'pb_network_color_header_links' => [ 'pb_network_color_header_bg' ],
 			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
-			'pb_network_color_primary' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
-			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
 			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
 			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],

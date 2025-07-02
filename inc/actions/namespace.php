@@ -186,6 +186,7 @@ function output_custom_colors() {
 	} else {
 		$colors = [
 			'header_bg',
+			'header_links',
 			'primary',
 			'accent',
 			'primary_fg',
