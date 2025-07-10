@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the Custom Home page
+ * Template part for displaying the Additional home page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
