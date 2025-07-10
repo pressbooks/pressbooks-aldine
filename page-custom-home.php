@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Our Last Titles section
  *
- * Template Name: Featured Books
+ * Template Name: Additional home
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -18,7 +18,7 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'partials/content-page-featured-books', 'page' );
+				get_template_part( 'partials/content', 'front-page' );
 
 			endwhile;
 			?>

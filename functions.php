@@ -90,3 +90,9 @@ add_action( 'admin_menu', '\Aldine\Actions\remove_menu_items' );
 // Remove unwanted actions.
 remove_action( 'before_delete_post', '_reset_front_page_settings_for_post' );
 remove_action( 'wp_trash_post', '_reset_front_page_settings_for_post' );
+
+if ( is_main_site() ) {
+	add_action( 'add_meta_boxes', 'Aldine\Actions\add_language_metabox_main_site' );
+	add_action( 'save_post', 'Aldine\Actions\save_page_language_metabox' );
+	add_filter( 'template_include', '\Aldine\Actions\switch_locale_for_custom_home' );
+}

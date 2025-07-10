@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the front page
+ * Template part for displaying the Custom Home page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,22 +12,8 @@ use function Aldine\Helpers\get_featured_books;
 use function Aldine\Helpers\has_sections;
 
 $pb_front_page_catalog_title = get_option( 'pb_front_page_catalog_title' );
-
 $latest_books_title = ( ! empty( $pb_front_page_catalog_title ) ) ? $pb_front_page_catalog_title : __('Our Latest Titles',
 'pressbooks-aldine');
-
-$tagline_text = null;
-if ( has_shortcode( $post->post_content, 'aldine_page_section' ) ) {
-	$shortcode = get_shortcode_regex( [ 'aldine_page_section' ] );
-	preg_match_all( '/' . $shortcode . '/s', $post->post_content, $matches );
-	if ( ! empty( $matches[3] ) && isset( $matches[3][0] ) ) {
-		$atts = shortcode_parse_atts( $matches[3][0] );
-		if ( isset( $atts['tagline-text'] ) && ! empty( $atts['tagline-text'] ) ) {
-			$tagline_text = esc_html( $atts['tagline-text'] );
-		}
-	}
-}
-
 if ( get_option( 'pb_front_page_catalog' ) ) {
 	$catalog_data = get_featured_books();
 }
@@ -42,7 +28,7 @@ if ( $catalog_page ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
-		<p class="entry-description"><?php echo $tagline_text ?? get_bloginfo( 'description', 'display' ); ?></p>
+		<p class="entry-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -76,7 +62,10 @@ if ( $catalog_page ) {
 		</div>
 		<p class="catalog-link">
 			<a class="call-to-action" href="<?php echo $catalog_permalink ?? ''; ?>">
-				<?php echo __( 'View Complete Catalog', 'pressbooks-aldine' ); ?>
+				<?php
+				_e('View Complete Catalog',
+				'pressbooks-aldine');
+				?>
 			</a>
 		</p>
 	</div>

@@ -347,3 +347,99 @@ function remove_widgets() {
 	unregister_widget( 'WP_Widget_Media_Video' );
 	unregister_widget( 'Akismet_Widget' );
 }
+
+function add_language_metabox_main_site( string $post_type ): void {
+	if ( $post_type !== 'page' ) {
+		return;
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof \WP_Post ) {
+		return;
+	}
+
+	$template = get_page_template_slug( $post->ID );
+	if ( $template !== 'page-custom-home.php' ) {
+		return;
+	}
+
+	add_meta_box(
+		'my_language_metabox',
+		__( 'Page Language', 'pressbooks-aldine' ),
+		'Aldine\Actions\language_selector',
+		'page',
+		'side',
+		'default'
+	);
+}
+
+function language_selector( \WP_Post $post ): void {
+	$selected_lang = get_post_meta( $post->ID, 'page_language', true );
+
+	$languages = \Pressbooks\L10n\get_translated_languages();
+	?>
+	<label for="page_language"><?php _e( 'Select Language', 'pressbooks-aldine' ); ?></label><br>
+	<select name="page_language" id="page_language">
+		<option value="">-- <?php _e( 'Choose', 'pressbooks-aldine' ); ?> --</option>
+		<?php foreach ( $languages as $lang => $name ) : ?>
+			<option value="<?php echo esc_attr( $lang ); ?>" <?php selected( $selected_lang, $lang ); ?>><?php echo esc_html( $name ); ?></option>
+		<?php endforeach; ?>
+	</select>
+	<?php
+	wp_nonce_field( 'page_language_metabox_nonce_action', 'page_language_metabox_nonce' );
+}
+
+function save_page_language_metabox( int $post_id ): void {
+	$template = get_page_template_slug( $post_id );
+	if ( $template !== 'page-custom-home.php' ) {
+		return;
+	}
+
+	if ( ! isset( $_POST['page_language_metabox_nonce'] ) ||
+		! wp_verify_nonce( $_POST['page_language_metabox_nonce'], 'page_language_metabox_nonce_action' )
+	) {
+		return;
+	}
+
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'edit_page', $post_id ) ) {
+		return;
+	}
+
+	if ( isset( $_POST['page_language'] ) ) {
+		$supported_languages = \Pressbooks\L10n\get_translated_languages();
+		if ( ! array_key_exists( $_POST['page_language'], $supported_languages ) ) {
+			return;
+		}
+
+		update_post_meta( $post_id, 'page_language', sanitize_text_field( $_POST['page_language'] ) );
+	}
+}
+
+function switch_locale_for_custom_home( string $template ): string {
+	if ( ! is_page() ) {
+		return $template;
+	}
+
+	$page_id = get_queried_object_id();
+	$tpl = get_page_template_slug( $page_id );
+	if ( $tpl !== 'page-custom-home.php' ) {
+		return $template;
+	}
+
+	$lang = get_post_meta( $page_id, 'page_language', true );
+	if ( $lang ) {
+		$codes = \Pressbooks\L10n\get_translated_languages();
+
+		if ( ! isset( $codes[ $lang ] ) ) {
+			return $template;
+		}
+
+		switch_to_locale( $lang );
+	}
+
+	return $template;
+}

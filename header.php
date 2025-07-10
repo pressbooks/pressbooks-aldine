@@ -23,7 +23,15 @@ use function Aldine\Helpers\get_header_tag;
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body 
+<?php
+	body_class(
+		! is_front_page() && get_page_template_slug() === 'page-custom-home.php' ?
+		'home' :
+		''
+	);
+	?>
+	>
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
