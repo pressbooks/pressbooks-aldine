@@ -348,6 +348,12 @@ function remove_widgets() {
 	unregister_widget( 'Akismet_Widget' );
 }
 
+/**
+ * Add language metabox to main site pages containing <page-custom-home.php> template.
+ *
+ * @param string $post_type Post type slug.
+ * @return void
+ */
 function add_language_metabox_main_site( string $post_type ): void {
 	if ( $post_type !== 'page' ) {
 		return;
@@ -373,6 +379,12 @@ function add_language_metabox_main_site( string $post_type ): void {
 	);
 }
 
+/**
+ * Render the language selector metabox.
+ *
+ * @param \WP_Post $post Post object.
+ * @return void
+ */
 function language_selector( \WP_Post $post ): void {
 	$selected_lang = get_post_meta( $post->ID, 'page_language', true );
 
@@ -389,6 +401,12 @@ function language_selector( \WP_Post $post ): void {
 	wp_nonce_field( 'page_language_metabox_nonce_action', 'page_language_metabox_nonce' );
 }
 
+/**
+ * Save the selected language for the custom home page.
+ *
+ * @param int $post_id Post ID.
+ * @return void
+ */
 function save_page_language_metabox( int $post_id ): void {
 	$template = get_page_template_slug( $post_id );
 	if ( $template !== 'page-custom-home.php' ) {
@@ -419,6 +437,12 @@ function save_page_language_metabox( int $post_id ): void {
 	}
 }
 
+/**
+ * Switch the locale for the custom home page for <page-custom-home.php> template.
+ *
+ * @param string $template Template file path.
+ * @return string
+ */
 function switch_locale_for_custom_home( string $template ): string {
 	if ( ! is_page() ) {
 		return $template;
