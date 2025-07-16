@@ -37,11 +37,17 @@ if ( $catalog_page ) {
 	$catalog_permalink = get_permalink( $catalog_page->ID );
 }
 
+$title_text = null;
+
+if ( get_page_template_slug() === 'page-custom-home.php' ) {
+	$title_text = get_the_title( $post->ID );
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php echo get_bloginfo( 'name', 'display' ); ?></h1>
+		<h1 class="entry-title"><?php echo $title_text ?? get_bloginfo( 'name', 'display' ); ?></h1>
 		<p class="entry-description"><?php echo $tagline_text ?? get_bloginfo( 'description', 'display' ); ?></p>
 	</header><!-- .entry-header -->
 
