@@ -110,17 +110,6 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 		);
 	}
 
-	$color_defaults = [
-		'header_bg'    => '#fff',
-		'header_links' => '#b01109',
-		'primary'      => '#b01109',
-		'primary_dark' => '#7f0c07',
-		'accent'       => '#015d75',
-		'accent_dark'  => '#013542',
-		'primary_fg'   => '#fff',
-		'accent_fg'    => '#fff',
-	];
-
 	foreach ( [
 		[
 			'slug' => 'header_bg',
