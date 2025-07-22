@@ -7,6 +7,7 @@
 
 namespace Aldine\Actions;
 
+use function Pressbooks\Admin\Branding\get_customizer_colors;
 use PressbooksMix\Assets;
 use Spatie\Color\Hex;
 
@@ -182,10 +183,11 @@ function content_width() {
  */
 function output_custom_colors() {
 	if ( defined( 'PB_PLUGIN_VERSION' ) ) {
-		echo \Pressbooks\Admin\Branding\get_customizer_colors();
+		echo get_customizer_colors();
 	} else {
 		$colors = [
 			'header_bg',
+			'header_links',
 			'primary',
 			'accent',
 			'primary_fg',

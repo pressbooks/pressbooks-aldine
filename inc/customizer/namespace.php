@@ -118,6 +118,12 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'description' => __( 'Header background color.', 'pressbooks-aldine' ),
 		],
 		[
+			'slug' => 'header_links',
+			'hex' => '#b01109',
+			'label' => __( 'Header Links', 'pressbooks-aldine' ),
+			'description' => __( 'Header link color.', 'pressbooks-aldine' ),
+		],
+		[
 			'slug' => 'primary',
 			'hex' => '#b01109',
 			'label' => __( 'Primary Color', 'pressbooks-aldine' ),
@@ -154,6 +160,13 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'description' => __( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
 		],
 	] as $color ) {
+		if ( $color['slug'] === 'header_links' ) {
+			$primary = get_option( 'pb_network_color_primary', false );
+			if ( $primary !== false ) {
+				$color['hex'] = $primary;
+			}
+		}
+
 		$wp_customize->add_setting(
 			"pb_network_color_{$color['slug']}", [
 				'type' => 'option',
@@ -434,11 +447,12 @@ function enqueue_color_contrast_validator() {
 
 	$exports = [
 		'validate_color_contrast' => [
-			'pb_network_color_header_bg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
+			'pb_network_color_header_bg' => [ 'pb_network_color_header_links' ],
+			'pb_network_color_header_links' => [ 'pb_network_color_header_bg' ],
 			'pb_network_color_primary_fg' => [ 'pb_network_color_primary', 'pb_network_color_primary_dark' ],
 			'pb_network_color_accent_fg' => [ 'pb_network_color_accent', 'pb_network_color_accent_dark' ],
-			'pb_network_color_primary' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
-			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg', 'pb_network_color_header_bg' ],
+			'pb_network_color_primary' => [ 'pb_network_color_primary_fg' ],
+			'pb_network_color_primary_dark' => [ 'pb_network_color_primary_fg' ],
 			'pb_network_color_accent' => [ 'pb_network_color_accent_fg' ],
 			'pb_network_color_accent_dark' => [ 'pb_network_color_accent_fg' ],
 		],
