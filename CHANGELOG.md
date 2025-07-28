@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.23.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.22.0...1.23.0) (2025-07-22)
+
+
+### Features
+
+* add additional home page in a different language ([#507](https://github.com/pressbooks/pressbooks-aldine/issues/507)) ([81e02f9](https://github.com/pressbooks/pressbooks-aldine/commit/81e02f9709fb399c5975a01f408589c7da757059))
+* add header link color selector ([#506](https://github.com/pressbooks/pressbooks-aldine/issues/506)) ([26b9909](https://github.com/pressbooks/pressbooks-aldine/commit/26b99093a7bb0e8ea17c9320dcaeef1ca4b15893))
+
+
+### Bug Fixes
+
+* add page title as a heading for custom home ([#510](https://github.com/pressbooks/pressbooks-aldine/issues/510)) ([10be71a](https://github.com/pressbooks/pressbooks-aldine/commit/10be71adfc9d8b188bf3eeb31a505a7afab2bb14))
+* pot workflow ([#508](https://github.com/pressbooks/pressbooks-aldine/issues/508)) ([96c6640](https://github.com/pressbooks/pressbooks-aldine/commit/96c66400ead396e09db0a79be49198083ab351ff))
+* update pot workflow ([96c6640](https://github.com/pressbooks/pressbooks-aldine/commit/96c66400ead396e09db0a79be49198083ab351ff))
+
 ## [1.22.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.21.0...1.22.0) (2025-06-04)
 
 
