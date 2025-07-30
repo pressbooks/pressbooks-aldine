@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.23.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.0...1.23.1) (2025-07-30)
+
+
+### Bug Fixes
+
+* default color ([5119606](https://github.com/pressbooks/pressbooks-aldine/commit/51196063ee29741af7f8e64e823672c6fba8a95b))
+* header_links customizer value should be primary color as default ([#513](https://github.com/pressbooks/pressbooks-aldine/issues/513)) ([5119606](https://github.com/pressbooks/pressbooks-aldine/commit/51196063ee29741af7f8e64e823672c6fba8a95b))
+
 ## [1.23.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.22.0...1.23.0) (2025-07-22)
 
 
