@@ -159,7 +159,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'label' => __( 'Accent Foreground Color', 'pressbooks-aldine' ),
 			'description' => __( 'Used for text on an accent color background.', 'pressbooks-aldine' ),
 		],
-	] as $color ) {
+	] as &$color ) {
 		if ( $color['slug'] === 'header_links' ) {
 			$primary = get_option( 'pb_network_color_primary', false );
 			if ( $primary !== false ) {
