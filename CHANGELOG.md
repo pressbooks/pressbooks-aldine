@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.1...1.23.2) (2025-07-31)
+
+
+### Bug Fixes
+
+* show available languages for additional home ([#511](https://github.com/pressbooks/pressbooks-aldine/issues/511)) ([b9c3e28](https://github.com/pressbooks/pressbooks-aldine/commit/b9c3e28582a810d50457088ce596bfccff2c45a8))
+
 ## [1.23.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.0...1.23.1) (2025-07-30)
 
 
