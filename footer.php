@@ -131,7 +131,7 @@ if ( $pb_network_contact_form ) {
 				<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 					<use xlink:href="#icon-pressbooks" />
 				</svg>
-                <span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-aldine' ); ?></span>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-aldine' ); ?></span>
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s Pressbooks */ ?>
