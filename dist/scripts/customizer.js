@@ -1,1 +1,1 @@
-wp.customize("blogname",(function(t){t.bind((function(t){return document.querySelector(".home .entry-title").textContent=t}))})),wp.customize("blogdescription",(function(t){t.bind((function(t){return document.querySelector(".home .entry-description").textContent=t}))}));
+wp.customize("blogname",function(t){t.bind(function(t){return document.querySelector(".home .entry-title").textContent=t})}),wp.customize("blogdescription",function(t){t.bind(function(t){return document.querySelector(".home .entry-description").textContent=t})});
