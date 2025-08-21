@@ -61,8 +61,8 @@ if ( $pb_network_contact_form ) {
 					<div class="social-media">
 						<?php if ( ! empty( $network_linkedin ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="linkedin" href="<?php echo $network_linkedin; ?>" title="<?php printf( __( '%s on LinkedIn', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
-								<svg class="icon--svg">
+							<a class="linkedin" href="<?php echo $network_linkedin; ?>">
+								<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 									<use href="#linkedin" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
@@ -71,8 +71,8 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_youtube ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="linkedin" href="<?php echo $network_youtube; ?>" title="<?php printf( __( '%s on YouTube', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
-								<svg class="icon--svg">
+							<a class="linkedin" href="<?php echo $network_youtube; ?>">
+								<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 									<use href="#youtube" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
@@ -81,8 +81,8 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_bluesky ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="linkedin" href="<?php echo $network_bluesky; ?>" title="<?php printf( __( '%s on Bluesky', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
-								<svg class="icon--svg">
+							<a class="bluesky" href="<?php echo $network_bluesky; ?>">
+								<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 									<use href="#bluesky" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
@@ -91,8 +91,8 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_facebook ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="facebook" href="<?php echo $network_facebook; ?>" title="<?php printf( __( '%s on Facebook', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
-								<svg class="icon--svg">
+							<a class="facebook" href="<?php echo $network_facebook; ?>">
+								<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 									<use href="#facebook" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
@@ -101,8 +101,8 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_twitter ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="twitter" href="<?php echo $network_twitter; ?>" title="<?php printf( __( '%s on X', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
-								<svg class="icon--svg">
+							<a class="twitter" href="<?php echo $network_twitter; ?>">
+								<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 									<use href="#twitter" />
 								</svg>
 								<?php /* translators: %s network name */ ?>
@@ -111,7 +111,7 @@ if ( $pb_network_contact_form ) {
 						<?php } ?>
 						<?php if ( ! empty( $network_instagram ) ) { ?>
 							<?php /* translators: %s network name */ ?>
-							<a class="instagram" href="<?php echo $network_instagram; ?>" title="<?php printf( __( '%s on Instagram', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) ); ?>">
+							<a class="instagram" href="<?php echo $network_instagram; ?>">
 								<svg class="icon--svg">
 									<use href="#instagram" />
 								</svg>
@@ -127,11 +127,11 @@ if ( $pb_network_contact_form ) {
 			</div>
 		</div>
 		<section class="footer__pressbooks">
-			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<?php // TODO. ?>
-				<svg class="icon--svg">
+			<a class="footer__pressbooks__icon" href="https://pressbooks.com">
+				<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 					<use xlink:href="#icon-pressbooks" />
 				</svg>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-aldine' ); ?></span>
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s Pressbooks */ ?>
@@ -145,14 +145,14 @@ if ( $pb_network_contact_form ) {
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a class="youtube" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?>">
-					<svg class="icon--svg">
+				<a class="youtube" href="https://www.youtube.com/user/pressbooks">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 						<use href="#youtube" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-aldine' ); ?></span>
 				</a>
-				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca" title="<?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?>">
-					<svg class="icon--svg">
+				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 						<use href="#linkedin" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
