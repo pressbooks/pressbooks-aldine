@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.23.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.2...1.23.3) (2025-08-21)
+
+
+### Bug Fixes
+
+* improve footer logo markup ([#504](https://github.com/pressbooks/pressbooks-aldine/issues/504)) ([8f59924](https://github.com/pressbooks/pressbooks-aldine/commit/8f59924903cbad1c6bd66c744e3c459aaeaaa4e7))
+* improve header display for mobile ([#516](https://github.com/pressbooks/pressbooks-aldine/issues/516)) ([6aa1589](https://github.com/pressbooks/pressbooks-aldine/commit/6aa1589c3f7370488e3807e9adf4afa09f46a89d))
+
 ## [1.23.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.1...1.23.2) (2025-07-31)
 
 
