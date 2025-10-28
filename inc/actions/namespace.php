@@ -75,6 +75,15 @@ function setup() {
 		]
 	);
 
+	// Register default header so WordPress knows how to update it back to it.
+	register_default_headers( [
+		'header' => [
+			'url' => get_template_directory_uri() . '/dist/images/header.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/dist/images/header.jpg',
+			'description' => __( 'Default Header', 'pressbooks-aldine' ),
+		],
+	] );
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
