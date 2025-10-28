@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.3...1.23.4) (2025-10-28)
+
+
+### Bug Fixes
+
+* allow user to remove custom header (resolves [#377](https://github.com/pressbooks/pressbooks-aldine/issues/377)) ([#521](https://github.com/pressbooks/pressbooks-aldine/issues/521)) ([3a47006](https://github.com/pressbooks/pressbooks-aldine/commit/3a4700617e41e7435234b08edee7407b333fa965))
+
 ## [1.23.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.2...1.23.3) (2025-08-21)
 
 
