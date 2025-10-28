@@ -588,10 +588,9 @@ function custom_homepage(): string {
  * @return string
  */
 function get_header_tag(): string {
-	$header_image = get_header_image();
 	$background_url = match ( true ) {
 		has_post_thumbnail() => get_the_post_thumbnail_url(),
-		( is_front_page() || get_page_template_slug() === 'page-custom-home.php' ) && $header_image => $header_image,
+		( is_front_page() || get_page_template_slug() === 'page-custom-home.php' ) && has_header_image() => get_header_image(),
 		get_page_template_slug() === 'page-custom-home.php' || is_front_page() => get_template_directory_uri() . '/dist/images/header.jpg',
 		default => get_template_directory_uri() . '/dist/images/catalog-header.jpg',
 	};
