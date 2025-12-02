@@ -2,19 +2,21 @@
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Eduardo Vera, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
+"issues\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Eduardo Vera, 2024\n"
-"Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
+"Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/"
+"ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
@@ -36,8 +38,9 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
-"Aldine は Pressbooks "
-"サイトネットワークのホームページのデフォルトテーマです。これは、多くの人に世界初の出版社とされるアルドゥス・マヌティウスが1494年に設立したアルド印刷所にちなんで名付けられました。"
+"Aldine は Pressbooks サイトネットワークのホームページのデフォルトテーマです。"
+"これは、多くの人に世界初の出版社とされるアルドゥス・マヌティウスが1494年に設"
+"立したアルド印刷所にちなんで名付けられました。"
 
 #. Author of the theme
 #: style.css
@@ -134,7 +137,9 @@ msgstr "依存関係が見つかりません"
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr "Aldine ディレクトリのルートから <code>composer install</code> を実行する必要があります。"
+msgstr ""
+"Aldine ディレクトリのルートから <code>composer install</code> を実行する必要"
+"があります。"
 
 #: header.php:50
 msgid "Skip to content"
@@ -168,7 +173,9 @@ msgstr "サイトネットワークのブロック2"
 #: inc/actions/namespace.php:238
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
-msgstr "このページはサイトネットワークのカタログを表示するため、編集するコンテンツがありません。"
+msgstr ""
+"このページはサイトネットワークのカタログを表示するため、編集するコンテンツが"
+"ありません。"
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
@@ -214,7 +221,9 @@ msgstr "Pressbooks について"
 msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
-msgstr "Pressbooks は本を使いやすい書くソフトウェアであり、すべての公開する必要な形式で本を作成できます。"
+msgstr ""
+"Pressbooks は本を使いやすい書くソフトウェアであり、すべての公開する必要な形式"
+"で本を作成できます。"
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
@@ -232,8 +241,9 @@ msgid ""
 "educational resources, textbooks, scholarly monographs, fiction and non-"
 "fiction books, white papers, syllabi, and more."
 msgstr ""
-"Pressbooks は本の簡単な制作ソフトウェアであり、自分のアイデアを簡単に書き、開発、共有できます。Pressbooks "
-"を使用して、オープン教育リソース、書籍、学術論文、フィクション・ノンフィクションの本、白書、シラバスなどを公開できます。"
+"Pressbooks は本の簡単な制作ソフトウェアであり、自分のアイデアを簡単に書き、開"
+"発、共有できます。Pressbooks を使用して、オープン教育リソース、書籍、学術論"
+"文、フィクション・ノンフィクションの本、白書、シラバスなどを公開できます。"
 
 #: inc/activation/namespace.php:43
 msgid ""
@@ -241,8 +251,9 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
-"Pressbooks で作成者はウェブにコンテンツを素早く公開したり、オンデマンド印刷またはデジタル配信用に特別に設計されたアクセス可能な EPUB と"
-" PDF を含む複数の形式にエクスポートを作成したりできます。"
+"Pressbooks で作成者はウェブにコンテンツを素早く公開したり、オンデマンド印刷ま"
+"たはデジタル配信用に特別に設計されたアクセス可能な EPUB と PDF を含む複数の形"
+"式にエクスポートを作成したりできます。"
 
 #: inc/activation/namespace.php:47
 msgid "suite of products"
@@ -264,23 +275,23 @@ msgid ""
 "resource available is the %s, which contains everything you need to know "
 "about creating, enriching and exporting your work."
 msgstr ""
-"Pressbooks プロジェクトのヘルプをお探しですか ? "
-"利用可能な最も充実したリソースは%sです。作品を作成、強化、エクスポートについて知っておく必要があるすべてを含みます。"
+"Pressbooks プロジェクトのヘルプをお探しですか ? 利用可能な最も充実したリソー"
+"スは%sです。作品を作成、強化、エクスポートについて知っておく必要があるすべて"
+"を含みます。"
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr "Pressbooks ユーザーガイド"
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
 "updates on the %1$s. If you’re just getting started with Pressbooks, this "
 "%2$s will guide you."
 msgstr ""
-"機能と製品更新について %1$sに短いビデオチュートリアルとウェビナーを表示できます。Pressbooks "
-"を始めたばかりの場合、この%2$sで進めます。"
+"機能と製品更新について %1$sに短いビデオチュートリアルとウェビナーを表示できま"
+"す。Pressbooks を始めたばかりの場合、この%2$sで進めます。"
 
 #: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
@@ -295,22 +306,24 @@ msgstr "短いビデオシリーズ"
 msgid ""
 "If you learn best by learning by attending live training sessions, you can "
 "register for and attend one of Pressbooks' %s."
-msgstr "ライブトレーニングセッションに参加するのが一番よくわかったら、いずれかの Pressbooks の%sに登録と参加できます。"
+msgstr ""
+"ライブトレーニングセッションに参加するのが一番よくわかったら、いずれかの "
+"Pressbooks の%sに登録と参加できます。"
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr "毎月のウェビナー"
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
 "answers to some commonly asked questions. Pressbooks also maintains a %2$s "
 "where you can ask and answer questions of other users."
 msgstr ""
-"%1$sにも他の役に立つサポートリソースへのリンクが含んで、いくつかのよく寄せられる質問の答えがあります。Pressbooks "
-"は質問して他のユーザーを返信できる%2$sも管理します。"
+"%1$sにも他の役に立つサポートリソースへのリンクが含んで、いくつかのよく寄せら"
+"れる質問の答えがあります。Pressbooks は質問して他のユーザーを返信できる%2$sも"
+"管理します。"
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
@@ -327,8 +340,9 @@ msgid ""
 "network managers. If you don’t know who your network managers are, please "
 "fill out the %s to be put in touch with them."
 msgstr ""
-"追加の必要なサポートについては、機関の Pressbooks "
-"サイトネットワーク管理者に連絡します。サイトネットワーク管理者がわからない場合、連絡するには%sを入力してください。"
+"追加の必要なサポートについては、機関の Pressbooks サイトネットワーク管理者に"
+"連絡します。サイトネットワーク管理者がわからない場合、連絡するには%sを入力し"
+"てください。"
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
@@ -607,14 +621,19 @@ msgstr "何も見つかりませんでした"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "最初の投稿を公開する準備はできましたか ? <a href=\"%1$s\">ここから始めましょう</a>。"
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の投稿を公開する準備はできましたか ? <a href=\"%1$s\">ここから始めましょ"
+"う</a>。"
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
+msgstr ""
+"検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度"
+"お試しください。"
 
 #: partials/content-none.php:48
 msgid ""

@@ -2,19 +2,21 @@
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Omshivaprakash H L <omshivaprakash@gmail.com>, 2022
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
+"issues\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2022\n"
-"Language-Team: Kannada (https://app.transifex.com/pressbooks/teams/9194/kn/)\n"
+"Language-Team: Kannada (https://app.transifex.com/pressbooks/teams/9194/"
+"kn/)\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
@@ -36,9 +38,9 @@ msgid ""
 "named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
 "regarded by many as the world’s first publisher."
 msgstr ""
-"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ನೆಟ್‍ವರ್ಕ್ ಗಳ ಮುಖಪುಟಕ್ಕೆ ಆಲ್ಡಿನ್ ಡೀಫಾಲ್ಟ್ ವಿಷಯವಾಗಿದೆ. ಇದನ್ನು "
-"1494 ರಲ್ಲಿ ಆಲ್ಡಸ್ ಮ್ಯಾನುಟಿಯಸ್ ಸ್ಥಾಪಿಸಿದ ಆಲ್ಡಿನ್ ಪ್ರೆಸ್‍ಗೆ ಹೆಸರಿಸಲಾಗಿದೆ, "
-"ಇದನ್ನು ವಿಶ್ವದ ಮೊದಲ ಪ್ರಕಾಶಕರು ಎಂದು ಅನೇಕರು ಪರಿಗಣಿಸುತ್ತಾರೆ."
+"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ನೆಟ್‍ವರ್ಕ್ ಗಳ ಮುಖಪುಟಕ್ಕೆ ಆಲ್ಡಿನ್ ಡೀಫಾಲ್ಟ್ ವಿಷಯವಾಗಿದೆ. ಇದನ್ನು 1494 ರಲ್ಲಿ ಆಲ್ಡಸ್ "
+"ಮ್ಯಾನುಟಿಯಸ್ ಸ್ಥಾಪಿಸಿದ ಆಲ್ಡಿನ್ ಪ್ರೆಸ್‍ಗೆ ಹೆಸರಿಸಲಾಗಿದೆ, ಇದನ್ನು ವಿಶ್ವದ ಮೊದಲ ಪ್ರಕಾಶಕರು ಎಂದು "
+"ಅನೇಕರು ಪರಿಗಣಿಸುತ್ತಾರೆ."
 
 #. Author of the theme
 #: style.css
@@ -171,8 +173,8 @@ msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 2"
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"ಈ ಪುಟವು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಂಪಾದಿಸಲು "
-"ಯಾವುದೇ ವಿಷಯವಿಲ್ಲ."
+"ಈ ಪುಟವು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಂಪಾದಿಸಲು ಯಾವುದೇ "
+"ವಿಷಯವಿಲ್ಲ."
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
@@ -219,8 +221,8 @@ msgid ""
 "Pressbooks is easy-to-use book writing software that lets you create a book "
 "in all the formats you need to publish."
 msgstr ""
-"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸುಲಭವಾಗಿ ಬಳಸಬಹುದಾದ ಪುಸ್ತಕ ಬರೆಯುವ ಸಾಫ್ಟ್ ವೇರ್ ಆಗಿದ್ದು, ನೀವು "
-"ಪ್ರಕಟಿಸಬೇಕಾದ ಎಲ್ಲಾ ಸ್ವರೂಪಗಳಲ್ಲಿ ಪುಸ್ತಕವನ್ನು ರಚಿಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ."
+"ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸುಲಭವಾಗಿ ಬಳಸಬಹುದಾದ ಪುಸ್ತಕ ಬರೆಯುವ ಸಾಫ್ಟ್ ವೇರ್ ಆಗಿದ್ದು, ನೀವು ಪ್ರಕಟಿಸಬೇಕಾದ "
+"ಎಲ್ಲಾ ಸ್ವರೂಪಗಳಲ್ಲಿ ಪುಸ್ತಕವನ್ನು ರಚಿಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ."
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
@@ -271,8 +273,7 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -299,8 +300,7 @@ msgstr ""
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -344,8 +344,7 @@ msgstr "ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿದೆ."
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+msgstr "ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
@@ -602,26 +601,26 @@ msgstr "ಏನೂ ಸಿಗಲಿಲ್ಲ"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"ನಿಮ್ಮ ಮೊದಲ ಪೋಸ್ಟ್ ಪ್ರಕಟಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ? <a href=\"%1$s\">ಇಲ್ಲಿ "
-"ಪ್ರಾರಂಭಿಸಿ</a>."
+"ನಿಮ್ಮ ಮೊದಲ ಪೋಸ್ಟ್ ಪ್ರಕಟಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ? <a href=\"%1$s\">ಇಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ</a>."
 
 #: partials/content-none.php:41
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಹುಡುಕಾಟದ ನಿಯಮಗಳಿಗೆ ಯಾವುದೂ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು "
-"ಕೆಲವು ವಿಭಿನ್ನ ಕೀವರ್ಡ್ ಗಳೊಂದಿಗೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+"ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಹುಡುಕಾಟದ ನಿಯಮಗಳಿಗೆ ಯಾವುದೂ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಕೆಲವು "
+"ವಿಭಿನ್ನ ಕೀವರ್ಡ್ ಗಳೊಂದಿಗೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
 #: partials/content-none.php:48
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"ನೀವು ಹುಡುಕುತ್ತಿರುವುದನ್ನು ನಾವು ಕಂಡುಹಿಡಿಯಲು ಸಾಧ್ಯವಿಲ್ಲ ಎಂದು ತೋರುತ್ತದೆ. ಬಹುಶಃ "
-"ಶೋಧವು ಸಹಾಯ ಮಾಡಬಹುದು."
+"ನೀವು ಹುಡುಕುತ್ತಿರುವುದನ್ನು ನಾವು ಕಂಡುಹಿಡಿಯಲು ಸಾಧ್ಯವಿಲ್ಲ ಎಂದು ತೋರುತ್ತದೆ. ಬಹುಶಃ ಶೋಧವು "
+"ಸಹಾಯ ಮಾಡಬಹುದು."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
