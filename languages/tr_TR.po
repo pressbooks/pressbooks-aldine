@@ -3,19 +3,21 @@
 # Translators:
 # Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
 # Zeki Tuman (ztuman) <afuatdemir@gmail.com>, 2024
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
+"issues\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Zeki Tuman (ztuman) <afuatdemir@gmail.com>, 2024\n"
-"Language-Team: Turkish (Turkey) (https://app.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
+"Language-Team: Turkish (Turkey) (https://app.transifex.com/pressbooks/teams/"
+"9194/tr_TR/)\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr_TR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
@@ -240,8 +242,8 @@ msgid ""
 msgstr ""
 "Pressbooks, fikirlerinizi yazmayı, geliştirmeyi ve paylaşmayı kolaylaştıran "
 "basit bir kitap yazma yazılımıdır. Açık eğitim kaynakları, ders kitapları, "
-"bilimsel monografiler, kurgu ve kurgu olmayan kitapları, teknik incelemeler,"
-" ders programları ve daha fazlasını yayınlamak için Pressbooks'u "
+"bilimsel monografiler, kurgu ve kurgu olmayan kitapları, teknik incelemeler, "
+"ders programları ve daha fazlasını yayınlamak için Pressbooks'u "
 "kullanabilirsiniz."
 
 #: inc/activation/namespace.php:43
@@ -250,8 +252,8 @@ msgid ""
 "produce exports in multiple formats, including accessible EPUBs and PDFs "
 "specially designed for print-on-demand or digital distribution."
 msgstr ""
-"Pressbooks, içerik oluşturucuların içeriklerini hızla web'de yayınlamalarına"
-" ve isteğe bağlı olarak baskı veya dijital dağıtım için özel olarak "
+"Pressbooks, içerik oluşturucuların içeriklerini hızla web'de yayınlamalarına "
+"ve isteğe bağlı olarak baskı veya dijital dağıtım için özel olarak "
 "tasarlanmış erişilebilir EPUB'lar ve PDF'ler dahil olmak üzere birden çok "
 "biçimde indirilebilir dosyalar üretmelerine imkan tanır."
 
@@ -283,8 +285,7 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr "Pressbooks Kullanıcı Kılavuzu "
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -316,8 +317,7 @@ msgstr ""
 msgid "monthly webinars"
 msgstr "aylık webinarlar "
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -627,10 +627,11 @@ msgstr "Hiçbirşey Bulunamadı"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"İlk paylaşımını yapmak için hazır mısın? <a href=\"%1$s\">Buradan "
-"başlayın</a>."
+"İlk paylaşımını yapmak için hazır mısın? <a href=\"%1$s\">Buradan başlayın</"
+"a>."
 
 #: partials/content-none.php:41
 msgid ""
