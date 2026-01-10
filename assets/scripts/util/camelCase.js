@@ -1,6 +1,5 @@
 /**
  * the most terrible camelizer on the internet, guaranteed!
- *
  * @param {string} str String that isn't camel-case, e.g., CAMeL_CaSEiS-harD
  * @returns {string} String converted to camel-case, e.g., camelCaseIsHard
  */

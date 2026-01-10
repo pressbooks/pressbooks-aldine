@@ -1,5 +1,5 @@
-const Isotope = require( 'isotope-layout' );
-const jQueryBridget = require( 'jquery-bridget' );
+import Isotope from 'isotope-layout';
+import jQueryBridget from 'jquery-bridget';
 
 export default {
 	/**

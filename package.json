@@ -2,7 +2,7 @@
 	"name": "@pressbooks/pressbooks-aldine",
 	"author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
 	"homepage": "https://github.com/pressbooks/pressbooks-aldine/",
-	"description": "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.",
+	"description": "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world's first publisher.",
 	"keywords": [
 		"publishing",
 		"catalog",
@@ -10,6 +10,7 @@
 		"default-theme"
 	],
 	"private": true,
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/pressbooks/pressbooks-aldine.git"
@@ -23,18 +24,14 @@
 			"url": "https://github.com/pressbooks/pressbooks-aldine/tree/production/LICENSE.md"
 		}
 	],
-	"browserslist": [
-		"last 2 versions",
-		"android 4",
-		"opera 12"
-	],
 	"eslintConfig": {
-		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
+		"extends": "./node_modules/pressbooks-build-tools/config/eslint.cjs",
 		"globals": {
-			"$": true,
 			"aldine": true,
 			"PB_A11y": true,
-			"tinymce": true
+			"tinymce": true,
+			"PB_Ajax": true,
+			"PB_Aldine_Admin": true
 		},
 		"rules": {
 			"import/no-anonymous-default-export": [
@@ -61,22 +58,20 @@
 		}
 	},
 	"scripts": {
-		"build": "npm run production",
-		"lint:scripts": "eslint \"assets/scripts/**/*.js\"",
-		"lint:styles": "stylelint \"assets/styles/**/*.scss\"",
-		"lint": "run-s lint:*",
-		"lint:fix": "eslint --fix \"assets/scripts/**/*.js\"",
-		"production": "mix --production",
-		"rmdist": "rimraf dist",
-		"start": "mix watch",
-		"test": "npm run lint"
+		"build": "pressbooks-build-tools build",
+		"watch": "pressbooks-build-tools dev",
+		"lint:scripts": "pressbooks-build-tools lint:scripts 'assets/scripts/**/*.js'",
+		"lint:styles": "pressbooks-build-tools lint:styles 'assets/styles/**/*.scss'",
+		"fix:scripts": "pressbooks-build-tools fix:scripts 'assets/scripts/**/*.js'",
+		"fix:styles": "pressbooks-build-tools fix:styles 'assets/styles/**/*.scss'",
+		"lint": "npm run lint:scripts && npm run lint:styles"
 	},
 	"engines": {
-		"node": ">= 18"
+		"node": ">= 22"
 	},
 	"devDependencies": {
-		"npm-run-all": "^4.1.5",
-		"pressbooks-build-tools": "^4.0.0"
+		"pressbooks-build-tools": "^5.0.0",
+		"vite-plugin-static-copy": "^2.2.0"
 	},
 	"dependencies": {
 		"aetna": "^1.1.0",

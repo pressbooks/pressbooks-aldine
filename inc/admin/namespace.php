@@ -7,7 +7,8 @@
 
 namespace Aldine\Admin;
 
-use PressbooksMix\Assets;
+use PressbooksFrontendTools\Assets;
+use PressbooksFrontendTools\AssetType;
 use Pressbooks\Admin\Network\SharingAndPrivacyOptions;
 use Pressbooks\BookDirectory;
 use Pressbooks\DataCollector\Book as BookDataCollector;
@@ -27,9 +28,10 @@ function admin_scripts( $hook ) {
 		return;
 	}
 
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-	wp_enqueue_script( 'pressbooks-aldine-admin', $assets->getPath( 'scripts/catalog-admin.js' ), [ 'jquery' ] );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
+	$assets->enqueue( 'assets/scripts/catalog-admin.js', 'pressbooks-aldine-admin', [
+		'dependencies' => [ 'jquery' ],
+	] );
 
 	wp_localize_script(
 		'pressbooks-aldine-admin', 'PB_Aldine_Admin', [
@@ -93,7 +95,8 @@ function catalog_columns( $columns ) {
 function catalog_column( $column, $blog_id ) {
 
 	if ( 'in_catalog' === $column && ! is_main_site( $blog_id ) ) { ?>
-		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-label="<?php echo esc_attr_x( 'Show in Catalog', 'pressbooks-aldine' ); ?>" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?> <?php
+		<input class="in-catalog" type="checkbox" name="in_catalog" value="1" aria-label="<?php echo esc_attr_x( 'Show in Catalog', 'pressbooks-aldine' ); ?>" <?php checked( get_blog_option( $blog_id, \Aldine\Admin\BLOG_OPTION ), 1 ); ?>
+		<?php
 		if ( ! get_blog_option( $blog_id, 'blog_public' ) ) {
 
 			?>

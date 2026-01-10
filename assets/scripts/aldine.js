@@ -1,3 +1,6 @@
+// import styles
+import '../styles/aldine.scss';
+
 // import local dependencies
 import catalog from './routes/catalog';
 import common from './routes/common';
