@@ -162,7 +162,7 @@ function enqueue_assets() {
 	// Register aldine/style for backward compatibility (used by pressbooks-network-catalog).
 	wp_enqueue_style( 'aldine/style', $assets->getAssetUrl( 'assets/styles/aldine.scss' ), [], null );
 	$assets->enqueue( 'assets/scripts/aldine.js', 'aldine/script', [
-		'dependencies' => [ 'jquery' ]
+		'dependencies' => [ 'jquery' ],
 	] );
 	wp_enqueue_style( 'aldine/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600', false, null );
 }
