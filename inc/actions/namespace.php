@@ -160,13 +160,9 @@ function enqueue_assets() {
 	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
 	// Register aldine/style for backward compatibility (used by pressbooks-network-catalog).
-	// The CSS is bundled with aldine.js but we also register it separately so other plugins can depend on it.
-	wp_register_style( 'aldine/style', $assets->getAssetUrl( 'assets/styles/aldine.scss' ), [], null );
-
-	// CSS is imported in aldine.js, so enqueue the script with aldine/style as a CSS dependency.
+	wp_enqueue_style( 'aldine/style', $assets->getAssetUrl( 'assets/styles/aldine.scss' ), [], null );
 	$assets->enqueue( 'assets/scripts/aldine.js', 'aldine/script', [
-		'dependencies' => [ 'jquery' ],
-		'css-dependencies' => [ 'aldine/style' ],
+		'dependencies' => [ 'jquery' ]
 	] );
 	wp_enqueue_style( 'aldine/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600', false, null );
 }

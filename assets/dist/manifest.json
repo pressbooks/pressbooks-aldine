@@ -1,12 +1,9 @@
 {
   "assets/scripts/aldine.js": {
-    "file": "assets/scripts/aldine-CzBJyMSy.js",
+    "file": "assets/scripts/aldine-NpwmmsYP.js",
     "name": "scripts/aldine",
     "src": "assets/scripts/aldine.js",
-    "isEntry": true,
-    "css": [
-      "assets/styles/aldine-CILQ7cCT.css"
-    ]
+    "isEntry": true
   },
   "assets/scripts/call-to-action.js": {
     "file": "assets/scripts/call-to-action-CyXUWa1O.js",
