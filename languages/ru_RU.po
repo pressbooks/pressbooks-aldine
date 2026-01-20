@@ -1,25 +1,21 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Antonio D., 2024
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
-"issues\n"
+"Project-Id-Version: Aldine 1.19.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Antonio D., 2024\n"
-"Language-Team: Russian (https://app.transifex.com/pressbooks/teams/9194/"
-"ru/)\n"
-"Language: ru\n"
+"Language-Team: Russian (https://app.transifex.com/pressbooks/teams/9194/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -275,7 +271,8 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -302,7 +299,8 @@ msgstr ""
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -380,7 +378,8 @@ msgstr "Основной цвет (при наведении)"
 #: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
-"Вариация основного цвета, используемого для основных элементов при наведении."
+"Вариация основного цвета, используемого для основных элементов при "
+"наведении."
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color"
@@ -608,8 +607,7 @@ msgstr "Ничего не найдено"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: partials/content-none.php:41
@@ -625,8 +623,8 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Кажется, мы не можем найти того, что Вы ищите. Возможно, Вам поможет функция "
-"поиска."
+"Кажется, мы не можем найти того, что Вы ищите. Возможно, Вам поможет функция"
+" поиска."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"

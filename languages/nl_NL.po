@@ -1,22 +1,20 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Nienke Coppens <nienke.coppens@gmail.com>, 2024
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
-"issues\n"
+"Project-Id-Version: Aldine 1.19.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Nienke Coppens <nienke.coppens@gmail.com>, 2024\n"
-"Language-Team: Dutch (Netherlands) (https://app.transifex.com/pressbooks/"
-"teams/9194/nl_NL/)\n"
-"Language: nl_NL\n"
+"Language-Team: Dutch (Netherlands) (https://app.transifex.com/pressbooks/teams/9194/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
@@ -39,8 +37,8 @@ msgid ""
 "regarded by many as the world’s first publisher."
 msgstr ""
 "Aldine is het standaard thema voor de home pagina van Pressbooks netwerken. "
-"Het is vernoemd naar de Aldine Press, opgericht door Aldus Manutios in 1494, "
-"die gezien wordt door velen als &acute;s wereld&acute;s eerste uitgever."
+"Het is vernoemd naar de Aldine Press, opgericht door Aldus Manutios in 1494,"
+" die gezien wordt door velen als &acute;s wereld&acute;s eerste uitgever."
 
 #. Author of the theme
 #: style.css
@@ -272,7 +270,8 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -299,7 +298,8 @@ msgstr ""
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -378,7 +378,8 @@ msgstr "Primaire Kleur (Zwevend)"
 #: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
-"Variant van de primaire kleur, gebruikt voor primaire element zweefstatussen."
+"Variant van de primaire kleur, gebruikt voor primaire element "
+"zweefstatussen."
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color"
@@ -386,7 +387,8 @@ msgstr "Accent Kleur"
 
 #: inc/customizer/namespace.php:93
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr "Accentkleur, gebruikt voor verfraai&iuml;ngen en secundaire elementen."
+msgstr ""
+"Accentkleur, gebruikt voor verfraai&iuml;ngen en secundaire elementen."
 
 #: inc/customizer/namespace.php:98
 msgid "Accent Color (Hover)"
@@ -395,7 +397,8 @@ msgstr "Accenkleur (Zwevend)"
 #: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
-"Variant van de accentkleur, gebruikt voor secundaire element zweef statussen."
+"Variant van de accentkleur, gebruikt voor secundaire element zweef "
+"statussen."
 
 #: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
@@ -604,8 +607,7 @@ msgstr "Niets gevonden"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Klaar om uw eerste bericht te publiceren? <a href=\"%1$s\">Begin hier</a>."
 
