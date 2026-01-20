@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # Hugh McGuire <hugh@pressbooks.com>, 2018
@@ -9,22 +9,21 @@
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2022
 # MMOUNA MOUM, 2022
-#
+# Mich Spieler, 2026
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
-"issues\n"
+"Project-Id-Version: Aldine 1.19.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: MMOUNA MOUM, 2022\n"
+"Last-Translator: Mich Spieler, 2026\n"
 "Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -89,17 +88,17 @@ msgstr "Les commentaires ont été désactivés."
 #. translators: %s network name
 #: footer.php:64 footer.php:69
 msgid "%s on LinkedIn"
-msgstr ""
+msgstr "%s sur LinkedIn"
 
 #. translators: %s network name
 #: footer.php:74 footer.php:79
 msgid "%s on YouTube"
-msgstr ""
+msgstr "%s sur YouTube"
 
 #. translators: %s network name
 #: footer.php:84 footer.php:89
 msgid "%s on Bluesky"
-msgstr ""
+msgstr "%s sur Bluesky"
 
 #. translators: %s network name
 #: footer.php:94 footer.php:99
@@ -109,7 +108,7 @@ msgstr "%s sur Facebook"
 #. translators: %s network name
 #: footer.php:104 footer.php:109
 msgid "%s on X"
-msgstr ""
+msgstr "%s sur X"
 
 #. translators: %s network name
 #: footer.php:114 footer.php:119
@@ -139,7 +138,7 @@ msgstr "Pressbooks sur YouTube"
 
 #: footer.php:154 footer.php:158
 msgid "Pressbooks on LinkedIn"
-msgstr ""
+msgstr "Pressbooks sur LinkedIn"
 
 #: functions.php:19
 msgid "Dependencies Missing"
@@ -184,8 +183,8 @@ msgstr "Bas de page du réseau, bloc 2"
 msgid ""
 "This page displays your network catalog, so there is no content to edit."
 msgstr ""
-"Votre catalogue réseau s&rsquo;affiche sur cette page, il n&rsquo;y a pas de "
-"contenu à modifier."
+"Votre catalogue réseau s&rsquo;affiche sur cette page, il n&rsquo;y a pas de"
+" contenu à modifier."
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
@@ -297,7 +296,8 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr "Guide de l'utilisateur de Pressbooks"
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -330,7 +330,8 @@ msgstr ""
 msgid "monthly webinars"
 msgstr "webinaires mensuels en ligne"
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -396,11 +397,11 @@ msgstr "Dans le catalogue"
 
 #: inc/customizer/namespace.php:74
 msgid "Header Background"
-msgstr ""
+msgstr "Arrière-plan de l’en-tête"
 
 #: inc/customizer/namespace.php:75
 msgid "Header background color."
-msgstr ""
+msgstr "Couleur d’arrière-plan de l’en-tête."
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color"
@@ -461,15 +462,15 @@ msgstr "Réseaux sociaux"
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/customizer/namespace.php:160
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #: inc/customizer/namespace.php:173
 msgid "Bluesky"
-msgstr ""
+msgstr "Bluesky"
 
 #: inc/customizer/namespace.php:186
 msgid "Facebook"
@@ -477,7 +478,7 @@ msgstr "Facebook"
 
 #: inc/customizer/namespace.php:199
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: inc/customizer/namespace.php:212
 msgid "Instagram"
@@ -501,19 +502,19 @@ msgstr "Titre du catalogue de page couverture"
 
 #: inc/customizer/namespace.php:257
 msgid "Select a book"
-msgstr ""
+msgstr "Sélectionner un livre"
 
 #: inc/customizer/namespace.php:267
 msgid "Featured book"
-msgstr ""
+msgstr "Livre en vedette"
 
 #: inc/customizer/namespace.php:278
 msgid "Front Page Settings"
-msgstr ""
+msgstr "Paramètres de la page d’accueil"
 
 #: inc/customizer/namespace.php:292
 msgid "Network Home Page"
-msgstr ""
+msgstr "Page d’accueil du réseau"
 
 #: inc/customizer/namespace.php:301
 msgid "Contact Form"
@@ -646,11 +647,10 @@ msgstr "Aucune résultat"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre première publication? <a href=\"%1$s\">Commencez ici</"
-"a>."
+"Prêt à publier votre première publication? <a href=\"%1$s\">Commencez "
+"ici</a>."
 
 #: partials/content-none.php:41
 msgid ""

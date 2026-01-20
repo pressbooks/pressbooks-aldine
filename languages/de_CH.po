@@ -1,24 +1,22 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 # Translators:
 # nebulon42, 2024
 # Steel Wagstaff <steel@pressbooks.com>, 2024
 # Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2024
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/"
-"issues\n"
+"Project-Id-Version: Aldine 1.19.3\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
 "PO-Revision-Date: 2018-03-06 14:24+0000\n"
 "Last-Translator: Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2024\n"
-"Language-Team: German (Switzerland) (https://app.transifex.com/pressbooks/"
-"teams/9194/de_CH/)\n"
-"Language: de_CH\n"
+"Language-Team: German (Switzerland) (https://app.transifex.com/pressbooks/teams/9194/de_CH/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de_CH\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-aldine\n"
 "X-Generator: WP-CLI 2.11.0\n"
@@ -224,7 +222,8 @@ msgid ""
 "in all the formats you need to publish."
 msgstr ""
 "Pressbooks ist eine einfach zu bedienende Software zum Erstellen von "
-"Büchern, mit der Sie ein Buch in allen gewünschten Formaten erstellen können."
+"Büchern, mit der Sie ein Buch in allen gewünschten Formaten erstellen "
+"können."
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
@@ -275,7 +274,8 @@ msgstr ""
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
+#. Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
 msgid ""
 "You can find short video tutorials and webinars about features and product "
@@ -302,7 +302,8 @@ msgstr ""
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to
+#. Pressbooks community forum
 #: inc/activation/namespace.php:77
 msgid ""
 "The %1$s also contains links to other useful support resources and has "
@@ -609,8 +610,7 @@ msgstr "Nichts gefunden"
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Bereit Ihren ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Fangen Sie "
 "hier an</a>."
@@ -620,8 +620,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber nichts passt auf Ihre Suchbegriffe. Bitte versuchen Sie "
-"es erneut mit anderen Schlagwörtern."
+"Entschuldigung, aber nichts passt auf Ihre Suchbegriffe. Bitte versuchen Sie"
+" es erneut mit anderen Schlagwörtern."
 
 #: partials/content-none.php:48
 msgid ""
