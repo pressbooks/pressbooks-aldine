@@ -9,8 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  jobs:
-    update-pot-file:
+  update-pot-file:
       uses: pressbooks/reusable-workflows/.github/workflows/update-pot.yml@main
       secrets: inherit
       with:
