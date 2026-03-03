@@ -1,17 +1,17 @@
-# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2026 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.3\n"
+"Project-Id-Version: Aldine 1.24.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
+"POT-Creation-Date: 2026-03-03T21:21:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pressbooks-aldine\n"
 
 #. Theme Name of the theme
@@ -49,11 +49,13 @@ msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
+#, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
+#, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -65,48 +67,55 @@ msgid "Comments are closed."
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:64
 #: footer.php:69
+#, php-format
 msgid "%s on LinkedIn"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:74
 #: footer.php:79
+#, php-format
 msgid "%s on YouTube"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:84
 #: footer.php:89
+#, php-format
 msgid "%s on Bluesky"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:94
 #: footer.php:99
+#, php-format
 msgid "%s on Facebook"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:104
 #: footer.php:109
+#, php-format
 msgid "%s on X"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:114
 #: footer.php:119
+#, php-format
 msgid "%s on Instagram"
+msgstr ""
+
+#: footer.php:134
+msgid "Pressbooks"
 msgstr ""
 
 #. translators: %s Pressbooks
 #: footer.php:138
+#, php-format
 msgid "Powered by %s"
 msgstr ""
 
 #: footer.php:140
-msgid "Guides and Tutorials"
+#: inc/activation/namespace.php:62
+#: inc/activation/namespace.php:78
+msgid "Pressbooks User Guide"
 msgstr ""
 
 #: footer.php:141
@@ -118,12 +127,10 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: footer.php:148
 #: footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr ""
 
-#: footer.php:154
 #: footer.php:158
 msgid "Pressbooks on LinkedIn"
 msgstr ""
@@ -136,75 +143,80 @@ msgstr ""
 msgid "You must run <code>composer install</code> from the Aldine directory."
 msgstr ""
 
-#: header.php:50
+#: header.php:59
 msgid "Skip to content"
 msgstr ""
 
 #. translators: %s name of network
-#: header.php:81
+#: header.php:73
+#, php-format
 msgid "Logo for %s"
 msgstr ""
 
-#: header.php:92
-msgid "Toggle Menu"
+#: header.php:84
+msgid "Menu"
 msgstr ""
 
-#: inc/actions/namespace.php:48
+#: inc/actions/namespace.php:49
 #: inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/actions/namespace.php:49
+#: inc/actions/namespace.php:50
 #: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/actions/namespace.php:122
+#: inc/actions/namespace.php:83
+msgid "Default Header"
+msgstr ""
+
+#: inc/actions/namespace.php:132
 msgid "Network Footer Block 1"
 msgstr ""
 
-#: inc/actions/namespace.php:134
+#: inc/actions/namespace.php:144
 msgid "Network Footer Block 2"
 msgstr ""
 
-#: inc/actions/namespace.php:238
+#: inc/actions/namespace.php:249
 msgid "This page displays your network catalog, so there is no content to edit."
 msgstr ""
 
-#: inc/actions/namespace.php:295
+#: inc/actions/namespace.php:306
 msgid "Page Section"
 msgstr ""
 
-#: inc/actions/namespace.php:296
+#: inc/actions/namespace.php:307
 #: partials/content-page-catalog.php:72
 msgid "Title"
 msgstr ""
 
-#: inc/actions/namespace.php:297
+#: inc/actions/namespace.php:308
 msgid "Standard"
 msgstr ""
 
-#: inc/actions/namespace.php:298
+#: inc/actions/namespace.php:309
 msgid "Accent"
 msgstr ""
 
-#: inc/actions/namespace.php:299
+#: inc/actions/namespace.php:310
 msgid "Bordered"
 msgstr ""
 
-#: inc/actions/namespace.php:300
+#: inc/actions/namespace.php:311
 msgid "Borderless"
 msgstr ""
 
-#: inc/actions/namespace.php:303
+#: inc/actions/namespace.php:314
 msgid "Call to Action"
 msgstr ""
 
-#: inc/actions/namespace.php:304
+#: inc/actions/namespace.php:315
 msgid "Text"
 msgstr ""
 
-#: inc/actions/namespace.php:305
+#: inc/actions/namespace.php:316
 msgid "Link"
 msgstr ""
 
@@ -250,15 +262,13 @@ msgstr ""
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
+#, php-format
 msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
-msgstr ""
-
-#: inc/activation/namespace.php:62
-msgid "Pressbooks User Guide"
 msgstr ""
 
 #. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
+#, php-format
 msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
 msgstr ""
 
@@ -272,6 +282,7 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
+#, php-format
 msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
 msgstr ""
 
@@ -279,13 +290,10 @@ msgstr ""
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
+#. translators: %1$s: link to Pressbooks User Guide page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
+#, php-format
 msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
-msgstr ""
-
-#: inc/activation/namespace.php:78
-msgid "Pressbooks support page"
 msgstr ""
 
 #: inc/activation/namespace.php:79
@@ -294,6 +302,7 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
+#, php-format
 msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
 msgstr ""
 
@@ -313,6 +322,22 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: inc/admin/class-pagelanguagemetabox.php:82
+msgid "Page Language"
+msgstr ""
+
+#: inc/admin/class-pagelanguagemetabox.php:100
+msgid "Select Language"
+msgstr ""
+
+#: inc/admin/class-pagelanguagemetabox.php:102
+msgid "Choose"
+msgstr ""
+
+#: inc/admin/class-pagelanguagemetabox.php:146
+msgid "Selected language is not supported."
+msgstr ""
+
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
 msgstr ""
@@ -329,145 +354,151 @@ msgstr ""
 msgid "In Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:74
+#: inc/customizer/namespace.php:117
 msgid "Header Background"
 msgstr ""
 
-#: inc/customizer/namespace.php:75
+#: inc/customizer/namespace.php:118
 msgid "Header background color."
 msgstr ""
 
-#: inc/customizer/namespace.php:80
+#: inc/customizer/namespace.php:123
+msgid "Header Links"
+msgstr ""
+
+#: inc/customizer/namespace.php:124
+msgid "Header link color."
+msgstr ""
+
+#: inc/customizer/namespace.php:129
 msgid "Primary Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:81
+#: inc/customizer/namespace.php:130
 msgid "Primary color, used for links and other primary elements."
 msgstr ""
 
-#: inc/customizer/namespace.php:86
+#: inc/customizer/namespace.php:135
 msgid "Primary Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:87
+#: inc/customizer/namespace.php:136
 msgid "Variant of the primary color, used for primary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:92
+#: inc/customizer/namespace.php:141
 msgid "Accent Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:93
+#: inc/customizer/namespace.php:142
 msgid "Accent color, used for flourishes and secondary elements."
 msgstr ""
 
-#: inc/customizer/namespace.php:98
+#: inc/customizer/namespace.php:147
 msgid "Accent Color (Hover)"
 msgstr ""
 
-#: inc/customizer/namespace.php:99
+#: inc/customizer/namespace.php:148
 msgid "Variant of the accent color, used for secondary element hover states."
 msgstr ""
 
-#: inc/customizer/namespace.php:104
+#: inc/customizer/namespace.php:153
 msgid "Primary Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:105
+#: inc/customizer/namespace.php:154
 msgid "Used for text on a primary background."
 msgstr ""
 
-#: inc/customizer/namespace.php:110
+#: inc/customizer/namespace.php:159
 msgid "Accent Foreground Color"
 msgstr ""
 
-#: inc/customizer/namespace.php:111
+#: inc/customizer/namespace.php:160
 msgid "Used for text on an accent color background."
 msgstr ""
 
-#: inc/customizer/namespace.php:135
+#: inc/customizer/namespace.php:191
 msgid "Social Media"
 msgstr ""
 
-#: inc/customizer/namespace.php:147
+#: inc/customizer/namespace.php:203
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/customizer/namespace.php:160
+#: inc/customizer/namespace.php:216
 msgid "YouTube"
 msgstr ""
 
-#: inc/customizer/namespace.php:173
+#: inc/customizer/namespace.php:229
 msgid "Bluesky"
 msgstr ""
 
-#: inc/customizer/namespace.php:186
+#: inc/customizer/namespace.php:242
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer/namespace.php:199
+#: inc/customizer/namespace.php:255
 msgid "X"
 msgstr ""
 
-#: inc/customizer/namespace.php:212
+#: inc/customizer/namespace.php:268
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer/namespace.php:221
+#: inc/customizer/namespace.php:277
 msgid "Front Page Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:233
+#: inc/customizer/namespace.php:289
 msgid "Show Front Page Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:244
-#: partials/content-front-page.php:15
+#: inc/customizer/namespace.php:300
+#: inc/shortcodes/namespace.php:78
+#: partials/content-front-page.php:16
+#: partials/content-page-custom-home.php:15
 msgid "Our Latest Titles"
 msgstr ""
 
-#: inc/customizer/namespace.php:249
+#: inc/customizer/namespace.php:305
 msgid "Front Page Catalog Title"
 msgstr ""
 
-#: inc/customizer/namespace.php:257
-msgid "Select a book"
+#: inc/customizer/namespace.php:322
+msgid "Featured Book"
 msgstr ""
 
-#: inc/customizer/namespace.php:267
-msgid "Featured book"
-msgstr ""
-
-#: inc/customizer/namespace.php:278
+#: inc/customizer/namespace.php:332
 msgid "Front Page Settings"
 msgstr ""
 
-#: inc/customizer/namespace.php:292
+#: inc/customizer/namespace.php:346
 msgid "Network Home Page"
 msgstr ""
 
-#: inc/customizer/namespace.php:301
+#: inc/customizer/namespace.php:355
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer/namespace.php:312
+#: inc/customizer/namespace.php:366
 msgid "Show Contact Form"
 msgstr ""
 
-#: inc/customizer/namespace.php:322
+#: inc/customizer/namespace.php:376
 #: partials/contact-form.php:13
 msgid "Contact Us"
 msgstr ""
 
-#: inc/customizer/namespace.php:327
+#: inc/customizer/namespace.php:381
 msgid "Contact Form Title"
 msgstr ""
 
-#: inc/customizer/namespace.php:341
+#: inc/customizer/namespace.php:395
 msgid "Contact Email"
 msgstr ""
 
-#: inc/customizer/namespace.php:353
+#: inc/customizer/namespace.php:407
 msgid "Contact Link"
 msgstr ""
 
@@ -522,6 +553,7 @@ msgstr ""
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:498
+#, php-format
 msgid "Contact Form Submission from %s"
 msgstr ""
 
@@ -539,6 +571,10 @@ msgstr ""
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Additional home"
 msgstr ""
 
 #: partials/book.php:57
@@ -569,7 +605,8 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: partials/content-front-page.php:66
+#: partials/content-front-page.php:85
+#: partials/content-page-custom-home.php:66
 msgid "View Complete Catalog"
 msgstr ""
 
@@ -579,6 +616,7 @@ msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
+#, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
@@ -641,11 +679,13 @@ msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
+#, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
+#, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
@@ -659,6 +699,7 @@ msgstr ""
 
 #. translators: %s: search query.
 #: search.php:23
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
