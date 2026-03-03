@@ -6,11 +6,11 @@ on:
     branches:
       - translation-workflow-test
     paths:
-      - 'languages/pressbooks-aldine.pot'
+      - "languages/pressbooks-aldine.pot"
 
   # Daily sync to download translations
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
   # Manual trigger
   workflow_dispatch:
@@ -42,7 +42,7 @@ jobs:
   # Download translations and compile MO files
   download-translations:
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
 
     steps:
       - name: Checkout
@@ -53,7 +53,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: "8.3"
           tools: wp-cli/wp-cli-bundle
 
       - name: Crowdin Download
@@ -64,7 +64,7 @@ jobs:
           download_translations: true
           crowdin_branch_name: translation-workflow-test
           create_pull_request: true
-          pull_request_title: 'chore(l10n): Translations updates'
+          pull_request_title: "chore(l10n): Translations updates"
           pull_request_body: |
             ## Translations Update
 
@@ -93,7 +93,7 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
-            
+
             // Find the PR created by Crowdin
             const { data: pulls } = await github.rest.pulls.list({
               owner: context.repo.owner,
@@ -101,36 +101,36 @@ jobs:
               state: 'open',
               head: `${context.repo.owner}:l10n_crowdin_action`
             });
-            
+
             if (pulls.length === 0) {
               console.log('No Crowdin PR found');
               return;
             }
-            
+
             const pr = pulls[0];
             console.log(`Found PR #${pr.number}`);
-            
+
             // Get the PR branch
             const branch = pr.head.ref;
-            
+
             // Get current commit SHA
             const { data: ref } = await github.rest.git.getRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: `heads/${branch}`
             });
-            
+
             // Get the tree
             const { data: commit } = await github.rest.git.getCommit({
               owner: context.repo.owner,
               repo: context.repo.repo,
               commit_sha: ref.object.sha
             });
-            
+
             // Create blobs for MO files
             const moFiles = fs.readdirSync('languages').filter(f => f.endsWith('.mo'));
             const treeItems = [];
-            
+
             for (const file of moFiles) {
               const content = fs.readFileSync(path.join('languages', file), { encoding: 'base64' });
               const { data: blob } = await github.rest.git.createBlob({
@@ -146,7 +146,7 @@ jobs:
                 sha: blob.sha
               });
             }
-            
+
             // Create new tree
             const { data: newTree } = await github.rest.git.createTree({
               owner: context.repo.owner,
@@ -154,7 +154,7 @@ jobs:
               base_tree: commit.tree.sha,
               tree: treeItems
             });
-            
+
             // Create commit
             const { data: newCommit } = await github.rest.git.createCommit({
               owner: context.repo.owner,
@@ -163,7 +163,7 @@ jobs:
               tree: newTree.sha,
               parents: [ref.object.sha]
             });
-            
+
             // Update branch reference
             await github.rest.git.updateRef({
               owner: context.repo.owner,
@@ -172,5 +172,5 @@ jobs:
               sha: newCommit.sha,
               force: false
             });
-            
+
             console.log('MO files committed successfully');
