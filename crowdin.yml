@@ -1,0 +1,39 @@
+"project_id_env": "CROWDIN_OPEN_PROJECT_ID"
+"api_token_env": "CROWDIN_API_SECRET"
+"pull_request_title": "chore(l10n): Translations updates"
+"preserve_hierarchy": true
+"files": [
+  {
+    "source": "/languages/pressbooks-aldine.pot",
+    "dest": "/languages/pressbooks-aldine.pot",
+    "translation": "/languages/%locale_with_underscore%.po",
+    "languages_mapping": {
+      "locale_with_underscore": {
+        "bg": "bg_BG",
+        "de": "de_DE",
+        "de-CH": "de_CH",
+        "en-CA": "en_CA",
+        "en-GB": "en_GB",
+        "es-ES": "es_ES",
+        "fr": "fr_FR",
+        "gl": "gl_ES",
+        "he": "he",
+        "hr": "hr",
+        "hu": "hu_HU",
+        "it": "it_IT",
+        "ja": "ja",
+        "ka": "ka_GE",
+        "kn": "kn",
+        "lt": "lt_LT",
+        "lv": "lv",
+        "nb": "nb_NO",
+        "nl": "nl_NL",
+        "ru": "ru_RU",
+        "ta": "ta_LK",
+        "tr": "tr_TR",
+        "zh-CN": "zh_CN",
+        "zh-TW": "zh_TW"
+      }
+    }
+  }
+]

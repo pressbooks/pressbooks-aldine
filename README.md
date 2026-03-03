@@ -6,7 +6,7 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
 
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-aldine.svg)](https://packagist.org/packages/pressbooks/pressbooks-aldine)
-[![Translate Aldine](https://img.shields.io/badge/dynamic/json.svg?label=translated&url=https%3A%2F%2Ftenpercent.now.sh%2F%3Forganization%3Dpressbooks%26project%3Daldine&query=%24.status&colorB=e05d44&suffix=%25)](https://www.transifex.com/pressbooks/aldine/translate/)
+[![Translate Aldine](https://badges.crowdin.net/e/pressbooks-aldine/localized.svg)](https://crowdin.com/project/pressbooks-aldine)
 
 Contributors: conner_bw, greatislander, steelwagstaff
 Tags: publishing, catalog, pressbooks, default-theme
