@@ -43,7 +43,7 @@ function create_default_content() {
 						__( 'Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution.', 'pressbooks-aldine' ),
 						sprintf(
 							/* translators: %1$s: link to Pressbooks product page; %2$2: link to Pressbooks getting started page */
-							__( 'Pressbooks\' %1$s are used by hundreds of educational institutions and thousands of individual authors and publishers around the world. %2$s to learn more about how you or your institution can get started with Pressbooks.', 'pressbooks' ),
+							__( 'Pressbooks\' %1$s are used by hundreds of educational institutions and thousands of individual authors and publishers around the world. %2$s to learn more about how you or your institution can get started with Pressbooks.', 'pressbooks-aldine' ),
 							sprintf( '<a href="https://pressbooks.com/our-products/">%s</a>', __( 'suite of products', 'pressbooks-aldine' ) ),
 							sprintf( '<a href="https://pressbooks.com/get-started/">%s</a>', __( 'Contact us', 'pressbooks-aldine' ) )
 						)

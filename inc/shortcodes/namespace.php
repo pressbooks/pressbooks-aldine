@@ -47,7 +47,7 @@ function call_to_action( $atts ) {
 		[
 			'link' => '#',
 			'url' => false,
-			'text' => 'Call To Action',
+			'text' => __( 'Call To Action', 'pressbooks-aldine' ),
 		],
 		$atts,
 		'aldine_call_to_action'
