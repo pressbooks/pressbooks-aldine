@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.24.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.4...1.24.0) (2026-01-20)
+
+
+### Features
+
+* remove tx files and po workflow ([#525](https://github.com/pressbooks/pressbooks-aldine/issues/525)) ([2231ae0](https://github.com/pressbooks/pressbooks-aldine/commit/2231ae0f4689c119325c8c6d66ab6a422ed8949c))
+
+
+### Chores
+
+* **i18n:** update translations and revert transifex setup ([#532](https://github.com/pressbooks/pressbooks-aldine/issues/532)) ([3f24985](https://github.com/pressbooks/pressbooks-aldine/commit/3f249854d52997d673eceea9b82f3de942dde731))
+* translations update from Pressbooks Weblate ([#528](https://github.com/pressbooks/pressbooks-aldine/issues/528)) ([8783754](https://github.com/pressbooks/pressbooks-aldine/commit/87837544c771b7091f347b06a6e0c27c50977516))
+* update translation files ([8783754](https://github.com/pressbooks/pressbooks-aldine/commit/87837544c771b7091f347b06a6e0c27c50977516))
+
 ## [1.23.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.3...1.23.4) (2025-10-28)
 
 
