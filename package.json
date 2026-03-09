@@ -70,7 +70,7 @@
 		"node": ">= 22"
 	},
 	"devDependencies": {
-		"pressbooks-build-tools": "^5.0.0",
+		"pressbooks-build-tools": "^6.0.0",
 		"vite-plugin-static-copy": "^2.2.0"
 	},
 	"dependencies": {
