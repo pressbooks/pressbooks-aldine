@@ -11,11 +11,11 @@
 Contributors: conner_bw, greatislander, steelwagstaff
 Tags: publishing, catalog, pressbooks, default-theme
 Requires at least: 6.4.3 
-Tested up to: 6.6.2
+Tested up to: 6.9.1
 <!-- x-release-please-start-version -->
 Stable tag: 1.19.1
 <!-- x-release-please-end -->
-Requires PHP: 8.1
+Requires PHP: 8.3
 License: GNU General Public License v3 or later 
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
