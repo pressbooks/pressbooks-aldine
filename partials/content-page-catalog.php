@@ -94,7 +94,7 @@
 	<?php
 	if ( $previous_page ) :
 		?>
-		<a class="previous" rel="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/catalog/page/$previous_page/" ); ?>"><span class="screen-reader-text"><?php _e( 'Previous Page', 'pressbooks' ); ?></span>
+		<a class="previous" rel="previous" data-page="<?php echo $previous_page; ?>" href="<?php echo network_home_url( "/catalog/page/$previous_page/" ); ?>"><span class="screen-reader-text"><?php _e( 'Previous Page', 'pressbooks-aldine' ); ?></span>
 			<svg aria-hidden="true">
 				<use xlink:href="#arrow-left" />
 			</svg></a><?php endif; ?>
@@ -112,7 +112,7 @@
 	<?php
 	if ( $next_page <= $catalog_data['pages'] ) :
 		?>
-		<a class="next" rel="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/catalog/page/$next_page/" ); ?>"><span class="screen-reader-text"><?php _e( 'Next Page', 'pressbooks' ); ?></span>
+		<a class="next" rel="next" data-page="<?php echo $next_page; ?>" href="<?php echo network_home_url( "/catalog/page/$next_page/" ); ?>"><span class="screen-reader-text"><?php _e( 'Next Page', 'pressbooks-aldine' ); ?></span>
 			<svg aria-hidden="true">
 				<use xlink:href="#arrow-right" />
 			</svg></a><?php endif; ?>
