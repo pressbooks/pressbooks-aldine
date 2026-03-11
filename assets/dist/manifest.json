@@ -1,0 +1,71 @@
+{
+  "assets/scripts/aldine.js": {
+    "file": "assets/scripts/aldine-NpwmmsYP.js",
+    "name": "scripts/aldine",
+    "src": "assets/scripts/aldine.js",
+    "isEntry": true
+  },
+  "assets/scripts/call-to-action.js": {
+    "file": "assets/scripts/call-to-action-CyXUWa1O.js",
+    "name": "scripts/call-to-action",
+    "src": "assets/scripts/call-to-action.js",
+    "isEntry": true
+  },
+  "assets/scripts/catalog-admin.js": {
+    "file": "assets/scripts/catalog-admin-DxAnPNQG.js",
+    "name": "scripts/catalog-admin",
+    "src": "assets/scripts/catalog-admin.js",
+    "isEntry": true
+  },
+  "assets/scripts/customizer-toggle.js": {
+    "file": "assets/scripts/customizer-toggle-gWCB7d5k.js",
+    "name": "scripts/customizer-toggle",
+    "src": "assets/scripts/customizer-toggle.js",
+    "isEntry": true
+  },
+  "assets/scripts/customizer.js": {
+    "file": "assets/scripts/customizer-DbCj4JSw.js",
+    "name": "scripts/customizer",
+    "src": "assets/scripts/customizer.js",
+    "isEntry": true
+  },
+  "assets/scripts/featured-books.js": {
+    "file": "assets/scripts/featured-books-BZ5ZdZWB.js",
+    "name": "scripts/featured-books",
+    "src": "assets/scripts/featured-books.js",
+    "isEntry": true
+  },
+  "assets/scripts/page-section.js": {
+    "file": "assets/scripts/page-section-DAtiyLkP.js",
+    "name": "scripts/page-section",
+    "src": "assets/scripts/page-section.js",
+    "isEntry": true
+  },
+  "assets/scripts/search-featured-books.js": {
+    "file": "assets/scripts/search-featured-books-DINBx0nM.js",
+    "name": "scripts/search-featured-books",
+    "src": "assets/scripts/search-featured-books.js",
+    "isEntry": true,
+    "css": [
+      "assets/search-featured-books-DzQtTRVr.css"
+    ]
+  },
+  "assets/styles/aldine.scss": {
+    "file": "assets/styles/aldine-CILQ7cCT.css",
+    "src": "assets/styles/aldine.scss",
+    "isEntry": true,
+    "name": "styles/aldine",
+    "names": [
+      "styles/aldine.css"
+    ]
+  },
+  "assets/styles/editor.scss": {
+    "file": "assets/styles/editor-8MPYxNKD.css",
+    "src": "assets/styles/editor.scss",
+    "isEntry": true,
+    "name": "styles/editor",
+    "names": [
+      "styles/editor.css"
+    ]
+  }
+}

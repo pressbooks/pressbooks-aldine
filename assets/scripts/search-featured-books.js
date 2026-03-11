@@ -1,4 +1,5 @@
-/* global PB_Ajax */
+import '../styles/search-featured-books.scss';
+
 jQuery( function ( $ ) {
 	/**
 	 *
