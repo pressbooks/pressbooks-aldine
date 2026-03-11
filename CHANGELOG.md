@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.25.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.24.0...1.25.0) (2026-03-11)
+
+
+### Features
+
+* new build tools ([#531](https://github.com/pressbooks/pressbooks-aldine/issues/531)) ([03beaba](https://github.com/pressbooks/pressbooks-aldine/commit/03beaba46fa022014029258176e31d6521c5458d))
+
+
+### Chores
+
+* **l10n:** migrate from Transifex to Crowdin[#1409](https://github.com/pressbooks/pressbooks-aldine/issues/1409) ([#536](https://github.com/pressbooks/pressbooks-aldine/issues/536)) ([ce4dc7f](https://github.com/pressbooks/pressbooks-aldine/commit/ce4dc7fee8f7c73092e859d88d3b5e54c3c5ad7b))
+
 ## [1.24.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.4...1.24.0) (2026-01-20)
 
 
