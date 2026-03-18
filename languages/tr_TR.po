@@ -1,24 +1,25 @@
 # Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
-# Translators:
-# Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
-# Zeki Tuman (ztuman) <afuatdemir@gmail.com>, 2024
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.3\n"
+"Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
-"PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Zeki Tuman (ztuman) <afuatdemir@gmail.com>, 2024\n"
-"Language-Team: Turkish (Turkey) (https://app.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
+"Last-Translator: \n"
+"Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr_TR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Domain: pressbooks-aldine\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
+"PO-Revision-Date: 2026-03-18 00:44\n"
 "X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: pressbooks-aldine\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: pressbooks-open-source\n"
+"X-Crowdin-Project-ID: 866076\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /pressbooks-aldine/languages/pressbooks-aldine.pot\n"
+"X-Crowdin-File-ID: 146\n"
+"Language: tr_TR\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -32,14 +33,8 @@ msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 #: style.css
-msgid ""
-"Aldine is the default theme for the home page of Pressbooks networks. It is "
-"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
-"regarded by many as the world’s first publisher."
-msgstr ""
-"Aldine, Pressbooks ağlarının ana sayfası için varsayılan temadır. Adını, "
-"birçok kişi tarafından dünyanın ilk yayıncısı olarak kabul edilen Aldus "
-"Manutius tarafından 1494 yılında kurulan Aldine Press'ten almıştır."
+msgid "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher."
+msgstr "Aldine, Pressbooks ağlarının ana sayfası için varsayılan temadır. Adını, birçok kişi tarafından dünyanın ilk yayıncısı olarak kabul edilen Aldus Manutius tarafından 1494 yılında kurulan Aldine Press'ten almıştır."
 
 #. Author of the theme
 #: style.css
@@ -77,32 +72,38 @@ msgid "Comments are closed."
 msgstr "Yoruma kapalı."
 
 #. translators: %s network name
-#: footer.php:64 footer.php:69
+#: footer.php:64
+#: footer.php:69
 msgid "%s on LinkedIn"
 msgstr "%s LinkedIn'de"
 
 #. translators: %s network name
-#: footer.php:74 footer.php:79
+#: footer.php:74
+#: footer.php:79
 msgid "%s on YouTube"
 msgstr "%s YouTube'da"
 
 #. translators: %s network name
-#: footer.php:84 footer.php:89
+#: footer.php:84
+#: footer.php:89
 msgid "%s on Bluesky"
 msgstr "%s Bluesky'de"
 
 #. translators: %s network name
-#: footer.php:94 footer.php:99
+#: footer.php:94
+#: footer.php:99
 msgid "%s on Facebook"
 msgstr "%s Facebook'ta"
 
 #. translators: %s network name
-#: footer.php:104 footer.php:109
+#: footer.php:104
+#: footer.php:109
 msgid "%s on X"
 msgstr "%s X'de"
 
 #. translators: %s network name
-#: footer.php:114 footer.php:119
+#: footer.php:114
+#: footer.php:119
 msgid "%s on Instagram"
 msgstr "%s Instagram'da"
 
@@ -119,15 +120,18 @@ msgstr "Kılavuz ve Öğreticiler"
 msgid "Pressbooks Directory"
 msgstr "Pressbooks Dizini"
 
-#: footer.php:143 inc/helpers/namespace.php:349
+#: footer.php:143
+#: inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "İletişim"
 
-#: footer.php:148 footer.php:152
+#: footer.php:148
+#: footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks YouTube"
 
-#: footer.php:154 footer.php:158
+#: footer.php:154
+#: footer.php:158
 msgid "Pressbooks on LinkedIn"
 msgstr "LinkedIn'de Pressbooks"
 
@@ -152,11 +156,13 @@ msgstr "%s için Logo"
 msgid "Toggle Menu"
 msgstr "Menüyü Aç/Kapat"
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
+#: inc/actions/namespace.php:48
+#: inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr "Ana Menü"
 
-#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
+#: inc/actions/namespace.php:49
+#: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr "Altbilgi Menüsü"
 
@@ -169,16 +175,15 @@ msgid "Network Footer Block 2"
 msgstr "Ağ Altbilgi Bloğu 2"
 
 #: inc/actions/namespace.php:238
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
-msgstr ""
-"Bu sayfa ağ kataloğunuzu gösterir, bu nedenle düzenlenecek içerik yoktur."
+msgid "This page displays your network catalog, so there is no content to edit."
+msgstr "Bu sayfa ağ kataloğunuzu gösterir, bu nedenle düzenlenecek içerik yoktur."
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr "Sayfa Bölümü"
 
-#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296
+#: partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "Başlık"
 
@@ -215,45 +220,26 @@ msgid "About Pressbooks"
 msgstr "Pressbooks Hakkında"
 
 #: inc/activation/namespace.php:29
-msgid ""
-"Pressbooks is easy-to-use book writing software that lets you create a book "
-"in all the formats you need to publish."
-msgstr ""
-"Pressbooks, yayınlamanız gereken tüm formatlarda bir kitap oluşturmanıza "
-"izin veren, kullanımı kolay bir kitap yazma yazılımıdır."
+msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
+msgstr "Pressbooks, yayınlamanız gereken tüm formatlarda bir kitap oluşturmanıza izin veren, kullanımı kolay bir kitap yazma yazılımıdır."
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
 msgstr "Daha fazla bilgi edin"
 
-#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:37
+#: inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
 msgstr "Hakkında"
 
 #: inc/activation/namespace.php:42
-msgid ""
-"Pressbooks is simple book production software that makes it easy to write, "
-"develop, and share your ideas. You can use Pressbooks to publish open "
-"educational resources, textbooks, scholarly monographs, fiction and non-"
-"fiction books, white papers, syllabi, and more."
-msgstr ""
-"Pressbooks, fikirlerinizi yazmayı, geliştirmeyi ve paylaşmayı kolaylaştıran "
-"basit bir kitap yazma yazılımıdır. Açık eğitim kaynakları, ders kitapları, "
-"bilimsel monografiler, kurgu ve kurgu olmayan kitapları, teknik incelemeler,"
-" ders programları ve daha fazlasını yayınlamak için Pressbooks'u "
-"kullanabilirsiniz."
+msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
+msgstr "Pressbooks, fikirlerinizi yazmayı, geliştirmeyi ve paylaşmayı kolaylaştıran basit bir kitap yazma yazılımıdır. Açık eğitim kaynakları, ders kitapları, bilimsel monografiler, kurgu ve kurgu olmayan kitapları, teknik incelemeler, ders programları ve daha fazlasını yayınlamak için Pressbooks'u kullanabilirsiniz."
 
 #: inc/activation/namespace.php:43
-msgid ""
-"Pressbooks lets creators quickly publish their content to the web and "
-"produce exports in multiple formats, including accessible EPUBs and PDFs "
-"specially designed for print-on-demand or digital distribution."
-msgstr ""
-"Pressbooks, içerik oluşturucuların içeriklerini hızla web'de yayınlamalarına"
-" ve isteğe bağlı olarak baskı veya dijital dağıtım için özel olarak "
-"tasarlanmış erişilebilir EPUB'lar ve PDF'ler dahil olmak üzere birden çok "
-"biçimde indirilebilir dosyalar üretmelerine imkan tanır."
+msgid "Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution."
+msgstr "Pressbooks, içerik oluşturucuların içeriklerini hızla web'de yayınlamalarına ve isteğe bağlı olarak baskı veya dijital dağıtım için özel olarak tasarlanmış erişilebilir EPUB'lar ve PDF'ler dahil olmak üzere birden çok biçimde indirilebilir dosyalar üretmelerine imkan tanır."
 
 #: inc/activation/namespace.php:47
 msgid "suite of products"
@@ -263,37 +249,25 @@ msgstr "ürün paketi"
 msgid "Contact us"
 msgstr "Bize ulaşın"
 
-#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:54
+#: inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
 msgstr "Yardım"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
-msgid ""
-"Are you looking for help on your Pressbooks project? The most comprehensive "
-"resource available is the %s, which contains everything you need to know "
-"about creating, enriching and exporting your work."
-msgstr ""
-"Pressbooks projeniz için yardım mı arıyorsunuz? Mevcut en kapsamlı kaynak, "
-"çalışmanızı oluşturma, zenginleştirme ve dışa aktarma hakkında bilmeniz "
-"gereken her şeyi içeren %s'dir."
+msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
+msgstr "Pressbooks projeniz için yardım mı arıyorsunuz? Mevcut en kapsamlı kaynak, çalışmanızı oluşturma, zenginleştirme ve dışa aktarma hakkında bilmeniz gereken her şeyi içeren %s'dir."
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr "Pressbooks Kullanıcı Kılavuzu "
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
-msgid ""
-"You can find short video tutorials and webinars about features and product "
-"updates on the %1$s. If you’re just getting started with Pressbooks, this "
-"%2$s will guide you."
-msgstr ""
-"%1$s de özellikler ve ürün güncellemeleri hakkında kısa video eğitimleri ve "
-"web seminerleri bulabilirsinizPressboks'a yeni başlıyorsanız bu %2$s size "
-"rehberlik edecektir."
+msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
+msgstr "%1$s de özellikler ve ürün güncellemeleri hakkında kısa video eğitimleri ve web seminerleri bulabilirsinizPressboks'a yeni başlıyorsanız bu %2$s size rehberlik edecektir."
 
 #: inc/activation/namespace.php:67
 msgid "Pressbooks YouTube channel"
@@ -305,28 +279,17 @@ msgstr "kısa video serileri "
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
-msgid ""
-"If you learn best by learning by attending live training sessions, you can "
-"register for and attend one of Pressbooks' %s."
-msgstr ""
-"Canlı öğretici oturumlarına katılarak iyi öğreniyorsanız, Pressbooks'un %s "
-"ye kaydolup  eğitimlere katılabilirsiniz."
+msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
+msgstr "Canlı öğretici oturumlarına katılarak iyi öğreniyorsanız, Pressbooks'un %s ye kaydolup  eğitimlere katılabilirsiniz."
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr "aylık webinarlar "
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
-msgid ""
-"The %1$s also contains links to other useful support resources and has "
-"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
-"where you can ask and answer questions of other users."
-msgstr ""
-"1%1$s ayrıca diğer faydalı destek kaynaklarına bağlantı ve sık sorulan bazı "
-"soruların cevaplarını içerir. Pressbooks ayrıca soru sorabileceğiniz  ve "
-"diğer kullanıcıların sorularını cevaplayabileceğiniz bir 2%2$s tutar."
+msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
+msgstr "1%1$s ayrıca diğer faydalı destek kaynaklarına bağlantı ve sık sorulan bazı soruların cevaplarını içerir. Pressbooks ayrıca soru sorabileceğiniz  ve diğer kullanıcıların sorularını cevaplayabileceğiniz bir 2%2$s tutar."
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
@@ -338,26 +301,22 @@ msgstr "topluluk formu"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
-msgid ""
-"For additional support needs, reach out to your institution’s Pressbooks "
-"network managers. If you don’t know who your network managers are, please "
-"fill out the %s to be put in touch with them."
-msgstr ""
-"Ek destek gereksinimleri için kurumunuzun Pressbooks ağ yöneticilerine "
-"ulaşın. Ağ yöneticilerinizin kim olduğunu bilmiyorsanız lütfen sizinle "
-"iletişime geçmeleri için %s%s doldurun."
+msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
+msgstr "Ek destek gereksinimleri için kurumunuzun Pressbooks ağ yöneticilerine ulaşın. Ağ yöneticilerinizin kim olduğunu bilmiyorsanız lütfen sizinle iletişime geçmeleri için %s%s doldurun."
 
 #: inc/activation/namespace.php:84
 msgid "support request form"
 msgstr "Destek Talep Formu"
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:90
+#: inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
 msgstr "Katalog"
 
-#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
+#: inc/activation/namespace.php:97
+#: inc/helpers/namespace.php:341
 msgid "Home"
 msgstr "Ana Sayfa"
 
@@ -399,9 +358,7 @@ msgstr "Birincil Renk (Üzerine Gelme)"
 
 #: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr ""
-"Birincil öğenin üzerine gelme durumları için kullanılan birincil rengin "
-"çeşidi."
+msgstr "Birincil öğenin üzerine gelme durumları için kullanılan birincil rengin çeşidi."
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color"
@@ -417,8 +374,7 @@ msgstr "Vurgu Rengi (Üzerine Gelme)"
 
 #: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
-msgstr ""
-"İkincil öğelerin üzerine gelme durumları için kullanılan vurgu rengi çeşidi."
+msgstr "İkincil öğelerin üzerine gelme durumları için kullanılan vurgu rengi çeşidi."
 
 #: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
@@ -472,7 +428,8 @@ msgstr "Ön Sayfa Kataloğu"
 msgid "Show Front Page Catalog"
 msgstr "Ön Sayfa Kataloğunu Göster"
 
-#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244
+#: partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "En Son Kitaplarımız"
 
@@ -504,7 +461,8 @@ msgstr "İletişim Formu"
 msgid "Show Contact Form"
 msgstr "İletişim Formunu Göster"
 
-#: inc/customizer/namespace.php:322 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322
+#: partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "Bize Ulaşın"
 
@@ -532,7 +490,8 @@ msgstr "Oturum aç"
 msgid "Sign Up"
 msgstr "Kaydol"
 
-#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
+#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:384
 msgid "Admin"
 msgstr "Yönetici"
 
@@ -628,24 +587,15 @@ msgstr "Hiçbirşey Bulunamadı"
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"İlk paylaşımını yapmak için hazır mısın? <a href=\"%1$s\">Buradan "
-"başlayın</a>."
+msgstr "İlk paylaşımını yapmak için hazır mısın? <a href=\"%1$s\">Buradan başlayın</a>."
 
 #: partials/content-none.php:41
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Maalesef arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar "
-"kelimelerle tekrar deneyin."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Maalesef arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar kelimelerle tekrar deneyin."
 
 #: partials/content-none.php:48
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Görünüşe göre istediğiniz şeyi bulamıyoruz. Belki aramak yardımcı olabilir."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Görünüşe göre istediğiniz şeyi bulamıyoruz. Belki aramak yardımcı olabilir."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
@@ -691,7 +641,8 @@ msgstr "Filtreleri temizle"
 msgid "Submit"
 msgstr "Gönder"
 
-#: partials/content-page.php:23 partials/content.php:50
+#: partials/content-page.php:23
+#: partials/content.php:50
 msgid "Pages:"
 msgstr "Sayfalar: "
 
@@ -727,3 +678,4 @@ msgstr "Arama Kataloğu"
 msgctxt "submit button"
 msgid "Search"
 msgstr "Arama"
+

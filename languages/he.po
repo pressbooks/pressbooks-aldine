@@ -1,23 +1,25 @@
 # Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
-# Translators:
-# makeabook project <makeabookproject@gmail.com>, 2024
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.3\n"
+"Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
-"PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: makeabook project <makeabookproject@gmail.com>, 2024\n"
-"Language-Team: Hebrew (https://app.transifex.com/pressbooks/teams/9194/he/)\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
-"X-Domain: pressbooks-aldine\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
+"PO-Revision-Date: 2026-03-12 00:36\n"
 "X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: pressbooks-aldine\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"X-Crowdin-Project: pressbooks-open-source\n"
+"X-Crowdin-Project-ID: 866076\n"
+"X-Crowdin-Language: he\n"
+"X-Crowdin-File: /pressbooks-aldine/languages/pressbooks-aldine.pot\n"
+"X-Crowdin-File-ID: 146\n"
+"Language: he_IL\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -31,10 +33,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid ""
-"Aldine is the default theme for the home page of Pressbooks networks. It is "
-"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
-"regarded by many as the world’s first publisher."
+msgid "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher."
 msgstr ""
 
 #. Author of the theme
@@ -53,7 +52,7 @@ msgstr ""
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "נראה שלא נמצא דבר במיקום זה."
+msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
@@ -68,45 +67,52 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "אין אפשרות להגיב."
+msgstr ""
 
 #. translators: %s network name
-#: footer.php:64 footer.php:69
+#: footer.php:64
+#: footer.php:69
 msgid "%s on LinkedIn"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:74 footer.php:79
+#: footer.php:74
+#: footer.php:79
 msgid "%s on YouTube"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:84 footer.php:89
+#: footer.php:84
+#: footer.php:89
 msgid "%s on Bluesky"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:94 footer.php:99
+#: footer.php:94
+#: footer.php:99
 msgid "%s on Facebook"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:104 footer.php:109
+#: footer.php:104
+#: footer.php:109
 msgid "%s on X"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:114 footer.php:119
+#: footer.php:114
+#: footer.php:119
 msgid "%s on Instagram"
 msgstr ""
 
 #. translators: %s Pressbooks
 #: footer.php:138
 msgid "Powered by %s"
-msgstr "מופעל על ידי %s"
+msgstr ""
 
 #: footer.php:140
 msgid "Guides and Tutorials"
@@ -116,15 +122,18 @@ msgstr ""
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:143 inc/helpers/namespace.php:349
+#: footer.php:143
+#: inc/helpers/namespace.php:349
 msgid "Contact"
-msgstr "יצירת קשר"
+msgstr ""
 
-#: footer.php:148 footer.php:152
+#: footer.php:148
+#: footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr ""
 
-#: footer.php:154 footer.php:158
+#: footer.php:154
+#: footer.php:158
 msgid "Pressbooks on LinkedIn"
 msgstr ""
 
@@ -138,7 +147,7 @@ msgstr ""
 
 #: header.php:50
 msgid "Skip to content"
-msgstr "עבור לתוכן"
+msgstr ""
 
 #. translators: %s name of network
 #: header.php:81
@@ -149,11 +158,13 @@ msgstr ""
 msgid "Toggle Menu"
 msgstr ""
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
+#: inc/actions/namespace.php:48
+#: inc/activation/namespace.php:144
 msgid "Primary Menu"
-msgstr "תפריט ראשי"
+msgstr ""
 
-#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
+#: inc/actions/namespace.php:49
+#: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr ""
 
@@ -166,17 +177,17 @@ msgid "Network Footer Block 2"
 msgstr ""
 
 #: inc/actions/namespace.php:238
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
-msgstr "עמוד זה מציג את קטלוג הרשת שלך, אין תוכן לערוך."
+msgid "This page displays your network catalog, so there is no content to edit."
+msgstr ""
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr ""
 
-#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296
+#: partials/content-page-catalog.php:72
 msgid "Title"
-msgstr "כותרת"
+msgstr ""
 
 #: inc/actions/namespace.php:297
 msgid "Standard"
@@ -184,7 +195,7 @@ msgstr ""
 
 #: inc/actions/namespace.php:298
 msgid "Accent"
-msgstr "הדגשה"
+msgstr ""
 
 #: inc/actions/namespace.php:299
 msgid "Bordered"
@@ -200,44 +211,36 @@ msgstr ""
 
 #: inc/actions/namespace.php:304
 msgid "Text"
-msgstr "טקסט"
+msgstr ""
 
 #: inc/actions/namespace.php:305
 msgid "Link"
-msgstr "קישור"
+msgstr ""
 
 #: inc/activation/namespace.php:28
 msgid "About Pressbooks"
 msgstr ""
 
 #: inc/activation/namespace.php:29
-msgid ""
-"Pressbooks is easy-to-use book writing software that lets you create a book "
-"in all the formats you need to publish."
+msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
 msgstr ""
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
-msgstr "למד עוד"
+msgstr ""
 
-#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:37
+#: inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
-msgstr "אודות"
+msgstr ""
 
 #: inc/activation/namespace.php:42
-msgid ""
-"Pressbooks is simple book production software that makes it easy to write, "
-"develop, and share your ideas. You can use Pressbooks to publish open "
-"educational resources, textbooks, scholarly monographs, fiction and non-"
-"fiction books, white papers, syllabi, and more."
+msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
 msgstr ""
 
 #: inc/activation/namespace.php:43
-msgid ""
-"Pressbooks lets creators quickly publish their content to the web and "
-"produce exports in multiple formats, including accessible EPUBs and PDFs "
-"specially designed for print-on-demand or digital distribution."
+msgid "Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution."
 msgstr ""
 
 #: inc/activation/namespace.php:47
@@ -248,30 +251,24 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:54
+#: inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
-msgstr "עזרה"
+msgstr ""
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
-msgid ""
-"Are you looking for help on your Pressbooks project? The most comprehensive "
-"resource available is the %s, which contains everything you need to know "
-"about creating, enriching and exporting your work."
+msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
 msgstr ""
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
-msgid ""
-"You can find short video tutorials and webinars about features and product "
-"updates on the %1$s. If you’re just getting started with Pressbooks, this "
-"%2$s will guide you."
+msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
 msgstr ""
 
 #: inc/activation/namespace.php:67
@@ -284,22 +281,16 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
-msgid ""
-"If you learn best by learning by attending live training sessions, you can "
-"register for and attend one of Pressbooks' %s."
+msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
 msgstr ""
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
-msgid ""
-"The %1$s also contains links to other useful support resources and has "
-"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
-"where you can ask and answer questions of other users."
+msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
 msgstr ""
 
 #: inc/activation/namespace.php:78
@@ -312,10 +303,7 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
-msgid ""
-"For additional support needs, reach out to your institution’s Pressbooks "
-"network managers. If you don’t know who your network managers are, please "
-"fill out the %s to be put in touch with them."
+msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
 msgstr ""
 
 #: inc/activation/namespace.php:84
@@ -323,14 +311,16 @@ msgid "support request form"
 msgstr ""
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:90
+#: inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
-msgstr "קטלוג"
+msgstr ""
 
-#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
+#: inc/activation/namespace.php:97
+#: inc/helpers/namespace.php:341
 msgid "Home"
-msgstr "בית"
+msgstr ""
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
@@ -338,7 +328,7 @@ msgstr ""
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr "מצטערים, אבל הקטלוג לא עודכן. בבקשה נסו שנית"
+msgstr ""
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
@@ -406,7 +396,7 @@ msgstr ""
 
 #: inc/customizer/namespace.php:135
 msgid "Social Media"
-msgstr "מדיה חברתית"
+msgstr ""
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
@@ -440,7 +430,8 @@ msgstr ""
 msgid "Show Front Page Catalog"
 msgstr ""
 
-#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244
+#: partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr ""
 
@@ -466,23 +457,24 @@ msgstr ""
 
 #: inc/customizer/namespace.php:301
 msgid "Contact Form"
-msgstr "טופס ליצירת קשר"
+msgstr ""
 
 #: inc/customizer/namespace.php:312
 msgid "Show Contact Form"
-msgstr "הצג טופס ליצירת קשר"
+msgstr ""
 
-#: inc/customizer/namespace.php:322 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322
+#: partials/contact-form.php:13
 msgid "Contact Us"
-msgstr "צור איתנו קשר"
+msgstr ""
 
 #: inc/customizer/namespace.php:327
 msgid "Contact Form Title"
-msgstr "כותרת הפניה"
+msgstr ""
 
 #: inc/customizer/namespace.php:341
 msgid "Contact Email"
-msgstr "מייל ליצירת קשר"
+msgstr ""
 
 #: inc/customizer/namespace.php:353
 msgid "Contact Link"
@@ -490,23 +482,24 @@ msgstr ""
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "מתמשך"
+msgstr ""
 
 #: inc/helpers/namespace.php:358
 msgid "Sign In"
-msgstr "התחבר"
+msgstr ""
 
 #: inc/helpers/namespace.php:366
 msgid "Sign Up"
-msgstr "הירשם"
+msgstr ""
 
-#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
+#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:384
 msgid "Admin"
-msgstr "מנהל"
+msgstr ""
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
-msgstr "הספר שלי"
+msgstr ""
 
 #: inc/helpers/namespace.php:402
 msgid "Create a New Book"
@@ -514,19 +507,19 @@ msgstr ""
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
-msgstr "התנתק"
+msgstr ""
 
 #: inc/helpers/namespace.php:475
 msgid "Name is required."
-msgstr "נדרש שם."
+msgstr ""
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
-msgstr "נדרשת כתובת מייל"
+msgstr ""
 
 #: inc/helpers/namespace.php:483
 msgid "Email is invalid."
-msgstr "כתובת מייל לא חוקית."
+msgstr ""
 
 #: inc/helpers/namespace.php:487
 msgid "Institution is required."
@@ -543,15 +536,15 @@ msgstr ""
 
 #: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
-msgstr "הודעתך נשלחה!"
+msgstr ""
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
-msgstr "לא ניתן לשלוח את ההודעה"
+msgstr ""
 
 #: page-catalog.php:65
 msgid "No Books Found"
-msgstr "לא נמצאו ספרים"
+msgstr ""
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
@@ -559,7 +552,7 @@ msgstr ""
 
 #: partials/book.php:57
 msgid "About this book"
-msgstr "אודות הספר"
+msgstr ""
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
@@ -567,27 +560,27 @@ msgstr ""
 
 #: partials/contact-form.php:47
 msgid "Your name (required)"
-msgstr "שם (נדרש)"
+msgstr ""
 
 #: partials/contact-form.php:64
 msgid "Your email address (required)"
-msgstr "כתובת המייל שלך (נדרש)"
+msgstr ""
 
 #: partials/contact-form.php:81
 msgid "Your institution (required)"
-msgstr "המוסד שלך (נדרש)"
+msgstr ""
 
 #: partials/contact-form.php:96
 msgid "Your message (required)"
-msgstr "ההודעה שלך (נדרש)"
+msgstr ""
 
 #: partials/contact-form.php:100
 msgid "Send"
-msgstr "שלח"
+msgstr ""
 
 #: partials/content-front-page.php:66
 msgid "View Complete Catalog"
-msgstr "צפה בקטלוג המלא"
+msgstr ""
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
@@ -596,20 +589,14 @@ msgstr ""
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "מוכן לפרסום הפוסט הראשון שלך? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
 
 #: partials/content-none.php:41
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
-"מצטערים, לא נמצאו תוצאות עבור מילות החיפוש הללו. בבקשה נסו להשתמש במילות "
-"מפתח אחרות."
 
 #: partials/content-none.php:48
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #: partials/content-page-catalog.php:17
@@ -634,15 +621,15 @@ msgstr ""
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
-msgstr "כל הרשיונות"
+msgstr ""
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
-msgstr "מיין לפי"
+msgstr ""
 
 #: partials/content-page-catalog.php:73
 msgid "Subject"
-msgstr "נושא"
+msgstr ""
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
@@ -654,25 +641,26 @@ msgstr ""
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
-msgstr "שלח"
+msgstr ""
 
-#: partials/content-page.php:23 partials/content.php:50
+#: partials/content-page.php:23
+#: partials/content.php:50
 msgid "Pages:"
-msgstr "עמודים:"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "ערוך <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "המשך לקרוא <span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr "ניווט"
+msgstr ""
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
@@ -681,7 +669,7 @@ msgstr ""
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr "חפש תוצאות עבור: %s"
+msgstr ""
 
 #: searchform.php:11
 msgctxt "label"
@@ -692,3 +680,4 @@ msgstr ""
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
+
