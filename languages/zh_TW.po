@@ -1,24 +1,25 @@
 # Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
-# Translators:
-# jin peng <hp3240au@gmail.com>, 2024
-# fish free <winofchina@hotmail.com>, 2024
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.3\n"
+"Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
-"PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: fish free <winofchina@hotmail.com>, 2024\n"
-"Language-Team: Chinese (Taiwan) (https://app.transifex.com/pressbooks/teams/9194/zh_TW/)\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Domain: pressbooks-aldine\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
+"PO-Revision-Date: 2026-03-18 00:44\n"
 "X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: pressbooks-aldine\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: pressbooks-open-source\n"
+"X-Crowdin-Project-ID: 866076\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: /pressbooks-aldine/languages/pressbooks-aldine.pot\n"
+"X-Crowdin-File-ID: 146\n"
+"Language: zh_TW\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -32,13 +33,8 @@ msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 #: style.css
-msgid ""
-"Aldine is the default theme for the home page of Pressbooks networks. It is "
-"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
-"regarded by many as the world’s first publisher."
-msgstr ""
-"Aldine 是 Pressbooks 网络主页的默认主题。它以 Aldine 出版社命名，该出版社由 Aldus Manutius 于 1494 "
-"年创立，被许多人视为世界上第一位出版商。"
+msgid "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher."
+msgstr "Aldine 是 Pressbooks 网络主页的默认主题。它以 Aldine 出版社命名，该出版社由 Aldus Manutius 于 1494 年创立，被许多人视为世界上第一位出版商。"
 
 #. Author of the theme
 #: style.css
@@ -75,32 +71,38 @@ msgid "Comments are closed."
 msgstr "已关闭评论"
 
 #. translators: %s network name
-#: footer.php:64 footer.php:69
+#: footer.php:64
+#: footer.php:69
 msgid "%s on LinkedIn"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:74 footer.php:79
+#: footer.php:74
+#: footer.php:79
 msgid "%s on YouTube"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:84 footer.php:89
+#: footer.php:84
+#: footer.php:89
 msgid "%s on Bluesky"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:94 footer.php:99
+#: footer.php:94
+#: footer.php:99
 msgid "%s on Facebook"
 msgstr "%s在Facebook上"
 
 #. translators: %s network name
-#: footer.php:104 footer.php:109
+#: footer.php:104
+#: footer.php:109
 msgid "%s on X"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:114 footer.php:119
+#: footer.php:114
+#: footer.php:119
 msgid "%s on Instagram"
 msgstr "%s在Instagram上"
 
@@ -117,15 +119,18 @@ msgstr "指南和教程"
 msgid "Pressbooks Directory"
 msgstr "Pressbooks目录"
 
-#: footer.php:143 inc/helpers/namespace.php:349
+#: footer.php:143
+#: inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "联系"
 
-#: footer.php:148 footer.php:152
+#: footer.php:148
+#: footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr "Youtbue上的Pressbooks"
 
-#: footer.php:154 footer.php:158
+#: footer.php:154
+#: footer.php:158
 msgid "Pressbooks on LinkedIn"
 msgstr ""
 
@@ -150,11 +155,13 @@ msgstr "%s的Logo"
 msgid "Toggle Menu"
 msgstr "打开/关闭菜单"
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
+#: inc/actions/namespace.php:48
+#: inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr "主菜单"
 
-#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
+#: inc/actions/namespace.php:49
+#: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr "底部菜单"
 
@@ -167,15 +174,15 @@ msgid "Network Footer Block 2"
 msgstr "网络底部区块2"
 
 #: inc/actions/namespace.php:238
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
+msgid "This page displays your network catalog, so there is no content to edit."
 msgstr "此页面显示您的网络目录，因此没有可编辑的内容。"
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr "页面部分"
 
-#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296
+#: partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "标题"
 
@@ -212,37 +219,26 @@ msgid "About Pressbooks"
 msgstr "关于Pressbooks"
 
 #: inc/activation/namespace.php:29
-msgid ""
-"Pressbooks is easy-to-use book writing software that lets you create a book "
-"in all the formats you need to publish."
+msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
 msgstr "Pressbooks 是一款易于使用的图书写作软件，可让您创建需要发布的所有格式的图书。"
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
 msgstr "了解更多"
 
-#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:37
+#: inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
 msgstr "关于"
 
 #: inc/activation/namespace.php:42
-msgid ""
-"Pressbooks is simple book production software that makes it easy to write, "
-"develop, and share your ideas. You can use Pressbooks to publish open "
-"educational resources, textbooks, scholarly monographs, fiction and non-"
-"fiction books, white papers, syllabi, and more."
-msgstr ""
-"Pressbooks 是一款简单的图书制作软件，可让您轻松编写、开发和分享您的想法。您可以使用 Pressbooks "
-"发布开放教育资源、教科书、学术专著、小说和非小说类书籍、白皮书、教学大纲等。"
+msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
+msgstr "Pressbooks 是一款简单的图书制作软件，可让您轻松编写、开发和分享您的想法。您可以使用 Pressbooks 发布开放教育资源、教科书、学术专著、小说和非小说类书籍、白皮书、教学大纲等。"
 
 #: inc/activation/namespace.php:43
-msgid ""
-"Pressbooks lets creators quickly publish their content to the web and "
-"produce exports in multiple formats, including accessible EPUBs and PDFs "
-"specially designed for print-on-demand or digital distribution."
-msgstr ""
-"Pressbooks 让创作者能够快速将其内容发布到网络上并以多种格式导出，包括专为按需印刷或数字发行而设计的可访问 EPUB 和 PDF。"
+msgid "Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution."
+msgstr "Pressbooks 让创作者能够快速将其内容发布到网络上并以多种格式导出，包括专为按需印刷或数字发行而设计的可访问 EPUB 和 PDF。"
 
 #: inc/activation/namespace.php:47
 msgid "suite of products"
@@ -252,30 +248,24 @@ msgstr "产品系列"
 msgid "Contact us"
 msgstr "联系我们"
 
-#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:54
+#: inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
 msgstr "帮助"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
-msgid ""
-"Are you looking for help on your Pressbooks project? The most comprehensive "
-"resource available is the %s, which contains everything you need to know "
-"about creating, enriching and exporting your work."
+msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
 msgstr "您是否在寻求有关 Pressbooks 项目的帮助？最全面的资源是%s ，其中包含有关创建、丰富和导出作品所需了解的一切。"
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr "Pressbooks用户指南"
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
-msgid ""
-"You can find short video tutorials and webinars about features and product "
-"updates on the %1$s. If you’re just getting started with Pressbooks, this "
-"%2$s will guide you."
+msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
 msgstr "您可以在%1$s上找到有关功能和产品更新的简短视频教程和网络研讨会。如果您刚刚开始使用 Pressbooks，此%2$s将为您提供指导。"
 
 #: inc/activation/namespace.php:67
@@ -288,24 +278,17 @@ msgstr "短视频系列"
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
-msgid ""
-"If you learn best by learning by attending live training sessions, you can "
-"register for and attend one of Pressbooks' %s."
+msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
 msgstr "如果您通过参加现场培训课程获得最佳学习效果，您可以注册并参加 Pressbooks 的%s中一项课程。"
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr "阅读研讨会"
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
-msgid ""
-"The %1$s also contains links to other useful support resources and has "
-"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
-"where you can ask and answer questions of other users."
-msgstr ""
-"%1$s还包含指向其他有用支持资源的链接，并回答一些常见问题。Pressbooks 还维护一个%2$s，您可以在其中提问和回答其他用户的问题。"
+msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
+msgstr "%1$s还包含指向其他有用支持资源的链接，并回答一些常见问题。Pressbooks 还维护一个%2$s，您可以在其中提问和回答其他用户的问题。"
 
 #: inc/activation/namespace.php:78
 msgid "Pressbooks support page"
@@ -317,10 +300,7 @@ msgstr "社区论坛"
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
-msgid ""
-"For additional support needs, reach out to your institution’s Pressbooks "
-"network managers. If you don’t know who your network managers are, please "
-"fill out the %s to be put in touch with them."
+msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
 msgstr "如需更多支持，请联系您所在机构的 Pressbooks 网络管理员。如果您不知道您的网络管理员是谁，请填写表格%s以便与他们取得联系。"
 
 #: inc/activation/namespace.php:84
@@ -328,12 +308,14 @@ msgid "support request form"
 msgstr "支持请求表单"
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:90
+#: inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
 msgstr "编目"
 
-#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
+#: inc/activation/namespace.php:97
+#: inc/helpers/namespace.php:341
 msgid "Home"
 msgstr "首页"
 
@@ -445,7 +427,8 @@ msgstr "首页目录"
 msgid "Show Front Page Catalog"
 msgstr "显示首页目录"
 
-#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244
+#: partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "我们的最新作品"
 
@@ -477,7 +460,8 @@ msgstr "联系表单"
 msgid "Show Contact Form"
 msgstr "显示联系表单"
 
-#: inc/customizer/namespace.php:322 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322
+#: partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "联系我们"
 
@@ -505,7 +489,8 @@ msgstr "登入"
 msgid "Sign Up"
 msgstr "注册"
 
-#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
+#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:384
 msgid "Admin"
 msgstr "管理"
 
@@ -604,15 +589,11 @@ msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "准备好发布了吗？ <a href=\"%1$s\">点此开始</a>。"
 
 #: partials/content-none.php:41
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "抱歉，没有符合您搜索条件的内容。请使用其他关键字重试。"
 
 #: partials/content-none.php:48
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "似乎我们找不到您要找的内容。也许搜索可以帮到您。"
 
 #: partials/content-page-catalog.php:17
@@ -659,7 +640,8 @@ msgstr "清楚过滤条件"
 msgid "Submit"
 msgstr "提交"
 
-#: partials/content-page.php:23 partials/content.php:50
+#: partials/content-page.php:23
+#: partials/content.php:50
 msgid "Pages:"
 msgstr "页面："
 
@@ -695,3 +677,4 @@ msgstr "搜索目录"
 msgctxt "submit button"
 msgid "Search"
 msgstr "搜索"
+
