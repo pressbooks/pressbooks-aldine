@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.25.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.0...1.25.1) (2026-04-08)
+
+
+### Bug Fixes
+
+* new dist path ([#550](https://github.com/pressbooks/pressbooks-aldine/issues/550)) ([570c319](https://github.com/pressbooks/pressbooks-aldine/commit/570c319c6e6de67c83da9fc6f2552e8f74457c47))
+
+
+### Chores
+
+* **l10n:** update languages ([#538](https://github.com/pressbooks/pressbooks-aldine/issues/538)) ([49ee510](https://github.com/pressbooks/pressbooks-aldine/commit/49ee5100bbde1e2184bb49ac90f0c38d503e62ae))
+
 ## [1.25.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.24.0...1.25.0) (2026-03-11)
 
 
