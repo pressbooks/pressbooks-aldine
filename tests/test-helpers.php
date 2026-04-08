@@ -19,7 +19,7 @@ class HelpersTest extends WP_UnitTestCase {
 		$result = get_header_tag();
 		
 		// Should return catalog header by default
-		$expected_url = get_template_directory_uri() . '/dist/images/catalog-header.jpg';
+		$expected_url = get_template_directory_uri() . '/assets/dist/images/catalog-header.jpg';
 		$this->assertStringContainsString( $expected_url, $result );
 		$this->assertStringContainsString( "class='header'", $result );
 		$this->assertStringContainsString( "role='banner'", $result );
