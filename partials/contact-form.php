@@ -42,6 +42,7 @@ $honeypot = 'firstname' . wp_rand();
 						value="<?php echo $contact_form_response['values']['visitor_name']; ?>"
 					<?php endif; ?>
 					required
+					autocomplete="name"
 			/>
 			<label for="contact-name">
 				<?php _e( 'Your name (required)', 'pressbooks-aldine' ); ?>
@@ -59,6 +60,7 @@ $honeypot = 'firstname' . wp_rand();
 						value="<?php echo $contact_form_response['values']['visitor_email']; ?>"
 					<?php endif; ?>
 					required
+					autocomplete="email"
 			/>
 			<label for="contact-email">
 				<?php _e( 'Your email address (required)', 'pressbooks-aldine' ); ?>
@@ -76,6 +78,7 @@ $honeypot = 'firstname' . wp_rand();
 						value="<?php echo $contact_form_response['values']['visitor_institution']; ?>"
 					<?php endif; ?>
 					required
+					autocomplete="organization"
 			/>
 			<label for="contact-institution">
 				<?php _e( 'Your institution (required)', 'pressbooks-aldine' ); ?>
