@@ -8,7 +8,8 @@
 namespace Aldine\Actions;
 
 use function Pressbooks\Admin\Branding\get_customizer_colors;
-use PressbooksMix\Assets;
+use PressbooksFrontendTools\Assets;
+use PressbooksFrontendTools\AssetType;
 use Spatie\Color\Hex;
 
 /**
@@ -19,8 +20,7 @@ use Spatie\Color\Hex;
  * as indicating support for post thumbnails.
  */
 function setup() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
 	/*
 		* Make theme available for translation.
@@ -68,12 +68,21 @@ function setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support(
 		'custom-header', [
-			'default-image' => get_template_directory_uri() . '/dist/images/header.jpg',
+			'default-image' => get_template_directory_uri() . '/assets/dist/images/header.jpg',
 			'width' => 1920,
 			'height' => 884,
 			'default-text-color' => '#000',
 		]
 	);
+
+	// Register default header so WordPress knows how to update it back to it.
+	register_default_headers( [
+		'header' => [
+			'url' => get_template_directory_uri() . '/assets/dist/images/header.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/assets/dist/images/header.jpg',
+			'description' => __( 'Default Header', 'pressbooks-aldine' ),
+		],
+	] );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -93,7 +102,7 @@ function setup() {
 	);
 
 	// Add editor style.
-	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
+	add_editor_style( $assets->getAssetUrl( 'assets/styles/editor.scss' ) );
 
 	// Add shortcode buttons.
 	add_action( 'init', __NAMESPACE__ . '\register_shortcode_buttons' );
@@ -125,7 +134,7 @@ function widgets_init() {
 				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the first row (on mobile) or the first column (on desktops).',
-				'aldine'
+				'pressbooks-aldine'
 			),
 			'id'            => 'network-footer-block-1',
 		] + $config
@@ -137,7 +146,7 @@ function widgets_init() {
 				'Add content for your network&rsquo;s customizeable footer here.
             Currently, only text and image widgets are supported.
             Content in this widget area will appear in the second row (on mobile) or the middle column (on desktop).',
-				'aldine'
+				'pressbooks-aldine'
 			),
 			'id'            => 'network-footer-block-2',
 		] + $config
@@ -148,21 +157,22 @@ function widgets_init() {
  * Enqueue scripts and styles.
  */
 function enqueue_assets() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
-	wp_enqueue_style( 'aldine/style', $assets->getPath( 'styles/aldine.css' ), false, null );
+	// Register aldine/style for backward compatibility (used by pressbooks-network-catalog).
+	wp_enqueue_style( 'aldine/style', $assets->getAssetUrl( 'assets/styles/aldine.scss' ), [], null );
+	$assets->enqueue( 'assets/scripts/aldine.js', 'aldine/script', [
+		'dependencies' => [ 'jquery' ],
+	] );
 	wp_enqueue_style( 'aldine/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,400i,700|Spectral:400,400i,600', false, null );
-	wp_enqueue_script( 'aldine/script', $assets->getPath( 'scripts/aldine.js' ), [ 'jquery' ], null, true );
 }
 
 /**
  * Add editor styles.
  */
 function add_editor_styles() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-	add_editor_style( $assets->getPath( 'styles/editor.css' ) );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
+	add_editor_style( $assets->getAssetUrl( 'assets/styles/editor.scss' ) );
 }
 
 /**

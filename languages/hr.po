@@ -1,23 +1,25 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GNU GPL v3 or later.
-# Translators:
-# Dubravko Cvikl <dcvikl@cvikl.hr>, 2024
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldine 1.19.2\n"
+"Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
-"POT-Creation-Date: 2024-12-19T16:42:12+00:00\n"
-"PO-Revision-Date: 2018-03-06 14:24+0000\n"
-"Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2024\n"
-"Language-Team: Croatian (Croatia) (https://app.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
+"Last-Translator: \n"
+"Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr_HR\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Domain: pressbooks-aldine\n"
+"POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
+"PO-Revision-Date: 2026-03-18 00:44\n"
 "X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: pressbooks-aldine\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: pressbooks-open-source\n"
+"X-Crowdin-Project-ID: 866076\n"
+"X-Crowdin-Language: hr\n"
+"X-Crowdin-File: /pressbooks-aldine/languages/pressbooks-aldine.pot\n"
+"X-Crowdin-File-ID: 146\n"
+"Language: hr_HR\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -31,14 +33,8 @@ msgstr "https://github.com/pressbooks/pressbooks-aldine/"
 
 #. Description of the theme
 #: style.css
-msgid ""
-"Aldine is the default theme for the home page of Pressbooks networks. It is "
-"named for the Aldine Press, founded by Aldus Manutius in 1494, who is "
-"regarded by many as the world’s first publisher."
-msgstr ""
-"Aldine je zadana izgled/tema za početnu stranicu Pressbooks mreža. Ime je "
-"dobio po Aldine Pressu koji je 1494. osnovao Aldus Manutius, a mnogi ga "
-"smatraju prvim svjetskim izdavačem."
+msgid "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher."
+msgstr "Aldine je zadana izgled/tema za početnu stranicu Pressbooks mreža. Ime je dobio po Aldine Pressu koji je 1494. osnovao Aldus Manutius, a mnogi ga smatraju prvim svjetskim izdavačem."
 
 #. Author of the theme
 #: style.css
@@ -77,32 +73,38 @@ msgid "Comments are closed."
 msgstr "Komentari su zatvoreni."
 
 #. translators: %s network name
-#: footer.php:64 footer.php:69
+#: footer.php:64
+#: footer.php:69
 msgid "%s on LinkedIn"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:74 footer.php:79
+#: footer.php:74
+#: footer.php:79
 msgid "%s on YouTube"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:84 footer.php:89
+#: footer.php:84
+#: footer.php:89
 msgid "%s on Bluesky"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:94 footer.php:99
+#: footer.php:94
+#: footer.php:99
 msgid "%s on Facebook"
 msgstr "%s na Facebook-u"
 
 #. translators: %s network name
-#: footer.php:104 footer.php:109
+#: footer.php:104
+#: footer.php:109
 msgid "%s on X"
 msgstr ""
 
 #. translators: %s network name
-#: footer.php:114 footer.php:119
+#: footer.php:114
+#: footer.php:119
 msgid "%s on Instagram"
 msgstr ""
 
@@ -119,15 +121,18 @@ msgstr "Vodiči i upute"
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:143 inc/helpers/namespace.php:349
+#: footer.php:143
+#: inc/helpers/namespace.php:349
 msgid "Contact"
 msgstr "Kontakt"
 
-#: footer.php:148 footer.php:152
+#: footer.php:148
+#: footer.php:152
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks na YouTube-u"
 
-#: footer.php:154 footer.php:158
+#: footer.php:154
+#: footer.php:158
 msgid "Pressbooks on LinkedIn"
 msgstr ""
 
@@ -152,11 +157,13 @@ msgstr "Logo za %s"
 msgid "Toggle Menu"
 msgstr "Prebaci izbornik"
 
-#: inc/actions/namespace.php:48 inc/activation/namespace.php:144
+#: inc/actions/namespace.php:48
+#: inc/activation/namespace.php:144
 msgid "Primary Menu"
 msgstr "Primarni izbornik"
 
-#: inc/actions/namespace.php:49 inc/activation/namespace.php:165
+#: inc/actions/namespace.php:49
+#: inc/activation/namespace.php:165
 msgid "Footer Menu"
 msgstr "Izbornik podnožja"
 
@@ -169,16 +176,15 @@ msgid "Network Footer Block 2"
 msgstr "Mrežni blok podnožja 2"
 
 #: inc/actions/namespace.php:238
-msgid ""
-"This page displays your network catalog, so there is no content to edit."
-msgstr ""
-"Ova stranica prikazuje katalog mreže tako nema sadržaja za uređivanje."
+msgid "This page displays your network catalog, so there is no content to edit."
+msgstr "Ova stranica prikazuje katalog mreže tako nema sadržaja za uređivanje."
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
 msgstr "Odjeljak stranice"
 
-#: inc/actions/namespace.php:296 partials/content-page-catalog.php:72
+#: inc/actions/namespace.php:296
+#: partials/content-page-catalog.php:72
 msgid "Title"
 msgstr "Naslov"
 
@@ -215,35 +221,25 @@ msgid "About Pressbooks"
 msgstr "O Pressbooks"
 
 #: inc/activation/namespace.php:29
-msgid ""
-"Pressbooks is easy-to-use book writing software that lets you create a book "
-"in all the formats you need to publish."
-msgstr ""
-"Presskooks je jednostavan za korištenje i omogućava Vam izradu knjiga u svim"
-" potrebnim formatima za objavljivanje."
+msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
+msgstr "Presskooks je jednostavan za korištenje i omogućava Vam izradu knjiga u svim potrebnim formatima za objavljivanje."
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
 msgstr "Saznaj više"
 
-#: inc/activation/namespace.php:37 inc/activation/namespace.php:170
+#: inc/activation/namespace.php:37
+#: inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
 msgstr "O"
 
 #: inc/activation/namespace.php:42
-msgid ""
-"Pressbooks is simple book production software that makes it easy to write, "
-"develop, and share your ideas. You can use Pressbooks to publish open "
-"educational resources, textbooks, scholarly monographs, fiction and non-"
-"fiction books, white papers, syllabi, and more."
+msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
 msgstr ""
 
 #: inc/activation/namespace.php:43
-msgid ""
-"Pressbooks lets creators quickly publish their content to the web and "
-"produce exports in multiple formats, including accessible EPUBs and PDFs "
-"specially designed for print-on-demand or digital distribution."
+msgid "Pressbooks lets creators quickly publish their content to the web and produce exports in multiple formats, including accessible EPUBs and PDFs specially designed for print-on-demand or digital distribution."
 msgstr ""
 
 #: inc/activation/namespace.php:47
@@ -254,30 +250,24 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-#: inc/activation/namespace.php:54 inc/activation/namespace.php:200
+#: inc/activation/namespace.php:54
+#: inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
 msgstr "Pomoć"
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
-msgid ""
-"Are you looking for help on your Pressbooks project? The most comprehensive "
-"resource available is the %s, which contains everything you need to know "
-"about creating, enriching and exporting your work."
+msgid "Are you looking for help on your Pressbooks project? The most comprehensive resource available is the %s, which contains everything you need to know about creating, enriching and exporting your work."
 msgstr ""
 
 #: inc/activation/namespace.php:62
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to
-#. Fundamental of Pressbooks YouTube playlist
+#. translators: %1$s: link to Pressbooks YouTube channel; %2$s: link to Fundamental of Pressbooks YouTube playlist
 #: inc/activation/namespace.php:66
-msgid ""
-"You can find short video tutorials and webinars about features and product "
-"updates on the %1$s. If you’re just getting started with Pressbooks, this "
-"%2$s will guide you."
+msgid "You can find short video tutorials and webinars about features and product updates on the %1$s. If you’re just getting started with Pressbooks, this %2$s will guide you."
 msgstr ""
 
 #: inc/activation/namespace.php:67
@@ -290,22 +280,16 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks webinar schedule
 #: inc/activation/namespace.php:72
-msgid ""
-"If you learn best by learning by attending live training sessions, you can "
-"register for and attend one of Pressbooks' %s."
+msgid "If you learn best by learning by attending live training sessions, you can register for and attend one of Pressbooks' %s."
 msgstr ""
 
 #: inc/activation/namespace.php:73
 msgid "monthly webinars"
 msgstr ""
 
-#. translators: %1$s: link to Pressbooks support page; %2$s: link to
-#. Pressbooks community forum
+#. translators: %1$s: link to Pressbooks support page; %2$s: link to Pressbooks community forum
 #: inc/activation/namespace.php:77
-msgid ""
-"The %1$s also contains links to other useful support resources and has "
-"answers to some commonly asked questions. Pressbooks also maintains a %2$s "
-"where you can ask and answer questions of other users."
+msgid "The %1$s also contains links to other useful support resources and has answers to some commonly asked questions. Pressbooks also maintains a %2$s where you can ask and answer questions of other users."
 msgstr ""
 
 #: inc/activation/namespace.php:78
@@ -318,10 +302,7 @@ msgstr ""
 
 #. translators: %s: link to Pressbooks support request form
 #: inc/activation/namespace.php:83
-msgid ""
-"For additional support needs, reach out to your institution’s Pressbooks "
-"network managers. If you don’t know who your network managers are, please "
-"fill out the %s to be put in touch with them."
+msgid "For additional support needs, reach out to your institution’s Pressbooks network managers. If you don’t know who your network managers are, please fill out the %s to be put in touch with them."
 msgstr ""
 
 #: inc/activation/namespace.php:84
@@ -329,12 +310,14 @@ msgid "support request form"
 msgstr ""
 
 #. Template Name of the theme
-#: inc/activation/namespace.php:90 inc/activation/namespace.php:155
+#: inc/activation/namespace.php:90
+#: inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
 msgstr "Katalog"
 
-#: inc/activation/namespace.php:97 inc/helpers/namespace.php:341
+#: inc/activation/namespace.php:97
+#: inc/helpers/namespace.php:341
 msgid "Home"
 msgstr "Početna"
 
@@ -344,8 +327,7 @@ msgstr "Katalog ažuriran."
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr ""
-"Ispričavamo se, ali Vaš katalog nije ažuriran. Molimo pokušajte ponovno."
+msgstr "Ispričavamo se, ali Vaš katalog nije ažuriran. Molimo pokušajte ponovno."
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
@@ -369,8 +351,7 @@ msgstr "Osnovna boja"
 
 #: inc/customizer/namespace.php:81
 msgid "Primary color, used for links and other primary elements."
-msgstr ""
-"Osnovna/primarna boja, koristi se za poveznice i ostale osnovne elemente."
+msgstr "Osnovna/primarna boja, koristi se za poveznice i ostale osnovne elemente."
 
 #: inc/customizer/namespace.php:86
 msgid "Primary Color (Hover)"
@@ -378,9 +359,7 @@ msgstr "Primarna boja (Hover)"
 
 #: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr ""
-"Varijanta primarne/osnovne boje, koristi se kada se mišem prelazi preko "
-"poveznice."
+msgstr "Varijanta primarne/osnovne boje, koristi se kada se mišem prelazi preko poveznice."
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color"
@@ -396,8 +375,7 @@ msgstr "Boja naglaska (Hover)"
 
 #: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
-msgstr ""
-"Varijanta boje naglaska, koristi se kada se mišem prelazi preko poveznice."
+msgstr "Varijanta boje naglaska, koristi se kada se mišem prelazi preko poveznice."
 
 #: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
@@ -451,7 +429,8 @@ msgstr "Katalog na početnoj stranici"
 msgid "Show Front Page Catalog"
 msgstr "Prikaži katalog na početnoj stranici"
 
-#: inc/customizer/namespace.php:244 partials/content-front-page.php:15
+#: inc/customizer/namespace.php:244
+#: partials/content-front-page.php:15
 msgid "Our Latest Titles"
 msgstr "Naši najnoviji naslovi"
 
@@ -483,7 +462,8 @@ msgstr "Obrazac za kontakt"
 msgid "Show Contact Form"
 msgstr "Prikaži obrazac za kontakt"
 
-#: inc/customizer/namespace.php:322 partials/contact-form.php:13
+#: inc/customizer/namespace.php:322
+#: partials/contact-form.php:13
 msgid "Contact Us"
 msgstr "Kontaktirajte nas"
 
@@ -511,7 +491,8 @@ msgstr "Prijava"
 msgid "Sign Up"
 msgstr "Registracija"
 
-#: inc/helpers/namespace.php:376 inc/helpers/namespace.php:384
+#: inc/helpers/namespace.php:376
+#: inc/helpers/namespace.php:384
 msgid "Admin"
 msgstr "Admin"
 
@@ -610,19 +591,12 @@ msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Spremni za Vašu prvu objavu? <a href=\"%1$s\">Započnite ovdje</a>."
 
 #: partials/content-none.php:41
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Žao nam je, ali ništa ne odgovara vašim pojmovima za pretraživanje. "
-"Pokušajte ponovno s nekim drugim ključnim riječima."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Žao nam je, ali ništa ne odgovara vašim pojmovima za pretraživanje. Pokušajte ponovno s nekim drugim ključnim riječima."
 
 #: partials/content-none.php:48
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Izgleda da ne možemo pronaći što tražite. Možda pretraživanje može pomoći."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Izgleda da ne možemo pronaći što tražite. Možda pretraživanje može pomoći."
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
@@ -668,7 +642,8 @@ msgstr "Obriši filtere"
 msgid "Submit"
 msgstr "Podnesi"
 
-#: partials/content-page.php:23 partials/content.php:50
+#: partials/content-page.php:23
+#: partials/content.php:50
 msgid "Pages:"
 msgstr "Stranice:"
 
@@ -704,3 +679,4 @@ msgstr "Pretraži katalog"
 msgctxt "submit button"
 msgid "Search"
 msgstr "Pretraži"
+

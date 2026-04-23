@@ -16,7 +16,7 @@
 			data-setting="<?php echo esc_attr( $this->id ); ?>"
 			value="<?php echo esc_attr( $current_title ); ?>"
 			autocomplete="off"
-			placeholder="<?php esc_attr_e( 'Search catalog', 'aldine' ); ?>" 
+			placeholder="<?php esc_attr_e( 'Search catalog', 'pressbooks-aldine' ); ?>" 
 			role="combobox"
 			aria-autocomplete="list"
 			aria-expanded="false"

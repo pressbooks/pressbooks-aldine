@@ -29,10 +29,10 @@
     }
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.3",
     "composer/installers": "^2",
     "phpcompatibility/php-compatibility": "^9.3",
-    "pressbooks/mix": "^2.1",
+    "pressbooks/frontend-tools": "^1.0",
     "spatie/color": "^1.1"
   },
   "require-dev": {

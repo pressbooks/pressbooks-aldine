@@ -3,10 +3,9 @@
 /**
  * Import npm dependencies
  *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
+ * Import directly from node_modules package name
  */
-@import "~aetna/assets/styles/aetna";
+@import "aetna/assets/styles/aetna";
 
 /** Import theme styles */
 @import "common/global";

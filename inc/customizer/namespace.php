@@ -7,7 +7,8 @@
 
 namespace Aldine\Customizer;
 
-use PressbooksMix\Assets;
+use PressbooksFrontendTools\Assets;
+use PressbooksFrontendTools\AssetType;
 
 const MAX_FEATURED_BOOKS = 4;
 
@@ -415,20 +416,20 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function customize_preview_js() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
-	wp_enqueue_script( 'aldine/customizer', $assets->getPath( 'scripts/customizer.js' ), [ 'customize-preview' ], false, null );
+	$assets->enqueue( 'assets/scripts/customizer.js', 'aldine/customizer', [
+		'dependencies' => [ 'customize-preview' ],
+	] );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function featured_books_scripts() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
-	wp_enqueue_script( 'aldine/featured-books', $assets->getPath( 'scripts/featured-books.js' ), [], false, null );
+	$assets->enqueue( 'assets/scripts/featured-books.js', 'aldine/featured-books' );
 }
 
 /**
@@ -469,9 +470,8 @@ function enqueue_color_contrast_validator() {
  * Contact form UI tweaks (checkbox should toggle either/or)
  */
 function enqueue_contact_form_tweaks() {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-	wp_enqueue_script( 'aldine/customizer-toggle', $assets->getPath( 'scripts/customizer-toggle.js' ) );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
+	$assets->enqueue( 'assets/scripts/customizer-toggle.js', 'aldine/customizer-toggle' );
 }
 
 /**
@@ -486,21 +486,13 @@ function enqueue_pb_a11y_in_customizer() {
  * Enqueue scripts for catalog search control.
  */
 function enqueue_catalog_search_control_assets(): void {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
-	wp_enqueue_script(
-		'aldine/customizer-search',
-		$assets->getPath( 'scripts/search-featured-books.js' ),
-		[ 'jquery' ],
-		false,
-		true
-	);
+	$assets->enqueue( 'assets/scripts/search-featured-books.js', 'aldine/customizer-search', [
+		'dependencies' => [ 'jquery' ],
+	] );
 
 	wp_localize_script( 'aldine/customizer-search', 'PB_Ajax', [
 		'ajax_url' => admin_url( 'admin-ajax.php' ),
 	] );
-
-	wp_register_style( 'search-featured-books', $assets->getPath( 'styles/search-featured-books.css' ) );
-	wp_enqueue_style( 'search-featured-books' );
 }

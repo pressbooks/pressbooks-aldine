@@ -1,5 +1,50 @@
 # Changelog
 
+## [1.25.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.0...1.25.1) (2026-04-08)
+
+
+### Bug Fixes
+
+* new dist path ([#550](https://github.com/pressbooks/pressbooks-aldine/issues/550)) ([570c319](https://github.com/pressbooks/pressbooks-aldine/commit/570c319c6e6de67c83da9fc6f2552e8f74457c47))
+
+
+### Chores
+
+* **l10n:** update languages ([#538](https://github.com/pressbooks/pressbooks-aldine/issues/538)) ([49ee510](https://github.com/pressbooks/pressbooks-aldine/commit/49ee5100bbde1e2184bb49ac90f0c38d503e62ae))
+
+## [1.25.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.24.0...1.25.0) (2026-03-11)
+
+
+### Features
+
+* new build tools ([#531](https://github.com/pressbooks/pressbooks-aldine/issues/531)) ([03beaba](https://github.com/pressbooks/pressbooks-aldine/commit/03beaba46fa022014029258176e31d6521c5458d))
+
+
+### Chores
+
+* **l10n:** migrate from Transifex to Crowdin[#1409](https://github.com/pressbooks/pressbooks-aldine/issues/1409) ([#536](https://github.com/pressbooks/pressbooks-aldine/issues/536)) ([ce4dc7f](https://github.com/pressbooks/pressbooks-aldine/commit/ce4dc7fee8f7c73092e859d88d3b5e54c3c5ad7b))
+
+## [1.24.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.4...1.24.0) (2026-01-20)
+
+
+### Features
+
+* remove tx files and po workflow ([#525](https://github.com/pressbooks/pressbooks-aldine/issues/525)) ([2231ae0](https://github.com/pressbooks/pressbooks-aldine/commit/2231ae0f4689c119325c8c6d66ab6a422ed8949c))
+
+
+### Chores
+
+* **i18n:** update translations and revert transifex setup ([#532](https://github.com/pressbooks/pressbooks-aldine/issues/532)) ([3f24985](https://github.com/pressbooks/pressbooks-aldine/commit/3f249854d52997d673eceea9b82f3de942dde731))
+* translations update from Pressbooks Weblate ([#528](https://github.com/pressbooks/pressbooks-aldine/issues/528)) ([8783754](https://github.com/pressbooks/pressbooks-aldine/commit/87837544c771b7091f347b06a6e0c27c50977516))
+* update translation files ([8783754](https://github.com/pressbooks/pressbooks-aldine/commit/87837544c771b7091f347b06a6e0c27c50977516))
+
+## [1.23.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.3...1.23.4) (2025-10-28)
+
+
+### Bug Fixes
+
+* allow user to remove custom header (resolves [#377](https://github.com/pressbooks/pressbooks-aldine/issues/377)) ([#521](https://github.com/pressbooks/pressbooks-aldine/issues/521)) ([3a47006](https://github.com/pressbooks/pressbooks-aldine/commit/3a4700617e41e7435234b08edee7407b333fa965))
+
 ## [1.23.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.23.2...1.23.3) (2025-08-21)
 
 
