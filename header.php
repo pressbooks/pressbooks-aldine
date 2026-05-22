@@ -70,7 +70,7 @@ use function Aldine\Helpers\get_header_tag;
 								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 								/* translators: %s name of network */
-								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+								sprintf( __( '%s home', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
 							);
 							?>
 						<?php } else { ?>
