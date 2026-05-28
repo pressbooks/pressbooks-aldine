@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.1...1.25.2) (2026-05-22)
+
+
+### Bug Fixes
+
+* improve alt text for logo image ([#568](https://github.com/pressbooks/pressbooks-aldine/issues/568)) ([712aee2](https://github.com/pressbooks/pressbooks-aldine/commit/712aee2530894db7d5f46a2e4b4fb1c1af695cc6))
+
 ## [1.25.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.0...1.25.1) (2026-04-08)
 
 
