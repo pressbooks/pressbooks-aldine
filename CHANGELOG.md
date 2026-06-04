@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.2...1.25.3) (2026-06-01)
+
+
+### Bug Fixes
+
+* **accessibility:** add autocomplete attributes to contact form ([#558](https://github.com/pressbooks/pressbooks-aldine/issues/558)) ([0f65d33](https://github.com/pressbooks/pressbooks-aldine/commit/0f65d3340fd71e11b53d193313f495c195e699b3))
+
 ## [1.25.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.1...1.25.2) (2026-05-22)
 
 
