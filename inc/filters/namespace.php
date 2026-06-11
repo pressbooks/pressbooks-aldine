@@ -8,8 +8,8 @@
 namespace Aldine\Filters;
 
 use function Aldine\Helpers\has_sections;
-use PressbooksFrontendTools\AssetType;
 use PressbooksFrontendTools\Assets;
+use PressbooksFrontendTools\AssetType;
 
 /**
  * Adds custom classes to the array of body classes.
