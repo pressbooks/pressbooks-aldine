@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.3...1.25.4) (2026-06-11)
+
+
+### Bug Fixes
+
+* pressbooks assets ([#576](https://github.com/pressbooks/pressbooks-aldine/issues/576)) ([8e22426](https://github.com/pressbooks/pressbooks-aldine/commit/8e22426e211e635e24d90a09be6264c7045ff309))
+
 ## [1.25.3](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.2...1.25.3) (2026-06-01)
 
 
