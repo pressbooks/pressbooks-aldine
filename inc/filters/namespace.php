@@ -8,7 +8,8 @@
 namespace Aldine\Filters;
 
 use function Aldine\Helpers\has_sections;
-use PressbooksMix\Assets;
+use PressbooksFrontendTools\AssetType;
+use PressbooksFrontendTools\Assets;
 
 /**
  * Adds custom classes to the array of body classes.
@@ -85,8 +86,7 @@ function adjust_menu( $items, $args ) {
  * @since 1.1.0
  */
 function add_buttons( $plugin_array ) {
-	$assets = new Assets( 'pressbooks-aldine', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 
 	$plugin_array['aldine_call_to_action'] = $assets->getPath( 'scripts/call-to-action.js' );
 	$plugin_array['aldine_page_section'] = $assets->getPath( 'scripts/page-section.js' );
