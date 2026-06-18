@@ -459,6 +459,22 @@ function handle_contact_form_submission() {
 				return false; // Honeypot failed.
 			}
 		}
+		if ( defined( 'CLOUDFLARE_TURNSTILE_SECRET_KEY' ) ) {
+			$token = $_POST['cf-turnstile-response'] ?? '';
+			$verify = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+				'body' => [
+					'secret' => CLOUDFLARE_TURNSTILE_SECRET_KEY,
+					'response' => $token,
+				],
+			] );
+			$result = json_decode( wp_remote_retrieve_body( $verify ), true );
+			if ( empty( $result['success'] ) ) {
+				$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
+				$output['status'] = 'error';
+				$output['field'] = 'cf-turnstile-response';
+				return $output;
+			}
+		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
 		$name = ( isset( $_POST['visitor_name'] ) ) ? $_POST['visitor_name'] : '';
