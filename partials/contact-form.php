@@ -99,10 +99,7 @@ $honeypot = 'firstname' . wp_rand();
 				<?php _e( 'Your message (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
-		<?php if ( defined( 'CLOUDFLARE_TURNSTILE_SITE_KEY' ) ) : ?>
-		<div class="cf-turnstile" data-sitekey="<?php echo CLOUDFLARE_TURNSTILE_SITE_KEY; ?>"></div>
-		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-		<?php endif; ?>
+		<?php \Aldine\Helpers\render_turnstile(); ?>
 		<p class="form__row">
 			<input class="button button--small button--outline" type="submit" value="<?php _e( 'Send', 'pressbooks-aldine' ); ?>" /></p>
 	</form>

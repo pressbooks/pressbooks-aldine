@@ -443,6 +443,37 @@ function default_menu( $args = [], $items = '' ) {
 }
 
 /**
+ * Render the Cloudflare Turnstile widget and enqueue its script.
+ */
+function render_turnstile() {
+	if ( ! defined( 'CLOUDFLARE_TURNSTILE_SITE_KEY' ) ) {
+		return;
+	}
+	echo '<div class="cf-turnstile" data-sitekey="' . esc_attr( CLOUDFLARE_TURNSTILE_SITE_KEY ) . '"></div>';
+	wp_enqueue_script( 'cf-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', [], null, true );
+}
+
+/**
+ * Verify a Cloudflare Turnstile token.
+ *
+ * @return bool
+ */
+function verify_turnstile(): bool {
+	if ( ! defined( 'CLOUDFLARE_TURNSTILE_SECRET_KEY' ) ) {
+		return true;
+	}
+	$token = $_POST['cf-turnstile-response'] ?? '';
+	$verify = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+		'body' => [
+			'secret' => CLOUDFLARE_TURNSTILE_SECRET_KEY,
+			'response' => $token,
+		],
+	] );
+	$result = json_decode( wp_remote_retrieve_body( $verify ), true );
+	return ! empty( $result['success'] );
+}
+
+/**
  *
  * Handler for contact form submissions.
  *
@@ -459,21 +490,11 @@ function handle_contact_form_submission() {
 				return false; // Honeypot failed.
 			}
 		}
-		if ( defined( 'CLOUDFLARE_TURNSTILE_SECRET_KEY' ) ) {
-			$token = $_POST['cf-turnstile-response'] ?? '';
-			$verify = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-				'body' => [
-					'secret' => CLOUDFLARE_TURNSTILE_SECRET_KEY,
-					'response' => $token,
-				],
-			] );
-			$result = json_decode( wp_remote_retrieve_body( $verify ), true );
-			if ( empty( $result['success'] ) ) {
-				$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
-				$output['status'] = 'error';
-				$output['field'] = 'cf-turnstile-response';
-				return $output;
-			}
+		if ( ! verify_turnstile() ) {
+			$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
+			$output['status'] = 'error';
+			$output['field'] = 'cf-turnstile-response';
+			return $output;
 		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
