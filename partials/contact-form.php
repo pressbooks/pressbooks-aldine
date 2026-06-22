@@ -99,17 +99,7 @@ $honeypot = 'firstname' . wp_rand();
 				<?php _e( 'Your message (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
-		<?php
-		/**
-		 * Fires before the submit button in the contact form.
-		 *
-		 * Plugins may use this action to render additional fields or
-		 * widgets (e.g. a CAPTCHA) before the submit button.
-		 *
-		 * @since 1.0.0
-		 */
-		do_action( 'pressbooks_aldine_contact_form_before_submit' );
-		?>
+		<?php do_action( 'pressbooks_aldine_contact_form_before_submit' ); ?>
 		<p class="form__row">
 			<input class="button button--small button--outline" type="submit" value="<?php _e( 'Send', 'pressbooks-aldine' ); ?>" /></p>
 	</form>

@@ -459,17 +459,6 @@ function handle_contact_form_submission() {
 				return false; // Honeypot failed.
 			}
 		}
-		/**
-		 * Filters whether the contact form submission is valid.
-		 *
-		 * Plugins may use this filter to perform additional server-side
-		 * validation (e.g. CAPTCHA verification) before the contact form
-		 * email is sent. Return false to block the submission.
-		 *
-		 * @since 1.0.0
-		 * @param bool $valid Whether the submission is valid.
-		 * @param array $post_data The raw $_POST data.
-		 */
 		if ( ! apply_filters( 'pressbooks_aldine_contact_form_submission_valid', true, $_POST ) ) {
 			$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
