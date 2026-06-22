@@ -462,6 +462,9 @@ function verify_turnstile(): bool {
 	if ( ! defined( 'CLOUDFLARE_TURNSTILE_SECRET_KEY' ) ) {
 		return true;
 	}
+
+	// Nonce verification is handled by the form/action that calls this helper.
+	// phpcs:ignore Pressbooks.Security.NonceVerification.Missing
 	$token = $_POST['cf-turnstile-response'] ?? '';
 	$verify = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', [
 		'body' => [
