@@ -443,40 +443,6 @@ function default_menu( $args = [], $items = '' ) {
 }
 
 /**
- * Render the Cloudflare Turnstile widget and enqueue its script.
- */
-function render_turnstile() {
-	if ( ! defined( 'CLOUDFLARE_TURNSTILE_SITE_KEY' ) ) {
-		return;
-	}
-	echo '<div class="cf-turnstile" data-sitekey="' . esc_attr( CLOUDFLARE_TURNSTILE_SITE_KEY ) . '"></div>';
-	wp_enqueue_script( 'cf-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', [], null, true );
-}
-
-/**
- * Verify a Cloudflare Turnstile token.
- *
- * @return bool
- */
-function verify_turnstile(): bool {
-	if ( ! defined( 'CLOUDFLARE_TURNSTILE_SECRET_KEY' ) ) {
-		return true;
-	}
-
-	// Nonce verification is handled by the form/action that calls this helper.
-	// phpcs:ignore Pressbooks.Security.NonceVerification.Missing
-	$token = $_POST['cf-turnstile-response'] ?? '';
-	$verify = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-		'body' => [
-			'secret' => CLOUDFLARE_TURNSTILE_SECRET_KEY,
-			'response' => $token,
-		],
-	] );
-	$result = json_decode( wp_remote_retrieve_body( $verify ), true );
-	return ! empty( $result['success'] );
-}
-
-/**
  *
  * Handler for contact form submissions.
  *
@@ -493,10 +459,21 @@ function handle_contact_form_submission() {
 				return false; // Honeypot failed.
 			}
 		}
-		if ( ! verify_turnstile() ) {
+		/**
+		 * Filters whether the contact form submission is valid.
+		 *
+		 * Plugins may use this filter to perform additional server-side
+		 * validation (e.g. CAPTCHA verification) before the contact form
+		 * email is sent. Return false to block the submission.
+		 *
+		 * @since 1.0.0
+		 * @param bool $valid Whether the submission is valid.
+		 * @param array $post_data The raw $_POST data.
+		 */
+		if ( ! apply_filters( 'pressbooks_aldine_contact_form_submission_valid', true, $_POST ) ) {
 			$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
 			$output['status'] = 'error';
-			$output['field'] = 'cf-turnstile-response';
+			$output['field'] = 'contact_form_validation';
 			return $output;
 		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );

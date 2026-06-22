@@ -1,63 +1,58 @@
 <?php
 
-use function Aldine\Helpers\render_turnstile;
-use function Aldine\Helpers\verify_turnstile;
 use function Aldine\Helpers\handle_contact_form_submission;
 
 class TurnstileTest extends WP_UnitTestCase {
 
-	public function test_render_turnstile_no_constant() {
-		$this->assertNull( render_turnstile() );
-		$this->expectOutputString( '' );
-		render_turnstile();
-	}
-
-	public function test_render_turnstile_with_constant() {
-		define( 'CLOUDFLARE_TURNSTILE_SITE_KEY', '0x4AAAAAAA' );
-		$this->expectOutputRegex( '/data-sitekey="0x4AAAAAAA"/' );
-		render_turnstile();
-		$this->assertTrue( wp_script_is( 'cf-turnstile', 'enqueued' ) );
-	}
-
-	public function test_verify_turnstile_no_constant() {
-		$this->assertTrue( verify_turnstile() );
-	}
-
-	public function test_verify_turnstile_missing_token() {
-		define( 'CLOUDFLARE_TURNSTILE_SECRET_KEY', '0x4AAAAAAA' );
-		unset( $_POST['cf-turnstile-response'] );
-		$this->assertFalse( verify_turnstile() );
-	}
-
-	public function test_verify_turnstile_success() {
-		define( 'CLOUDFLARE_TURNSTILE_SECRET_KEY', '0x4AAAAAAA' );
-		$_POST['cf-turnstile-response'] = 'valid-token';
-		add_filter( 'pre_http_request', function () {
-			return [ 'body' => wp_json_encode( [ 'success' => true ] ) ];
+	public function test_validation_filter_can_block_submission() {
+		$wp_mail_called = false;
+		add_filter( 'pre_wp_mail', function () use ( &$wp_mail_called ) {
+			$wp_mail_called = true;
+			return false;
 		} );
-		$this->assertTrue( verify_turnstile() );
-	}
 
-	public function test_verify_turnstile_failure() {
-		define( 'CLOUDFLARE_TURNSTILE_SECRET_KEY', '0x4AAAAAAA' );
-		$_POST['cf-turnstile-response'] = 'bad-token';
-		add_filter( 'pre_http_request', function () {
-			return [ 'body' => wp_json_encode( [ 'success' => false ] ) ];
-		} );
-		$this->assertFalse( verify_turnstile() );
-	}
+		add_filter( 'pressbooks_aldine_contact_form_submission_valid', '__return_false' );
 
-	public function test_contact_form_rejects_failed_turnstile() {
-		define( 'CLOUDFLARE_TURNSTILE_SECRET_KEY', '0x4AAAAAAA' );
 		$_POST['pb_root_contact_form_nonce'] = wp_create_nonce( 'pb_root_contact_form' );
 		$_POST['submitted'] = '1';
-		$_POST['cf-turnstile-response'] = 'bad-token';
-		add_filter( 'pre_http_request', function () {
-			return [ 'body' => wp_json_encode( [ 'success' => false ] ) ];
-		} );
+		$_POST['visitor_name'] = 'John Doe';
+		$_POST['visitor_email'] = 'john@example.com';
+		$_POST['visitor_institution'] = 'Test University';
+		$_POST['message'] = 'Test message';
+
 		$result = handle_contact_form_submission();
+
 		$this->assertIsArray( $result );
 		$this->assertEquals( 'error', $result['status'] );
-		$this->assertEquals( 'cf-turnstile-response', $result['field'] );
+		$this->assertFalse( $wp_mail_called, 'wp_mail should not be called when validation filter blocks submission' );
+	}
+
+	public function test_contact_form_succeeds_without_plugin_block() {
+		add_filter( 'pre_wp_mail', '__return_true' );
+
+		$_POST['pb_root_contact_form_nonce'] = wp_create_nonce( 'pb_root_contact_form' );
+		$_POST['submitted'] = '1';
+		$_POST['visitor_name'] = 'Jane Doe';
+		$_POST['visitor_email'] = 'jane@example.com';
+		$_POST['visitor_institution'] = 'Test College';
+		$_POST['message'] = 'Hello, this is a test.';
+
+		$result = handle_contact_form_submission();
+
+		$this->assertIsArray( $result );
+		$this->assertEquals( 'success', $result['status'] );
+	}
+
+	public function test_before_submit_action_outputs_content() {
+		add_action( 'pressbooks_aldine_contact_form_before_submit', function () {
+			echo '<div class="my-captcha">My CAPTCHA</div>';
+		} );
+
+		ob_start();
+		do_action( 'pressbooks_aldine_contact_form_before_submit' );
+		$output = ob_get_clean();
+
+		$this->assertStringContainsString( 'my-captcha', $output );
+		$this->assertStringContainsString( 'My CAPTCHA', $output );
 	}
 }
