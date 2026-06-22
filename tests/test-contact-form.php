@@ -2,7 +2,7 @@
 
 use function Aldine\Helpers\handle_contact_form_submission;
 
-class TurnstileTest extends WP_UnitTestCase {
+class ContactFormTest extends WP_UnitTestCase {
 
 	public function test_validation_filter_can_block_submission() {
 		$wp_mail_called = false;
