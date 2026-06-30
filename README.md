@@ -10,13 +10,13 @@
 
 Contributors: conner_bw, greatislander, steelwagstaff
 Tags: publishing, catalog, pressbooks, default-theme
-Requires at least: 6.4.3 
+Requires at least: 6.4.3
 Tested up to: 6.9.1
 <!-- x-release-please-start-version -->
 Stable tag: 1.19.1
 <!-- x-release-please-end -->
 Requires PHP: 8.3
-License: GNU General Public License v3 or later 
+License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher.
@@ -30,6 +30,11 @@ Aldine is the default theme for the home page of [Pressbooks](https://pressbooks
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's [.zip file](https://github.com/pressbooks/pressbooks-aldine/releases/latest/). Click Install Now.
 3. Click Activate to use your new theme right away.
+
+## Hooks
+
+- `do_action( 'pressbooks_aldine_contact_form_before_submit' )` — Fires before the submit button in the contact form.
+- `apply_filters( 'pressbooks_aldine_contact_form_submission_valid', true, $_POST )` — Filters whether the contact form submission passes server-side validation.
 
 ### Changelog
 Please see the [CHANGELOG](CHANGELOG.md) file for more information.

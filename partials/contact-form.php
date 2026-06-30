@@ -99,6 +99,7 @@ $honeypot = 'firstname' . wp_rand();
 				<?php _e( 'Your message (required)', 'pressbooks-aldine' ); ?>
 			</label>
 		</p>
+		<?php do_action( 'pressbooks_aldine_contact_form_before_submit' ); ?>
 		<p class="form__row">
 			<input class="button button--small button--outline" type="submit" value="<?php _e( 'Send', 'pressbooks-aldine' ); ?>" /></p>
 	</form>

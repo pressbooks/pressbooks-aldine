@@ -459,6 +459,12 @@ function handle_contact_form_submission() {
 				return false; // Honeypot failed.
 			}
 		}
+		if ( ! apply_filters( 'pressbooks_aldine_contact_form_submission_valid', true, $_POST ) ) {
+			$output['message'] = __( 'Verification failed. Please try again.', 'pressbooks-aldine' );
+			$output['status'] = 'error';
+			$output['field'] = 'contact_form_validation';
+			return $output;
+		}
 		$contact_email = get_option( 'pb_network_contact_email', get_option( 'admin_email' ) );
 		$output = [];
 		$name = ( isset( $_POST['visitor_name'] ) ) ? $_POST['visitor_name'] : '';
