@@ -7,6 +7,7 @@
 
 namespace Aldine\Activation;
 
+use function Aldine\Helpers\find_page_by_title;
 use function Aldine\Helpers\get_catalog_page;
 
 /**
@@ -167,7 +168,7 @@ function create_menus() {
 	if ( ! wp_get_nav_menu_object( $menu_name ) ) {
 		$menu_id = wp_create_nav_menu( $menu_name );
 
-		$about = get_page_by_title( __( 'About', 'pressbooks-aldine' ) );
+		$about = find_page_by_title( __( 'About', 'pressbooks-aldine' ) );
 		if ( $about ) {
 			wp_update_nav_menu_item(
 				$menu_id,
@@ -197,7 +198,7 @@ function create_menus() {
 			);
 		}
 
-		$help = get_page_by_title( __( 'Help', 'pressbooks-aldine' ) );
+		$help = find_page_by_title( __( 'Help', 'pressbooks-aldine' ) );
 		if ( $help ) {
 			wp_update_nav_menu_item(
 				$menu_id,
