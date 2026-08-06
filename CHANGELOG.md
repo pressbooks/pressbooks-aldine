@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.26.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.4...1.26.0) (2026-08-06)
+
+
+### Features
+
+* add contact form hooks for custom validation ([#583](https://github.com/pressbooks/pressbooks-aldine/issues/583)) ([39e315d](https://github.com/pressbooks/pressbooks-aldine/commit/39e315dbdaf02d553c558397a913f6f5398ad5ed))
+
+
+### Bug Fixes
+
+* escape editor button i18n strings for JS to prevent TinyMCE plugin init failures ([e6bb0ac](https://github.com/pressbooks/pressbooks-aldine/commit/e6bb0ac26ed8f9efc3662c6221ed256d62b6f984))
+* escape editor button i18n strings to prevent TinyMCE plugin init failures ([#586](https://github.com/pressbooks/pressbooks-aldine/issues/586)) ([e6bb0ac](https://github.com/pressbooks/pressbooks-aldine/commit/e6bb0ac26ed8f9efc3662c6221ed256d62b6f984))
+
+
+### Chores
+
+* update readme with hooks details ([39e315d](https://github.com/pressbooks/pressbooks-aldine/commit/39e315dbdaf02d553c558397a913f6f5398ad5ed))
+
 ## [1.25.4](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.3...1.25.4) (2026-06-11)
 
 
