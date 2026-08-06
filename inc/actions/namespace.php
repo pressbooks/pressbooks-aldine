@@ -304,17 +304,17 @@ function tinymce_l18n() {
 	<script type='text/javascript'>
 		const aldine = {
 			page_section: {
-				'title': '<?php _e( 'Page Section', 'pressbooks-aldine' ); ?>',
-				'title_label': '<?php _e( 'Title', 'pressbooks-aldine' ); ?>',
-				'standard': '<?php _e( 'Standard', 'pressbooks-aldine' ); ?>',
-				'accent': '<?php _e( 'Accent', 'pressbooks-aldine' ); ?>',
-				'bordered': '<?php _e( 'Bordered', 'pressbooks-aldine' ); ?>',
-				'borderless': '<?php _e( 'Borderless', 'pressbooks-aldine' ); ?>'
+				'title': '<?php echo esc_js( __( 'Page Section', 'pressbooks-aldine' ) ); ?>',
+				'title_label': '<?php echo esc_js( __( 'Title', 'pressbooks-aldine' ) ); ?>',
+				'standard': '<?php echo esc_js( __( 'Standard', 'pressbooks-aldine' ) ); ?>',
+				'accent': '<?php echo esc_js( __( 'Accent', 'pressbooks-aldine' ) ); ?>',
+				'bordered': '<?php echo esc_js( __( 'Bordered', 'pressbooks-aldine' ) ); ?>',
+				'borderless': '<?php echo esc_js( __( 'Borderless', 'pressbooks-aldine' ) ); ?>'
 			},
 			call_to_action: {
-				'title': '<?php _e( 'Call to Action', 'pressbooks-aldine' ); ?>',
-				'text': '<?php _e( 'Text', 'pressbooks-aldine' ); ?>',
-				'link': '<?php _e( 'Link', 'pressbooks-aldine' ); ?>'
+				'title': '<?php echo esc_js( __( 'Call to Action', 'pressbooks-aldine' ) ); ?>',
+				'text': '<?php echo esc_js( __( 'Text', 'pressbooks-aldine' ) ); ?>',
+				'link': '<?php echo esc_js( __( 'Link', 'pressbooks-aldine' ) ); ?>'
 			}
 		};
 	</script>
