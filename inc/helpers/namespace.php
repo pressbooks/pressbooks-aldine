@@ -573,6 +573,26 @@ function get_catalog_page(): ?\WP_Post {
 }
 
 /**
+ * Get a page by its exact title.
+ *
+ * Replacement for the WordPress get_page_by_title() function, deprecated in 6.2.0.
+ *
+ * @param string $title The page title to look up.
+ * @return WP_Post|null The matching page, or null if none is found.
+ */
+function find_page_by_title( string $title ): ?\WP_Post {
+	$pages = get_posts( [
+		'post_type' => 'page',
+		'title' => $title,
+		'post_status' => 'any',
+		'posts_per_page' => 1,
+		'orderby' => 'ID',
+		'order' => 'ASC',
+	] );
+	return $pages[0] ?? null;
+}
+
+/**
  * This function generate a class to know if the current page is a custom frontpage.
  *
  * @return string

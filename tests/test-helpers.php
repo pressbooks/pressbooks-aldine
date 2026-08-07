@@ -6,11 +6,40 @@
  */
 
 use function \Aldine\Helpers\get_header_tag;
+use function \Aldine\Helpers\find_page_by_title;
 
 /**
  * Helpers test case.
  */
 class HelpersTest extends WP_UnitTestCase {
+
+	/**
+	 * find_page_by_title() locates a published page by its exact title,
+	 * replacing WordPress' get_page_by_title() (deprecated in 6.2.0).
+	 *
+	 * @group wp7
+	 */
+	public function test_find_page_by_title_returns_matching_page() {
+		$page_id = $this->factory()->post->create( [
+			'post_type'   => 'page',
+			'post_title'  => 'About',
+			'post_status' => 'publish',
+		] );
+
+		$result = find_page_by_title( 'About' );
+
+		$this->assertInstanceOf( \WP_Post::class, $result );
+		$this->assertSame( $page_id, $result->ID );
+	}
+
+	/**
+	 * find_page_by_title() returns null when no page matches the title.
+	 *
+	 * @group wp7
+	 */
+	public function test_find_page_by_title_returns_null_when_no_match() {
+		$this->assertNull( find_page_by_title( 'Nonexistent Page Title 12345' ) );
+	}
 
 	/**
 	 * Test get_header_tag with no special conditions (catalog header).
