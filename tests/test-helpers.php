@@ -1,103 +1,110 @@
 <?php
+
 /**
  * Class HelpersTest
  *
  * @package Pressbooks_Aldine
  */
 
-use function \Aldine\Helpers\get_header_tag;
-use function \Aldine\Helpers\find_page_by_title;
+use function Aldine\Helpers\get_header_tag;
+use function Aldine\Helpers\find_page_by_title;
 
 /**
  * Helpers test case.
  */
-class HelpersTest extends WP_UnitTestCase {
+class HelpersTest extends WP_UnitTestCase
+{
+    /**
+     * find_page_by_title() locates a published page by its exact title,
+     * replacing WordPress' get_page_by_title() (deprecated in 6.2.0).
+     *
+     * @group wp7
+     */
+    public function test_find_page_by_title_returns_matching_page()
+    {
+        $page_id = $this->factory()->post->create([
+            'post_type'   => 'page',
+            'post_title'  => 'About',
+            'post_status' => 'publish',
+        ]);
 
-	/**
-	 * find_page_by_title() locates a published page by its exact title,
-	 * replacing WordPress' get_page_by_title() (deprecated in 6.2.0).
-	 *
-	 * @group wp7
-	 */
-	public function test_find_page_by_title_returns_matching_page() {
-		$page_id = $this->factory()->post->create( [
-			'post_type'   => 'page',
-			'post_title'  => 'About',
-			'post_status' => 'publish',
-		] );
+        $result = find_page_by_title('About');
 
-		$result = find_page_by_title( 'About' );
+        $this->assertInstanceOf(\WP_Post::class, $result);
+        $this->assertSame($page_id, $result->ID);
+    }
 
-		$this->assertInstanceOf( \WP_Post::class, $result );
-		$this->assertSame( $page_id, $result->ID );
-	}
+    /**
+     * find_page_by_title() returns null when no page matches the title.
+     *
+     * @group wp7
+     */
+    public function test_find_page_by_title_returns_null_when_no_match()
+    {
+        $this->assertNull(find_page_by_title('Nonexistent Page Title 12345'));
+    }
 
-	/**
-	 * find_page_by_title() returns null when no page matches the title.
-	 *
-	 * @group wp7
-	 */
-	public function test_find_page_by_title_returns_null_when_no_match() {
-		$this->assertNull( find_page_by_title( 'Nonexistent Page Title 12345' ) );
-	}
+    /**
+     * Test get_header_tag with no special conditions (catalog header).
+     */
+    public function test_get_header_tag_default_catalog()
+    {
+        $result = get_header_tag();
 
-	/**
-	 * Test get_header_tag with no special conditions (catalog header).
-	 */
-	public function test_get_header_tag_default_catalog() {
-		$result = get_header_tag();
-		
-		// Should return catalog header by default
-		$expected_url = get_template_directory_uri() . '/assets/dist/images/catalog-header.jpg';
-		$this->assertStringContainsString( $expected_url, $result );
-		$this->assertStringContainsString( "class='header'", $result );
-		$this->assertStringContainsString( "role='banner'", $result );
-		$this->assertStringContainsString( "style='background-image:", $result );
-	}
+        // Should return catalog header by default
+        $expected_url = get_template_directory_uri() . '/assets/dist/images/catalog-header.jpg';
+        $this->assertStringContainsString($expected_url, $result);
+        $this->assertStringContainsString("class='header'", $result);
+        $this->assertStringContainsString("role='banner'", $result);
+        $this->assertStringContainsString("style='background-image:", $result);
+    }
 
-	/**
-	 * Test get_header_tag HTML structure.
-	 */
-	public function test_get_header_tag_html_structure() {
-		$result = get_header_tag();
-		
-		// Should be a proper HTML header tag
-		$this->assertStringStartsWith( "<header class='header' role='banner' style='background-image: url(", $result );
-		$this->assertStringEndsWith( ");'>", $result );
-		
-		// Should contain required attributes
-		$this->assertStringContainsString( "class='header'", $result );
-		$this->assertStringContainsString( "role='banner'", $result );
-		$this->assertStringContainsString( "style='background-image:", $result );
-	}
+    /**
+     * Test get_header_tag HTML structure.
+     */
+    public function test_get_header_tag_html_structure()
+    {
+        $result = get_header_tag();
 
-	/**
-	 * Test that get_header_tag properly escapes URLs.
-	 */
-	public function test_get_header_tag_url_escaping() {
-		$result = get_header_tag();
-		
-		// Should contain escaped URL
-		$this->assertStringContainsString( 'background-image: url(', $result );
-		$this->assertStringContainsString( ');', $result );
-		
-		// Should not contain unescaped characters that would indicate XSS vulnerability
-		$this->assertStringNotContainsString( '<script', $result );
-		$this->assertStringNotContainsString( 'javascript:', $result );
-	}
+        // Should be a proper HTML header tag
+        $this->assertStringStartsWith("<header class='header' role='banner' style='background-image: url(", $result);
+        $this->assertStringEndsWith(");'>", $result);
 
-	/**
-	 * Test the logic for different image priorities by mocking WordPress state.
-	 */
-	public function test_get_header_tag_logic_paths() {
-		// Test that the function exists and returns a string
-		$result = get_header_tag();
-		$this->assertIsString( $result );
-		$this->assertNotEmpty( $result );
-		
-		// Test that it contains either header.jpg or catalog-header.jpg
-		$contains_header = strpos( $result, 'header.jpg' ) !== false;
-		$contains_catalog = strpos( $result, 'catalog-header.jpg' ) !== false;
-		$this->assertTrue( $contains_header || $contains_catalog, 'Result should contain a header image' );
-	}
+        // Should contain required attributes
+        $this->assertStringContainsString("class='header'", $result);
+        $this->assertStringContainsString("role='banner'", $result);
+        $this->assertStringContainsString("style='background-image:", $result);
+    }
+
+    /**
+     * Test that get_header_tag properly escapes URLs.
+     */
+    public function test_get_header_tag_url_escaping()
+    {
+        $result = get_header_tag();
+
+        // Should contain escaped URL
+        $this->assertStringContainsString('background-image: url(', $result);
+        $this->assertStringContainsString(');', $result);
+
+        // Should not contain unescaped characters that would indicate XSS vulnerability
+        $this->assertStringNotContainsString('<script', $result);
+        $this->assertStringNotContainsString('javascript:', $result);
+    }
+
+    /**
+     * Test the logic for different image priorities by mocking WordPress state.
+     */
+    public function test_get_header_tag_logic_paths()
+    {
+        // Test that the function exists and returns a string
+        $result = get_header_tag();
+        $this->assertIsString($result);
+        $this->assertNotEmpty($result);
+
+        // Test that it contains either header.jpg or catalog-header.jpg
+        $contains_header = strpos($result, 'header.jpg') !== false;
+        $contains_catalog = strpos($result, 'catalog-header.jpg') !== false;
+        $this->assertTrue($contains_header || $contains_catalog, 'Result should contain a header image');
+    }
 }
