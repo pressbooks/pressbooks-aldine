@@ -26,7 +26,8 @@ class SearchFeaturedBooks extends \WP_Customize_Control
      * @return void
      */
     public function render_content(): void // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-    {$dc            = \Pressbooks\DataCollector\Book::init();
+    {
+        $dc            = \Pressbooks\DataCollector\Book::init();
         $current_id    = intval($this->value());
         $current_title = $current_id
             ? $dc->get($current_id, $dc::TITLE)
