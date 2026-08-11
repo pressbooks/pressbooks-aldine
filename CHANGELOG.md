@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.27.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.26.0...1.27.0) (2026-08-07)
+
+
+### Features
+
+* WP 7.x support ([#585](https://github.com/pressbooks/pressbooks-aldine/issues/585)) ([e8eb846](https://github.com/pressbooks/pressbooks-aldine/commit/e8eb84637783529f171ad66cc3f7ac8c45e5a7ee))
+
+
+### Bug Fixes
+
+* replace deprecated get_page_by_title with a WP_Query helper ([e8eb846](https://github.com/pressbooks/pressbooks-aldine/commit/e8eb84637783529f171ad66cc3f7ac8c45e5a7ee))
+
 ## [1.26.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.25.4...1.26.0) (2026-08-06)
 
 
