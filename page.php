@@ -18,25 +18,25 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<?php
-			if ( is_front_page() ) :
+            if (is_front_page()) :
 
-				while ( have_posts() ) :
-					the_post();
+                while (have_posts()) :
+                    the_post();
 
-					get_template_part( 'partials/content', 'front-page' );
+                    get_template_part('partials/content', 'front-page');
 
-				endwhile; // End of the loop.
+                endwhile; // End of the loop.
 
-			else :
+            else :
 
-				while ( have_posts() ) :
-					the_post();
+                while (have_posts()) :
+                    the_post();
 
-					get_template_part( 'partials/content', 'page' );
+                    get_template_part('partials/content', 'page');
 
-				endwhile; // End of the loop.
-			endif;
-			?>
+                endwhile; // End of the loop.
+            endif;
+?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
