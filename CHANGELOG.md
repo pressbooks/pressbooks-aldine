@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.27.0...1.27.1) (2026-08-12)
+
+
+### Bug Fixes
+
+* update minimum required versions ([#589](https://github.com/pressbooks/pressbooks-aldine/issues/589)) ([5742913](https://github.com/pressbooks/pressbooks-aldine/commit/5742913344ee80042e4854be249766ecf930d9b5))
+
 ## [1.27.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.26.0...1.27.0) (2026-08-07)
 
 
