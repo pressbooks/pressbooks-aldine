@@ -10,8 +10,8 @@
 
 Contributors: conner_bw, greatislander, steelwagstaff
 Tags: publishing, catalog, pressbooks, default-theme
-Requires at least: 6.4.3
-Tested up to: 6.9.1
+Requires at least: 7.0.4
+Tested up to: 7.0.4
 <!-- x-release-please-start-version -->
 Stable tag: 1.19.1
 <!-- x-release-please-end -->
