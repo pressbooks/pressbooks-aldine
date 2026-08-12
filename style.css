@@ -8,9 +8,9 @@ Tags:				publishing, catalog, pressbooks, default-theme
 x-release-please-start-version
 Version:			1.27.0
 x-release-please-end
-Requires at least:	6.4.3
-Tested up to:		6.6.2
-Requires PHP:		8.1
+Requires at least:	7.0.4
+Tested up to:		7.0.4
+Requires PHP:		8.3
 License:			GNU GPL v3 or later
 License URI:		https://github.com/pressbooks/pressbooks-aldine/tree/production/LICENSE.md
 Text Domain:		pressbooks-aldine
