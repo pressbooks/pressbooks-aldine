@@ -5,71 +5,71 @@ msgstr ""
 "Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-aldine/issues\n"
 "Last-Translator: \n"
-"Language-Team: Kannada\n"
+"Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-01-27T15:33:57+00:00\n"
-"PO-Revision-Date: 2026-05-13 01:02\n"
+"PO-Revision-Date: 2026-03-20 00:43\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: pressbooks-aldine\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: pressbooks-open-source\n"
 "X-Crowdin-Project-ID: 866076\n"
-"X-Crowdin-Language: kn\n"
+"X-Crowdin-Language: pt-BR\n"
 "X-Crowdin-File: /pressbooks-aldine/languages/pressbooks-aldine.pot\n"
 "X-Crowdin-File-ID: 146\n"
-"Language: kn_IN\n"
+"Language: pt_BR\n"
 
 #. Theme Name of the theme
 #: style.css
 msgid "Aldine"
-msgstr "ಆಲ್ಡಿನ್"
+msgstr ""
 
 #. Theme URI of the theme
 #: style.css
 msgid "https://github.com/pressbooks/pressbooks-aldine/"
-msgstr "https://github.com/pressbooks/pressbooks-aldine/"
+msgstr ""
 
 #. Description of the theme
 #: style.css
 msgid "Aldine is the default theme for the home page of Pressbooks networks. It is named for the Aldine Press, founded by Aldus Manutius in 1494, who is regarded by many as the world’s first publisher."
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ನೆಟ್‍ವರ್ಕ್ ಗಳ ಮುಖಪುಟಕ್ಕೆ ಆಲ್ಡಿನ್ ಡೀಫಾಲ್ಟ್ ವಿಷಯವಾಗಿದೆ. ಇದನ್ನು 1494 ರಲ್ಲಿ ಆಲ್ಡಸ್ ಮ್ಯಾನುಟಿಯಸ್ ಸ್ಥಾಪಿಸಿದ ಆಲ್ಡಿನ್ ಪ್ರೆಸ್‍ಗೆ ಹೆಸರಿಸಲಾಗಿದೆ, ಇದನ್ನು ವಿಶ್ವದ ಮೊದಲ ಪ್ರಕಾಶಕರು ಎಂದು ಅನೇಕರು ಪರಿಗಣಿಸುತ್ತಾರೆ."
+msgstr ""
 
 #. Author of the theme
 #: style.css
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ (ಬುಕ್ ಓವನ್ ಇಂಕ್.)"
+msgstr ""
 
 #. Author URI of the theme
 #: style.css
 msgid "https://pressbooks.org"
-msgstr "https://pressbooks.org"
+msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "ಓಹ್! ಆ ಪುಟವನ್ನು ಕಂಡುಹಿಡಿಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
+msgstr ""
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location."
-msgstr "ಈ ಸ್ಥಳದಲ್ಲಿ ಏನೂ ಕಂಡುಬಂದಿಲ್ಲ ಎಂದು ತೋರುತ್ತದೆ."
+msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "\"%1$s\" ಬಗ್ಗೆ ಒಬ್ಬರು ಯೋಚಿಸಿದರು"
+msgstr ""
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s \"%2$s\" ಬಗ್ಗೆ ಯೋಚಿಸಿದೆ"
-msgstr[1] "%1$s “%2$s” ಗಳ ಬಗ್ಗೆ ಯೋಚಿಸಿದೆ"
+msgstr[0] ""
+msgstr[1] ""
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಮುಚ್ಚಲಾಗಿದೆ."
+msgstr ""
 
 #. translators: %s network name
 #: footer.php:64
@@ -93,7 +93,7 @@ msgstr ""
 #: footer.php:94
 #: footer.php:99
 msgid "%s on Facebook"
-msgstr "ಫೇಸ್ ಬುಕ್ ನಲ್ಲಿ %s"
+msgstr ""
 
 #. translators: %s network name
 #: footer.php:104
@@ -105,16 +105,16 @@ msgstr ""
 #: footer.php:114
 #: footer.php:119
 msgid "%s on Instagram"
-msgstr "ಇನ್‍ಸ್ಟಾಗ್ರಾಮ್‍ನಲ್ಲಿ %s"
+msgstr ""
 
 #. translators: %s Pressbooks
 #: footer.php:138
 msgid "Powered by %s"
-msgstr "%s ನಿಂದ ಸಾಮರ್ಥ್ಯ ಪಡೆದಿದೆ"
+msgstr ""
 
 #: footer.php:140
 msgid "Guides and Tutorials"
-msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‍ಗಳು"
+msgstr ""
 
 #: footer.php:141
 msgid "Pressbooks Directory"
@@ -123,12 +123,12 @@ msgstr ""
 #: footer.php:143
 #: inc/helpers/namespace.php:349
 msgid "Contact"
-msgstr "ಸಂಪರ್ಕಿಸಿ"
+msgstr ""
 
 #: footer.php:148
 #: footer.php:152
 msgid "Pressbooks on YouTube"
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
+msgstr ""
 
 #: footer.php:154
 #: footer.php:158
@@ -137,101 +137,101 @@ msgstr ""
 
 #: functions.php:19
 msgid "Dependencies Missing"
-msgstr "ಅವಲಂಬನೆಗಳು ಕಾಣೆಯಾಗಿವೆ"
+msgstr ""
 
 #: functions.php:20
 msgid "You must run <code>composer install</code> from the Aldine directory."
-msgstr "ನೀವು <code>composer install</code> ಆಲ್ಡಿನ್ ಡೈರೆಕ್ಟರಿಯಿಂದ ಓಡಬೇಕು."
+msgstr ""
 
 #: header.php:50
 msgid "Skip to content"
-msgstr "ವಿಷಯಕ್ಕೆ ಬಿಟ್ಟುಬಿಡಿ"
+msgstr ""
 
 #. translators: %s name of network
 #: header.php:81
 msgid "Logo for %s"
-msgstr "%s ಲೋಗೋ"
+msgstr ""
 
 #: header.php:92
 msgid "Toggle Menu"
-msgstr "ಟಾಗಲ್ ಮೆನು"
+msgstr ""
 
 #: inc/actions/namespace.php:48
 #: inc/activation/namespace.php:144
 msgid "Primary Menu"
-msgstr "ಪ್ರಾಥಮಿಕ ಮೆನು"
+msgstr ""
 
 #: inc/actions/namespace.php:49
 #: inc/activation/namespace.php:165
 msgid "Footer Menu"
-msgstr "ಅಡಿಬರಹ ಮೆನು"
+msgstr ""
 
 #: inc/actions/namespace.php:122
 msgid "Network Footer Block 1"
-msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 1"
+msgstr ""
 
 #: inc/actions/namespace.php:134
 msgid "Network Footer Block 2"
-msgstr "ನೆಟ್ವರ್ಕ್ ಫೂಟರ್ ಬ್ಲಾಕ್ 2"
+msgstr ""
 
 #: inc/actions/namespace.php:238
 msgid "This page displays your network catalog, so there is no content to edit."
-msgstr "ಈ ಪುಟವು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಂಪಾದಿಸಲು ಯಾವುದೇ ವಿಷಯವಿಲ್ಲ."
+msgstr ""
 
 #: inc/actions/namespace.php:295
 msgid "Page Section"
-msgstr "ಪುಟ ವಿಭಾಗ"
+msgstr ""
 
 #: inc/actions/namespace.php:296
 #: partials/content-page-catalog.php:72
 msgid "Title"
-msgstr "ಶೀರ್ಷಿಕೆ"
+msgstr ""
 
 #: inc/actions/namespace.php:297
 msgid "Standard"
-msgstr "ಸಾಮಾನ್ಯ"
+msgstr ""
 
 #: inc/actions/namespace.php:298
 msgid "Accent"
-msgstr "ಆಕ್ಸೆಂಟ್"
+msgstr ""
 
 #: inc/actions/namespace.php:299
 msgid "Bordered"
-msgstr "ಬಾರ್ಡರ್ಡ್"
+msgstr ""
 
 #: inc/actions/namespace.php:300
 msgid "Borderless"
-msgstr "ಬಾರ್ಡರ್ ಲೆಸ್"
+msgstr ""
 
 #: inc/actions/namespace.php:303
 msgid "Call to Action"
-msgstr "ಕ್ರಿಯೆಗೆ ಕರೆ ಮಾಡಿ"
+msgstr ""
 
 #: inc/actions/namespace.php:304
 msgid "Text"
-msgstr "ಪಠ್ಯ"
+msgstr ""
 
 #: inc/actions/namespace.php:305
 msgid "Link"
-msgstr "ಕೊಂಡಿ"
+msgstr ""
 
 #: inc/activation/namespace.php:28
 msgid "About Pressbooks"
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಬಗ್ಗೆ"
+msgstr ""
 
 #: inc/activation/namespace.php:29
 msgid "Pressbooks is easy-to-use book writing software that lets you create a book in all the formats you need to publish."
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸುಲಭವಾಗಿ ಬಳಸಬಹುದಾದ ಪುಸ್ತಕ ಬರೆಯುವ ಸಾಫ್ಟ್ ವೇರ್ ಆಗಿದ್ದು, ನೀವು ಪ್ರಕಟಿಸಬೇಕಾದ ಎಲ್ಲಾ ಸ್ವರೂಪಗಳಲ್ಲಿ ಪುಸ್ತಕವನ್ನು ರಚಿಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ."
+msgstr ""
 
 #: inc/activation/namespace.php:30
 msgid "Learn More"
-msgstr "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
+msgstr ""
 
 #: inc/activation/namespace.php:37
 #: inc/activation/namespace.php:170
 #: inc/activation/namespace.php:176
 msgid "About"
-msgstr "ಬಗ್ಗೆ"
+msgstr ""
 
 #: inc/activation/namespace.php:42
 msgid "Pressbooks is simple book production software that makes it easy to write, develop, and share your ideas. You can use Pressbooks to publish open educational resources, textbooks, scholarly monographs, fiction and non-fiction books, white papers, syllabi, and more."
@@ -253,7 +253,7 @@ msgstr ""
 #: inc/activation/namespace.php:200
 #: inc/activation/namespace.php:206
 msgid "Help"
-msgstr "ಸಹಾಯ"
+msgstr ""
 
 #. translators: %s: link to guide
 #: inc/activation/namespace.php:61
@@ -313,28 +313,28 @@ msgstr ""
 #: inc/activation/namespace.php:155
 #: inc/activation/namespace.php:191
 msgid "Catalog"
-msgstr "ಕ್ಯಾಟಲಾಗ್"
+msgstr ""
 
 #: inc/activation/namespace.php:97
 #: inc/helpers/namespace.php:341
 msgid "Home"
-msgstr "ಮುಖಪುಟ"
+msgstr ""
 
 #: inc/admin/namespace.php:37
 msgid "Catalog updated."
-msgstr "ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿದೆ."
+msgstr ""
 
 #: inc/admin/namespace.php:38
 msgid "Sorry, but your catalog was not updated. Please try again."
-msgstr "ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಕ್ಯಾಟಲಾಗ್ ನವೀಕರಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+msgstr ""
 
 #: inc/admin/namespace.php:39
 msgid "Dismiss this notice."
-msgstr "ಈ ಅಧಿಸೂಚನೆಯನ್ನು ವಜಾಗೊಳಿಸಿ."
+msgstr ""
 
 #: inc/admin/namespace.php:83
 msgid "In Catalog"
-msgstr "ಕ್ಯಾಟಲಾಗ್‍ನಲ್ಲಿ"
+msgstr ""
 
 #: inc/customizer/namespace.php:74
 msgid "Header Background"
@@ -346,55 +346,55 @@ msgstr ""
 
 #: inc/customizer/namespace.php:80
 msgid "Primary Color"
-msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ"
+msgstr ""
 
 #: inc/customizer/namespace.php:81
 msgid "Primary color, used for links and other primary elements."
-msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ, ಲಿಂಕ್ ಗಳು ಮತ್ತು ಇತರ ಪ್ರಾಥಮಿಕ ಅಂಶಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
+msgstr ""
 
 #: inc/customizer/namespace.php:86
 msgid "Primary Color (Hover)"
-msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣ (ಹೋವರ್)"
+msgstr ""
 
 #: inc/customizer/namespace.php:87
 msgid "Variant of the primary color, used for primary element hover states."
-msgstr "ಪ್ರಾಥಮಿಕ ಬಣ್ಣದ ರೂಪಾಂತರ, ಪ್ರಾಥಮಿಕ ಅಂಶ ಹೋವರ್ ಸ್ಥಿತಿಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
+msgstr ""
 
 #: inc/customizer/namespace.php:92
 msgid "Accent Color"
-msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ"
+msgstr ""
 
 #: inc/customizer/namespace.php:93
 msgid "Accent color, used for flourishes and secondary elements."
-msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಪ್ರವರ್ಧಮಾನಕ್ಕೆ ಮತ್ತು ದ್ವಿತೀಯ ಅಂಶಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ."
+msgstr ""
 
 #: inc/customizer/namespace.php:98
 msgid "Accent Color (Hover)"
-msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ (ಹೋವರ್)"
+msgstr ""
 
 #: inc/customizer/namespace.php:99
 msgid "Variant of the accent color, used for secondary element hover states."
-msgstr "ದ್ವಿತೀಯ ಧಾತು ಹೋವರ್ ಸ್ಥಿತಿಗಳಿಗೆ ಬಳಸಲಾಗುವ ಆಕ್ಸೆಂಟ್ ಬಣ್ಣದ ರೂಪಾಂತರ."
+msgstr ""
 
 #: inc/customizer/namespace.php:104
 msgid "Primary Foreground Color"
-msgstr "ಪ್ರಾಥಮಿಕ ಮುನ್ನೆಲೆ ಬಣ್ಣ"
+msgstr ""
 
 #: inc/customizer/namespace.php:105
 msgid "Used for text on a primary background."
-msgstr "ಪ್ರಾಥಮಿಕ ಹಿನ್ನೆಲೆಯ ಪಠ್ಯಕ್ಕೆ ಬಳಸಲಾಗುತ್ತದೆ."
+msgstr ""
 
 #: inc/customizer/namespace.php:110
 msgid "Accent Foreground Color"
-msgstr "ಆಕ್ಸೆಂಟ್ ಮುನ್ನೆಲೆ ಬಣ್ಣ"
+msgstr ""
 
 #: inc/customizer/namespace.php:111
 msgid "Used for text on an accent color background."
-msgstr "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣದ ಹಿನ್ನೆಲೆಯ ಮೇಲೆ ಪಠ್ಯಕ್ಕೆ ಬಳಸಲಾಗುತ್ತದೆ."
+msgstr ""
 
 #: inc/customizer/namespace.php:135
 msgid "Social Media"
-msgstr "ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ"
+msgstr ""
 
 #: inc/customizer/namespace.php:147
 msgid "LinkedIn"
@@ -410,7 +410,7 @@ msgstr ""
 
 #: inc/customizer/namespace.php:186
 msgid "Facebook"
-msgstr "ಫೇಸ್‍ಬುಕ್"
+msgstr ""
 
 #: inc/customizer/namespace.php:199
 msgid "X"
@@ -418,24 +418,24 @@ msgstr ""
 
 #: inc/customizer/namespace.php:212
 msgid "Instagram"
-msgstr "ಇನ್ಸ್ಟಾಗ್ರಾಮ್"
+msgstr ""
 
 #: inc/customizer/namespace.php:221
 msgid "Front Page Catalog"
-msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್"
+msgstr ""
 
 #: inc/customizer/namespace.php:233
 msgid "Show Front Page Catalog"
-msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್ ತೋರಿಸು"
+msgstr ""
 
 #: inc/customizer/namespace.php:244
 #: partials/content-front-page.php:15
 msgid "Our Latest Titles"
-msgstr "ನಮ್ಮ ಇತ್ತೀಚಿನ ಶೀರ್ಷಿಕೆಗಳು"
+msgstr ""
 
 #: inc/customizer/namespace.php:249
 msgid "Front Page Catalog Title"
-msgstr "ಮುಖಪುಟ ಕ್ಯಾಟಲಾಗ್ ಶೀರ್ಷಿಕೆ"
+msgstr ""
 
 #: inc/customizer/namespace.php:257
 msgid "Select a book"
@@ -455,94 +455,94 @@ msgstr ""
 
 #: inc/customizer/namespace.php:301
 msgid "Contact Form"
-msgstr "ಸಂಪರ್ಕ ನಮೂನೆ"
+msgstr ""
 
 #: inc/customizer/namespace.php:312
 msgid "Show Contact Form"
-msgstr "ಸಂಪರ್ಕ ನಮೂನೆ ತೋರಿಸು"
+msgstr ""
 
 #: inc/customizer/namespace.php:322
 #: partials/contact-form.php:13
 msgid "Contact Us"
-msgstr "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ"
+msgstr ""
 
 #: inc/customizer/namespace.php:327
 msgid "Contact Form Title"
-msgstr "ಸಂಪರ್ಕ ಪ್ರಪತ್ರ ಶೀರ್ಷಿಕೆ"
+msgstr ""
 
 #: inc/customizer/namespace.php:341
 msgid "Contact Email"
-msgstr "ಸಂಪರ್ಕ ಇಮೇಲ್"
+msgstr ""
 
 #: inc/customizer/namespace.php:353
 msgid "Contact Link"
-msgstr "ಸಂಪರ್ಕ ಲಿಂಕ್"
+msgstr ""
 
 #: inc/filters/namespace.php:63
 msgid "Continued"
-msgstr "ಮುಂದುವರಿಸಿದೆ"
+msgstr ""
 
 #: inc/helpers/namespace.php:358
 msgid "Sign In"
-msgstr "ಸೈನ್ ಇನ್"
+msgstr ""
 
 #: inc/helpers/namespace.php:366
 msgid "Sign Up"
-msgstr "ಸೈನ್ ಅಪ್ ಮಾಡಿ"
+msgstr ""
 
 #: inc/helpers/namespace.php:376
 #: inc/helpers/namespace.php:384
 msgid "Admin"
-msgstr "ನಿರ್ವಹಣೆಗಾರ"
+msgstr ""
 
 #: inc/helpers/namespace.php:394
 msgid "My Books"
-msgstr "ನನ್ನ ಪುಸ್ತಕಗಳು"
+msgstr ""
 
 #: inc/helpers/namespace.php:402
 msgid "Create a New Book"
-msgstr "ಹೊಸ ಪುಸ್ತಕವನ್ನು ರಚಿಸಿ"
+msgstr ""
 
 #: inc/helpers/namespace.php:410
 msgid "Sign Out"
-msgstr "ಸೈನ್ ಔಟ್"
+msgstr ""
 
 #: inc/helpers/namespace.php:475
 msgid "Name is required."
-msgstr "ಹೆಸರು ಬೇಕು."
+msgstr ""
 
 #: inc/helpers/namespace.php:479
 msgid "Email is required."
-msgstr "ಇಮೇಲ್ ಅಗತ್ಯವಿದೆ."
+msgstr ""
 
 #: inc/helpers/namespace.php:483
 msgid "Email is invalid."
-msgstr "ಇಮೇಲ್ ಅಮಾನ್ಯವಾಗಿದೆ."
+msgstr ""
 
 #: inc/helpers/namespace.php:487
 msgid "Institution is required."
-msgstr "ಸಂಸ್ಥೆಯ ಅಗತ್ಯವಿದೆ."
+msgstr ""
 
 #: inc/helpers/namespace.php:491
 msgid "Message is required."
-msgstr "ಸಂದೇಶದ ಅಗತ್ಯವಿದೆ."
+msgstr ""
 
 #. translators: %s name of contact for submitter
 #: inc/helpers/namespace.php:498
 msgid "Contact Form Submission from %s"
-msgstr "%s ನಿಂದ ಸಂಪರ್ಕ ನಮೂನೆ ಸಲ್ಲಿಕೆ"
+msgstr ""
 
 #: inc/helpers/namespace.php:509
 msgid "Your message was sent!"
-msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲಾಗಿದೆ!"
+msgstr ""
 
 #: inc/helpers/namespace.php:512
 msgid "Your message could not be sent."
-msgstr "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
+msgstr ""
 
 #: page-catalog.php:65
 msgid "No Books Found"
-msgstr "ಯಾವುದೇ ಪುಸ್ತಕಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+msgstr ""
 
 #: page-catalog.php:68
 msgid "No books have been added to the catalog yet."
@@ -550,60 +550,60 @@ msgstr ""
 
 #: partials/book.php:57
 msgid "About this book"
-msgstr "ಈ ಪುಸ್ತಕದ ಬಗ್ಗೆ"
+msgstr ""
 
 #: partials/contact-form.php:30
 msgid "Keep this field blank (required)"
-msgstr "ಈ ಫೀಲ್ಡ್ ಅನ್ನು ಖಾಲಿ ಇರಿಸಿ (ಅಗತ್ಯ)"
+msgstr ""
 
 #: partials/contact-form.php:47
 msgid "Your name (required)"
-msgstr "ನಿಮ್ಮ ಹೆಸರು (ಅಗತ್ಯ)"
+msgstr ""
 
 #: partials/contact-form.php:64
 msgid "Your email address (required)"
-msgstr "ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ (ಅಗತ್ಯ)"
+msgstr ""
 
 #: partials/contact-form.php:81
 msgid "Your institution (required)"
-msgstr "ನಿಮ್ಮ ಸಂಸ್ಥೆ (ಅಗತ್ಯ)"
+msgstr ""
 
 #: partials/contact-form.php:96
 msgid "Your message (required)"
-msgstr "ನಿಮ್ಮ ಸಂದೇಶ (ಅಗತ್ಯ)"
+msgstr ""
 
 #: partials/contact-form.php:100
 msgid "Send"
-msgstr "ಕಳುಹಿಸು"
+msgstr ""
 
 #: partials/content-front-page.php:66
 msgid "View Complete Catalog"
-msgstr "ಸಂಪೂರ್ಣ ಕ್ಯಾಟಲಾಗ್ ವೀಕ್ಷಿಸಿ"
+msgstr ""
 
 #: partials/content-none.php:14
 msgid "Nothing Found"
-msgstr "ಏನೂ ಸಿಗಲಿಲ್ಲ"
+msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: partials/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "ನಿಮ್ಮ ಮೊದಲ ಪೋಸ್ಟ್ ಪ್ರಕಟಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ? <a href=\"%1$s\">ಇಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ</a>."
+msgstr ""
 
 #: partials/content-none.php:41
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಹುಡುಕಾಟದ ನಿಯಮಗಳಿಗೆ ಯಾವುದೂ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಕೆಲವು ವಿಭಿನ್ನ ಕೀವರ್ಡ್ ಗಳೊಂದಿಗೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+msgstr ""
 
 #: partials/content-none.php:48
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "ನೀವು ಹುಡುಕುತ್ತಿರುವುದನ್ನು ನಾವು ಕಂಡುಹಿಡಿಯಲು ಸಾಧ್ಯವಿಲ್ಲ ಎಂದು ತೋರುತ್ತದೆ. ಬಹುಶಃ ಶೋಧವು ಸಹಾಯ ಮಾಡಬಹುದು."
+msgstr ""
 
 #: partials/content-page-catalog.php:17
 msgid "Filter by Subject"
-msgstr "ವಿಷಯದಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಿ"
+msgstr ""
 
 #: partials/content-page-catalog.php:19
 msgid "All Subjects"
-msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳು"
+msgstr ""
 
 #: partials/content-page-catalog.php:39
 msgid "Filter by Institution"
@@ -615,50 +615,50 @@ msgstr ""
 
 #: partials/content-page-catalog.php:54
 msgid "Filter by License"
-msgstr "ಪರವಾನಗಿಯಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಿ"
+msgstr ""
 
 #: partials/content-page-catalog.php:56
 msgid "All Licenses"
-msgstr "ಎಲ್ಲಾ ಪರವಾನಗಿಗಳು"
+msgstr ""
 
 #: partials/content-page-catalog.php:69
 msgid "Sort by"
-msgstr "ಅಂತೆ ವಿಂಗಡಿಸಿ"
+msgstr ""
 
 #: partials/content-page-catalog.php:73
 msgid "Subject"
-msgstr "ವಿಷಯ"
+msgstr ""
 
 #: partials/content-page-catalog.php:74
 msgid "Latest"
-msgstr "ಇತ್ತೀಚಿನ"
+msgstr ""
 
 #: partials/content-page-catalog.php:82
 msgid "Clear Filters"
-msgstr "ಫಿಲ್ಟರ್ ಗಳನ್ನು ತೆರವುಗೊಳಿಸು"
+msgstr ""
 
 #: partials/content-page-catalog.php:83
 msgid "Submit"
-msgstr "ಸಲ್ಲಿಸು"
+msgstr ""
 
 #: partials/content-page.php:23
 #: partials/content.php:50
 msgid "Pages:"
-msgstr "ಪುಟಗಳು:"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content-page.php:37
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "ಸಂಪಾದನೆ <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: partials/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "ಓದುವುದನ್ನು ಮುಂದುವರಿಸಿ<span class=\"screen-reader-text\"> %s \"</span>"
+msgstr ""
 
 #: partials/paged-navigation.php:12
 msgid "Navigation"
-msgstr "ನ್ಯಾವಿಗೇಶನ್"
+msgstr ""
 
 #: partials/paged-navigation.php:14
 msgid "Book Catalog Navigation"
@@ -667,15 +667,15 @@ msgstr ""
 #. translators: %s: search query.
 #: search.php:23
 msgid "Search Results for: %s"
-msgstr "ಹುಡುಕಾಟದ ಫಲಿತಾಂಶಗಳು %1$s %2$s"
+msgstr ""
 
 #: searchform.php:11
 msgctxt "label"
 msgid "Search Catalog"
-msgstr "ಕ್ಯಾಟಲಾಗ್‍ನಲ್ಲಿ ಹುಡುಕಿ"
+msgstr ""
 
 #: searchform.php:14
 msgctxt "submit button"
 msgid "Search"
-msgstr "ಹುಡುಕಿ"
+msgstr ""
 
