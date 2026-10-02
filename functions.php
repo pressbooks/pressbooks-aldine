@@ -69,7 +69,6 @@ add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_co
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_coloris' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\featured_books_scripts' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_contact_form_tweaks' );
-add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_pb_a11y_in_customizer' );
 add_action( 'customize_controls_enqueue_scripts', '\Aldine\Customizer\enqueue_catalog_search_control_assets' );
 add_action( 'wp_ajax_pb_search_catalog_books', '\Aldine\Customizer\ajax_search_catalog_books' );
 

@@ -505,14 +505,6 @@ function enqueue_contact_form_tweaks() {
 }
 
 /**
- * Enqueue pb-a11y hacks in customizer
- */
-function enqueue_pb_a11y_in_customizer() {
-	$pb_a11y_script = plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
-	wp_enqueue_script( 'pb-a11y', $pb_a11y_script, [ 'wp-i18n' ], false, true );
-}
-
-/**
  * Enqueue scripts for catalog search control.
  */
 function enqueue_catalog_search_control_assets(): void {
