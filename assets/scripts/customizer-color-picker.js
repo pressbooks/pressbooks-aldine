@@ -1,8 +1,10 @@
+import '../styles/customizer-color-picker.scss';
 import Coloris from '@melloware/coloris';
 import '@melloware/coloris/dist/coloris.css';
 
 const colorPickerOptions = {
 	el: '.coloris',
+	alpha: false,
 };
 
 if ( window.PB_Aldine_ColorPicker && window.PB_Aldine_ColorPicker.a11y ) {
@@ -31,10 +33,18 @@ if ( customizeControls ) {
 		} );
 	};
 
-	new MutationObserver( labelSwatchButtons ).observe( customizeControls, {
+	/**
+	 * Wraps dynamically rendered Coloris fields, then labels their swatch buttons.
+	 */
+	const bindColorisFields = () => {
+		Coloris.wrap( '.coloris' );
+		labelSwatchButtons();
+	};
+
+	new MutationObserver( bindColorisFields ).observe( customizeControls, {
 		childList: true,
 		subtree: true,
 	} );
 
-	labelSwatchButtons();
+	bindColorisFields();
 }
