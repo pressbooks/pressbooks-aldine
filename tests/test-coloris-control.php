@@ -47,4 +47,17 @@ class ColorisControlTest extends WP_UnitTestCase {
 		$this->assertStringContainsString( 'value="#b01109"', $html );
 		$this->assertStringContainsString( 'data-customize-setting-link="pb_network_color_primary"', $html );
 	}
+
+	public function test_customize_register_uses_coloris_controls() {
+		$wp_customize = $this->make_customize_manager();
+
+		\Aldine\Customizer\customize_register( $wp_customize );
+
+		$slugs = [ 'header_bg', 'header_links', 'primary', 'primary_dark', 'accent', 'accent_dark', 'primary_fg', 'accent_fg' ];
+		foreach ( $slugs as $slug ) {
+			$control = $wp_customize->get_control( "pb_network_color_{$slug}" );
+			$this->assertInstanceOf( ColorisControl::class, $control, "Control for {$slug} should be a ColorisControl" );
+			$this->assertSame( 'coloris', $control->type );
+		}
+	}
 }
