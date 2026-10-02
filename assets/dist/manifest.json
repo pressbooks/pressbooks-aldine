@@ -17,6 +17,15 @@
     "src": "assets/scripts/catalog-admin.js",
     "isEntry": true
   },
+  "assets/scripts/customizer-color-picker.js": {
+    "file": "assets/scripts/customizer-color-picker-7dxqnR0N.js",
+    "name": "scripts/customizer-color-picker",
+    "src": "assets/scripts/customizer-color-picker.js",
+    "isEntry": true,
+    "css": [
+      "assets/customizer-color-picker-CtvVJDup.css"
+    ]
+  },
   "assets/scripts/customizer-toggle.js": {
     "file": "assets/scripts/customizer-toggle-gWCB7d5k.js",
     "name": "scripts/customizer-toggle",
