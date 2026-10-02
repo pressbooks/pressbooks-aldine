@@ -10,3 +10,5 @@ jobs:
   update-npm-build:
     if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'dependabot-preview[bot]' }}
     uses: pressbooks/reusable-workflows/.github/workflows/npm-build.yml@main
+    secrets:
+      PAT_FOR_GITHUB_ACTIONS: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}

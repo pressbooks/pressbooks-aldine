@@ -13,6 +13,7 @@ export default createWpViteConfig({
 		'scripts/catalog-admin': resolve(__dirname, 'assets/scripts/catalog-admin.js'),
 		'scripts/customizer': resolve(__dirname, 'assets/scripts/customizer.js'),
 		'scripts/customizer-toggle': resolve(__dirname, 'assets/scripts/customizer-toggle.js'),
+		'scripts/customizer-color-picker': resolve(__dirname, 'assets/scripts/customizer-color-picker.js'),
 		'scripts/page-section': resolve(__dirname, 'assets/scripts/page-section.js'),
 		'scripts/search-featured-books': resolve(__dirname, 'assets/scripts/search-featured-books.js'),
 		'scripts/featured-books': resolve(__dirname, 'assets/scripts/featured-books.js'),

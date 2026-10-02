@@ -175,7 +175,7 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			]
 		);
 		$wp_customize->add_control(
-			new \WP_Customize_Color_Control(
+			new ColorisControl(
 				$wp_customize,
 				"pb_network_color_{$color['slug']}",
 				[
@@ -467,19 +467,41 @@ function enqueue_color_contrast_validator() {
 }
 
 /**
+ * Enqueue Coloris assets for the Customizer color controls.
+ */
+function enqueue_coloris() {
+	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
+
+	$assets->enqueue( 'assets/scripts/customizer-color-picker.js', 'aldine/customizer-color-picker', [
+		'dependencies' => [ 'customize-controls' ],
+	] );
+
+	wp_localize_script(
+		'aldine/customizer-color-picker',
+		'PB_Aldine_ColorPicker',
+		[
+			'a11y' => [
+				'open' => __( 'Open color picker', 'pressbooks-aldine' ),
+				'close' => __( 'Close color picker', 'pressbooks-aldine' ),
+				'clear' => __( 'Clear the selected color', 'pressbooks-aldine' ),
+				'marker' => __( 'Saturation: {s}. Brightness: {v}.', 'pressbooks-aldine' ),
+				'hueSlider' => __( 'Hue slider', 'pressbooks-aldine' ),
+				'alphaSlider' => __( 'Opacity slider', 'pressbooks-aldine' ),
+				'input' => __( 'Color value field', 'pressbooks-aldine' ),
+				'format' => __( 'Color format', 'pressbooks-aldine' ),
+				'swatch' => __( 'Color swatch', 'pressbooks-aldine' ),
+				'instruction' => __( 'Saturation and brightness selector. Use up, down, left and right arrow keys to select.', 'pressbooks-aldine' ),
+			],
+		]
+	);
+}
+
+/**
  * Contact form UI tweaks (checkbox should toggle either/or)
  */
 function enqueue_contact_form_tweaks() {
 	$assets = new Assets( 'pressbooks-aldine', AssetType::THEME );
 	$assets->enqueue( 'assets/scripts/customizer-toggle.js', 'aldine/customizer-toggle' );
-}
-
-/**
- * Enqueue pb-a11y hacks in customizer
- */
-function enqueue_pb_a11y_in_customizer() {
-	$pb_a11y_script = plugin_dir_url( 'pressbooks' ) . 'pressbooks/assets/src/scripts/a11y.js';
-	wp_enqueue_script( 'pb-a11y', $pb_a11y_script, [ 'wp-i18n' ], false, true );
 }
 
 /**
