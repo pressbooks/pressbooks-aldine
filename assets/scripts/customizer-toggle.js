@@ -4,6 +4,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	let link = document.getElementById( 'customize-control-pb_network_contact_link' );
 	let title = document.getElementById( 'customize-control-pb_network_contact_form_title' );
 
+	if ( ! checkbox || ! email || ! link || ! title ) {
+		return;
+	}
+
 	checkbox.addEventListener( 'click', toggleReadOnly );
 
 	/**
