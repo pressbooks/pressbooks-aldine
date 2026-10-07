@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.27.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.27.1...1.27.2) (2026-10-07)
+
+
+### Bug Fixes
+
+* front page format ([#594](https://github.com/pressbooks/pressbooks-aldine/issues/594)) ([ad6704b](https://github.com/pressbooks/pressbooks-aldine/commit/ad6704b9d5036c9b4aed34b76990b84885231da6))
+* guard customizer-toggle.js against missing contact form controls ([#593](https://github.com/pressbooks/pressbooks-aldine/issues/593)) ([2685842](https://github.com/pressbooks/pressbooks-aldine/commit/2685842a99d4df768b09e9d9673b9b59d8e0ab8d))
+* replace Customizer Iris color pickers with Coloris ([#591](https://github.com/pressbooks/pressbooks-aldine/issues/591)) ([ee95c6e](https://github.com/pressbooks/pressbooks-aldine/commit/ee95c6e23f5906ec3563df83b1d3995ff49e2e07))
+
 ## [1.27.1](https://github.com/pressbooks/pressbooks-aldine/compare/1.27.0...1.27.1) (2026-08-12)
 
 
