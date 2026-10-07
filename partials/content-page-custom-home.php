@@ -41,7 +41,7 @@ if ( $catalog_page ) {
 				echo apply_filters(
 					'the_content',
 					sprintf(
-						'[aldine_page_section]%s[/aldine_page_section]',
+						"[aldine_page_section]\n\n%s\n\n[/aldine_page_section]",
 						$content
 					)
 				);
