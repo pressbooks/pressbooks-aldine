@@ -61,7 +61,7 @@ if ( get_page_template_slug() === 'page-custom-home.php' ) {
 				echo apply_filters(
 					'the_content',
 					sprintf(
-						'[aldine_page_section]%s[/aldine_page_section]',
+						"[aldine_page_section]\n\n%s\n\n[/aldine_page_section]",
 						$content
 					)
 				);
