@@ -11,17 +11,19 @@
 /**
  * Ensure dependencies are loaded (PSR-4 classes + namespaced function files).
  */
-$composer = get_template_directory() . '/vendor/autoload.php';
-if (! file_exists($composer)) {
-    wp_die(
-        sprintf(
-            '<h1>%1$s</h1><p>%2$s</p>',
-            __('Dependencies Missing', 'pressbooks-aldine'),
-            __('You must run <code>composer install</code> from the Aldine directory.', 'pressbooks-aldine')
-        )
-    );
+if (! class_exists('\Aldine\Activation')) {
+    $composer = get_template_directory() . '/vendor/autoload.php';
+    if (! file_exists($composer)) {
+        wp_die(
+            sprintf(
+                '<h1>%1$s</h1><p>%2$s</p>',
+                __('Dependencies Missing', 'pressbooks-aldine'),
+                __('You must run <code>composer install</code> from the Aldine directory.', 'pressbooks-aldine')
+            )
+        );
+    }
+    require_once $composer;
 }
-require_once $composer;
 
 add_action('after_switch_theme', [\Aldine\Activation::class, 'createDefaultContent'], 10);
 add_action('after_switch_theme', [\Aldine\Activation::class, 'createMenus'], 11);
