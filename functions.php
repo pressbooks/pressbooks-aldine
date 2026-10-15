@@ -48,9 +48,9 @@ add_action('updated_option', [\Aldine\Actions::class, 'addColorVariants'], 10, 3
 add_action('customize_register', [\Aldine\Customizer::class, 'customizeRegister']);
 add_action('customize_preview_init', [\Aldine\Customizer::class, 'customizePreviewJs']);
 add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'enqueueColorContrastValidator']);
+add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'enqueueColoris']);
 add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'featuredBooksScripts']);
 add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'enqueueContactFormTweaks']);
-add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'enqueuePbA11YInCustomizer']);
 add_action('customize_controls_enqueue_scripts', [\Aldine\Customizer::class, 'enqueueCatalogSearchControlAssets']);
 add_action('wp_ajax_pb_search_catalog_books', [\Aldine\Customizer::class, 'ajaxSearchCatalogBooks']);
 
