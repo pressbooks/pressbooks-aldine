@@ -1,0 +1,13 @@
+{
+	"preset": "psr12",
+	"rules": {
+		"simplified_null_return": true,
+		"new_with_parentheses": {
+			"anonymous_class": false,
+			"named_class": false
+		}
+	},
+	"exclude": [
+		"wp-content"
+	]
+}

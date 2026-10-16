@@ -16,7 +16,7 @@ use function Aldine\Helpers\get_header_tag;
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,12 +25,12 @@ use function Aldine\Helpers\get_header_tag;
 
 <body 
 	<?php
-		body_class(
-			! is_front_page() && get_page_template_slug() === 'page-custom-home.php' ?
-			'home' :
-			''
-		);
-		?>
+        body_class(
+            ! is_front_page() && get_page_template_slug() === 'page-custom-home.php' ?
+            'home' :
+            ''
+        );
+?>
 >
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 	<defs>
@@ -56,23 +56,23 @@ use function Aldine\Helpers\get_header_tag;
 	</defs>
 </svg>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-aldine' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'pressbooks-aldine'); ?></a>
 	<?php echo get_header_tag(); ?>
 		<div class="header__container">
 			<div class="header__inside">
 				<div class="header__brand">
-					<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
-						<?php if ( has_custom_logo() ) { ?>
+					<a title="<?php echo get_bloginfo('name', 'display'); ?>" href="<?php echo network_home_url(); ?>">
+						<?php if (has_custom_logo()) { ?>
 							<?php
-							$custom_logo_id = get_theme_mod( 'custom_logo' );
-							printf(
-								'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-								/* translators: %s name of network */
-								sprintf( __( '%s home', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
-							);
-							?>
+                    $custom_logo_id = get_theme_mod('custom_logo');
+						    printf(
+						        '<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
+						        wp_get_attachment_image_src($custom_logo_id, 'logo')[0],
+						        wp_get_attachment_image_srcset($custom_logo_id, 'large'),
+						        /* translators: %s name of network */
+						        sprintf(__('%s home', 'pressbooks-aldine'), get_bloginfo('name', 'display'))
+						    );
+						    ?>
 						<?php } else { ?>
 							<svg class="header__logo--svg">
 								<use xlink:href="#logo-pressbooks"/>
@@ -81,21 +81,21 @@ use function Aldine\Helpers\get_header_tag;
 					</a>
 			</div>
 			<div class="header__nav">
-				<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e( 'Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></button>
+				<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e('Menu', 'pressbooks-aldine'); ?><span class="header__nav-icon__icon"></span></button>
 				<?php
-				wp_nav_menu(
-					[
-						'theme_location' => 'primary-menu',
-						'fallback_cb' => '\Aldine\Helpers\default_menu',
-						'container' => 'nav',
-						'container_class' => 'js-header-nav',
-						'container_id' => 'navigation',
-						'container_aria_label' => 'primary',
-						'menu_id' => 'nav-primary-menu',
-						'menu_class' => 'nav--primary',
-					]
-				);
-				?>
+                wp_nav_menu(
+                    [
+                        'theme_location' => 'primary-menu',
+                        'fallback_cb' => '\Aldine\Helpers\default_menu',
+                        'container' => 'nav',
+                        'container_class' => 'js-header-nav',
+                        'container_id' => 'navigation',
+                        'container_aria_label' => 'primary',
+                        'menu_id' => 'nav-primary-menu',
+                        'menu_class' => 'nav--primary',
+                    ]
+                );
+?>
 			</div>
 		</div>
 		</div>

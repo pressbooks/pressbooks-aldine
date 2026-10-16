@@ -15,13 +15,13 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<?php
-			while ( have_posts() ) :
-				the_post();
+            while (have_posts()) :
+                the_post();
 
-				get_template_part( 'partials/content', 'front-page' );
+                get_template_part('partials/content', 'front-page');
 
-			endwhile;
-			?>
+            endwhile;
+?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

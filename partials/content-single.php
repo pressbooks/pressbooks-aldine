@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Single page template
  *
@@ -8,4 +9,3 @@
  */
 
 // TODO.
-
