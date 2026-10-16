@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/pressbooks/pressbooks-aldine/compare/1.27.2...1.28.0) (2026-10-16)
+
+
+### Features
+
+* migrate to PSR-4 ([#588](https://github.com/pressbooks/pressbooks-aldine/issues/588)) ([86a318f](https://github.com/pressbooks/pressbooks-aldine/commit/86a318f40d880d32d0e4c4f8a6a67e3eb764570c))
+
 ## [1.27.2](https://github.com/pressbooks/pressbooks-aldine/compare/1.27.1...1.27.2) (2026-10-07)
 
 
