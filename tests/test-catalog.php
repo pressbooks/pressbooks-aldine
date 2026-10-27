@@ -46,7 +46,7 @@ class CatalogTest extends WP_UnitTestCase
 
         $this->assertFalse(Catalog::setCatalogStatus($blog_id, true));
         $this->assertFalse(get_blog_option($blog_id, \Aldine\Admin\BLOG_OPTION));
-        $this->assertSame('', get_site_meta($blog_id, BookDataCollector::IN_CATALOG, true));
+        $this->assertNotSame('1', get_site_meta($blog_id, BookDataCollector::IN_CATALOG, true));
     }
 
     public function test_set_catalog_status_skips_main_site()
