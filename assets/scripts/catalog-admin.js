@@ -10,9 +10,8 @@
 		} );
 		$( 'input.in-catalog' ).on( 'change', function () {
 			let book_id = $( this )
-				.parent( 'td' )
-				.siblings( 'th' )
-				.children( 'input' )
+				.closest( 'tr' )
+				.find( '.check-column input' )
 				.val();
 			let in_catalog = $( this ).prop( 'checked' );
 			$.ajax( {
