@@ -67,6 +67,9 @@ add_action('wp_ajax_pressbooks_aldine_update_catalog', [\Aldine\Admin\Catalog::c
 add_filter('wpmu_blogs_columns', [\Aldine\Admin\Catalog::class, 'catalogColumns']);
 add_action('manage_blogs_custom_column', [\Aldine\Admin\Catalog::class, 'catalogColumn'], 1, 3);
 add_action('manage_sites_custom_column', [\Aldine\Admin\Catalog::class, 'catalogColumn'], 1, 3);
+add_filter('bulk_actions-sites-network', [\Aldine\Admin\Catalog::class, 'bulkActions']);
+add_filter('handle_network_bulk_actions-sites-network', [\Aldine\Admin\Catalog::class, 'handleBulkActions'], 10, 3);
+add_action('network_admin_notices', [\Aldine\Admin\Catalog::class, 'bulkActionNotice']);
 
 // Remove unwanted menu pages.
 add_action('admin_menu', [\Aldine\Actions::class, 'removeMenuItems']);
